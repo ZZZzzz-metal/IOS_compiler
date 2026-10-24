@@ -1,0 +1,263 @@
+{
+  "status": "compiled",
+  "requestId": "1577b7b5-997d-46f0-875b-a1a6299a9718",
+  "sourceHash": "sha256:c0c5abe626bb48ff936f3a423f5968fccc60c80a686083f9a813d36b75d3aad2",
+  "snapshotId": "150a328d-d515-46c2-a89c-c94ac781e1bb",
+  "artifactId": "wasm-c6987d6e85f9e0d751466d59a3a46cddca07dfc4c59cbe139d0932f193ba219a",
+  "target": {
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ]
+  },
+  "language": {
+    "language": "c",
+    "standard": "c11"
+  },
+  "mode": "debug",
+  "compilerArguments": [
+    "-cc1",
+    "-emit-obj",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.c",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-debug-info-kind=standalone",
+    "-dwarf-version=4",
+    "-debugger-tuning=lldb",
+    "-fdebug-compilation-dir",
+    "/project",
+    "-std=c11",
+    "-x",
+    "c",
+    "-o",
+    "build/main.o",
+    "/project/main.c"
+  ],
+  "linkerArguments": [
+    "--no-threads",
+    "--export-dynamic",
+    "-z",
+    "stack-size=1048576",
+    "--max-memory=268435456",
+    "-Llib/wasm32-wasi",
+    "lib/wasm32-wasi/crt1.o",
+    "build/main.o",
+    "-lc",
+    "-lm",
+    "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+    "-o",
+    "build/main.wasm"
+  ],
+  "sourceMappings": [],
+  "executableRef": {
+    "id": "wasm-c6987d6e85f9e0d751466d59a3a46cddca07dfc4c59cbe139d0932f193ba219a",
+    "relativePath": "compiler-builds/wasm-c6987d6e85f9e0d751466d59a3a46cddca07dfc4c59cbe139d0932f193ba219a/main.wasm",
+    "sha256": "sha256:c6987d6e85f9e0d751466d59a3a46cddca07dfc4c59cbe139d0932f193ba219a",
+    "byteLength": 13562,
+    "mediaType": "application/wasm",
+    "version": "binji-wasm-clang-648c4a89997a"
+  },
+  "diagnostics": [],
+  "rawDiagnostics": "",
+  "wasm": {
+    "format": "wasm-v1",
+    "sections": [
+      {
+        "id": 1,
+        "byteLength": 30,
+        "payloadOffset": 10
+      },
+      {
+        "id": 2,
+        "byteLength": 242,
+        "payloadOffset": 43
+      },
+      {
+        "id": 3,
+        "byteLength": 22,
+        "payloadOffset": 287
+      },
+      {
+        "id": 4,
+        "byteLength": 5,
+        "payloadOffset": 311
+      },
+      {
+        "id": 5,
+        "byteLength": 5,
+        "payloadOffset": 318
+      },
+      {
+        "id": 6,
+        "byteLength": 23,
+        "payloadOffset": 325
+      },
+      {
+        "id": 7,
+        "byteLength": 71,
+        "payloadOffset": 350
+      },
+      {
+        "id": 10,
+        "byteLength": 11807,
+        "payloadOffset": 424
+      },
+      {
+        "id": 11,
+        "byteLength": 516,
+        "payloadOffset": 12234
+      },
+      {
+        "id": 0,
+        "name": ".debug_info",
+        "byteLength": 104,
+        "payloadOffset": 12764,
+        "dwarfVersion": 4
+      },
+      {
+        "id": 0,
+        "name": ".debug_macinfo",
+        "byteLength": 16,
+        "payloadOffset": 12873
+      },
+      {
+        "id": 0,
+        "name": ".debug_abbrev",
+        "byteLength": 91,
+        "payloadOffset": 12890
+      },
+      {
+        "id": 0,
+        "name": ".debug_line",
+        "byteLength": 73,
+        "payloadOffset": 12981
+      },
+      {
+        "id": 0,
+        "name": ".debug_str",
+        "byteLength": 81,
+        "payloadOffset": 13055
+      },
+      {
+        "id": 0,
+        "name": "name",
+        "byteLength": 434,
+        "payloadOffset": 13133
+      }
+    ],
+    "dwarfSections": [
+      {
+        "id": 0,
+        "name": ".debug_info",
+        "byteLength": 104,
+        "payloadOffset": 12764,
+        "dwarfVersion": 4
+      },
+      {
+        "id": 0,
+        "name": ".debug_macinfo",
+        "byteLength": 16,
+        "payloadOffset": 12873
+      },
+      {
+        "id": 0,
+        "name": ".debug_abbrev",
+        "byteLength": 91,
+        "payloadOffset": 12890
+      },
+      {
+        "id": 0,
+        "name": ".debug_line",
+        "byteLength": 73,
+        "payloadOffset": 12981
+      },
+      {
+        "id": 0,
+        "name": ".debug_str",
+        "byteLength": 81,
+        "payloadOffset": 13055
+      }
+    ],
+    "imports": [
+      {
+        "module": "wasi_unstable",
+        "name": "fd_prestat_get",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "fd_prestat_dir_name",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "environ_sizes_get",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "environ_get",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "args_sizes_get",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "args_get",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "proc_exit",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "fd_fdstat_get",
+        "kind": "function"
+      }
+    ]
+  },
+  "metrics": {
+    "loadMs": 117.7288,
+    "compileMs": 78.66969999999998,
+    "linkMs": 18.016899999999964,
+    "totalMs": 106.41480000000001,
+    "observedLinearMemoryBytes": {
+      "compilerAfterExecution": 7274496,
+      "linkerAfterExecution": 6422528,
+      "filesystem": 9437184
+    },
+    "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+  },
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+  "objectSha256": "sha256:b0d7ec9a64311113ffd63a0405bdd0c072a361a1725ea5d56217d82898123582",
+  "objectByteLength": 797
+}

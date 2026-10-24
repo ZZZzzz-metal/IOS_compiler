@@ -1,0 +1,999 @@
+{
+  "status": "passed",
+  "scope": "Desktop browser local fresh compilation + actual source debugging. iPad and full product remain unverified.",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "when": "2026-10-24T11:49:33.933Z",
+  "controlledByServiceWorker": true,
+  "profile": "debugger-prototype-7161a3bb1f79586c",
+  "elapsedMs": 1786.5,
+  "checks": [
+    "fresh-cpp-compile",
+    "source-breakpoint",
+    "live-array-pointer-vector-string",
+    "stepInto",
+    "stepOut",
+    "stepOver",
+    "recursive-caller-values",
+    "fresh-c-stdin-stdout-stderr",
+    "stop-infinite-loop",
+    "restart-after-stop"
+  ],
+  "records": [
+    {
+      "kind": "real-compile",
+      "language": "cpp",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "executable": {
+        "id": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+        "relativePath": "debugger/memory-builds/wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c/main.wasm",
+        "sha256": "sha256:9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+        "byteLength": 352731,
+        "mediaType": "application/wasm",
+        "version": "binji-wasm-clang-648c4a89997a"
+      },
+      "metrics": {
+        "loadMs": 244.0999999642372,
+        "compileMs": 484.60000002384186,
+        "linkMs": 23.700000047683716,
+        "totalMs": 518.8999999761581,
+        "observedLinearMemoryBytes": {
+          "compilerAfterExecution": 23199744,
+          "linkerAfterExecution": 10682368,
+          "filesystem": 10158080
+        },
+        "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+      },
+      "source": {
+        "snapshotId": "c35994a9-200a-422f-9975-bc8fb65d28e7",
+        "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+        "encoding": "utf-8",
+        "newline": "lf",
+        "translationUnit": "main.cpp",
+        "files": [
+          {
+            "path": "main.cpp",
+            "role": "user",
+            "text": "#include <string>\n#include <vector>\n\nint add(int value, int increment) {\n    int result = value + increment;\n    return result;\n}\n\nint sum(const std::vector<int>& values, int index) {\n    if (index == static_cast<int>(values.size())) return 0;\n    int current = values[index];\n    return current + sum(values, index + 1);\n}\n\nint main() {\n    int array[3] = {2, 4, 6};\n    int* pointer = &array[1];\n    std::vector<int> values = {3, 5, 7};\n    std::string shortText = \"hello\";\n    std::string longText(80, 'x');\n    int total = sum(values, 0);\n    int changed = add(total, *pointer);\n    values.push_back(changed);\n    return values[3] == 19 && shortText.size() == 5 && longText.size() == 80 ? 0 : 1;\n}\n\n// fresh browser build 2026-10-24T11:49:32.150Z e280948e-88a8-4a90-ae81-7249f5f55efc\n",
+            "contentHash": "sha256:20d7e26382dc2d93d18baf57d9cde6004fdae8cd4f7b802f353a6c1d639a55cf"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "breakpoint-and-live-values",
+      "paused": {
+        "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+        "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+        "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+        "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+        "eventSeq": 4,
+        "kind": "paused",
+        "pauseId": "56caa8e3-bee5-45c2-b28a-98a65246e327",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "main.cpp",
+          "line": 21,
+          "column": 1
+        }
+      },
+      "frames": [
+        {
+          "frameId": "56caa8e3-bee5-45c2-b28a-98a65246e327:wasm-frame-25",
+          "functionName": "main",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 21,
+            "column": 1
+          },
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        },
+        {
+          "frameId": "56caa8e3-bee5-45c2-b28a-98a65246e327:wasm-frame-24",
+          "functionName": "main",
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        },
+        {
+          "frameId": "56caa8e3-bee5-45c2-b28a-98a65246e327:wasm-frame-1",
+          "functionName": "_start",
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        }
+      ],
+      "locals": {
+        "array": {
+          "name": "array",
+          "type": "int[3]",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "int[3] (3 elements)",
+          "namedCount": 0,
+          "indexedCount": 3,
+          "variablesReference": "ec6b4233-4513-451b-847b-854420fc7f70"
+        },
+        "pointer": {
+          "name": "pointer",
+          "type": "int*",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0x00101bb4",
+          "namedCount": 1,
+          "indexedCount": 0,
+          "variablesReference": "5c93d975-5cab-43c2-974b-92adf0764466"
+        },
+        "values": {
+          "name": "values",
+          "type": "vector<int, std::__2::allocator<int> >",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "vector(size=3, capacity=3)",
+          "namedCount": 0,
+          "indexedCount": 3,
+          "variablesReference": "f76759ca-4da3-43ba-a4a4-5d0534465f08"
+        },
+        "shortText": {
+          "name": "shortText",
+          "type": "string",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "\"hello\"",
+          "namedCount": 0,
+          "indexedCount": 5,
+          "variablesReference": "7375da4d-10b3-4a7f-8e28-75c57c1156df"
+        },
+        "longText": {
+          "name": "longText",
+          "type": "string",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"",
+          "namedCount": 0,
+          "indexedCount": 80,
+          "variablesReference": "4d712e5f-f576-4293-9ac3-f460e5b84fa5"
+        }
+      }
+    },
+    {
+      "kind": "stepInto",
+      "paused": {
+        "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+        "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+        "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+        "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+        "eventSeq": 6,
+        "kind": "paused",
+        "pauseId": "88824039-a407-484a-aa09-e34c9de1ca49",
+        "reason": "step",
+        "position": {
+          "sourcePath": "main.cpp",
+          "line": 10,
+          "column": 1
+        }
+      },
+      "frames": [
+        {
+          "frameId": "88824039-a407-484a-aa09-e34c9de1ca49:wasm-frame-169",
+          "functionName": "sum",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 10,
+            "column": 1
+          },
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        },
+        {
+          "frameId": "88824039-a407-484a-aa09-e34c9de1ca49:wasm-frame-25",
+          "functionName": "main",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 21,
+            "column": 1
+          },
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        },
+        {
+          "frameId": "88824039-a407-484a-aa09-e34c9de1ca49:wasm-frame-24",
+          "functionName": "main",
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        },
+        {
+          "frameId": "88824039-a407-484a-aa09-e34c9de1ca49:wasm-frame-1",
+          "functionName": "_start",
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        }
+      ]
+    },
+    {
+      "kind": "stepOut",
+      "paused": {
+        "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+        "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+        "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+        "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+        "eventSeq": 8,
+        "kind": "paused",
+        "pauseId": "993a222a-738c-485c-9bba-71ad7e85b25e",
+        "reason": "step",
+        "position": {
+          "sourcePath": "main.cpp",
+          "line": 21,
+          "column": 1
+        }
+      },
+      "frames": [
+        {
+          "frameId": "993a222a-738c-485c-9bba-71ad7e85b25e:wasm-frame-25",
+          "functionName": "main",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 21,
+            "column": 1
+          },
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        },
+        {
+          "frameId": "993a222a-738c-485c-9bba-71ad7e85b25e:wasm-frame-24",
+          "functionName": "main",
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        },
+        {
+          "frameId": "993a222a-738c-485c-9bba-71ad7e85b25e:wasm-frame-1",
+          "functionName": "_start",
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        }
+      ]
+    },
+    {
+      "kind": "stepOver",
+      "paused": {
+        "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+        "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+        "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+        "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+        "eventSeq": 10,
+        "kind": "paused",
+        "pauseId": "e8239322-dee5-499d-9347-e36fef47398e",
+        "reason": "step",
+        "position": {
+          "sourcePath": "main.cpp",
+          "line": 22,
+          "column": 1
+        }
+      },
+      "total": {
+        "name": "total",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "15",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "kind": "recursive-frame-values",
+      "level": 0,
+      "frames": [
+        {
+          "frameId": "37f641bb-5d8e-488d-a77a-7f32de635cf9:wasm-frame-169",
+          "functionName": "sum",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 11,
+            "column": 1
+          },
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        }
+      ],
+      "values": [
+        {
+          "name": "index",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "kind": "recursive-frame-values",
+      "level": 1,
+      "frames": [
+        {
+          "frameId": "a6b33996-654a-4a67-9861-e4208f0d8134:wasm-frame-172",
+          "functionName": "sum",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 11,
+            "column": 1
+          },
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        },
+        {
+          "frameId": "a6b33996-654a-4a67-9861-e4208f0d8134:wasm-frame-169",
+          "functionName": "sum",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 12,
+            "column": 1
+          },
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        }
+      ],
+      "values": [
+        {
+          "name": "index",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        {
+          "name": "index",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "kind": "recursive-frame-values",
+      "level": 2,
+      "frames": [
+        {
+          "frameId": "944e52c7-224d-49fd-a235-bbb9830a239a:wasm-frame-175",
+          "functionName": "sum",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 11,
+            "column": 1
+          },
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        },
+        {
+          "frameId": "944e52c7-224d-49fd-a235-bbb9830a239a:wasm-frame-172",
+          "functionName": "sum",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 12,
+            "column": 1
+          },
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        },
+        {
+          "frameId": "944e52c7-224d-49fd-a235-bbb9830a239a:wasm-frame-169",
+          "functionName": "sum",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 12,
+            "column": 1
+          },
+          "module": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+        }
+      ],
+      "values": [
+        {
+          "name": "index",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "2",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        {
+          "name": "index",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        {
+          "name": "index",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "kind": "real-compile",
+      "language": "c",
+      "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+      "executable": {
+        "id": "wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+        "relativePath": "debugger/memory-builds/wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8/main.wasm",
+        "sha256": "sha256:a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+        "byteLength": 50546,
+        "mediaType": "application/wasm",
+        "version": "binji-wasm-clang-648c4a89997a"
+      },
+      "metrics": {
+        "loadMs": 235.5,
+        "compileMs": 107.89999997615814,
+        "linkMs": 15.099999964237213,
+        "totalMs": 135.69999998807907,
+        "observedLinearMemoryBytes": {
+          "compilerAfterExecution": 7602176,
+          "linkerAfterExecution": 6553600,
+          "filesystem": 9502720
+        },
+        "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+      },
+      "source": {
+        "snapshotId": "876b2a59-5fae-4523-a4e9-832b981d563a",
+        "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+        "encoding": "utf-8",
+        "newline": "lf",
+        "translationUnit": "main.c",
+        "files": [
+          {
+            "path": "main.c",
+            "role": "user",
+            "text": "#include <stdio.h>\nint twice(int n){ return n*2; }\nint main(void){ int n; if(scanf(\"%d\",&n)!=1)return 2; printf(\"result=%d\\n\",twice(n)); fputs(\"C-stderr\\n\",stderr); return 0; }\n\n// fresh browser build 2026-10-24T11:49:33.065Z bff38733-9043-48bc-8683-fae7093349f0\n",
+            "contentHash": "sha256:4d0dabfd6db9cd1b0157cedc721f43aca695ebae795a7574859fe13c250cba07"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "c-stdin-stdout-stderr",
+      "exit": {
+        "sessionId": "b109b4b3-5105-4f4e-82b7-370fae0d5204",
+        "buildId": "browser-wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+        "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+        "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+        "eventSeq": 6,
+        "kind": "terminated",
+        "reason": "exit",
+        "exitCode": 0
+      },
+      "output": [
+        {
+          "sessionId": "b109b4b3-5105-4f4e-82b7-370fae0d5204",
+          "buildId": "browser-wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+          "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+          "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+          "eventSeq": 4,
+          "kind": "output",
+          "stream": "stdout",
+          "text": "result=42\n"
+        },
+        {
+          "sessionId": "b109b4b3-5105-4f4e-82b7-370fae0d5204",
+          "buildId": "browser-wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+          "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+          "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+          "eventSeq": 5,
+          "kind": "output",
+          "stream": "stderr",
+          "text": "C-stderr\n"
+        }
+      ]
+    },
+    {
+      "kind": "real-compile",
+      "language": "c",
+      "sourceHash": "sha256:7015979f2057bdddbbf5b07a64d33402d33f92b82942566804bb4d92e8535dbf",
+      "executable": {
+        "id": "wasm-de381f725d549a0abed492de02f3f62cfd3c797cb6d00c9bc902f792cf4995cd",
+        "relativePath": "debugger/memory-builds/wasm-de381f725d549a0abed492de02f3f62cfd3c797cb6d00c9bc902f792cf4995cd/main.wasm",
+        "sha256": "sha256:de381f725d549a0abed492de02f3f62cfd3c797cb6d00c9bc902f792cf4995cd",
+        "byteLength": 13562,
+        "mediaType": "application/wasm",
+        "version": "binji-wasm-clang-648c4a89997a"
+      },
+      "metrics": {
+        "loadMs": 230.19999998807907,
+        "compileMs": 75.60000002384186,
+        "linkMs": 16,
+        "totalMs": 104.60000002384186,
+        "observedLinearMemoryBytes": {
+          "compilerAfterExecution": 7274496,
+          "linkerAfterExecution": 6422528,
+          "filesystem": 9437184
+        },
+        "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+      },
+      "source": {
+        "snapshotId": "2d42ea50-78e2-44dc-bf1f-374354584e77",
+        "sourceHash": "sha256:7015979f2057bdddbbf5b07a64d33402d33f92b82942566804bb4d92e8535dbf",
+        "encoding": "utf-8",
+        "newline": "lf",
+        "translationUnit": "main.c",
+        "files": [
+          {
+            "path": "main.c",
+            "role": "user",
+            "text": "int main(void){ volatile unsigned n=0; while(1){n++;} }\n\n// fresh browser build 2026-10-24T11:49:33.476Z 76000ab0-6071-4054-a293-323634545971\n",
+            "contentHash": "sha256:cce4fe7e44ab4f7b64b65c1989684bd1a3e66d772680a47c9c005c9989b5f4e9"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "infinite-loop-stopped",
+      "ticks": 10,
+      "stopMs": 0.30000001192092896,
+      "event": {
+        "sessionId": "baf0fee5-4670-49ed-887a-0f7859ccc24b",
+        "buildId": "browser-wasm-de381f725d549a0abed492de02f3f62cfd3c797cb6d00c9bc902f792cf4995cd",
+        "sourceHash": "sha256:7015979f2057bdddbbf5b07a64d33402d33f92b82942566804bb4d92e8535dbf",
+        "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+        "eventSeq": 5,
+        "kind": "terminated",
+        "reason": "stop",
+        "message": "Stopped by user"
+      }
+    }
+  ],
+  "events": [
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 1,
+      "kind": "state",
+      "state": "starting"
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 2,
+      "kind": "breakpoints",
+      "bindings": [
+        {
+          "breakpointId": "f4e787a4-c929-416d-8714-2fd938129d83",
+          "requested": {
+            "sourcePath": "main.cpp",
+            "line": 21,
+            "column": 1
+          },
+          "status": "bound",
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 21,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 3,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 4,
+      "kind": "paused",
+      "pauseId": "56caa8e3-bee5-45c2-b28a-98a65246e327",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 21,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 5,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 6,
+      "kind": "paused",
+      "pauseId": "88824039-a407-484a-aa09-e34c9de1ca49",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 10,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 7,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 8,
+      "kind": "paused",
+      "pauseId": "993a222a-738c-485c-9bba-71ad7e85b25e",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 21,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 9,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 10,
+      "kind": "paused",
+      "pauseId": "e8239322-dee5-499d-9347-e36fef47398e",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 22,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 11,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "8e0a859c-1b14-4602-9462-61b0c698d403",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 12,
+      "kind": "terminated",
+      "reason": "exit",
+      "exitCode": 0
+    },
+    {
+      "sessionId": "ed19b885-4540-4036-8c11-5be99ee8da77",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 1,
+      "kind": "state",
+      "state": "starting"
+    },
+    {
+      "sessionId": "ed19b885-4540-4036-8c11-5be99ee8da77",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 2,
+      "kind": "breakpoints",
+      "bindings": [
+        {
+          "breakpointId": "4a4be9ec-ed18-497c-abba-167fa22ebd92",
+          "requested": {
+            "sourcePath": "main.cpp",
+            "line": 11,
+            "column": 1
+          },
+          "status": "bound",
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 11,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessionId": "ed19b885-4540-4036-8c11-5be99ee8da77",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 3,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "ed19b885-4540-4036-8c11-5be99ee8da77",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 4,
+      "kind": "paused",
+      "pauseId": "37f641bb-5d8e-488d-a77a-7f32de635cf9",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 11,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "ed19b885-4540-4036-8c11-5be99ee8da77",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 5,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "ed19b885-4540-4036-8c11-5be99ee8da77",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 6,
+      "kind": "paused",
+      "pauseId": "a6b33996-654a-4a67-9861-e4208f0d8134",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 11,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "ed19b885-4540-4036-8c11-5be99ee8da77",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 7,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "ed19b885-4540-4036-8c11-5be99ee8da77",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 8,
+      "kind": "paused",
+      "pauseId": "944e52c7-224d-49fd-a235-bbb9830a239a",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 11,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "ed19b885-4540-4036-8c11-5be99ee8da77",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 9,
+      "kind": "state",
+      "state": "stopping"
+    },
+    {
+      "sessionId": "ed19b885-4540-4036-8c11-5be99ee8da77",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 10,
+      "kind": "terminated",
+      "reason": "stop",
+      "message": "Stopped by user"
+    },
+    {
+      "sessionId": "b109b4b3-5105-4f4e-82b7-370fae0d5204",
+      "buildId": "browser-wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+      "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 1,
+      "kind": "state",
+      "state": "starting"
+    },
+    {
+      "sessionId": "b109b4b3-5105-4f4e-82b7-370fae0d5204",
+      "buildId": "browser-wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+      "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 2,
+      "kind": "breakpoints",
+      "bindings": []
+    },
+    {
+      "sessionId": "b109b4b3-5105-4f4e-82b7-370fae0d5204",
+      "buildId": "browser-wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+      "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 3,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "b109b4b3-5105-4f4e-82b7-370fae0d5204",
+      "buildId": "browser-wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+      "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 4,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "result=42\n"
+    },
+    {
+      "sessionId": "b109b4b3-5105-4f4e-82b7-370fae0d5204",
+      "buildId": "browser-wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+      "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 5,
+      "kind": "output",
+      "stream": "stderr",
+      "text": "C-stderr\n"
+    },
+    {
+      "sessionId": "b109b4b3-5105-4f4e-82b7-370fae0d5204",
+      "buildId": "browser-wasm-a52262dd8db41c95d1e024d9a6dd3d516fb6e3593b1c0e46b0116c67db8eb8c8",
+      "sourceHash": "sha256:8e25512dd34c7e8867a5991c8a8f95b24c6f284665431cda3ad36f0c54733e2c",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 6,
+      "kind": "terminated",
+      "reason": "exit",
+      "exitCode": 0
+    },
+    {
+      "sessionId": "baf0fee5-4670-49ed-887a-0f7859ccc24b",
+      "buildId": "browser-wasm-de381f725d549a0abed492de02f3f62cfd3c797cb6d00c9bc902f792cf4995cd",
+      "sourceHash": "sha256:7015979f2057bdddbbf5b07a64d33402d33f92b82942566804bb4d92e8535dbf",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 1,
+      "kind": "state",
+      "state": "starting"
+    },
+    {
+      "sessionId": "baf0fee5-4670-49ed-887a-0f7859ccc24b",
+      "buildId": "browser-wasm-de381f725d549a0abed492de02f3f62cfd3c797cb6d00c9bc902f792cf4995cd",
+      "sourceHash": "sha256:7015979f2057bdddbbf5b07a64d33402d33f92b82942566804bb4d92e8535dbf",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 2,
+      "kind": "breakpoints",
+      "bindings": []
+    },
+    {
+      "sessionId": "baf0fee5-4670-49ed-887a-0f7859ccc24b",
+      "buildId": "browser-wasm-de381f725d549a0abed492de02f3f62cfd3c797cb6d00c9bc902f792cf4995cd",
+      "sourceHash": "sha256:7015979f2057bdddbbf5b07a64d33402d33f92b82942566804bb4d92e8535dbf",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 3,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "baf0fee5-4670-49ed-887a-0f7859ccc24b",
+      "buildId": "browser-wasm-de381f725d549a0abed492de02f3f62cfd3c797cb6d00c9bc902f792cf4995cd",
+      "sourceHash": "sha256:7015979f2057bdddbbf5b07a64d33402d33f92b82942566804bb4d92e8535dbf",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 4,
+      "kind": "state",
+      "state": "stopping"
+    },
+    {
+      "sessionId": "baf0fee5-4670-49ed-887a-0f7859ccc24b",
+      "buildId": "browser-wasm-de381f725d549a0abed492de02f3f62cfd3c797cb6d00c9bc902f792cf4995cd",
+      "sourceHash": "sha256:7015979f2057bdddbbf5b07a64d33402d33f92b82942566804bb4d92e8535dbf",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 5,
+      "kind": "terminated",
+      "reason": "stop",
+      "message": "Stopped by user"
+    },
+    {
+      "sessionId": "6c783980-d238-4c35-a17e-3b11dbe60fab",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 1,
+      "kind": "state",
+      "state": "starting"
+    },
+    {
+      "sessionId": "6c783980-d238-4c35-a17e-3b11dbe60fab",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 2,
+      "kind": "breakpoints",
+      "bindings": [
+        {
+          "breakpointId": "a1ef5266-af06-49cb-81ef-589f2acb56ce",
+          "requested": {
+            "sourcePath": "main.cpp",
+            "line": 21,
+            "column": 1
+          },
+          "status": "bound",
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 21,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessionId": "6c783980-d238-4c35-a17e-3b11dbe60fab",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 3,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "6c783980-d238-4c35-a17e-3b11dbe60fab",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 4,
+      "kind": "paused",
+      "pauseId": "91e3bb75-c56f-4f6a-8ced-3a097dd0e358",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 21,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "6c783980-d238-4c35-a17e-3b11dbe60fab",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 5,
+      "kind": "state",
+      "state": "stopping"
+    },
+    {
+      "sessionId": "6c783980-d238-4c35-a17e-3b11dbe60fab",
+      "buildId": "browser-wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "sourceHash": "sha256:33d80c00d7f5a537382b071246241587b95034a0425d7f7b18533f081ac8a444",
+      "compatibilityId": "debugger-prototype-7161a3bb1f79586c",
+      "eventSeq": 6,
+      "kind": "terminated",
+      "reason": "stop",
+      "message": "Stopped by user"
+    }
+  ]
+}

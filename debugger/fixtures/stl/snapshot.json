@@ -1,0 +1,15 @@
+{
+  "snapshotId": "65ded1e4-8063-4a00-8ee6-d043ddc1c8f2",
+  "sourceHash": "sha256:fce174c3f696da583ec9211950e8d2fe5365f50b195ef789a04ca5e9f03e7163",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "#include <algorithm>\n#include <cstdint>\n#include <iostream>\n#include <limits>\n#include <map>\n#include <queue>\n#include <string>\n#include <unordered_map>\n#include <vector>\n\nint recursiveSum(const std::vector<int>& values, int index) {\n    if (index == static_cast<int>(values.size())) return 0;\n    return values[index] + recursiveSum(values, index + 1);\n}\n\nint main() {\n    int count = 0;\n    if (!(std::cin >> count)) return 2;\n    std::vector<int> values;\n    std::vector<int> empty;\n    for (int i = 0; i < count; ++i) {\n        int value = 0;\n        if (!(std::cin >> value)) return 3;\n        values.push_back(value);\n    }\n    std::sort(values.begin(), values.end());\n    int array[3] = {4, 5, 6};\n    int* pointer = &array[1];\n    std::string shortText = \"中文😀\";\n    std::string longText(80, 'x');\n    std::string emptyText;\n    std::map<std::string, int> ordered{{\"key\", 2}};\n    std::unordered_map<int, std::string> hashed{{3, \"ok\"}};\n    std::queue<int> fifo;\n    fifo.push(8); fifo.push(9); fifo.pop();\n    std::priority_queue<int> heap;\n    heap.push(4); heap.push(10);\n    std::int64_t big = std::numeric_limits<std::int64_t>::max() - 1;\n    std::uint64_t ubig = std::numeric_limits<std::uint64_t>::max();\n    auto [key, value] = *ordered.begin(); // C++17 structured binding\n    std::cout << \"sum=\" << recursiveSum(values, 0) << \" min=\" << values.front()\n              << \" max=\" << values.back() << \" pointer=\" << *pointer\n              << \" map=\" << key << ':' << value << \" hash=\" << hashed[3]\n              << \" queue=\" << fifo.front() << \" heap=\" << heap.top() << '\\n';\n    std::cout << shortText << \" bytes=\" << shortText.size() << \" long=\" << longText.size()\n              << \" empty=\" << empty.size() << '/' << emptyText.size() << '\\n';\n    std::cout << \"i64=\" << big << \" u64=\" << ubig << \" int=\" << sizeof(int)\n              << \" long=\" << sizeof(long) << \" pointer=\" << sizeof(void*) << '\\n';\n}\n",
+      "contentHash": "sha256:f1a038a42f63d525513a5b9ac8034000cdad200ac474c8310179fa242a3d9d49"
+    }
+  ]
+}

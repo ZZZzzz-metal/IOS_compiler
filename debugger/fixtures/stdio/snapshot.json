@@ -1,0 +1,15 @@
+{
+  "snapshotId": "ebf58693-2299-457b-9627-607cbb77b9be",
+  "sourceHash": "sha256:bf5fde0981624a1cd99067817bd0aae52bb0e5dd14629fbeeac6fe55d6aa157f",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.c",
+  "files": [
+    {
+      "path": "main.c",
+      "role": "user",
+      "text": "#include <stdio.h>\n#include <stdint.h>\n#include <inttypes.h>\n\nint sum(const int *values, int n) {\n    if (n == 0) return 0;\n    return values[n - 1] + sum(values, n - 1);\n}\n\nint main(void) {\n    int values[4] = {0};\n    for (int i = 0; i < 4; ++i) {\n        if (scanf(\"%d\", &values[i]) != 1) return 2;\n    }\n    int *first = &values[0];\n    int64_t large = INT64_C(9223372036854775806);\n    printf(\"sum=%d first=%d int64=%\" PRId64 \"\\n\", sum(values, 4), *first, large);\n    return 0;\n}\n",
+      "contentHash": "sha256:8391f7f1af072e1b28289cd0998346efecf041baca609b6d7856d3b3a6ec1b3d"
+    }
+  ]
+}
