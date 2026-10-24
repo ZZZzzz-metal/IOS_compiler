@@ -1,0 +1,15 @@
+{
+  "snapshotId": "5c1c5d4b-fbc2-47be-ad97-233788e29cf7",
+  "sourceHash": "sha256:76f0eb5ad68633b15bcafc444a9a4b109c98550a6504aa0f12cb2263fff8b726",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "#include <string>\n#include <vector>\n\nint add(int value, int increment) {\n    int result = value + increment;\n    return result;\n}\n\nint sum(const std::vector<int>& values, int index) {\n    if (index == static_cast<int>(values.size())) return 0;\n    int current = values[index];\n    return current + sum(values, index + 1);\n}\n\nint main() {\n    int array[3] = {2, 4, 6};\n    int* pointer = &array[1];\n    std::vector<int> values = {3, 5, 7};\n    std::string shortText = \"hello\";\n    std::string longText(80, 'x');\n    int total = sum(values, 0);\n    int changed = add(total, *pointer);\n    values.push_back(changed);\n    return values[3] == 19 && shortText.size() == 5 && longText.size() == 80 ? 0 : 1;\n}\n",
+      "contentHash": "sha256:2fd9f9c4f59722bff3dd2508c62c816f553504299f2121a6ffdca0beb1944fc9"
+    }
+  ]
+}

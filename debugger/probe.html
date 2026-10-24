@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3号运行调试验证</title>
+<style>body{font:16px system-ui,sans-serif;max-width:1050px;margin:32px auto;padding:0 20px;background:#f5f6f8;color:#182030}h1{font-size:25px}button{font:inherit;padding:10px 16px;margin:4px;border:1px solid #9aa7b5;border-radius:6px;background:white;cursor:pointer}button:disabled{opacity:.5}textarea{box-sizing:border-box;width:100%;height:300px;font:13px ui-monospace,monospace;padding:12px;border:1px solid #9aa7b5}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;border:1px solid #ccd3dc;padding:16px;font-size:13px}p{line-height:1.6}.note{color:#586477}</style></head>
+<body><h1>3号 · 运行与源码调试验证</h1>
+<p>本页在浏览器内编译新源码，再用隔离的执行器验证断点、单步、变量、调用栈和停止。首次准备后可关闭服务器、重新打开同一地址复测。</p>
+<p class="note">这是模块实验入口。完整产品、iPad 真机、安装与存储可靠性尚待联合验收。</p>
+<button id="prepare">准备本地验证资源</button><button id="run" disabled>运行真实编译调试验证</button><button id="cancel">停止当前验证</button>
+<p id="status" role="status">等待准备资源</p>
+<label for="source">C++ 源码（可修改常量；每次编译加入新的唯一注释）</label><textarea id="source" spellcheck="false"></textarea>
+<pre id="result">尚未运行</pre><details><summary>原始事件与变量证据</summary><pre id="trace"></pre></details>
+<script type="module" src="./probe-page.mjs"></script></body></html>

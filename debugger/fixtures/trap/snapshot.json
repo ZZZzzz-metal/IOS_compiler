@@ -1,0 +1,15 @@
+{
+  "snapshotId": "8b936313-e72a-44a5-b7a5-1169ebe995c0",
+  "sourceHash": "sha256:13304d4e14880b25514595c9ead9c5e7a968d0de80f0093a132eb98f2a42035b",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.c",
+  "files": [
+    {
+      "path": "main.c",
+      "role": "user",
+      "text": "#include <stdio.h>\nint main(void) {\n    fputs(\"before-trap\\n\", stderr);\n    __builtin_trap();\n}\n",
+      "contentHash": "sha256:890c5af0424a044181087bb12ff31690f76b720edb73ec1ca0e7c3b64825f24c"
+    }
+  ]
+}

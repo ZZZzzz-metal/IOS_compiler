@@ -1,0 +1,15 @@
+{
+  "snapshotId": "4f945e52-f89c-491c-bd44-7926fb1b966e",
+  "sourceHash": "sha256:c69894cf4eda0592f022fd56c452fa4fcb72d08b810630a5eaea23ae4569189b",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.c",
+  "files": [
+    {
+      "path": "main.c",
+      "role": "user",
+      "text": "#include <stdio.h>\nint main(void) {\n    for (int i=0;i<2000;i++) puts(\"中文😀:abcdefghijklmnopqrstuvwxyz\");\n    fputs(\"done\\n\", stderr);\n    return 7;\n}\n",
+      "contentHash": "sha256:740fa9321cad8d3f7fd507fb048904e593c2661e49ef33861ba4d0475dab9c83"
+    }
+  ]
+}

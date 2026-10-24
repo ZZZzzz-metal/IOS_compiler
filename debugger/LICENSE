@@ -1,0 +1,9 @@
+Original debugger implementation for this project. Copyright 2026.
+Source is supplied for evaluation and integration in this project.
+No third-party runtime/parser source is copied into this module.
+
+The generated C/C++ fixtures link the separate, pinned compiler module's libc,
+libc++ and compiler runtime. Their upstream attribution and unresolved binary
+provenance are recorded in compiler/resources/LICENSES.md on module/02-compiler.
+This file does not grant licenses for those third-party libraries. This prototype
+is not approved for public distribution; complete those notices before release.
