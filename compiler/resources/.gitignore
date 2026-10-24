@@ -1,0 +1,6 @@
+# The exact public binaries are fetched and verified by prepare-toolchain.mjs.
+/vendor/wasm-clang/clang
+/vendor/wasm-clang/lld
+/vendor/wasm-clang/memfs
+/vendor/wasm-clang/sysroot.tar
+*.download-*

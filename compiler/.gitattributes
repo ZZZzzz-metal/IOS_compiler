@@ -1,0 +1,3 @@
+* text eol=lf
+resources/vendor/wasm-clang/* -text
+evidence/*.jpg binary
