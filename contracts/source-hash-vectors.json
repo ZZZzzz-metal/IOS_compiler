@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "vectors": [
+    {
+      "name": "bom-crlf-chinese",
+      "translationUnit": "main.cpp",
+      "inputFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "﻿// 中文\r\nint main() { return 7; }\r\n"
+        }
+      ],
+      "canonicalJSON": "{\"version\":1,\"translationUnit\":\"main.cpp\",\"files\":[{\"path\":\"main.cpp\",\"role\":\"user\",\"text\":\"// 中文\\nint main() { return 7; }\\n\"}]}",
+      "sourceHash": "sha256:d283f2973495856132bed31eefed98b7be43d87349fbbedcd2820dbe71a2dfb0",
+      "contentHashes": {
+        "main.cpp": "sha256:5888a414b1cc49fb3d671b6e6925212071e0f038271120562ec251878d86680f"
+      }
+    },
+    {
+      "name": "utf16-order-and-json-escapes",
+      "translationUnit": "driver.cpp",
+      "inputFiles": [
+        {
+          "path": ".inc",
+          "role": "user",
+          "text": "// 私用区\n"
+        },
+        {
+          "path": "😀.inc",
+          "role": "user",
+          "text": "// 😀 \" \\ \t \b \f \u0001\n"
+        },
+        {
+          "path": "driver.cpp",
+          "role": "driver",
+          "text": "#include \"😀.inc\"\rint main(){return 0;}\n"
+        }
+      ],
+      "canonicalJSON": "{\"version\":1,\"translationUnit\":\"driver.cpp\",\"files\":[{\"path\":\"driver.cpp\",\"role\":\"driver\",\"text\":\"#include \\\"😀.inc\\\"\\nint main(){return 0;}\\n\"},{\"path\":\"😀.inc\",\"role\":\"user\",\"text\":\"// 😀 \\\" \\\\ \\t \\b \\f \\u0001\\n\"},{\"path\":\".inc\",\"role\":\"user\",\"text\":\"// 私用区\\n\"}]}",
+      "sourceHash": "sha256:af5dcb59b1588b73ac20918e25b5055bed5aa28d267e67ef02d694954fbfbe87",
+      "contentHashes": {
+        "driver.cpp": "sha256:cdedbff74a446d38e1a8af0b259290800c4f446942999c247919742cf8170151",
+        "😀.inc": "sha256:5cfa0d0e37f5dd4555f06f3a35003d94f6e6f0f00690976086b0b451422d50b2",
+        ".inc": "sha256:27cc4711b38ae6809ff6a9c80240bf690bb21c8a295a7f5bd02f164ac916c8ff"
+      }
+    }
+  ]
+}

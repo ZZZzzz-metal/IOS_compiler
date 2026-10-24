@@ -1,0 +1,6 @@
+{
+  "protocolVersion": "0.1.0-draft.1",
+  "selectedCompatibilityId": null,
+  "profiles": [],
+  "reason": "等待 2/3 号提交固定版本的真实组合；G2 之前不冻结路线。"
+}

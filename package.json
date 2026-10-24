@@ -1,0 +1,18 @@
+{
+  "name": "ipad-offline-debugger",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Route-neutral architecture baseline; compiler and debugger are not implemented.",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node app/main.mjs",
+    "check": "node scripts/check-baseline.mjs",
+    "test": "node --test contracts/checks/*.test.mjs",
+    "module:compiler": "node app/main.mjs compiler",
+    "module:debugger": "node app/main.mjs debugger",
+    "module:ui": "node app/main.mjs ui",
+    "module:storage": "node app/main.mjs storage",
+    "module:validation": "node app/main.mjs validation"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "bundleId": "unprepared-baseline",
+  "protocolVersion": "0.1.0-draft.1",
+  "compatibilityId": null,
+  "status": "unprepared",
+  "requiredRoles": ["ui", "compiler", "linker", "sysroot", "stdlib", "runtime", "debugger"],
+  "resources": []
+}
