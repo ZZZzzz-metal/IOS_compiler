@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-24",
+  "environment": "Windows desktop / Codex in-app browser (exact engine version not collected)",
+  "scope": "Compiler-only offline cold page reopening; not an iPad or source-debugger test",
+  "url": "http://127.0.0.1:4176/compiler/probe.html",
+  "serverStoppedBeforeReopen": true,
+  "serverReachabilityCheck": "curl failed to connect to 127.0.0.1:4176 after Stop-Process",
+  "resourceStatus": "编译资源已校验缓存。请关闭页面、断网后重开，再验证一份新源码。",
+  "source": "#include <vector>\n#include <string>\n#include <iostream>\nint twice(int n) { return n * 2; }\nint main() { int n = 0; std::cin >> n; std::vector<int> values{n, 13, 29}; std::string marker = \"offline-fixed-20261024-02\"; std::cout << marker << \":\" << twice(values[0]) << \":\" << values[2] << \"\\n\"; }\n",
+  "stdin": "23\n",
+  "result": {
+    "status": "compiled",
+    "sourceHash": "sha256:9e645cc04fcdd4811f193f6053b32f94b5fe72c1231aa42b2c9c92aaacb89f4d",
+    "artifactId": "wasm-217f21fe09b4c4db668ab3c38a607b4e543fc669e8b5c045c7084c3420617e40",
+    "diagnostics": [],
+    "smoke": {
+      "exitCode": 0,
+      "stdout": "offline-fixed-20261024-02:46:29\n",
+      "stderr": "",
+      "memoryBytes": 1179648
+    },
+    "metrics": {
+      "loadMs": 252.90000000596046,
+      "compileMs": 772.8999999761581,
+      "linkMs": 37.30000001192093,
+      "totalMs": 829.2000000178814,
+      "observedLinearMemoryBytes": {
+        "compilerAfterExecution": 28442624,
+        "linkerAfterExecution": 14745600,
+        "filesystem": 11075584
+      },
+      "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+    }
+  },
+  "compilerProbePackage": {
+    "version": "2284406f476346eea871abb7871c0d43e7b92a61a64e74f0733848e9a0b59420",
+    "resourceCount": 21,
+    "cachePayloadBytes": 60459534
+  },
+  "limitations": [
+    "Windows desktop browser; not iPad",
+    "Only the tab was closed, not the entire browser process",
+    "Resource HTTP server was stopped; system network was not globally disabled",
+    "No breakpoints, stepping, variables or call stack tested"
+  ]
+}

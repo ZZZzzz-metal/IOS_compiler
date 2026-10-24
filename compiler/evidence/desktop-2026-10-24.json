@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-24",
+  "platform": "win32",
+  "node": "v24.19.0",
+  "scope": "Desktop Node executes real Wasm compiler, linker and smoke programs. No iPad or source debugger tested.",
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "observed": [
+    {
+      "name": "c-stdio",
+      "status": "compiled",
+      "sourceHash": "sha256:bf5fde0981624a1cd99067817bd0aae52bb0e5dd14629fbeeac6fe55d6aa157f",
+      "artifactId": "wasm-0a566351525341a56c783476a5b8cb93583a8969572419425b48c472563cbe43",
+      "metrics": {
+        "loadMs": 131.3314,
+        "compileMs": 136.01959999999997,
+        "linkMs": 11.677500000000009,
+        "totalMs": 157.08550000000002,
+        "observedLinearMemoryBytes": {
+          "compilerAfterExecution": 7733248,
+          "linkerAfterExecution": 6553600,
+          "filesystem": 9502720
+        },
+        "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+      },
+      "smoke": {
+        "exitCode": 0,
+        "stdout": "sum=10 first=1 int64=9223372036854775806\n",
+        "stderr": "",
+        "memoryBytes": 1179648
+      },
+      "diagnostics": []
+    },
+    {
+      "name": "stl",
+      "status": "compiled",
+      "sourceHash": "sha256:fce174c3f696da583ec9211950e8d2fe5365f50b195ef789a04ca5e9f03e7163",
+      "artifactId": "wasm-8bf79514536ebf823f618757fa50f207556876280fe21fedacd475d081038ca6",
+      "metrics": {
+        "loadMs": 137.8139,
+        "compileMs": 873.1420999999999,
+        "linkMs": 25.385400000000118,
+        "totalMs": 913.1179999999999,
+        "observedLinearMemoryBytes": {
+          "compilerAfterExecution": 49610752,
+          "linkerAfterExecution": 17498112,
+          "filesystem": 12386304
+        },
+        "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+      },
+      "smoke": {
+        "exitCode": 0,
+        "stdout": "sum=15 min=1 max=5 pointer=5 map=key:2 hash=ok queue=9 heap=10\n中文😀 bytes=10 long=80 empty=0/0\ni64=9223372036854775806 u64=18446744073709551615 int=4 long=4 pointer=4\n",
+        "stderr": "",
+        "memoryBytes": 1179648
+      },
+      "diagnostics": []
+    },
+    {
+      "name": "debug-handoff",
+      "status": "compiled",
+      "sourceHash": "sha256:76f0eb5ad68633b15bcafc444a9a4b109c98550a6504aa0f12cb2263fff8b726",
+      "artifactId": "wasm-9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c",
+      "metrics": {
+        "loadMs": 135.0869,
+        "compileMs": 228.99540000000025,
+        "linkMs": 8.034599999999955,
+        "totalMs": 247.48500000000013,
+        "observedLinearMemoryBytes": {
+          "compilerAfterExecution": 23265280,
+          "linkerAfterExecution": 10682368,
+          "filesystem": 10158080
+        },
+        "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+      },
+      "smoke": {
+        "exitCode": 0,
+        "stdout": "",
+        "stderr": "",
+        "memoryBytes": 1179648
+      },
+      "diagnostics": []
+    },
+    {
+      "name": "compile-error",
+      "status": "failed",
+      "sourceHash": "sha256:9799197d802c02c34d963ebd3a925d8eb417d1fbbb09aaf4e4d775a5782da67e",
+      "diagnostics": [
+        {
+          "severity": "error",
+          "message": "use of undeclared identifier 'missing_name'",
+          "range": {
+            "start": {
+              "sourcePath": "中文/main.cpp",
+              "line": 2,
+              "column": 29
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "link-error",
+      "status": "failed",
+      "sourceHash": "sha256:f4313d159a076ccd12db675dc14e960bf4a8d4569340ca61dcf883d4c129babc",
+      "diagnostics": [
+        {
+          "severity": "error",
+          "message": "build/main.o: undefined symbol: absent()"
+        }
+      ]
+    },
+    {
+      "name": "bits-unsupported",
+      "status": "failed",
+      "sourceHash": "sha256:1983b34797003370883af940768e323830c8506d4d072fd673eda1244686abbc",
+      "diagnostics": [
+        {
+          "severity": "fatal",
+          "message": "'bits/stdc++.h' file not found",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 1,
+              "column": 10
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "cancelled",
+      "status": "cancelled",
+      "sourceHash": "sha256:18f1ecfa68740fc2a3bce37f285444529b52a1b2fbf145025bd86f756efd7cb6",
+      "diagnostics": []
+    }
+  ],
+  "versions": {
+    "compiler": {
+      "exitCode": 0,
+      "stdout": "clang version 8.0.1 \nTarget: wasm32-unknown-wasi\nThread model: single\nInstalledDir: /\n",
+      "stderr": "",
+      "memoryBytes": 6684672
+    },
+    "linker": {
+      "exitCode": 0,
+      "stdout": "LLD 8.0.1\n",
+      "stderr": "",
+      "memoryBytes": 5046272
+    },
+    "toolchainId": "binji-wasm-clang-648c4a89997a"
+  }
+}
