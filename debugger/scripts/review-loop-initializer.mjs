@@ -1,5 +1,5 @@
-// Focused read-only product review. Writes only its dedicated evidence JSON;
-// core modules, compiled candidates, and global test registrations are untouched.
+// Reproduce the initializer lifetime regression against current and historical
+// inspectors. Only the new fix evidence is written; prior review bytes stay intact.
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -18,11 +18,14 @@ const fix = 'cc2fa6a2e05153a676c570e325caf9f1baceb5df';
 const tag = 'integration-v0.2.1';
 const beforeFixRevision = git('rev-parse', `${fix}^`);
 const currentSource = await readFile(new URL('../src/variables.mjs', import.meta.url), 'utf8');
+const baselineSource = execFileSync('git', ['-C', fileURLToPath(root), 'show', `${tag}:debugger/src/variables.mjs`], { encoding: 'utf8' });
 const beforeFixSource = execFileSync('git', ['-C', fileURLToPath(root), 'show', `${beforeFixRevision}:debugger/src/variables.mjs`], { encoding: 'utf8' });
 const dwarfURL = new URL('../src/dwarf.mjs', import.meta.url).href;
 const importText = "from './dwarf.mjs'";
 assert.equal(beforeFixSource.split(importText).length, 2, 'pre-fix module has exactly one known relative import');
 const previousModule = await import(`data:text/javascript;base64,${Buffer.from(beforeFixSource.replace(importText, `from ${JSON.stringify(dwarfURL)}`)).toString('base64')}`);
+assert.equal(baselineSource.split(importText).length, 2, 'integration baseline has exactly one known relative import');
+const baselineModule = await import(`data:text/javascript;base64,${Buffer.from(baselineSource.replace(importText, `from ${JSON.stringify(dwarfURL)}`)).toString('base64')}`);
 
 const source = [
   'int seed(int n) {',
@@ -174,18 +177,25 @@ function diagnose(Inspector, version) {
     execution: { steps, done: runtime.done, exitCode: runtime.exitCode, trap: runtime.trap } };
 }
 
-const current = diagnose(VariableInspector, 'integration-v0.2.1');
+const current = diagnose(VariableInspector, 'current-working-source');
+const baseline = diagnose(baselineModule.VariableInspector, tag);
 const previous = diagnose(previousModule.VariableInspector, 'parent-of-cc2fa6a');
 const evidence = {
-  kind: 'role3-readonly-loop-initializer-review', recordedAt: new Date().toISOString(),
+  kind: 'role3-loop-initializer-lifetime-fix', recordedAt: new Date().toISOString(),
   scope: 'desktop-node-real-CompilerProbe-and-WasmRuntime', ipadTested: false,
-  finding: { priority: 'P2', introducedByFix: current.status === 'failed' && previous.status === 'passed',
+  finding: { priority: 'P2', status: current.status === 'passed' ? 'fixed' : 'open',
+    integrationBaselineReproduces: baseline.status === 'failed',
     expected: 'Each new x initialization remains unavailable until its actual store; body values are 10 and 11.',
-    actual: 'During the second seed call and its return continuation, current-tag x exposes previous-iteration value 10.',
-    source: 'debugger/src/variables.mjs:137',
-    explanation: 'The declaration PC comparison permits later initializer instructions; per-frame memory-write coverage includes the previous lifetime of the same stack slot.' },
+    actual: current.status === 'passed'
+      ? 'Both iterations hide x during seed and the return continuation; completed initializations expose 10 and 11.'
+      : 'The current inspector still exposes an uninitialized lifetime or loses a completed value.',
+    source: 'debugger/src/variables.mjs',
+    explanation: 'Initialization must use the current declaration execution lifetime, not any prior write to a reused stack slot.' },
   provenance: { revision: git('rev-parse', 'HEAD'), tag, tagRevision: git('rev-parse', tag),
     fixRevision: fix, beforeFixRevision, currentVariablesSHA256: sha(currentSource),
+    currentRuntimeSHA256: sha(await readFile(new URL('../src/wasm-runtime.mjs', import.meta.url))),
+    workingTree: git('status', '--porcelain=v1', '--untracked-files=normal').split('\n').filter(Boolean),
+    integrationBaselineVariablesSHA256: sha(baselineSource),
     beforeFixVariablesSHA256: sha(beforeFixSource),
     preFixLoading: 'git show parent:debugger/src/variables.mjs; one known dwarf import changed to current absolute file URL; module loaded from an in-memory data URL.',
     diagnosticSHA256: sha(await readFile(fileURLToPath(import.meta.url))) },
@@ -196,15 +206,17 @@ const evidence = {
     target: compilation.target, compilerResourceHash: compilation.compilerResourceHash,
     linkerResourceHash: compilation.linkerResourceHash, sysrootResourceHash: compilation.sysrootResourceHash,
     nativeSmoke: compilation.smoke },
-  runs: { current, beforeFix: previous },
+  runs: { current, integrationBaseline: baseline, beforeFix: previous },
   limitations: ['Runtime-level caller-frame query; no DebuggerAdapter pauseId/frameId transport exercised.',
     'All frame PCs come from actual execution. Callee stops use real source-bound instruction PCs; caller PC is the verified call continuation.',
-    'No product implementation, fixture binaries, source files, candidate profiles, or global test registrations are changed.'],
+    'The diagnostic itself changes no product implementation, fixture binaries, candidate profiles, or global test registrations.',
+    'Historical inspectors use the same current runtime and symbols to isolate variable-inspection behavior; this is not a full historical runtime replay.'],
 };
-const output = new URL('../evidence/integration-v0.2.1-2026-10-25/loop-initializer-review.json', import.meta.url);
+const output = new URL('../evidence/initializer-lifetime-fix-2026-10-25/loop-initializer-review.json', import.meta.url);
 await mkdir(new URL('.', output), { recursive: true });
 await writeFile(output, JSON.stringify(evidence, null, 2) + '\n');
 console.log(JSON.stringify({ current: current.status, beforeFix: previous.status,
-  introducedByFix: evidence.finding.introducedByFix, failedAssertions: current.assertions.filter(item => !item.passed),
+  integrationBaseline: baseline.status, status: evidence.finding.status,
+  failedAssertions: current.assertions.filter(item => !item.passed),
   evidence: fileURLToPath(output) }, null, 2));
 process.exitCode = current.status === 'failed' ? 1 : 0;

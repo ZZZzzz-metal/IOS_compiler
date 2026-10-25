@@ -1,0 +1,104 @@
+✖ fresh loop initializer withholds previous iteration x until its real new store (606.6345ms)
+ℹ {"name":"loop-initializer","sourceHash":"sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee","artifactSHA256":"sha256:26ae821aee785bdd5e9638f035f8006efbc0242d7d3f7f0b5d0dfc63f55255fa","observations":18,"failureCount":6,"exitCode":21}
+✖ fresh inner initializer never falls back to outer x and restores it after lexical exit (576.8095ms)
+ℹ {"name":"shadow-initializer","sourceHash":"sha256:0b2a59a89bd3915d96eeb3f512c09f99fdddcc79ac5deb0e097c18d79a2524e1","artifactSHA256":"sha256:a10a753e839dacd074bf4b6a353500e1f0baf2a25a4b4cf20d81df86ac4d53e3","observations":19,"failureCount":6,"exitCode":21}
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1321.5812
+
+✖ failing tests:
+
+test at debugger\checks\initializer-adapter.test.mjs:206:1
+✖ fresh loop initializer withholds previous iteration x until its real new store (606.6345ms)
+  AssertionError [ERR_ASSERTION]: an initializer must not expose a previous dynamic lifetime or a shadowed outer x
+  + actual - expected
+  
+  + [
+  +   {
+  +     label: 'callee-before-initializer-store, iteration 1, query 0: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   },
+  +   {
+  +     label: 'callee-before-initializer-store, iteration 1, query 1: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   },
+  +   {
+  +     label: 'callee-before-initializer-store, iteration 1, query 2: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   },
+  +   {
+  +     label: 'returned-before-initializer-store, iteration 1, query 0: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   },
+  +   {
+  +     label: 'returned-before-initializer-store, iteration 1, query 1: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   },
+  +   {
+  +     label: 'returned-before-initializer-store, iteration 1, query 2: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   }
+  + ]
+  - []
+  
+      at exercise (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/initializer-adapter.test.mjs:203:10)
+      at async TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/initializer-adapter.test.mjs:207:3)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ { label: 'callee-before-initializer-store, iteration 1, query 0: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' }, { label: 'callee-before-initializer-store, iteration 1, query 1: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' }, { label: 'callee-before-initializer-store, iteration 1, query 2: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' }, { label: 'returned-before-initializer-store, iteration 1, query 0: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' }, { label: 'returned-before-initializer-store, iteration 1, query 1: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' }, { label: 'returned-before-initializer-store, iteration 1, query 2: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' } ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at debugger\checks\initializer-adapter.test.mjs:210:1
+✖ fresh inner initializer never falls back to outer x and restores it after lexical exit (576.8095ms)
+  AssertionError [ERR_ASSERTION]: an initializer must not expose a previous dynamic lifetime or a shadowed outer x
+  + actual - expected
+  
+  + [
+  +   {
+  +     label: 'callee-before-initializer-store, iteration 1, query 0: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   },
+  +   {
+  +     label: 'callee-before-initializer-store, iteration 1, query 1: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   },
+  +   {
+  +     label: 'callee-before-initializer-store, iteration 1, query 2: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   },
+  +   {
+  +     label: 'returned-before-initializer-store, iteration 1, query 0: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   },
+  +   {
+  +     label: 'returned-before-initializer-store, iteration 1, query 1: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   },
+  +   {
+  +     label: 'returned-before-initializer-store, iteration 1, query 2: nearest x',
+  +     message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}'
+  +   }
+  + ]
+  - []
+  
+      at exercise (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/initializer-adapter.test.mjs:203:10)
+      at async TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/initializer-adapter.test.mjs:211:3)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ { label: 'callee-before-initializer-store, iteration 1, query 0: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' }, { label: 'callee-before-initializer-store, iteration 1, query 1: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' }, { label: 'callee-before-initializer-store, iteration 1, query 2: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' }, { label: 'returned-before-initializer-store, iteration 1, query 0: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' }, { label: 'returned-before-initializer-store, iteration 1, query 1: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' }, { label: 'returned-before-initializer-store, iteration 1, query 2: nearest x', message: 'unfinished new lifetime must not expose prior x: {"name":"x","type":"int","truncated":false,"availability":"available","displayValue":"10","namedCount":0,"indexedCount":0}' } ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

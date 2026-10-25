@@ -1,0 +1,38 @@
+[
+  {
+    "check": "debugger",
+    "exitCode": 0
+  },
+  {
+    "check": "VAL-001",
+    "exitCode": 0
+  },
+  {
+    "check": "VAL-002",
+    "exitCode": 0
+  },
+  {
+    "check": "acceptance",
+    "exitCode": 0
+  },
+  {
+    "check": "integration",
+    "exitCode": 0
+  },
+  {
+    "check": "baseline",
+    "exitCode": 0
+  },
+  {
+    "check": "contracts",
+    "exitCode": 0
+  },
+  {
+    "check": "original-diagnostic",
+    "exitCode": 0
+  },
+  {
+    "check": "probe-package",
+    "exitCode": 0
+  }
+]

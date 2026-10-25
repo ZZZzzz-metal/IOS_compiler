@@ -1,0 +1,4 @@
+# Keep captured evidence bytes stable across Git checkout, including Windows CRLF.
+* -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
+# Node's captured failure report includes indented blank lines; retain it verbatim.
+before-fix/adapter-red-machine.tap -whitespace
