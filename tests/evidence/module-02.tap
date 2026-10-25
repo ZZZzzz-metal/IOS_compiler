@@ -1,0 +1,172 @@
+TAP version 13
+# Subtest: foreign request replies and malformed success identities never reach artifact storage
+ok 1 - foreign request replies and malformed success identities never reach artifact storage
+  ---
+  duration_ms: 19.9942
+  type: 'test'
+  ...
+# Subtest: a valid empty Wasm with no DWARF cannot become a debug build
+ok 2 - a valid empty Wasm with no DWARF cannot become a debug build
+  ---
+  duration_ms: 0.7975
+  type: 'test'
+  ...
+# Subtest: duplicate terminal replies persist once and cancellation wins over late persistence
+ok 3 - duplicate terminal replies persist once and cancellation wins over late persistence
+  ---
+  duration_ms: 1.189
+  type: 'test'
+  ...
+# Subtest: terminated worker late messages cannot overwrite the next request
+ok 4 - terminated worker late messages cannot overwrite the next request
+  ---
+  duration_ms: 0.3777
+  type: 'test'
+  ...
+# Subtest: timeout terminates the worker and permits another compilation
+ok 5 - timeout terminates the worker and permits another compilation
+  ---
+  duration_ms: 12.3896
+  type: 'test'
+  ...
+# Subtest: pinned Wasm compiler versions and resource bytes are real
+ok 6 - pinned Wasm compiler versions and resource bytes are real
+  ---
+  duration_ms: 228.2295
+  type: 'test'
+  ...
+# Subtest: C11 stdin/stdout, recursion, array, pointer and signed 64-bit integer
+ok 7 - C11 stdin/stdout, recursion, array, pointer and signed 64-bit integer
+  ---
+  duration_ms: 430.3529
+  type: 'test'
+  ...
+# Subtest: C++17 real STL, UTF-8 output and 32-bit target integer sizes
+ok 8 - C++17 real STL, UTF-8 output and 32-bit target integer sizes
+  ---
+  duration_ms: 1308.3376
+  type: 'test'
+  ...
+# Subtest: debug handoff artifact is executable and retains real DWARF sections
+ok 9 - debug handoff artifact is executable and retains real DWARF sections
+  ---
+  duration_ms: 457.7464
+  type: 'test'
+  ...
+# Subtest: real diagnostic byte columns map Chinese/emoji source back to UTF-16
+ok 10 - real diagnostic byte columns map Chinese/emoji source back to UTF-16
+  ---
+  duration_ms: 195.222
+  type: 'test'
+  ...
+# Subtest: link errors and nonstandard bits/stdc++.h do not produce startable artifacts
+ok 11 - link errors and nonstandard bits/stdc++.h do not produce startable artifacts
+  ---
+  duration_ms: 383.1118
+  type: 'test'
+  ...
+# Subtest: warnings survive a successful compilation
+ok 12 - warnings survive a successful compilation
+  ---
+  duration_ms: 191.8812
+  type: 'test'
+  ...
+# Subtest: editable driver and user header are both compiled and hashed
+ok 13 - editable driver and user header are both compiled and hashed
+  ---
+  duration_ms: 199.0494
+  type: 'test'
+  ...
+# Subtest: cancel actual compilation without blocking the caller, then compile again
+ok 14 - cancel actual compilation without blocking the caller, then compile again
+  ---
+  duration_ms: 554.3983
+  type: 'test'
+  ...
+# Subtest: failure, source edit and recompilation retain distinct snapshot/artifact identity
+ok 15 - failure, source edit and recompilation retain distinct snapshot/artifact identity
+  ---
+  duration_ms: 513.9145
+  type: 'test'
+  ...
+# Subtest: activated cache is rechecked, corruption is blocked on fetch, repair is explicit
+ok 16 - activated cache is rechecked, corruption is blocked on fetch, repair is explicit
+  ---
+  duration_ms: 27.9187
+  type: 'test'
+  ...
+# Subtest: failed staging keeps the old complete cache and removes partial new cache
+ok 17 - failed staging keeps the old complete cache and removes partial new cache
+  ---
+  duration_ms: 2.3714
+  type: 'test'
+  ...
+# Subtest: browser source hashing matches shared fixed vector: bom-crlf-chinese
+ok 18 - browser source hashing matches shared fixed vector: bom-crlf-chinese
+  ---
+  duration_ms: 2.8265
+  type: 'test'
+  ...
+# Subtest: browser source hashing matches shared fixed vector: utf16-order-and-json-escapes
+ok 19 - browser source hashing matches shared fixed vector: utf16-order-and-json-escapes
+  ---
+  duration_ms: 1.0202
+  type: 'test'
+  ...
+# Subtest: SHA-256 covers padding boundaries, multiple blocks and byte subviews
+ok 20 - SHA-256 covers padding boundaries, multiple blocks and byte subviews
+  ---
+  duration_ms: 9.4333
+  type: 'test'
+  ...
+# Subtest: normalization preserves Unicode and whitespace but rejects unsafe sources
+ok 21 - normalization preserves Unicode and whitespace but rejects unsafe sources
+  ---
+  duration_ms: 0.8587
+  type: 'test'
+  ...
+# Subtest: source operations work without newer String methods or WebCrypto
+ok 22 - source operations work without newer String methods or WebCrypto
+  ---
+  duration_ms: 0.596
+  type: 'test'
+  ...
+# Subtest: validation rejects tampering and noncanonical snapshots without repairing them
+ok 23 - validation rejects tampering and noncanonical snapshots without repairing them
+  ---
+  duration_ms: 1.4554
+  type: 'test'
+  ...
+# Subtest: Clang UTF-8 columns convert to UTF-16, including tabs and emoji
+ok 24 - Clang UTF-8 columns convert to UTF-16, including tabs and emoji
+  ---
+  duration_ms: 0.2892
+  type: 'test'
+  ...
+# Subtest: Clang diagnostics preserve severity/options and only map actual project sources
+ok 25 - Clang diagnostics preserve severity/options and only map actual project sources
+  ---
+  duration_ms: 1.8833
+  type: 'test'
+  ...
+# Subtest: virtual-root prefix wins over an ambiguous same-named subdirectory
+ok 26 - virtual-root prefix wins over an ambiguous same-named subdirectory
+  ---
+  duration_ms: 0.5943
+  type: 'test'
+  ...
+# Subtest: browser Worker receives its first request before any asynchronous lock loading
+ok 27 - browser Worker receives its first request before any asynchronous lock loading
+  ---
+  duration_ms: 1.8871
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4648.005

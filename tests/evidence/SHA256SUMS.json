@@ -1,0 +1,37 @@
+[
+  {
+    "file": "independent-2026-10-25.json",
+    "byteLength": 569821,
+    "sha256": "b118970db8bbd297fddb114c21f509b507a9f4b5d90b1ea04fa3aaeb376e18c1"
+  },
+  {
+    "file": "independent-2026-10-25.tap",
+    "byteLength": 1610,
+    "sha256": "cf5aa0200121fa7c8d875c3fa740ad035a284cc40c69685661b3b0470d53ca6b"
+  },
+  {
+    "file": "module-02.tap",
+    "byteLength": 5776,
+    "sha256": "f6fad7987eebfdb044823c45280131ba7c8d1bf218c53fb73a3f92d10c0f50bb"
+  },
+  {
+    "file": "module-03.tap",
+    "byteLength": 11552,
+    "sha256": "61145f8a8adce3d2af444cffb46dbf44e5c75de1e178f243ae0a300d3f673a41"
+  },
+  {
+    "file": "module-regressions.json",
+    "byteLength": 1245,
+    "sha256": "51bf5e152086d3d66d2672fd2de26a78ff9ee6ac3a13fa5753014fda1336faf2"
+  },
+  {
+    "file": "regression-loop-header.json",
+    "byteLength": 92245,
+    "sha256": "7685f9956dcbd664bfa2ca80b033b7951aa4351fc8667d602e95c0b77076c224"
+  },
+  {
+    "file": "regression-shadow.json",
+    "byteLength": 33126,
+    "sha256": "290fe1166e432500fe5dcbc39f971267801ee82857762bd61ecf57fd42ea8415"
+  }
+]

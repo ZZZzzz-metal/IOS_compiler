@@ -1,0 +1,51 @@
+{
+  "recordedAt": "2026-10-25T00:21:24.571Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "ipadTested": false
+  },
+  "results": [
+    {
+      "id": "02",
+      "folder": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+      "glob": "compiler/checks/*.test.mjs",
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "compiler/checks/*.test.mjs"
+      ],
+      "startedAt": "2026-10-25T00:21:13.391Z",
+      "durationMs": 4760.6614,
+      "exitCode": 0,
+      "summary": [
+        "# tests 27",
+        "# pass 27",
+        "# fail 0",
+        "# skipped 0",
+        "# duration_ms 4648.005"
+      ]
+    },
+    {
+      "id": "03",
+      "folder": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03",
+      "glob": "debugger/checks/*.test.mjs",
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "debugger/checks/*.test.mjs"
+      ],
+      "startedAt": "2026-10-25T00:21:13.415Z",
+      "durationMs": 11156.2894,
+      "exitCode": 0,
+      "summary": [
+        "# tests 49",
+        "# pass 49",
+        "# fail 0",
+        "# skipped 0",
+        "# duration_ms 11050.0588"
+      ]
+    }
+  ]
+}

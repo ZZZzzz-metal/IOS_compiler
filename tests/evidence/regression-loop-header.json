@@ -1,0 +1,2475 @@
+{
+  "name": "loop-header",
+  "status": "failed",
+  "recordedAt": "2026-10-25T00:26:21.587Z",
+  "scope": "desktop-node-real-program",
+  "ipadTested": false,
+  "samples": [
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Identifier i is unavailable or ambiguous",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+        "eventSeq": 5,
+        "kind": "paused",
+        "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 3,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+        "eventSeq": 7,
+        "kind": "paused",
+        "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 4,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Identifier i is unavailable or ambiguous",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+        "eventSeq": 9,
+        "kind": "paused",
+        "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 3,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+        "eventSeq": 11,
+        "kind": "paused",
+        "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 4,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Identifier i is unavailable or ambiguous",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+        "eventSeq": 13,
+        "kind": "paused",
+        "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 3,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "2",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+        "eventSeq": 15,
+        "kind": "paused",
+        "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 4,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Identifier i is unavailable or ambiguous",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "3",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+        "eventSeq": 17,
+        "kind": "paused",
+        "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 3,
+          "column": 1
+        }
+      }
+    }
+  ],
+  "failure": {
+    "message": "{\"name\":\"i\",\"type\":\"<expression>\",\"truncated\":false,\"availability\":\"unavailable\",\"reason\":\"Identifier i is unavailable or ambiguous\",\"namedCount\":0,\"indexedCount\":0}\n+ actual - expected\n\n+ 'unavailable'\n- 'available'\n",
+    "stack": "AssertionError [ERR_ASSERTION]: {\"name\":\"i\",\"type\":\"<expression>\",\"truncated\":false,\"availability\":\"unavailable\",\"reason\":\"Identifier i is unavailable or ambiguous\",\"namedCount\":0,\"indexedCount\":0}\n+ actual - expected\n\n+ 'unavailable'\n- 'available'\n\n    at available (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/lib/harness.mjs:169:10)\n    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/reproduce.mjs:41:40"
+  },
+  "observations": {
+    "compilations": [
+      {
+        "id": "regression-loop-header",
+        "source": "int main() {\n    int sum = 0;\n    for (int i = 0; i < 3; ++i) { // @bp:header\n        sum += i; // @bp:body\n    }\n    return sum == 3 ? 0 : 1;\n}\n",
+        "snapshot": {
+          "snapshotId": "d9040d91-b6aa-4bd8-b5f0-3b71032a70c3",
+          "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+          "encoding": "utf-8",
+          "newline": "lf",
+          "translationUnit": "loop-header.cpp",
+          "files": [
+            {
+              "path": "loop-header.cpp",
+              "role": "user",
+              "text": "int main() {\n    int sum = 0;\n    for (int i = 0; i < 3; ++i) { // @bp:header\n        sum += i; // @bp:body\n    }\n    return sum == 3 ? 0 : 1;\n}\n",
+              "contentHash": "sha256:350eb125a818429921d50c8fdb8564acd4993ff0c559166a52c61e20070875f5"
+            }
+          ]
+        },
+        "elapsedMs": 306.2248,
+        "status": "compiled",
+        "requestId": "validation05-compile-1",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "snapshotId": "d9040d91-b6aa-4bd8-b5f0-3b71032a70c3",
+        "artifactId": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+        "target": {
+          "targetTriple": "wasm32-unknown-wasi",
+          "abi": "wasi_unstable",
+          "addressBits": 32,
+          "endianness": "little",
+          "artifactFormat": "wasm-v1",
+          "debugInfoFormat": "dwarf-4-embedded",
+          "requiredFeatures": [
+            "mvp",
+            "mutable-globals"
+          ]
+        },
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "mode": "debug",
+        "compilerArguments": [
+          "-cc1",
+          "-emit-obj",
+          "-triple",
+          "wasm32-unknown-wasi",
+          "-main-file-name",
+          "loop-header.cpp",
+          "-disable-free",
+          "-isysroot",
+          "/",
+          "-internal-isystem",
+          "/include/c++/v1",
+          "-internal-isystem",
+          "/lib/clang/8.0.1/include",
+          "-internal-isystem",
+          "/include",
+          "-I",
+          "/project",
+          "-O0",
+          "-ferror-limit",
+          "20",
+          "-fmessage-length",
+          "0",
+          "-debug-info-kind=standalone",
+          "-dwarf-version=4",
+          "-debugger-tuning=lldb",
+          "-fdebug-compilation-dir",
+          "/project",
+          "-std=c++17",
+          "-x",
+          "c++",
+          "-o",
+          "build/main.o",
+          "/project/loop-header.cpp"
+        ],
+        "linkerArguments": [
+          "--no-threads",
+          "--export-dynamic",
+          "-z",
+          "stack-size=1048576",
+          "--max-memory=268435456",
+          "-Llib/wasm32-wasi",
+          "lib/wasm32-wasi/crt1.o",
+          "build/main.o",
+          "-lc++",
+          "-lc++abi",
+          "-lc",
+          "-lm",
+          "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+          "-o",
+          "build/main.wasm"
+        ],
+        "sourceMappings": [],
+        "executableRef": {
+          "id": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+          "relativePath": "compiler-builds/wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7/main.wasm",
+          "sha256": "sha256:1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+          "byteLength": 13731,
+          "mediaType": "application/wasm",
+          "version": "binji-wasm-clang-648c4a89997a"
+        },
+        "diagnostics": [],
+        "rawDiagnostics": "",
+        "wasm": {
+          "format": "wasm-v1",
+          "sections": [
+            {
+              "id": 1,
+              "byteLength": 30,
+              "payloadOffset": 10
+            },
+            {
+              "id": 2,
+              "byteLength": 242,
+              "payloadOffset": 43
+            },
+            {
+              "id": 3,
+              "byteLength": 22,
+              "payloadOffset": 287
+            },
+            {
+              "id": 4,
+              "byteLength": 5,
+              "payloadOffset": 311
+            },
+            {
+              "id": 5,
+              "byteLength": 5,
+              "payloadOffset": 318
+            },
+            {
+              "id": 6,
+              "byteLength": 23,
+              "payloadOffset": 325
+            },
+            {
+              "id": 7,
+              "byteLength": 71,
+              "payloadOffset": 350
+            },
+            {
+              "id": 10,
+              "byteLength": 11945,
+              "payloadOffset": 424
+            },
+            {
+              "id": 11,
+              "byteLength": 516,
+              "payloadOffset": 12372
+            },
+            {
+              "id": 0,
+              "name": ".debug_info",
+              "byteLength": 116,
+              "payloadOffset": 12902,
+              "dwarfVersion": 4
+            },
+            {
+              "id": 0,
+              "name": ".debug_macinfo",
+              "byteLength": 16,
+              "payloadOffset": 13023
+            },
+            {
+              "id": 0,
+              "name": ".debug_abbrev",
+              "byteLength": 91,
+              "payloadOffset": 13040
+            },
+            {
+              "id": 0,
+              "name": ".debug_line",
+              "byteLength": 92,
+              "payloadOffset": 13131
+            },
+            {
+              "id": 0,
+              "name": ".debug_str",
+              "byteLength": 81,
+              "payloadOffset": 13224
+            },
+            {
+              "id": 0,
+              "name": "name",
+              "byteLength": 434,
+              "payloadOffset": 13302
+            }
+          ],
+          "dwarfSections": [
+            {
+              "id": 0,
+              "name": ".debug_info",
+              "byteLength": 116,
+              "payloadOffset": 12902,
+              "dwarfVersion": 4
+            },
+            {
+              "id": 0,
+              "name": ".debug_macinfo",
+              "byteLength": 16,
+              "payloadOffset": 13023
+            },
+            {
+              "id": 0,
+              "name": ".debug_abbrev",
+              "byteLength": 91,
+              "payloadOffset": 13040
+            },
+            {
+              "id": 0,
+              "name": ".debug_line",
+              "byteLength": 92,
+              "payloadOffset": 13131
+            },
+            {
+              "id": 0,
+              "name": ".debug_str",
+              "byteLength": 81,
+              "payloadOffset": 13224
+            }
+          ],
+          "imports": [
+            {
+              "module": "wasi_unstable",
+              "name": "fd_prestat_get",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "fd_prestat_dir_name",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "environ_sizes_get",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "environ_get",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "args_sizes_get",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "args_get",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "proc_exit",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "fd_fdstat_get",
+              "kind": "function"
+            }
+          ]
+        },
+        "metrics": {
+          "loadMs": 143.62869999999998,
+          "compileMs": 95.02049999999997,
+          "linkMs": 20.172000000000025,
+          "totalMs": 125.5315,
+          "observedLinearMemoryBytes": {
+            "compilerAfterExecution": 7340032,
+            "linkerAfterExecution": 9371648,
+            "filesystem": 9437184
+          },
+          "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+        },
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+        "smoke": {
+          "exitCode": 0,
+          "stdout": "",
+          "stderr": "",
+          "memoryBytes": 1179648
+        },
+        "objectSha256": "sha256:c72ffe986b7982aa1a69e48ea7800d0bebfe5f86a1c319f06bf955f664694798",
+        "objectByteLength": 973
+      }
+    ],
+    "sessions": [
+      {
+        "worker": false,
+        "events": [
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 1,
+            "kind": "state",
+            "state": "starting"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 2,
+            "kind": "breakpoints",
+            "bindings": [
+              {
+                "breakpointId": "validation05-bp-3",
+                "requested": {
+                  "sourcePath": "loop-header.cpp",
+                  "line": 3,
+                  "column": 1
+                },
+                "status": "bound",
+                "actual": [
+                  {
+                    "sourcePath": "loop-header.cpp",
+                    "line": 3,
+                    "column": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 3,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 4,
+            "kind": "breakpoints",
+            "bindings": [
+              {
+                "breakpointId": "validation05-bp-6",
+                "requested": {
+                  "sourcePath": "loop-header.cpp",
+                  "line": 3,
+                  "column": 1
+                },
+                "status": "bound",
+                "actual": [
+                  {
+                    "sourcePath": "loop-header.cpp",
+                    "line": 3,
+                    "column": 1
+                  }
+                ]
+              },
+              {
+                "breakpointId": "validation05-bp-7",
+                "requested": {
+                  "sourcePath": "loop-header.cpp",
+                  "line": 4,
+                  "column": 1
+                },
+                "status": "bound",
+                "actual": [
+                  {
+                    "sourcePath": "loop-header.cpp",
+                    "line": 4,
+                    "column": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 5,
+            "kind": "paused",
+            "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 3,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 6,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 7,
+            "kind": "paused",
+            "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 4,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 8,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 9,
+            "kind": "paused",
+            "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 3,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 10,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 11,
+            "kind": "paused",
+            "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 4,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 12,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 13,
+            "kind": "paused",
+            "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 3,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 14,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 15,
+            "kind": "paused",
+            "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 4,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 16,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 17,
+            "kind": "paused",
+            "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 3,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 18,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "eventSeq": 19,
+            "kind": "terminated",
+            "reason": "exit",
+            "exitCode": 0
+          }
+        ]
+      }
+    ],
+    "queries": [
+      {
+        "query": {
+          "requestId": "validation05-stack-9",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-9",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0"
+          },
+          "frames": [
+            {
+              "frameId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-10",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0",
+            "frameId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-10",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0",
+            "frameId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "<expression>",
+            "truncated": false,
+            "availability": "unavailable",
+            "reason": "Identifier i is unavailable or ambiguous",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-11",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-11",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0"
+          },
+          "frames": [
+            {
+              "frameId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-12",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0",
+            "frameId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-12",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0",
+            "frameId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-14",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-14",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36"
+          },
+          "frames": [
+            {
+              "frameId": "5b162c39-4f9f-400b-b706-d85224727b36:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "5b162c39-4f9f-400b-b706-d85224727b36:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "5b162c39-4f9f-400b-b706-d85224727b36:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-15",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36",
+            "frameId": "5b162c39-4f9f-400b-b706-d85224727b36:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-15",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36",
+            "frameId": "5b162c39-4f9f-400b-b706-d85224727b36:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-16",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-16",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36"
+          },
+          "frames": [
+            {
+              "frameId": "5b162c39-4f9f-400b-b706-d85224727b36:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "5b162c39-4f9f-400b-b706-d85224727b36:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "5b162c39-4f9f-400b-b706-d85224727b36:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-17",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36",
+            "frameId": "5b162c39-4f9f-400b-b706-d85224727b36:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-17",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36",
+            "frameId": "5b162c39-4f9f-400b-b706-d85224727b36:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-19",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-19",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69"
+          },
+          "frames": [
+            {
+              "frameId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-20",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69",
+            "frameId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-20",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69",
+            "frameId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "<expression>",
+            "truncated": false,
+            "availability": "unavailable",
+            "reason": "Identifier i is unavailable or ambiguous",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-21",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-21",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69"
+          },
+          "frames": [
+            {
+              "frameId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-22",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69",
+            "frameId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-22",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69",
+            "frameId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-24",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-24",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f"
+          },
+          "frames": [
+            {
+              "frameId": "87034491-edbd-44d9-a3c7-13d47015cb5f:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "87034491-edbd-44d9-a3c7-13d47015cb5f:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "87034491-edbd-44d9-a3c7-13d47015cb5f:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-25",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f",
+            "frameId": "87034491-edbd-44d9-a3c7-13d47015cb5f:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-25",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f",
+            "frameId": "87034491-edbd-44d9-a3c7-13d47015cb5f:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "1",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-26",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-26",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f"
+          },
+          "frames": [
+            {
+              "frameId": "87034491-edbd-44d9-a3c7-13d47015cb5f:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "87034491-edbd-44d9-a3c7-13d47015cb5f:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "87034491-edbd-44d9-a3c7-13d47015cb5f:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-27",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f",
+            "frameId": "87034491-edbd-44d9-a3c7-13d47015cb5f:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-27",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f",
+            "frameId": "87034491-edbd-44d9-a3c7-13d47015cb5f:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-29",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-29",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec"
+          },
+          "frames": [
+            {
+              "frameId": "782d7026-8088-42e2-b639-5a16dc9e53ec:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "782d7026-8088-42e2-b639-5a16dc9e53ec:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "782d7026-8088-42e2-b639-5a16dc9e53ec:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-30",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec",
+            "frameId": "782d7026-8088-42e2-b639-5a16dc9e53ec:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-30",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec",
+            "frameId": "782d7026-8088-42e2-b639-5a16dc9e53ec:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "<expression>",
+            "truncated": false,
+            "availability": "unavailable",
+            "reason": "Identifier i is unavailable or ambiguous",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-31",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-31",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec"
+          },
+          "frames": [
+            {
+              "frameId": "782d7026-8088-42e2-b639-5a16dc9e53ec:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "782d7026-8088-42e2-b639-5a16dc9e53ec:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "782d7026-8088-42e2-b639-5a16dc9e53ec:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-32",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec",
+            "frameId": "782d7026-8088-42e2-b639-5a16dc9e53ec:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-32",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec",
+            "frameId": "782d7026-8088-42e2-b639-5a16dc9e53ec:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "1",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-34",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-34",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a"
+          },
+          "frames": [
+            {
+              "frameId": "fac27acb-9a86-4e6c-a440-959b189adf7a:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "fac27acb-9a86-4e6c-a440-959b189adf7a:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "fac27acb-9a86-4e6c-a440-959b189adf7a:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-35",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a",
+            "frameId": "fac27acb-9a86-4e6c-a440-959b189adf7a:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-35",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a",
+            "frameId": "fac27acb-9a86-4e6c-a440-959b189adf7a:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "2",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-36",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-36",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a"
+          },
+          "frames": [
+            {
+              "frameId": "fac27acb-9a86-4e6c-a440-959b189adf7a:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "fac27acb-9a86-4e6c-a440-959b189adf7a:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "fac27acb-9a86-4e6c-a440-959b189adf7a:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-37",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a",
+            "frameId": "fac27acb-9a86-4e6c-a440-959b189adf7a:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-37",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a",
+            "frameId": "fac27acb-9a86-4e6c-a440-959b189adf7a:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "1",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-39",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-39",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10"
+          },
+          "frames": [
+            {
+              "frameId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-40",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10",
+            "frameId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-40",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10",
+            "frameId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "<expression>",
+            "truncated": false,
+            "availability": "unavailable",
+            "reason": "Identifier i is unavailable or ambiguous",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-41",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-41",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10"
+          },
+          "frames": [
+            {
+              "frameId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-42",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10",
+            "frameId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-42",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10",
+            "frameId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "3",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      }
+    ],
+    "commands": [
+      {
+        "command": {
+          "commandId": "validation05-start-5",
+          "kind": "start",
+          "request": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "build": {
+              "buildId": "validation05-build-2",
+              "requestId": "validation05-compile-1",
+              "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+              "snapshotId": "d9040d91-b6aa-4bd8-b5f0-3b71032a70c3",
+              "profile": {
+                "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+                "protocolVersion": "0.1.0-draft.1",
+                "compiler": {
+                  "id": "binji-wasm-clang-648c4a89997a/clang",
+                  "version": "8.0.1",
+                  "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+                },
+                "linker": {
+                  "id": "binji-wasm-clang-648c4a89997a/lld",
+                  "version": "8.0.1",
+                  "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+                },
+                "sysroot": {
+                  "id": "binji-wasm-clang-648c4a89997a/sysroot",
+                  "version": "648c4a89997a",
+                  "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+                },
+                "standardLibrary": {
+                  "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+                  "version": "648c4a89997a",
+                  "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+                },
+                "runtime": {
+                  "id": "project-js-wasm-interpreter",
+                  "version": "0.1.0-prototype.1",
+                  "buildHash": "sha256:343b36eac02ac617608f4ec3873713df7028113acd4385fa23beec28fc9f90ff"
+                },
+                "debugger": {
+                  "id": "project-dwarf4-debugger",
+                  "version": "0.1.0-prototype.1",
+                  "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+                },
+                "targetTriple": "wasm32-unknown-wasi",
+                "abi": "wasi_unstable",
+                "addressBits": 32,
+                "endianness": "little",
+                "artifactFormat": "wasm-v1",
+                "debugInfoFormat": "dwarf-4-embedded",
+                "requiredFeatures": [
+                  "mvp",
+                  "mutable-globals"
+                ],
+                "resourceManifestHash": "sha256:d9e5c6be5b2803cebf23dc84b5db870767639e07ee4cbfa540297edc71045d29",
+                "status": "candidate",
+                "evidence": [
+                  "Desktop candidate; only module runtime/debugger resources are verified here. Full offline bundle and iPad remain unverified."
+                ]
+              },
+              "mode": "debug",
+              "language": {
+                "language": "cpp",
+                "standard": "c++17"
+              },
+              "compilerArguments": [
+                "-cc1",
+                "-emit-obj",
+                "-triple",
+                "wasm32-unknown-wasi",
+                "-main-file-name",
+                "loop-header.cpp",
+                "-disable-free",
+                "-isysroot",
+                "/",
+                "-internal-isystem",
+                "/include/c++/v1",
+                "-internal-isystem",
+                "/lib/clang/8.0.1/include",
+                "-internal-isystem",
+                "/include",
+                "-I",
+                "/project",
+                "-O0",
+                "-ferror-limit",
+                "20",
+                "-fmessage-length",
+                "0",
+                "-debug-info-kind=standalone",
+                "-dwarf-version=4",
+                "-debugger-tuning=lldb",
+                "-fdebug-compilation-dir",
+                "/project",
+                "-std=c++17",
+                "-x",
+                "c++",
+                "-o",
+                "build/main.o",
+                "/project/loop-header.cpp"
+              ],
+              "linkerArguments": [
+                "--no-threads",
+                "--export-dynamic",
+                "-z",
+                "stack-size=1048576",
+                "--max-memory=268435456",
+                "-Llib/wasm32-wasi",
+                "lib/wasm32-wasi/crt1.o",
+                "build/main.o",
+                "-lc++",
+                "-lc++abi",
+                "-lc",
+                "-lm",
+                "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+                "-o",
+                "build/main.wasm"
+              ],
+              "executable": {
+                "id": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+                "relativePath": "artifacts/validation-05/regression-loop-header/main.wasm",
+                "sha256": "sha256:1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+                "byteLength": 13731,
+                "mediaType": "application/wasm",
+                "version": "binji-wasm-clang-648c4a89997a"
+              },
+              "debugInfo": [
+                {
+                  "id": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+                  "relativePath": "artifacts/validation-05/regression-loop-header/main.wasm",
+                  "sha256": "sha256:1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+                  "byteLength": 13731,
+                  "mediaType": "application/wasm",
+                  "version": "binji-wasm-clang-648c4a89997a"
+                }
+              ],
+              "sourceMappings": []
+            },
+            "snapshot": {
+              "snapshotId": "d9040d91-b6aa-4bd8-b5f0-3b71032a70c3",
+              "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+              "encoding": "utf-8",
+              "newline": "lf",
+              "translationUnit": "loop-header.cpp",
+              "files": [
+                {
+                  "path": "loop-header.cpp",
+                  "role": "user",
+                  "text": "int main() {\n    int sum = 0;\n    for (int i = 0; i < 3; ++i) { // @bp:header\n        sum += i; // @bp:body\n    }\n    return sum == 3 ? 0 : 1;\n}\n",
+                  "contentHash": "sha256:350eb125a818429921d50c8fdb8564acd4993ff0c559166a52c61e20070875f5"
+                }
+              ]
+            },
+            "mode": "debug",
+            "stdin": {
+              "text": "",
+              "encoding": "utf-8",
+              "eof": true
+            },
+            "initialBreakpoints": [
+              {
+                "breakpointId": "validation05-bp-3",
+                "requested": {
+                  "sourcePath": "loop-header.cpp",
+                  "line": 3,
+                  "column": 1
+                },
+                "enabled": true
+              }
+            ],
+            "stopOnEntry": false,
+            "limits": {
+              "runningTimeMs": 30000,
+              "outputBytes": 65536,
+              "variablePageSize": 32,
+              "memoryBytes": 268435456
+            }
+          }
+        },
+        "reply": {
+          "commandId": "validation05-start-5",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "acceptedAtEventSeq": 3
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-setBreakpoints-8",
+          "kind": "setBreakpoints",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "sourcePath": "loop-header.cpp",
+          "breakpoints": [
+            {
+              "breakpointId": "validation05-bp-6",
+              "requested": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "enabled": true
+            },
+            {
+              "breakpointId": "validation05-bp-7",
+              "requested": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "enabled": true
+            }
+          ]
+        },
+        "reply": {
+          "commandId": "validation05-setBreakpoints-8",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "acceptedAtEventSeq": 4
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-13",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-13",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "acceptedAtEventSeq": 6,
+          "invalidatedPauseId": "5f81c8a5-16bd-40d4-8053-2506cd26aeb0"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-18",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "5b162c39-4f9f-400b-b706-d85224727b36"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-18",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "acceptedAtEventSeq": 8,
+          "invalidatedPauseId": "5b162c39-4f9f-400b-b706-d85224727b36"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-23",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-23",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "acceptedAtEventSeq": 10,
+          "invalidatedPauseId": "e4bde03a-1ede-4a82-a48e-ed63b87f5e69"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-28",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-28",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "acceptedAtEventSeq": 12,
+          "invalidatedPauseId": "87034491-edbd-44d9-a3c7-13d47015cb5f"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-33",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-33",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "acceptedAtEventSeq": 14,
+          "invalidatedPauseId": "782d7026-8088-42e2-b639-5a16dc9e53ec"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-38",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-38",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "acceptedAtEventSeq": 16,
+          "invalidatedPauseId": "fac27acb-9a86-4e6c-a440-959b189adf7a"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-43",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+            "pauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-43",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "acceptedAtEventSeq": 18,
+          "invalidatedPauseId": "e818fe6a-a5cf-47c5-ae77-7d272d0ccd10"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-stop-44",
+          "kind": "stop",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-stop-44",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce"
+          },
+          "acceptedAtEventSeq": 19
+        }
+      }
+    ],
+    "notes": []
+  }
+}
