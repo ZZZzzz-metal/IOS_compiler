@@ -1,0 +1,161 @@
+{
+  "preserved": [
+    {
+      "path": "tests/evidence/independent-2026-10-25.json",
+      "sha256": "b118970db8bbd297fddb114c21f509b507a9f4b5d90b1ea04fa3aaeb376e18c1",
+      "byteLength": 569821
+    },
+    {
+      "path": "tests/evidence/independent-2026-10-25.tap",
+      "sha256": "cf5aa0200121fa7c8d875c3fa740ad035a284cc40c69685661b3b0470d53ca6b",
+      "byteLength": 1610
+    },
+    {
+      "path": "tests/evidence/module-02.tap",
+      "sha256": "f6fad7987eebfdb044823c45280131ba7c8d1bf218c53fb73a3f92d10c0f50bb",
+      "byteLength": 5776
+    },
+    {
+      "path": "tests/evidence/module-03.tap",
+      "sha256": "61145f8a8adce3d2af444cffb46dbf44e5c75de1e178f243ae0a300d3f673a41",
+      "byteLength": 11552
+    },
+    {
+      "path": "tests/evidence/module-regressions.json",
+      "sha256": "51bf5e152086d3d66d2672fd2de26a78ff9ee6ac3a13fa5753014fda1336faf2",
+      "byteLength": 1245
+    },
+    {
+      "path": "tests/evidence/regression-loop-header.json",
+      "sha256": "7685f9956dcbd664bfa2ca80b033b7951aa4351fc8667d602e95c0b77076c224",
+      "byteLength": 92245
+    },
+    {
+      "path": "tests/evidence/regression-shadow.json",
+      "sha256": "290fe1166e432500fe5dcbc39f971267801ee82857762bd61ecf57fd42ea8415",
+      "byteLength": 33126
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25/independent.json",
+      "sha256": "ba13f6033268aa129623f8d298ad4e07a90cffa8b41fb54cc7e236234f5a251b",
+      "byteLength": 606099
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25/independent.tap",
+      "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+      "byteLength": 1606
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25/regression-shadow.json",
+      "sha256": "c4e0f35c0fc44d60a2be1e4ec9ce909dfa03d62ff3c9728f8dffb9d0ae079725",
+      "byteLength": 65331
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25/regression-loop-header.json",
+      "sha256": "50a5f179648c25e885f35ff93b7c47d14d4c676efa11bb60dbadfe2bc0592e00",
+      "byteLength": 115246
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25/summary.json",
+      "sha256": "e7caca94052f41c8fadf4d8e02ca6ad7fe1fa956e2402f90ab420852c368b660",
+      "byteLength": 2822
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/.gitattributes",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "byteLength": 8
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/acceptance-command.json",
+      "sha256": "f5212df1a15ac2083b9b3d667902fdcc62b794ac49c37fdacaf1ee6a62d1fc48",
+      "byteLength": 286
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/acceptance.log",
+      "sha256": "98a663949444ba5458416e66a60661728a9db720d8dbc41fba8c1aab58255639",
+      "byteLength": 1716
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/check.log",
+      "sha256": "dafe45a77763f0bb85e2fd04f7720666451d79a52f552d93ec6ce5f4a325443a",
+      "byteLength": 359
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/history-preservation.json",
+      "sha256": "3f2344442d5f7e54fdb09da21db170f5ff1ba5d40f0fbfb64833b9e2ac48e790",
+      "byteLength": 2138
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/independent.json",
+      "sha256": "3d4203099b8aa0f5cdb6766fa23aa7f6ed2a60dda4ade0961c9ab8c1d5694106",
+      "byteLength": 605694
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/independent.tap",
+      "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+      "byteLength": 1606
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/modules-command.json",
+      "sha256": "a4ab232817f762bc6e769b9a67fbeb05d7efb3a6117f1374d1ef0ec2c706f929",
+      "byteLength": 283
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/modules.log",
+      "sha256": "c2c43ada9835e965fc1526e5791ef9e2a36084ed98c3fe9ff8048286009527e6",
+      "byteLength": 7794
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/regression-loop-header.json",
+      "sha256": "9be68a985720dfc91ddf38d9698caefc170d8dcc21d9b012e94d6e2624de4e7f",
+      "byteLength": 114868
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/regression-shadow.json",
+      "sha256": "db2aa47ab5d94c6aa1837bc930bf92dbadc493e231e63ca31128ab4c998d6d74",
+      "byteLength": 64951
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/regressions-command.json",
+      "sha256": "14470bb5ef172ebdf4b8898c483a21f803f4e99e709765632f7975ea12433216",
+      "byteLength": 287
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/regressions.log",
+      "sha256": "02423d395b0b00465dbb33c11235f3d0f53f1692026d52b26642fea36c425137",
+      "byteLength": 2687
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/shared-checks-command.json",
+      "sha256": "136dc7a72389dbf4f9f2f2a30fecd62acef10527211053a81059ac269dce2f31",
+      "byteLength": 474
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/summary.json",
+      "sha256": "6a89e0f60da1eac36a1207e697385aa213293c881b19869b0a4ce5abb097893d",
+      "byteLength": 5044
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/test-integration.log",
+      "sha256": "9fcdc9960345e829d6a8debf9a12d0bb136f70f63c2556b1007b32d9ce738c2e",
+      "byteLength": 531
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/test.log",
+      "sha256": "a31cfb21f2fd41ecc41be4281b4b8c06d7ba486485f41d2dc8b8b668b042bc5f",
+      "byteLength": 1145
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/toolchain-local-setup.json",
+      "sha256": "80afcd4686c1d8e294ab00a1c6db2cd3b6b549bda829ecc35bf4b59a10876c75",
+      "byteLength": 834
+    },
+    {
+      "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/verify-run.mjs",
+      "sha256": "f941b8e5e68c496c1dc7f6495ccd55581f07dfc29a909d02211a84d2f714e690",
+      "byteLength": 7569
+    }
+  ],
+  "fileCount": 31,
+  "noOldEvidenceOverwritten": true
+}

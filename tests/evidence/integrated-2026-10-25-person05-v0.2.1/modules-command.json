@@ -1,0 +1,8 @@
+{
+  "command": "npm.cmd run test:modules",
+  "startedAt": "2026-10-25T00:53:37.5425705Z",
+  "finishedAt": "2026-10-25T00:53:50.9116014Z",
+  "exitCode": 0,
+  "root": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+  "tag": "integration-v0.2.1"
+}

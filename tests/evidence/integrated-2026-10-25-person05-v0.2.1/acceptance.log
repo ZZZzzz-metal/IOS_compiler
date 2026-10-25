@@ -1,0 +1,26 @@
+
+> ipad-offline-debugger@0.2.1 test:acceptance
+> node tests/run-validation.mjs
+
+ok 1 - fixture markers and expected UTF-16 diagnostic columns are consistent
+ok 2 - fresh compile and native Wasm reference: c-core
+ok 3 - fresh compile and native Wasm reference: cpp-core
+ok 4 - fresh compile and native Wasm reference: cpp-stl
+ok 5 - fresh compile and native Wasm reference: compile-error
+ok 6 - fresh compile and native Wasm reference: runtime-trap
+ok 7 - fresh compile and native Wasm reference: infinite-loop
+ok 8 - fresh compile and native Wasm reference: output-flood
+ok 9 - fresh compile and native Wasm reference: solution-driver
+ok 10 - real interpreter matches native C, C++ and STL reference output
+ok 11 - C: live array, pointer, stdin and all three stepping commands
+ok 12 - C++: actual vector reallocation, array, pointer and empty/short/long/UTF-8 strings
+ok 13 - C++: step into/out/over enters the real callee and exposes computed result
+ok 14 - recursive caller frame selection retains distinct real parameters and locals
+ok 15 - lexical shadowing selects the inner variable before restoring outer scope
+ok 16 - blank and invalid breakpoint lines expose actual binding or an explicit reason
+ok 17 - watches support the tested arithmetic and reject side effects without modifying locals
+ok 18 - real wall-clock pause exceeds the configured execution budget and resumes successfully
+ok 19 - Worker Stop terminates real infinite execution; five fresh sessions reject old queries
+ok 20 - source edits require a new build and old pause/frame references cannot query it
+ok 21 - controlled trap and output flood preserve real termination and permit recovery
+{"passed":21,"failed":0}

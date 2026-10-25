@@ -1,0 +1,2762 @@
+{
+  "name": "loop-header",
+  "status": "passed",
+  "recordedAt": "2026-10-25T06:37:48.767Z",
+  "scope": "desktop-node-real-program",
+  "ipadTested": false,
+  "provenance": {
+    "gitRevision": "8e9d6a1b17918d992176c8a854257cda0ee817b8",
+    "workingTree": [
+      "?? fixtures/regressions/initializer-cycle.cpp",
+      "?? fixtures/regressions/initializer-same-line.cpp",
+      "?? tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/",
+      "?? tests/evidence/integrated-2026-10-25-initializer-person05-v0.2.1/",
+      "?? tests/initializer-lifetime.mjs",
+      "?? tests/scratch/"
+    ],
+    "compilePipeline": "CompilerProbe actual compilation, independent BuildManifest wrapper, real DebuggerAdapter/WorkerDebuggerAdapter",
+    "candidateMode": "debugger-module-profile",
+    "sourceHashes": [
+      {
+        "path": "tests/lib/harness.mjs",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 12852,
+        "sha256": "6102e70b26332742c441a3a62892ea821f44daab332a3cd0e633d8955f150e10"
+      },
+      {
+        "path": "tests/run-validation.mjs",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 18486,
+        "sha256": "d9da7cc3d25ff213fad3e0288b0de01dd348c2179ae49b06719275966d3edf20"
+      },
+      {
+        "path": "tests/reproduce.mjs",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 4346,
+        "sha256": "fa71f9eccbd4ce4edda6a08ea5021694f4ea3602f1c343aea5bb59f2b8b0284e"
+      },
+      {
+        "path": "tests/run-module-regressions.mjs",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 2466,
+        "sha256": "784bdcec9282a2acf3e8a44050fe4d8f706b67d82bd0d3ca0dedf5ea20faee21"
+      },
+      {
+        "path": "app/integration/candidate.mjs",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 3889,
+        "sha256": "37ca48dc2f83b57b3dc9e6291ef4d400e81f1050b99e9d5a883117369a14c184"
+      },
+      {
+        "path": "fixtures/manifest.json",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 18017,
+        "sha256": "54ed615c83902aff0b036d142f9482c21ac3d3d69254f983259692459f516d45"
+      },
+      {
+        "path": "fixtures/regressions/lexical-shadow.cpp",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 187,
+        "sha256": "939952c3259c72dc7b2697b90057f7ae869790dad2f779e1368dbc12c7c27705"
+      },
+      {
+        "path": "fixtures/regressions/loop-header.cpp",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 145,
+        "sha256": "350eb125a818429921d50c8fdb8564acd4993ff0c559166a52c61e20070875f5"
+      },
+      {
+        "path": "compiler/src/node-probe.mjs",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/",
+        "byteLength": 295,
+        "sha256": "fc51bed8fa074151af0bc2b0343fe6a2502206e76b8376f89e470aaa919860f0"
+      },
+      {
+        "path": "debugger/src/node-worker.mjs",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/",
+        "byteLength": 613,
+        "sha256": "75b6cf0050e0be2ed0d3c8ee52b50ea44cf6adefb3dc87faee7afb602678559e"
+      },
+      {
+        "path": "fixtures/c-core.c",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 883,
+        "sha256": "44bc61e803f26224fcf2f0d73fe82c48b92e1497502a8e57e8a1c8f134f1b43d"
+      },
+      {
+        "path": "fixtures/cpp-core.cpp",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 1505,
+        "sha256": "b0ca8ec48f79cf509c39f8fb9745e71bad54810ca9d5c91c0ec2e93d0821e738"
+      },
+      {
+        "path": "fixtures/cpp-stl.cpp",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 704,
+        "sha256": "6e8436b88f158a7e7c34646bc86a268ef332ef0c20e41f7e48f50153ef2475de"
+      },
+      {
+        "path": "fixtures/compile-error.cpp",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 112,
+        "sha256": "de61cd07a1525e5c14a0c0eaa5a29cdec26518169fa2b6e06d8f5a23747ee321"
+      },
+      {
+        "path": "fixtures/runtime-trap.c",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 136,
+        "sha256": "a631fa94962e0c5792aa9b2d2bbfe88cbb0a574eab4cf8121a5ef3c868b724ae"
+      },
+      {
+        "path": "fixtures/infinite-loop.c",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 109,
+        "sha256": "9b402b18eedf231c1d162a6991db736d4666bc8305e24d7a48535c0a490b3452"
+      },
+      {
+        "path": "fixtures/output-flood.c",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 151,
+        "sha256": "a9c17c3ac01dd1c32e2cd7c0a9924fed499800a933cf5b93e03b065eefcc56ec"
+      },
+      {
+        "path": "fixtures/solution-driver.cpp",
+        "base": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+        "byteLength": 603,
+        "sha256": "02747572b731699542ccf7bfe8640b3783bcbabf3ff55b0d042f3aa520ff1bb8"
+      }
+    ]
+  },
+  "profile": {
+    "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:460d5a2cc2f4b66c560a1636d60f79372fb74349bfcd521aee99ff5dc0b28e22",
+    "status": "candidate",
+    "evidence": [
+      "Desktop candidate; only module runtime/debugger resources are verified here. Full offline bundle and iPad remain unverified."
+    ]
+  },
+  "resources": [
+    {
+      "id": "debugger/src/wasm-runtime.mjs",
+      "relativePath": "debugger/src/wasm-runtime.mjs",
+      "sha256": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f",
+      "byteLength": 49136,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "runtime"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/wasm-runtime.mjs"
+    },
+    {
+      "id": "debugger/src/dwarf.mjs",
+      "relativePath": "debugger/src/dwarf.mjs",
+      "sha256": "sha256:a90c5783958fb814fa7dc8bd074166fe490d50ba2ecf6c9e82b79c5c3e58eb95",
+      "byteLength": 25566,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/dwarf.mjs"
+    },
+    {
+      "id": "debugger/src/variables.mjs",
+      "relativePath": "debugger/src/variables.mjs",
+      "sha256": "sha256:a20f10518433d3dbb48d58bf2a7bae930669c49de5531476ffcfadfbf28ba139",
+      "byteLength": 42029,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/variables.mjs"
+    },
+    {
+      "id": "debugger/src/integrity.mjs",
+      "relativePath": "debugger/src/integrity.mjs",
+      "sha256": "sha256:6c705f346157d4ed07d1e7797474ad90cf653e7431b27bcf32ee4b282f3eeb07",
+      "byteLength": 7031,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/integrity.mjs"
+    },
+    {
+      "id": "debugger/src/debugger-adapter.mjs",
+      "relativePath": "debugger/src/debugger-adapter.mjs",
+      "sha256": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c",
+      "byteLength": 21034,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/debugger-adapter.mjs"
+    },
+    {
+      "id": "debugger/src/worker-adapter.mjs",
+      "relativePath": "debugger/src/worker-adapter.mjs",
+      "sha256": "sha256:1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6",
+      "byteLength": 8478,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/worker-adapter.mjs"
+    },
+    {
+      "id": "debugger/src/worker-bridge.mjs",
+      "relativePath": "debugger/src/worker-bridge.mjs",
+      "sha256": "sha256:b1271d7c34651296ef9011c69493f6c0e0f62d97db71d8f3fe27c9561e54eda1",
+      "byteLength": 1673,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/worker-bridge.mjs"
+    },
+    {
+      "id": "debugger/src/debugger-worker.mjs",
+      "relativePath": "debugger/src/debugger-worker.mjs",
+      "sha256": "sha256:4b867a736ada849efddffc1c074739eed039d5dd4f222ab8d99c24f2fe9e559d",
+      "byteLength": 600,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/debugger-worker.mjs"
+    },
+    {
+      "id": "debugger/LICENSE",
+      "relativePath": "debugger/LICENSE",
+      "sha256": "sha256:810a7126a235c23fe56bd32f0d78617232260ee5d03fd1cb32462ac679cd8cf5",
+      "byteLength": 600,
+      "mediaType": "text/plain",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/LICENSE"
+    }
+  ],
+  "samples": [
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "outOfScope",
+        "reason": "Variable declaration has not executed at this stop",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+        "eventSeq": 5,
+        "kind": "paused",
+        "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 3,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+        "eventSeq": 7,
+        "kind": "paused",
+        "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 4,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+        "eventSeq": 9,
+        "kind": "paused",
+        "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 3,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+        "eventSeq": 11,
+        "kind": "paused",
+        "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 4,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+        "eventSeq": 13,
+        "kind": "paused",
+        "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 3,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "2",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+        "eventSeq": 15,
+        "kind": "paused",
+        "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 4,
+          "column": 1
+        }
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "2",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "sum": {
+        "name": "sum",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "3",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pause": {
+        "sessionId": "validation05-session-4",
+        "buildId": "validation05-build-2",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+        "eventSeq": 17,
+        "kind": "paused",
+        "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "loop-header.cpp",
+          "line": 3,
+          "column": 1
+        }
+      }
+    }
+  ],
+  "observations": {
+    "compilations": [
+      {
+        "id": "regression-loop-header",
+        "source": "int main() {\n    int sum = 0;\n    for (int i = 0; i < 3; ++i) { // @bp:header\n        sum += i; // @bp:body\n    }\n    return sum == 3 ? 0 : 1;\n}\n",
+        "snapshot": {
+          "snapshotId": "159ecb5d-93fc-4c75-be20-2faceff2cde5",
+          "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+          "encoding": "utf-8",
+          "newline": "lf",
+          "translationUnit": "loop-header.cpp",
+          "files": [
+            {
+              "path": "loop-header.cpp",
+              "role": "user",
+              "text": "int main() {\n    int sum = 0;\n    for (int i = 0; i < 3; ++i) { // @bp:header\n        sum += i; // @bp:body\n    }\n    return sum == 3 ? 0 : 1;\n}\n",
+              "contentHash": "sha256:350eb125a818429921d50c8fdb8564acd4993ff0c559166a52c61e20070875f5"
+            }
+          ]
+        },
+        "elapsedMs": 289.26649999999995,
+        "status": "compiled",
+        "requestId": "validation05-compile-1",
+        "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+        "snapshotId": "159ecb5d-93fc-4c75-be20-2faceff2cde5",
+        "artifactId": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+        "target": {
+          "targetTriple": "wasm32-unknown-wasi",
+          "abi": "wasi_unstable",
+          "addressBits": 32,
+          "endianness": "little",
+          "artifactFormat": "wasm-v1",
+          "debugInfoFormat": "dwarf-4-embedded",
+          "requiredFeatures": [
+            "mvp",
+            "mutable-globals"
+          ]
+        },
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "mode": "debug",
+        "compilerArguments": [
+          "-cc1",
+          "-emit-obj",
+          "-triple",
+          "wasm32-unknown-wasi",
+          "-main-file-name",
+          "loop-header.cpp",
+          "-disable-free",
+          "-isysroot",
+          "/",
+          "-internal-isystem",
+          "/include/c++/v1",
+          "-internal-isystem",
+          "/lib/clang/8.0.1/include",
+          "-internal-isystem",
+          "/include",
+          "-I",
+          "/project",
+          "-O0",
+          "-ferror-limit",
+          "20",
+          "-fmessage-length",
+          "0",
+          "-debug-info-kind=standalone",
+          "-dwarf-version=4",
+          "-debugger-tuning=lldb",
+          "-fdebug-compilation-dir",
+          "/project",
+          "-std=c++17",
+          "-x",
+          "c++",
+          "-o",
+          "build/main.o",
+          "/project/loop-header.cpp"
+        ],
+        "linkerArguments": [
+          "--no-threads",
+          "--export-dynamic",
+          "-z",
+          "stack-size=1048576",
+          "--max-memory=268435456",
+          "-Llib/wasm32-wasi",
+          "lib/wasm32-wasi/crt1.o",
+          "build/main.o",
+          "-lc++",
+          "-lc++abi",
+          "-lc",
+          "-lm",
+          "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+          "-o",
+          "build/main.wasm"
+        ],
+        "sourceMappings": [],
+        "executableRef": {
+          "id": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+          "relativePath": "compiler-builds/wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7/main.wasm",
+          "sha256": "sha256:1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+          "byteLength": 13731,
+          "mediaType": "application/wasm",
+          "version": "binji-wasm-clang-648c4a89997a"
+        },
+        "diagnostics": [],
+        "rawDiagnostics": "",
+        "wasm": {
+          "format": "wasm-v1",
+          "sections": [
+            {
+              "id": 1,
+              "byteLength": 30,
+              "payloadOffset": 10
+            },
+            {
+              "id": 2,
+              "byteLength": 242,
+              "payloadOffset": 43
+            },
+            {
+              "id": 3,
+              "byteLength": 22,
+              "payloadOffset": 287
+            },
+            {
+              "id": 4,
+              "byteLength": 5,
+              "payloadOffset": 311
+            },
+            {
+              "id": 5,
+              "byteLength": 5,
+              "payloadOffset": 318
+            },
+            {
+              "id": 6,
+              "byteLength": 23,
+              "payloadOffset": 325
+            },
+            {
+              "id": 7,
+              "byteLength": 71,
+              "payloadOffset": 350
+            },
+            {
+              "id": 10,
+              "byteLength": 11945,
+              "payloadOffset": 424
+            },
+            {
+              "id": 11,
+              "byteLength": 516,
+              "payloadOffset": 12372
+            },
+            {
+              "id": 0,
+              "name": ".debug_info",
+              "byteLength": 116,
+              "payloadOffset": 12902,
+              "dwarfVersion": 4
+            },
+            {
+              "id": 0,
+              "name": ".debug_macinfo",
+              "byteLength": 16,
+              "payloadOffset": 13023
+            },
+            {
+              "id": 0,
+              "name": ".debug_abbrev",
+              "byteLength": 91,
+              "payloadOffset": 13040
+            },
+            {
+              "id": 0,
+              "name": ".debug_line",
+              "byteLength": 92,
+              "payloadOffset": 13131
+            },
+            {
+              "id": 0,
+              "name": ".debug_str",
+              "byteLength": 81,
+              "payloadOffset": 13224
+            },
+            {
+              "id": 0,
+              "name": "name",
+              "byteLength": 434,
+              "payloadOffset": 13302
+            }
+          ],
+          "dwarfSections": [
+            {
+              "id": 0,
+              "name": ".debug_info",
+              "byteLength": 116,
+              "payloadOffset": 12902,
+              "dwarfVersion": 4
+            },
+            {
+              "id": 0,
+              "name": ".debug_macinfo",
+              "byteLength": 16,
+              "payloadOffset": 13023
+            },
+            {
+              "id": 0,
+              "name": ".debug_abbrev",
+              "byteLength": 91,
+              "payloadOffset": 13040
+            },
+            {
+              "id": 0,
+              "name": ".debug_line",
+              "byteLength": 92,
+              "payloadOffset": 13131
+            },
+            {
+              "id": 0,
+              "name": ".debug_str",
+              "byteLength": 81,
+              "payloadOffset": 13224
+            }
+          ],
+          "imports": [
+            {
+              "module": "wasi_unstable",
+              "name": "fd_prestat_get",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "fd_prestat_dir_name",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "environ_sizes_get",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "environ_get",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "args_sizes_get",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "args_get",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "proc_exit",
+              "kind": "function"
+            },
+            {
+              "module": "wasi_unstable",
+              "name": "fd_fdstat_get",
+              "kind": "function"
+            }
+          ]
+        },
+        "metrics": {
+          "loadMs": 136.0611,
+          "compileMs": 89.25230000000002,
+          "linkMs": 18.839,
+          "totalMs": 118.5334,
+          "observedLinearMemoryBytes": {
+            "compilerAfterExecution": 7340032,
+            "linkerAfterExecution": 9371648,
+            "filesystem": 9437184
+          },
+          "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+        },
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+        "smoke": {
+          "exitCode": 0,
+          "stdout": "",
+          "stderr": "",
+          "memoryBytes": 1179648
+        },
+        "objectSha256": "sha256:c72ffe986b7982aa1a69e48ea7800d0bebfe5f86a1c319f06bf955f664694798",
+        "objectByteLength": 973
+      }
+    ],
+    "sessions": [
+      {
+        "worker": false,
+        "events": [
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 1,
+            "kind": "state",
+            "state": "starting"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 2,
+            "kind": "breakpoints",
+            "bindings": [
+              {
+                "breakpointId": "validation05-bp-3",
+                "requested": {
+                  "sourcePath": "loop-header.cpp",
+                  "line": 3,
+                  "column": 1
+                },
+                "status": "bound",
+                "actual": [
+                  {
+                    "sourcePath": "loop-header.cpp",
+                    "line": 3,
+                    "column": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 3,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 4,
+            "kind": "breakpoints",
+            "bindings": [
+              {
+                "breakpointId": "validation05-bp-6",
+                "requested": {
+                  "sourcePath": "loop-header.cpp",
+                  "line": 3,
+                  "column": 1
+                },
+                "status": "bound",
+                "actual": [
+                  {
+                    "sourcePath": "loop-header.cpp",
+                    "line": 3,
+                    "column": 1
+                  }
+                ]
+              },
+              {
+                "breakpointId": "validation05-bp-7",
+                "requested": {
+                  "sourcePath": "loop-header.cpp",
+                  "line": 4,
+                  "column": 1
+                },
+                "status": "bound",
+                "actual": [
+                  {
+                    "sourcePath": "loop-header.cpp",
+                    "line": 4,
+                    "column": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 5,
+            "kind": "paused",
+            "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 3,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 6,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 7,
+            "kind": "paused",
+            "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 4,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 8,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 9,
+            "kind": "paused",
+            "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 3,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 10,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 11,
+            "kind": "paused",
+            "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 4,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 12,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 13,
+            "kind": "paused",
+            "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 3,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 14,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 15,
+            "kind": "paused",
+            "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 4,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 16,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 17,
+            "kind": "paused",
+            "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052",
+            "reason": "breakpoint",
+            "position": {
+              "sourcePath": "loop-header.cpp",
+              "line": 3,
+              "column": 1
+            }
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 18,
+            "kind": "state",
+            "state": "running"
+          },
+          {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "eventSeq": 19,
+            "kind": "terminated",
+            "reason": "exit",
+            "exitCode": 0
+          }
+        ]
+      }
+    ],
+    "queries": [
+      {
+        "query": {
+          "requestId": "validation05-stack-9",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-9",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea"
+          },
+          "frames": [
+            {
+              "frameId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-10",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea",
+            "frameId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-10",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea",
+            "frameId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "int",
+            "truncated": false,
+            "availability": "outOfScope",
+            "reason": "Variable declaration has not executed at this stop",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-11",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-11",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea"
+          },
+          "frames": [
+            {
+              "frameId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-12",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea",
+            "frameId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-12",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea",
+            "frameId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-14",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-14",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41"
+          },
+          "frames": [
+            {
+              "frameId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-15",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41",
+            "frameId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-15",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41",
+            "frameId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-16",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-16",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41"
+          },
+          "frames": [
+            {
+              "frameId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-17",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41",
+            "frameId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-17",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41",
+            "frameId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-19",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-19",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a"
+          },
+          "frames": [
+            {
+              "frameId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-20",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a",
+            "frameId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-20",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a",
+            "frameId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-21",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-21",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a"
+          },
+          "frames": [
+            {
+              "frameId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-22",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a",
+            "frameId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-22",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a",
+            "frameId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-24",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-24",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e"
+          },
+          "frames": [
+            {
+              "frameId": "d07a114f-d8e5-4477-a535-15faf88f025e:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "d07a114f-d8e5-4477-a535-15faf88f025e:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "d07a114f-d8e5-4477-a535-15faf88f025e:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-25",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e",
+            "frameId": "d07a114f-d8e5-4477-a535-15faf88f025e:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-25",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e",
+            "frameId": "d07a114f-d8e5-4477-a535-15faf88f025e:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "1",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-26",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-26",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e"
+          },
+          "frames": [
+            {
+              "frameId": "d07a114f-d8e5-4477-a535-15faf88f025e:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "d07a114f-d8e5-4477-a535-15faf88f025e:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "d07a114f-d8e5-4477-a535-15faf88f025e:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-27",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e",
+            "frameId": "d07a114f-d8e5-4477-a535-15faf88f025e:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-27",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e",
+            "frameId": "d07a114f-d8e5-4477-a535-15faf88f025e:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "0",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-29",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-29",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b"
+          },
+          "frames": [
+            {
+              "frameId": "bd6d15a5-9440-4887-9d31-b692a6338a9b:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "bd6d15a5-9440-4887-9d31-b692a6338a9b:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "bd6d15a5-9440-4887-9d31-b692a6338a9b:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-30",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b",
+            "frameId": "bd6d15a5-9440-4887-9d31-b692a6338a9b:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-30",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b",
+            "frameId": "bd6d15a5-9440-4887-9d31-b692a6338a9b:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "1",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-31",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-31",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b"
+          },
+          "frames": [
+            {
+              "frameId": "bd6d15a5-9440-4887-9d31-b692a6338a9b:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "bd6d15a5-9440-4887-9d31-b692a6338a9b:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "bd6d15a5-9440-4887-9d31-b692a6338a9b:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-32",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b",
+            "frameId": "bd6d15a5-9440-4887-9d31-b692a6338a9b:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-32",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b",
+            "frameId": "bd6d15a5-9440-4887-9d31-b692a6338a9b:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "1",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-34",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-34",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8"
+          },
+          "frames": [
+            {
+              "frameId": "69fa233a-922f-42a3-a24f-28614212efb8:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "69fa233a-922f-42a3-a24f-28614212efb8:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "69fa233a-922f-42a3-a24f-28614212efb8:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-35",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8",
+            "frameId": "69fa233a-922f-42a3-a24f-28614212efb8:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-35",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8",
+            "frameId": "69fa233a-922f-42a3-a24f-28614212efb8:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "2",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-36",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-36",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8"
+          },
+          "frames": [
+            {
+              "frameId": "69fa233a-922f-42a3-a24f-28614212efb8:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "69fa233a-922f-42a3-a24f-28614212efb8:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "69fa233a-922f-42a3-a24f-28614212efb8:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-37",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8",
+            "frameId": "69fa233a-922f-42a3-a24f-28614212efb8:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-37",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8",
+            "frameId": "69fa233a-922f-42a3-a24f-28614212efb8:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "1",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-39",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-39",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052"
+          },
+          "frames": [
+            {
+              "frameId": "3d0148e4-3916-414f-80d8-c321289c9052:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "3d0148e4-3916-414f-80d8-c321289c9052:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "3d0148e4-3916-414f-80d8-c321289c9052:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-40",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052",
+            "frameId": "3d0148e4-3916-414f-80d8-c321289c9052:wasm-frame-22"
+          },
+          "expression": "i",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-40",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052",
+            "frameId": "3d0148e4-3916-414f-80d8-c321289c9052:wasm-frame-22"
+          },
+          "result": {
+            "name": "i",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "2",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-stack-41",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052"
+          },
+          "start": 0,
+          "count": 32
+        },
+        "reply": {
+          "requestId": "validation05-stack-41",
+          "kind": "stack",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052"
+          },
+          "frames": [
+            {
+              "frameId": "3d0148e4-3916-414f-80d8-c321289c9052:wasm-frame-22",
+              "functionName": "main",
+              "position": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "3d0148e4-3916-414f-80d8-c321289c9052:wasm-frame-21",
+              "functionName": "main",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            },
+            {
+              "frameId": "3d0148e4-3916-414f-80d8-c321289c9052:wasm-frame-1",
+              "functionName": "_start",
+              "module": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7"
+            }
+          ],
+          "total": 3
+        }
+      },
+      {
+        "query": {
+          "requestId": "validation05-evaluate-42",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052",
+            "frameId": "3d0148e4-3916-414f-80d8-c321289c9052:wasm-frame-22"
+          },
+          "expression": "sum",
+          "allowSideEffects": false
+        },
+        "reply": {
+          "requestId": "validation05-evaluate-42",
+          "kind": "evaluate",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052",
+            "frameId": "3d0148e4-3916-414f-80d8-c321289c9052:wasm-frame-22"
+          },
+          "result": {
+            "name": "sum",
+            "type": "int",
+            "truncated": false,
+            "availability": "available",
+            "displayValue": "3",
+            "namedCount": 0,
+            "indexedCount": 0
+          }
+        }
+      }
+    ],
+    "commands": [
+      {
+        "command": {
+          "commandId": "validation05-start-5",
+          "kind": "start",
+          "request": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "build": {
+              "buildId": "validation05-build-2",
+              "requestId": "validation05-compile-1",
+              "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+              "snapshotId": "159ecb5d-93fc-4c75-be20-2faceff2cde5",
+              "profile": {
+                "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+                "protocolVersion": "0.1.0-draft.1",
+                "compiler": {
+                  "id": "binji-wasm-clang-648c4a89997a/clang",
+                  "version": "8.0.1",
+                  "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+                },
+                "linker": {
+                  "id": "binji-wasm-clang-648c4a89997a/lld",
+                  "version": "8.0.1",
+                  "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+                },
+                "sysroot": {
+                  "id": "binji-wasm-clang-648c4a89997a/sysroot",
+                  "version": "648c4a89997a",
+                  "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+                },
+                "standardLibrary": {
+                  "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+                  "version": "648c4a89997a",
+                  "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+                },
+                "runtime": {
+                  "id": "project-js-wasm-interpreter",
+                  "version": "0.1.0-prototype.1",
+                  "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+                },
+                "debugger": {
+                  "id": "project-dwarf4-debugger",
+                  "version": "0.1.0-prototype.1",
+                  "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+                },
+                "targetTriple": "wasm32-unknown-wasi",
+                "abi": "wasi_unstable",
+                "addressBits": 32,
+                "endianness": "little",
+                "artifactFormat": "wasm-v1",
+                "debugInfoFormat": "dwarf-4-embedded",
+                "requiredFeatures": [
+                  "mvp",
+                  "mutable-globals"
+                ],
+                "resourceManifestHash": "sha256:460d5a2cc2f4b66c560a1636d60f79372fb74349bfcd521aee99ff5dc0b28e22",
+                "status": "candidate",
+                "evidence": [
+                  "Desktop candidate; only module runtime/debugger resources are verified here. Full offline bundle and iPad remain unverified."
+                ]
+              },
+              "mode": "debug",
+              "language": {
+                "language": "cpp",
+                "standard": "c++17"
+              },
+              "compilerArguments": [
+                "-cc1",
+                "-emit-obj",
+                "-triple",
+                "wasm32-unknown-wasi",
+                "-main-file-name",
+                "loop-header.cpp",
+                "-disable-free",
+                "-isysroot",
+                "/",
+                "-internal-isystem",
+                "/include/c++/v1",
+                "-internal-isystem",
+                "/lib/clang/8.0.1/include",
+                "-internal-isystem",
+                "/include",
+                "-I",
+                "/project",
+                "-O0",
+                "-ferror-limit",
+                "20",
+                "-fmessage-length",
+                "0",
+                "-debug-info-kind=standalone",
+                "-dwarf-version=4",
+                "-debugger-tuning=lldb",
+                "-fdebug-compilation-dir",
+                "/project",
+                "-std=c++17",
+                "-x",
+                "c++",
+                "-o",
+                "build/main.o",
+                "/project/loop-header.cpp"
+              ],
+              "linkerArguments": [
+                "--no-threads",
+                "--export-dynamic",
+                "-z",
+                "stack-size=1048576",
+                "--max-memory=268435456",
+                "-Llib/wasm32-wasi",
+                "lib/wasm32-wasi/crt1.o",
+                "build/main.o",
+                "-lc++",
+                "-lc++abi",
+                "-lc",
+                "-lm",
+                "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+                "-o",
+                "build/main.wasm"
+              ],
+              "executable": {
+                "id": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+                "relativePath": "artifacts/validation-integrated/regression-loop-header/main.wasm",
+                "sha256": "sha256:1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+                "byteLength": 13731,
+                "mediaType": "application/wasm",
+                "version": "binji-wasm-clang-648c4a89997a"
+              },
+              "debugInfo": [
+                {
+                  "id": "wasm-1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+                  "relativePath": "artifacts/validation-integrated/regression-loop-header/main.wasm",
+                  "sha256": "sha256:1c66eaeb5ff0d93fcafefb2cbcc555635ed1f298ca6445fbc453c4eb36fb0fb7",
+                  "byteLength": 13731,
+                  "mediaType": "application/wasm",
+                  "version": "binji-wasm-clang-648c4a89997a"
+                }
+              ],
+              "sourceMappings": []
+            },
+            "snapshot": {
+              "snapshotId": "159ecb5d-93fc-4c75-be20-2faceff2cde5",
+              "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+              "encoding": "utf-8",
+              "newline": "lf",
+              "translationUnit": "loop-header.cpp",
+              "files": [
+                {
+                  "path": "loop-header.cpp",
+                  "role": "user",
+                  "text": "int main() {\n    int sum = 0;\n    for (int i = 0; i < 3; ++i) { // @bp:header\n        sum += i; // @bp:body\n    }\n    return sum == 3 ? 0 : 1;\n}\n",
+                  "contentHash": "sha256:350eb125a818429921d50c8fdb8564acd4993ff0c559166a52c61e20070875f5"
+                }
+              ]
+            },
+            "mode": "debug",
+            "stdin": {
+              "text": "",
+              "encoding": "utf-8",
+              "eof": true
+            },
+            "initialBreakpoints": [
+              {
+                "breakpointId": "validation05-bp-3",
+                "requested": {
+                  "sourcePath": "loop-header.cpp",
+                  "line": 3,
+                  "column": 1
+                },
+                "enabled": true
+              }
+            ],
+            "stopOnEntry": false,
+            "limits": {
+              "runningTimeMs": 30000,
+              "outputBytes": 65536,
+              "variablePageSize": 32,
+              "memoryBytes": 268435456
+            }
+          }
+        },
+        "reply": {
+          "commandId": "validation05-start-5",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "acceptedAtEventSeq": 3
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-setBreakpoints-8",
+          "kind": "setBreakpoints",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "sourcePath": "loop-header.cpp",
+          "breakpoints": [
+            {
+              "breakpointId": "validation05-bp-6",
+              "requested": {
+                "sourcePath": "loop-header.cpp",
+                "line": 3,
+                "column": 1
+              },
+              "enabled": true
+            },
+            {
+              "breakpointId": "validation05-bp-7",
+              "requested": {
+                "sourcePath": "loop-header.cpp",
+                "line": 4,
+                "column": 1
+              },
+              "enabled": true
+            }
+          ]
+        },
+        "reply": {
+          "commandId": "validation05-setBreakpoints-8",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "acceptedAtEventSeq": 4
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-13",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-13",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "acceptedAtEventSeq": 6,
+          "invalidatedPauseId": "fa6a1b5c-b8e8-440c-8c59-8498a496adea"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-18",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-18",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "acceptedAtEventSeq": 8,
+          "invalidatedPauseId": "9840a94a-fc9d-47ab-a46f-80e6dc114d41"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-23",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-23",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "acceptedAtEventSeq": 10,
+          "invalidatedPauseId": "b61c74c5-16a6-45ac-a799-7c80bd30ad6a"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-28",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "d07a114f-d8e5-4477-a535-15faf88f025e"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-28",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "acceptedAtEventSeq": 12,
+          "invalidatedPauseId": "d07a114f-d8e5-4477-a535-15faf88f025e"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-33",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-33",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "acceptedAtEventSeq": 14,
+          "invalidatedPauseId": "bd6d15a5-9440-4887-9d31-b692a6338a9b"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-38",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "69fa233a-922f-42a3-a24f-28614212efb8"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-38",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "acceptedAtEventSeq": 16,
+          "invalidatedPauseId": "69fa233a-922f-42a3-a24f-28614212efb8"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-continue-43",
+          "kind": "continue",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
+            "pauseId": "3d0148e4-3916-414f-80d8-c321289c9052"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-continue-43",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "acceptedAtEventSeq": 18,
+          "invalidatedPauseId": "3d0148e4-3916-414f-80d8-c321289c9052"
+        }
+      },
+      {
+        "command": {
+          "commandId": "validation05-stop-44",
+          "kind": "stop",
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          }
+        },
+        "reply": {
+          "commandId": "validation05-stop-44",
+          "accepted": true,
+          "key": {
+            "sessionId": "validation05-session-4",
+            "buildId": "validation05-build-2",
+            "sourceHash": "sha256:e5b9def45477f462c68f47cb964cdb98542aa7afc125d8366c0128f8ff72a5ce",
+            "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c"
+          },
+          "acceptedAtEventSeq": 19
+        }
+      }
+    ],
+    "notes": []
+  }
+}

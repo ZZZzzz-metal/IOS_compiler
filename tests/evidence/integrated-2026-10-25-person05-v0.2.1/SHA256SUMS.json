@@ -1,0 +1,97 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "acceptance-command.json",
+    "byteLength": 286,
+    "sha256": "f5212df1a15ac2083b9b3d667902fdcc62b794ac49c37fdacaf1ee6a62d1fc48"
+  },
+  {
+    "file": "acceptance.log",
+    "byteLength": 1716,
+    "sha256": "98a663949444ba5458416e66a60661728a9db720d8dbc41fba8c1aab58255639"
+  },
+  {
+    "file": "check.log",
+    "byteLength": 359,
+    "sha256": "dafe45a77763f0bb85e2fd04f7720666451d79a52f552d93ec6ce5f4a325443a"
+  },
+  {
+    "file": "history-preservation.json",
+    "byteLength": 2138,
+    "sha256": "3f2344442d5f7e54fdb09da21db170f5ff1ba5d40f0fbfb64833b9e2ac48e790"
+  },
+  {
+    "file": "independent.json",
+    "byteLength": 605694,
+    "sha256": "3d4203099b8aa0f5cdb6766fa23aa7f6ed2a60dda4ade0961c9ab8c1d5694106"
+  },
+  {
+    "file": "independent.tap",
+    "byteLength": 1606,
+    "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+  },
+  {
+    "file": "modules-command.json",
+    "byteLength": 283,
+    "sha256": "a4ab232817f762bc6e769b9a67fbeb05d7efb3a6117f1374d1ef0ec2c706f929"
+  },
+  {
+    "file": "modules.log",
+    "byteLength": 7794,
+    "sha256": "c2c43ada9835e965fc1526e5791ef9e2a36084ed98c3fe9ff8048286009527e6"
+  },
+  {
+    "file": "regression-loop-header.json",
+    "byteLength": 114868,
+    "sha256": "9be68a985720dfc91ddf38d9698caefc170d8dcc21d9b012e94d6e2624de4e7f"
+  },
+  {
+    "file": "regression-shadow.json",
+    "byteLength": 64951,
+    "sha256": "db2aa47ab5d94c6aa1837bc930bf92dbadc493e231e63ca31128ab4c998d6d74"
+  },
+  {
+    "file": "regressions-command.json",
+    "byteLength": 287,
+    "sha256": "14470bb5ef172ebdf4b8898c483a21f803f4e99e709765632f7975ea12433216"
+  },
+  {
+    "file": "regressions.log",
+    "byteLength": 2687,
+    "sha256": "02423d395b0b00465dbb33c11235f3d0f53f1692026d52b26642fea36c425137"
+  },
+  {
+    "file": "shared-checks-command.json",
+    "byteLength": 474,
+    "sha256": "136dc7a72389dbf4f9f2f2a30fecd62acef10527211053a81059ac269dce2f31"
+  },
+  {
+    "file": "summary.json",
+    "byteLength": 5044,
+    "sha256": "6a89e0f60da1eac36a1207e697385aa213293c881b19869b0a4ce5abb097893d"
+  },
+  {
+    "file": "test-integration.log",
+    "byteLength": 531,
+    "sha256": "9fcdc9960345e829d6a8debf9a12d0bb136f70f63c2556b1007b32d9ce738c2e"
+  },
+  {
+    "file": "test.log",
+    "byteLength": 1145,
+    "sha256": "a31cfb21f2fd41ecc41be4281b4b8c06d7ba486485f41d2dc8b8b668b042bc5f"
+  },
+  {
+    "file": "toolchain-local-setup.json",
+    "byteLength": 834,
+    "sha256": "80afcd4686c1d8e294ab00a1c6db2cd3b6b549bda829ecc35bf4b59a10876c75"
+  },
+  {
+    "file": "verify-run.mjs",
+    "byteLength": 7569,
+    "sha256": "f941b8e5e68c496c1dc7f6495ccd55581f07dfc29a909d02211a84d2f714e690"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "task": "test:regressions",
+    "startedAt": "2026-10-25T06:37:46.3197973Z",
+    "finishedAt": "2026-10-25T06:37:49.4789804Z",
+    "exitCode": 0
+  },
+  {
+    "task": "check",
+    "startedAt": "2026-10-25T06:37:49.4823741Z",
+    "finishedAt": "2026-10-25T06:37:50.2379793Z",
+    "exitCode": 0
+  },
+  {
+    "task": "test",
+    "startedAt": "2026-10-25T06:37:50.2380873Z",
+    "finishedAt": "2026-10-25T06:37:51.0968352Z",
+    "exitCode": 0
+  }
+]

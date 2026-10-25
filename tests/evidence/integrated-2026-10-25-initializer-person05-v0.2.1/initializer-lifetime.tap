@@ -1,0 +1,8 @@
+TAP version 13
+not ok 1 - initializer-cycle/direct/all-stages
+not ok 2 - initializer-cycle/worker/all-stages
+not ok 3 - initializer-same-line/direct/all-stages
+not ok 4 - initializer-same-line/worker/all-stages
+not ok 5 - initializer-cycle/direct/no-first-cycle-queries
+not ok 6 - initializer-cycle/worker/no-first-cycle-queries
+1..6

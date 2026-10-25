@@ -1,0 +1,26 @@
+[
+  {
+    "file": "clang",
+    "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "byteLength": 31214472,
+    "source": "existing local integration copy; no download"
+  },
+  {
+    "file": "lld",
+    "sha256": "36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+    "byteLength": 19490094,
+    "source": "existing local integration copy; no download"
+  },
+  {
+    "file": "memfs",
+    "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+    "byteLength": 345442,
+    "source": "existing local integration copy; no download"
+  },
+  {
+    "file": "sysroot.tar",
+    "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+    "byteLength": 9297920,
+    "source": "existing local integration copy; no download"
+  }
+]

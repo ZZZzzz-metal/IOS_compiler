@@ -1,0 +1,444 @@
+{
+  "profile": {
+    "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:cf02b4efe9477db1eeda5a0d36a1066dbf67aaf6f3785c31666980ee303911ec",
+    "status": "candidate",
+    "evidence": [
+      "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+    ]
+  },
+  "resources": [
+    {
+      "id": "debugger/src/wasm-runtime.mjs",
+      "relativePath": "debugger/src/wasm-runtime.mjs",
+      "sha256": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f",
+      "byteLength": 49136,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "runtime"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/wasm-runtime.mjs"
+    },
+    {
+      "id": "debugger/src/dwarf.mjs",
+      "relativePath": "debugger/src/dwarf.mjs",
+      "sha256": "sha256:a90c5783958fb814fa7dc8bd074166fe490d50ba2ecf6c9e82b79c5c3e58eb95",
+      "byteLength": 25566,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/dwarf.mjs"
+    },
+    {
+      "id": "debugger/src/variables.mjs",
+      "relativePath": "debugger/src/variables.mjs",
+      "sha256": "sha256:a20f10518433d3dbb48d58bf2a7bae930669c49de5531476ffcfadfbf28ba139",
+      "byteLength": 42029,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/variables.mjs"
+    },
+    {
+      "id": "debugger/src/integrity.mjs",
+      "relativePath": "debugger/src/integrity.mjs",
+      "sha256": "sha256:6c705f346157d4ed07d1e7797474ad90cf653e7431b27bcf32ee4b282f3eeb07",
+      "byteLength": 7031,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/integrity.mjs"
+    },
+    {
+      "id": "debugger/src/debugger-adapter.mjs",
+      "relativePath": "debugger/src/debugger-adapter.mjs",
+      "sha256": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c",
+      "byteLength": 21034,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/debugger-adapter.mjs"
+    },
+    {
+      "id": "debugger/src/worker-adapter.mjs",
+      "relativePath": "debugger/src/worker-adapter.mjs",
+      "sha256": "sha256:1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6",
+      "byteLength": 8478,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/worker-adapter.mjs"
+    },
+    {
+      "id": "debugger/src/worker-bridge.mjs",
+      "relativePath": "debugger/src/worker-bridge.mjs",
+      "sha256": "sha256:b1271d7c34651296ef9011c69493f6c0e0f62d97db71d8f3fe27c9561e54eda1",
+      "byteLength": 1673,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/worker-bridge.mjs"
+    },
+    {
+      "id": "debugger/src/debugger-worker.mjs",
+      "relativePath": "debugger/src/debugger-worker.mjs",
+      "sha256": "sha256:4b867a736ada849efddffc1c074739eed039d5dd4f222ab8d99c24f2fe9e559d",
+      "byteLength": 600,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/debugger-worker.mjs"
+    },
+    {
+      "id": "debugger/LICENSE",
+      "relativePath": "debugger/LICENSE",
+      "sha256": "sha256:810a7126a235c23fe56bd32f0d78617232260ee5d03fd1cb32462ac679cd8cf5",
+      "byteLength": 600,
+      "mediaType": "application/octet-stream",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/LICENSE"
+    },
+    {
+      "id": "compiler/src/compiler-adapter.mjs",
+      "relativePath": "compiler/src/compiler-adapter.mjs",
+      "sha256": "sha256:0cf84c9c6a845ad9d893dfce47c84bbbf1561d6ac7784280374c833b39d41ab9",
+      "byteLength": 5418,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "local-source:module/02-compiler/compiler/src/compiler-adapter.mjs"
+    },
+    {
+      "id": "compiler/src/compiler-probe.mjs",
+      "relativePath": "compiler/src/compiler-probe.mjs",
+      "sha256": "sha256:40327315c54e4307d8faf322ad64ed0da248e8849f9ed72ad7d691e52cafd648",
+      "byteLength": 3912,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "local-source:module/02-compiler/compiler/src/compiler-probe.mjs"
+    },
+    {
+      "id": "compiler/src/compiler-worker.mjs",
+      "relativePath": "compiler/src/compiler-worker.mjs",
+      "sha256": "sha256:b3011c7601b957f28e358216d8a4ecfe1a339b0201b4acd32245b9e7115c1416",
+      "byteLength": 2400,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "local-source:module/02-compiler/compiler/src/compiler-worker.mjs"
+    },
+    {
+      "id": "compiler/src/toolchain-engine.mjs",
+      "relativePath": "compiler/src/toolchain-engine.mjs",
+      "sha256": "sha256:03695bb52cbf7f4ab024ef773fca630eecb01c5452faa0f54fc055b574bbe3b5",
+      "byteLength": 7649,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "local-source:module/02-compiler/compiler/src/toolchain-engine.mjs"
+    },
+    {
+      "id": "compiler/src/wasm-host.mjs",
+      "relativePath": "compiler/src/wasm-host.mjs",
+      "sha256": "sha256:ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73",
+      "byteLength": 6856,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "local-source:module/02-compiler/compiler/src/wasm-host.mjs"
+    },
+    {
+      "id": "compiler/src/wasm-inspect.mjs",
+      "relativePath": "compiler/src/wasm-inspect.mjs",
+      "sha256": "sha256:dfd5ae8ea29df1b266775250e3f07e3181ef3a48bd49ae97cbcf6b929df63a21",
+      "byteLength": 1825,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "local-source:module/02-compiler/compiler/src/wasm-inspect.mjs"
+    },
+    {
+      "id": "compiler/src/source.mjs",
+      "relativePath": "compiler/src/source.mjs",
+      "sha256": "sha256:4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1",
+      "byteLength": 7201,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "local-source:module/02-compiler/compiler/src/source.mjs"
+    },
+    {
+      "id": "compiler/src/diagnostics.mjs",
+      "relativePath": "compiler/src/diagnostics.mjs",
+      "sha256": "sha256:14399bd23b8eb131a20196d0ed926db1243ace34bda42a221bae687378bfbad3",
+      "byteLength": 3218,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "local-source:module/02-compiler/compiler/src/diagnostics.mjs"
+    },
+    {
+      "id": "compiler/resources/toolchain.lock.json",
+      "relativePath": "compiler/resources/toolchain.lock.json",
+      "sha256": "sha256:a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d",
+      "byteLength": 6149,
+      "mediaType": "application/json",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "local-source:module/02-compiler/compiler/resources/toolchain.lock.json"
+    },
+    {
+      "id": "compiler/resources/LICENSES.md",
+      "relativePath": "compiler/resources/LICENSES.md",
+      "sha256": "sha256:e6ea8147efad7549cd2a9c7830cfb808f4fdf860c043959b39abbb08dcacb3d2",
+      "byteLength": 3998,
+      "mediaType": "application/octet-stream",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "local-source:module/02-compiler/compiler/resources/LICENSES.md"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/clang",
+      "relativePath": "compiler/resources/vendor/wasm-clang/clang",
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "byteLength": 31214472,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/clang"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/lld",
+      "relativePath": "compiler/resources/vendor/wasm-clang/lld",
+      "sha256": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+      "byteLength": 19490094,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "linker"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/lld"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/memfs",
+      "relativePath": "compiler/resources/vendor/wasm-clang/memfs",
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "byteLength": 345442,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/memfs"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/sysroot.tar",
+      "relativePath": "compiler/resources/vendor/wasm-clang/sysroot.tar",
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "byteLength": 9297920,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "sysroot",
+        "stdlib"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/sysroot.tar"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/shared.js",
+      "relativePath": "compiler/resources/vendor/wasm-clang/shared.js",
+      "sha256": "sha256:4de0be862bda1a7571c1f0632abe3c62c47a56e734cc6b703155805a4b160b1c",
+      "byteLength": 23973,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/shared.js"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/worker.js",
+      "relativePath": "compiler/resources/vendor/wasm-clang/worker.js",
+      "sha256": "sha256:c0d4c3f3ef0e2047c0f109922f0a4ee9e0f2b12947a569a835da83b6bdcf995e",
+      "byteLength": 2758,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/worker.js"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/d8.js",
+      "relativePath": "compiler/resources/vendor/wasm-clang/d8.js",
+      "sha256": "sha256:a7ae2decd5330e2deadb6c258cfa11b4f0c5645807feb7f0114d319335e4a4b5",
+      "byteLength": 1722,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/d8.js"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/shared_web.js",
+      "relativePath": "compiler/resources/vendor/wasm-clang/shared_web.js",
+      "sha256": "sha256:90f2eb3c832b9d3af7f0ef7aa63c71554182efb73eba734810607e20d4cb5681",
+      "byteLength": 8110,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/shared_web.js"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/LICENSE",
+      "relativePath": "compiler/resources/vendor/wasm-clang/LICENSE",
+      "sha256": "sha256:cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "byteLength": 11358,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/LICENSE"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/LICENSE.llvm",
+      "relativePath": "compiler/resources/vendor/wasm-clang/LICENSE.llvm",
+      "sha256": "sha256:ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47",
+      "byteLength": 15140,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/LICENSE.llvm"
+    },
+    {
+      "id": "compiler/resources/vendor/wasm-clang/README.md",
+      "relativePath": "compiler/resources/vendor/wasm-clang/README.md",
+      "sha256": "sha256:2ded8e20209ca550698c829ab65dfff3e4e26e90fc21240bae5f0c4f1cbd7a57",
+      "byteLength": 1446,
+      "mediaType": "application/octet-stream",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "roles": [
+        "compiler"
+      ],
+      "licenseFile": "compiler/resources/LICENSES.md",
+      "sourceURL": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/README.md"
+    }
+  ]
+}

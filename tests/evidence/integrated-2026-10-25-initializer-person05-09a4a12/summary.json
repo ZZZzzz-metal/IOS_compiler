@@ -1,0 +1,70 @@
+{
+  "recordedAt": "2026-10-25T06:40:30.069Z",
+  "owner": "05 independent follow-up",
+  "defect": "VAL-003 initializer lifetime / stale previous-iteration value",
+  "validationRoot": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/",
+  "validationRevisionAtRun": "8e9d6a1b17918d992176c8a854257cda0ee817b8",
+  "fixedRevision": "09a4a12378e69c5bef98e713fd51cedbf6525ca5",
+  "before": {
+    "productCode": "integration-v0.2.1",
+    "workspaceRevision": "8e9d6a1b17918d992176c8a854257cda0ee817b8",
+    "counts": {
+      "passed": 0,
+      "failed": 6
+    },
+    "exitCode": 1,
+    "profile": "integration-prototype-c992f82a5f1bad99"
+  },
+  "after": {
+    "counts": {
+      "passed": 6,
+      "failed": 0
+    },
+    "exitCode": 0,
+    "profile": "debugger-prototype-460d5a2cc2f4b66c",
+    "integrationProfile": "integration-prototype-cf02b4efe9477db1"
+  },
+  "sameSourceAndWasm": [
+    {
+      "id": "initializer-cycle",
+      "sourceHash": "sha256:0832992f28e13689ef35d9139909a46399fc10fd48a695ed161e12098da1eea1",
+      "artifactSHA256": "sha256:8a8c0bbbb0e8cc2528cac991b3424446ff1c2f786399f7275b4f6c7258b0356a",
+      "sameActualArtifact": true
+    },
+    {
+      "id": "initializer-same-line",
+      "sourceHash": "sha256:23b0196bd67612c8e7e47f04fc4362465c92da26f0427120904cb76f27e9fabd",
+      "artifactSHA256": "sha256:caebc3a328bfa6dcee327307e0869a807ef09ef6e1fde79b2e293dc1235bfc8e",
+      "sameActualArtifact": true
+    }
+  ],
+  "priorAcceptance": {
+    "passed": 21,
+    "failed": 0
+  },
+  "oldMinimalRegressions": {
+    "passed": 2,
+    "failed": 0
+  },
+  "moduleRegression": {
+    "compiler": 27,
+    "debugger": 67,
+    "totalPassed": 94,
+    "failed": 0
+  },
+  "integrationPipeline": {
+    "passed": 3,
+    "failed": 0
+  },
+  "contractChecks": {
+    "passed": 10,
+    "failed": 0
+  },
+  "historyEvidenceFilesVerified": 31,
+  "conclusion": "New issue independently reproduced on old integrated code and fixed in the tested 03 branch. It is not yet an integration release sign-off.",
+  "pending": [
+    "01 integration of the 03 fix and 05 regression contribution",
+    "04 fixed UI/storage handoff before independent UI acceptance",
+    "real iPad complete-offline, interface and draft workflow acceptance"
+  ]
+}

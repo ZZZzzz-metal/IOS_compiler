@@ -1,0 +1,182 @@
+{
+  "recordedAt": "2026-10-25T05:44:36.073Z",
+  "reviewer": "05 independent retest",
+  "testedTag": "integration-v0.2.1",
+  "testedRevision": "7e92d2330b8e0fef1c75021d7e93522d8e6c6293",
+  "environment": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "node": "v24.19.0",
+    "evidenceScope": "desktop-node-real-compiler-and-interpreter",
+    "ipadTested": false,
+    "networkDisabled": false,
+    "browserTested": false
+  },
+  "evidenceScope": "desktop-node-real-programs",
+  "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+  "resourceManifestHash": "sha256:c992f82a5f1bad99865f5254cbbd7eb57bb53e0807f48e7562db196fa625222d",
+  "resourceCount": 30,
+  "acceptance": {
+    "passed": 21,
+    "failed": 0
+  },
+  "minimalRegressions": {
+    "passed": 2,
+    "failed": 0
+  },
+  "moduleChecks": {
+    "passed": 78,
+    "failed": 0
+  },
+  "contractChecks": {
+    "passed": 10,
+    "failed": 0
+  },
+  "integrationChecks": {
+    "passed": 3,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "command": "npm.cmd run test:acceptance",
+      "startedAt": "2026-10-25T00:53:37.5015437Z",
+      "finishedAt": "2026-10-25T00:53:50.4181959Z",
+      "exitCode": 0,
+      "root": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "tag": "integration-v0.2.1"
+    },
+    {
+      "command": "npm.cmd run test:regressions",
+      "startedAt": "2026-10-25T00:53:37.5184609Z",
+      "finishedAt": "2026-10-25T00:53:41.9995748Z",
+      "exitCode": 0,
+      "root": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "tag": "integration-v0.2.1"
+    },
+    {
+      "command": "npm.cmd run test:modules",
+      "startedAt": "2026-10-25T00:53:37.5425705Z",
+      "finishedAt": "2026-10-25T00:53:50.9116014Z",
+      "exitCode": 0,
+      "root": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "tag": "integration-v0.2.1"
+    }
+  ],
+  "sharedChecks": [
+    {
+      "task": "check",
+      "startedAt": "2026-10-25T00:53:58.8657890Z",
+      "finishedAt": "2026-10-25T00:54:00.6783992Z",
+      "exitCode": 0
+    },
+    {
+      "task": "test",
+      "startedAt": "2026-10-25T00:54:00.6818467Z",
+      "finishedAt": "2026-10-25T00:54:01.5606752Z",
+      "exitCode": 0
+    },
+    {
+      "task": "test:integration",
+      "startedAt": "2026-10-25T00:54:01.5607867Z",
+      "finishedAt": "2026-10-25T00:54:05.9234763Z",
+      "exitCode": 0
+    }
+  ],
+  "focus": {
+    "cppCoreShadow": [
+      {
+        "position": {
+          "sourcePath": "cpp-core.cpp",
+          "line": 44,
+          "column": 1
+        },
+        "availability": "available",
+        "value": "17",
+        "sessionId": "validation05-session-108",
+        "pauseId": "e161238e-bc31-4f5d-8b67-f809a6677fa0",
+        "frameId": "e161238e-bc31-4f5d-8b67-f809a6677fa0:wasm-frame-25"
+      },
+      {
+        "position": {
+          "sourcePath": "cpp-core.cpp",
+          "line": 46,
+          "column": 1
+        },
+        "availability": "available",
+        "value": "5",
+        "sessionId": "validation05-session-108",
+        "pauseId": "7fbb435c-ed73-4908-8263-cd02c8227e2d",
+        "frameId": "7fbb435c-ed73-4908-8263-cd02c8227e2d:wasm-frame-25"
+      }
+    ],
+    "minimalShadow": [
+      {
+        "line": 6,
+        "value": "19"
+      },
+      {
+        "line": 8,
+        "value": "7"
+      }
+    ],
+    "loopHeaders": [
+      {
+        "line": 3,
+        "availability": "outOfScope",
+        "value": null
+      },
+      {
+        "line": 3,
+        "availability": "available",
+        "value": "0"
+      },
+      {
+        "line": 3,
+        "availability": "available",
+        "value": "1"
+      },
+      {
+        "line": 3,
+        "availability": "available",
+        "value": "2"
+      }
+    ],
+    "loopBody": [
+      {
+        "line": 4,
+        "value": "0"
+      },
+      {
+        "line": 4,
+        "value": "1"
+      },
+      {
+        "line": 4,
+        "value": "2"
+      }
+    ],
+    "note": "At the bound loop-header instruction before ++i, subsequent header values observed were 0/1/2; no value is invented at the first declaration stop."
+  },
+  "conclusion": {
+    "VAL_001": "fixed-and-independently-confirmed-for-tested-desktop-candidate",
+    "VAL_002": "fixed-and-independently-confirmed-for-tested-desktop-candidate",
+    "G1": "desktop core automatic acceptance confirmed within recorded scope",
+    "G2": "pending real iPad complete-offline validation",
+    "G3": "pending UI, drafts, installation and complete workflow"
+  },
+  "history": {
+    "originalMainSuite": "20 passed, 1 failed",
+    "originalDistinctDefects": 2,
+    "preservedEvidenceCount": 7,
+    "historicalChecksumManifestGitBlobUnchanged": true,
+    "priorIntegratedEvidenceUnchanged": true
+  },
+  "pending": [
+    "real iPad offline cold start and new-source compile/debug",
+    "keyboard/mouse/window/App switching",
+    "draft recovery and export",
+    "complete offline resources and upgrades",
+    "UI filtering of delayed session/frame replies"
+  ]
+}
