@@ -1,7 +1,7 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {createCandidate,MODULE_FILES} from './candidate.mjs';
-const root=new URL('../../',import.meta.url),compilerRoot=new URL('../../../ipad-debugger-02/compiler/',import.meta.url);
+const root=new URL('../../',import.meta.url),compilerRoot=new URL('compiler/',root);
 const candidate=await createCandidate();
 await writeFile(new URL('debugger/probe-candidate.json',root),JSON.stringify({profile:candidate.profile,resources:candidate.resources},null,2)+'\n');
 const compilerPackage=JSON.parse(await readFile(new URL('probe-package.json',compilerRoot),'utf8'));

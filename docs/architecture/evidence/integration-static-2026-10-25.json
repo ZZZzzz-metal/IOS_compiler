@@ -1,0 +1,9 @@
+{
+  "kind": "static-package-file-mapping-only",
+  "resources": 34,
+  "bytes": 60625944,
+  "version": "cb257aa67e180d86ed41efa37927dca4bd30c967ec8be1c202e0afae9fb8f260",
+  "status": "passed",
+  "http": "Not verified: managed network denied loopback; explicit read-only retry timed out.",
+  "browserExecution": "Not rerun: in-app navigation timed out; native browser automation stopped because it could not reliably determine the current browser URL."
+}

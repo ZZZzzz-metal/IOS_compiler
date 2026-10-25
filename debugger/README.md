@@ -2,7 +2,7 @@
 
 已实现可运行的**真实 Wasm 源码调试原型**：浏览器解释 Clang/LLD 产物，解析嵌入 DWARF，并控制暂停中的实际机器状态。普通运行和调试使用同一执行器；不需要外部 LLDB 或远程计算。真实 iPad、安装包和完整产品仍待验收。
 
-所有实现位于 debugger/，基于 baseline-v0.1.0，分支 module/03-debugger。根状态入口和共享能力表由 1 号集成，当前保持基线状态。
+所有实现位于 debugger/，始于 baseline-v0.1.0，来源分支 module/03-debugger。已合入 integration；根入口、共享状态和实际 CompilerAdapter 联合验证见 docs/architecture/INTEGRATION-2026-10-25.md。
 
 ## 复现检查
 
@@ -16,17 +16,17 @@ npm.cmd test
 
 真实样例保存在 fixtures/：每份包含 main.wasm、snapshot.json、evidence.json。测试验证实际指令、输出、最终内存与原生 Wasm 的对照，源码断点、三种单步、递归帧、容器、输入输出、旧引用失效和 Worker 隔离。故障注入与实际程序测试明确区分。原始输出见 evidence/desktop-node-2026-10-24.tap；独立适配器检查见 VALIDATION.md。
 
-重建样例需准备同级 2 号工具链，再执行：
+重建样例使用同仓库已准备的 2 号工具链：
 
 ```powershell
-node debugger/scripts/prepare-fixtures.mjs ../ipad-debugger-02
+node debugger/scripts/prepare-fixtures.mjs
 ```
 
 前三份复制2号已生成的真实产物，其余调用2号固定 Wasm 编译器。没有创建第二套编译器。
 
 ## 浏览器联合实验
 
-需要同级 ipad-debugger-02/compiler/ 及其已校验工具链资源。脚本只读该目录，通过 /debugger/compiler/ 提供静态文件。
+需要同仓库 compiler/ 的已校验工具链资源。脚本通过 /debugger/compiler/ 提供静态别名，不再依赖兄弟工作区。
 
 ```powershell
 node debugger/scripts/build-probe.mjs
@@ -39,7 +39,7 @@ node debugger/scripts/serve-probe.mjs
 
 ## API
 
-- src/debugger-adapter.mjs：new DebuggerAdapter({profile, resources, readResource, sliceInstructions?, now?, schedule?})，提供协议 command/query/resync/subscribe。profile须预先信任，resources是本运行/调试模块资源表，不能从构建自报身份建立信任。
+- src/debugger-adapter.mjs：new DebuggerAdapter({profile, resources, readResource, sliceInstructions?, now?, schedule?})，提供协议 command/query/resync/subscribe。profile须预先信任，resources必须是该 profile.resourceManifestHash 绑定的完整资源表；联合候选同时传入编译与调试资源，不能从构建自报身份建立信任。
 - src/worker-adapter.mjs：浏览器使用 new WorkerDebuggerAdapter({profile, resources, baseURL, createWorker?, stopTimeoutMs?})。baseURL指向虚拟项目根。新编译产物可通过 registerResource(path, Uint8Array) 交入隔离Worker，启动仍核验实际字节。Stop默认500ms看门狗会实际终止失去响应的Worker；这不是iPad实测时延。
 - src/debugger-worker.mjs、worker-bridge.mjs：浏览器传输；node-worker.mjs仅供开发验证。Worker重建后宿主仍保留旧sessionId和ACK历史。
 - src/wasm-runtime.mjs：真实Wasm指令、PC、局部值、操作数栈、递归帧和线性内存。指令块有界、让出事件循环；生产接入使用Worker包装层。

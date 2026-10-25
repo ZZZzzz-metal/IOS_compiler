@@ -15,7 +15,7 @@ const addressNumber = value => {
 };
 
 export class VariableInspector {
-  constructor(symbols, runtime) { this.symbols = symbols; this.runtime = runtime; }
+  constructor(symbols, runtime) { this.symbols = symbols; this.runtime = runtime; this.declarations = new Map(); }
   _memory(address, size) {
     const memory = this.runtime.memory;
     if (!(memory instanceof Uint8Array)) fail('Runtime linear memory is unavailable');
@@ -104,27 +104,46 @@ export class VariableInspector {
     const result = stack[0];
     return { kind: stackValue || result.direct ? 'value' : 'memory', value: result.value };
   }
+  _declaration(die, fn) {
+    if (this.declarations.has(die.offset)) return this.declarations.get(die.offset);
+    const scopes = [];
+    for (let scope = die.parent; scope && scope !== fn; scope = scope.parent)
+      if ([TAG.lexical, TAG.inline].includes(scope.tag)) scopes.push(scope);
+    const line = this.symbols.attr(die, 0x3b), file = this.symbols.attr(die, 0x3a);
+    // A source line can occur at several distinct PCs: for-init, condition and
+    // increment all map to the loop header. Only its first statement position
+    // in this declaration's own lexical scope is the initialization boundary.
+    const row = die.tag === TAG.variable && line !== undefined && file !== undefined
+      ? this.symbols.rows.find(row => row.cu === die.cu && row.file === file && row.line === line &&
+        row.isStmt && !row.endSequence && this.symbols.contains(fn, row.pc) &&
+        scopes.every(scope => !this.symbols.ranges(scope).length || this.symbols.contains(scope, row.pc)))
+      : undefined;
+    const result = { pc: row?.pc, line, file, depth: scopes.length };
+    this.declarations.set(die.offset, result); return result;
+  }
   locals(frame) {
     return this.symbols.variables(frame.pc).map(({ die, inScope, function: fn }) => {
       const name = this.symbols.attr(die, AT.name) ?? '<anonymous>', type = this.symbols.type(die);
+      const declaration = this._declaration(die, fn), row = this.symbols.row(frame.pc);
+      const beforeLine = row && row.file === declaration.file && declaration.line > row.line && row.line > 0;
+      const context = { _lexicalInScope: inScope, _scopeDepth: declaration.depth,
+        _declarationReached: declaration.pc === undefined ? !beforeLine : frame.pc >= declaration.pc };
       try {
         if (!inScope) fail('Variable is outside its lexical scope', 'outOfScope');
-        // At a statement boundary the statement on that line has not run yet.
-        // DWARF 4 O0 has no initialization tracking; do not show old stack bytes
-        // as the value of a declaration that has not executed.
-        const declarationLine = this.symbols.attr(die, 0x3b), declarationFile = this.symbols.attr(die, 0x3a);
-        const row = this.symbols.row(frame.pc), fnLine = this.symbols.attr(fn, 0x3b);
-        if (die.tag === TAG.variable && row?.file === declarationFile && declarationLine >= row.line && row.line > 0)
+        // At the declaration's first instruction it has not executed, including
+        // a later loop iteration which reuses already-written stack storage.
+        // Once past that PC, actual per-frame stores still establish whether
+        // the value was initialized; matching a source line is insufficient.
+        if (die.tag === TAG.variable && (declaration.pc !== undefined ? frame.pc <= declaration.pc :
+          row && row.file === declaration.file && declaration.line >= row.line && row.line > 0))
           fail('Variable declaration has not executed at this stop', 'outOfScope');
-        if (row && row.line === fnLine && this.symbols.attr(fn, AT.frameBase) === undefined)
-          fail('Function prologue has not finished at this stop');
         const constant = this.symbols.attr(die, AT.constValue);
-        if (constant !== undefined) return this._read(type, { immediate: constant }, name, frame);
+        if (constant !== undefined) return { ...this._read(type, { immediate: constant }, name, frame), ...context };
         const expression = this.symbols.locationExpression(die, AT.location, frame.pc);
         if (!expression || !expression.length) fail('No location is available at this PC', 'optimizedOut');
         const location = this._expression(expression, frame, fn);
-        return this._read(type, location.kind === 'memory' ? { address: addressNumber(location.value) } : { immediate: location.value }, name, frame, 0, true);
-      } catch (error) { return unavailable(name, this.symbols.typeName(type), error); }
+        return { ...this._read(type, location.kind === 'memory' ? { address: addressNumber(location.value) } : { immediate: location.value }, name, frame, 0, true), ...context };
+      } catch (error) { return { ...unavailable(name, this.symbols.typeName(type), error), ...context }; }
     });
   }
   _read(type, storage, name, frame, depth = 0, requireInitialized = false) {
@@ -500,7 +519,9 @@ class ExpressionParser {
         if (!evaluate) value = this.literal(0n);
         else if (token.text === 'true' || token.text === 'false') value = this.literal(BigInt(token.text === 'true'), 'bool');
         else {
-          const matches = this.locals.filter(value => value.name === token.text && value.state !== 'outOfScope');
+          const visible = this.locals.filter(value => value.name === token.text && value._lexicalInScope && value._declarationReached);
+          const depth = Math.max(...visible.map(value => value._scopeDepth));
+          const matches = visible.filter(value => value._scopeDepth === depth);
           if (matches.length !== 1) fail(`Identifier ${token.text} is unavailable or ambiguous`);
           value = matches[0];
         }

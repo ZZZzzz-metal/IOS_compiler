@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import {resolve,sep,extname} from 'node:path';
 const root=fileURLToPath(new URL('../../',import.meta.url));
-const compiler=fileURLToPath(new URL('../../../ipad-debugger-02/compiler/',import.meta.url));
+const compiler=fileURLToPath(new URL('../../compiler/',import.meta.url));
 const port=Number(process.env.DEBUGGER_PROBE_PORT??4173);
 const types={'.mjs':'text/javascript','.js':'text/javascript','.html':'text/html; charset=utf-8','.json':'application/json','.wasm':'application/wasm'};
 createServer(async(req,res)=>{

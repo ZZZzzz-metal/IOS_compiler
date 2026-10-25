@@ -269,19 +269,16 @@ async function nativeWasi(bytes,stdin) {
   return {exitCode,memory:mem(),stdout:Buffer.concat(output.stdout).toString('utf8'),stderr:Buffer.concat(output.stderr).toString('utf8')};
 }
 
-const compilerArtifacts=process.env.WASM_COMPILER_ARTIFACTS??fileURLToPath(new URL('../../../ipad-debugger-02/artifacts/compiler-02/',import.meta.url));
+const compilerArtifacts=process.env.WASM_COMPILER_ARTIFACTS;
 const bundledArtifacts=fileURLToPath(new URL('../fixtures/',import.meta.url));
 for(const [sample,stdin,expected] of [
   ['debug-handoff','', ''],
   ['c-stdio','1 2 3 4\n','sum=10 first=1 int64=9223372036854775806\n'],
   ['stl','5 9 1 4 2 7\n','sum=23 min=1 max=9 pointer=5 map=key:2 hash=ok queue=9 heap=10\n中文😀 bytes=10 long=80 empty=0/0\ni64=9223372036854775806 u64=18446744073709551615 int=4 long=4 pointer=4\n'],
 ])test(`real compiler artifact ${sample}: exit, output and linear memory match native WebAssembly`,async t=>{
-  let path=resolve(compilerArtifacts,sample,'main.wasm');
-  if(!process.env.WASM_COMPILER_ARTIFACTS) {
-    const bundled=resolve(bundledArtifacts,sample==='c-stdio'?'stdio':sample,'main.wasm');
-    try{await access(bundled);path=bundled;}catch{/* Older checkouts can use the original role 2 artifact. */}
-  }
-  try{await access(path);}catch{t.skip('Real role 2 artifacts unavailable; set WASM_COMPILER_ARTIFACTS to compiler-02 artifact root');return;}
+  const path=compilerArtifacts?resolve(compilerArtifacts,sample,'main.wasm'):
+    resolve(bundledArtifacts,sample==='c-stdio'?'stdio':sample,'main.wasm');
+  await access(path); // The committed real fixtures are required, never silently skipped.
   const bytes=await readFile(path),native=await nativeWasi(bytes,stdin),chunks={stdout:[],stderr:[]};
   const runtime=new WasmRuntime(bytes,{stdin,onOutput:(stream,bytes)=>chunks[stream].push(bytes)});runtime.start();
   let sawRecursion=false;

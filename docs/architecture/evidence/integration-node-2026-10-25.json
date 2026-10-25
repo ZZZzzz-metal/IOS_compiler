@@ -1,0 +1,1265 @@
+{
+  "kind": "development-node-compiler-debugger-integration",
+  "started": "2026-10-25T00:23:26.044Z",
+  "finished": "2026-10-25T00:23:29.369Z",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "profile": {
+    "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:343b36eac02ac617608f4ec3873713df7028113acd4385fa23beec28fc9f90ff"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:c992f82a5f1bad99865f5254cbbd7eb57bb53e0807f48e7562db196fa625222d",
+    "status": "candidate",
+    "evidence": [
+      "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+    ]
+  },
+  "resourceCount": 30,
+  "resourceBytes": 60606917,
+  "limitations": [
+    "Desktop Node evidence only; iPad execution, offline installation and UI acceptance are unverified.",
+    "These explicit samples do not establish complete C/C++ language, DWARF or standard-library coverage."
+  ],
+  "cpp": {
+    "status": "succeeded",
+    "compilationMs": 787,
+    "snapshot": {
+      "snapshotId": "bfde0eb0-440c-4450-9253-5580832da1ac",
+      "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\n#include <vector>\n#include <stdio.h>\nint add(int value, int increment) {\n    int result = value + increment;\n    return result;\n}\nint sum(const std::vector<int>& values, int index) {\n    if (index == static_cast<int>(values.size())) return 0;\n    int current = values[index]; // recursive-break\n    return current + sum(values, index + 1);\n}\nint main() {\n    int array[3] = {2, 8, 6};\n    int* pointer = &array[1];\n    std::vector<int> values = {3, 5, 7};\n    std::string shortText = \"hello\";\n    std::string longText(80, 'x');\n    int total = sum(values, 0); // initial-break\n    int changed = add(total, *pointer); // add-call\n    values.push_back(changed); // mutation\n    printf(\"cpp total=%d changed=%d vector=%d\\n\", total, changed, values[3]); // print\n    return values[3] == 23 && shortText.size() == 5 && longText.size() == 80 ? 0 : 1;\n}\n// fresh integration source 0ea39bae-5c9e-4978-a0f9-6221a4d74354\n",
+          "contentHash": "sha256:7687ad3756b808e069604a578773f71bb4a09340df6362af6123a6eddeaf509d"
+        }
+      ]
+    },
+    "build": {
+      "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+      "requestId": "ca98891b-dfd1-4917-915c-b9a1dac5b287",
+      "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+      "snapshotId": "bfde0eb0-440c-4450-9253-5580832da1ac",
+      "profile": {
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "protocolVersion": "0.1.0-draft.1",
+        "compiler": {
+          "id": "binji-wasm-clang-648c4a89997a/clang",
+          "version": "8.0.1",
+          "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        },
+        "linker": {
+          "id": "binji-wasm-clang-648c4a89997a/lld",
+          "version": "8.0.1",
+          "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+        },
+        "sysroot": {
+          "id": "binji-wasm-clang-648c4a89997a/sysroot",
+          "version": "binji-wasm-clang-648c4a89997a",
+          "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        "standardLibrary": {
+          "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+          "version": "binji-wasm-clang-648c4a89997a",
+          "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        "runtime": {
+          "id": "project-js-wasm-interpreter",
+          "version": "0.1.0-prototype.1",
+          "buildHash": "sha256:343b36eac02ac617608f4ec3873713df7028113acd4385fa23beec28fc9f90ff"
+        },
+        "debugger": {
+          "id": "project-dwarf4-debugger",
+          "version": "0.1.0-prototype.1",
+          "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+        },
+        "targetTriple": "wasm32-unknown-wasi",
+        "abi": "wasi_unstable",
+        "addressBits": 32,
+        "endianness": "little",
+        "artifactFormat": "wasm-v1",
+        "debugInfoFormat": "dwarf-4-embedded",
+        "requiredFeatures": [
+          "mvp",
+          "mutable-globals"
+        ],
+        "resourceManifestHash": "sha256:c992f82a5f1bad99865f5254cbbd7eb57bb53e0807f48e7562db196fa625222d",
+        "status": "candidate",
+        "evidence": [
+          "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+        ]
+      },
+      "mode": "debug",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "compilerArguments": [
+        "-cc1",
+        "-emit-obj",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-O0",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-debug-info-kind=standalone",
+        "-dwarf-version=4",
+        "-debugger-tuning=lldb",
+        "-fdebug-compilation-dir",
+        "/project",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-o",
+        "build/main.o",
+        "/project/main.cpp"
+      ],
+      "linkerArguments": [
+        "--no-threads",
+        "--export-dynamic",
+        "-z",
+        "stack-size=1048576",
+        "--max-memory=268435456",
+        "-Llib/wasm32-wasi",
+        "lib/wasm32-wasi/crt1.o",
+        "build/main.o",
+        "-lc++",
+        "-lc++abi",
+        "-lc",
+        "-lm",
+        "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+        "-o",
+        "build/main.wasm"
+      ],
+      "executable": {
+        "id": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5",
+        "relativePath": "compiler-builds/wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5/main.wasm",
+        "sha256": "sha256:88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5",
+        "byteLength": 354348,
+        "mediaType": "application/wasm",
+        "version": "binji-wasm-clang-648c4a89997a"
+      },
+      "debugInfo": [
+        {
+          "id": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5",
+          "relativePath": "compiler-builds/wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5/main.wasm",
+          "sha256": "sha256:88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5",
+          "byteLength": 354348,
+          "mediaType": "application/wasm",
+          "version": "binji-wasm-clang-648c4a89997a"
+        }
+      ],
+      "sourceMappings": []
+    },
+    "persistedBytes": 354348,
+    "persistedSHA256": "sha256:88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5",
+    "values": {
+      "array": "int[3] (3 elements)",
+      "pointer": "0x00102074",
+      "values": "vector(size=3, capacity=3)",
+      "shortText": "\"hello\"",
+      "longText": "\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\""
+    },
+    "steps": {
+      "stepOver": {
+        "sourcePath": "main.cpp",
+        "line": 20,
+        "column": 1
+      },
+      "stepInto": {
+        "sourcePath": "main.cpp",
+        "line": 5,
+        "column": 1
+      },
+      "stepOut": {
+        "sourcePath": "main.cpp",
+        "line": 20,
+        "column": 1
+      },
+      "calleeStack": [
+        {
+          "frameId": "19546591-0eb8-4a59-8633-8b46e08bc806:wasm-frame-180",
+          "functionName": "add",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 5,
+            "column": 1
+          },
+          "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+        },
+        {
+          "frameId": "19546591-0eb8-4a59-8633-8b46e08bc806:wasm-frame-25",
+          "functionName": "main",
+          "position": {
+            "sourcePath": "main.cpp",
+            "line": 20,
+            "column": 1
+          },
+          "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+        },
+        {
+          "frameId": "19546591-0eb8-4a59-8633-8b46e08bc806:wasm-frame-24",
+          "functionName": "main",
+          "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+        },
+        {
+          "frameId": "19546591-0eb8-4a59-8633-8b46e08bc806:wasm-frame-1",
+          "functionName": "_start",
+          "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+        }
+      ],
+      "total": "15",
+      "changed": "23",
+      "vector": "23",
+      "stalePauseRejected": true
+    },
+    "recursion": [
+      {
+        "level": 0,
+        "frames": [
+          {
+            "frameId": "fe69a9bd-ec89-4d10-9921-e55e6966f2f6:wasm-frame-169",
+            "functionName": "sum",
+            "position": {
+              "sourcePath": "main.cpp",
+              "line": 10,
+              "column": 1
+            },
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "fe69a9bd-ec89-4d10-9921-e55e6966f2f6:wasm-frame-25",
+            "functionName": "main",
+            "position": {
+              "sourcePath": "main.cpp",
+              "line": 19,
+              "column": 1
+            },
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "fe69a9bd-ec89-4d10-9921-e55e6966f2f6:wasm-frame-24",
+            "functionName": "main",
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "fe69a9bd-ec89-4d10-9921-e55e6966f2f6:wasm-frame-1",
+            "functionName": "_start",
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          }
+        ],
+        "indices": [
+          "0"
+        ]
+      },
+      {
+        "level": 1,
+        "frames": [
+          {
+            "frameId": "3f47d57a-fef3-4a74-9dce-057e812f81a4:wasm-frame-172",
+            "functionName": "sum",
+            "position": {
+              "sourcePath": "main.cpp",
+              "line": 10,
+              "column": 1
+            },
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "3f47d57a-fef3-4a74-9dce-057e812f81a4:wasm-frame-169",
+            "functionName": "sum",
+            "position": {
+              "sourcePath": "main.cpp",
+              "line": 11,
+              "column": 1
+            },
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "3f47d57a-fef3-4a74-9dce-057e812f81a4:wasm-frame-25",
+            "functionName": "main",
+            "position": {
+              "sourcePath": "main.cpp",
+              "line": 19,
+              "column": 1
+            },
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "3f47d57a-fef3-4a74-9dce-057e812f81a4:wasm-frame-24",
+            "functionName": "main",
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "3f47d57a-fef3-4a74-9dce-057e812f81a4:wasm-frame-1",
+            "functionName": "_start",
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          }
+        ],
+        "indices": [
+          "1",
+          "0"
+        ]
+      },
+      {
+        "level": 2,
+        "frames": [
+          {
+            "frameId": "c5dbd6a0-5bcd-4cd0-b76e-95e2ea946a72:wasm-frame-175",
+            "functionName": "sum",
+            "position": {
+              "sourcePath": "main.cpp",
+              "line": 10,
+              "column": 1
+            },
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "c5dbd6a0-5bcd-4cd0-b76e-95e2ea946a72:wasm-frame-172",
+            "functionName": "sum",
+            "position": {
+              "sourcePath": "main.cpp",
+              "line": 11,
+              "column": 1
+            },
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "c5dbd6a0-5bcd-4cd0-b76e-95e2ea946a72:wasm-frame-169",
+            "functionName": "sum",
+            "position": {
+              "sourcePath": "main.cpp",
+              "line": 11,
+              "column": 1
+            },
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "c5dbd6a0-5bcd-4cd0-b76e-95e2ea946a72:wasm-frame-25",
+            "functionName": "main",
+            "position": {
+              "sourcePath": "main.cpp",
+              "line": 19,
+              "column": 1
+            },
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "c5dbd6a0-5bcd-4cd0-b76e-95e2ea946a72:wasm-frame-24",
+            "functionName": "main",
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          },
+          {
+            "frameId": "c5dbd6a0-5bcd-4cd0-b76e-95e2ea946a72:wasm-frame-1",
+            "functionName": "_start",
+            "module": "wasm-88b3eb7efa4349126a0e2f42b18e95af890e5b7ad73281d5dd7b14764e021af5"
+          }
+        ],
+        "indices": [
+          "2",
+          "1",
+          "0"
+        ]
+      }
+    ],
+    "output": "cpp total=15 changed=23 vector=23\n",
+    "termination": {
+      "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+      "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+      "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 17,
+      "kind": "terminated",
+      "reason": "exit",
+      "exitCode": 0
+    },
+    "events": [
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 1,
+        "kind": "state",
+        "state": "starting"
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 2,
+        "kind": "breakpoints",
+        "bindings": [
+          {
+            "breakpointId": "1984856c-7c2c-4d26-8a9b-c089063cb8e1",
+            "requested": {
+              "sourcePath": "main.cpp",
+              "line": 19,
+              "column": 1
+            },
+            "status": "bound",
+            "actual": [
+              {
+                "sourcePath": "main.cpp",
+                "line": 19,
+                "column": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 3,
+        "kind": "state",
+        "state": "running"
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 4,
+        "kind": "paused",
+        "pauseId": "dbf84033-e394-403b-9154-c6d78f8827ec",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "main.cpp",
+          "line": 19,
+          "column": 1
+        }
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 5,
+        "kind": "state",
+        "state": "running"
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 6,
+        "kind": "paused",
+        "pauseId": "fdea1ffe-54b2-4759-81f9-b91e53c2d6ca",
+        "reason": "step",
+        "position": {
+          "sourcePath": "main.cpp",
+          "line": 20,
+          "column": 1
+        }
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 7,
+        "kind": "state",
+        "state": "running"
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 8,
+        "kind": "paused",
+        "pauseId": "19546591-0eb8-4a59-8633-8b46e08bc806",
+        "reason": "step",
+        "position": {
+          "sourcePath": "main.cpp",
+          "line": 5,
+          "column": 1
+        }
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 9,
+        "kind": "state",
+        "state": "running"
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 10,
+        "kind": "paused",
+        "pauseId": "cc077629-954d-4a79-9a4f-f157f2854a4c",
+        "reason": "step",
+        "position": {
+          "sourcePath": "main.cpp",
+          "line": 20,
+          "column": 1
+        }
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 11,
+        "kind": "state",
+        "state": "running"
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 12,
+        "kind": "paused",
+        "pauseId": "79adc6e5-d518-4085-984c-f5a71f4fc7dd",
+        "reason": "step",
+        "position": {
+          "sourcePath": "main.cpp",
+          "line": 21,
+          "column": 1
+        }
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 13,
+        "kind": "state",
+        "state": "running"
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 14,
+        "kind": "paused",
+        "pauseId": "53357087-57cd-4cfd-8610-5740ae1277e0",
+        "reason": "step",
+        "position": {
+          "sourcePath": "main.cpp",
+          "line": 22,
+          "column": 1
+        }
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 15,
+        "kind": "state",
+        "state": "running"
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 16,
+        "kind": "output",
+        "stream": "stdout",
+        "text": "cpp total=15 changed=23 vector=23\n"
+      },
+      {
+        "sessionId": "47ac9c4f-2e93-4ac5-aef7-3c29853c1486",
+        "buildId": "build-b668d90a-1e2a-4d53-b939-cb3cf6e2d287",
+        "sourceHash": "sha256:a147b6ad57151da76d72d76bd3a4a552ece8bdeff925632c4ae33285659cfeba",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 17,
+        "kind": "terminated",
+        "reason": "exit",
+        "exitCode": 0
+      }
+    ]
+  },
+  "c": {
+    "status": "succeeded",
+    "compilationMs": 339,
+    "snapshot": {
+      "snapshotId": "59436679-e13f-468a-a1dd-65d0e3c3c14a",
+      "sourceHash": "sha256:07c99bbf5c7969bd215348b8d3eebd2d17c848cf2fc594deba38d428ee4e46b2",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.c",
+      "files": [
+        {
+          "path": "main.c",
+          "role": "user",
+          "text": "#include <stdio.h>\n#include <stdint.h>\n#include <inttypes.h>\nint sum(const int *values, int n) {\n    if (n == 0) return 0;\n    return values[n - 1] + sum(values, n - 1);\n}\nint main(void) {\n    int values[4] = {0};\n    for (int i = 0; i < 4; ++i) {\n        if (scanf(\"%d\", &values[i]) != 1) return 2;\n    }\n    int *first = &values[0];\n    int64_t large = INT64_C(9223372036854775806);\n    printf(\"sum=%d first=%d int64=%\" PRId64 \"\\n\", sum(values, 4), *first, large); // output-break\n    return 0;\n}\n// fresh integration source f4b9fd4b-6fac-457f-828a-296052cb5f90\n",
+          "contentHash": "sha256:9683292e020a0c78837136d7b32d32a6e6b3c304702c04c934dff0de04a4b831"
+        }
+      ]
+    },
+    "build": {
+      "buildId": "build-865d729c-5bec-4818-ba10-17d285faf23d",
+      "requestId": "7c7f872a-76f0-49b2-b6ca-9ec12fc4e306",
+      "sourceHash": "sha256:07c99bbf5c7969bd215348b8d3eebd2d17c848cf2fc594deba38d428ee4e46b2",
+      "snapshotId": "59436679-e13f-468a-a1dd-65d0e3c3c14a",
+      "profile": {
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "protocolVersion": "0.1.0-draft.1",
+        "compiler": {
+          "id": "binji-wasm-clang-648c4a89997a/clang",
+          "version": "8.0.1",
+          "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        },
+        "linker": {
+          "id": "binji-wasm-clang-648c4a89997a/lld",
+          "version": "8.0.1",
+          "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+        },
+        "sysroot": {
+          "id": "binji-wasm-clang-648c4a89997a/sysroot",
+          "version": "binji-wasm-clang-648c4a89997a",
+          "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        "standardLibrary": {
+          "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+          "version": "binji-wasm-clang-648c4a89997a",
+          "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        "runtime": {
+          "id": "project-js-wasm-interpreter",
+          "version": "0.1.0-prototype.1",
+          "buildHash": "sha256:343b36eac02ac617608f4ec3873713df7028113acd4385fa23beec28fc9f90ff"
+        },
+        "debugger": {
+          "id": "project-dwarf4-debugger",
+          "version": "0.1.0-prototype.1",
+          "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+        },
+        "targetTriple": "wasm32-unknown-wasi",
+        "abi": "wasi_unstable",
+        "addressBits": 32,
+        "endianness": "little",
+        "artifactFormat": "wasm-v1",
+        "debugInfoFormat": "dwarf-4-embedded",
+        "requiredFeatures": [
+          "mvp",
+          "mutable-globals"
+        ],
+        "resourceManifestHash": "sha256:c992f82a5f1bad99865f5254cbbd7eb57bb53e0807f48e7562db196fa625222d",
+        "status": "candidate",
+        "evidence": [
+          "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+        ]
+      },
+      "mode": "debug",
+      "language": {
+        "language": "c",
+        "standard": "c11"
+      },
+      "compilerArguments": [
+        "-cc1",
+        "-emit-obj",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.c",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-O0",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-debug-info-kind=standalone",
+        "-dwarf-version=4",
+        "-debugger-tuning=lldb",
+        "-fdebug-compilation-dir",
+        "/project",
+        "-std=c11",
+        "-x",
+        "c",
+        "-o",
+        "build/main.o",
+        "/project/main.c"
+      ],
+      "linkerArguments": [
+        "--no-threads",
+        "--export-dynamic",
+        "-z",
+        "stack-size=1048576",
+        "--max-memory=268435456",
+        "-Llib/wasm32-wasi",
+        "lib/wasm32-wasi/crt1.o",
+        "build/main.o",
+        "-lc",
+        "-lm",
+        "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+        "-o",
+        "build/main.wasm"
+      ],
+      "executable": {
+        "id": "wasm-de3a569e009f30d07a0223b11b2f9e097c4f21c9c5bf536a42a6e018bf5dcfc5",
+        "relativePath": "compiler-builds/wasm-de3a569e009f30d07a0223b11b2f9e097c4f21c9c5bf536a42a6e018bf5dcfc5/main.wasm",
+        "sha256": "sha256:de3a569e009f30d07a0223b11b2f9e097c4f21c9c5bf536a42a6e018bf5dcfc5",
+        "byteLength": 51241,
+        "mediaType": "application/wasm",
+        "version": "binji-wasm-clang-648c4a89997a"
+      },
+      "debugInfo": [
+        {
+          "id": "wasm-de3a569e009f30d07a0223b11b2f9e097c4f21c9c5bf536a42a6e018bf5dcfc5",
+          "relativePath": "compiler-builds/wasm-de3a569e009f30d07a0223b11b2f9e097c4f21c9c5bf536a42a6e018bf5dcfc5/main.wasm",
+          "sha256": "sha256:de3a569e009f30d07a0223b11b2f9e097c4f21c9c5bf536a42a6e018bf5dcfc5",
+          "byteLength": 51241,
+          "mediaType": "application/wasm",
+          "version": "binji-wasm-clang-648c4a89997a"
+        }
+      ],
+      "sourceMappings": []
+    },
+    "persistedBytes": 51241,
+    "persistedSHA256": "sha256:de3a569e009f30d07a0223b11b2f9e097c4f21c9c5bf536a42a6e018bf5dcfc5",
+    "first": "2",
+    "large": "9223372036854775806",
+    "output": "sum=20 first=2 int64=9223372036854775806\n",
+    "termination": {
+      "sessionId": "e4e57692-d7eb-46fe-b8ca-ed4452a009a9",
+      "buildId": "build-865d729c-5bec-4818-ba10-17d285faf23d",
+      "sourceHash": "sha256:07c99bbf5c7969bd215348b8d3eebd2d17c848cf2fc594deba38d428ee4e46b2",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 7,
+      "kind": "terminated",
+      "reason": "exit",
+      "exitCode": 0
+    },
+    "events": [
+      {
+        "sessionId": "e4e57692-d7eb-46fe-b8ca-ed4452a009a9",
+        "buildId": "build-865d729c-5bec-4818-ba10-17d285faf23d",
+        "sourceHash": "sha256:07c99bbf5c7969bd215348b8d3eebd2d17c848cf2fc594deba38d428ee4e46b2",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 1,
+        "kind": "state",
+        "state": "starting"
+      },
+      {
+        "sessionId": "e4e57692-d7eb-46fe-b8ca-ed4452a009a9",
+        "buildId": "build-865d729c-5bec-4818-ba10-17d285faf23d",
+        "sourceHash": "sha256:07c99bbf5c7969bd215348b8d3eebd2d17c848cf2fc594deba38d428ee4e46b2",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 2,
+        "kind": "breakpoints",
+        "bindings": [
+          {
+            "breakpointId": "c1821e7e-d189-4069-8b45-3f9568a0e694",
+            "requested": {
+              "sourcePath": "main.c",
+              "line": 15,
+              "column": 1
+            },
+            "status": "bound",
+            "actual": [
+              {
+                "sourcePath": "main.c",
+                "line": 15,
+                "column": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "sessionId": "e4e57692-d7eb-46fe-b8ca-ed4452a009a9",
+        "buildId": "build-865d729c-5bec-4818-ba10-17d285faf23d",
+        "sourceHash": "sha256:07c99bbf5c7969bd215348b8d3eebd2d17c848cf2fc594deba38d428ee4e46b2",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 3,
+        "kind": "state",
+        "state": "running"
+      },
+      {
+        "sessionId": "e4e57692-d7eb-46fe-b8ca-ed4452a009a9",
+        "buildId": "build-865d729c-5bec-4818-ba10-17d285faf23d",
+        "sourceHash": "sha256:07c99bbf5c7969bd215348b8d3eebd2d17c848cf2fc594deba38d428ee4e46b2",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 4,
+        "kind": "paused",
+        "pauseId": "02f217c0-3f94-4dad-92f6-a0a2f475416d",
+        "reason": "breakpoint",
+        "position": {
+          "sourcePath": "main.c",
+          "line": 15,
+          "column": 1
+        }
+      },
+      {
+        "sessionId": "e4e57692-d7eb-46fe-b8ca-ed4452a009a9",
+        "buildId": "build-865d729c-5bec-4818-ba10-17d285faf23d",
+        "sourceHash": "sha256:07c99bbf5c7969bd215348b8d3eebd2d17c848cf2fc594deba38d428ee4e46b2",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 5,
+        "kind": "state",
+        "state": "running"
+      },
+      {
+        "sessionId": "e4e57692-d7eb-46fe-b8ca-ed4452a009a9",
+        "buildId": "build-865d729c-5bec-4818-ba10-17d285faf23d",
+        "sourceHash": "sha256:07c99bbf5c7969bd215348b8d3eebd2d17c848cf2fc594deba38d428ee4e46b2",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 6,
+        "kind": "output",
+        "stream": "stdout",
+        "text": "sum=20 first=2 int64=9223372036854775806\n"
+      },
+      {
+        "sessionId": "e4e57692-d7eb-46fe-b8ca-ed4452a009a9",
+        "buildId": "build-865d729c-5bec-4818-ba10-17d285faf23d",
+        "sourceHash": "sha256:07c99bbf5c7969bd215348b8d3eebd2d17c848cf2fc594deba38d428ee4e46b2",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 7,
+        "kind": "terminated",
+        "reason": "exit",
+        "exitCode": 0
+      }
+    ]
+  },
+  "stopRestart": {
+    "infinite": {
+      "status": "succeeded",
+      "compilationMs": 264,
+      "snapshot": {
+        "snapshotId": "2cacfd6c-0763-47be-96b4-a39ea075a5c7",
+        "sourceHash": "sha256:398e5b03fe1c5c2762116d8d80e559a4626bf60256720cb9f5a8232566373706",
+        "encoding": "utf-8",
+        "newline": "lf",
+        "translationUnit": "main.c",
+        "files": [
+          {
+            "path": "main.c",
+            "role": "user",
+            "text": "int main(void) {\n volatile unsigned count = 0;\n while (1) { count++; }\n}\n// fresh 00008b96-3aab-4be6-a1fd-e78e9d4a7f4a\n",
+            "contentHash": "sha256:4bbc2ccad0f0e9357ad4a2e260d8a3908bb544931726634da8a9dcb4e71df957"
+          }
+        ]
+      },
+      "build": {
+        "buildId": "build-eb280ec3-2b77-43a2-aa26-5487992e8287",
+        "requestId": "83610c73-86a3-4b11-b1c5-2ab36af701a1",
+        "sourceHash": "sha256:398e5b03fe1c5c2762116d8d80e559a4626bf60256720cb9f5a8232566373706",
+        "snapshotId": "2cacfd6c-0763-47be-96b4-a39ea075a5c7",
+        "profile": {
+          "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+          "protocolVersion": "0.1.0-draft.1",
+          "compiler": {
+            "id": "binji-wasm-clang-648c4a89997a/clang",
+            "version": "8.0.1",
+            "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+          },
+          "linker": {
+            "id": "binji-wasm-clang-648c4a89997a/lld",
+            "version": "8.0.1",
+            "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+          },
+          "sysroot": {
+            "id": "binji-wasm-clang-648c4a89997a/sysroot",
+            "version": "binji-wasm-clang-648c4a89997a",
+            "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+          },
+          "standardLibrary": {
+            "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+            "version": "binji-wasm-clang-648c4a89997a",
+            "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+          },
+          "runtime": {
+            "id": "project-js-wasm-interpreter",
+            "version": "0.1.0-prototype.1",
+            "buildHash": "sha256:343b36eac02ac617608f4ec3873713df7028113acd4385fa23beec28fc9f90ff"
+          },
+          "debugger": {
+            "id": "project-dwarf4-debugger",
+            "version": "0.1.0-prototype.1",
+            "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+          },
+          "targetTriple": "wasm32-unknown-wasi",
+          "abi": "wasi_unstable",
+          "addressBits": 32,
+          "endianness": "little",
+          "artifactFormat": "wasm-v1",
+          "debugInfoFormat": "dwarf-4-embedded",
+          "requiredFeatures": [
+            "mvp",
+            "mutable-globals"
+          ],
+          "resourceManifestHash": "sha256:c992f82a5f1bad99865f5254cbbd7eb57bb53e0807f48e7562db196fa625222d",
+          "status": "candidate",
+          "evidence": [
+            "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+          ]
+        },
+        "mode": "debug",
+        "language": {
+          "language": "c",
+          "standard": "c11"
+        },
+        "compilerArguments": [
+          "-cc1",
+          "-emit-obj",
+          "-triple",
+          "wasm32-unknown-wasi",
+          "-main-file-name",
+          "main.c",
+          "-disable-free",
+          "-isysroot",
+          "/",
+          "-internal-isystem",
+          "/lib/clang/8.0.1/include",
+          "-internal-isystem",
+          "/include",
+          "-I",
+          "/project",
+          "-O0",
+          "-ferror-limit",
+          "20",
+          "-fmessage-length",
+          "0",
+          "-debug-info-kind=standalone",
+          "-dwarf-version=4",
+          "-debugger-tuning=lldb",
+          "-fdebug-compilation-dir",
+          "/project",
+          "-std=c11",
+          "-x",
+          "c",
+          "-o",
+          "build/main.o",
+          "/project/main.c"
+        ],
+        "linkerArguments": [
+          "--no-threads",
+          "--export-dynamic",
+          "-z",
+          "stack-size=1048576",
+          "--max-memory=268435456",
+          "-Llib/wasm32-wasi",
+          "lib/wasm32-wasi/crt1.o",
+          "build/main.o",
+          "-lc",
+          "-lm",
+          "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+          "-o",
+          "build/main.wasm"
+        ],
+        "executable": {
+          "id": "wasm-c98fb96dc95e75a0e584ee5f8033121348daddebbc08ce914a6b35cbc38a2b43",
+          "relativePath": "compiler-builds/wasm-c98fb96dc95e75a0e584ee5f8033121348daddebbc08ce914a6b35cbc38a2b43/main.wasm",
+          "sha256": "sha256:c98fb96dc95e75a0e584ee5f8033121348daddebbc08ce914a6b35cbc38a2b43",
+          "byteLength": 13566,
+          "mediaType": "application/wasm",
+          "version": "binji-wasm-clang-648c4a89997a"
+        },
+        "debugInfo": [
+          {
+            "id": "wasm-c98fb96dc95e75a0e584ee5f8033121348daddebbc08ce914a6b35cbc38a2b43",
+            "relativePath": "compiler-builds/wasm-c98fb96dc95e75a0e584ee5f8033121348daddebbc08ce914a6b35cbc38a2b43/main.wasm",
+            "sha256": "sha256:c98fb96dc95e75a0e584ee5f8033121348daddebbc08ce914a6b35cbc38a2b43",
+            "byteLength": 13566,
+            "mediaType": "application/wasm",
+            "version": "binji-wasm-clang-648c4a89997a"
+          }
+        ],
+        "sourceMappings": []
+      },
+      "persistedBytes": 13566,
+      "persistedSHA256": "sha256:c98fb96dc95e75a0e584ee5f8033121348daddebbc08ce914a6b35cbc38a2b43"
+    },
+    "stopMs": 3,
+    "stopped": {
+      "sessionId": "1bce0137-09d9-47a3-8c3d-3122e7d87bed",
+      "buildId": "build-eb280ec3-2b77-43a2-aa26-5487992e8287",
+      "sourceHash": "sha256:398e5b03fe1c5c2762116d8d80e559a4626bf60256720cb9f5a8232566373706",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 5,
+      "kind": "terminated",
+      "reason": "stop",
+      "message": "Stopped by user"
+    },
+    "staleQueryRejected": true,
+    "recovered": {
+      "status": "succeeded",
+      "compilationMs": 322,
+      "snapshot": {
+        "snapshotId": "a4e5d7d9-9363-4cc6-afe7-b4a29a8cb381",
+        "sourceHash": "sha256:adf7f77a5af1e99987d6ff7ea756901ff9db45ffb6a936522b75223717692649",
+        "encoding": "utf-8",
+        "newline": "lf",
+        "translationUnit": "main.c",
+        "files": [
+          {
+            "path": "main.c",
+            "role": "user",
+            "text": "#include <stdio.h>\nint main(void) {\n int answer = 47;\n printf(\"recompiled=%d\\n\", answer);\n return answer == 47 ? 0 : 1;\n}\n// fresh eccb47c1-7f73-455c-b0b9-675f8cd1ca84\n",
+            "contentHash": "sha256:e2e84d1dafe9ccf8f175293ef0905cc55e9ab739bd0fa7819bd0d9f9dfa6e55a"
+          }
+        ]
+      },
+      "build": {
+        "buildId": "build-9f88bbff-0569-4a41-b227-825abefb037b",
+        "requestId": "297e0644-8738-432b-9f66-f978f67a160c",
+        "sourceHash": "sha256:adf7f77a5af1e99987d6ff7ea756901ff9db45ffb6a936522b75223717692649",
+        "snapshotId": "a4e5d7d9-9363-4cc6-afe7-b4a29a8cb381",
+        "profile": {
+          "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+          "protocolVersion": "0.1.0-draft.1",
+          "compiler": {
+            "id": "binji-wasm-clang-648c4a89997a/clang",
+            "version": "8.0.1",
+            "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+          },
+          "linker": {
+            "id": "binji-wasm-clang-648c4a89997a/lld",
+            "version": "8.0.1",
+            "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+          },
+          "sysroot": {
+            "id": "binji-wasm-clang-648c4a89997a/sysroot",
+            "version": "binji-wasm-clang-648c4a89997a",
+            "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+          },
+          "standardLibrary": {
+            "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+            "version": "binji-wasm-clang-648c4a89997a",
+            "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+          },
+          "runtime": {
+            "id": "project-js-wasm-interpreter",
+            "version": "0.1.0-prototype.1",
+            "buildHash": "sha256:343b36eac02ac617608f4ec3873713df7028113acd4385fa23beec28fc9f90ff"
+          },
+          "debugger": {
+            "id": "project-dwarf4-debugger",
+            "version": "0.1.0-prototype.1",
+            "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+          },
+          "targetTriple": "wasm32-unknown-wasi",
+          "abi": "wasi_unstable",
+          "addressBits": 32,
+          "endianness": "little",
+          "artifactFormat": "wasm-v1",
+          "debugInfoFormat": "dwarf-4-embedded",
+          "requiredFeatures": [
+            "mvp",
+            "mutable-globals"
+          ],
+          "resourceManifestHash": "sha256:c992f82a5f1bad99865f5254cbbd7eb57bb53e0807f48e7562db196fa625222d",
+          "status": "candidate",
+          "evidence": [
+            "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+          ]
+        },
+        "mode": "debug",
+        "language": {
+          "language": "c",
+          "standard": "c11"
+        },
+        "compilerArguments": [
+          "-cc1",
+          "-emit-obj",
+          "-triple",
+          "wasm32-unknown-wasi",
+          "-main-file-name",
+          "main.c",
+          "-disable-free",
+          "-isysroot",
+          "/",
+          "-internal-isystem",
+          "/lib/clang/8.0.1/include",
+          "-internal-isystem",
+          "/include",
+          "-I",
+          "/project",
+          "-O0",
+          "-ferror-limit",
+          "20",
+          "-fmessage-length",
+          "0",
+          "-debug-info-kind=standalone",
+          "-dwarf-version=4",
+          "-debugger-tuning=lldb",
+          "-fdebug-compilation-dir",
+          "/project",
+          "-std=c11",
+          "-x",
+          "c",
+          "-o",
+          "build/main.o",
+          "/project/main.c"
+        ],
+        "linkerArguments": [
+          "--no-threads",
+          "--export-dynamic",
+          "-z",
+          "stack-size=1048576",
+          "--max-memory=268435456",
+          "-Llib/wasm32-wasi",
+          "lib/wasm32-wasi/crt1.o",
+          "build/main.o",
+          "-lc",
+          "-lm",
+          "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+          "-o",
+          "build/main.wasm"
+        ],
+        "executable": {
+          "id": "wasm-9230fe817029c51fbb7d00af2bd77abe59b4b1a52971e1c90c5cb283fdc38b91",
+          "relativePath": "compiler-builds/wasm-9230fe817029c51fbb7d00af2bd77abe59b4b1a52971e1c90c5cb283fdc38b91/main.wasm",
+          "sha256": "sha256:9230fe817029c51fbb7d00af2bd77abe59b4b1a52971e1c90c5cb283fdc38b91",
+          "byteLength": 31618,
+          "mediaType": "application/wasm",
+          "version": "binji-wasm-clang-648c4a89997a"
+        },
+        "debugInfo": [
+          {
+            "id": "wasm-9230fe817029c51fbb7d00af2bd77abe59b4b1a52971e1c90c5cb283fdc38b91",
+            "relativePath": "compiler-builds/wasm-9230fe817029c51fbb7d00af2bd77abe59b4b1a52971e1c90c5cb283fdc38b91/main.wasm",
+            "sha256": "sha256:9230fe817029c51fbb7d00af2bd77abe59b4b1a52971e1c90c5cb283fdc38b91",
+            "byteLength": 31618,
+            "mediaType": "application/wasm",
+            "version": "binji-wasm-clang-648c4a89997a"
+          }
+        ],
+        "sourceMappings": []
+      },
+      "persistedBytes": 31618,
+      "persistedSHA256": "sha256:9230fe817029c51fbb7d00af2bd77abe59b4b1a52971e1c90c5cb283fdc38b91"
+    },
+    "output": "recompiled=47\n",
+    "termination": {
+      "sessionId": "4c161974-132f-4794-8ba4-fda2a947dee2",
+      "buildId": "build-9f88bbff-0569-4a41-b227-825abefb037b",
+      "sourceHash": "sha256:adf7f77a5af1e99987d6ff7ea756901ff9db45ffb6a936522b75223717692649",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 5,
+      "kind": "terminated",
+      "reason": "exit",
+      "exitCode": 0
+    },
+    "events": [
+      {
+        "sessionId": "4c161974-132f-4794-8ba4-fda2a947dee2",
+        "buildId": "build-9f88bbff-0569-4a41-b227-825abefb037b",
+        "sourceHash": "sha256:adf7f77a5af1e99987d6ff7ea756901ff9db45ffb6a936522b75223717692649",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 1,
+        "kind": "state",
+        "state": "starting"
+      },
+      {
+        "sessionId": "4c161974-132f-4794-8ba4-fda2a947dee2",
+        "buildId": "build-9f88bbff-0569-4a41-b227-825abefb037b",
+        "sourceHash": "sha256:adf7f77a5af1e99987d6ff7ea756901ff9db45ffb6a936522b75223717692649",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 2,
+        "kind": "breakpoints",
+        "bindings": []
+      },
+      {
+        "sessionId": "4c161974-132f-4794-8ba4-fda2a947dee2",
+        "buildId": "build-9f88bbff-0569-4a41-b227-825abefb037b",
+        "sourceHash": "sha256:adf7f77a5af1e99987d6ff7ea756901ff9db45ffb6a936522b75223717692649",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 3,
+        "kind": "state",
+        "state": "running"
+      },
+      {
+        "sessionId": "4c161974-132f-4794-8ba4-fda2a947dee2",
+        "buildId": "build-9f88bbff-0569-4a41-b227-825abefb037b",
+        "sourceHash": "sha256:adf7f77a5af1e99987d6ff7ea756901ff9db45ffb6a936522b75223717692649",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 4,
+        "kind": "output",
+        "stream": "stdout",
+        "text": "recompiled=47\n"
+      },
+      {
+        "sessionId": "4c161974-132f-4794-8ba4-fda2a947dee2",
+        "buildId": "build-9f88bbff-0569-4a41-b227-825abefb037b",
+        "sourceHash": "sha256:adf7f77a5af1e99987d6ff7ea756901ff9db45ffb6a936522b75223717692649",
+        "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+        "eventSeq": 5,
+        "kind": "terminated",
+        "reason": "exit",
+        "exitCode": 0
+      }
+    ]
+  }
+}

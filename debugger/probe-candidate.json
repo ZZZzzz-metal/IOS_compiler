@@ -1,6 +1,6 @@
 {
   "profile": {
-    "compatibilityId": "debugger-prototype-d9e5c6be5b2803ce",
+    "compatibilityId": "debugger-prototype-6e5bb482e07b8ee5",
     "protocolVersion": "0.1.0-draft.1",
     "compiler": {
       "id": "binji-wasm-clang-648c4a89997a/clang",
@@ -42,7 +42,7 @@
       "mvp",
       "mutable-globals"
     ],
-    "resourceManifestHash": "sha256:d9e5c6be5b2803cebf23dc84b5db870767639e07ee4cbfa540297edc71045d29",
+    "resourceManifestHash": "sha256:6e5bb482e07b8ee5c5b1a22da4d9aa969f567db09b78d559de81c7de001efd7d",
     "status": "candidate",
     "evidence": [
       "Desktop candidate; only module runtime/debugger resources are verified here. Full offline bundle and iPad remain unverified."
@@ -78,8 +78,8 @@
     {
       "id": "debugger/src/variables.mjs",
       "relativePath": "debugger/src/variables.mjs",
-      "sha256": "sha256:c5c775c23a747577a2bab1655c97f0b56b01a81a833530c10fbde19f903a7d28",
-      "byteLength": 35237,
+      "sha256": "sha256:2f19981059895bb541e5f79ab0b75d73f992c2bc5f0965d127bb7e1e34481477",
+      "byteLength": 36841,
       "mediaType": "text/javascript",
       "version": "0.1.0-prototype.1",
       "roles": [

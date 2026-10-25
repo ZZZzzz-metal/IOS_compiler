@@ -2,7 +2,7 @@
 import {readFile,mkdir,writeFile,copyFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
-const compilerRoot=pathToFileURL(resolve(process.argv[2]??'../ipad-debugger-02')+'/');
+const compilerRoot=process.argv[2]?pathToFileURL(resolve(process.argv[2])+'/'):new URL('../../',import.meta.url);
 const {createNodeProbe}=await import(new URL('compiler/src/node-probe.mjs',compilerRoot));
 const {createSnapshot}=await import(new URL('compiler/src/source.mjs',compilerRoot));
 const {evidenceJSON}=await import(new URL('compiler/src/toolchain-engine.mjs',compilerRoot));
@@ -13,6 +13,7 @@ for(const [name,sourceName] of [['debug-handoff','debug-handoff'],['stdio','c-st
   for(const file of ['main.wasm','snapshot.json','evidence.json']) await copyFile(new URL(`artifacts/compiler-02/${sourceName}/${file}`,compilerRoot),new URL(file,directory));
 }
 const cases={
+  'shadow-loop':{language:'cpp',text:'int main() {\n  int total = 0;\n  int x = 1;\n  for (int i = 0; i < 2; ++i) {\n    int x = 2;\n    total += x + i;\n  }\n  return total + x;\n}\n'},
   infinite:{language:'c',text:'int main(void) {\n    volatile unsigned int n = 0;\n    while (1) { n++; }\n}\n'},
   trap:{language:'c',text:'#include <stdio.h>\nint main(void) {\n    fputs("before-trap\\n", stderr);\n    __builtin_trap();\n}\n'},
   'output-flood':{language:'c',text:'#include <stdio.h>\nint main(void) {\n    for (int i=0;i<2000;i++) puts("中文😀:abcdefghijklmnopqrstuvwxyz");\n    fputs("done\\n", stderr);\n    return 7;\n}\n'},

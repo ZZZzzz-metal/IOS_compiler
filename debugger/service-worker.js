@@ -1,4 +1,4 @@
-const VERSION="8f357ba5f47d34abd532ec4b77aa0690740ebfa0cfd8705eada204a41f10b938";
+const VERSION="cb257aa67e180d86ed41efa37927dca4bd30c967ec8be1c202e0afae9fb8f260";
 const RESOURCES=[
   {
     "path": "debugger/src/wasm-runtime.mjs",
@@ -12,8 +12,8 @@ const RESOURCES=[
   },
   {
     "path": "debugger/src/variables.mjs",
-    "byteLength": 35237,
-    "sha256": "c5c775c23a747577a2bab1655c97f0b56b01a81a833530c10fbde19f903a7d28"
+    "byteLength": 36841,
+    "sha256": "2f19981059895bb541e5f79ab0b75d73f992c2bc5f0965d127bb7e1e34481477"
   },
   {
     "path": "debugger/src/integrity.mjs",
@@ -58,7 +58,7 @@ const RESOURCES=[
   {
     "path": "debugger/probe-candidate.json",
     "byteLength": 6125,
-    "sha256": "49516ef399236a070910674d5737dbf74f6521dfb5e1b5916665dd733b1ff9e0"
+    "sha256": "8bf9c6a3b35f2ff7af7cfe831cf7e85aac9903bdb9ce6835f0873e56ad9f89e9"
   },
   {
     "path": "debugger/fixtures/debug-handoff/snapshot.json",

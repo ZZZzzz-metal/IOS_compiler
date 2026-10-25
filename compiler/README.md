@@ -1,6 +1,6 @@
 # 2 号：离线编译工具链
 
-已交付可运行的编译器实验：**Wasm 版 Clang/LLD 在本机将新 C11/C++17 源码编译链接为 Wasm，保留 O0 / DWARF 4**。开发电脑与桌面浏览器已有真实验证；iPad、源码调试和完整产品离线包仍待 1/3/5 联合验收。共享能力表和应用状态入口由 1 号更新，当前仍保持基线状态。
+已交付可运行的编译器实验：**Wasm 版 Clang/LLD 在本机将新 C11/C++17 源码编译链接为 Wasm，保留 O0 / DWARF 4**。已合入 1 号集成分支并与 3 号真实调试器对接，联合入口为根目录的 `npm.cmd run demo:integration`。iPad 与完整产品离线包仍待验收，详见 docs/architecture/INTEGRATION-2026-10-25.md。
 
 这份交付从 `baseline-v0.1.0` 开始，所有实现位于 `compiler/`。编译 Worker 不使用开发电脑原生 clang，不调用服务器编译 API；本地服务器只负责首次提供静态资源。
 
@@ -48,7 +48,7 @@ node compiler/scripts/serve-probe.mjs
 - `src/source.mjs`：规范化快照、源码与文件 SHA-256，匹配共享固定向量。BOM/CRLF 规范化；所有 driver/generated 文件均入 hash。
 - `src/compiler-probe.mjs`：`CompilerProbe.compile(request, {smokeStdin?})` / `cancel(requestId)`。成功为 **`status: compiled`** 的 `CompilerArtifactEvidence`，没有 buildId/profile；失败或取消为明确终态。每次新建可终止 Worker，最多一个活动请求，默认编译总期限 120 秒，源码总量上限 1 MiB。
 - `src/node-probe.mjs`：`createNodeProbe()`；浏览器直接 `new CompilerProbe()`。
-- `src/compiler-adapter.mjs`：生产 `CompilerAdapter({profile, lock, writeResource, createWorker?})`。需 1/3 注入真实、完整且可信的兼容组合，才会持久化并生成契约 `CompileResult.succeeded/BuildManifest`。当前没有这种组合，因此未伪造完整 manifest；该路径只有故障注入测试，尚无实际运行调试集成证据。
+- `src/compiler-adapter.mjs`：`CompilerAdapter({profile, lock, writeResource, createWorker?})`。由宿主注入可信兼容组合，持久化并生成契约 `CompileResult.succeeded/BuildManifest`。1 号 `app/integration/` 已用实际资源生成开发候选，直接将真实构建交给 WorkerDebuggerAdapter 验证；正式产品组合仍待 G2。
 
 请求快照在入口复制。晚到、不同 request/source/snapshot/mode/language/target 的结果不可覆盖当前构建；产物大小/hash/路径和工具链身份在落盘前核验。取消实际终止 Worker；持久化期间取消只可能留下不可见的内容寻址孤立资源，不发布成功结果。上层仍需按最新 requestId 接收结果，并在生产启动前验证完整资源组合。
 

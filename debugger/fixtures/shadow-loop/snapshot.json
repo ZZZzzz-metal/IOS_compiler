@@ -1,0 +1,15 @@
+{
+  "snapshotId": "b107f30b-35cc-4344-bbbd-e3bd0b21ace5",
+  "sourceHash": "sha256:b13eecd252c58b169c46baafa3ced5dc1a2eda8dbc204dc8d28816217730fd38",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "int main() {\n  int total = 0;\n  int x = 1;\n  for (int i = 0; i < 2; ++i) {\n    int x = 2;\n    total += x + i;\n  }\n  return total + x;\n}\n",
+      "contentHash": "sha256:8907452e79137e796bfd45b4f8eb0896e368b3384245d43f2af364a86ad3f660"
+    }
+  ]
+}

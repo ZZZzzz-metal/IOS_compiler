@@ -32,7 +32,7 @@
 
 1. 先将本分支的 compiler/ 与 docs/handoffs/02.md 集成。根依赖与锁文件无新增包；根检查入口暂不连接本模块，避免未完成的完整产品显示就绪。
 2. 3 号用同一真实产物完成启动、断点、三种单步、局部值/递归栈与停止，5 号独立复测后，再发布真实 `compatibility-profiles.json` 条目与资源组合。保持 `contracts/offline-bundle.json` 未就绪直至全角色资源完成。
-3. 只在 `contracts/capabilities.json` 记录精确证据范围。当前证据不能用于 iPad、调试变量、调用栈或产品安装通过声明。根 app compiler 状态入口仍显示基线 not-implemented 属于等待 1 号集成，非编译实验不能运行。
+3. 只在 `contracts/capabilities.json` 记录精确证据范围。模块首次证据不能用于 iPad、调试变量、调用栈或产品安装通过声明。2026-10-25 根入口已更新为桌面集成原型，实际编译到变量/栈的联合证据见 `docs/architecture/INTEGRATION-2026-10-25.md`；真机与安装仍待验收。
 4. 对编译器来源和 sysroot 组件进行许可补全；如难以补全，以可准确源码构建的新版候选替换。相关记录见 resources/LICENSES.md。本轮没有任何发布/上传。
 
 ## iPad 逐步操作（待实测）

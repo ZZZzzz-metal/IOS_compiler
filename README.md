@@ -1,40 +1,58 @@
 # iPad 离线 C/C++ 编译调试工具
 
-**本次交付是 1 号的共同架构基线，不是已可用的编译调试产品。** Web/PWA 与原生 App 均未选定。真实 iPad 离线关卡尚未开始，编译器和调试器尚未接入。
+**2、3 号已合入同一仓库，可在开发电脑运行真实编译与源码调试的联合原型。** 全新 C11/C++17 样例通过 Wasm Clang/LLD 编译，实际产物直接交给隔离 Worker 中的调试器，支持已测范围内的断点、三种单步、变量与递归调用栈。iPad 真机离线、完整界面和安装包仍待验收，路线未冻结。
 
-## 项目与共同基线
+## 项目与交付
 
-- 仓库绝对位置：`C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger`
-- 集成分支：`integration`
-- 共同标签：`baseline-v0.1.0`（用 `git rev-parse baseline-v0.1.0` 取得完整提交号）
-- 契约版本：`0.1.0-draft.1`，最终应用形态待 G2 后决定。
-- 原任务书在另一个计划目录；该目录不是产品仓库。
+- 仓库：`C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger`
+- 集成分支：`integration`；本轮标签：`integration-v0.2.0`。
+- 首次基线 `baseline-v0.1.0` 保留；契约仍为 `0.1.0-draft.1`。
+- [本轮集成结果与边界](docs/architecture/INTEGRATION-2026-10-25.md)、[统一状态](docs/architecture/STATUS.md)。
 
-## 现在可以运行什么
+## 运行真实联合原型
 
-开发电脑有 Node.js 22 或以上即可；零第三方依赖，无须安装包或联网：
+开发电脑需要 Node.js 22+，零第三方 npm 依赖。当前电脑的 11 项工具链资源已经本地校验；新 checkout 的四个大二进制不在 Git 内，首次运行准备脚本可获取固定资源，也可从已有副本复制后校验。
 
 ```powershell
 Set-Location -LiteralPath 'C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger'
-node app/main.mjs
-node scripts/check-baseline.mjs
-node --test contracts/checks/*.test.mjs
+node compiler/scripts/prepare-toolchain.mjs --verify-only
+npm.cmd run demo:integration
+npm.cmd run test:integration
 ```
 
-也可使用 `npm start`、`npm run check`、`npm test`。若 PowerShell 禁止 npm.ps1，使用 `npm.cmd`。入口仅报告基线、模块接入和能力状态，**不会编译或调试代码**。这里使用 Node 是为了跨平台验证契约，不代表 iPad 需要 Node，也不锁定应用技术栈。
+缺少资源时先执行 `npm.cmd run prepare:toolchain`，首次获取需要网络。demo 会真正编译带唯一标记的新源码并输出构建身份、调试事件和检查结果；不依赖兄弟工作区或预先编译的样例。它验证 C++ 三种单步、容器/指针/递归帧，C 批量输入和 64 位数值，以及终止死循环后新源码重编译。Node 是开发验证宿主，不是 iPad 所需环境。
 
-模块可单独检查：`node app/main.mjs compiler`（可替换为 debugger、ui、storage、validation）。这些是状态入口，适配器只有接口约定；尚未产生任何编译成功或暂停事件。
+桌面浏览器联合实验使用同仓库资源：
 
-## 下一步交接
+```powershell
+npm.cmd run prepare:probe
+npm.cmd run start:probe
+```
 
-2、3、5 号从同一标签创建各自分支/工作区；2 与 3 联合验证真实工具链，5 提供独立样例与验收。4 号在真机关卡通过前只做有限交互原型。1 号在各模块交付后集成。
+打开 [联合实验页](http://127.0.0.1:4173/debugger/probe.html)，先准备资源再运行。这个页面使用 3 号的小型实验入口；静态服务器不参与编译或调试计算。浏览器实验的缓存就绪与产品完整离线就绪分别验收。localhost 入口仅供当前开发电脑，不能直接用作 iPad 安装入口。
+
+## 其他检查
+
+```powershell
+npm.cmd run check
+npm.cmd test
+npm.cmd run test:modules
+npm.cmd start
+```
+
+`npm start` 报告当前状态；真实流水线使用 `demo:integration`。`test:modules` 运行编译器和调试器各自的真实样例与故障检查。原始模块证据保留各自版本归属，本轮结果另存于集成记录。
+
+## 当前边界与交接
+
+固定开发组合为 Clang/LLD 8.0.1、旧 `wasi_unstable`、wasm32、小端、O0 与嵌入 DWARF4，string/vector 解释针对已验证的 libc++ `std::__2` 布局。完整语言/标准库覆盖、C++ 异常、RTTI、线程及新 Wasm 提案均未建立支持结论；`bits/stdc++.h` 不支持。二进制与源码映射及全部依赖许可证仍需补齐，不能把当前研发资源视为已具备正式分发条件。
+
+开发候选按实际资源生成，未写入正式兼容组合注册表。`selectedCompatibilityId` 仍为空，完整离线资源包仍为未准备。4 号可按共同接口接入实际会话，5 号独立复测；通过 G2 真机离线关卡后，1 号再冻结路线与扩大安装交付。
 
 - [启动与工作区说明](docs/architecture/START-HERE.md)
 - [范围与测试驱动](docs/architecture/SCOPE.md)
 - [目录所有权](docs/architecture/OWNERSHIP.md)
 - [共享接口与时序](contracts/README.md)
 - [候选路线证据](docs/architecture/ROUTES.md)
-- [第一轮真机操作单](docs/architecture/GATES.md)
+- [真机验证操作单](docs/architecture/GATES.md)
 - [离线资源与更新设计](docs/architecture/OFFLINE.md)
-- [统一状态表](docs/architecture/STATUS.md)
 - [1 号交付记录](docs/handoffs/01.md)

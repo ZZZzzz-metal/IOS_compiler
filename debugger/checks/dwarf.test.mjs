@@ -5,8 +5,8 @@ import { DwarfSymbols, DwarfError, Reader, AT } from '../src/dwarf.mjs';
 import { VariableInspector } from '../src/variables.mjs';
 import { WasmRuntime } from '../src/wasm-runtime.mjs';
 
-const artifact = new URL('../../../ipad-debugger-02/artifacts/compiler-02/debug-handoff/main.wasm', import.meta.url);
-const snapshotFile = new URL('../../../ipad-debugger-02/artifacts/compiler-02/debug-handoff/snapshot.json', import.meta.url);
+const artifact = new URL('../fixtures/debug-handoff/main.wasm', import.meta.url);
+const snapshotFile = new URL('../fixtures/debug-handoff/snapshot.json', import.meta.url);
 const hasArtifact = existsSync(artifact) && existsSync(snapshotFile);
 const stlArtifact = new URL('../fixtures/stl/main.wasm', import.meta.url);
 const stlSnapshot = new URL('../fixtures/stl/snapshot.json', import.meta.url);

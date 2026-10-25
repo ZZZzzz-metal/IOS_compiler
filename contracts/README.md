@@ -46,4 +46,4 @@ stdout/stderr 为同一事件序列中的 UTF-8 文本，适配器进行增量�
 - 4：UI 只消费适配器；StorageAdapter 采用带 revision 的保存，失败显式反馈；编辑稿与活动快照分离。
 - 5：真实样例、预期、环境和证据；契约单元测试不替代端到端或真机验收。
 
-`capabilities.json` 是唯一支持声明来源；`compatibility-profiles.json` 当前为空，不能启动任何实际产物；`offline-bundle.json` 当前为空且 status=unprepared，不能显示离线可用。
+`capabilities.json` 是唯一支持声明来源；`compatibility-profiles.json` 尚无正式产品组合。桌面联合原型另用 `app/integration/candidate.mjs` 按实际资源生成可信开发候选，不代表已选择产品路线；`offline-bundle.json` 当前为空且 status=unprepared，不能显示完整产品离线可用。
