@@ -211,6 +211,135 @@ test('memory initialization evidence records real stores and child constructor w
   assert.equal(runtime.wasMemoryWritten(parent,102,1),null,'Missing evidence is unknown after bounded history overflow');
 });
 
+test('declaration epochs reject previous-iteration bytes even when no intermediate variables were queried',async()=>{
+  const bytes=moduleBytes({types:[{params:[],results:[i32]},{params:[i32],results:[i32]}],memory:{min:1},functions:[
+    {type:0,locals:[i32],body:[
+      ...constant(0),0x21,0,...constant(104),...constant(0),0x36,0,0,
+      0x02,0x40,0x03,0x40,0x01,...constant(100),...local(0),0x10,1,0x36,0,0,0x01,
+      ...constant(104),...local(0),...constant(1),0x6a,0x22,0,0x36,0,0,
+      ...local(0),...constant(3),0x48,0x0d,0,0x0b,0x0b,...constant(100),0x28,0,0,...constant(104),0x28,0,0,0x6a,0x0b,
+    ]},
+    {type:1,body:[...local(0),...constant(10),0x6a,0x0b]},
+  ]});
+  const runtime=new WasmRuntime(bytes),fn=runtime.functions[0];
+  const [declaration,body]=[...fn.instructions.values()].filter(ins=>ins.op===0x01);
+  const store=[...fn.instructions.values()].filter(ins=>ins.op===0x36)[1];
+  runtime.registerDeclarationSites([{pc:fn.codeStart},{pc:declaration.pc}]);runtime.start('run');
+  const parent=runtime.frames[0];let observedSeed=false,observedBeforeStore=false,observedBody=false;
+  while(!runtime.done) {
+    // Deliberately perform no provenance queries during iterations zero/one.
+    if(parent.locals[0]===2) {
+      const epoch=runtime.declarationEpoch(parent,declaration.pc);
+      if(runtime.frames.length===2) {
+        observedSeed=true;
+        assert.equal(new DataView(runtime.memory.buffer).getInt32(100,true),11,'old guest bytes remain unchanged while seed runs');
+        assert.equal(runtime.wasMemoryWritten(parent,100,4),true,'whole-activation coverage alone is insufficient');
+        assert.equal(runtime.wasMemoryWrittenSince(parent,100,4,epoch),false);
+        assert.equal(runtime.declarationEpoch(parent,fn.codeStart),1,'for-init site is not re-executed with its condition');
+        assert.equal(runtime.wasMemoryWrittenSince(parent,104,4,1),true);
+      }
+      if(runtime.frames.length===1&&parent.pc===store.pc) {
+        observedBeforeStore=true;assert.equal(runtime.wasMemoryWrittenSince(parent,100,4,epoch),false,'seed return does not replace the pending target store');
+      }
+      if(runtime.frames.length===1&&parent.pc===body.pc) {
+        observedBody=true;assert.equal(runtime.wasMemoryWrittenSince(parent,100,4,epoch),true);assert.equal(new DataView(runtime.memory.buffer).getInt32(100,true),12);
+      }
+    }
+    runtime.step();
+  }
+  assert.deepEqual([observedSeed,observedBeforeStore,observedBody],[true,true,true]);
+  const {instance}=await WebAssembly.instantiate(bytes);assert.equal(runtime.returnValue,instance.exports.run());
+  assert.deepEqual(runtime.memory,new Uint8Array(instance.exports.memory.buffer),'observation has no guest memory effects');
+  assert.equal(runtime.declarationEpoch(parent,declaration.pc),null,'returned activations release observation state');
+});
+
+test('epoch coverage combines overlapping partial writes from real descendants and excludes older bytes',async()=>{
+  const bytes=moduleBytes({memory:{min:1},functions:[
+    {type:0,body:[0x01,...constant(200),0x42,...signed(-1),0x37,0,0,0x01,...constant(200),...constant(0x1234),0x3b,0,0,0x10,1,0x01,0x0b]},
+    {type:0,body:[...constant(201),...constant(0x12345678),0x36,0,0,0x01,...constant(204),...constant(0x11223344),0x36,0,0,0x0b]},
+  ]});
+  const runtime=new WasmRuntime(bytes),markers=[...runtime.functions[0].instructions.values()].filter(ins=>ins.op===0x01);
+  runtime.registerDeclarationSites([{pc:markers[1].pc}]);runtime.start('run');const parent=runtime.frames[0];
+  let partial=false,complete=false;
+  while(!runtime.done) {
+    const top=runtime.frames.at(-1),ins=runtime.functions[top.funcIndex].instructions.get(top.pc);
+    const epoch=runtime.declarationEpoch(parent,markers[1].pc);
+    if(top!==parent&&ins.op===0x01) {
+      partial=true;assert.equal(runtime.wasMemoryWrittenSince(parent,200,5,epoch),true);
+      assert.equal(runtime.wasMemoryWrittenSince(parent,200,8,epoch),false,'the untouched suffix is old initialization');
+      assert.equal(runtime.declarationEpoch(top,markers[1].pc),null,'unregistered callees need no activation metadata');
+    }
+    if(top===parent&&top.pc===markers[2].pc) {
+      complete=true;assert.equal(runtime.wasMemoryWrittenSince(parent,200,8,epoch),true,'new writes of different widths/epochs cover every byte');
+    }
+    runtime.step();
+  }
+  assert.equal(partial,true);assert.equal(complete,true);
+  const {instance}=await WebAssembly.instantiate(bytes);instance.exports.run();assert.deepEqual(runtime.memory,new Uint8Array(instance.exports.memory.buffer));
+});
+
+test('declaration observation is per recursive activation and expires when each real frame returns',async()=>{
+  const bytes=moduleBytes({types:[{params:[i32,i32],results:[i32]}],memory:{min:1},functions:[{type:0,body:[
+    0x01,...local(1),...local(0),0x36,0,0,...local(0),0x45,0x04,i32,...constant(1),0x05,
+    ...local(0),...local(0),...constant(1),0x6b,...local(1),...constant(8),0x6a,0x10,0,0x6c,0x0b,0x0b,
+  ]}]});
+  const runtime=new WasmRuntime(bytes),site=runtime.functions[0].codeStart;
+  const store=[...runtime.functions[0].instructions.values()].find(ins=>ins.op===0x36);
+  runtime.registerDeclarationSites([{pc:site}]);runtime.start('run',[3,200]);
+  while(!(runtime.frames.length===4&&runtime.frames.at(-1).pc===store.nextPC))runtime.step();
+  const frames=[...runtime.frames],epochs=frames.map(frame=>runtime.declarationEpoch(frame,site));
+  assert.equal(new Set(epochs).size,4);
+  frames.forEach((frame,index)=>assert.equal(runtime.wasMemoryWrittenSince(frame,200+index*8,4,epochs[index]),true));
+  const leaf=frames.at(-1);while(runtime.frames.includes(leaf))runtime.step();
+  assert.equal(runtime.declarationEpoch(leaf,site),null);assert.equal(runtime.wasMemoryWrittenSince(leaf,224,4,epochs[3]),null);
+  assert.equal(runtime.declarationEpoch(frames[0],site),epochs[0]);
+  while(!runtime.done)runtime.step();
+  const {instance}=await WebAssembly.instantiate(bytes);assert.equal(runtime.returnValue,instance.exports.run(3,200));assert.deepEqual(runtime.memory,new Uint8Array(instance.exports.memory.buffer));
+  assert.ok(frames.every(frame=>runtime.declarationEpoch(frame,site)===null));
+});
+
+test('WASI writes performed by the declaration instruction count in that exact epoch',()=>{
+  const bytes=moduleBytes({
+    types:[{params:[i32,i32,i32,i32],results:[i32]},{params:[],results:[]}],imports:[{name:'fd_read',type:0}],memory:{min:1},
+    data:[{offset:0,bytes:[200,0,0,0,2,0,0,0,202,0,0,0,2,0,0,0]}],
+    functions:[{type:1,body:[...constant(0),...constant(0),...constant(2),...constant(16),0x10,0,0x1a,0x0b]}],
+  });
+  const runtime=new WasmRuntime(bytes,{stdin:'abcd'}),call=[...runtime.functions[1].instructions.values()].find(ins=>ins.op===0x10);
+  runtime.registerDeclarationSites([{pc:call.pc}]);runtime.start('run');const frame=runtime.frames[0];
+  while(frame.pc!==call.pc)runtime.step();
+  assert.equal(runtime.declarationEpoch(frame,call.pc),0);runtime.step();
+  const epoch=runtime.declarationEpoch(frame,call.pc);assert.equal(epoch,runtime.instructionsExecuted);
+  assert.equal(runtime.wasMemoryWrittenSince(frame,200,4,epoch),true);assert.equal(runtime.wasMemoryWrittenSince(frame,16,4,epoch),true);
+  assert.equal(new TextDecoder().decode(runtime.memory.subarray(200,204)),'abcd');
+  while(!runtime.done)runtime.step();assert.equal(runtime.declarationEpoch(frame,call.pc),null);
+});
+
+test('bounded epoch history reports pruned coverage unknown while retaining newer writes',async()=>{
+  const stores=Array.from({length:2200},(_,index)=>[...constant(index*2),...constant(127),0x3a,0,0]).flat();
+  const bytes=moduleBytes({memory:{min:1},functions:[{type:0,body:[0x01,...stores,0x01,0x0b]}]});
+  const runtime=new WasmRuntime(bytes),site=runtime.functions[0].codeStart;
+  const stop=[...runtime.functions[0].instructions.values()].filter(ins=>ins.op===0x01)[1].pc;
+  runtime.registerDeclarationSites([{pc:site}]);runtime.start('run');const frame=runtime.frames[0];
+  while(frame.pc!==stop)runtime.step();const epoch=runtime.declarationEpoch(frame,site);
+  assert.equal(runtime.wasMemoryWrittenSince(frame,0,1,epoch),null,'discarded observations must never become initialized proof');
+  assert.equal(runtime.wasMemoryWrittenSince(frame,4398,1,epoch),true,'epoch history keeps recording after activation-wide coverage fills');
+  assert.equal(runtime.wasMemoryWrittenSince(frame,50000,1,epoch),null,'incomplete history cannot prove absence');
+  assert.ok(runtime._writeEpochs.get(frame).ranges.length<=2048,'metadata is bounded without an instruction trace');
+  while(!runtime.done)runtime.step();
+  const {instance}=await WebAssembly.instantiate(bytes);instance.exports.run();assert.deepEqual(runtime.memory,new Uint8Array(instance.exports.memory.buffer));
+});
+
+test('declaration registration is bounded, atomic, deduplicated and limited to actual instruction PCs',()=>{
+  const bytes=moduleBytes({functions:[{type:0,body:[0x01,...constant(128),0x1a,0x0b]}]}),runtime=new WasmRuntime(bytes);
+  const pc=runtime.functions[0].codeStart;
+  assert.throws(()=>runtime.registerDeclarationSites([{pc},{pc:pc+2}]),/not an executable instruction/);
+  assert.equal(runtime._declarationSiteCount,0,'failed registration cannot install a partial observation plan');
+  assert.throws(()=>runtime.registerDeclarationSites(Array.from({length:16385},()=>({pc}))),/limit/);
+  assert.deepEqual(runtime.registerDeclarationSites([{pc},{pc}]),{registered:[pc]});
+  runtime.start('run');const frame=runtime.frames[0];assert.equal(runtime.declarationEpoch(frame,pc),0);
+  assert.throws(()=>runtime.registerDeclarationSites([{pc}]),/before/);runtime.step();assert.equal(runtime.declarationEpoch(frame,pc),1);
+});
+
 test('WASI stdin/output, arguments and proc_exit execute at their real call instructions',()=>{
   const bytes=moduleBytes({
     types:[{params:[i32,i32,i32,i32],results:[i32]},{params:[i32],results:[]},{params:[],results:[]}],

@@ -4,6 +4,7 @@
 const encoder = new TextEncoder();
 const decoder = new TextDecoder('utf-8', { fatal: true });
 const PAGE = 65536;
+const MAX_DECLARATION_SITES = 16384, MAX_WRITE_EPOCH_RANGES = 2048;
 const s64 = value => BigInt.asIntN(64, value);
 const u64 = value => BigInt.asUintN(64, value);
 const zero = type => type === 0x7e ? 0n : type === 0x70 || type === 0x6f ? null : 0;
@@ -272,6 +273,7 @@ export class WasmRuntime {
     this.frames = []; this.functions = []; this.globals = []; this.globalTypes = [];
     this.types = []; this.exports = new Map(); this.tables = []; this.sections = []; this.dataSegments = []; this.elementSegments = [];
     this.done = false; this.exitCode = null; this.trap = null; this.started = false; this.instructionsExecuted = 0; this._frameId = 0;
+    this._declarationSites = new Map(); this._declarationSiteCount = 0; this._writeEpochs = new WeakMap();
     this._closedFDs = new Set();
     this._parse();
   }
@@ -286,6 +288,54 @@ export class WasmRuntime {
   }
   get locationPC() { return this.frames.at(-1)?.pc ?? null; }
   get absolutePC() { const pc = this.locationPC; return pc === null ? null : this.codeSectionOffset + pc; }
+
+  /** Register observed declaration instruction PCs before execution starts.
+   * This metadata never changes guest memory, operands, globals or control flow.
+   * Registration is atomic: unsupported PCs/limits leave existing sites intact.
+   */
+  registerDeclarationSites(sites) {
+    if (this.started) throw new Error('Declaration sites must be registered before runtime.start()');
+    if (!Array.isArray(sites) || sites.length > MAX_DECLARATION_SITES) throw new Error('Declaration site registration limit exceeded');
+    const defined = this.functions.filter(fn => !fn.imported), additions = new Map();
+    for (const site of sites) {
+      const pc = site?.pc;
+      if (!Number.isSafeInteger(pc) || pc < 0) throw new Error('Invalid declaration instruction PC');
+      let low = 0, high = defined.length;
+      while (low < high) { const middle = (low + high) >>> 1; if (defined[middle].codeStart <= pc) low = middle + 1; else high = middle; }
+      const fn = defined[low - 1];
+      if (!fn?.instructions.has(pc)) throw new Error(`Declaration PC ${pc} is not an executable instruction`);
+      if (!this._declarationSites.get(fn.index)?.has(pc)) additions.set(pc, fn.index);
+    }
+    if (this._declarationSiteCount + additions.size > MAX_DECLARATION_SITES) throw new Error('Declaration site registration limit exceeded');
+    for (const [pc, index] of additions) {
+      if (!this._declarationSites.has(index)) this._declarationSites.set(index, new Set());
+      this._declarationSites.get(index).add(pc); this._declarationSiteCount++;
+    }
+    return { registered: [...new Set(sites.map(site => site.pc))] };
+  }
+
+  // Zero means this registered declaration has not executed in this activation.
+  // Null means its provenance is untracked, expired or cannot be represented.
+  declarationEpoch(frame, pc) {
+    const history = this._writeEpochs.get(frame);
+    if (!history || !this._declarationSites.get(frame.funcIndex)?.has(pc) || !Number.isSafeInteger(this.instructionsExecuted)) return null;
+    return history.visits.get(pc) ?? 0;
+  }
+
+  wasMemoryWrittenSince(frame, address, size, epoch) {
+    const history = this._writeEpochs.get(frame);
+    if (!history || !Number.isSafeInteger(epoch) || epoch <= 0 || !Number.isSafeInteger(address) || !Number.isSafeInteger(size) ||
+      address < 0 || size < 0 || address + size > this.memory.length || !Number.isSafeInteger(this.instructionsExecuted)) return null;
+    if (!size) return true;
+    let cursor = address; const end = address + size;
+    for (const [start, stop, tick] of history.ranges) {
+      if (stop <= cursor) continue;
+      if (start > cursor || tick < epoch) return history.complete ? false : null;
+      cursor = Math.min(stop, end);
+      if (cursor === end) return true;
+    }
+    return history.complete ? false : null;
+  }
 
   _constant(reader) {
     const op = reader.byte(); let value;
@@ -443,11 +493,13 @@ export class WasmRuntime {
       memoryWrites: [], memoryWritesComplete: true,
       controls: [{ kind: 'function', height: 0, resultCount: fn.type.results.length, paramCount: 0, endPC: fn.endPC }],
     };
+    if (this._declarationSites.get(index)?.size) this._writeEpochs.set(frame, { visits: new Map(), ranges: [], complete: true });
     this.frames.push(frame);
   }
 
   _finishFrame() {
     const frame = this.frames.pop(), fn = this.functions[frame.funcIndex];
+    this._writeEpochs.delete(frame);
     const results = fn.type.results.length ? frame.stack.slice(-fn.type.results.length) : [];
     if (this.frames.length) this.frames.at(-1).stack.push(...results);
     else if (this._pendingEntry) {
@@ -477,6 +529,8 @@ export class WasmRuntime {
   _recordWrite(address, size) {
     if (!size) return;
     for (const frame of this.frames) {
+      const history = this._writeEpochs.get(frame);
+      if (history) this._recordEpochWrite(history, address, size);
       const ranges = frame.memoryWrites;
       let low = 0, high = ranges.length;
       while (low < high) { const middle = (low + high) >>> 1; if (ranges[middle][1] < address) low = middle + 1; else high = middle; }
@@ -486,6 +540,30 @@ export class WasmRuntime {
       }
       if (ranges.length - (low - first) >= 2048) { frame.memoryWritesComplete = false; continue; }
       ranges.splice(first, low - first, [start, end]);
+    }
+  }
+  _recordEpochWrite(history, address, size) {
+    const ranges = history.ranges, end = address + size, tick = this.instructionsExecuted;
+    if (!Number.isSafeInteger(tick)) { history.ranges = []; history.complete = false; return; }
+    let low = 0, high = ranges.length;
+    while (low < high) { const middle = (low + high) >>> 1; if (ranges[middle][1] <= address) low = middle + 1; else high = middle; }
+    const first = low, replacement = [];
+    if (ranges[first]?.[0] < address) replacement.push([ranges[first][0], address, ranges[first][2]]);
+    while (low < ranges.length && ranges[low][0] < end) low++;
+    replacement.push([address, end, tick]);
+    if (low > first && ranges[low - 1][1] > end) replacement.push([end, ranges[low - 1][1], ranges[low - 1][2]]);
+    ranges.splice(first, low - first, ...replacement);
+    // Several iovecs/constructor fields can be written by the same instruction.
+    for (let i = Math.max(0, first - 1); i + 1 < ranges.length && i <= first + replacement.length;) {
+      const a = ranges[i], b = ranges[i + 1];
+      if (a[1] === b[0] && a[2] === b[2]) { a[1] = b[1]; ranges.splice(i + 1, 1); }
+      else i++;
+    }
+    if (ranges.length > MAX_WRITE_EPOCH_RANGES) {
+      // Retain recent known intervals; missing intervals become explicitly
+      // unknown. Drop half at once to keep pruning cost amortized and bounded.
+      const recent = new Set([...ranges].sort((a,b) => b[2] - a[2]).slice(0, MAX_WRITE_EPOCH_RANGES / 2));
+      history.ranges = ranges.filter(range => recent.has(range)); history.complete = false;
     }
   }
   wasMemoryWritten(frame, address, size) {
@@ -504,6 +582,8 @@ export class WasmRuntime {
     const info = { funcIndex: frame.funcIndex, pc: frame.pc, absolutePC: this.codeSectionOffset + frame.pc, opcode: ins?.op, done: false };
     try {
       if (!ins) trap('invalid-instruction-pointer');
+      const history = this._writeEpochs.get(frame);
+      if (history && this._declarationSites.get(frame.funcIndex).has(frame.pc)) history.visits.set(frame.pc, this.instructionsExecuted + 1);
       frame.lastPC = frame.pc; frame.pc = ins.nextPC;
       this.instructionsExecuted++;
       this._execute(frame, ins);
@@ -673,7 +753,7 @@ export class WasmRuntime {
     const write64 = (pointer,value) => { span(pointer,8); this._memoryView.setBigUint64(pointer,u64(value),true); this._recordWrite(pointer,8); };
     const [a,b,c,d] = args;
     try {
-      if (name === 'proc_exit') { this.done = true; this.exitCode = a; this.frames.length = 0; this._pendingEntry = null; return; }
+      if (name === 'proc_exit') { this.done = true; this.exitCode = a; for (const frame of this.frames) this._writeEpochs.delete(frame); this.frames.length = 0; this._pendingEntry = null; return; }
       if (name === 'args_sizes_get') { write32(a,this.args.length); write32(b,this.args.reduce((total,arg)=>total+arg.length,0)); return 0; }
       if (name === 'args_get') {
         let address = b; span(a,this.args.length*4); span(b,this.args.reduce((total,arg)=>total+arg.length,0));

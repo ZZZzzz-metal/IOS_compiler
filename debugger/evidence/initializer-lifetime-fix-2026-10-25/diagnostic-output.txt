@@ -1,0 +1,8 @@
+{
+  "current": "passed",
+  "beforeFix": "passed",
+  "integrationBaseline": "failed",
+  "status": "fixed",
+  "failedAssertions": [],
+  "evidence": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03\\debugger\\evidence\\initializer-lifetime-fix-2026-10-25\\loop-initializer-review.json"
+}

@@ -15,7 +15,38 @@ const addressNumber = value => {
 };
 
 export class VariableInspector {
-  constructor(symbols, runtime) { this.symbols = symbols; this.runtime = runtime; this.declarations = new Map(); }
+  constructor(symbols, runtime) {
+    this.symbols = symbols; this.runtime = runtime; this.declarations = new Map();
+    this.lifetimeTracking = typeof runtime.registerDeclarationSites === 'function' &&
+      typeof runtime.declarationEpoch === 'function' && typeof runtime.wasMemoryWrittenSince === 'function';
+    this.declarationSiteErrors = new Map();
+    if (this.lifetimeTracking) this._registerDeclarations();
+  }
+  _registerDeclarations() {
+    const sites = new Set();
+    for (const die of this.symbols.dies.values()) {
+      if (die.tag !== TAG.variable) continue;
+      let fn = die.parent;
+      while (fn && ![TAG.subprogram, TAG.inline].includes(fn.tag)) fn = fn.parent;
+      if (!fn || !this.symbols.ranges(fn).length) continue;
+      const declaration = this._declaration(die, fn);
+      if (declaration.trackingPC === undefined) continue;
+      const pc = declaration.trackingPC;
+      // Do not repair an arbitrary line-table address to a nearby instruction.
+      // executablePC only normalizes Clang's documented local-vector entry row.
+      if (!this.runtime.functions.some(fn => fn.instructions?.has(pc))) {
+        this.declarationSiteErrors.set(pc, 'Declaration does not map to an instruction boundary');
+        continue;
+      }
+      sites.add(pc);
+    }
+    try { this.runtime.registerDeclarationSites([...sites].map(pc => ({ pc }))); }
+    catch (error) {
+      // Registration is atomic. No variable may fall back to writes from an old
+      // lifetime when metadata could not be installed or was installed too late.
+      for (const pc of sites) this.declarationSiteErrors.set(pc, error.message);
+    }
+  }
   _memory(address, size) {
     const memory = this.runtime.memory;
     if (!(memory instanceof Uint8Array)) fail('Runtime linear memory is unavailable');
@@ -33,9 +64,16 @@ export class VariableInspector {
   }
   _initialized(frame, address, size, required) {
     if (!required || !this.runtime.wasMemoryWritten) return;
-    const written = this.runtime.wasMemoryWritten(frame, address, size);
-    if (written === false) fail('Storage has not been initialized during this frame');
-    if (written !== true) fail('Initialization provenance is incomplete for this frame');
+    let written;
+    if (required === true) written = this.runtime.wasMemoryWritten(frame, address, size);
+    else {
+      if (this.runtime.declarationEpoch(frame, required.pc) !== required.epoch)
+        fail('Variable reference no longer belongs to the current declaration lifetime');
+      written = this.runtime.wasMemoryWrittenSince(frame, address, size, required.epoch);
+    }
+    if (written === false) fail(required === true ? 'Storage has not been initialized during this frame'
+      : 'Storage has not been initialized during this declaration lifetime');
+    if (written !== true) fail('Initialization provenance is incomplete for this declaration lifetime');
   }
   _frameBase(frame, fn) {
     const expression = this.symbols.locationExpression(fn, AT.frameBase, frame.pc);
@@ -118,8 +156,40 @@ export class VariableInspector {
         row.isStmt && !row.endSequence && this.symbols.contains(fn, row.pc) &&
         scopes.every(scope => !this.symbols.ranges(scope).length || this.symbols.contains(scope, row.pc)))
       : undefined;
-    const result = { pc: row?.pc, line, file, depth: scopes.length };
+    const result = { pc: row?.pc, trackingPC: row ? this.symbols.executablePC(row.pc) : undefined,
+      line, file, depth: scopes.length };
     this.declarations.set(die.offset, result); return result;
+  }
+  _pendingInitializerCall(frame, die, declaration, address, type) {
+    const frames = this.runtime.frames;
+    if (!frames || frames.at(-1) === frame || !frames.includes(frame)) return false;
+    const call = this.runtime.functions[frame.funcIndex]?.instructions?.get(frame.callPC);
+    if (!call || ![0x10, 0x11].includes(call.op) || call.nextPC !== frame.pc) return false;
+    const row = this.symbols.row(call.pc);
+    if (row?.cu !== die.cu || row.file !== declaration.file || row.line !== declaration.line) return false;
+    // Several complete declarations and unrelated calls can share a source
+    // line. Block only an actual constructor for this object's real storage.
+    // Read `this` from its DWARF location rather than assuming Wasm argument 0.
+    const callee = frames[frames.indexOf(frame) + 1], fn = this.symbols.subprogram(callee.pc);
+    const parameter = fn?.children.find(child => child.tag === TAG.parameter &&
+      this.symbols.attr(child, AT.artificial) && this.symbols.attr(child, AT.name) === 'this');
+    const pointer = this.symbols.canonical(this.symbols.type(parameter));
+    if (pointer?.tag !== TAG.pointer) return false;
+    const target = this.symbols.canonical(this.symbols.type(pointer));
+    const element = type.tag === TAG.array ? this.symbols.canonical(this.symbols.type(type)) : type;
+    if (!target || !element || target.offset !== element.offset) return false;
+    const className = this.symbols.attr(target, AT.name)?.split('<')[0];
+    if (!className || this.symbols.attr(fn, AT.name) !== className) return false;
+    try {
+      const expression = this.symbols.locationExpression(parameter, AT.location, callee.pc);
+      if (!expression) return false;
+      const location = this._expression(expression, callee, fn);
+      const object = addressNumber(location.kind === 'memory'
+        ? this._uint(addressNumber(location.value), 4) : location.value);
+      const size = this.symbols.byteSize(element), total = this.symbols.byteSize(type);
+      return !!size && !!total && object >= address && object + size <= address + total &&
+        (object - address) % size === 0;
+    } catch { return false; }
   }
   locals(frame) {
     return this.symbols.variables(frame.pc).map(({ die, inScope, function: fn }) => {
@@ -130,19 +200,32 @@ export class VariableInspector {
         _declarationReached: declaration.pc === undefined ? !beforeLine : frame.pc >= declaration.pc };
       try {
         if (!inScope) fail('Variable is outside its lexical scope', 'outOfScope');
-        // At the declaration's first instruction it has not executed, including
-        // a later loop iteration which reuses already-written stack storage.
-        // Once past that PC, actual per-frame stores still establish whether
-        // the value was initialized; matching a source line is insufficient.
+        // A stop before the declaration instruction must hide the old lifetime.
+        // Once it executes, the runtime advances its epoch independently of any
+        // variable query. Only writes at/after that execution establish a value.
         if (die.tag === TAG.variable && (declaration.pc !== undefined ? frame.pc <= declaration.pc :
           row && row.file === declaration.file && declaration.line >= row.line && row.line > 0))
           fail('Variable declaration has not executed at this stop', 'outOfScope');
+        let initialized = true;
+        if (die.tag === TAG.variable && this.lifetimeTracking) {
+          const pc = declaration.trackingPC, error = this.declarationSiteErrors.get(pc);
+          if (pc === undefined || error) fail(error ?? 'No executable declaration site is available');
+          const epoch = this.runtime.declarationEpoch(frame, pc);
+          if (epoch === null) fail('Declaration execution provenance is unavailable for this frame');
+          if (epoch === 0) fail('Storage has not been initialized during this declaration lifetime; its declaration site was not executed');
+          initialized = { pc, epoch };
+        }
         const constant = this.symbols.attr(die, AT.constValue);
         if (constant !== undefined) return { ...this._read(type, { immediate: constant }, name, frame), ...context };
         const expression = this.symbols.locationExpression(die, AT.location, frame.pc);
         if (!expression || !expression.length) fail('No location is available at this PC', 'optimizedOut');
         const location = this._expression(expression, frame, fn);
-        return { ...this._read(type, location.kind === 'memory' ? { address: addressNumber(location.value) } : { immediate: location.value }, name, frame, 0, true), ...context };
+        const canonical = this.symbols.canonical(type);
+        if (initialized !== true && location.kind === 'memory' &&
+          [TAG.array, TAG.structure, TAG.class, TAG.union].includes(canonical?.tag) &&
+          this._pendingInitializerCall(frame, die, declaration, addressNumber(location.value), canonical))
+          fail('Aggregate initializer call has not completed for this declaration lifetime');
+        return { ...this._read(type, location.kind === 'memory' ? { address: addressNumber(location.value) } : { immediate: location.value }, name, frame, 0, initialized), ...context };
       } catch (error) { return { ...unavailable(name, this.symbols.typeName(type), error), ...context }; }
     });
   }
@@ -333,7 +416,7 @@ export class VariableInspector {
     if (value._elements) {
       const { type, address, stride, count: total } = value._elements, result = [];
       for (let i = start; i < Math.min(start + limit, total); i++) result.push(this._read(type, { address: address + stride * i }, `[${i}]`, frame, 0,
-        value._requiresInitialized && this.symbols.canonical(value._type)?.tag === TAG.array));
+        this.symbols.canonical(value._type)?.tag === TAG.array ? value._requiresInitialized : false));
       return result;
     }
     if (value._members) return value._members.slice(start, start + limit).map(member => {
@@ -537,7 +620,7 @@ class ExpressionParser {
           const { type, address, stride, count } = value._elements;
           if (index >= BigInt(count)) fail('Array index is out of bounds', 'error');
           value = this.inspector._read(type, { address: address + Number(index) * stride }, `[${index}]`, this.frame, 0,
-            value._requiresInitialized && this.inspector.symbols.canonical(value._type)?.tag === TAG.array);
+            this.inspector.symbols.canonical(value._type)?.tag === TAG.array ? value._requiresInitialized : false);
         } else if (value._pointerTarget) {
           const size = this.inspector.symbols.byteSize(value._pointerTarget);
           if (!size) fail('Pointer target size unavailable', 'unsupported');

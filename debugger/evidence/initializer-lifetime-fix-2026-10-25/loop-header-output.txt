@@ -1,0 +1,90 @@
+{
+  "name": "loop-header",
+  "status": "passed",
+  "samples": [
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "outOfScope",
+        "reason": "Variable declaration has not executed at this stop",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "2",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "2",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    }
+  ]
+}

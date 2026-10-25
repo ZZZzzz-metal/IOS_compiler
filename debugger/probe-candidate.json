@@ -1,6 +1,6 @@
 {
   "profile": {
-    "compatibilityId": "debugger-prototype-6e5bb482e07b8ee5",
+    "compatibilityId": "debugger-prototype-460d5a2cc2f4b66c",
     "protocolVersion": "0.1.0-draft.1",
     "compiler": {
       "id": "binji-wasm-clang-648c4a89997a/clang",
@@ -25,7 +25,7 @@
     "runtime": {
       "id": "project-js-wasm-interpreter",
       "version": "0.1.0-prototype.1",
-      "buildHash": "sha256:343b36eac02ac617608f4ec3873713df7028113acd4385fa23beec28fc9f90ff"
+      "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
     },
     "debugger": {
       "id": "project-dwarf4-debugger",
@@ -42,7 +42,7 @@
       "mvp",
       "mutable-globals"
     ],
-    "resourceManifestHash": "sha256:6e5bb482e07b8ee5c5b1a22da4d9aa969f567db09b78d559de81c7de001efd7d",
+    "resourceManifestHash": "sha256:460d5a2cc2f4b66c560a1636d60f79372fb74349bfcd521aee99ff5dc0b28e22",
     "status": "candidate",
     "evidence": [
       "Desktop candidate; only module runtime/debugger resources are verified here. Full offline bundle and iPad remain unverified."
@@ -52,8 +52,8 @@
     {
       "id": "debugger/src/wasm-runtime.mjs",
       "relativePath": "debugger/src/wasm-runtime.mjs",
-      "sha256": "sha256:343b36eac02ac617608f4ec3873713df7028113acd4385fa23beec28fc9f90ff",
-      "byteLength": 44033,
+      "sha256": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f",
+      "byteLength": 49136,
       "mediaType": "text/javascript",
       "version": "0.1.0-prototype.1",
       "roles": [
@@ -78,8 +78,8 @@
     {
       "id": "debugger/src/variables.mjs",
       "relativePath": "debugger/src/variables.mjs",
-      "sha256": "sha256:2f19981059895bb541e5f79ab0b75d73f992c2bc5f0965d127bb7e1e34481477",
-      "byteLength": 36841,
+      "sha256": "sha256:a20f10518433d3dbb48d58bf2a7bae930669c49de5531476ffcfadfbf28ba139",
+      "byteLength": 42029,
       "mediaType": "text/javascript",
       "version": "0.1.0-prototype.1",
       "roles": [
