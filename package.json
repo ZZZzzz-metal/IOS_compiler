@@ -1,6 +1,6 @@
 {
   "name": "ipad-offline-debugger",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "description": "Local Wasm C/C++ compiler and source debugger integration prototype; iPad validation pending.",
   "type": "module",
@@ -19,6 +19,9 @@
     "prepare:ui": "node ui/scripts/prepare-probe.mjs",
     "start:ui": "node ui/scripts/prepare-probe.mjs && node ui/scripts/serve-probe.mjs",
     "verify:ui": "node ui/scripts/verify-probe.mjs",
+    "prepare:offline": "node app/offline/build.mjs",
+    "start:offline": "node app/offline/serve.mjs",
+    "test:offline": "node --test app/offline/checks/*.test.mjs",
     "demo:integration": "node app/integration/node-demo.mjs",
     "prepare:toolchain": "node compiler/scripts/prepare-toolchain.mjs",
     "prepare:probe": "node compiler/scripts/build-probe.mjs && node debugger/scripts/build-probe.mjs",

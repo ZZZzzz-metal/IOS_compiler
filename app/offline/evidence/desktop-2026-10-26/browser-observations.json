@@ -1,0 +1,88 @@
+{
+  "kind": "manual-ui-observations",
+  "date": "2026-10-26",
+  "browser": "Codex in-app browser on Windows",
+  "bundleId": "ipad-web-probe-3551b05827b81bcff5d8823a",
+  "origin": "http://127.0.0.1:4187",
+  "serverStoppedBeforeNewSource": true,
+  "physicalNetworkDisabled": false,
+  "browserProcessRestarted": false,
+  "ipad": false,
+  "observations": [
+    {
+      "test": "server-stopped-new-cpp",
+      "marker": "OFFLINE-NEW-20261026-01",
+      "output": "sum=23\n",
+      "exit": "exit · 返回 0"
+    },
+    {
+      "test": "second-edited-cpp",
+      "output": "sum=28\n",
+      "exit": "exit · 返回 0"
+    },
+    {
+      "test": "offline-breakpoint",
+      "status": "已暂停 · main.cpp:16:1",
+      "variables": "n int 7\n\nvalues vector<int, std::__2::allocator<int> > vector(size=3, capacity=3)\n\n展开\n\nlabel string \"sum\"\n\n展开\n\narray int[3] int[3] (3 elements)\n\n展开\n\ntotal int 不可读取：Variable declaration has not executed at this stop\n\ni int 不可读取：Variable is outside its lexical scope"
+    },
+    {
+      "test": "offline-step-into",
+      "status": "已暂停 · main.cpp:6:1",
+      "stack": "add · main.cpp:6:1main · main.cpp:16:1main · 未提供源码位置_start · 未提供源码位置",
+      "variables": "left int 7\n\nright int 1\n\nanswer int 不可读取：Variable declaration has not executed at this stop"
+    },
+    {
+      "test": "offline-step-over-in-add",
+      "status": "已暂停 · main.cpp:7:1",
+      "variables": "left int 7\n\nright int 1\n\nanswer int 8"
+    },
+    {
+      "test": "offline-caller-frame",
+      "stack": "add · main.cpp:7:1main · main.cpp:16:1main · 未提供源码位置_start · 未提供源码位置",
+      "variables": "n int 7\n\nvalues vector<int, std::__2::allocator<int> > vector(size=3, capacity=3)\n\n展开\n\nlabel string \"sum\"\n\n展开\n\narray int[3] int[3] (3 elements)\n\n展开\n\ntotal int 不可读取：Storage has not been initialized during this declaration lifetime\n\ni int 不可读取：Variable is outside its lexical scope"
+    },
+    {
+      "test": "offline-step-out-before-store",
+      "status": "已暂停 · main.cpp:16:1",
+      "variables": "n int 7\n\nvalues vector<int, std::__2::allocator<int> > vector(size=3, capacity=3)\n\n展开\n\nlabel string \"sum\"\n\n展开\n\narray int[3] int[3] (3 elements)\n\n展开\n\ntotal int 不可读取：Storage has not been initialized during this declaration lifetime\n\ni int 不可读取：Variable is outside its lexical scope"
+    },
+    {
+      "test": "offline-post-store",
+      "status": "已暂停 · main.cpp:17:1",
+      "variables": "n int 7\n\nvalues vector<int, std::__2::allocator<int> > vector(size=3, capacity=3)\n\n展开\n\nlabel string \"sum\"\n\n展开\n\narray int[3] int[3] (3 elements)\n\n展开\n\ntotal int 8\n\ni int 不可读取：Variable declaration has not executed at this stop"
+    },
+    {
+      "test": "offline-debug-output",
+      "output": "sum=23\n",
+      "exit": "exit · 返回 0"
+    },
+    {
+      "test": "offline-c-stdin",
+      "output": "ipad-c=42\n",
+      "exit": "exit · 返回 0"
+    },
+    {
+      "test": "offline-stop",
+      "status": "已结束",
+      "exit": "stop"
+    },
+    {
+      "test": "offline-restart",
+      "output": "ipad-restart=43\n",
+      "exit": "exit · 返回 0"
+    },
+    {
+      "test": "offline-draft-reopen",
+      "draft": "source",
+      "source": "#include <stdio.h> // OFFLINE-RESTART-20261026-06\nint main(void) { puts(\"ipad-restart=43\"); return 0; }\n",
+      "stdin": "21\n",
+      "language": "c",
+      "saved": "草稿已保存 · 版本 6"
+    },
+    {
+      "test": "offline-manual",
+      "heading": "iPad 操作手册",
+      "includesSample": true
+    }
+  ]
+}

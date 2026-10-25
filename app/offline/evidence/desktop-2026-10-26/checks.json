@@ -1,0 +1,56 @@
+{
+  "kind": "development-checks",
+  "checks": [
+    {
+      "name": "structure",
+      "args": [
+        "scripts/check-baseline.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-25T16:55:21.856Z",
+      "finishedAt": "2026-10-25T16:55:21.968Z"
+    },
+    {
+      "name": "contracts",
+      "args": [
+        "--test",
+        "contracts/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-25T16:55:21.969Z",
+      "finishedAt": "2026-10-25T16:55:22.159Z"
+    },
+    {
+      "name": "ui-storage",
+      "args": [
+        "--test",
+        "ui/checks/*.test.mjs",
+        "storage/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-25T16:55:22.159Z",
+      "finishedAt": "2026-10-25T16:55:24.995Z"
+    },
+    {
+      "name": "pipeline",
+      "args": [
+        "--test",
+        "app/integration/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-25T16:55:24.995Z",
+      "finishedAt": "2026-10-25T16:55:28.643Z"
+    },
+    {
+      "name": "offline-worker",
+      "args": [
+        "--test",
+        "app/offline/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-25T16:55:28.643Z",
+      "finishedAt": "2026-10-25T16:55:28.881Z"
+    }
+  ],
+  "deviceValidation": "unverified"
+}

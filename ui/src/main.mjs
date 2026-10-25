@@ -6,6 +6,7 @@ import {SessionController} from './session-controller.mjs';
 import {highlight,indentSelection} from './editor.mjs';
 import {createDraftStore,createDraft,serializeDraft,parseImport} from '../../storage/src/draft-store.mjs';
 import {createAutosave} from '../../storage/src/autosave.mjs';
+import {assertTrustedOfflineWorkers} from '../../app/offline/browser/trust.mjs';
 
 const $=id=>document.getElementById(id),uuid=()=>crypto.randomUUID();
 const example='#include <cstdio>\n#include <vector>\n#include <string>\n\nint add(int left, int right) {\n    int answer = left + right;\n    return answer;\n}\n\nint main() {\n    int n = 3;\n    std::scanf("%d", &n);\n    std::vector<int> values = {1, 2, 3};\n    std::string label = "sum";\n    int array[3] = {4, 5, 6};\n    int total = add(n, values[0]);\n    for (int i = 0; i < 3; ++i) {\n        total += array[i];\n    }\n    std::printf("%s=%d\\n", label.c_str(), total);\n    return 0;\n}\n';
@@ -162,22 +163,18 @@ function supports(id){return ['implemented-unverified','verified'].includes(prep
 async function prepare(){
   ready=false;$('prepare').disabled=true;$('resources').textContent='正在读取并校验本机编译与调试资源…';
   try{
-    // Other module probes may serve a cached Worker with bytes different from this candidate.
-    // Preserve their caches; this uncached prototype needs a separate origin/port.
-    if(navigator.serviceWorker){
-      const workerURLs=['compiler/src/compiler-worker.mjs','debugger/src/debugger-worker.mjs'].map(path=>new URL(path,new URL('../',location.href)).href);
-      const registrations=await navigator.serviceWorker.getRegistrations();
-      if(registrations.some(reg=>reg.active&&workerURLs.some(url=>url.startsWith(reg.scope))))throw Error('此地址已有其他实验页的离线缓存，可能覆盖当前执行资源。请按说明使用独立端口 4184 或另一个未使用的端口。原缓存和草稿已保留。');
-    }
     const response=await fetch('./.local/candidate.json',{cache:'no-store'});if(!response.ok)throw Error('请先运行四号原型准备步骤。');
     const candidate=await response.json();
+    // Only the complete, byte-verified release may serve these execution Workers.
+    // Older module experiments remain rejected without deleting their data.
+    const offline=await assertTrustedOfflineWorkers(candidate,new URL('../',location.href).href);
     for(const resource of candidate.resources){
       const response=await fetch(new URL(resource.relativePath,new URL('../',location.href)),{cache:'no-store'});
       if(!response.ok)throw Error(`本地资源缺失：${resource.relativePath}`);
       const bytes=new Uint8Array(await response.arrayBuffer());
       if(bytes.length!==resource.byteLength||await digest(bytes)!==resource.sha256)throw Error(`本地资源校验失败：${resource.relativePath}`);
     }
-    prepared=candidate;ready=true;$('resources').textContent='本机资源已校验 · 完整离线状态待集成验收';$('status').textContent='可编译运行或启动调试。';
+    prepared=candidate;ready=true;$('resources').textContent=offline?.offline?'本版本离线资源已校验 · iPad 真机待验证':'本机资源已校验 · 完整离线状态待集成验收';$('status').textContent='可编译运行或启动调试。';
   }catch(error){$('resources').textContent='资源未就绪';fault(error);}finally{render();}
 }
 async function compile(mode){

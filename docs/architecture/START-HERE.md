@@ -2,12 +2,12 @@
 
 仓库：`C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger`
 
-更新：2026-10-25。集成分支integration；本轮交付integration-v0.3.0，包含新初始化修复、最小界面/保存和独立回归。baseline-v0.1.0、integration-v0.2.0、integration-v0.2.1均固定不动。协议仍为0.1.0-draft.1。后续修订另发标签，不移动旧标签。当前没有上传GitHub或发布应用；来源、实际结果及限制见 [v0.3.0统一界面集成报告](UI-INTEGRATION-2026-10-25.md)。
+更新：2026-10-26。集成分支integration；统一界面与新初始化修复的交付为integration-v0.3.0，追加完整Web缓存实验与平板手册为integration-v0.4.0。所有旧标签均固定不动。协议仍为0.1.0-draft.1。后续修订另发标签，不移动旧标签。当前没有上传GitHub或发布应用；来源、实际结果及限制见 [v0.3.0统一界面报告](UI-INTEGRATION-2026-10-25.md) 和 [v0.4.0离线入口报告](OFFLINE-INTEGRATION-2026-10-26.md)。5号若已在复验v0.3.0，先保持原目标并完成证据，再另行复验离线增量，不在测试中途改基线。
 
 ## 每个上下文第一次进入
 
 1. 读取 AGENTS.md、README.md、contracts/README.md、自己的目录说明、docs/architecture/STATUS.md。
-2. 执行 `git rev-parse integration-v0.3.0` 记录本轮完整提交号；`git status --short` 检查现有改动。历史标签保持可查。
+2. 执行 `git rev-parse integration-v0.4.0` 记录离线实验完整提交号；5号既有UI复验仍可固定v0.3.0。`git status --short` 检查现有改动。历史标签保持可查。
 3. 2/3/4/5现在均有独立工作区和模块分支，必须优先复用。先保留未提交与未跟踪改动，再由各自负责人同步本轮标签；不要重建目录、重置文件或在1号integration工作区切分支并行编辑。1号不会代为切换其他负责人的工作区。
 4. 确认 `git branch --show-current` 和 `git rev-parse --show-toplevel` 指向自己的工作区，再只修改所有权内的文件。
 
@@ -80,3 +80,9 @@ npm.cmd run start:probe
 本轮已合入3号09a4a12、4号49eda46、5号d20b485，对应合并提交496c52e、fc72445、94ba2a7；2号34e46b9沿用。VAL-003修复分支已有5号6场景独立对照通过证据，原VAL-001/002和历史失败仍保留。本轮组合结果集中在UI集成报告；新引擎与界面/保存的整体独立验收仍交5号复验，不把4号自测或1号集成检查写成5号签收。用户将在1号交付后通知5号。
 
 G2 前不发布 frozen 路线；G2 后才扩大 UI 与安装交付。后续基线迁移由 1 号说明，不能自行更新协议号形成多套契约。
+
+## 完整缓存实验和平板操作
+
+电脑执行 `npm.cmd run prepare:offline` 后再执行 `npm.cmd run start:offline`，进入默认4187端口的版本选择页，打开固定版本准备页并主动保存全部资源。固定版本入口和工作台在同一个版本scope内；外层版本选择页不提供断网启动。完整生成清单、哈希事务、缺失恢复与HTTPS前提见 [离线实验说明](../../app/offline/README.md)。`npm.cmd run test:offline` 是14项Node模板故障检查，不替代浏览器和真机。
+
+平板只执行 [用户手册](IPAD-USER-MANUAL.md)，不需要Node。首次访问需要1号核对实际可信HTTPS地址、设备互通和资源版本；不能把电脑loopback地址直接发作平板入口。同网短期证书工具见 [HTTPS维护说明](../../app/offline/LOCAL-HTTPS.md)，不会自动安装证书或开放LAN。之后关闭电脑和所有网络，按手册冷启动并输入新源码。1号桌面离线结果已归档，G2仍待用户真机实测。

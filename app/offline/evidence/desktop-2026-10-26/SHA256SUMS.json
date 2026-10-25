@@ -1,0 +1,87 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 36,
+    "sha256": "5a54c77d3f483b1b2522b932dfed30e344b97db468242fd3f4bcd3262b0f24bf"
+  },
+  {
+    "file": "browser-observations.json",
+    "byteLength": 3753,
+    "sha256": "6aa2c06cd91cf460dd21c307ea699c833f85d16f313fe04566fd222756701a0f"
+  },
+  {
+    "file": "build.json",
+    "byteLength": 1008,
+    "sha256": "1d680fc3fcebe4c09c5379a93d1f9e72005d7ec2f150df41fe95bc9e6068c719"
+  },
+  {
+    "file": "bundle.json",
+    "byteLength": 11302,
+    "sha256": "84dfc0a1e55757148f56cd9c879d8be95f0749583eee54816b3f8d33e80b710f"
+  },
+  {
+    "file": "checks.json",
+    "byteLength": 1293,
+    "sha256": "2f66ce822fad4ae9bef4f254874b50d02def072724f71b4db3e4cf87d48a0663"
+  },
+  {
+    "file": "contracts.txt",
+    "byteLength": 1043,
+    "sha256": "f41096f34f01691e9cf19fb98869183489490b66b044fd16c2e6a5d3a0617125"
+  },
+  {
+    "file": "last-run-ax.txt",
+    "byteLength": 3769,
+    "sha256": "dc92b190248efbf39635b6a1b6f8b93f66b70c228644a82219a83514b7446ae8"
+  },
+  {
+    "file": "loopback-tls-check-source.mjs",
+    "byteLength": 3827,
+    "sha256": "9da97614c1dea6e8e56b5d913defafccca756004802f79d53cb935bd72218b05"
+  },
+  {
+    "file": "loopback-tls-result.json",
+    "byteLength": 779,
+    "sha256": "dda8b99299c249ccd1652b32842e91d3ef98aa23a417f1835fdff006a8028a39"
+  },
+  {
+    "file": "offline-debug-paused.png",
+    "byteLength": 70778,
+    "sha256": "32e637ec946e195a753a1778fea7e9b086cf9d3290ce7f25b34c2a902c0357aa"
+  },
+  {
+    "file": "offline-restart.png",
+    "byteLength": 55171,
+    "sha256": "949e20369add9adf58616a52d5e8ff3519f722a5f1da70e9bb5f6aba284f1621"
+  },
+  {
+    "file": "offline-worker.txt",
+    "byteLength": 1418,
+    "sha256": "799a56ff87252d825de22018fe4172fa527ad49eff593d4f64f7533fdd647db5"
+  },
+  {
+    "file": "pipeline.txt",
+    "byteLength": 419,
+    "sha256": "a590f5f19b5762b18570907a8295574eb14402c8dbef9e826d66552d588f8cea"
+  },
+  {
+    "file": "prepared.png",
+    "byteLength": 34320,
+    "sha256": "21c0db57daa79e1fbd3b1a7988897cb0da801069a9d4a9e75aaf1bbf7087d21c"
+  },
+  {
+    "file": "source-fingerprints.json",
+    "byteLength": 2809,
+    "sha256": "c2f5b901225077038ee8f5a4394f49a2b76c8748ddbd9c79c1afcccb95aacc01"
+  },
+  {
+    "file": "structure.txt",
+    "byteLength": 277,
+    "sha256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48"
+  },
+  {
+    "file": "ui-storage.txt",
+    "byteLength": 2214,
+    "sha256": "6b57f356714c8714618cfdb110af1dea6a1431b0bcc069ca2ac93627ad36ba51"
+  }
+]

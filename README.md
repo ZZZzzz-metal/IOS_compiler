@@ -5,9 +5,9 @@
 ## 版本与交接
 
 - 仓库：`C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger`
-- 分支：`integration`；本轮固定标签：`integration-v0.3.0`。
-- 旧标签 baseline-v0.1.0、integration-v0.2.0、integration-v0.2.1 保持原样；协议仍为 `0.1.0-draft.1`。
-- [本轮合并结果与5号复验步骤](docs/architecture/UI-INTEGRATION-2026-10-25.md)、[统一状态](docs/architecture/STATUS.md)。
+- 分支：`integration`；本轮离线实验交付：`integration-v0.4.0`。
+- 旧标签 baseline-v0.1.0、integration-v0.2.0、integration-v0.2.1、integration-v0.3.0 保持原样；协议仍为 `0.1.0-draft.1`。
+- [离线入口交付](docs/architecture/OFFLINE-INTEGRATION-2026-10-26.md)、[v0.3.0组合复验步骤](docs/architecture/UI-INTEGRATION-2026-10-25.md)、[统一状态](docs/architecture/STATUS.md)。
 
 ## 启动统一工作台
 
@@ -25,7 +25,13 @@ npm.cmd start
 
 `npm.cmd run start:ui` 与 `npm start` 相同。状态报告改用 `npm.cmd run status`，也可直接运行 `node app/main.mjs`。只重建组合用 `npm.cmd run prepare:ui`；组件更新后重新准备并刷新页面。
 
-若当前端口存在旧模块实验缓存，可在启动前设置 `$env:UI_PROBE_PORT='4186'`，再 `npm.cmd start`。不同端口是独立草稿库，原草稿仍在原地址，可导出再导入；不要清理旧数据。本机 localhost 不是 iPad 安装入口，当前工作台没有完整产品离线缓存或安装包。
+若当前端口存在旧模块实验缓存，可在启动前设置 `$env:UI_PROBE_PORT='4186'`，再 `npm.cmd start`。不同端口是独立草稿库，原草稿仍在原地址，可导出再导入；不要清理旧数据。本机 localhost 不是 iPad 安装入口。
+
+## 离线实验与平板操作
+
+1号新增按版本隔离、逐项校验的完整 Web 缓存实验。电脑端运行 `npm.cmd run prepare:offline`，再 `npm.cmd run start:offline`，打开命令输出的本机地址，进入固定版本后点“准备离线资源”。该入口与上面的未缓存开发入口分开；平板需要另行提供可达且受信任的 HTTPS 地址。详见 [离线实验说明](app/offline/README.md)。
+
+**你在 iPad 上的逐步操作见 [平板操作手册](docs/architecture/IPAD-USER-MANUAL.md)**：首次准备、添加主屏、断网关闭重开、新源码编译、调试、停止恢复及草稿备份都有具体步骤和预期。实际 HTTPS 地址和 G2 真机结果仍待补齐；没有原生安装包，不把完整缓存生成成功称为 iPad 已通过。
 
 ## 工作流与检查
 
