@@ -18,3 +18,5 @@
 跳出函数可在调用者调用行的返回续接位置暂停，此时调用结果的存储尚可能未执行。先验证被调函数已退出、调用栈回到正确调用者；若仍在调用行，执行一次stepOver到下一行，再验证赋值结果。manifest中的stepOut checkpoint指向完成该存储后的验证位置。
 
 已知缺陷最小源码位于 `regressions/`。`lexical-shadow.cpp:6` 的value必须为19，`:8`恢复外层7；`loop-header.cpp:4` 的i为0、1、2，回到已初始化的循环头后i仍须可读。循环头同一行可有多个指令位置，不预填未经验证的列或当前值。
+
+后续新增initializer-cycle.cpp与initializer-same-line.cpp独立覆盖VAL-003，不更改原manifest的8份样例。新值为40/41；初始化函数内和返回未存储时，current不得显示上一轮40，完成存储后才可读本轮值。同一行已完成的vector={9,4}仍可读。精确标记与三阶段原始观察由tests/initializer-lifetime.mjs记录。

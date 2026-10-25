@@ -31,3 +31,9 @@ npm.cmd test
 模块回归也默认当前仓库，并将输出存入新集成证据目录；它包含故障注入，不能把其数量称为产品端到端验收数量。5轮重启检查使用同一已编译c-core产物开启5个新会话，只有单独的源码修改测试会重新编译。
 
 实际编译产物在忽略目录 `artifacts/validation-integrated/`，可重新生成。清单中尚未由自动运行器执行的其他checkpoint不能据此宣布通过。真实iPad离线、键鼠、草稿和客户端迟到响应过滤仍需真机/界面验收；当前Node结果未覆盖浏览器UI，也未断开开发电脑系统网络。
+
+## 追加：循环初始化旧值回归
+
+`node tests/initializer-lifetime.mjs` 新增6个独立场景，不改变原21项：直接适配器和Worker分别检查初始化函数内的调用者、返回未存储、完成存储，以及同一行已完成vector和第一轮不查询。待测工作区仍用VALIDATION_COMPILER_ROOT / VALIDATION_DEBUGGER_ROOT指定，证据必须选择新的VALIDATION_EVIDENCE_DIR。
+
+旧integration-v0.2.1代码下6场景均真实失败；3号09a4a12下6/6通过。两份实际编译产物在前后对照中hash一致。详见docs/validation/followup-initializer-2026-10-25.md。负向对照仍exit 1，不把已知失败包装为通过；1号合入修复后再在新集成基线复测。
