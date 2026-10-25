@@ -1,5 +1,10 @@
 [
   {
+    "file": ".gitattributes",
+    "byteLength": 190,
+    "sha256": "5d3d8f7fee81d4b4c34a4826b5716ff3f2fd37d5fcc874c7d32260420a228ebd"
+  },
+  {
     "file": "acceptance-output.txt",
     "byteLength": 1632,
     "sha256": "4fa763a35818a7cca3db619e0cff85b8d4d2c9315c5fca839ebad90bbfa09091"
