@@ -1,0 +1,9 @@
+{
+  "mainA": true,
+  "recoveryB": true,
+  "recoveryUrl": "http://127.0.0.1:4194/ui/probe.html#draft=recovery-5887ebe2-f2b5-48c9-b260-a48555f04e58",
+  "stdinA": "123\n",
+  "stdinB": "123\n",
+  "driverA": true,
+  "driverB": true
+}

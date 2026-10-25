@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "owner": "05 independent automation subtask",
+  "startedAt": "2026-10-25T11:46:07.535Z",
+  "finishedAt": "2026-10-25T11:46:25.945Z",
+  "testedTag": "integration-v0.3.0",
+  "testedRevision": "fff15bee97ed47cf2485b83c4344a020e9e190f7",
+  "endRevision": "fff15bee97ed47cf2485b83c4344a020e9e190f7",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "browserTested": false,
+    "ipadTested": false,
+    "networkDisabled": false
+  },
+  "initialStatus": "?? tests/evidence/integrated-person05-v0.3.0-2026-10-25/\n?? tests/scratch/",
+  "finalStatus": "?? tests/evidence/integrated-person05-v0.3.0-2026-10-25/\n?? tests/scratch/",
+  "testedSourceDiffFromTag": "",
+  "commands": [
+    {
+      "id": "toolchain-verify",
+      "command": "npm.cmd run prepare:toolchain -- --verify-only",
+      "invokedVia": {
+        "executable": "C:\\Program Files\\nodejs\\node.exe",
+        "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "args": [
+          "--prefix",
+          "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+          "run",
+          "prepare:toolchain",
+          "--",
+          "--verify-only"
+        ]
+      },
+      "startedAt": "2026-10-25T11:46:07.538Z",
+      "finishedAt": "2026-10-25T11:46:09.013Z",
+      "durationMs": 1475.2666,
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "toolchain-verify.txt",
+      "outputSHA256": "6562bb8566e41ddbee6cef99cf963a0ae3fbdd67d845607d748fa29c5dc60e68"
+    },
+    {
+      "id": "check",
+      "command": "npm.cmd run check",
+      "invokedVia": {
+        "executable": "C:\\Program Files\\nodejs\\node.exe",
+        "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "args": [
+          "--prefix",
+          "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+          "run",
+          "check"
+        ]
+      },
+      "startedAt": "2026-10-25T11:46:09.035Z",
+      "finishedAt": "2026-10-25T11:46:09.755Z",
+      "durationMs": 719.9238,
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "check.txt",
+      "outputSHA256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83"
+    },
+    {
+      "id": "contracts",
+      "command": "npm.cmd test",
+      "invokedVia": {
+        "executable": "C:\\Program Files\\nodejs\\node.exe",
+        "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "args": [
+          "--prefix",
+          "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+          "test"
+        ]
+      },
+      "startedAt": "2026-10-25T11:46:09.756Z",
+      "finishedAt": "2026-10-25T11:46:10.985Z",
+      "durationMs": 1228.6887000000002,
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "contracts.txt",
+      "outputSHA256": "dfbca3aa58f70c0af387fa588d77c5aa149a88638b46916d96ed9237272ff194",
+      "observedCounts": {
+        "tests": 10,
+        "passed": 10,
+        "failed": 0
+      }
+    },
+    {
+      "id": "integration",
+      "command": "npm.cmd run test:integration",
+      "invokedVia": {
+        "executable": "C:\\Program Files\\nodejs\\node.exe",
+        "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "args": [
+          "--prefix",
+          "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+          "run",
+          "test:integration"
+        ]
+      },
+      "startedAt": "2026-10-25T11:46:10.987Z",
+      "finishedAt": "2026-10-25T11:46:15.849Z",
+      "durationMs": 4862.6639000000005,
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "integration.txt",
+      "outputSHA256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c",
+      "observedCounts": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    },
+    {
+      "id": "ui-storage",
+      "command": "npm.cmd run test:ui",
+      "invokedVia": {
+        "executable": "C:\\Program Files\\nodejs\\node.exe",
+        "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "args": [
+          "--prefix",
+          "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+          "run",
+          "test:ui"
+        ]
+      },
+      "startedAt": "2026-10-25T11:46:15.850Z",
+      "finishedAt": "2026-10-25T11:46:19.119Z",
+      "durationMs": 3269.0094999999983,
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "ui-storage.txt",
+      "outputSHA256": "5c8bbe953256c2c3fac5362bbd5548e927a2d944200860decaea7599ac4928b5",
+      "observedCounts": {
+        "tests": 24,
+        "passed": 24,
+        "failed": 0
+      }
+    },
+    {
+      "id": "acceptance",
+      "command": "npm.cmd run test:acceptance",
+      "invokedVia": {
+        "executable": "C:\\Program Files\\nodejs\\node.exe",
+        "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "args": [
+          "--prefix",
+          "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+          "run",
+          "test:acceptance"
+        ]
+      },
+      "startedAt": "2026-10-25T11:46:09.056Z",
+      "finishedAt": "2026-10-25T11:46:20.378Z",
+      "durationMs": 11321.494499999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "acceptance.txt",
+      "outputSHA256": "20eea470817b3b014f744aa5c9555022a6bc32d070f49aae0db3d23a302fb8de",
+      "evidenceDirectory": "acceptance"
+    },
+    {
+      "id": "modules",
+      "command": "npm.cmd run test:modules",
+      "invokedVia": {
+        "executable": "C:\\Program Files\\nodejs\\node.exe",
+        "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "args": [
+          "--prefix",
+          "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+          "run",
+          "test:modules"
+        ]
+      },
+      "startedAt": "2026-10-25T11:46:09.015Z",
+      "finishedAt": "2026-10-25T11:46:21.169Z",
+      "durationMs": 12154.498899999999,
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "modules.txt",
+      "outputSHA256": "e4589102cf90f8e10ad00f4c725bd32aab31a920af975e8b1020d89b8cd21d24",
+      "observedCounts": {
+        "tests": 94,
+        "passed": 94,
+        "failed": 0
+      }
+    },
+    {
+      "id": "regressions",
+      "command": "npm.cmd run test:regressions",
+      "invokedVia": {
+        "executable": "C:\\Program Files\\nodejs\\node.exe",
+        "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "args": [
+          "--prefix",
+          "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+          "run",
+          "test:regressions"
+        ]
+      },
+      "startedAt": "2026-10-25T11:46:20.379Z",
+      "finishedAt": "2026-10-25T11:46:22.445Z",
+      "durationMs": 2066.3174,
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "regressions.txt",
+      "outputSHA256": "329b5d8492206eccd513a9372370af5ba02d09bd7a685d43cbc609490cc510d7",
+      "evidenceDirectory": "regressions"
+    },
+    {
+      "id": "initializer",
+      "command": "npm.cmd run test:initializer",
+      "invokedVia": {
+        "executable": "C:\\Program Files\\nodejs\\node.exe",
+        "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "args": [
+          "--prefix",
+          "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+          "run",
+          "test:initializer"
+        ]
+      },
+      "startedAt": "2026-10-25T11:46:22.446Z",
+      "finishedAt": "2026-10-25T11:46:25.788Z",
+      "durationMs": 3341.944699999998,
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "initializer.txt",
+      "outputSHA256": "cb21977332b56b1da5c5c1356f2de88b8f85f66fd38d7579b854d52f68ae7a79",
+      "evidenceDirectory": "initializer"
+    }
+  ],
+  "counts": {
+    "observed": {
+      "contracts": {
+        "tests": 10,
+        "passed": 10,
+        "failed": 0
+      },
+      "integration": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "ui-storage": {
+        "tests": 24,
+        "passed": 24,
+        "failed": 0
+      },
+      "modules": {
+        "tests": 94,
+        "passed": 94,
+        "failed": 0
+      }
+    },
+    "acceptance": {
+      "passed": 21,
+      "failed": 0
+    },
+    "minimalRegressions": {
+      "passed": 2,
+      "failed": 0
+    },
+    "initializer": {
+      "passed": 6,
+      "failed": 0
+    },
+    "deduplicatedPassed": 160,
+    "deduplicatedFailed": 0
+  },
+  "allCommandsPassed": true,
+  "warning": "Module counts include fault injection and boundary checks. This is desktop automation, not 160 user workflows or real iPad acceptance.",
+  "pending": [
+    "Independent browser DOM and real IndexedDB workflow (parent task)",
+    "Real iPad complete offline cold start",
+    "Installation, forced app termination, storage eviction and complete resource upgrades"
+  ]
+}

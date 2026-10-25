@@ -1,0 +1,268 @@
+{
+  "testedTag": "integration-v0.3.0",
+  "testedRevision": "fff15bee97ed47cf2485b83c4344a020e9e190f7",
+  "environment": "Desktop IAB; browser engine version not collected",
+  "ipadTested": false,
+  "networkDisabled": false,
+  "internalBuildSessionIdsCollected": false,
+  "workflows": [
+    {
+      "id": "breakpoints-stepping-values-and-frame-selection",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 1,
+          "step": "breakpoint-23-live-arrays-pointer-vector-string-watch17"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 2,
+          "step": "caller-frame-selected-main-seed9"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 3,
+          "step": "step-over-in-adjust-shifted13"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 4,
+          "step": "step-out-before-caller-store"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 5,
+          "step": "caller-store-complete-transformed13"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 7,
+          "step": "recursive-second-frame-n2"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 8,
+          "step": "recursive-caller-frame-n3"
+        }
+      ]
+    },
+    {
+      "id": "edited-source-and-old-debug-snapshot-isolation",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 10,
+          "step": "old-debug-snapshot-is-readonly"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 11,
+          "step": "editing-draft-restored-with-plus5"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 13,
+          "step": "old-snapshot-completed-ui05-13"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 14,
+          "step": "recompiled-edited-source-ui05-14"
+        }
+      ]
+    },
+    {
+      "id": "C11-input-output",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 15,
+          "step": "C11-stdin14-output42"
+        }
+      ]
+    },
+    {
+      "id": "stop-real-infinite-loop-edit-and-recompile",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 16,
+          "step": "infinite-running-editor-responsive"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 17,
+          "step": "infinite-stop-terminal"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 18,
+          "step": "restart-new-source-output44"
+        }
+      ]
+    },
+    {
+      "id": "editable-Solution-driver-actual-output-change",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 19,
+          "step": "solution-driver-20-output41"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 20,
+          "step": "edited-driver-21-output43"
+        }
+      ]
+    },
+    {
+      "id": "diagnostic-navigation-user-and-driver",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 21,
+          "step": "diagnostic-jumps-from-user-to-driver-5-18"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 23,
+          "step": "diagnostic-jumps-from-driver-to-user-3-31"
+        }
+      ],
+      "operationFacts": "browser/operation-facts.json"
+    },
+    {
+      "id": "copy-user-source-excludes-driver",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 22,
+          "step": "copy-user-source-excludes-driver"
+        }
+      ],
+      "operationFacts": "browser/operation-facts.json"
+    },
+    {
+      "id": "actual-full-file-export-import-four-fields",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 24,
+          "step": "actual-complete-draft-download"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 25,
+          "step": "actual-file-reimport-restores-all-fields"
+        }
+      ],
+      "downloadedBytes": "browser/downloaded-complete-draft.json"
+    },
+    {
+      "id": "unsupported-import-version-preserves-draft",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 27,
+          "step": "invalid-import-rejected-original-user-preserved"
+        }
+      ],
+      "operationFacts": "browser/operation-facts.json"
+    },
+    {
+      "id": "page-reopen-restores-saved-draft",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 26,
+          "step": "page-reopened-restores-revision13"
+        }
+      ]
+    },
+    {
+      "id": "two-window-CAS-retry-recovery-and-original-preservation",
+      "status": "passed",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 28,
+          "step": "conflict-b-opened-version13"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 29,
+          "step": "conflict-a-saved-version14"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 30,
+          "step": "conflict-b-cas-rejected-keeps-unsaved-text"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 31,
+          "step": "conflict-b-retry-still-rejected"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 33,
+          "step": "conflict-recovery-reopened"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 34,
+          "step": "conflict-main-reopened-preserves-a-version14"
+        }
+      ],
+      "fields": "browser/conflict-results.json"
+    },
+    {
+      "id": "old-debug-snapshot-breakpoint-display",
+      "status": "failed",
+      "defect": "VAL-004",
+      "owner": "04 UI",
+      "severity": "P2",
+      "evidence": [
+        {
+          "file": "browser/observations.json",
+          "index": 12,
+          "step": "stale-snapshot-breakpoint-panel-after-editing-breakpoints"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 37,
+          "step": "val004-minimal-breakpoint4-i0-bound"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 38,
+          "step": "val004-minimal-readonly-snapshot-falsely-no-breakpoints"
+        },
+        {
+          "file": "browser/observations.json",
+          "index": 39,
+          "step": "val004-minimal-hidden-breakpoint-still-stops-i1"
+        }
+      ],
+      "details": "browser/val004-minimal-results.json"
+    }
+  ],
+  "pending": [
+    "Browser-injected late responses (only controlled module coverage exists)",
+    "Full narrow layout, physical keyboard, Chinese IME, touch, multitasking and background",
+    "Real iPad offline cold start with auxiliary computer off",
+    "Process force-kill, quota eviction and final asynchronous save reliability",
+    "Installation and whole application resource upgrades"
+  ]
+}

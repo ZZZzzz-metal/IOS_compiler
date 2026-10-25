@@ -1,0 +1,137 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "acceptance/independent.json",
+    "byteLength": 605654,
+    "sha256": "cb35f81fc2b546bc3dc4b9fdc8d8e89b0d84ebc99912effc1e717286f164cae0"
+  },
+  {
+    "file": "acceptance/independent.tap",
+    "byteLength": 1606,
+    "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+  },
+  {
+    "file": "acceptance-command.json",
+    "byteLength": 726,
+    "sha256": "c48b556087c091a0b0fcbcf5d7ba6ceee68ed3e79867bfd7cd0cebf5808f5fe4"
+  },
+  {
+    "file": "acceptance.txt",
+    "byteLength": 1690,
+    "sha256": "20eea470817b3b014f744aa5c9555022a6bc32d070f49aae0db3d23a302fb8de"
+  },
+  {
+    "file": "check-command.json",
+    "byteLength": 649,
+    "sha256": "b98d9b954fd55d5aa40bebe47ad44b2deae8ca6185a12a8003a47aceffa5f7de"
+  },
+  {
+    "file": "check.txt",
+    "byteLength": 349,
+    "sha256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83"
+  },
+  {
+    "file": "contracts-command.json",
+    "byteLength": 726,
+    "sha256": "0cbec4376ba2288fa6a45a1dbca8dfc2892d0e617d4eaa4475c165444661392a"
+  },
+  {
+    "file": "contracts.txt",
+    "byteLength": 1125,
+    "sha256": "dfbca3aa58f70c0af387fa588d77c5aa149a88638b46916d96ed9237272ff194"
+  },
+  {
+    "file": "initializer/initializer-lifetime.json",
+    "byteLength": 544880,
+    "sha256": "ecaeac2189c130d723ad148b951826aeab0ca0c8bba2f8adc7c30cae2d0657df"
+  },
+  {
+    "file": "initializer/initializer-lifetime.tap",
+    "byteLength": 310,
+    "sha256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029"
+  },
+  {
+    "file": "initializer-command.json",
+    "byteLength": 730,
+    "sha256": "050d6dc1b7db4993ee8a4d7639b2a4596c5cc73f079e776b9f36253b62d5e85c"
+  },
+  {
+    "file": "initializer.txt",
+    "byteLength": 401,
+    "sha256": "cb21977332b56b1da5c5c1356f2de88b8f85f66fd38d7579b854d52f68ae7a79"
+  },
+  {
+    "file": "integration-command.json",
+    "byteLength": 769,
+    "sha256": "97b721c96eda83b1e53559659a9b8e6d050f6fdbe69ace64e65cc3564575207e"
+  },
+  {
+    "file": "integration.txt",
+    "byteLength": 516,
+    "sha256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c"
+  },
+  {
+    "file": "modules-command.json",
+    "byteLength": 755,
+    "sha256": "ee34e8a2725b1f98c804de8c7bfcdce45d4beff6e4cdeb6243d4fe8f82560f41"
+  },
+  {
+    "file": "modules.txt",
+    "byteLength": 10363,
+    "sha256": "e4589102cf90f8e10ad00f4c725bd32aab31a920af975e8b1020d89b8cd21d24"
+  },
+  {
+    "file": "regressions/regression-loop-header.json",
+    "byteLength": 114857,
+    "sha256": "8e2e05c441ab7a7f51d19a5a95782e3b813929dc108d2ce07a27b5e94eb2199d"
+  },
+  {
+    "file": "regressions/regression-shadow.json",
+    "byteLength": 64951,
+    "sha256": "dc135cf0e94e12d75cc4b88a5d3814289bfa6b886d5fcfb58a6d9e24a7e88f82"
+  },
+  {
+    "file": "regressions-command.json",
+    "byteLength": 722,
+    "sha256": "85658cc5dee13f04eac0a3c3dc1f68dae69e5b6a97cc462842846375f26c42f4"
+  },
+  {
+    "file": "regressions.txt",
+    "byteLength": 2561,
+    "sha256": "329b5d8492206eccd513a9372370af5ba02d09bd7a685d43cbc609490cc510d7"
+  },
+  {
+    "file": "run-suite.mjs",
+    "byteLength": 6949,
+    "sha256": "8bb5445de693c88475349c6666ee5a44067898e5a0b2ee8af5801d5ea8e3d482"
+  },
+  {
+    "file": "summary.json",
+    "byteLength": 9330,
+    "sha256": "b44e447ff17c2c5b50d706dcbb9e19f2337368895304c7aefa15722ccaf94518"
+  },
+  {
+    "file": "toolchain-verify-command.json",
+    "byteLength": 748,
+    "sha256": "32b147eb778e17c83e9f924013107241f20217241c2e4c26956079f761126890"
+  },
+  {
+    "file": "toolchain-verify.txt",
+    "byteLength": 224,
+    "sha256": "6562bb8566e41ddbee6cef99cf963a0ae3fbdd67d845607d748fa29c5dc60e68"
+  },
+  {
+    "file": "ui-storage-command.json",
+    "byteLength": 751,
+    "sha256": "f7a0e935380cc2b2ebd1560ed020888bf78b1452fba8c0f45db968d3bacdba00"
+  },
+  {
+    "file": "ui-storage.txt",
+    "byteLength": 2314,
+    "sha256": "5c8bbe953256c2c3fac5362bbd5548e927a2d944200860decaea7599ac4928b5"
+  }
+]
