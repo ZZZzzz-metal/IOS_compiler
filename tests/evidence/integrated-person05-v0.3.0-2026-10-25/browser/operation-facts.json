@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "source": "Retrospective transcription of actual Cua operation returns from the 2026-10-25 browser run; DOM sequence is in observations.json.",
+  "driverDiagnosticNavigation": {
+    "file": "driver.cpp",
+    "line": 5,
+    "column": 18,
+    "selectionStart": 91,
+    "selectionEnd": 91,
+    "selectedTextWasActualDriver": true
+  },
+  "userDiagnosticNavigation": {
+    "file": "user.inc",
+    "line": 3,
+    "column": 31,
+    "selectionStart": 55,
+    "selectionEnd": 55,
+    "selectedTextWasActualUserSource": true
+  },
+  "copyUserSource": {
+    "activeEditorTab": "driver",
+    "action": "Clicked 复制题站源码, then read this tab's clipboard",
+    "clipboardEqualsUserText": true,
+    "clipboardEqualsDriverText": false,
+    "userTextReference": "downloaded-complete-draft.json#/draft/userText"
+  },
+  "actualFullDraftDownload": {
+    "file": "downloaded-complete-draft.json",
+    "actualDownloadBasename": "ipad-debugger-project (1).json",
+    "actualFileChooserImport": true,
+    "userTextRestored": true,
+    "driverTextRestored": true,
+    "languageRestored": "C++17",
+    "stdinRestored": "123\n"
+  },
+  "invalidImport": {
+    "file": "bad-import.json",
+    "case": "Unsupported schemaVersion 999; syntactically valid JSON",
+    "feedback": "不支持此草稿文件版本，原草稿未改变。",
+    "userTextUnchanged": true,
+    "driverTextUnchanged": true,
+    "stdinUnchanged": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "integration",
+  "command": "npm.cmd run test:integration",
+  "invokedVia": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "args": [
+      "--prefix",
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "run",
+      "test:integration"
+    ]
+  },
+  "startedAt": "2026-10-25T11:46:10.987Z",
+  "finishedAt": "2026-10-25T11:46:15.849Z",
+  "durationMs": 4862.6639000000005,
+  "exitCode": 0,
+  "signal": null,
+  "errorMessage": null,
+  "outputFile": "integration.txt",
+  "outputSHA256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c",
+  "observedCounts": {
+    "tests": 3,
+    "passed": 3,
+    "failed": 0
+  }
+}

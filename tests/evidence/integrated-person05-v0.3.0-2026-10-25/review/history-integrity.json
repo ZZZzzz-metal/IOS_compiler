@@ -1,0 +1,1356 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-25T12:06:40.777Z",
+  "owner": "05 independent read-only history verification",
+  "testedRevision": "fff15bee97ed47cf2485b83c4344a020e9e190f7",
+  "scope": {
+    "historicalRoots": [
+      "tests/evidence",
+      "ui/evidence"
+    ],
+    "excludedNewRoot": "tests/evidence/integrated-person05-v0.3.0-2026-10-25",
+    "alsoVerify": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/SHA256SUMS.json"
+  },
+  "historical": {
+    "manifestCount": 9,
+    "recordedEntries": 107,
+    "passedEntries": 107,
+    "failedEntries": 0,
+    "unsupportedManifests": 0,
+    "allPassed": true,
+    "manifests": [
+      {
+        "manifest": "tests/evidence/SHA256SUMS.json",
+        "scope": "historical",
+        "format": "array:file-byteLength-sha256",
+        "manifestSHA256": "41e5b2888c1f4088a92fe2b9bcf54e9c67478263c949ea46f985e44b5b9842d6",
+        "status": "passed",
+        "recordedCount": 7,
+        "passedCount": 7,
+        "failedCount": 0,
+        "entries": [
+          {
+            "file": "independent-2026-10-25.json",
+            "expectedByteLength": 569821,
+            "expectedSHA256": "b118970db8bbd297fddb114c21f509b507a9f4b5d90b1ea04fa3aaeb376e18c1",
+            "path": "tests/evidence/independent-2026-10-25.json",
+            "actualByteLength": 569821,
+            "actualSHA256": "b118970db8bbd297fddb114c21f509b507a9f4b5d90b1ea04fa3aaeb376e18c1",
+            "status": "passed"
+          },
+          {
+            "file": "independent-2026-10-25.tap",
+            "expectedByteLength": 1610,
+            "expectedSHA256": "cf5aa0200121fa7c8d875c3fa740ad035a284cc40c69685661b3b0470d53ca6b",
+            "path": "tests/evidence/independent-2026-10-25.tap",
+            "actualByteLength": 1610,
+            "actualSHA256": "cf5aa0200121fa7c8d875c3fa740ad035a284cc40c69685661b3b0470d53ca6b",
+            "status": "passed"
+          },
+          {
+            "file": "module-02.tap",
+            "expectedByteLength": 5776,
+            "expectedSHA256": "f6fad7987eebfdb044823c45280131ba7c8d1bf218c53fb73a3f92d10c0f50bb",
+            "path": "tests/evidence/module-02.tap",
+            "actualByteLength": 5776,
+            "actualSHA256": "f6fad7987eebfdb044823c45280131ba7c8d1bf218c53fb73a3f92d10c0f50bb",
+            "status": "passed"
+          },
+          {
+            "file": "module-03.tap",
+            "expectedByteLength": 11552,
+            "expectedSHA256": "61145f8a8adce3d2af444cffb46dbf44e5c75de1e178f243ae0a300d3f673a41",
+            "path": "tests/evidence/module-03.tap",
+            "actualByteLength": 11552,
+            "actualSHA256": "61145f8a8adce3d2af444cffb46dbf44e5c75de1e178f243ae0a300d3f673a41",
+            "status": "passed"
+          },
+          {
+            "file": "module-regressions.json",
+            "expectedByteLength": 1245,
+            "expectedSHA256": "51bf5e152086d3d66d2672fd2de26a78ff9ee6ac3a13fa5753014fda1336faf2",
+            "path": "tests/evidence/module-regressions.json",
+            "actualByteLength": 1245,
+            "actualSHA256": "51bf5e152086d3d66d2672fd2de26a78ff9ee6ac3a13fa5753014fda1336faf2",
+            "status": "passed"
+          },
+          {
+            "file": "regression-loop-header.json",
+            "expectedByteLength": 92245,
+            "expectedSHA256": "7685f9956dcbd664bfa2ca80b033b7951aa4351fc8667d602e95c0b77076c224",
+            "path": "tests/evidence/regression-loop-header.json",
+            "actualByteLength": 92245,
+            "actualSHA256": "7685f9956dcbd664bfa2ca80b033b7951aa4351fc8667d602e95c0b77076c224",
+            "status": "passed"
+          },
+          {
+            "file": "regression-shadow.json",
+            "expectedByteLength": 33126,
+            "expectedSHA256": "290fe1166e432500fe5dcbc39f971267801ee82857762bd61ecf57fd42ea8415",
+            "path": "tests/evidence/regression-shadow.json",
+            "actualByteLength": 33126,
+            "actualSHA256": "290fe1166e432500fe5dcbc39f971267801ee82857762bd61ecf57fd42ea8415",
+            "status": "passed"
+          }
+        ]
+      },
+      {
+        "manifest": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/SHA256SUMS.json",
+        "scope": "historical",
+        "format": "array:file-byteLength-sha256",
+        "manifestSHA256": "3f9cccdfbe1a86419f9d7d94fe7c8807a05fa91b0056f20ff01d738c98943e4f",
+        "status": "passed",
+        "recordedCount": 21,
+        "passedCount": 21,
+        "failedCount": 0,
+        "entries": [
+          {
+            "file": ".gitattributes",
+            "expectedByteLength": 8,
+            "expectedSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/.gitattributes",
+            "actualByteLength": 8,
+            "actualSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "status": "passed"
+          },
+          {
+            "file": "acceptance-command.json",
+            "expectedByteLength": 339,
+            "expectedSHA256": "c01c7f1bd7c7337dbe79bc01a8344e05adfa79488966f38f13f61b6caf5a9066",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/acceptance-command.json",
+            "actualByteLength": 339,
+            "actualSHA256": "c01c7f1bd7c7337dbe79bc01a8344e05adfa79488966f38f13f61b6caf5a9066",
+            "status": "passed"
+          },
+          {
+            "file": "acceptance-output.txt",
+            "expectedByteLength": 1632,
+            "expectedSHA256": "4fa763a35818a7cca3db619e0cff85b8d4d2c9315c5fca839ebad90bbfa09091",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/acceptance-output.txt",
+            "actualByteLength": 1632,
+            "actualSHA256": "4fa763a35818a7cca3db619e0cff85b8d4d2c9315c5fca839ebad90bbfa09091",
+            "status": "passed"
+          },
+          {
+            "file": "check-output.txt",
+            "expectedByteLength": 359,
+            "expectedSHA256": "dafe45a77763f0bb85e2fd04f7720666451d79a52f552d93ec6ce5f4a325443a",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/check-output.txt",
+            "actualByteLength": 359,
+            "actualSHA256": "dafe45a77763f0bb85e2fd04f7720666451d79a52f552d93ec6ce5f4a325443a",
+            "status": "passed"
+          },
+          {
+            "file": "history-preservation.json",
+            "expectedByteLength": 6305,
+            "expectedSHA256": "dc99b11a2e494ec867cd4bc74bbfc31700850edff447f6019e6ffbb87d099061",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/history-preservation.json",
+            "actualByteLength": 6305,
+            "actualSHA256": "dc99b11a2e494ec867cd4bc74bbfc31700850edff447f6019e6ffbb87d099061",
+            "status": "passed"
+          },
+          {
+            "file": "independent.json",
+            "expectedByteLength": 592326,
+            "expectedSHA256": "98b1cde0bf6d920c29c2443ccc8ac5ab5a1fc83e84563d7e4499ddb40b1070e4",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/independent.json",
+            "actualByteLength": 592326,
+            "actualSHA256": "98b1cde0bf6d920c29c2443ccc8ac5ab5a1fc83e84563d7e4499ddb40b1070e4",
+            "status": "passed"
+          },
+          {
+            "file": "independent.tap",
+            "expectedByteLength": 1606,
+            "expectedSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/independent.tap",
+            "actualByteLength": 1606,
+            "actualSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "status": "passed"
+          },
+          {
+            "file": "initializer-lifetime.json",
+            "expectedByteLength": 531754,
+            "expectedSHA256": "0058ad7c87abb18cb0831b07759ef4835e018c109745ab601dd26aeda7839690",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/initializer-lifetime.json",
+            "actualByteLength": 531754,
+            "actualSHA256": "0058ad7c87abb18cb0831b07759ef4835e018c109745ab601dd26aeda7839690",
+            "status": "passed"
+          },
+          {
+            "file": "initializer-lifetime.tap",
+            "expectedByteLength": 310,
+            "expectedSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/initializer-lifetime.tap",
+            "actualByteLength": 310,
+            "actualSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "status": "passed"
+          },
+          {
+            "file": "integration-command.json",
+            "expectedByteLength": 340,
+            "expectedSHA256": "6b386824b5239e212403dad0191b72dde15309ff5d8d91205426dab8cbc023fc",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/integration-command.json",
+            "actualByteLength": 340,
+            "actualSHA256": "6b386824b5239e212403dad0191b72dde15309ff5d8d91205426dab8cbc023fc",
+            "status": "passed"
+          },
+          {
+            "file": "integration-output.txt",
+            "expectedByteLength": 531,
+            "expectedSHA256": "5939cdd220c65dbca4a518a7294e9ab26b243ca69c727ba3f156cd44136f87c8",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/integration-output.txt",
+            "actualByteLength": 531,
+            "actualSHA256": "5939cdd220c65dbca4a518a7294e9ab26b243ca69c727ba3f156cd44136f87c8",
+            "status": "passed"
+          },
+          {
+            "file": "integration-profile.json",
+            "expectedByteLength": 17529,
+            "expectedSHA256": "666d216c82e40bc926038397c6f5597a71e4192074eab860e2a08566e43750c9",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/integration-profile.json",
+            "actualByteLength": 17529,
+            "actualSHA256": "666d216c82e40bc926038397c6f5597a71e4192074eab860e2a08566e43750c9",
+            "status": "passed"
+          },
+          {
+            "file": "modules-command.json",
+            "expectedByteLength": 336,
+            "expectedSHA256": "1bdcbe52577dfd5a5408b3550d544fb49a5017cb367daaa4aa403849e90dee4f",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/modules-command.json",
+            "actualByteLength": 336,
+            "actualSHA256": "1bdcbe52577dfd5a5408b3550d544fb49a5017cb367daaa4aa403849e90dee4f",
+            "status": "passed"
+          },
+          {
+            "file": "modules-output.txt",
+            "expectedByteLength": 10481,
+            "expectedSHA256": "e52488b6f7be69565cf277ca80c283bbfc53d9eeea624d120cc9df6da8960bc8",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/modules-output.txt",
+            "actualByteLength": 10481,
+            "actualSHA256": "e52488b6f7be69565cf277ca80c283bbfc53d9eeea624d120cc9df6da8960bc8",
+            "status": "passed"
+          },
+          {
+            "file": "regression-loop-header.json",
+            "expectedByteLength": 103339,
+            "expectedSHA256": "9ab565f355234e8ba189f13c95d6a0d2a68f13fbebd9576cf7dc0d497a9251cb",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/regression-loop-header.json",
+            "actualByteLength": 103339,
+            "actualSHA256": "9ab565f355234e8ba189f13c95d6a0d2a68f13fbebd9576cf7dc0d497a9251cb",
+            "status": "passed"
+          },
+          {
+            "file": "regression-shadow.json",
+            "expectedByteLength": 53654,
+            "expectedSHA256": "db0e1b5a9ac4304b74b2f7ce05e887c35fefd81adb466e96b161e196a8ef3124",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/regression-shadow.json",
+            "actualByteLength": 53654,
+            "actualSHA256": "db0e1b5a9ac4304b74b2f7ce05e887c35fefd81adb466e96b161e196a8ef3124",
+            "status": "passed"
+          },
+          {
+            "file": "shared-checks.json",
+            "expectedByteLength": 474,
+            "expectedSHA256": "f004c98639149a6da6e6210c3e06fbb63a8d1041bf7eea31c1a5d5f9279e6be1",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/shared-checks.json",
+            "actualByteLength": 474,
+            "actualSHA256": "f004c98639149a6da6e6210c3e06fbb63a8d1041bf7eea31c1a5d5f9279e6be1",
+            "status": "passed"
+          },
+          {
+            "file": "summary.json",
+            "expectedByteLength": 2280,
+            "expectedSHA256": "68cdc4acad1633c0711cb1652f5033eb4a09b0b190724070276f6d6da40e614e",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/summary.json",
+            "actualByteLength": 2280,
+            "actualSHA256": "68cdc4acad1633c0711cb1652f5033eb4a09b0b190724070276f6d6da40e614e",
+            "status": "passed"
+          },
+          {
+            "file": "test-output.txt",
+            "expectedByteLength": 1145,
+            "expectedSHA256": "e2dce4254289cc6fafa6ef215d58d36cead875e47b72d45e190232b35c1b3b5c",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/test-output.txt",
+            "actualByteLength": 1145,
+            "actualSHA256": "e2dce4254289cc6fafa6ef215d58d36cead875e47b72d45e190232b35c1b3b5c",
+            "status": "passed"
+          },
+          {
+            "file": "test-regressions-output.txt",
+            "expectedByteLength": 2687,
+            "expectedSHA256": "02423d395b0b00465dbb33c11235f3d0f53f1692026d52b26642fea36c425137",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/test-regressions-output.txt",
+            "actualByteLength": 2687,
+            "actualSHA256": "02423d395b0b00465dbb33c11235f3d0f53f1692026d52b26642fea36c425137",
+            "status": "passed"
+          },
+          {
+            "file": "verify-comparison.mjs",
+            "expectedByteLength": 6918,
+            "expectedSHA256": "64e10c86a40575282f38d4cae7a111885cd8dd46cc8a9c419b9afc41d4b8ae49",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/verify-comparison.mjs",
+            "actualByteLength": 6918,
+            "actualSHA256": "64e10c86a40575282f38d4cae7a111885cd8dd46cc8a9c419b9afc41d4b8ae49",
+            "status": "passed"
+          }
+        ]
+      },
+      {
+        "manifest": "tests/evidence/integrated-2026-10-25-initializer-person05-v0.2.1/SHA256SUMS.json",
+        "scope": "historical",
+        "format": "array:file-byteLength-sha256",
+        "manifestSHA256": "c625410aefc73fea5c79793a23321e6e00e627621e46e63c8f3ddc3dbd7f4648",
+        "status": "passed",
+        "recordedCount": 3,
+        "passedCount": 3,
+        "failedCount": 0,
+        "entries": [
+          {
+            "file": ".gitattributes",
+            "expectedByteLength": 8,
+            "expectedSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-v0.2.1/.gitattributes",
+            "actualByteLength": 8,
+            "actualSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "status": "passed"
+          },
+          {
+            "file": "initializer-lifetime.json",
+            "expectedByteLength": 545839,
+            "expectedSHA256": "f53186d43b4b2fcc64a5ea1c235bf1711afd474048d3acd163d014a72d52b932",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-v0.2.1/initializer-lifetime.json",
+            "actualByteLength": 545839,
+            "actualSHA256": "f53186d43b4b2fcc64a5ea1c235bf1711afd474048d3acd163d014a72d52b932",
+            "status": "passed"
+          },
+          {
+            "file": "initializer-lifetime.tap",
+            "expectedByteLength": 334,
+            "expectedSHA256": "8737b94e83966d62ab7828c7d23ff0622c214a0507bb5051fbddae5e77f59247",
+            "path": "tests/evidence/integrated-2026-10-25-initializer-person05-v0.2.1/initializer-lifetime.tap",
+            "actualByteLength": 334,
+            "actualSHA256": "8737b94e83966d62ab7828c7d23ff0622c214a0507bb5051fbddae5e77f59247",
+            "status": "passed"
+          }
+        ]
+      },
+      {
+        "manifest": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/SHA256SUMS.json",
+        "scope": "historical",
+        "format": "array:file-byteLength-sha256",
+        "manifestSHA256": "383c72cfef8b4a89fe452263714e8980fae8d1fc75e13db9c334f437c0f567ae",
+        "status": "passed",
+        "recordedCount": 19,
+        "passedCount": 19,
+        "failedCount": 0,
+        "entries": [
+          {
+            "file": ".gitattributes",
+            "expectedByteLength": 8,
+            "expectedSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/.gitattributes",
+            "actualByteLength": 8,
+            "actualSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "status": "passed"
+          },
+          {
+            "file": "acceptance-command.json",
+            "expectedByteLength": 286,
+            "expectedSHA256": "f5212df1a15ac2083b9b3d667902fdcc62b794ac49c37fdacaf1ee6a62d1fc48",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/acceptance-command.json",
+            "actualByteLength": 286,
+            "actualSHA256": "f5212df1a15ac2083b9b3d667902fdcc62b794ac49c37fdacaf1ee6a62d1fc48",
+            "status": "passed"
+          },
+          {
+            "file": "acceptance.log",
+            "expectedByteLength": 1716,
+            "expectedSHA256": "98a663949444ba5458416e66a60661728a9db720d8dbc41fba8c1aab58255639",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/acceptance.log",
+            "actualByteLength": 1716,
+            "actualSHA256": "98a663949444ba5458416e66a60661728a9db720d8dbc41fba8c1aab58255639",
+            "status": "passed"
+          },
+          {
+            "file": "check.log",
+            "expectedByteLength": 359,
+            "expectedSHA256": "dafe45a77763f0bb85e2fd04f7720666451d79a52f552d93ec6ce5f4a325443a",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/check.log",
+            "actualByteLength": 359,
+            "actualSHA256": "dafe45a77763f0bb85e2fd04f7720666451d79a52f552d93ec6ce5f4a325443a",
+            "status": "passed"
+          },
+          {
+            "file": "history-preservation.json",
+            "expectedByteLength": 2138,
+            "expectedSHA256": "3f2344442d5f7e54fdb09da21db170f5ff1ba5d40f0fbfb64833b9e2ac48e790",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/history-preservation.json",
+            "actualByteLength": 2138,
+            "actualSHA256": "3f2344442d5f7e54fdb09da21db170f5ff1ba5d40f0fbfb64833b9e2ac48e790",
+            "status": "passed"
+          },
+          {
+            "file": "independent.json",
+            "expectedByteLength": 605694,
+            "expectedSHA256": "3d4203099b8aa0f5cdb6766fa23aa7f6ed2a60dda4ade0961c9ab8c1d5694106",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/independent.json",
+            "actualByteLength": 605694,
+            "actualSHA256": "3d4203099b8aa0f5cdb6766fa23aa7f6ed2a60dda4ade0961c9ab8c1d5694106",
+            "status": "passed"
+          },
+          {
+            "file": "independent.tap",
+            "expectedByteLength": 1606,
+            "expectedSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/independent.tap",
+            "actualByteLength": 1606,
+            "actualSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "status": "passed"
+          },
+          {
+            "file": "modules-command.json",
+            "expectedByteLength": 283,
+            "expectedSHA256": "a4ab232817f762bc6e769b9a67fbeb05d7efb3a6117f1374d1ef0ec2c706f929",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/modules-command.json",
+            "actualByteLength": 283,
+            "actualSHA256": "a4ab232817f762bc6e769b9a67fbeb05d7efb3a6117f1374d1ef0ec2c706f929",
+            "status": "passed"
+          },
+          {
+            "file": "modules.log",
+            "expectedByteLength": 7794,
+            "expectedSHA256": "c2c43ada9835e965fc1526e5791ef9e2a36084ed98c3fe9ff8048286009527e6",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/modules.log",
+            "actualByteLength": 7794,
+            "actualSHA256": "c2c43ada9835e965fc1526e5791ef9e2a36084ed98c3fe9ff8048286009527e6",
+            "status": "passed"
+          },
+          {
+            "file": "regression-loop-header.json",
+            "expectedByteLength": 114868,
+            "expectedSHA256": "9be68a985720dfc91ddf38d9698caefc170d8dcc21d9b012e94d6e2624de4e7f",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/regression-loop-header.json",
+            "actualByteLength": 114868,
+            "actualSHA256": "9be68a985720dfc91ddf38d9698caefc170d8dcc21d9b012e94d6e2624de4e7f",
+            "status": "passed"
+          },
+          {
+            "file": "regression-shadow.json",
+            "expectedByteLength": 64951,
+            "expectedSHA256": "db2aa47ab5d94c6aa1837bc930bf92dbadc493e231e63ca31128ab4c998d6d74",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/regression-shadow.json",
+            "actualByteLength": 64951,
+            "actualSHA256": "db2aa47ab5d94c6aa1837bc930bf92dbadc493e231e63ca31128ab4c998d6d74",
+            "status": "passed"
+          },
+          {
+            "file": "regressions-command.json",
+            "expectedByteLength": 287,
+            "expectedSHA256": "14470bb5ef172ebdf4b8898c483a21f803f4e99e709765632f7975ea12433216",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/regressions-command.json",
+            "actualByteLength": 287,
+            "actualSHA256": "14470bb5ef172ebdf4b8898c483a21f803f4e99e709765632f7975ea12433216",
+            "status": "passed"
+          },
+          {
+            "file": "regressions.log",
+            "expectedByteLength": 2687,
+            "expectedSHA256": "02423d395b0b00465dbb33c11235f3d0f53f1692026d52b26642fea36c425137",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/regressions.log",
+            "actualByteLength": 2687,
+            "actualSHA256": "02423d395b0b00465dbb33c11235f3d0f53f1692026d52b26642fea36c425137",
+            "status": "passed"
+          },
+          {
+            "file": "shared-checks-command.json",
+            "expectedByteLength": 474,
+            "expectedSHA256": "136dc7a72389dbf4f9f2f2a30fecd62acef10527211053a81059ac269dce2f31",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/shared-checks-command.json",
+            "actualByteLength": 474,
+            "actualSHA256": "136dc7a72389dbf4f9f2f2a30fecd62acef10527211053a81059ac269dce2f31",
+            "status": "passed"
+          },
+          {
+            "file": "summary.json",
+            "expectedByteLength": 5044,
+            "expectedSHA256": "6a89e0f60da1eac36a1207e697385aa213293c881b19869b0a4ce5abb097893d",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/summary.json",
+            "actualByteLength": 5044,
+            "actualSHA256": "6a89e0f60da1eac36a1207e697385aa213293c881b19869b0a4ce5abb097893d",
+            "status": "passed"
+          },
+          {
+            "file": "test-integration.log",
+            "expectedByteLength": 531,
+            "expectedSHA256": "9fcdc9960345e829d6a8debf9a12d0bb136f70f63c2556b1007b32d9ce738c2e",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/test-integration.log",
+            "actualByteLength": 531,
+            "actualSHA256": "9fcdc9960345e829d6a8debf9a12d0bb136f70f63c2556b1007b32d9ce738c2e",
+            "status": "passed"
+          },
+          {
+            "file": "test.log",
+            "expectedByteLength": 1145,
+            "expectedSHA256": "a31cfb21f2fd41ecc41be4281b4b8c06d7ba486485f41d2dc8b8b668b042bc5f",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/test.log",
+            "actualByteLength": 1145,
+            "actualSHA256": "a31cfb21f2fd41ecc41be4281b4b8c06d7ba486485f41d2dc8b8b668b042bc5f",
+            "status": "passed"
+          },
+          {
+            "file": "toolchain-local-setup.json",
+            "expectedByteLength": 834,
+            "expectedSHA256": "80afcd4686c1d8e294ab00a1c6db2cd3b6b549bda829ecc35bf4b59a10876c75",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/toolchain-local-setup.json",
+            "actualByteLength": 834,
+            "actualSHA256": "80afcd4686c1d8e294ab00a1c6db2cd3b6b549bda829ecc35bf4b59a10876c75",
+            "status": "passed"
+          },
+          {
+            "file": "verify-run.mjs",
+            "expectedByteLength": 7569,
+            "expectedSHA256": "f941b8e5e68c496c1dc7f6495ccd55581f07dfc29a909d02211a84d2f714e690",
+            "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/verify-run.mjs",
+            "actualByteLength": 7569,
+            "actualSHA256": "f941b8e5e68c496c1dc7f6495ccd55581f07dfc29a909d02211a84d2f714e690",
+            "status": "passed"
+          }
+        ]
+      },
+      {
+        "manifest": "tests/evidence/integrated-2026-10-25/SHA256SUMS.json",
+        "scope": "historical",
+        "format": "array:file-byteLength-sha256",
+        "manifestSHA256": "d2c2b08a10d7f46aa622f4c095a98d004a96450192f3a42dd2d02fc1b06526ce",
+        "status": "passed",
+        "recordedCount": 5,
+        "passedCount": 5,
+        "failedCount": 0,
+        "entries": [
+          {
+            "file": "independent.json",
+            "expectedByteLength": 606099,
+            "expectedSHA256": "ba13f6033268aa129623f8d298ad4e07a90cffa8b41fb54cc7e236234f5a251b",
+            "path": "tests/evidence/integrated-2026-10-25/independent.json",
+            "actualByteLength": 606099,
+            "actualSHA256": "ba13f6033268aa129623f8d298ad4e07a90cffa8b41fb54cc7e236234f5a251b",
+            "status": "passed"
+          },
+          {
+            "file": "independent.tap",
+            "expectedByteLength": 1606,
+            "expectedSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "path": "tests/evidence/integrated-2026-10-25/independent.tap",
+            "actualByteLength": 1606,
+            "actualSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "status": "passed"
+          },
+          {
+            "file": "regression-shadow.json",
+            "expectedByteLength": 65331,
+            "expectedSHA256": "c4e0f35c0fc44d60a2be1e4ec9ce909dfa03d62ff3c9728f8dffb9d0ae079725",
+            "path": "tests/evidence/integrated-2026-10-25/regression-shadow.json",
+            "actualByteLength": 65331,
+            "actualSHA256": "c4e0f35c0fc44d60a2be1e4ec9ce909dfa03d62ff3c9728f8dffb9d0ae079725",
+            "status": "passed"
+          },
+          {
+            "file": "regression-loop-header.json",
+            "expectedByteLength": 115246,
+            "expectedSHA256": "50a5f179648c25e885f35ff93b7c47d14d4c676efa11bb60dbadfe2bc0592e00",
+            "path": "tests/evidence/integrated-2026-10-25/regression-loop-header.json",
+            "actualByteLength": 115246,
+            "actualSHA256": "50a5f179648c25e885f35ff93b7c47d14d4c676efa11bb60dbadfe2bc0592e00",
+            "status": "passed"
+          },
+          {
+            "file": "summary.json",
+            "expectedByteLength": 2822,
+            "expectedSHA256": "e7caca94052f41c8fadf4d8e02ca6ad7fe1fa956e2402f90ab420852c368b660",
+            "path": "tests/evidence/integrated-2026-10-25/summary.json",
+            "actualByteLength": 2822,
+            "actualSHA256": "e7caca94052f41c8fadf4d8e02ca6ad7fe1fa956e2402f90ab420852c368b660",
+            "status": "passed"
+          }
+        ]
+      },
+      {
+        "manifest": "tests/evidence/integrated-v0.3.0-2026-10-25/SHA256SUMS.json",
+        "scope": "historical",
+        "format": "array:file-byteLength-sha256",
+        "manifestSHA256": "370cdeb9f07cd99f2e5941a0f2c3c5b551d6dceac7dc48901edf3d0415a4da8a",
+        "status": "passed",
+        "recordedCount": 32,
+        "passedCount": 32,
+        "failedCount": 0,
+        "entries": [
+          {
+            "file": ".gitattributes",
+            "expectedByteLength": 8,
+            "expectedSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/.gitattributes",
+            "actualByteLength": 8,
+            "actualSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "status": "passed"
+          },
+          {
+            "file": "acceptance-output.txt",
+            "expectedByteLength": 1610,
+            "expectedSHA256": "d4dc6b6e02066ebe6f530b4d9ac7edd61476fa75e681ee70c07b7aa226c4d89d",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/acceptance-output.txt",
+            "actualByteLength": 1610,
+            "actualSHA256": "d4dc6b6e02066ebe6f530b4d9ac7edd61476fa75e681ee70c07b7aa226c4d89d",
+            "status": "passed"
+          },
+          {
+            "file": "commands.json",
+            "expectedByteLength": 3062,
+            "expectedSHA256": "012e4d4ed6ef9f6f509e5f12be338b94ba69bf96cb94cbd0d866ce3a90120145",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/commands.json",
+            "actualByteLength": 3062,
+            "actualSHA256": "012e4d4ed6ef9f6f509e5f12be338b94ba69bf96cb94cbd0d866ce3a90120145",
+            "status": "passed"
+          },
+          {
+            "file": "contracts.tap",
+            "expectedByteLength": 2352,
+            "expectedSHA256": "afbfdf7735ec25abecb3cf5dbab8315402ee03172165e3bbc4b5011fe65d42ad",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/contracts.tap",
+            "actualByteLength": 2352,
+            "actualSHA256": "afbfdf7735ec25abecb3cf5dbab8315402ee03172165e3bbc4b5011fe65d42ad",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/acceptance-output.txt",
+            "expectedByteLength": 1610,
+            "expectedSHA256": "d4dc6b6e02066ebe6f530b4d9ac7edd61476fa75e681ee70c07b7aa226c4d89d",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/acceptance-output.txt",
+            "actualByteLength": 1610,
+            "actualSHA256": "d4dc6b6e02066ebe6f530b4d9ac7edd61476fa75e681ee70c07b7aa226c4d89d",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/independent.json",
+            "expectedByteLength": 606323,
+            "expectedSHA256": "111fc41f927d32b9678007109d1610874bd6e894e06c76546ac698a3d249d28c",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/independent.json",
+            "actualByteLength": 606323,
+            "actualSHA256": "111fc41f927d32b9678007109d1610874bd6e894e06c76546ac698a3d249d28c",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/independent.tap",
+            "expectedByteLength": 1606,
+            "expectedSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/independent.tap",
+            "actualByteLength": 1606,
+            "actualSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/initializer-lifetime.json",
+            "expectedByteLength": 545493,
+            "expectedSHA256": "2bf7d2f7864015e50f7892a2dcca9fea407c36bb9d088f320cf008782f8afb56",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/initializer-lifetime.json",
+            "actualByteLength": 545493,
+            "actualSHA256": "2bf7d2f7864015e50f7892a2dcca9fea407c36bb9d088f320cf008782f8afb56",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/initializer-lifetime.tap",
+            "expectedByteLength": 310,
+            "expectedSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/initializer-lifetime.tap",
+            "actualByteLength": 310,
+            "actualSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/initializer-output.txt",
+            "expectedByteLength": 314,
+            "expectedSHA256": "825bc1ea034a3d8771c9dc645f3200213317c29fea010aaa6673577312776c75",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/initializer-output.txt",
+            "actualByteLength": 314,
+            "actualSHA256": "825bc1ea034a3d8771c9dc645f3200213317c29fea010aaa6673577312776c75",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/loop-header-output.txt",
+            "expectedByteLength": 1828,
+            "expectedSHA256": "137a2923575539401592fab9d105a85466b477a4f16fdd82a3e261c31dc19f0d",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/loop-header-output.txt",
+            "actualByteLength": 1828,
+            "actualSHA256": "137a2923575539401592fab9d105a85466b477a4f16fdd82a3e261c31dc19f0d",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/metadata-baseline-check.txt",
+            "expectedByteLength": 277,
+            "expectedSHA256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/metadata-baseline-check.txt",
+            "actualByteLength": 277,
+            "actualSHA256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/regression-loop-header.json",
+            "expectedByteLength": 115458,
+            "expectedSHA256": "b7ac31f9308d4c28451176c490bec250b98b391b1ad7f3cf7036c208f96604ce",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/regression-loop-header.json",
+            "actualByteLength": 115458,
+            "actualSHA256": "b7ac31f9308d4c28451176c490bec250b98b391b1ad7f3cf7036c208f96604ce",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/regression-shadow.json",
+            "expectedByteLength": 65573,
+            "expectedSHA256": "f021a7a1c861b8b110fc54ed2294c7b35bd5cbff9b10d75a6ef0439dfe0d191a",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/regression-shadow.json",
+            "actualByteLength": 65573,
+            "actualSHA256": "f021a7a1c861b8b110fc54ed2294c7b35bd5cbff9b10d75a6ef0439dfe0d191a",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/shadow-output.txt",
+            "expectedByteLength": 610,
+            "expectedSHA256": "6233516b09436d2569169c7083caad392d68ea82ad927087ef28528975c2f915",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/shadow-output.txt",
+            "actualByteLength": 610,
+            "actualSHA256": "6233516b09436d2569169c7083caad392d68ea82ad927087ef28528975c2f915",
+            "status": "passed"
+          },
+          {
+            "file": "final-acceptance/summary.json",
+            "expectedByteLength": 15255,
+            "expectedSHA256": "be7451b265fe5569ffcc70dfc06d67ee894e9825e7285d69033f3b3ffe7cbb17",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/summary.json",
+            "actualByteLength": 15255,
+            "actualSHA256": "be7451b265fe5569ffcc70dfc06d67ee894e9825e7285d69033f3b3ffe7cbb17",
+            "status": "passed"
+          },
+          {
+            "file": "independent.json",
+            "expectedByteLength": 605772,
+            "expectedSHA256": "c85bfe32eeba7625ff50c8762441b998f562068bfe33391b6365c47bdd267a2e",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/independent.json",
+            "actualByteLength": 605772,
+            "actualSHA256": "c85bfe32eeba7625ff50c8762441b998f562068bfe33391b6365c47bdd267a2e",
+            "status": "passed"
+          },
+          {
+            "file": "independent.tap",
+            "expectedByteLength": 1606,
+            "expectedSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/independent.tap",
+            "actualByteLength": 1606,
+            "actualSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "status": "passed"
+          },
+          {
+            "file": "initial-SHA256SUMS.json",
+            "expectedByteLength": 2536,
+            "expectedSHA256": "2e937a6c8104814699091d4428db5007df2edb8283d650555feb34b07c2dd28d",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/initial-SHA256SUMS.json",
+            "actualByteLength": 2536,
+            "actualSHA256": "2e937a6c8104814699091d4428db5007df2edb8283d650555feb34b07c2dd28d",
+            "status": "passed"
+          },
+          {
+            "file": "initial-summary.json",
+            "expectedByteLength": 17856,
+            "expectedSHA256": "dc72d82a2fe0184061bfca8fb26b70228c22bcd41e68ab0d5b12e2ec13239160",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/initial-summary.json",
+            "actualByteLength": 17856,
+            "actualSHA256": "dc72d82a2fe0184061bfca8fb26b70228c22bcd41e68ab0d5b12e2ec13239160",
+            "status": "passed"
+          },
+          {
+            "file": "initializer-lifetime.json",
+            "expectedByteLength": 545078,
+            "expectedSHA256": "eb30b120c445a4ce92c3c78c14a24ff7d5f4f0b0442a35c383b7378dc4ffde93",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/initializer-lifetime.json",
+            "actualByteLength": 545078,
+            "actualSHA256": "eb30b120c445a4ce92c3c78c14a24ff7d5f4f0b0442a35c383b7378dc4ffde93",
+            "status": "passed"
+          },
+          {
+            "file": "initializer-lifetime.tap",
+            "expectedByteLength": 310,
+            "expectedSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/initializer-lifetime.tap",
+            "actualByteLength": 310,
+            "actualSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "status": "passed"
+          },
+          {
+            "file": "initializer-output.txt",
+            "expectedByteLength": 314,
+            "expectedSHA256": "825bc1ea034a3d8771c9dc645f3200213317c29fea010aaa6673577312776c75",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/initializer-output.txt",
+            "actualByteLength": 314,
+            "actualSHA256": "825bc1ea034a3d8771c9dc645f3200213317c29fea010aaa6673577312776c75",
+            "status": "passed"
+          },
+          {
+            "file": "integration-profile.json",
+            "expectedByteLength": 17529,
+            "expectedSHA256": "666d216c82e40bc926038397c6f5597a71e4192074eab860e2a08566e43750c9",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/integration-profile.json",
+            "actualByteLength": 17529,
+            "actualSHA256": "666d216c82e40bc926038397c6f5597a71e4192074eab860e2a08566e43750c9",
+            "status": "passed"
+          },
+          {
+            "file": "loop-header-output.txt",
+            "expectedByteLength": 1828,
+            "expectedSHA256": "137a2923575539401592fab9d105a85466b477a4f16fdd82a3e261c31dc19f0d",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/loop-header-output.txt",
+            "actualByteLength": 1828,
+            "actualSHA256": "137a2923575539401592fab9d105a85466b477a4f16fdd82a3e261c31dc19f0d",
+            "status": "passed"
+          },
+          {
+            "file": "modules.tap",
+            "expectedByteLength": 22639,
+            "expectedSHA256": "fbac480991fc245cb2124cc09ca18eff87a454fec5508498b9a399134ef38b5e",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/modules.tap",
+            "actualByteLength": 22639,
+            "actualSHA256": "fbac480991fc245cb2124cc09ca18eff87a454fec5508498b9a399134ef38b5e",
+            "status": "passed"
+          },
+          {
+            "file": "pipeline.tap",
+            "expectedByteLength": 830,
+            "expectedSHA256": "a5f31f062e5b0f2cdf009cdc0706ecdf84f23d202364fba2163c250513d94190",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/pipeline.tap",
+            "actualByteLength": 830,
+            "actualSHA256": "a5f31f062e5b0f2cdf009cdc0706ecdf84f23d202364fba2163c250513d94190",
+            "status": "passed"
+          },
+          {
+            "file": "regression-loop-header.json",
+            "expectedByteLength": 114974,
+            "expectedSHA256": "082a60817beea02d29a00e2f0fa55234cd6ceb03be99dc521418965354eff35c",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/regression-loop-header.json",
+            "actualByteLength": 114974,
+            "actualSHA256": "082a60817beea02d29a00e2f0fa55234cd6ceb03be99dc521418965354eff35c",
+            "status": "passed"
+          },
+          {
+            "file": "regression-shadow.json",
+            "expectedByteLength": 65059,
+            "expectedSHA256": "f9bc9a37c906b1a453e78ceda5c9959af025a75b598d52c6cf42e72aaf715556",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/regression-shadow.json",
+            "actualByteLength": 65059,
+            "actualSHA256": "f9bc9a37c906b1a453e78ceda5c9959af025a75b598d52c6cf42e72aaf715556",
+            "status": "passed"
+          },
+          {
+            "file": "shadow-output.txt",
+            "expectedByteLength": 610,
+            "expectedSHA256": "6233516b09436d2569169c7083caad392d68ea82ad927087ef28528975c2f915",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/shadow-output.txt",
+            "actualByteLength": 610,
+            "actualSHA256": "6233516b09436d2569169c7083caad392d68ea82ad927087ef28528975c2f915",
+            "status": "passed"
+          },
+          {
+            "file": "summary.json",
+            "expectedByteLength": 29472,
+            "expectedSHA256": "c8fb6401c6f4c54e7920212504c8c5e1a553cafeb3c27d8246985477dd4788b6",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/summary.json",
+            "actualByteLength": 29472,
+            "actualSHA256": "c8fb6401c6f4c54e7920212504c8c5e1a553cafeb3c27d8246985477dd4788b6",
+            "status": "passed"
+          },
+          {
+            "file": "toolchain-verify.json",
+            "expectedByteLength": 2272,
+            "expectedSHA256": "8367cca89004a9ea7f74005f7b86d7fd0b2f6688a9d2514737ebbc3d31d3940d",
+            "path": "tests/evidence/integrated-v0.3.0-2026-10-25/toolchain-verify.json",
+            "actualByteLength": 2272,
+            "actualSHA256": "8367cca89004a9ea7f74005f7b86d7fd0b2f6688a9d2514737ebbc3d31d3940d",
+            "status": "passed"
+          }
+        ]
+      },
+      {
+        "manifest": "ui/evidence/SHA256SUMS.json",
+        "scope": "historical",
+        "format": "object:filename-to-byteLength-sha256",
+        "manifestSHA256": "7d0e0ee52d6162a03ce0eb60b2a440a561086a2da011396506bc13d8251eb8fa",
+        "status": "passed",
+        "recordedCount": 11,
+        "passedCount": 11,
+        "failedCount": 0,
+        "entries": [
+          {
+            "file": "baseline-check.txt",
+            "expectedByteLength": 277,
+            "expectedSHA256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48",
+            "path": "ui/evidence/baseline-check.txt",
+            "actualByteLength": 277,
+            "actualSHA256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48",
+            "status": "passed"
+          },
+          {
+            "file": "browser-2026-10-25.json",
+            "expectedByteLength": 3215,
+            "expectedSHA256": "ba8d4ff86f90966d3874c7e92fa24db475673561c3a68bcee8e869c17e686237",
+            "path": "ui/evidence/browser-2026-10-25.json",
+            "actualByteLength": 3215,
+            "actualSHA256": "ba8d4ff86f90966d3874c7e92fa24db475673561c3a68bcee8e869c17e686237",
+            "status": "passed"
+          },
+          {
+            "file": "browser-breakpoint.jpg",
+            "expectedByteLength": 119349,
+            "expectedSHA256": "ad01f3e3d369a4a29f40b59bd4d6f30f26cf9b858cac648596ac2827ec5bc38e",
+            "path": "ui/evidence/browser-breakpoint.jpg",
+            "actualByteLength": 119349,
+            "actualSHA256": "ad01f3e3d369a4a29f40b59bd4d6f30f26cf9b858cac648596ac2827ec5bc38e",
+            "status": "passed"
+          },
+          {
+            "file": "browser-c-output.jpg",
+            "expectedByteLength": 71144,
+            "expectedSHA256": "ccbc88f8ace505de6a38d721473a0981dbf94ca53ee9bd19d27b5b4dbfad60f0",
+            "path": "ui/evidence/browser-c-output.jpg",
+            "actualByteLength": 71144,
+            "actualSHA256": "ccbc88f8ace505de6a38d721473a0981dbf94ca53ee9bd19d27b5b4dbfad60f0",
+            "status": "passed"
+          },
+          {
+            "file": "browser-conflict.jpg",
+            "expectedByteLength": 96694,
+            "expectedSHA256": "4652b57d673714a6da74448f2d2ef03e66bad2251f5945be2ea8497e48a689d7",
+            "path": "ui/evidence/browser-conflict.jpg",
+            "actualByteLength": 96694,
+            "actualSHA256": "4652b57d673714a6da74448f2d2ef03e66bad2251f5945be2ea8497e48a689d7",
+            "status": "passed"
+          },
+          {
+            "file": "browser-diagnostic.jpg",
+            "expectedByteLength": 91702,
+            "expectedSHA256": "35a5f73be60ee49e1289f81c7b0e0dc33fac6efc316a25b708bc792dc7612aff",
+            "path": "ui/evidence/browser-diagnostic.jpg",
+            "actualByteLength": 91702,
+            "actualSHA256": "35a5f73be60ee49e1289f81c7b0e0dc33fac6efc316a25b708bc792dc7612aff",
+            "status": "passed"
+          },
+          {
+            "file": "browser-stop-restart.jpg",
+            "expectedByteLength": 71410,
+            "expectedSHA256": "362e3bf7c8fa27b9c77ac71127273cd1af9f9c84b72f7e781737d6e46a6ef2f0",
+            "path": "ui/evidence/browser-stop-restart.jpg",
+            "actualByteLength": 71410,
+            "actualSHA256": "362e3bf7c8fa27b9c77ac71127273cd1af9f9c84b72f7e781737d6e46a6ef2f0",
+            "status": "passed"
+          },
+          {
+            "file": "contracts.tap",
+            "expectedByteLength": 2352,
+            "expectedSHA256": "ca71908f69328031a5f3641e0d6343ffde82261fd86b1e5f78c7fdad1ebee5ca",
+            "path": "ui/evidence/contracts.tap",
+            "actualByteLength": 2352,
+            "actualSHA256": "ca71908f69328031a5f3641e0d6343ffde82261fd86b1e5f78c7fdad1ebee5ca",
+            "status": "passed"
+          },
+          {
+            "file": "draft-export.json",
+            "expectedByteLength": 827,
+            "expectedSHA256": "0beca307262bb296552fa9de739a59fbc3af62f9d6bba2be624af73c5cfb5c15",
+            "path": "ui/evidence/draft-export.json",
+            "actualByteLength": 827,
+            "actualSHA256": "0beca307262bb296552fa9de739a59fbc3af62f9d6bba2be624af73c5cfb5c15",
+            "status": "passed"
+          },
+          {
+            "file": "integration.tap",
+            "expectedByteLength": 833,
+            "expectedSHA256": "0799ce15a0d3bddd3d1535bc7e306f8a79d76ab4bf94fa192c772bc371127ef0",
+            "path": "ui/evidence/integration.tap",
+            "actualByteLength": 833,
+            "actualSHA256": "0799ce15a0d3bddd3d1535bc7e306f8a79d76ab4bf94fa192c772bc371127ef0",
+            "status": "passed"
+          },
+          {
+            "file": "module-tests.tap",
+            "expectedByteLength": 5212,
+            "expectedSHA256": "48fb633cf1a798b1fdde99241f01d24699a231979602826f85c158e9370b63e9",
+            "path": "ui/evidence/module-tests.tap",
+            "actualByteLength": 5212,
+            "actualSHA256": "48fb633cf1a798b1fdde99241f01d24699a231979602826f85c158e9370b63e9",
+            "status": "passed"
+          }
+        ]
+      },
+      {
+        "manifest": "ui/evidence/integrated-v0.3.0-2026-10-25/SHA256SUMS.json",
+        "scope": "historical",
+        "format": "object:filename-to-byteLength-sha256",
+        "manifestSHA256": "7b1d12c0c85f898f41e8a7f34757517aa48fa52a44bc5a5fb385658219d00572",
+        "status": "passed",
+        "recordedCount": 5,
+        "passedCount": 5,
+        "failedCount": 0,
+        "entries": [
+          {
+            "file": "baseline-check.txt",
+            "expectedByteLength": 277,
+            "expectedSHA256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48",
+            "path": "ui/evidence/integrated-v0.3.0-2026-10-25/baseline-check.txt",
+            "actualByteLength": 277,
+            "actualSHA256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48",
+            "status": "passed"
+          },
+          {
+            "file": "contracts.tap",
+            "expectedByteLength": 2352,
+            "expectedSHA256": "1b65e9487864b42bcb14a8fa9d4257c39b46a967a23f9cf01ef7b758bea1f4cf",
+            "path": "ui/evidence/integrated-v0.3.0-2026-10-25/contracts.tap",
+            "actualByteLength": 2352,
+            "actualSHA256": "1b65e9487864b42bcb14a8fa9d4257c39b46a967a23f9cf01ef7b758bea1f4cf",
+            "status": "passed"
+          },
+          {
+            "file": "integration.tap",
+            "expectedByteLength": 832,
+            "expectedSHA256": "ceb67c69001803aef86b8312b95ce69cd737fab628e187e66a9289d42d9a8dfa",
+            "path": "ui/evidence/integrated-v0.3.0-2026-10-25/integration.tap",
+            "actualByteLength": 832,
+            "actualSHA256": "ceb67c69001803aef86b8312b95ce69cd737fab628e187e66a9289d42d9a8dfa",
+            "status": "passed"
+          },
+          {
+            "file": "module-tests.tap",
+            "expectedByteLength": 5214,
+            "expectedSHA256": "9eee2e5ec32e047b6cb5e96b7261935c66b098d649755b6217b514bf1052f7b5",
+            "path": "ui/evidence/integrated-v0.3.0-2026-10-25/module-tests.tap",
+            "actualByteLength": 5214,
+            "actualSHA256": "9eee2e5ec32e047b6cb5e96b7261935c66b098d649755b6217b514bf1052f7b5",
+            "status": "passed"
+          },
+          {
+            "file": "provenance.json",
+            "expectedByteLength": 20127,
+            "expectedSHA256": "2f2fc03acfc7d5dcab1b081dc6baffe6bc4921a195b2746a764376a859428baa",
+            "path": "ui/evidence/integrated-v0.3.0-2026-10-25/provenance.json",
+            "actualByteLength": 20127,
+            "actualSHA256": "2f2fc03acfc7d5dcab1b081dc6baffe6bc4921a195b2746a764376a859428baa",
+            "status": "passed"
+          }
+        ]
+      },
+      {
+        "manifest": "ui/evidence/integrated-v0.3.0-browser-2026-10-25/SHA256SUMS.json",
+        "scope": "historical",
+        "format": "object:filename-to-byteLength-sha256",
+        "manifestSHA256": "0ffba5c07f472e1ee7ba45da705f0d1c895481e472e111c573f3a830a9813b2b",
+        "status": "passed",
+        "recordedCount": 4,
+        "passedCount": 4,
+        "failedCount": 0,
+        "entries": [
+          {
+            "file": "final-dom.json",
+            "expectedByteLength": 357,
+            "expectedSHA256": "ce12b7d3dbfff0f0d8a35f3e14817501be0f1704be78f36d8bc7912e333a2274",
+            "path": "ui/evidence/integrated-v0.3.0-browser-2026-10-25/final-dom.json",
+            "actualByteLength": 357,
+            "actualSHA256": "ce12b7d3dbfff0f0d8a35f3e14817501be0f1704be78f36d8bc7912e333a2274",
+            "status": "passed"
+          },
+          {
+            "file": "observations.json",
+            "expectedByteLength": 2978,
+            "expectedSHA256": "182eb9921d76cc90815460089ffecc16c9bd893dfd06be00d9738fa6565a32a7",
+            "path": "ui/evidence/integrated-v0.3.0-browser-2026-10-25/observations.json",
+            "actualByteLength": 2978,
+            "actualSHA256": "182eb9921d76cc90815460089ffecc16c9bd893dfd06be00d9738fa6565a32a7",
+            "status": "passed"
+          },
+          {
+            "file": "paused.png",
+            "expectedByteLength": 23661,
+            "expectedSHA256": "007122aec0acd8ffbf864d22031ccb4bc21c45d23856b7bca4f9f29b906d478d",
+            "path": "ui/evidence/integrated-v0.3.0-browser-2026-10-25/paused.png",
+            "actualByteLength": 23661,
+            "actualSHA256": "007122aec0acd8ffbf864d22031ccb4bc21c45d23856b7bca4f9f29b906d478d",
+            "status": "passed"
+          },
+          {
+            "file": "restart.png",
+            "expectedByteLength": 71697,
+            "expectedSHA256": "703fec646c934959f436cf89a5f84d74bb24443f731d569c52d1452830de533f",
+            "path": "ui/evidence/integrated-v0.3.0-browser-2026-10-25/restart.png",
+            "actualByteLength": 71697,
+            "actualSHA256": "703fec646c934959f436cf89a5f84d74bb24443f731d569c52d1452830de533f",
+            "status": "passed"
+          }
+        ]
+      }
+    ]
+  },
+  "automated": {
+    "manifest": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/SHA256SUMS.json",
+    "scope": "new-automated",
+    "format": "array:file-byteLength-sha256",
+    "manifestSHA256": "e8897ed8a7769ef5439b91fa2db325705943c5393c7efcd911bcb95446a44602",
+    "status": "passed",
+    "recordedCount": 27,
+    "passedCount": 27,
+    "failedCount": 0,
+    "entries": [
+      {
+        "file": ".gitattributes",
+        "expectedByteLength": 8,
+        "expectedSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/.gitattributes",
+        "actualByteLength": 8,
+        "actualSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+        "status": "passed"
+      },
+      {
+        "file": "acceptance/independent.json",
+        "expectedByteLength": 605654,
+        "expectedSHA256": "cb35f81fc2b546bc3dc4b9fdc8d8e89b0d84ebc99912effc1e717286f164cae0",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance/independent.json",
+        "actualByteLength": 605654,
+        "actualSHA256": "cb35f81fc2b546bc3dc4b9fdc8d8e89b0d84ebc99912effc1e717286f164cae0",
+        "status": "passed"
+      },
+      {
+        "file": "acceptance/independent.tap",
+        "expectedByteLength": 1606,
+        "expectedSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance/independent.tap",
+        "actualByteLength": 1606,
+        "actualSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+        "status": "passed"
+      },
+      {
+        "file": "acceptance-command.json",
+        "expectedByteLength": 726,
+        "expectedSHA256": "c48b556087c091a0b0fcbcf5d7ba6ceee68ed3e79867bfd7cd0cebf5808f5fe4",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance-command.json",
+        "actualByteLength": 726,
+        "actualSHA256": "c48b556087c091a0b0fcbcf5d7ba6ceee68ed3e79867bfd7cd0cebf5808f5fe4",
+        "status": "passed"
+      },
+      {
+        "file": "acceptance.txt",
+        "expectedByteLength": 1690,
+        "expectedSHA256": "20eea470817b3b014f744aa5c9555022a6bc32d070f49aae0db3d23a302fb8de",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance.txt",
+        "actualByteLength": 1690,
+        "actualSHA256": "20eea470817b3b014f744aa5c9555022a6bc32d070f49aae0db3d23a302fb8de",
+        "status": "passed"
+      },
+      {
+        "file": "check-command.json",
+        "expectedByteLength": 649,
+        "expectedSHA256": "b98d9b954fd55d5aa40bebe47ad44b2deae8ca6185a12a8003a47aceffa5f7de",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/check-command.json",
+        "actualByteLength": 649,
+        "actualSHA256": "b98d9b954fd55d5aa40bebe47ad44b2deae8ca6185a12a8003a47aceffa5f7de",
+        "status": "passed"
+      },
+      {
+        "file": "check.txt",
+        "expectedByteLength": 349,
+        "expectedSHA256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/check.txt",
+        "actualByteLength": 349,
+        "actualSHA256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83",
+        "status": "passed"
+      },
+      {
+        "file": "contracts-command.json",
+        "expectedByteLength": 726,
+        "expectedSHA256": "0cbec4376ba2288fa6a45a1dbca8dfc2892d0e617d4eaa4475c165444661392a",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/contracts-command.json",
+        "actualByteLength": 726,
+        "actualSHA256": "0cbec4376ba2288fa6a45a1dbca8dfc2892d0e617d4eaa4475c165444661392a",
+        "status": "passed"
+      },
+      {
+        "file": "contracts.txt",
+        "expectedByteLength": 1125,
+        "expectedSHA256": "dfbca3aa58f70c0af387fa588d77c5aa149a88638b46916d96ed9237272ff194",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/contracts.txt",
+        "actualByteLength": 1125,
+        "actualSHA256": "dfbca3aa58f70c0af387fa588d77c5aa149a88638b46916d96ed9237272ff194",
+        "status": "passed"
+      },
+      {
+        "file": "initializer/initializer-lifetime.json",
+        "expectedByteLength": 544880,
+        "expectedSHA256": "ecaeac2189c130d723ad148b951826aeab0ca0c8bba2f8adc7c30cae2d0657df",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer/initializer-lifetime.json",
+        "actualByteLength": 544880,
+        "actualSHA256": "ecaeac2189c130d723ad148b951826aeab0ca0c8bba2f8adc7c30cae2d0657df",
+        "status": "passed"
+      },
+      {
+        "file": "initializer/initializer-lifetime.tap",
+        "expectedByteLength": 310,
+        "expectedSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer/initializer-lifetime.tap",
+        "actualByteLength": 310,
+        "actualSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+        "status": "passed"
+      },
+      {
+        "file": "initializer-command.json",
+        "expectedByteLength": 730,
+        "expectedSHA256": "050d6dc1b7db4993ee8a4d7639b2a4596c5cc73f079e776b9f36253b62d5e85c",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer-command.json",
+        "actualByteLength": 730,
+        "actualSHA256": "050d6dc1b7db4993ee8a4d7639b2a4596c5cc73f079e776b9f36253b62d5e85c",
+        "status": "passed"
+      },
+      {
+        "file": "initializer.txt",
+        "expectedByteLength": 401,
+        "expectedSHA256": "cb21977332b56b1da5c5c1356f2de88b8f85f66fd38d7579b854d52f68ae7a79",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer.txt",
+        "actualByteLength": 401,
+        "actualSHA256": "cb21977332b56b1da5c5c1356f2de88b8f85f66fd38d7579b854d52f68ae7a79",
+        "status": "passed"
+      },
+      {
+        "file": "integration-command.json",
+        "expectedByteLength": 769,
+        "expectedSHA256": "97b721c96eda83b1e53559659a9b8e6d050f6fdbe69ace64e65cc3564575207e",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/integration-command.json",
+        "actualByteLength": 769,
+        "actualSHA256": "97b721c96eda83b1e53559659a9b8e6d050f6fdbe69ace64e65cc3564575207e",
+        "status": "passed"
+      },
+      {
+        "file": "integration.txt",
+        "expectedByteLength": 516,
+        "expectedSHA256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/integration.txt",
+        "actualByteLength": 516,
+        "actualSHA256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c",
+        "status": "passed"
+      },
+      {
+        "file": "modules-command.json",
+        "expectedByteLength": 755,
+        "expectedSHA256": "ee34e8a2725b1f98c804de8c7bfcdce45d4beff6e4cdeb6243d4fe8f82560f41",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/modules-command.json",
+        "actualByteLength": 755,
+        "actualSHA256": "ee34e8a2725b1f98c804de8c7bfcdce45d4beff6e4cdeb6243d4fe8f82560f41",
+        "status": "passed"
+      },
+      {
+        "file": "modules.txt",
+        "expectedByteLength": 10363,
+        "expectedSHA256": "e4589102cf90f8e10ad00f4c725bd32aab31a920af975e8b1020d89b8cd21d24",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/modules.txt",
+        "actualByteLength": 10363,
+        "actualSHA256": "e4589102cf90f8e10ad00f4c725bd32aab31a920af975e8b1020d89b8cd21d24",
+        "status": "passed"
+      },
+      {
+        "file": "regressions/regression-loop-header.json",
+        "expectedByteLength": 114857,
+        "expectedSHA256": "8e2e05c441ab7a7f51d19a5a95782e3b813929dc108d2ce07a27b5e94eb2199d",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions/regression-loop-header.json",
+        "actualByteLength": 114857,
+        "actualSHA256": "8e2e05c441ab7a7f51d19a5a95782e3b813929dc108d2ce07a27b5e94eb2199d",
+        "status": "passed"
+      },
+      {
+        "file": "regressions/regression-shadow.json",
+        "expectedByteLength": 64951,
+        "expectedSHA256": "dc135cf0e94e12d75cc4b88a5d3814289bfa6b886d5fcfb58a6d9e24a7e88f82",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions/regression-shadow.json",
+        "actualByteLength": 64951,
+        "actualSHA256": "dc135cf0e94e12d75cc4b88a5d3814289bfa6b886d5fcfb58a6d9e24a7e88f82",
+        "status": "passed"
+      },
+      {
+        "file": "regressions-command.json",
+        "expectedByteLength": 722,
+        "expectedSHA256": "85658cc5dee13f04eac0a3c3dc1f68dae69e5b6a97cc462842846375f26c42f4",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions-command.json",
+        "actualByteLength": 722,
+        "actualSHA256": "85658cc5dee13f04eac0a3c3dc1f68dae69e5b6a97cc462842846375f26c42f4",
+        "status": "passed"
+      },
+      {
+        "file": "regressions.txt",
+        "expectedByteLength": 2561,
+        "expectedSHA256": "329b5d8492206eccd513a9372370af5ba02d09bd7a685d43cbc609490cc510d7",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions.txt",
+        "actualByteLength": 2561,
+        "actualSHA256": "329b5d8492206eccd513a9372370af5ba02d09bd7a685d43cbc609490cc510d7",
+        "status": "passed"
+      },
+      {
+        "file": "run-suite.mjs",
+        "expectedByteLength": 6949,
+        "expectedSHA256": "8bb5445de693c88475349c6666ee5a44067898e5a0b2ee8af5801d5ea8e3d482",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/run-suite.mjs",
+        "actualByteLength": 6949,
+        "actualSHA256": "8bb5445de693c88475349c6666ee5a44067898e5a0b2ee8af5801d5ea8e3d482",
+        "status": "passed"
+      },
+      {
+        "file": "summary.json",
+        "expectedByteLength": 9330,
+        "expectedSHA256": "b44e447ff17c2c5b50d706dcbb9e19f2337368895304c7aefa15722ccaf94518",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/summary.json",
+        "actualByteLength": 9330,
+        "actualSHA256": "b44e447ff17c2c5b50d706dcbb9e19f2337368895304c7aefa15722ccaf94518",
+        "status": "passed"
+      },
+      {
+        "file": "toolchain-verify-command.json",
+        "expectedByteLength": 748,
+        "expectedSHA256": "32b147eb778e17c83e9f924013107241f20217241c2e4c26956079f761126890",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/toolchain-verify-command.json",
+        "actualByteLength": 748,
+        "actualSHA256": "32b147eb778e17c83e9f924013107241f20217241c2e4c26956079f761126890",
+        "status": "passed"
+      },
+      {
+        "file": "toolchain-verify.txt",
+        "expectedByteLength": 224,
+        "expectedSHA256": "6562bb8566e41ddbee6cef99cf963a0ae3fbdd67d845607d748fa29c5dc60e68",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/toolchain-verify.txt",
+        "actualByteLength": 224,
+        "actualSHA256": "6562bb8566e41ddbee6cef99cf963a0ae3fbdd67d845607d748fa29c5dc60e68",
+        "status": "passed"
+      },
+      {
+        "file": "ui-storage-command.json",
+        "expectedByteLength": 751,
+        "expectedSHA256": "f7a0e935380cc2b2ebd1560ed020888bf78b1452fba8c0f45db968d3bacdba00",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/ui-storage-command.json",
+        "actualByteLength": 751,
+        "actualSHA256": "f7a0e935380cc2b2ebd1560ed020888bf78b1452fba8c0f45db968d3bacdba00",
+        "status": "passed"
+      },
+      {
+        "file": "ui-storage.txt",
+        "expectedByteLength": 2314,
+        "expectedSHA256": "5c8bbe953256c2c3fac5362bbd5548e927a2d944200860decaea7599ac4928b5",
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/ui-storage.txt",
+        "actualByteLength": 2314,
+        "actualSHA256": "5c8bbe953256c2c3fac5362bbd5548e927a2d944200860decaea7599ac4928b5",
+        "status": "passed"
+      }
+    ]
+  },
+  "writes": {
+    "onlyNewReport": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/review/history-integrity.json",
+    "historicalFilesModified": false,
+    "productFilesModified": false
+  },
+  "note": "Each recorded file is checked by actual bytes and length. Unknown schemas retain raw structure and are not marked passed. The new automated index is checked against its 27 entries; counts are file references, not functional tests."
+}
