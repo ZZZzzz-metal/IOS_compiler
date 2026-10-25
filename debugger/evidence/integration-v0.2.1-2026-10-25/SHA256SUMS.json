@@ -1,0 +1,82 @@
+[
+  {
+    "file": "acceptance-output.txt",
+    "byteLength": 1632,
+    "sha256": "4fa763a35818a7cca3db619e0cff85b8d4d2c9315c5fca839ebad90bbfa09091"
+  },
+  {
+    "file": "baseline-output.txt",
+    "byteLength": 359,
+    "sha256": "dafe45a77763f0bb85e2fd04f7720666451d79a52f552d93ec6ce5f4a325443a"
+  },
+  {
+    "file": "contracts-output.txt",
+    "byteLength": 1147,
+    "sha256": "1d4a0c8d8ee12370b1475c161c9a090cddace71c85c5470b20d383f2e6b54eef"
+  },
+  {
+    "file": "debugger.tap",
+    "byteLength": 12378,
+    "sha256": "08a6e59e7e669b7ffe3de72666e3dfaf654fecf9b434adef48835810acbdef53"
+  },
+  {
+    "file": "exit-codes.json",
+    "byteLength": 359,
+    "sha256": "0b1a8c20bea4137a43b225dbcff3ac8050a26430216b716c381e01f4650e7177"
+  },
+  {
+    "file": "independent/independent.json",
+    "byteLength": 605666,
+    "sha256": "cddaee8da0f2924893020dde0e4edbec6e6efccf61e055bdb6e586df14ca40d2"
+  },
+  {
+    "file": "independent/independent.tap",
+    "byteLength": 1606,
+    "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+  },
+  {
+    "file": "independent/regression-loop-header.json",
+    "byteLength": 114827,
+    "sha256": "685d5258ab087061e93e0a5ec09d4e56625771d6cc9faa0e1f2b4a1cee193fda"
+  },
+  {
+    "file": "independent/regression-shadow.json",
+    "byteLength": 64843,
+    "sha256": "0f142875ce1abd89576680e4f300c15bd8f2ea9b7fc4b6111d1ae8553dd4dcae"
+  },
+  {
+    "file": "integration.tap",
+    "byteLength": 861,
+    "sha256": "6fc52d6e9b35ee5dc7262f63963d762189e3442c54173f90c05c484a8a81f82b"
+  },
+  {
+    "file": "loop-header-output.txt",
+    "byteLength": 1918,
+    "sha256": "13d31ce308e15c0857ab162bde3cd97bdf7fd168d8cdd5b16706f4d8f2040057"
+  },
+  {
+    "file": "loop-initializer-output.txt",
+    "byteLength": 664,
+    "sha256": "c95424b67045bdaaae7e5ee986e02848c1c9455ea9cb54e2aad06bdf75a69925"
+  },
+  {
+    "file": "loop-initializer-review.json",
+    "byteLength": 62945,
+    "sha256": "b921b85c07e10df4e897add8dd406beb5927e7698f4b5103ab352bda54dd7150"
+  },
+  {
+    "file": "resource-and-history.json",
+    "byteLength": 17910,
+    "sha256": "fc1b75b86fe160fe22ded0f16f2625203dca906be0b21873c2d4a9c22c8de886"
+  },
+  {
+    "file": "shadow-output.txt",
+    "byteLength": 642,
+    "sha256": "e6a0b67b72d2993ca04d7f0c596e612eebb8e30174b8218bacaf39ffb53bfd71"
+  },
+  {
+    "file": "summary.json",
+    "byteLength": 1904,
+    "sha256": "1c949554e66a74ec576f3d6deaa8aaba492ab6539b952a1e81342037885c77c3"
+  }
+]
