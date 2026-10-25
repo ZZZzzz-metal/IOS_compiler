@@ -12,8 +12,8 @@ for (const capability of capabilities.capabilities) {
   assert.ok(capability.id && capability.requirement && capability.scope && capability.owner.length);
   if (capability.status === 'verified') {
     assert.ok(capability.evidence.length, `Missing evidence: ${capability.id}`);
-    for (const path of capability.evidence) await access(new URL(path, root));
   }
+  for (const path of capability.evidence) await access(new URL(path, root));
 }
 for (const path of ['compiler/README.md', 'debugger/README.md', 'ui/README.md', 'storage/README.md', 'tests/README.md', 'fixtures/README.md', 'docs/validation/README.md', 'contracts/protocol.d.ts', 'docs/architecture/ROUTES.md', 'docs/handoffs/01.md']) {
   await access(new URL(path, root));

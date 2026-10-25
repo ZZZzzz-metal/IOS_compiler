@@ -1,0 +1,154 @@
+TAP version 13
+# Subtest: source export preserves exact user bytes while project export round-trips driver and stdin
+ok 1 - source export preserves exact user bytes while project export round-trips driver and stdin
+  ---
+  duration_ms: 3.9449
+  type: 'test'
+  ...
+# Subtest: invalid or unsupported project imports fail without invoking storage
+ok 2 - invalid or unsupported project imports fail without invoking storage
+  ---
+  duration_ms: 0.525
+  type: 'test'
+  ...
+# Subtest: unavailable local storage returns an explicit failure
+ok 3 - unavailable local storage returns an explicit failure
+  ---
+  duration_ms: 0.2588
+  type: 'test'
+  ...
+# Subtest: autosave serializes writes and coalesces typing during a slow save
+ok 4 - autosave serializes writes and coalesces typing during a slow save
+  ---
+  duration_ms: 0.4842
+  type: 'test'
+  ...
+# Subtest: failed in-flight save retains the latest edit for an explicit retry
+ok 5 - failed in-flight save retains the latest edit for an explicit retry
+  ---
+  duration_ms: 0.3056
+  type: 'test'
+  ...
+# Subtest: a failed restore cannot silently create a new draft over unread local data
+ok 6 - a failed restore cannot silently create a new draft over unread local data
+  ---
+  duration_ms: 0.1797
+  type: 'test'
+  ...
+# Subtest: highlight escapes source markup and keeps multiline comments inside valid per-line spans
+ok 7 - highlight escapes source markup and keeps multiline comments inside valid per-line spans
+  ---
+  duration_ms: 1.3831
+  type: 'test'
+  ...
+# Subtest: indent at the beginning of an empty first line does not duplicate the newline
+ok 8 - indent at the beginning of an empty first line does not duplicate the newline
+  ---
+  duration_ms: 0.4841
+  type: 'test'
+  ...
+# Subtest: multiline indent and outdent exclude the line after a selected newline
+ok 9 - multiline indent and outdent exclude the line after a selected newline
+  ---
+  duration_ms: 0.1367
+  type: 'test'
+  ...
+# Subtest: UI consumer reads a fresh actual C++ build, bound breakpoint, all steps, caller, containers and output
+ok 10 - UI consumer reads a fresh actual C++ build, bound breakpoint, all steps, caller, containers and output
+  ---
+  duration_ms: 1190.1982
+  type: 'test'
+  ...
+# Subtest: editable driver compiles real separate user.inc and driver.cpp and preserves driver edit identity
+ok 11 - editable driver compiles real separate user.inc and driver.cpp and preserves driver edit identity
+  ---
+  duration_ms: 1312.9901
+  type: 'test'
+  ...
+# Subtest: late start ACK cannot replace an already terminated short program
+ok 12 - late start ACK cannot replace an already terminated short program
+  ---
+  duration_ms: 1.7533
+  type: 'test'
+  ...
+# Subtest: resume immediately invalidates pause; stale stack and ACK do not restore it
+ok 13 - resume immediately invalidates pause; stale stack and ACK do not restore it
+  ---
+  duration_ms: 1.8944
+  type: 'test'
+  ...
+# Subtest: stop dispatches while start ACK remains unresolved
+ok 14 - stop dispatches while start ACK remains unresolved
+  ---
+  duration_ms: 0.1799
+  type: 'test'
+  ...
+# Subtest: foreign sessions and duplicate events cannot overwrite current view
+ok 15 - foreign sessions and duplicate events cannot overwrite current view
+  ---
+  duration_ms: 0.2402
+  type: 'test'
+  ...
+# Subtest: sequence gap clears pause, then resync replays only newer contiguous events
+ok 16 - sequence gap clears pause, then resync replays only newer contiguous events
+  ---
+  duration_ms: 0.7403
+  type: 'test'
+  ...
+# Subtest: resync refuses an older snapshot and keeps inspection disabled
+ok 17 - resync refuses an older snapshot and keeps inspection disabled
+  ---
+  duration_ms: 0.4631
+  type: 'test'
+  ...
+# Subtest: a previous frame variable response cannot replace selected caller data
+ok 18 - a previous frame variable response cannot replace selected caller data
+  ---
+  duration_ms: 1.0812
+  type: 'test'
+  ...
+# Subtest: resync buffer overflow requests another authoritative snapshot
+ok 19 - resync buffer overflow requests another authoritative snapshot
+  ---
+  duration_ms: 0.2277
+  type: 'test'
+  ...
+# Subtest: scope pagination advertises unread values and appends each page once
+ok 20 - scope pagination advertises unread values and appends each page once
+  ---
+  duration_ms: 0.5523
+  type: 'test'
+  ...
+# Subtest: a rejected stale query does not display an error on a new pause
+ok 21 - a rejected stale query does not display an error on a new pause
+  ---
+  duration_ms: 0.4606
+  type: 'test'
+  ...
+# Subtest: output history stays bounded and truncation is explicit
+ok 22 - output history stays bounded and truncation is explicit
+  ---
+  duration_ms: 0.295
+  type: 'test'
+  ...
+# Subtest: breakpoint replacements are serialized and actual bindings come from events
+ok 23 - breakpoint replacements are serialized and actual bindings come from events
+  ---
+  duration_ms: 0.2781
+  type: 'test'
+  ...
+# Subtest: an old rejected ACK cannot invalidate the authoritative resynced pause
+ok 24 - an old rejected ACK cannot invalidate the authoritative resynced pause
+  ---
+  duration_ms: 0.2035
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2707.3823

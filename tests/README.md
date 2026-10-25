@@ -14,9 +14,9 @@ node tests/reproduce.mjs loop-header
 
 本次集成复测使用30项实际编译调试资源构成的开发候选。测试自行调用 CompilerProbe 真正编译各独立样例，再将实际结果包装为开发 BuildManifest 交给 DebuggerAdapter/WorkerDebuggerAdapter。此路径与 `npm.cmd run test:integration` 的完整 CompilerAdapter 接口检查分别记录，不能互相替代。历史5号的模块候选、20/21主套件和两条失败证据均保留原样。
 
-新证据默认写入 `tests/evidence/integrated-2026-10-25/`，文件为 independent.json、independent.tap、regression-shadow.json、regression-loop-header.json；不会覆盖上层历史文件或历史SHA256SUMS.json。JSON包含源码快照、构建hash、控制/查询/事件、受测组件profile、Git版本和未提交状态，以及验证脚本、fixture清单、样例与Node入口的SHA-256。复测后的汇总与校验清单也放在该目录。
+新证据默认写入每个进程独有的 `tests/evidence/integrated-run-<UTC时间戳>-<进程号>/`，避免普通复测覆盖任何已封存目录。文件为 independent.json、independent.tap、regression-shadow.json、regression-loop-header.json；不同命令各自使用新目录。JSON包含源码快照、构建hash、控制/查询/事件、受测组件profile、Git版本和未提交状态，以及验证脚本、fixture清单、样例与Node入口的SHA-256。
 
-可设置 `VALIDATION_EVIDENCE_DIR` 指向 `tests/evidence/integrated-*` 下的另一个目录（相对于仓库根，或该范围内的绝对路径），为不同复测保留独立记录。输出路径不允许使用历史证据根目录。
+可设置 `VALIDATION_EVIDENCE_DIR` 指向 `tests/evidence/integrated-*` 下的全新目录（相对于仓库根，或该范围内的绝对路径），将同轮多个命令的结果集中保存。不要指定已封存目录；输出路径不允许使用历史证据根目录。
 
 如需测试其他已准备的工作区，可显式设置 `VALIDATION_COMPILER_ROOT`、`VALIDATION_DEBUGGER_ROOT` 为各自仓库根的绝对路径。此时使用外部调试模块的开发candidate，证据会注明 debugger-module-profile；默认当前同仓库使用 integration-resource-profile。固定工具链若缺失，按 compiler/README.md 准备；验收脚本不自动联网获取资源。
 

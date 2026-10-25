@@ -25,7 +25,8 @@ export const baseCandidate = candidateMode === 'integration-resource-profile'
   ? await (await load(root, 'app/integration/candidate.mjs')).createIntegrationCandidate()
   : await createCandidate();
 const evidenceBase = resolve(local, 'tests/evidence');
-const evidencePath = resolve(local, process.env.VALIDATION_EVIDENCE_DIR ?? 'tests/evidence/integrated-2026-10-25');
+const defaultEvidenceDirectory = `tests/evidence/integrated-run-${new Date().toISOString().replace(/[:.]/g, '-')}-${process.pid}`;
+const evidencePath = resolve(local, process.env.VALIDATION_EVIDENCE_DIR ?? defaultEvidenceDirectory);
 const evidenceRelative = relative(evidenceBase, evidencePath);
 if (!evidencePath.startsWith(evidenceBase + sep) || !evidenceRelative.split(sep)[0].startsWith('integrated-'))
   throw new Error('VALIDATION_EVIDENCE_DIR must be a tests/evidence/integrated-* directory; historical evidence is read-only.');

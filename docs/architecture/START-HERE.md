@@ -2,27 +2,38 @@
 
 仓库：`C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger`
 
-更新：2026-10-25。集成分支 integration；首次架构标签 baseline-v0.1.0 和 2/3 联合标签 integration-v0.2.0 保持固定；本轮加入 5 号验收材料，交付使用 integration-v0.2.1。协议仍为 0.1.0-draft.1。标签建立后固定不移动；后续修订另发标签。当前不配置远程仓库，没有上传 GitHub 或发布应用。精确提交与结果见 [编译调试集成](INTEGRATION-2026-10-25.md) 及 [验收接入](VALIDATION-INTEGRATION-2026-10-25.md)。
+更新：2026-10-25。集成分支integration；本轮交付integration-v0.3.0，包含新初始化修复、最小界面/保存和独立回归。baseline-v0.1.0、integration-v0.2.0、integration-v0.2.1均固定不动。协议仍为0.1.0-draft.1。后续修订另发标签，不移动旧标签。当前没有上传GitHub或发布应用；来源、实际结果及限制见 [v0.3.0统一界面集成报告](UI-INTEGRATION-2026-10-25.md)。
 
 ## 每个上下文第一次进入
 
 1. 读取 AGENTS.md、README.md、contracts/README.md、自己的目录说明、docs/architecture/STATUS.md。
-2. 在仓库执行 `git rev-parse integration-v0.2.1` 记录本轮完整提交号；`git status --short` 检查现有改动。首次标签仍可用 `git rev-parse baseline-v0.1.0` 查看。
-3. 已有合适的独立工作区就复用。2/3/5 已有模块分支和工作区，不重复创建，也不由 1 号切换它们的分支。已有工作区先保留未提交改动，再按所有权协调合入新标签；没有工作区的 4 号从本轮标签建立，不能在 1 号 integration 工作区切分支并行编辑。
+2. 执行 `git rev-parse integration-v0.3.0` 记录本轮完整提交号；`git status --short` 检查现有改动。历史标签保持可查。
+3. 2/3/4/5现在均有独立工作区和模块分支，必须优先复用。先保留未提交与未跟踪改动，再由各自负责人同步本轮标签；不要重建目录、重置文件或在1号integration工作区切分支并行编辑。1号不会代为切换其他负责人的工作区。
 4. 确认 `git branch --show-current` 和 `git rev-parse --show-toplevel` 指向自己的工作区，再只修改所有权内的文件。
 
-下列命令仅供尚未建立工作区的对应上下文执行；先确认本轮标签存在：
+已有工作区同步前先在自己的目录核对：
 
 ```powershell
-Set-Location -LiteralPath 'C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger'
-git worktree add -b module/04-ui '../ipad-debugger-04' integration-v0.2.1
+git status --short
+git branch --show-current
+git rev-parse --show-toplevel
+git rev-parse integration-v0.3.0
 ```
 
-目录存在或分支已存在时先检查/复用，不删除重建。支持的 Codex 项目可优先用应用的工作区创建工具，并指定相同基线；本地命令是无需远程配置的备选。
+确认本轮标签已发布、改动已保留后，才按模块交接同步；遇到冲突交由相关所有者解释并保留双方修改。禁止删除重建已有工作区。
 
 ## 当前最小启动
 
-开发电脑使用 Node.js 22+，无第三方 npm 依赖。先查看状态并检查共同约定：
+开发电脑使用Node.js 22+，无第三方npm依赖。先检查工具链本地字节，再启动最小界面：
+
+```powershell
+npm.cmd run prepare:toolchain -- --verify-only
+npm.cmd start
+```
+
+`npm start` 与 `npm run start:ui` 均先生成当前组合的UI开发配置，再启动本机静态服务；默认地址为 `http://127.0.0.1:4184/ui/probe.html`。`npm run prepare:ui` 可单独准备配置。若该端口受旧实验缓存影响，可在启动前设置 `UI_PROBE_PORT` 为其他空闲端口；不清理旧缓存或草稿。编译与执行在浏览器Worker完成，静态服务器不提供编译API。此入口只供开发电脑验证，不是iPad安装入口。
+
+状态检查已迁移为 `npm run status`；`node app/main.mjs`及模块参数仍保留：
 
 ```powershell
 node app/main.mjs
@@ -31,6 +42,7 @@ node app/main.mjs debugger
 node app/main.mjs ui
 node app/main.mjs storage
 node app/main.mjs validation
+npm.cmd run status
 node scripts/check-baseline.mjs
 node --test contracts/checks/*.test.mjs
 ```
@@ -44,11 +56,15 @@ npm.cmd run test:integration
 npm.cmd run demo:integration
 npm.cmd run test:acceptance
 npm.cmd run test:regressions
+npm.cmd run test:initializer
+npm.cmd run test:ui
 ```
 
 `prepare:toolchain -- --verify-only` 只校验固定的本地工具链资源，不联网或写入。省略 `--verify-only` 时会按锁定来源下载缺少的文件；资源准备细节见 compiler/README.md。当前电脑的集成仓库已具备并校验这些字节；大二进制未加入 Git，单独新建工作区不会自动获得它们。保留相同工具链清单与 SHA-256，不用未校验的替代文件。真实联合演示每轮生成新源码、由 CompilerAdapter 构建并交给 WorkerDebuggerAdapter 执行。
 
-需要浏览器诊断入口时：
+运行验收或UI证据归档前，将 `VALIDATION_EVIDENCE_DIR`、`UI_EVIDENCE_DIR` 分别指定为本仓库 `tests/evidence/integrated-*`、`ui/evidence/integrated-*` 下全新的复测目录；具体参数见各测试说明。不要覆盖已封存证据，独立复验应另选目录。`npm run verify:ui`用于UI开发检查与归档，不代表5号已独立签收。
+
+需要旧模块浏览器诊断入口时：
 
 ```powershell
 npm.cmd run prepare:probe
@@ -61,6 +77,6 @@ npm.cmd run start:probe
 
 每位负责人填写 docs/handoffs/编号.md，记录起始标签、实际提交号、变更文件、运行命令/环境/结果、未验证、依赖与下一步。提交后由用户转发记录或在共享仓库提供分支名；不要假设不同聊天共享历史，也不要未经用户授权互发消息。
 
-1 号已合入 2 号 34e46b9、3 号 4138dcd 及 5 号 aa6c9de，分别形成合并提交 3dba55b、e4e1ceb、0b0ded0。5 号独立样例、原始失败与当前集成复测证据均保留，结果见验收接入报告。5 号可在自身工作区核对新标签；4 号继续按 G2 前有限原型范围消费真实适配器。
+本轮已合入3号09a4a12、4号49eda46、5号d20b485，对应合并提交496c52e、fc72445、94ba2a7；2号34e46b9沿用。VAL-003修复分支已有5号6场景独立对照通过证据，原VAL-001/002和历史失败仍保留。本轮组合结果集中在UI集成报告；新引擎与界面/保存的整体独立验收仍交5号复验，不把4号自测或1号集成检查写成5号签收。用户将在1号交付后通知5号。
 
 G2 前不发布 frozen 路线；G2 后才扩大 UI 与安装交付。后续基线迁移由 1 号说明，不能自行更新协议号形成多套契约。

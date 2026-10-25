@@ -1,0 +1,10 @@
+{
+  "draftStatus": "草稿已保存 · 版本 6",
+  "exit": "exit · 返回 0",
+  "language": "c",
+  "output": "merged-restart=43\n",
+  "source": "#include <stdio.h>\nint main(void) { puts(\"merged-restart=43\"); return 0; }\n// edited-during-infinite-v03\n",
+  "status": "已结束",
+  "stdin": "21\n",
+  "title": "算法工作台 · 四号验证原型"
+}

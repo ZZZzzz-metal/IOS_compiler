@@ -74,8 +74,30 @@ test('editable driver compiles real separate user.inc and driver.cpp and preserv
   const snapshot=createSnapshot(files,'driver.cpp');
   const request={requestId:fresh(),snapshot,compatibilityId:candidate.profile.compatibilityId,language:'cpp',standard:'c++17',mode:'debug',optimization:'O0'};
   const result=await compiler.compile(request);assert.equal(result.status,'succeeded',JSON.stringify(result));assert.ok(artifacts.has(result.build.executable.relativePath));
+  async function runActual(compiled,source,expected){
+    const adapter=new WorkerDebuggerAdapter({profile:candidate.profile,resources:candidate.resources,baseURL:candidate.baseURL,
+      createWorker:()=>new Worker(new URL('../../debugger/src/node-worker.mjs',import.meta.url),{execArgv:[]})});
+    const controller=new SessionController({adapter});
+    try{
+      await adapter.registerResource(compiled.build.executable.relativePath,artifacts.get(compiled.build.executable.relativePath));
+      assert.equal((await controller.start({sessionId:fresh(),buildId:compiled.build.buildId,sourceHash:source.sourceHash,
+        compatibilityId:candidate.profile.compatibilityId,build:compiled.build,snapshot:source,mode:'debug',
+        stdin:{text:'',encoding:'utf-8',eof:true},initialBreakpoints:[],stopOnEntry:false,
+        limits:{runningTimeMs:30000,outputBytes:65536,variablePageSize:32,memoryBytes:268435456}})).accepted,true);
+      const view=await until(controller,v=>v.session?.state==='terminated');
+      assert.equal(view.session.sourceHash,source.sourceHash);
+      assert.equal(view.session.termination.reason,'exit');assert.equal(view.session.termination.exitCode,0);
+      assert.equal(view.outputTail.map(part=>part.text).join(''),expected);
+    }finally{controller.dispose();adapter.dispose();}
+  }
+  await runActual(result,snapshot,'42\n');
   const changed=createSnapshot(files.map(f=>f.role==='driver'?{...f,text:f.text.replace('21','22')}:f),'driver.cpp');
   assert.notEqual(changed.sourceHash,snapshot.sourceHash);
+  const recompiled=await compiler.compile({...request,requestId:fresh(),snapshot:changed});
+  assert.equal(recompiled.status,'succeeded',JSON.stringify(recompiled));
+  assert.notEqual(recompiled.build.buildId,result.build.buildId);
+  assert.notEqual(recompiled.build.executable.sha256,result.build.executable.sha256);
+  await runActual(recompiled,changed,'44\n');
   const bad=createSnapshot(files.map(f=>f.role==='driver'?{...f,text:f.text.replace('return 0;','return missing;')}:f),'driver.cpp');
   const failure=await compiler.compile({...request,requestId:fresh(),snapshot:bad});assert.equal(failure.status,'failed');
   assert.ok(failure.diagnostics.some(d=>d.range?.start.sourcePath==='driver.cpp'),JSON.stringify(failure.diagnostics));

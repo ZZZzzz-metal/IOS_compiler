@@ -1,0 +1,162 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "acceptance-output.txt",
+    "byteLength": 1610,
+    "sha256": "d4dc6b6e02066ebe6f530b4d9ac7edd61476fa75e681ee70c07b7aa226c4d89d"
+  },
+  {
+    "file": "commands.json",
+    "byteLength": 3062,
+    "sha256": "012e4d4ed6ef9f6f509e5f12be338b94ba69bf96cb94cbd0d866ce3a90120145"
+  },
+  {
+    "file": "contracts.tap",
+    "byteLength": 2352,
+    "sha256": "afbfdf7735ec25abecb3cf5dbab8315402ee03172165e3bbc4b5011fe65d42ad"
+  },
+  {
+    "file": "final-acceptance/acceptance-output.txt",
+    "byteLength": 1610,
+    "sha256": "d4dc6b6e02066ebe6f530b4d9ac7edd61476fa75e681ee70c07b7aa226c4d89d"
+  },
+  {
+    "file": "final-acceptance/independent.json",
+    "byteLength": 606323,
+    "sha256": "111fc41f927d32b9678007109d1610874bd6e894e06c76546ac698a3d249d28c"
+  },
+  {
+    "file": "final-acceptance/independent.tap",
+    "byteLength": 1606,
+    "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+  },
+  {
+    "file": "final-acceptance/initializer-lifetime.json",
+    "byteLength": 545493,
+    "sha256": "2bf7d2f7864015e50f7892a2dcca9fea407c36bb9d088f320cf008782f8afb56"
+  },
+  {
+    "file": "final-acceptance/initializer-lifetime.tap",
+    "byteLength": 310,
+    "sha256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029"
+  },
+  {
+    "file": "final-acceptance/initializer-output.txt",
+    "byteLength": 314,
+    "sha256": "825bc1ea034a3d8771c9dc645f3200213317c29fea010aaa6673577312776c75"
+  },
+  {
+    "file": "final-acceptance/loop-header-output.txt",
+    "byteLength": 1828,
+    "sha256": "137a2923575539401592fab9d105a85466b477a4f16fdd82a3e261c31dc19f0d"
+  },
+  {
+    "file": "final-acceptance/metadata-baseline-check.txt",
+    "byteLength": 277,
+    "sha256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48"
+  },
+  {
+    "file": "final-acceptance/regression-loop-header.json",
+    "byteLength": 115458,
+    "sha256": "b7ac31f9308d4c28451176c490bec250b98b391b1ad7f3cf7036c208f96604ce"
+  },
+  {
+    "file": "final-acceptance/regression-shadow.json",
+    "byteLength": 65573,
+    "sha256": "f021a7a1c861b8b110fc54ed2294c7b35bd5cbff9b10d75a6ef0439dfe0d191a"
+  },
+  {
+    "file": "final-acceptance/shadow-output.txt",
+    "byteLength": 610,
+    "sha256": "6233516b09436d2569169c7083caad392d68ea82ad927087ef28528975c2f915"
+  },
+  {
+    "file": "final-acceptance/summary.json",
+    "byteLength": 15255,
+    "sha256": "be7451b265fe5569ffcc70dfc06d67ee894e9825e7285d69033f3b3ffe7cbb17"
+  },
+  {
+    "file": "independent.json",
+    "byteLength": 605772,
+    "sha256": "c85bfe32eeba7625ff50c8762441b998f562068bfe33391b6365c47bdd267a2e"
+  },
+  {
+    "file": "independent.tap",
+    "byteLength": 1606,
+    "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+  },
+  {
+    "file": "initial-SHA256SUMS.json",
+    "byteLength": 2536,
+    "sha256": "2e937a6c8104814699091d4428db5007df2edb8283d650555feb34b07c2dd28d"
+  },
+  {
+    "file": "initial-summary.json",
+    "byteLength": 17856,
+    "sha256": "dc72d82a2fe0184061bfca8fb26b70228c22bcd41e68ab0d5b12e2ec13239160"
+  },
+  {
+    "file": "initializer-lifetime.json",
+    "byteLength": 545078,
+    "sha256": "eb30b120c445a4ce92c3c78c14a24ff7d5f4f0b0442a35c383b7378dc4ffde93"
+  },
+  {
+    "file": "initializer-lifetime.tap",
+    "byteLength": 310,
+    "sha256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029"
+  },
+  {
+    "file": "initializer-output.txt",
+    "byteLength": 314,
+    "sha256": "825bc1ea034a3d8771c9dc645f3200213317c29fea010aaa6673577312776c75"
+  },
+  {
+    "file": "integration-profile.json",
+    "byteLength": 17529,
+    "sha256": "666d216c82e40bc926038397c6f5597a71e4192074eab860e2a08566e43750c9"
+  },
+  {
+    "file": "loop-header-output.txt",
+    "byteLength": 1828,
+    "sha256": "137a2923575539401592fab9d105a85466b477a4f16fdd82a3e261c31dc19f0d"
+  },
+  {
+    "file": "modules.tap",
+    "byteLength": 22639,
+    "sha256": "fbac480991fc245cb2124cc09ca18eff87a454fec5508498b9a399134ef38b5e"
+  },
+  {
+    "file": "pipeline.tap",
+    "byteLength": 830,
+    "sha256": "a5f31f062e5b0f2cdf009cdc0706ecdf84f23d202364fba2163c250513d94190"
+  },
+  {
+    "file": "regression-loop-header.json",
+    "byteLength": 114974,
+    "sha256": "082a60817beea02d29a00e2f0fa55234cd6ceb03be99dc521418965354eff35c"
+  },
+  {
+    "file": "regression-shadow.json",
+    "byteLength": 65059,
+    "sha256": "f9bc9a37c906b1a453e78ceda5c9959af025a75b598d52c6cf42e72aaf715556"
+  },
+  {
+    "file": "shadow-output.txt",
+    "byteLength": 610,
+    "sha256": "6233516b09436d2569169c7083caad392d68ea82ad927087ef28528975c2f915"
+  },
+  {
+    "file": "summary.json",
+    "byteLength": 29472,
+    "sha256": "c8fb6401c6f4c54e7920212504c8c5e1a553cafeb3c27d8246985477dd4788b6"
+  },
+  {
+    "file": "toolchain-verify.json",
+    "byteLength": 2272,
+    "sha256": "8367cca89004a9ea7f74005f7b86d7fd0b2f6688a9d2514737ebbc3d31d3940d"
+  }
+]

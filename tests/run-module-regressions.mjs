@@ -9,7 +9,8 @@ import { platform, release } from 'node:os';
 const exec = promisify(execFile);
 const root = new URL('../', import.meta.url);
 const local = fileURLToPath(root), evidenceBase = resolve(local, 'tests/evidence');
-const evidencePath = resolve(local, process.env.VALIDATION_EVIDENCE_DIR ?? 'tests/evidence/integrated-2026-10-25');
+const defaultEvidenceDirectory = `tests/evidence/integrated-run-${new Date().toISOString().replace(/[:.]/g, '-')}-${process.pid}`;
+const evidencePath = resolve(local, process.env.VALIDATION_EVIDENCE_DIR ?? defaultEvidenceDirectory);
 if (!evidencePath.startsWith(evidenceBase + sep) || !relative(evidenceBase, evidencePath).split(sep)[0].startsWith('integrated-'))
   throw new Error('VALIDATION_EVIDENCE_DIR must be a tests/evidence/integrated-* directory; historical evidence is read-only.');
 const evidence = pathToFileURL(evidencePath + sep);

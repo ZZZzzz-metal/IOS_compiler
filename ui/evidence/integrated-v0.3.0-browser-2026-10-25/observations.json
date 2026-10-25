@@ -1,0 +1,109 @@
+{
+  "kind": "merged-v0.3.0-desktop-browser-ui-observations",
+  "owner": 1,
+  "date": "2026-10-25",
+  "url": "http://127.0.0.1:4186/ui/probe.html",
+  "environment": "Windows, Codex in-app desktop browser; exact engine version not collected",
+  "profile": "integration-prototype-cf02b4efe9477db1",
+  "networkDisabled": false,
+  "ipadTested": false,
+  "observationMethod": "Visible UI and read-only DOM; manually recorded checks, not a raw protocol event trace",
+  "checks": [
+    {
+      "behavior": "fresh C++ compile and breakpoint",
+      "sourceMarker": "merged-v0.3.0-browser-new-source-20261025",
+      "stdin": "7\n",
+      "pausedAt": "main.cpp:16:1",
+      "observed": {
+        "n": 7,
+        "vector": [
+          1,
+          2,
+          3
+        ],
+        "string": "sum",
+        "uninitializedTotal": "explicitly unreadable"
+      }
+    },
+    {
+      "behavior": "stepInto",
+      "pausedAt": "main.cpp:6:1",
+      "observed": {
+        "function": "add",
+        "left": 7,
+        "right": 1
+      }
+    },
+    {
+      "behavior": "caller frame selection",
+      "observed": {
+        "function": "main",
+        "n": 7,
+        "total": "explicitly unreadable during initialization"
+      }
+    },
+    {
+      "behavior": "stepOut",
+      "pausedAt": "main.cpp:16:1",
+      "observed": {
+        "function": "main",
+        "total": "unreadable before new store"
+      }
+    },
+    {
+      "behavior": "stepOver and watch",
+      "pausedAt": "main.cpp:17:1",
+      "observed": {
+        "total": 8,
+        "watchTotal": 8
+      }
+    },
+    {
+      "behavior": "continue through real output",
+      "observed": {
+        "stdout": "sum=23\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "behavior": "draft page reopen",
+      "observed": {
+        "cppSourceUniqueMarkerRestored": true,
+        "stdinRestored": "7\n",
+        "cDraftRestored": true,
+        "cLanguageRestored": true,
+        "cStdinRestored": "21\n",
+        "savedCRevision": 4
+      }
+    },
+    {
+      "behavior": "C11 fresh source input/output",
+      "stdin": "21\n",
+      "observed": {
+        "stdout": "merged-c=42\n",
+        "exitCode": 0
+      }
+    },
+    {
+      "behavior": "real infinite loop stop and edited source restart",
+      "observed": {
+        "runningState": "正在运行",
+        "editorUsableDuringRun": true,
+        "stopTermination": "stop",
+        "nextStdout": "merged-restart=43\n",
+        "nextExitCode": 0,
+        "savedRevision": 6
+      }
+    }
+  ],
+  "limits": [
+    "Desktop page reopen only; not browser-process/iPad force-close or full offline cold start.",
+    "Cross-window browser CAS, actual file chooser export/import and clipboard were not repeated by owner1 this round; owner4 historical desktop records remain separately attributed.",
+    "Wide and narrow UI states observed; physical iPad input and layout remain unverified."
+  ],
+  "finalDOM": "final-dom.json",
+  "screenshots": [
+    "paused.png",
+    "restart.png"
+  ]
+}

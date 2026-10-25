@@ -1,0 +1,18 @@
+{
+  "final-dom.json": {
+    "byteLength": 357,
+    "sha256": "ce12b7d3dbfff0f0d8a35f3e14817501be0f1704be78f36d8bc7912e333a2274"
+  },
+  "observations.json": {
+    "byteLength": 2978,
+    "sha256": "182eb9921d76cc90815460089ffecc16c9bd893dfd06be00d9738fa6565a32a7"
+  },
+  "paused.png": {
+    "byteLength": 23661,
+    "sha256": "007122aec0acd8ffbf864d22031ccb4bc21c45d23856b7bca4f9f29b906d478d"
+  },
+  "restart.png": {
+    "byteLength": 71697,
+    "sha256": "703fec646c934959f436cf89a5f84d74bb24443f731d569c52d1452830de533f"
+  }
+}
