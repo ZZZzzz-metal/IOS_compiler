@@ -1,0 +1,16 @@
+{
+  "format": "ipad-offline-debugger-draft",
+  "schemaVersion": 1,
+  "draft": {
+    "id": "main",
+    "revision": 0,
+    "userText": "#include <cstdio>\n#include <vector>\n#include <string>\n\nint add(int left, int right) {\n    int answer = left + right;\n    return answer;\n}\n\nint main() {\n    int n = 3;\n    std::scanf(\"%d\", &n);\n    std::vector<int> values = {1, 2, 3};\n    std::string label = \"sum\";\n    int array[3] = {4, 5, 6};\n    int total = add(n, values[0]);\n    for (int i = 0; i < 3; ++i) {\n        total += array[i];\n    }\n    std::printf(\"%s=%d\\n\", label.c_str(), total);\n    return 0;\n}\n\n// draft-recovery-20261025\n",
+    "driverText": "",
+    "language": {
+      "language": "cpp",
+      "standard": "c++17"
+    },
+    "stdin": "3\n",
+    "updatedAt": "2026-10-25T06:30:03.843Z"
+  }
+}
