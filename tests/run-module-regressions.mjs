@@ -3,15 +3,20 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { resolve } from 'node:path';
+import { resolve, sep, relative } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { platform, release } from 'node:os';
 const exec = promisify(execFile);
 const root = new URL('../', import.meta.url);
-const evidence = new URL('tests/evidence/', root);
+const local = fileURLToPath(root), evidenceBase = resolve(local, 'tests/evidence');
+const evidencePath = resolve(local, process.env.VALIDATION_EVIDENCE_DIR ?? 'tests/evidence/integrated-2026-10-25');
+if (!evidencePath.startsWith(evidenceBase + sep) || !relative(evidenceBase, evidencePath).split(sep)[0].startsWith('integrated-'))
+  throw new Error('VALIDATION_EVIDENCE_DIR must be a tests/evidence/integrated-* directory; historical evidence is read-only.');
+const evidence = pathToFileURL(evidencePath + sep);
 await mkdir(evidence, { recursive: true });
 const modules = [
-  { id: '02', folder: process.env.VALIDATION_COMPILER_ROOT ?? resolve(fileURLToPath(root), '../ipad-debugger-02'), glob: 'compiler/checks/*.test.mjs' },
-  { id: '03', folder: process.env.VALIDATION_DEBUGGER_ROOT ?? resolve(fileURLToPath(root), '../ipad-debugger-03'), glob: 'debugger/checks/*.test.mjs' },
+  { id: '02', folder: process.env.VALIDATION_COMPILER_ROOT ?? local, glob: 'compiler/checks/*.test.mjs' },
+  { id: '03', folder: process.env.VALIDATION_DEBUGGER_ROOT ?? local, glob: 'debugger/checks/*.test.mjs' },
 ];
 const results = await Promise.all(modules.map(async item => {
   const start = performance.now(); const startedAt = new Date().toISOString();

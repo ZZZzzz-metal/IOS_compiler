@@ -3,14 +3,14 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { platform, release, arch } from 'node:os';
 import { setTimeout as delay } from 'node:timers/promises';
 import { root, compilerRoot, debuggerRoot, baseCandidate, compile, Harness, observations,
-  breakpoint, marker, available, pauseKey, frameKey, id, revision } from './lib/harness.mjs';
+  breakpoint, marker, available, pauseKey, frameKey, id, revision, evidenceRoot, provenance } from './lib/harness.mjs';
 
 const manifest = JSON.parse(await readFile(new URL('fixtures/manifest.json', root), 'utf8'));
 const definitions = new Map(manifest.cases.map(item => [item.id, item]));
 const compiled = new Map();
 const results = [];
 const startedAt = new Date().toISOString();
-const destination = new URL('tests/evidence/', root);
+const destination = evidenceRoot;
 await mkdir(destination, { recursive: true });
 const lines = ['TAP version 13'];
 async function check(name, action) {
@@ -233,6 +233,11 @@ await check('controlled trap and output flood preserve real termination and perm
   const end = await h.wait(e => e.kind === 'terminated'); assert.equal(end.reason, 'exit'); assert.equal(end.exitCode, 7);
   assert.ok(h.events.some(e => e.sessionId === h.current.sessionId && e.kind === 'output-truncated'));
   assert.ok(new TextEncoder().encode(h.output()).length <= 64); assert.ok(!h.output().includes('\ufffd'));
+  // Each fixture line occupies 21 UTF-8 bytes. The 64th byte starts the next
+  // three-byte Chinese character, so only the first three whole lines survive.
+  assert.ok(h.output().length > 0, 'truncation must retain real output');
+  assert.equal(h.output(), '中文😀0123456789\n'.repeat(3));
+  assert.equal(new TextEncoder().encode(h.output()).length, 63);
   await h.start(artifact('c-core'), definition('c-core'), { stdin: { text: '2\n', encoding: 'utf-8', eof: true } });
   const eof = await h.wait(e => e.kind === 'terminated'); assert.equal(eof.reason, 'exit'); assert.equal(eof.exitCode, 2);
 }));
@@ -243,13 +248,14 @@ const summary = { schemaVersion: 1, startedAt, finishedAt: new Date().toISOStrin
     networkDisabled: false, browserTested: false },
   baseline: '59c7080ae44b27c45cb0f94639752b3adbb28649',
   validationRevisionAtStart: revision(root), compilerRevision: revision(compilerRoot), debuggerRevision: revision(debuggerRoot),
+  provenance: await provenance(),
   profile: baseCandidate.profile, resources: baseCandidate.resources, results,
   counts: { passed: results.filter(r => r.status === 'passed').length, failed: results.filter(r => r.status === 'failed').length },
   pending: ['real iPad offline cold start and new-source compile/debug', 'keyboard/mouse/window/App switching',
     'draft recovery and export', 'complete offline resources and upgrades', 'UI filtering of delayed session/frame replies'],
   observations };
 lines.push(`1..${results.length}`);
-await writeFile(new URL('independent-2026-10-25.json', destination), JSON.stringify(summary, null, 2) + '\n');
-await writeFile(new URL('independent-2026-10-25.tap', destination), lines.join('\n') + '\n');
+await writeFile(new URL('independent.json', destination), JSON.stringify(summary, null, 2) + '\n');
+await writeFile(new URL('independent.tap', destination), lines.join('\n') + '\n');
 console.log(JSON.stringify(summary.counts));
 process.exitCode = summary.counts.failed ? 1 : 0;

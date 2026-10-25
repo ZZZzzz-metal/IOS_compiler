@@ -2,22 +2,37 @@
 import assert from 'node:assert/strict';
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { resolve, basename, join } from 'node:path';
+import { resolve, basename, sep, relative } from 'node:path';
 import { Worker } from 'node:worker_threads';
 
 export const root = new URL('../../', import.meta.url);
 const local = fileURLToPath(root);
-export const compilerRoot = pathToFileURL(resolve(process.env.VALIDATION_COMPILER_ROOT ?? join(local, '../ipad-debugger-02')) + '/');
-export const debuggerRoot = pathToFileURL(resolve(process.env.VALIDATION_DEBUGGER_ROOT ?? join(local, '../ipad-debugger-03')) + '/');
+export const compilerRoot = pathToFileURL(resolve(process.env.VALIDATION_COMPILER_ROOT ?? local) + sep);
+export const debuggerRoot = pathToFileURL(resolve(process.env.VALIDATION_DEBUGGER_ROOT ?? local) + sep);
 const load = (base, path) => import(new URL(path, base));
 const [{ createSnapshot }, { createNodeProbe }, { evidenceJSON }, { createCandidate }, { DebuggerAdapter }, { WorkerDebuggerAdapter }] = await Promise.all([
   load(compilerRoot, 'compiler/src/source.mjs'), load(compilerRoot, 'compiler/src/node-probe.mjs'),
   load(compilerRoot, 'compiler/src/toolchain-engine.mjs'), load(debuggerRoot, 'debugger/scripts/candidate.mjs'),
   load(debuggerRoot, 'debugger/src/debugger-adapter.mjs'), load(debuggerRoot, 'debugger/src/worker-adapter.mjs'),
 ]);
-export const baseCandidate = await createCandidate();
-const artifactRoot = new URL('artifacts/validation-05/', root);
+// The independent fixture runner still uses CompilerProbe and packages its real
+// result below. It does not replace the full CompilerAdapter integration tests.
+export const candidateMode = compilerRoot.href === root.href && debuggerRoot.href === root.href
+  ? 'integration-resource-profile' : 'debugger-module-profile';
+export const baseCandidate = candidateMode === 'integration-resource-profile'
+  ? await (await load(root, 'app/integration/candidate.mjs')).createIntegrationCandidate()
+  : await createCandidate();
+const evidenceBase = resolve(local, 'tests/evidence');
+const evidencePath = resolve(local, process.env.VALIDATION_EVIDENCE_DIR ?? 'tests/evidence/integrated-2026-10-25');
+const evidenceRelative = relative(evidenceBase, evidencePath);
+if (!evidencePath.startsWith(evidenceBase + sep) || !evidenceRelative.split(sep)[0].startsWith('integrated-'))
+  throw new Error('VALIDATION_EVIDENCE_DIR must be a tests/evidence/integrated-* directory; historical evidence is read-only.');
+export const evidenceRoot = pathToFileURL(evidencePath + sep);
+await mkdir(evidenceRoot, { recursive: true });
+const artifactPrefix = 'artifacts/validation-integrated/';
+const artifactRoot = new URL(artifactPrefix, root);
 await mkdir(artifactRoot, { recursive: true });
 let serial = 0;
 export const id = prefix => `validation05-${prefix}-${++serial}`;
@@ -33,6 +48,27 @@ export const observations = { compilations: [], sessions: [], queries: [], comma
 export function revision(base) {
   try { return execFileSync('git', ['-c', `safe.directory=${fileURLToPath(base).replace(/[\\/]$/, '')}`, '-C', fileURLToPath(base), 'rev-parse', 'HEAD'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim(); }
   catch { return 'unavailable'; }
+}
+export async function provenance() {
+  const inputs = [
+    [root, 'tests/lib/harness.mjs'], [root, 'tests/run-validation.mjs'], [root, 'tests/reproduce.mjs'],
+    [root, 'tests/run-module-regressions.mjs'], [root, 'app/integration/candidate.mjs'], [root, 'fixtures/manifest.json'],
+    [root, 'fixtures/regressions/lexical-shadow.cpp'], [root, 'fixtures/regressions/loop-header.cpp'],
+    [compilerRoot, 'compiler/src/node-probe.mjs'], [debuggerRoot, 'debugger/src/node-worker.mjs'],
+  ];
+  const fixtureManifest = JSON.parse(await readFile(new URL('fixtures/manifest.json', root), 'utf8'));
+  inputs.push(...fixtureManifest.cases.map(item => [root, `fixtures/${item.source}`]));
+  const sourceHashes = await Promise.all(inputs.map(async ([base, path]) => {
+    const bytes = await readFile(new URL(path, base));
+    return { path, base: base.href, byteLength: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') };
+  }));
+  let workingTree;
+  try { workingTree = execFileSync('git', ['-C', local, 'status', '--porcelain=v1', '--untracked-files=normal'],
+    { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim().split('\n').filter(Boolean); }
+  catch { workingTree = ['unavailable']; }
+  return { gitRevision: revision(root), workingTree,
+    compilePipeline: 'CompilerProbe actual compilation, independent BuildManifest wrapper, real DebuggerAdapter/WorkerDebuggerAdapter',
+    candidateMode, sourceHashes };
 }
 export async function compile(definition, { text, smoke = true, path, suffix = '' } = {}) {
   text ??= await readFile(new URL(`fixtures/${definition.source}`, root), 'utf8');
@@ -55,7 +91,7 @@ export async function compile(definition, { text, smoke = true, path, suffix = '
   assert.equal(result.compilerResourceHash, profile.compiler.buildHash);
   assert.equal(result.linkerResourceHash, profile.linker.buildHash);
   assert.equal(result.sysrootResourceHash, profile.sysroot.buildHash);
-  const executable = { ...result.executableRef, relativePath: `artifacts/validation-05/${definition.id}${suffix}/main.wasm` };
+  const executable = { ...result.executableRef, relativePath: `${artifactPrefix}${definition.id}${suffix}/main.wasm` };
   const build = { buildId: id('build'), requestId: result.requestId, sourceHash: snapshot.sourceHash,
     snapshotId: snapshot.snapshotId, profile, mode: 'debug', language: result.language,
     compilerArguments: result.compilerArguments, linkerArguments: result.linkerArguments,

@@ -15,7 +15,9 @@
       "scope": "目标 C11：本机新源码编译、运行和基础调试，待固定实际实现及限制",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "Clang8.0.1固定wasm32/O0候选：已测scanf/printf、递归/数组/指针和64位整数，非完整标准覆盖。"
     },
@@ -31,7 +33,9 @@
       "scope": "目标 C++17：本机新源码编译、运行和调试，待固定实际实现及限制",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "固定候选已编译实际C++17及STL样例，完整语言/异常/RTTI/线程未验证。"
     },
@@ -46,7 +50,9 @@
       "scope": "标准输入输出、vector、string、sort、map、unordered_map、queue、priority_queue、递归及常用整型逐项实测",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "compiler/checks真实编译样例已覆盖声明中的常用库；未建立标准库全覆盖。"
     },
@@ -77,7 +83,9 @@
       "scope": "运行前完整 UTF-8 stdin 并显式 EOF",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "Worker运行时接收运行前UTF-8输入与EOF；正式界面待4号接入。"
     },
@@ -109,7 +117,9 @@
       "scope": "真实输出、有序增量 UTF-8 解码、截断提示和退出原因",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "运行时真实增量输出及边界已有模块检查；正式界面待接入。"
     },
@@ -125,7 +135,9 @@
       "scope": "真实编译诊断跳转至对应源码快照，含中文注释时的列转换",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "编译器解析真实诊断并转换UTF-8字节列到UTF-16；编辑器跳转待接入。"
     },
@@ -141,7 +153,9 @@
       "scope": "真实暂停，返回请求位置和实际绑定位置，无效行有原因",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "真实初始绑定及实际暂停，requested/actual分别返回；仅已测DWARF4/O0范围。"
     },
@@ -156,7 +170,9 @@
       "scope": "从真实暂停继续执行到下一暂停或退出",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "实际Worker会话从暂停继续运行至下一断点或退出。"
     },
@@ -171,7 +187,9 @@
       "scope": "单步进入用户函数，按源码执行位置检验",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "新编译C++样例实际进入add函数并读取实参。"
     },
@@ -186,7 +204,9 @@
       "scope": "跳过函数调用至调用者的下个执行位置",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "新编译C++样例跳过递归调用并检查total=15。"
     },
@@ -201,7 +221,9 @@
       "scope": "执行到当前函数返回后的调用者位置",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "新编译C++样例返回main并检查计算结果23。"
     },
@@ -231,7 +253,9 @@
       "scope": "局部标量、遮蔽变量和 64 位数值精度；查不到给原因",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "真实内存/帧读取及64位十进制精度；仅支持已实现的DWARF位置与初始化模式。"
     },
@@ -246,7 +270,9 @@
       "scope": "真实数组内容和索引、分页及截断",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "真实样例数组元素及有界分页，非所有C++类型覆盖。"
     },
@@ -261,7 +287,9 @@
       "scope": "地址和有效指针解引用，无效指针受控失败",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "读取真实地址及有效指针；越界受控失败，不承诺识别全部悬空指针。"
     },
@@ -276,7 +304,9 @@
       "scope": "std::string 短字符串、长字符串、空串及修改后真实内容",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "固定libc++ std::__2布局下空/短/长/修改样例；最大显示1024字节。"
     },
@@ -291,7 +321,9 @@
       "scope": "std::vector 空与非空、修改和扩容后的元素、分页",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "固定libc++ std::__2布局下空/非空/扩容/修改和分页样例。"
     },
@@ -307,7 +339,9 @@
       "scope": "真实函数与递归调用栈，切换栈帧后作用域和变量一致",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "实际递归帧、frameId及调用者参数检查；正式栈界面待4号接入。"
     },
@@ -322,7 +356,9 @@
       "scope": "基础监视表达式支持集合待逐项验证：标识符、成员、索引和无副作用标量运算",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "标识符/成员/索引/指针及已测整数运算；完整C++表达式、强制转换不支持。"
     },
@@ -348,7 +384,9 @@
       "scope": "实际终止死循环，界面可操作，下一轮重新编译调试成功",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "真实Worker死循环停止并重编译新源码成功；iPad时延和界面仍待验收。"
     },
@@ -366,7 +404,9 @@
       "scope": "修改代码/驱动后重编译，旧会话、旧暂停与旧帧数据不覆盖当前状态",
       "evidence": [
         "docs/architecture/INTEGRATION-2026-10-25.md",
-        "docs/architecture/evidence/integration-node-2026-10-25.json"
+        "docs/architecture/evidence/integration-node-2026-10-25.json",
+        "docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md",
+        "tests/evidence/integrated-2026-10-25/independent.json"
       ],
       "implementationScope": "真实产物SHA256/profile核验及旧pause拒绝已测；4号客户端事件归约/修改驱动工作流待集成。"
     },

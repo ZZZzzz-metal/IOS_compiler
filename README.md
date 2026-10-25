@@ -1,13 +1,13 @@
 # iPad 离线 C/C++ 编译调试工具
 
-**2、3 号已合入同一仓库，可在开发电脑运行真实编译与源码调试的联合原型。** 全新 C11/C++17 样例通过 Wasm Clang/LLD 编译，实际产物直接交给隔离 Worker 中的调试器，支持已测范围内的断点、三种单步、变量与递归调用栈。iPad 真机离线、完整界面和安装包仍待验收，路线未冻结。
+**2、3 号的编译调试原型和 5 号的独立样例、验收脚本已合入同一仓库。** 全新 C11/C++17 样例通过 Wasm Clang/LLD 编译，实际产物交给调试器，支持已测范围内的断点、三种单步、变量与递归调用栈。iPad 真机离线、完整界面和安装包仍待验收，路线未冻结。
 
 ## 项目与交付
 
 - 仓库：`C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger`
-- 集成分支：`integration`；本轮标签：`integration-v0.2.0`。
+- 集成分支：`integration`；本轮标签：`integration-v0.2.1`（加入 5 号验收）。
 - 首次基线 `baseline-v0.1.0` 保留；契约仍为 `0.1.0-draft.1`。
-- [本轮集成结果与边界](docs/architecture/INTEGRATION-2026-10-25.md)、[统一状态](docs/architecture/STATUS.md)。
+- [2/3 编译调试集成](docs/architecture/INTEGRATION-2026-10-25.md)、[5 号验收接入](docs/architecture/VALIDATION-INTEGRATION-2026-10-25.md)、[统一状态](docs/architecture/STATUS.md)。
 
 ## 运行真实联合原型
 
@@ -37,10 +37,14 @@ npm.cmd run start:probe
 npm.cmd run check
 npm.cmd test
 npm.cmd run test:modules
+npm.cmd run test:acceptance
+npm.cmd run test:regressions
 npm.cmd start
 ```
 
 `npm start` 报告当前状态；真实流水线使用 `demo:integration`。`test:modules` 运行编译器和调试器各自的真实样例与故障检查。原始模块证据保留各自版本归属，本轮结果另存于集成记录。
+
+`test:acceptance` 运行 5 号的 21 组独立检查，`test:regressions` 执行同名遮蔽与循环头变量的最小复现。默认读取本仓库组件，不自动联网；新证据与 5 号的原始失败记录分开保存。样例清单还包含人工验收预期，不能把脚本通过理解为清单全部已执行。
 
 ## 当前边界与交接
 

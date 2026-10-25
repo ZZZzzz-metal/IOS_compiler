@@ -1,0 +1,102 @@
+{
+  "kind": "integrated-rerun-of-independent-acceptance",
+  "recordedAt": "2026-10-25T00:48:33.801Z",
+  "main": {
+    "passed": 21,
+    "failed": 0,
+    "file": "independent.json"
+  },
+  "regressions": [
+    {
+      "name": "shadow",
+      "status": "passed",
+      "file": "regression-shadow.json",
+      "samples": [
+        {
+          "line": 6,
+          "availability": "available",
+          "value": "19",
+          "expected": "19"
+        },
+        {
+          "line": 8,
+          "availability": "available",
+          "value": "7",
+          "expected": "7"
+        }
+      ]
+    },
+    {
+      "name": "loop-header",
+      "status": "passed",
+      "file": "regression-loop-header.json",
+      "samples": [
+        {
+          "line": 3,
+          "availability": "outOfScope"
+        },
+        {
+          "line": 4,
+          "availability": "available",
+          "value": "0"
+        },
+        {
+          "line": 3,
+          "availability": "available",
+          "value": "0"
+        },
+        {
+          "line": 4,
+          "availability": "available",
+          "value": "1"
+        },
+        {
+          "line": 3,
+          "availability": "available",
+          "value": "1"
+        },
+        {
+          "line": 4,
+          "availability": "available",
+          "value": "2"
+        },
+        {
+          "line": 3,
+          "availability": "available",
+          "value": "2"
+        }
+      ]
+    }
+  ],
+  "totalChecks": 23,
+  "profile": "integration-prototype-c992f82a5f1bad99",
+  "resourceCount": 30,
+  "sourceIdentity": "Each evidence JSON includes Git revision, dirty status and SHA-256 of verification scripts, fixtures, and Node entrypoints; resource hashes bind the tested compiler/debugger modules.",
+  "enhancements": [
+    "shadow minimal regression additionally checks outer value=7 and interpreter exit=0",
+    "output flood requires exactly three lines / 63 complete UTF-8 bytes under the 64-byte limit",
+    "loop-header regression also requires interpreter exit=0"
+  ],
+  "history": {
+    "verifiedUnchangedFiles": 7,
+    "manifest": "../SHA256SUMS.json"
+  },
+  "limitations": [
+    "Desktop Node only; no real iPad, browser UI, installation or complete offline cold-start acceptance.",
+    "Independent harness uses real CompilerProbe output and a development BuildManifest wrapper; separate full CompilerAdapter tests remain necessary.",
+    "Five restart rounds reuse one compiled c-core artifact; edited-source recompilation is a separate check.",
+    "Fixture manifest checkpoints not visited by the runner remain unverified."
+  ],
+  "notes": [
+    {
+      "kind": "real-pause-budget",
+      "budget": 1000,
+      "elapsedMs": 1263.4350999999997
+    },
+    {
+      "kind": "worker-stop",
+      "elapsedMs": 7.141700000000128,
+      "callerTicks": 3
+    }
+  ]
+}
