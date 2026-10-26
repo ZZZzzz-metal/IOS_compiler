@@ -1,0 +1,22 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 37,
+    "sha256": "c8c9b325320119b64f578782bee72460b830e02c55abe24c42ed9b8325553cd9"
+  },
+  {
+    "file": "check-source.mjs",
+    "byteLength": 2509,
+    "sha256": "6ce27ade0004a6b87304381019377f5aefbfff9c392b5404533d059b1a9bf9bf"
+  },
+  {
+    "file": "public-handoff-files.json",
+    "byteLength": 909,
+    "sha256": "406b7984b90ff019ac3acd4288bdc544ace9f0ded83ee763a17771d67cfbaccd"
+  },
+  {
+    "file": "same-computer-https.json",
+    "byteLength": 678,
+    "sha256": "1848e39bd41d86afaaf3ddb8e271827fe7381180fdb6fa69da2060543e3a7f4d"
+  }
+]
