@@ -3,7 +3,7 @@ import {createSnapshot} from '../../compiler/src/source.mjs';
 import {WorkerDebuggerAdapter} from '../../debugger/src/worker-adapter.mjs';
 import {digest} from '../../debugger/src/integrity.mjs';
 import {SessionController} from './session-controller.mjs';
-import {highlight,indentSelection} from './editor.mjs';
+import {highlight,indentSelection,breakpointView} from './editor.mjs';
 import {createDraftStore,createDraft,serializeDraft,parseImport} from '../../storage/src/draft-store.mjs';
 import {createAutosave} from '../../storage/src/autosave.mjs';
 import {assertTrustedOfflineWorkers} from '../../app/offline/browser/trust.mjs';
@@ -47,17 +47,22 @@ function edited(){
 }
 function showText(){ $('source').value=displayedText();$('source').readOnly=snapshotMode;render(); }
 function selectedPosition(s){return s.frames.find(f=>f.frameId===s.session?.frameId)?.position??s.session?.position;}
+function displayedBreakpoints(s){
+  return breakpointView({snapshotMode,requested,bindings:s.breakpoints,sourceUnchanged:unchanged(activeSnapshot),
+    sessionMatchesSnapshot:Boolean(activeSnapshot&&s.session?.sourceHash===activeSnapshot.sourceHash)});
+}
 function renderEditor(s){
   const position=selectedPosition(s),sameSource=unchanged(activeSnapshot);
+  const breakpoints=displayedBreakpoints(s);
   const line=s.actions.inspect&&position?.sourcePath===pathFor()&&(snapshotMode||sameSource)?position.line:null;
   $('highlight').innerHTML=highlight($('source').value,line);
   const gutter=$('gutter');gutter.replaceChildren();
   const lines=$('source').value.split('\n');
   for(let index=0;index<Math.min(lines.length,10000);index++){
     const lineNumber=index+1,button=document.createElement('button');button.type='button';button.tabIndex=-1;button.textContent=String(lineNumber);
-    button.dataset.bp=String(requested.some(bp=>bp.requested.sourcePath===pathFor()&&bp.requested.line===lineNumber));
+    button.dataset.bp=String(breakpoints.entries.some(bp=>bp.requested.sourcePath===pathFor()&&bp.requested.line===lineNumber));
     button.dataset.current=String(lineNumber===line);button.title=`第 ${lineNumber} 行：切换断点`;
-    button.disabled=snapshotMode&&!sameSource;
+    button.disabled=breakpoints.readOnly;
     button.onclick=()=>toggleBreakpoint(lineNumber);gutter.append(button);
   }
   // Focusing a gutter button can scroll that container independently. The text
@@ -72,20 +77,23 @@ function renderEditor(s){
   $('snapshot-label').textContent=snapshotMode?'调试快照 · 只读':activeSnapshot&&!sameSource?'源码已修改 · 请重新编译':'编辑中的草稿';
   $('driver-help').hidden=currentTab!=='driver'||snapshotMode;
   for(const id of ['indent','outdent','driver-template'])$(id).disabled=snapshotMode;
-  $('breakpoint').disabled=snapshotMode&&!sameSource;
+  $('breakpoint').disabled=breakpoints.readOnly;
 }
 function labelPosition(p){return p?`${p.sourcePath}:${p.line}:${p.column}`:'未提供源码位置';}
 function appendEmpty(target,text){target.className='list empty';target.textContent=text;}
 function renderBreakpoints(s){
   const target=$('breakpoints');target.replaceChildren();target.className='list';
-  for(const bp of requested){
-    const binding=snapshotMode||unchanged(activeSnapshot)?s.breakpoints.find(b=>b.breakpointId===bp.breakpointId):null;
+  const display=displayedBreakpoints(s);
+  const context=document.createElement('div');context.className='hint';
+  context.textContent=display.readOnly?'当前调试快照的断点（只读）':activeSnapshot&&!unchanged(activeSnapshot)?'编辑稿断点（下次编译生效）':'编辑稿断点';
+  target.append(context);
+  for(const bp of display.entries){
     const text=document.createElement('div');
     const names={bound:'已绑定',invalid:'无效',pending:'待绑定'};
-    text.textContent=`${labelPosition(bp.requested)} · ${names[binding?.status??'pending']}${binding?.actual?.length?' → '+binding.actual.map(labelPosition).join('、'):''}${binding?.reason?'：'+binding.reason:''}`;
+    text.textContent=`${labelPosition(bp.requested)} · ${names[bp.status]}${bp.actual.length?' → '+bp.actual.map(labelPosition).join('、'):''}${bp.reason?'：'+bp.reason:''}`;
     target.append(text);
   }
-  if(!requested.length)appendEmpty(target,'尚未设置断点。点击行号，或使用“在当前行切换断点”。');
+  if(!display.entries.length)appendEmpty(target,display.readOnly?'当前调试快照没有断点。':activeSnapshot&&!unchanged(activeSnapshot)?'编辑稿没有断点；变更在下次编译生效。':'尚未设置断点。点击行号，或使用“在当前行切换断点”。');
   const diag=$('diagnostics');diag.replaceChildren();diag.className='list';
   for(const item of diagnostics){
     const button=document.createElement('button');button.textContent=`${item.severity} · ${item.message}${item.range?' · '+labelPosition(item.range.start):''}`;
@@ -210,7 +218,7 @@ async function stop(){
   if(view().actions.stop)await controller.control('stop');
 }
 function toggleBreakpoint(line){
-  const sourcePath=pathFor();if(!sourcePath||(snapshotMode&&!unchanged(activeSnapshot)))return;
+  const sourcePath=pathFor();if(!sourcePath||snapshotMode)return;
   const existing=requested.findIndex(bp=>bp.requested.sourcePath===sourcePath&&bp.requested.line===line);
   if(existing>=0)requested.splice(existing,1);else requested.push({breakpointId:uuid(),requested:{sourcePath,line,column:1},enabled:true});
   if(view().actions.setBreakpoints&&unchanged(activeSnapshot))safe(()=>controller.setBreakpoints(sourcePath,requested.filter(bp=>bp.requested.sourcePath===sourcePath)))();

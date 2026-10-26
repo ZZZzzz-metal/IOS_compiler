@@ -1,0 +1,45 @@
+{
+  "representations": "Working-tree bytes used for the checks and staged Git bytes recorded separately; Git may normalize source newlines.",
+  "files": {
+    "ui/src/main.mjs": {
+      "workingTree": {
+        "byteLength": 27311,
+        "sha256": "39dca9bf8dd70fe7255f817b2fe23e1e7fac9f2c68da6d7a92ebb6f7e14a6466"
+      },
+      "stagedGit": {
+        "byteLength": 27311,
+        "sha256": "39dca9bf8dd70fe7255f817b2fe23e1e7fac9f2c68da6d7a92ebb6f7e14a6466"
+      }
+    },
+    "ui/src/editor.mjs": {
+      "workingTree": {
+        "byteLength": 2518,
+        "sha256": "26e0eb00f16f4fac9cebde7c7db702559823c2acb9288cf8fde89da35a2767e6"
+      },
+      "stagedGit": {
+        "byteLength": 2518,
+        "sha256": "26e0eb00f16f4fac9cebde7c7db702559823c2acb9288cf8fde89da35a2767e6"
+      }
+    },
+    "ui/checks/breakpoint-view.test.mjs": {
+      "workingTree": {
+        "byteLength": 6111,
+        "sha256": "efcb2384896d15589fb2d4d740f7a1c70bde197f496ec078d02064e90e8b93b3"
+      },
+      "stagedGit": {
+        "byteLength": 6111,
+        "sha256": "efcb2384896d15589fb2d4d740f7a1c70bde197f496ec078d02064e90e8b93b3"
+      }
+    },
+    "ui/checks/stale-breakpoints-real.test.mjs": {
+      "workingTree": {
+        "byteLength": 7733,
+        "sha256": "79229de0cb15b17e3f2adaf3843dbb633edf080ac525dfcbcfbf1395c481eff3"
+      },
+      "stagedGit": {
+        "byteLength": 7733,
+        "sha256": "79229de0cb15b17e3f2adaf3843dbb633edf080ac525dfcbcfbf1395c481eff3"
+      }
+    }
+  }
+}
