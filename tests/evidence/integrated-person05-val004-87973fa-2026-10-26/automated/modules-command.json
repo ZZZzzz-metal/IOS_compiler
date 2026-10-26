@@ -1,0 +1,27 @@
+{
+  "id": "modules",
+  "command": "npm.cmd run test:modules",
+  "invokedVia": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "args": [
+      "--prefix",
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "run",
+      "test:modules"
+    ]
+  },
+  "startedAt": "2026-10-26T03:52:07.360Z",
+  "finishedAt": "2026-10-26T03:52:19.341Z",
+  "durationMs": 11981.0915,
+  "exitCode": 0,
+  "signal": null,
+  "errorMessage": null,
+  "outputFile": "modules.txt",
+  "outputSHA256": "8301f31fe77106ac3d435c27e4e89bf0a9acd3f2a719aa8c020c083a73af686c",
+  "observedCounts": {
+    "tests": 94,
+    "passed": 94,
+    "failed": 0
+  }
+}

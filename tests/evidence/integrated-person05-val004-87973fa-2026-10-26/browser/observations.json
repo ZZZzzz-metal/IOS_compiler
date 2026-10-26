@@ -1,0 +1,1136 @@
+{
+  "testedRevision": "87973fa01b4e7065dd5a9f4a3c97c117d9e7d617",
+  "baseTag": "integration-v0.4.0",
+  "ipadTested": false,
+  "networkDisabled": false,
+  "internalSessionIdsCollected": false,
+  "observations": [
+    {
+      "step": "minimal-ready-breakpoint4",
+      "at": "2026-10-26T03:52:17.240Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\"\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\"\n  - button \"编译调试\"\n  - button \"继续\" [disabled]\n  - button \"进入\" [disabled]\n  - button \"跳过\" [disabled]\n  - button \"跳出\" [disabled]\n  - button \"停止\" [disabled]\n  - status: 可编译运行或启动调试。\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n    - generic: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿断点\n    - generic: main.cpp:4:1 · 待绑定\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+      },
+      "gutters": []
+    },
+    {
+      "step": "minimal-entry2",
+      "at": "2026-10-26T03:52:32.921Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:2:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n    - text: \"int main() {\"\n    - generic: int total = 0;\n    - text: \"for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿断点\n    - generic: main.cpp:4:1 · 已绑定 → main.cpp:4:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:2:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: 不可读取：Variable is outside its lexical scope\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "true",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "true",
+          "current": "false",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "8"
+        }
+      ]
+    },
+    {
+      "step": "minimal-breakpoint4-i0",
+      "at": "2026-10-26T03:52:41.924Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n    - text: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) {\"\n    - generic: total += i;\n    - text: \"} return total; }\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿断点\n    - generic: main.cpp:4:1 · 已绑定 → main.cpp:4:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"0\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "true",
+          "current": "true",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "8"
+        }
+      ]
+    },
+    {
+      "step": "unchanged-source-snapshot-readonly",
+      "at": "2026-10-26T03:52:42.227Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [active] [pressed]\n    - generic: main.cpp\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n      - button \"6\" [disabled]\n      - button \"7\" [disabled]\n      - button \"8\" [disabled]\n    - text: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) {\"\n    - generic: total += i;\n    - text: \"} return total; }\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: main.cpp:4:1 · 已绑定 → main.cpp:4:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"0\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": true,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "3"
+        },
+        {
+          "bp": "true",
+          "current": "true",
+          "disabled": true,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "8"
+        }
+      ]
+    },
+    {
+      "step": "dirty-draft-breakpoints-removed",
+      "at": "2026-10-26T03:52:42.822Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 源码已修改 · 请重新编译\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 修改待保存…\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿没有断点；变更在下次编译生效。\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"0\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// independent person05 VAL004 retest 87973fa\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "8"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "9"
+        }
+      ]
+    },
+    {
+      "step": "repaired-snapshot-retains-bound4-after-draft-removal",
+      "at": "2026-10-26T03:52:48.627Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [active] [pressed]\n    - generic: main.cpp\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n      - button \"6\" [disabled]\n      - button \"7\" [disabled]\n      - button \"8\" [disabled]\n    - text: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) {\"\n    - generic: total += i;\n    - text: \"} return total; }\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: main.cpp:4:1 · 已绑定 → main.cpp:4:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"0\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": true,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "3"
+        },
+        {
+          "bp": "true",
+          "current": "true",
+          "disabled": true,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "8"
+        }
+      ]
+    },
+    {
+      "step": "repaired-snapshot-continue-i1-bound4-visible",
+      "at": "2026-10-26T03:52:56.402Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [pressed]\n    - generic: main.cpp\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n      - button \"6\" [disabled]\n      - button \"7\" [disabled]\n      - button \"8\" [disabled]\n    - text: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) {\"\n    - generic: total += i;\n    - text: \"} return total; }\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: main.cpp:4:1 · 已绑定 → main.cpp:4:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"1\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": true,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "3"
+        },
+        {
+          "bp": "true",
+          "current": "true",
+          "disabled": true,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "8"
+        }
+      ]
+    },
+    {
+      "step": "dirty-draft-new6-pending-not-old4",
+      "at": "2026-10-26T03:52:58.052Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 源码已修改 · 请重新编译\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿断点（下次编译生效）\n    - generic: main.cpp:6:1 · 待绑定\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"1\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// independent person05 VAL004 retest 87973fa\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "true",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "8"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "9"
+        }
+      ]
+    },
+    {
+      "step": "snapshot-old4-not-new-draft6",
+      "at": "2026-10-26T03:52:58.369Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [active] [pressed]\n    - generic: main.cpp\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n      - button \"6\" [disabled]\n      - button \"7\" [disabled]\n      - button \"8\" [disabled]\n    - text: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) {\"\n    - generic: total += i;\n    - text: \"} return total; }\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: main.cpp:4:1 · 已绑定 → main.cpp:4:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"1\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": true,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "3"
+        },
+        {
+          "bp": "true",
+          "current": "true",
+          "disabled": true,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "8"
+        }
+      ]
+    },
+    {
+      "step": "dirty-draft-back-to-no-breakpoints-before-stop",
+      "at": "2026-10-26T03:53:03.499Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 源码已修改 · 请重新编译\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿没有断点；变更在下次编译生效。\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"1\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// independent person05 VAL004 retest 87973fa\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "8"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "9"
+        }
+      ]
+    },
+    {
+      "step": "old-session-stopped",
+      "at": "2026-10-26T03:53:03.807Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\"\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\"\n  - button \"编译调试\"\n  - button \"继续\" [disabled]\n  - button \"进入\" [disabled]\n  - button \"跳过\" [disabled]\n  - button \"跳出\" [disabled]\n  - button \"停止\" [disabled]\n  - status: 已结束\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 源码已修改 · 请重新编译\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿没有断点；变更在下次编译生效。\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 stop\" [level=2]\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// independent person05 VAL004 retest 87973fa\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "8"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "9"
+        }
+      ]
+    },
+    {
+      "step": "new-build-entry2-empty-breakpoints",
+      "at": "2026-10-26T03:53:11.183Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:2:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - text: \"int main() {\"\n    - generic: int total = 0;\n    - text: \"for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 尚未设置断点。点击行号，或使用“在当前行切换断点”。\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:2:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: 不可读取：Variable is outside its lexical scope\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// independent person05 VAL004 retest 87973fa\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "true",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "8"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "9"
+        }
+      ]
+    },
+    {
+      "step": "new-build-no-old-breakpoint-exits3",
+      "at": "2026-10-26T03:53:47.527Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\"\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\"\n  - button \"编译调试\"\n  - button \"继续\" [disabled]\n  - button \"进入\" [disabled]\n  - button \"跳过\" [disabled]\n  - button \"跳出\" [disabled]\n  - button \"停止\" [disabled]\n  - status: 已结束\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 尚未设置断点。点击行号，或使用“在当前行切换断点”。\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 exit · 返回 3\" [level=2]\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// independent person05 VAL004 retest 87973fa\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "7"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "8"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "9"
+        }
+      ]
+    },
+    {
+      "step": "two-file-user2-driver3-requested",
+      "at": "2026-10-26T03:53:48.488Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\"\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\"\n  - button \"编译调试\"\n  - button \"继续\" [disabled]\n  - button \"进入\" [disabled]\n  - button \"跳过\" [disabled]\n  - button \"跳出\" [disabled]\n  - button \"停止\" [disabled]\n  - status: 已结束\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\"\n    - button \"测试驱动\" [pressed]\n    - button \"查看调试快照\"\n    - generic: driver.cpp\n    - generic: 源码已修改 · 请重新编译\n    - text: \"仅有函数或 Solution 类时，在此手动编写 main，并使用 #include \\\"user.inc\\\"。清空驱动即恢复单文件。\"\n    - button \"插入驱动起点\"\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n    - generic: \"#include \\\"user.inc\\\" int main() { int answer = twice(8); return answer; }\"\n    - textbox \"源代码\": \"#include \\\"user.inc\\\" int main() { int answer = twice(8); return answer; }\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 修改待保存…\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿断点（下次编译生效）\n    - generic: main.cpp:2:1 · 待绑定\n    - generic: driver.cpp:3:1 · 待绑定\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 exit · 返回 3\" [level=2]\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "#include \"user.inc\"\nint main() {\n    int answer = twice(8);\n    return answer;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "true",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        }
+      ]
+    },
+    {
+      "step": "two-file-corrected-user-inc2-driver3-requested",
+      "at": "2026-10-26T03:54:27.833Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\"\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\"\n  - button \"编译调试\"\n  - button \"继续\" [disabled]\n  - button \"进入\" [disabled]\n  - button \"跳过\" [disabled]\n  - button \"跳出\" [disabled]\n  - button \"停止\" [disabled]\n  - status: 已结束\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\"\n    - button \"测试驱动\" [pressed]\n    - button \"查看调试快照\"\n    - generic: driver.cpp\n    - generic: 编辑中的草稿\n    - text: \"仅有函数或 Solution 类时，在此手动编写 main，并使用 #include \\\"user.inc\\\"。清空驱动即恢复单文件。\"\n    - button \"插入驱动起点\"\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n    - generic: \"#include \\\"user.inc\\\" int main() { int answer = twice(8); return answer; }\"\n    - textbox \"源代码\": \"#include \\\"user.inc\\\" int main() { int answer = twice(8); return answer; }\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 5\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿断点\n    - generic: user.inc:2:1 · 待绑定\n    - generic: driver.cpp:3:1 · 待绑定\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 stop\" [level=2]\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "#include \"user.inc\"\nint main() {\n    int answer = twice(8);\n    return answer;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "true",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        }
+      ]
+    },
+    {
+      "step": "two-file-snapshot-driver3-only-gutter-marked",
+      "at": "2026-10-26T03:54:36.760Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · driver.cpp:3:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\"\n    - button \"测试驱动\" [pressed]\n    - button \"返回编辑稿\" [active] [pressed]\n    - generic: driver.cpp\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n      - button \"6\" [disabled]\n    - text: \"#include \\\"user.inc\\\" int main() {\"\n    - generic: int answer = twice(8);\n    - text: \"return answer; }\"\n    - textbox \"源代码\": \"#include \\\"user.inc\\\" int main() { int answer = twice(8); return answer; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 5\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: user.inc:2:1 · 已绑定 → user.inc:2:1\n    - generic: driver.cpp:3:1 · 已绑定 → driver.cpp:3:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · driver.cpp:3:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: answer\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": true,
+        "value": "#include \"user.inc\"\nint main() {\n    int answer = twice(8);\n    return answer;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "2"
+        },
+        {
+          "bp": "true",
+          "current": "true",
+          "disabled": true,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "6"
+        }
+      ]
+    },
+    {
+      "step": "two-file-snapshot-user2-only-gutter-marked",
+      "at": "2026-10-26T03:54:37.062Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · driver.cpp:3:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [active] [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [pressed]\n    - generic: user.inc\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n    - generic: \"int twice(int input) { int value = input * 2; return value; }\"\n    - textbox \"源代码\": \"int twice(int input) { int value = input * 2; return value; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 5\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: user.inc:2:1 · 已绑定 → user.inc:2:1\n    - generic: driver.cpp:3:1 · 已绑定 → driver.cpp:3:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · driver.cpp:3:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: answer\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": true,
+        "value": "int twice(int input) {\n    int value = input * 2;\n    return value;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "1"
+        },
+        {
+          "bp": "true",
+          "current": "false",
+          "disabled": true,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "5"
+        }
+      ]
+    },
+    {
+      "step": "two-file-dirty-user2-removed-driver3-pending",
+      "at": "2026-10-26T03:54:37.653Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · driver.cpp:3:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: user.inc\n    - generic: 源码已修改 · 请重新编译\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n    - generic: \"int twice(int input) { int value = input * 2; return value; } // dirty user source independent retest\"\n    - textbox \"源代码\": \"int twice(int input) { int value = input * 2; return value; } // dirty user source independent retest\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 修改待保存…\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿断点（下次编译生效）\n    - generic: driver.cpp:3:1 · 待绑定\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · driver.cpp:3:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: answer\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": false,
+        "value": "int twice(int input) {\n    int value = input * 2;\n    return value;\n}\n// dirty user source independent retest\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "1"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "5"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": false,
+          "line": "6"
+        }
+      ]
+    },
+    {
+      "step": "two-file-old-user2-binding-retained",
+      "at": "2026-10-26T03:54:37.973Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · driver.cpp:3:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [active] [pressed]\n    - generic: user.inc\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n    - generic: \"int twice(int input) { int value = input * 2; return value; }\"\n    - textbox \"源代码\": \"int twice(int input) { int value = input * 2; return value; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 6\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: user.inc:2:1 · 已绑定 → user.inc:2:1\n    - generic: driver.cpp:3:1 · 已绑定 → driver.cpp:3:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · driver.cpp:3:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: answer\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": true,
+        "value": "int twice(int input) {\n    int value = input * 2;\n    return value;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "1"
+        },
+        {
+          "bp": "true",
+          "current": "false",
+          "disabled": true,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "5"
+        }
+      ]
+    },
+    {
+      "step": "two-file-continue-real-user2-input8",
+      "at": "2026-10-26T03:54:43.380Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · user.inc:2:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [pressed]\n    - generic: user.inc\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n    - text: \"int twice(int input) {\"\n    - generic: int value = input * 2;\n    - text: \"return value; }\"\n    - textbox \"源代码\": \"int twice(int input) { int value = input * 2; return value; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 6\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: user.inc:2:1 · 已绑定 → user.inc:2:1\n    - generic: driver.cpp:3:1 · 已绑定 → driver.cpp:3:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"twice · user.inc:2:1\" [pressed]\n    - button \"main · driver.cpp:3:1\"\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: input\n      - emphasis: int\n      - text: \"8\"\n    - paragraph:\n      - code: value\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": true,
+        "value": "int twice(int input) {\n    int value = input * 2;\n    return value;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "1"
+        },
+        {
+          "bp": "true",
+          "current": "true",
+          "disabled": true,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "5"
+        }
+      ]
+    },
+    {
+      "step": "two-file-stopped",
+      "at": "2026-10-26T03:54:43.691Z",
+      "url": "http://127.0.0.1:4205/ui/probe.html",
+      "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\"\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\"\n  - button \"编译调试\"\n  - button \"继续\" [disabled]\n  - button \"进入\" [disabled]\n  - button \"跳过\" [disabled]\n  - button \"跳出\" [disabled]\n  - button \"停止\" [disabled]\n  - status: 已结束\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [pressed]\n    - generic: user.inc\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n    - generic: \"int twice(int input) { int value = input * 2; return value; }\"\n    - textbox \"源代码\": \"int twice(int input) { int value = input * 2; return value; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 6\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: user.inc:2:1 · 已绑定 → user.inc:2:1\n    - generic: driver.cpp:3:1 · 已绑定 → driver.cpp:3:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 stop\" [level=2]\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "editor": {
+        "readOnly": true,
+        "value": "int twice(int input) {\n    int value = input * 2;\n    return value;\n}\n"
+      },
+      "gutters": [
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "1"
+        },
+        {
+          "bp": "true",
+          "current": "false",
+          "disabled": true,
+          "line": "2"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "3"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "4"
+        },
+        {
+          "bp": "false",
+          "current": "false",
+          "disabled": true,
+          "line": "5"
+        }
+      ]
+    }
+  ]
+}
