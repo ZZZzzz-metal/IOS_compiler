@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-26T23:16:46.621Z",
+  "node": "v24.19.0",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--test",
+    "contracts/checks/*.test.mjs",
+    "ui/checks/*.test.mjs",
+    "storage/checks/*.test.mjs",
+    "app/integration/checks/*.test.mjs",
+    "app/offline/checks/*.test.mjs"
+  ],
+  "tests": 69,
+  "pass": 69,
+  "fail": 0,
+  "structure": "pass",
+  "scope": "Affected root/offline plus existing UI and integration tests. Not independent acceptance or an iPad test."
+}

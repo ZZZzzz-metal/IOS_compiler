@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-10-26T23:23:43.388Z",
+  "kind": "actual-desktop-in-app-browser-recovery-and-post-repair-offline-compile",
+  "bundleId": "ipad-web-probe-de095f337b9f4e4f1f7b4e32",
+  "origin": "http://127.0.0.1:4191",
+  "fault": "launcher.mjs cache response replaced through explicit test fixture; original response retained by fixture",
+  "steps": [
+    {
+      "action": "install fresh complete cache",
+      "observed": "50 resource verification success"
+    },
+    {
+      "action": "corrupt test launcher and stop test server",
+      "observed": "fixed entry reload displays local recovery page; not yet downloading"
+    },
+    {
+      "action": "restart test server and click explicit recovery button",
+      "observed": "reload completed and 50 resources verified"
+    },
+    {
+      "action": "stop test server again, close tabs and reopen fixed entry",
+      "observed": "50 resources verified without test server; entered workbench"
+    },
+    {
+      "action": "compile fresh C++ source after recovery",
+      "observed": "entry paused at main.cpp:3; value unavailable before declaration"
+    },
+    {
+      "action": "continue to requested main.cpp:5 breakpoint",
+      "observed": "value int 52"
+    },
+    {
+      "action": "continue program",
+      "observed": "stdout REVIEW-20261027=52; exit 0"
+    }
+  ],
+  "boundaries": [
+    "No physical network disconnection",
+    "Not an iPad or main-screen process cold start",
+    "Fault fixture origin is test-only; drafts not changed by fault fixture",
+    "Actual new source entered through UI saves only this test-origin draft",
+    "FullPage screenshot calls failed; documented getScreenshot alternative captured real images",
+    "Independent person05 verification of this new release still pending"
+  ]
+}

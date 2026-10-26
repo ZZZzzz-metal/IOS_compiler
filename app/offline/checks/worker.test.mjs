@@ -15,6 +15,8 @@ const address = input => String(input?.url ?? input);
 function fixture(version = 'one') {
   const files = new Map([
     ['index.html', `<main>${version}</main>`],
+    ['launcher.mjs', `import './app/offline/browser/trust.mjs'; // ${version}`],
+    ['app/offline/browser/trust.mjs', `export const version='${version}';`],
     ['compiler/engine.wasm', `small-engine-${version}`],
   ]);
   const resources = [...files].map(([path, bytes]) => ({path,
@@ -107,15 +109,15 @@ test('complete installation serves navigation and engine with no network after d
   await app.dispatch('activate');
   assert.equal(app.claims, 1);
   assert.equal(app.skips, 0);
-  assert.equal(app.fetches.length, 2);
+  assert.equal(app.fetches.length, 4);
   app.disconnect();
   assert.equal(await (await app.request('./')).text(), '<main>one</main>');
   assert.equal(await (await app.request('compiler/engine.wasm?fresh=1')).text(), 'small-engine-one');
   const result = await app.verify();
   assert.equal(result.ok, true);
-  assert.equal(result.resourceCount, 2);
+  assert.equal(result.resourceCount, 4);
   assert.equal(result.bundleId, 'offline-test-one');
-  assert.equal(app.fetches.length, 2, 'cache reads never try the network');
+  assert.equal(app.fetches.length, 4, 'cache reads never try the network');
 });
 
 for (const failure of ['wrong bytes', 'network interrupted', 'HTTP failure']) {
@@ -186,7 +188,7 @@ test('explicit prepare repairs corruption through a new full transaction and pre
   assert.equal((await app.verify()).ok, false);
   const repaired = await app.verify('OFFLINE_PREPARE');
   assert.equal(repaired.ok, true);
-  assert.equal(app.fetches.length, 4);
+  assert.equal(app.fetches.length, 8);
   assert.ok(oldNames.every(name => app.shared.has(name)), 'repair retains the earlier cache');
   assert.equal(app.shared.size, 2);
   app.disconnect();
@@ -232,6 +234,27 @@ test('explicit prepare rejects an open workbench and non-launcher callers before
   assert.equal(foreign.ok, false);
   assert.equal(app.fetches.length, before);
 });
+
+for (const path of ['index.html','launcher.mjs','app/offline/browser/trust.mjs','bundle.json']) {
+  for (const damage of ['missing','corrupt']) {
+    test(`${damage} startup resource ${path} opens local repair before launcher execution`, async () => {
+      const app=await harness();await app.dispatch('install');
+      const oldNames=[...app.shared.keys()],cache=[...app.shared.values()][0],url=new URL(path,scope).href;
+      if(damage==='missing')cache.delete(url);else cache.set(url,new Response('damaged bootstrap bytes'));
+      const before=app.fetches.length;
+      const navigate=()=>app.dispatch('fetch',{request:{method:'GET',url:scope+'index.html',mode:'navigate'}});
+      const failed=await navigate();
+      assert.equal(failed.status,503,'startup may not serve an unusable launcher page');
+      assert.match(failed.headers.get('Content-Type'),/text\/html/);
+      assert.match(await failed.text(),/联网重新准备资源/);
+      assert.equal(app.fetches.length,before,'opening repair must not start a network transaction');
+      assert.equal((await app.verify('OFFLINE_PREPARE')).ok,true);
+      assert.ok(oldNames.every(name=>app.shared.has(name)),'preserve old caches and all unrelated storage');
+      const restored=await navigate();assert.equal(restored.status,200);assert.equal(await restored.text(),'<main>one</main>');
+      assert.equal((await app.verify()).ok,true);
+    });
+  }
+}
 
 test('a new workbench opened during repair prevents cache commit', async () => {
   const app = await harness();

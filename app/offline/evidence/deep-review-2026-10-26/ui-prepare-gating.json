@@ -1,0 +1,51 @@
+{
+  "kind": "executed-unmodified-prepare-render-compile-with-deferred-I/O-and-DOM-substitutes",
+  "browser": false,
+  "source": {
+    "path": "ui/src/main.mjs",
+    "ref": "working-tree",
+    "sha256": "39dca9bf8dd70fe7255f817b2fe23e1e7fac9f2c68da6d7a92ebb6f7e14a6466",
+    "lines": {
+      "render": 148,
+      "prepare": 171,
+      "compile": 188
+    }
+  },
+  "compileDuringPrepare": {
+    "during": {
+      "ready": false,
+      "prepareDisabled": true,
+      "runDisabled": false,
+      "debugDisabled": false
+    },
+    "constructors": [
+      {
+        "kind": "debugger",
+        "profile": "old-verified"
+      },
+      {
+        "kind": "compiler",
+        "profile": "old-verified"
+      }
+    ],
+    "afterPrepare": {
+      "prepared": "new-verified",
+      "compilationStillPending": true
+    }
+  },
+  "overlappingPrepare": {
+    "afterOtherRender": {
+      "ready": false,
+      "prepareDisabled": false,
+      "runDisabled": true
+    },
+    "fetchCalls": 2,
+    "afterOutOfOrder": {
+      "ready": true,
+      "runDisabled": false,
+      "resources": "资源未就绪",
+      "error": "请先运行四号原型准备步骤。"
+    }
+  },
+  "boundary": "Compiler/debugger constructors are instrumented substitutes. Confirms UI entry and overlapping preparation; does not establish resource integrity bypass or iPad behavior."
+}

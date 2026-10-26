@@ -6,6 +6,8 @@ const MARKER=new URL('__offline_complete__',BASE).href;
 const FILES=new Map(BUNDLE.resources.map(resource=>[new URL(resource.path,BASE).href,resource]));
 const DESCRIPTOR_URL=new URL('bundle.json',BASE).href;
 const CACHE_HEADERS={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'};
+// These files must work before the launcher can offer its full check or repair button.
+const STARTUP_PATHS=['index.html','launcher.mjs','app/offline/browser/trust.mjs'];
 async function digest(bytes){return 'sha256:'+Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),n=>n.toString(16).padStart(2,'0')).join('');}
 async function checked(response,resource){
   if(!response||!response.ok||response.type==='opaque')throw Error(`资源缺失：${resource.path}`);
@@ -26,6 +28,15 @@ async function verifyCache(cache){
   for(const resource of BUNDLE.resources)await checked(await cache.match(new URL(resource.path,BASE).href),resource);
   const descriptor=await cache.match(DESCRIPTOR_URL);
   if(!descriptor||await descriptor.text()!==JSON.stringify(BUNDLE)+'\n')throw Error('本版本的离线清单缺失或损坏。');
+}
+async function verifyStartup(cache){
+  for(const path of STARTUP_PATHS){
+    const url=new URL(path,BASE).href,resource=FILES.get(url);
+    if(!resource)throw Error(`启动资源未列入清单：${path}`);
+    await checked(await cache.match(url),resource);
+  }
+  const descriptor=await cache.match(DESCRIPTOR_URL);
+  if(!descriptor||await descriptor.text()!==JSON.stringify(BUNDLE)+'\n')throw Error('启动清单缺失或损坏。');
 }
 let staging=null;
 async function noOtherWindows(sourceId){
@@ -90,6 +101,7 @@ self.addEventListener('fetch',event=>{
   event.respondWith((async()=>{
     try{
       const cache=await completeCache();
+      if(request.mode==='navigate'&&url.href===new URL('index.html',BASE).href)await verifyStartup(cache);
       if(url.href===DESCRIPTOR_URL){const result=await cache.match(DESCRIPTOR_URL);if(!result||await result.clone().text()!==JSON.stringify(BUNDLE)+'\n')throw Error('离线清单损坏');return result;}
       const resource=FILES.get(url.href);
       if(!resource)return unavailable('此文件不属于当前离线版本。请返回本版本的准备页。');

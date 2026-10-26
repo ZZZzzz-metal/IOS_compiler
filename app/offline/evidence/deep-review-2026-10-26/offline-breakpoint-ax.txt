@@ -1,0 +1,22 @@
+Browser tab: 3, Title: "算法工作台 · 四号验证原型", URL: "http://127.0.0.1:4191/releases/ipad-web-probe-de095f337b9f4e4f1f7b4e32/ui/probe.html".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 108-119, 121-126
++		121 text 已暂停 · main.cpp:5:1
++			122 text main.cpp
++			123 text 编辑中的草稿
++				124 button 1, Help: 第 1 行：切换断点
++				125 button 2, Help: 第 2 行：切换断点
++				126 button 3, Help: 第 3 行：切换断点
++				127 button 4, Help: 第 4 行：切换断点
++				128 button 5, Help: 第 5 行：切换断点
++				129 button 6, Help: 第 6 行：切换断点
++				130 button 7, Help: 第 7 行：切换断点
++				131 button 8, Help: 第 8 行：切换断点
++					132 text 尚无输出
++					133 checkbox main · main.cpp:5:1, Value: 1
++					134 checkbox main · 未提供源码位置, Value: 0
++					135 checkbox _start · 未提供源码位置, Value: 0
++				136 container
++					137 text value  int  52
++				138 text 选择暂停栈帧后查询
+The focused UI element is 1 AXWebArea 算法工作台 · 四号验证原型, URL: 127.0.0.1:4191/releases/ipad-web-probe-de095f337b9f4e4f1f7b4e32/ui/probe.html

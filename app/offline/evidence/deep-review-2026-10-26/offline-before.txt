@@ -1,0 +1,120 @@
+✔ missing startup resource index.html opens local repair before launcher execution (26.5082ms)
+✔ corrupt startup resource index.html opens local repair before launcher execution (5.7839ms)
+✖ missing startup resource launcher.mjs opens local repair before launcher execution (3.3846ms)
+✖ corrupt startup resource launcher.mjs opens local repair before launcher execution (3.5227ms)
+✖ missing startup resource app/offline/browser/trust.mjs opens local repair before launcher execution (2.6439ms)
+✖ corrupt startup resource app/offline/browser/trust.mjs opens local repair before launcher execution (3.3634ms)
+✖ missing startup resource bundle.json opens local repair before launcher execution (2.4842ms)
+✖ corrupt startup resource bundle.json opens local repair before launcher execution (2.3571ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 2
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 147.3667
+
+✖ failing tests:
+
+test at app\offline\checks\worker.test.mjs:240:5
+✖ missing startup resource launcher.mjs opens local repair before launcher execution (3.3846ms)
+  AssertionError [ERR_ASSERTION]: startup may not serve an unusable launcher page
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-offline-debugger/app/offline/checks/worker.test.mjs:247:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at app\offline\checks\worker.test.mjs:240:5
+✖ corrupt startup resource launcher.mjs opens local repair before launcher execution (3.5227ms)
+  AssertionError [ERR_ASSERTION]: startup may not serve an unusable launcher page
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-offline-debugger/app/offline/checks/worker.test.mjs:247:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at app\offline\checks\worker.test.mjs:240:5
+✖ missing startup resource app/offline/browser/trust.mjs opens local repair before launcher execution (2.6439ms)
+  AssertionError [ERR_ASSERTION]: startup may not serve an unusable launcher page
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-offline-debugger/app/offline/checks/worker.test.mjs:247:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at app\offline\checks\worker.test.mjs:240:5
+✖ corrupt startup resource app/offline/browser/trust.mjs opens local repair before launcher execution (3.3634ms)
+  AssertionError [ERR_ASSERTION]: startup may not serve an unusable launcher page
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-offline-debugger/app/offline/checks/worker.test.mjs:247:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at app\offline\checks\worker.test.mjs:240:5
+✖ missing startup resource bundle.json opens local repair before launcher execution (2.4842ms)
+  AssertionError [ERR_ASSERTION]: startup may not serve an unusable launcher page
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-offline-debugger/app/offline/checks/worker.test.mjs:247:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at app\offline\checks\worker.test.mjs:240:5
+✖ corrupt startup resource bundle.json opens local repair before launcher execution (2.3571ms)
+  AssertionError [ERR_ASSERTION]: startup may not serve an unusable launcher page
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-offline-debugger/app/offline/checks/worker.test.mjs:247:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
