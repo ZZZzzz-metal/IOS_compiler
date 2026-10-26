@@ -1,0 +1,42 @@
+[
+  {
+    "path": "debugger/src/variables.mjs",
+    "byteLength": 42029,
+    "sha256": "a20f10518433d3dbb48d58bf2a7bae930669c49de5531476ffcfadfbf28ba139"
+  },
+  {
+    "path": "debugger/src/debugger-adapter.mjs",
+    "byteLength": 21034,
+    "sha256": "07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+  },
+  {
+    "path": "debugger/src/worker-adapter.mjs",
+    "byteLength": 8478,
+    "sha256": "1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6"
+  },
+  {
+    "path": "debugger/src/wasm-runtime.mjs",
+    "byteLength": 49136,
+    "sha256": "17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+  },
+  {
+    "path": "debugger/README.md",
+    "byteLength": 7388,
+    "sha256": "a5128e0a9f7e70b6d67d114d715e5937ef874aabe1bb42170a7b3a2515c447f2"
+  },
+  {
+    "path": "compiler/src/compiler-adapter.mjs",
+    "byteLength": 5418,
+    "sha256": "0cf84c9c6a845ad9d893dfce47c84bbbf1561d6ac7784280374c833b39d41ab9"
+  },
+  {
+    "path": "app/integration/node-host.mjs",
+    "byteLength": 8056,
+    "sha256": "c189628e243709178b27a375b372a1ea2eea44b9038ccdadb3ece9b90a64b7f6"
+  },
+  {
+    "path": "app/integration/candidate.mjs",
+    "byteLength": 3889,
+    "sha256": "37ca48dc2f83b57b3dc9e6291ef4d400e81f1050b99e9d5a883117369a14c184"
+  }
+]

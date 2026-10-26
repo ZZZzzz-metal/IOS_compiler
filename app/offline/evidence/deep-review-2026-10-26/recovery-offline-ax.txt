@@ -1,0 +1,10 @@
+Browser tab: 1, Title: "恢复离线资源", URL: "http://127.0.0.1:4191/releases/ipad-web-probe-de095f337b9f4e4f1f7b4e32/index.html".
+1 AXWebArea 恢复离线资源, URL: 127.0.0.1:4191/releases/ipad-web-probe-de095f337b9f4e4f1f7b4e32/index.html
+	2 container
+		3 heading 本版本离线入口需要恢复, Value: 1
+			4 text 本版本离线入口需要恢复
+		5 text 资源可能被系统回收或损坏。请先关闭本版本的其他工作台窗口，联网后点击下面按钮。此操作保留原草稿和其他版本，不会恢复已终止的调试会话。
+		6 button 联网重新准备资源, ID: repair
+		7 text 尚未下载任何资源。
+
+The focused UI element is 1 AXWebArea 恢复离线资源, URL: 127.0.0.1:4191/releases/ipad-web-probe-de095f337b9f4e4f1f7b4e32/index.html

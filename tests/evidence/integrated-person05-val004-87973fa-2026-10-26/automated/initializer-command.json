@@ -1,0 +1,23 @@
+{
+  "id": "initializer",
+  "command": "npm.cmd run test:initializer",
+  "invokedVia": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "args": [
+      "--prefix",
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "run",
+      "test:initializer"
+    ]
+  },
+  "startedAt": "2026-10-26T03:52:20.881Z",
+  "finishedAt": "2026-10-26T03:52:24.223Z",
+  "durationMs": 3341.9745999999977,
+  "exitCode": 0,
+  "signal": null,
+  "errorMessage": null,
+  "outputFile": "initializer.txt",
+  "outputSHA256": "8e323dcde83f1fb43bc8872a62c88b9f2cb0f5b15eda5deddf48cd731a9eacd3",
+  "evidenceDirectory": "initializer"
+}

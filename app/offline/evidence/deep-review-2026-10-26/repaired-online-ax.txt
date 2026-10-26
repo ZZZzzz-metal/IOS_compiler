@@ -1,0 +1,39 @@
+Browser tab: 1, Title: "算法工作台 · 离线准备", URL: "http://127.0.0.1:4191/releases/ipad-web-probe-de095f337b9f4e4f1f7b4e32/index.html".
+1 AXWebArea 算法工作台 · 离线准备, URL: 127.0.0.1:4191/releases/ipad-web-probe-de095f337b9f4e4f1f7b4e32/index.html
+	2 container
+		3 text iPad 真机待验证
+		4 heading 算法工作台, Value: 1
+			5 text 算法工作台
+		6 text 首次联网保存资源，随后在本机编译和调试。
+		7 container 离线准备
+			8 heading 离线准备, Value: 2, ID: prepare-heading
+				9 text 离线准备
+			10 text 版本 ipad-web-probe-de095f337b9f4e4f1f7b4e32 · 50 项 · 下载约 58.0 MiB（60,819,318 字节）
+			11 text 准备期间保持页面打开。资源逐项校验，完成后才能打开离线工作台。重新准备前先关闭本版本的其他工作台窗口；原草稿与其他版本会保留。
+			12 button 准备离线资源, ID: prepare
+			13 button 检查已存资源, ID: verify
+			14 text 已检查 50 项资源，可以打开工作台。iPad 完全离线仍需按手册实测。
+			15 link Description: 打开工作台, Value: 127.0.0.1:4191/releases/ipad-web-probe-de095f337b9f4e4f1f7b4e32/ui/probe.html, ID: open-workbench
+		16 container 在平板上继续
+			17 heading 在平板上继续, Value: 2, ID: ipad-heading
+				18 text 在平板上继续
+			19 content list
+				20 container
+					21 AXListMarker 1. 
+					22 text 先完成上面的资源准备。
+				23 container
+					24 AXListMarker 2. 
+					25 text 在 Safari 分享菜单中添加到主屏幕。
+				26 container
+					27 AXListMarker 3. 
+					28 text 从主屏幕重新打开，联网再检查一次资源。
+				29 container
+					30 AXListMarker 4. 
+					31 text 按操作手册关闭网络与辅助电脑，关闭重开后编译一份新源码。
+			32 link Description: 查看平板操作手册, Value: 127.0.0.1:4191/releases/ipad-web-probe-de095f337b9f4e4f1f7b4e32/manual.html
+			33 text 添加到主屏幕和资源校验成功都不代表真机验收通过。浏览器可能回收网站存储，请定期导出草稿。
+			34 button 申请保留网站存储, ID: persist
+			35 text 存储保留由系统决定，不保证永久保存。
+		36 text 本地验证原型 · 不上传源码 · 未完成正式产品安装与分发验收
+
+The focused UI element is 1 AXWebArea 算法工作台 · 离线准备, URL: 127.0.0.1:4191/releases/ipad-web-probe-de095f337b9f4e4f1f7b4e32/index.html

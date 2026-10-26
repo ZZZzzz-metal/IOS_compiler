@@ -1,0 +1,25 @@
+{
+  "kind": "executed-unmodified-onchange-with-out-of-order-File-text-promises-and-real-parser-autosave",
+  "browser": false,
+  "source": {
+    "path": "ui/src/main.mjs",
+    "ref": "working-tree",
+    "sha256": "39dca9bf8dd70fe7255f817b2fe23e1e7fac9f2c68da6d7a92ebb6f7e14a6466",
+    "line": 264
+  },
+  "selectedOrder": [
+    "A.cpp",
+    "B.cpp"
+  ],
+  "resolvedOrder": [
+    "B.cpp",
+    "A.cpp"
+  ],
+  "expectedFinal": "int intended_B;",
+  "actualDraft": "int stale_A;",
+  "actualAutosave": {
+    "text": "int stale_A;",
+    "expected": null
+  },
+  "boundary": "File.text and DOM are controlled substitutes. parseImport and createAutosave are real modules; store.save is instrumented memory storage. Confirms stale import reaching autosave, not an IndexedDB durability or device result."
+}

@@ -22,13 +22,13 @@ if (requested && !Object.hasOwn(moduleDefinitions, requested)) {
   const profiles = await json('contracts/compatibility-profiles.json');
   console.log(JSON.stringify({
     project: 'iPad 离线 C/C++ 编译调试工具', location: fileURLToPath(root),
-    delivery: 'VAL-004修复已合入并生成新完整Web离线包，平板更新手册已提供', baseline: 'integration-v0.4.1',
+    delivery: '启动恢复修复及5号限定桌面复验已集成；3/4号另有4项已确认问题待修', baseline: 'integration-v0.4.2',
     protocolVersion: capabilities.protocolVersion, selectedRoute: profiles.selectedCompatibilityId,
     offlineReady: false, deviceValidation: '待验证',
     verifiedCapabilities: capabilities.capabilities.filter(item => item.status === 'verified').length,
     implementedUnverifiedCapabilities: capabilities.capabilities.filter(item => item.status === 'implemented-unverified').length,
     modules: moduleDefinitions,
     commands: { workbench: 'npm start', prepareOffline: 'npm run prepare:offline', offlineEntry: 'npm run start:offline', offlineChecks: 'npm run test:offline', status: 'npm run status', demo: 'npm run demo:integration', tests: 'npm run test:integration', ui: 'npm run test:ui', acceptance: 'npm run test:acceptance', regressions: 'npm run test:regressions', initializer: 'npm run test:initializer' },
-    next: '5号在v0.4.1独立复验VAL-004后关闭；用户使用新HTTPS固定入口按平板手册执行G2。',
+    next: '4号修REV-005/004，3号修REV-002/003；1号整合后5号独立复验。真实iPad按新版手册执行G2，尚未通过。',
   }, null, 2));
 }

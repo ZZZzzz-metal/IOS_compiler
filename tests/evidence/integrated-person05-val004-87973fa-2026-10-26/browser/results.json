@@ -1,0 +1,102 @@
+{
+  "testedRevision": "87973fa01b4e7065dd5a9f4a3c97c117d9e7d617",
+  "scope": "Independent real desktop browser; no internal session ID access or synthetic adapter events",
+  "checks": [
+    {
+      "id": "original-seven-line-failure-sequence-fixed",
+      "status": "passed",
+      "observations": [
+        {
+          "step": "minimal-breakpoint4-i0",
+          "index": 2
+        },
+        {
+          "step": "dirty-draft-breakpoints-removed",
+          "index": 4
+        },
+        {
+          "step": "repaired-snapshot-retains-bound4-after-draft-removal",
+          "index": 5
+        },
+        {
+          "step": "repaired-snapshot-continue-i1-bound4-visible",
+          "index": 6
+        }
+      ]
+    },
+    {
+      "id": "same-source-snapshot-readonly",
+      "status": "passed",
+      "observations": [
+        {
+          "step": "unchanged-source-snapshot-readonly",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "id": "new-draft6-isolated-from-old-snapshot4",
+      "status": "passed",
+      "observations": [
+        {
+          "step": "dirty-draft-new6-pending-not-old4",
+          "index": 7
+        },
+        {
+          "step": "snapshot-old4-not-new-draft6",
+          "index": 8
+        }
+      ]
+    },
+    {
+      "id": "stop-recompile-does-not-carry-old-breakpoints",
+      "status": "passed",
+      "observations": [
+        {
+          "step": "new-build-entry2-empty-breakpoints",
+          "index": 11
+        },
+        {
+          "step": "new-build-no-old-breakpoint-exits3",
+          "index": 12
+        }
+      ]
+    },
+    {
+      "id": "user-driver-file-markers-and-real-breakpoint",
+      "status": "passed",
+      "observations": [
+        {
+          "step": "two-file-snapshot-driver3-only-gutter-marked",
+          "index": 15
+        },
+        {
+          "step": "two-file-snapshot-user2-only-gutter-marked",
+          "index": 16
+        },
+        {
+          "step": "two-file-old-user2-binding-retained",
+          "index": 18
+        },
+        {
+          "step": "two-file-continue-real-user2-input8",
+          "index": 19
+        }
+      ]
+    }
+  ],
+  "defect": "VAL-004",
+  "conclusion": "Confirmed fixed on this commit in tested desktop scope",
+  "collectionNotes": [
+    "First observation has no gutter metadata because the generic role locator matched no controls; later #gutter observations supply marker proof.",
+    "Initial two-file trial requested main.cpp:2 before the driver existed; stopped and cleared requests, then tested corrected user.inc:2 / driver.cpp:3 setup.",
+    "An incorrect expected exit-heading label timed out; actual subsequent DOM explicitly shows exit return 3. No product failure inferred."
+  ],
+  "notRetested": [
+    "Real iPad offline/G2/G3",
+    "New immutable offline package or v0.4.0 offline browser increment",
+    "Actual IndexedDB import/export or cross-window workflow this round",
+    "Injected late same-source old-session events/resync DOM updates",
+    "Restoring dirty source to original bytes and associated wording"
+  ]
+}

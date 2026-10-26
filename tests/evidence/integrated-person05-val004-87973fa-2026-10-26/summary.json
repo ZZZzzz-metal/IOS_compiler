@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "owner": "05 independent validation",
+  "dateAsiaShanghai": "2026-10-26",
+  "testedRevision": "87973fa01b4e7065dd5a9f4a3c97c117d9e7d617",
+  "baseTag": "integration-v0.4.0",
+  "result": "VAL-004 confirmed fixed on this commit within tested desktop scope",
+  "automatic": {
+    "passed": 170,
+    "failed": 0,
+    "allCommandsExitZero": true,
+    "evidence": "automated/summary.json",
+    "warning": "Includes contracts and fault injection; not 170 device/user workflows"
+  },
+  "browser": {
+    "checksPassed": 5,
+    "failed": 0,
+    "domObservations": 21,
+    "evidence": "browser/results.json"
+  },
+  "history": {
+    "originalV03RootRecords": 48,
+    "originalFailureUnchanged": true,
+    "evidence": "automated/history-preservation.json",
+    "additionalAudit": "review/all-history-integrity.json"
+  },
+  "integrationOrNewOfflineReleaseVerified": false,
+  "realIpadVerified": false,
+  "productModified": false,
+  "report": "docs/validation/val004-person05-87973fa-2026-10-26.md"
+}

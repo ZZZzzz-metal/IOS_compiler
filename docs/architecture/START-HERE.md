@@ -1,6 +1,6 @@
 # 共同基线启动与交接
 
-最新固定交付为 `integration-v0.4.1`：含4号87973fa修复、50项新离线集合和完整ZIP，所有旧标签保持不动。新一轮独立复验应记录 `git rev-parse integration-v0.4.1` 并使用 [打包报告](VAL004-PACKAGE-2026-10-26.md) 中的新bundle，平板步骤见 [更新手册](IPAD-UPDATE-v0.4.1.md)。以下首次集成历史和旧基线复验说明仍保留，不能混用为新版本签收。
+最新固定交付为 `integration-v0.4.2`：启动恢复修复、5号限定桌面VAL-004独立关闭已集成，50项新包及已知问题见 [复查报告](DEEP-REVIEW-2026-10-27.md)。记录 `git rev-parse integration-v0.4.2`，平板步骤见 [更新手册](IPAD-UPDATE-v0.4.2.md)。REV-002/003由3号、REV-004/005由4号修；已有工作区先保留改动再同步，不在未验证时关闭问题。以下首次集成历史和旧基线说明保留，不能混用为新版本签收；旧标签不移动。
 
 仓库：`C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger`
 
