@@ -1,0 +1,19 @@
+{
+  ".gitattributes": "730a35ae3d558080083c3103d9ac8100c3f6561678092abe341701dfa331eb1d",
+  "README.md": "fc7372673537820f1484b6417bca5ecc5b08bf0799d052f77da964e71eefb9a8",
+  "automated/SHA256SUMS.json": "1bc48318bddd6b81fb76e504fae0b3840e4f2aa237e5cc6780d1b09117f87eba",
+  "automated/baseline-check.txt": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48",
+  "automated/contracts.tap": "a0dfe4c279485173430a533518113585b772959d4ae5f0bef0a66b75fc497ff1",
+  "automated/integration.tap": "b3e0c2c12beb46c0fc46e7f62cc69389ae55aa78f73abcb2211687d21763d9b7",
+  "automated/module-tests.tap": "0bc1d91d7b892ace173ea6fbd1d5d8cd3928bbaf19383eae9e4fb9f33683a493",
+  "computed-style.json": "a5564b04805a47ecf48d4e885356670a00ed65985c5ab3ac8e7ba60031637b09",
+  "desktop-final.jpg": "5cd91ce0d3b0c78b80164e25cb9797053916ce8b5c3497c6aef4fbeea91f48c1",
+  "final-preview-dom.json": "ce6d98cc4cef5d2a24e1d4d5abde34b7bbcf8d081da87ff76ef2442132a04402",
+  "first-desktop.jpg": "082c88d3703ee807ae7d7ea96fe81f17821283e37bf42e8871feb82648edcc54",
+  "first-narrow-code.jpg": "3b4835cfe10368c40d8945f801696f53c74830dcaa7fadbfa10a3224d68df4b3",
+  "narrow-debug-final.jpg": "e6e41d800313c2f23b0557a7818946713e63e1e30e3bdbc617ec6d2515575f7f",
+  "narrow-debug-layout.json": "0891a35f94281a09c4d45c3ee6be2aebc6d1d272c36d1d7ea8705bf16581cf14",
+  "paper-workbench-final.jpg": "e9259a21b12d6c818b9b38a7b17d7cf1dca1206157fe7086d9ec0cd8d5f98dac",
+  "responsive-layouts.json": "e04d9260e2aaad27d61f341e5341f09590985decf95dcdf4abf1349cebca4fee",
+  "scroll-alignment.json": "e150ffdea0fc3debc4d063496716df65c5c1fd021674b8e3831fdd4ba712c670"
+}

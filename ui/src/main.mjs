@@ -147,6 +147,9 @@ function renderInspection(s){
 }
 function render(){
   const s=view(),active=s.session&&!['terminated','failed'].includes(s.session.state);
+  document.body.dataset.executionState=compilation?'compiling':s.session?.synchronized===false?'syncing':s.session?.state??'idle';
+  document.body.dataset.resourceReady=String(ready);
+  document.body.dataset.sourceView=snapshotMode?'snapshot':'draft';
   $('run').disabled=$('debug').disabled=!restored||!ready||Boolean(compilation)||Boolean(active);
   $('prepare').disabled=Boolean(compilation)||Boolean(active);
   $('stop').disabled=!compilation&&!s.actions.stop;
@@ -242,6 +245,7 @@ function findNext(){const text=$('source').value,term=$('find').value;if(!term)r
 function download(result){const url=URL.createObjectURL(new Blob([result.text],{type:result.mediaType}));const anchor=document.createElement('a');anchor.href=url;anchor.download=result.filename;anchor.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
 function manualClipboard(kind){$('clipboard-title').textContent=kind==='copy'?'复制题站源码':'粘贴题站源码';$('clipboard-text').value=kind==='copy'?draft.userText:'';$('clipboard-apply').hidden=kind==='copy';$('clipboard-dialog').showModal();$('clipboard-text').focus();if(kind==='copy')$('clipboard-text').select();}
 function saveStatus(status){
+  document.body.dataset.saveState=status.state;
   saveFailed=status.state==='error';const names={loading:'正在读取本地草稿…',idle:'当前为示例，编辑后自动保存',dirty:'修改待保存…',saving:'正在保存…',saved:`草稿已保存 · 版本 ${status.revision??''}`,error:status.error?.message??'保存失败，请导出当前内容。'};
   $('draft-status').textContent=names[status.state]??status.state;$('save-recovery').hidden=!saveFailed;
 }
