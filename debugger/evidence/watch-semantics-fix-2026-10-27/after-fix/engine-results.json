@@ -1,0 +1,572 @@
+{
+  "kind": "fresh-real-compiler-adapter-worker-watch-semantic-review",
+  "capturedAt": "2026-10-26T23:54:07.418Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "architecture": "x64",
+    "browserTested": false,
+    "ipadTested": false,
+    "compilerNetworkUsed": false
+  },
+  "profile": {
+    "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:b02def5d2c6e7f39177b8d523583e53bc24708e493c9f0300ac8e729b7b56fe8",
+    "status": "candidate",
+    "evidence": [
+      "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+    ]
+  },
+  "build": {
+    "status": "succeeded",
+    "compilationMs": 358,
+    "snapshot": {
+      "snapshotId": "15767845-d48b-4447-acf1-9bdf14dc18bd",
+      "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <cstdio>\nint main() {\n  int array[3] = {11,22,33};\n  int *p = &array[2];\n  int *q = &array[0];\n  int octal = 010;\n  float f = 16777216.0f;\n  std::printf(\"target octal=%d difference=%d plus=%.0f minus=%.0f\\n\", octal, int(p-q), (+f)+1, (-f)-1);\n  return 0;\n}\n",
+          "contentHash": "sha256:ce3a2762748f64687fb3e5c9ca87499fd16b440242595f0e6299f20127c16049"
+        }
+      ]
+    },
+    "build": {
+      "buildId": "build-a781b98e-ea23-42cf-9ba7-b3bbd7cd4ad2",
+      "requestId": "49c95bb5-6ac1-4a48-9e71-3b4981296f36",
+      "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+      "snapshotId": "15767845-d48b-4447-acf1-9bdf14dc18bd",
+      "profile": {
+        "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+        "protocolVersion": "0.1.0-draft.1",
+        "compiler": {
+          "id": "binji-wasm-clang-648c4a89997a/clang",
+          "version": "8.0.1",
+          "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        },
+        "linker": {
+          "id": "binji-wasm-clang-648c4a89997a/lld",
+          "version": "8.0.1",
+          "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+        },
+        "sysroot": {
+          "id": "binji-wasm-clang-648c4a89997a/sysroot",
+          "version": "binji-wasm-clang-648c4a89997a",
+          "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        "standardLibrary": {
+          "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+          "version": "binji-wasm-clang-648c4a89997a",
+          "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        "runtime": {
+          "id": "project-js-wasm-interpreter",
+          "version": "0.1.0-prototype.1",
+          "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+        },
+        "debugger": {
+          "id": "project-dwarf4-debugger",
+          "version": "0.1.0-prototype.1",
+          "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+        },
+        "targetTriple": "wasm32-unknown-wasi",
+        "abi": "wasi_unstable",
+        "addressBits": 32,
+        "endianness": "little",
+        "artifactFormat": "wasm-v1",
+        "debugInfoFormat": "dwarf-4-embedded",
+        "requiredFeatures": [
+          "mvp",
+          "mutable-globals"
+        ],
+        "resourceManifestHash": "sha256:b02def5d2c6e7f39177b8d523583e53bc24708e493c9f0300ac8e729b7b56fe8",
+        "status": "candidate",
+        "evidence": [
+          "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+        ]
+      },
+      "mode": "debug",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "compilerArguments": [
+        "-cc1",
+        "-emit-obj",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-O0",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-debug-info-kind=standalone",
+        "-dwarf-version=4",
+        "-debugger-tuning=lldb",
+        "-fdebug-compilation-dir",
+        "/project",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-o",
+        "build/main.o",
+        "/project/main.cpp"
+      ],
+      "linkerArguments": [
+        "--no-threads",
+        "--export-dynamic",
+        "-z",
+        "stack-size=1048576",
+        "--max-memory=268435456",
+        "-Llib/wasm32-wasi",
+        "lib/wasm32-wasi/crt1.o",
+        "build/main.o",
+        "-lc++",
+        "-lc++abi",
+        "-lc",
+        "-lm",
+        "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+        "-o",
+        "build/main.wasm"
+      ],
+      "executable": {
+        "id": "wasm-1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5",
+        "relativePath": "compiler-builds/wasm-1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5/main.wasm",
+        "sha256": "sha256:1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5",
+        "byteLength": 34400,
+        "mediaType": "application/wasm",
+        "version": "binji-wasm-clang-648c4a89997a"
+      },
+      "debugInfo": [
+        {
+          "id": "wasm-1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5",
+          "relativePath": "compiler-builds/wasm-1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5/main.wasm",
+          "sha256": "sha256:1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5",
+          "byteLength": 34400,
+          "mediaType": "application/wasm",
+          "version": "binji-wasm-clang-648c4a89997a"
+        }
+      ],
+      "sourceMappings": []
+    },
+    "persistedBytes": 34400,
+    "persistedSHA256": "sha256:1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5"
+  },
+  "native": {
+    "exitCode": 0,
+    "stdout": "target octal=8 difference=2 plus=16777216 minus=-16777216\n",
+    "stderr": "",
+    "memoryBytes": 1179648
+  },
+  "interpreterOutput": "target octal=8 difference=2 plus=16777216 minus=-16777216\n",
+  "pause": {
+    "sessionId": "4f8dcd4a-cd2a-411b-8aba-5b204611538f",
+    "buildId": "build-a781b98e-ea23-42cf-9ba7-b3bbd7cd4ad2",
+    "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+    "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+    "eventSeq": 4,
+    "kind": "paused",
+    "pauseId": "e905620f-791b-476e-ac63-0942933ae50f",
+    "reason": "breakpoint",
+    "position": {
+      "sourcePath": "main.cpp",
+      "line": 8,
+      "column": 1
+    }
+  },
+  "frame": {
+    "frameId": "e905620f-791b-476e-ac63-0942933ae50f:wasm-frame-22",
+    "functionName": "main",
+    "position": {
+      "sourcePath": "main.cpp",
+      "line": 8,
+      "column": 1
+    },
+    "module": "wasm-1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5"
+  },
+  "results": [
+    {
+      "expression": "octal",
+      "result": {
+        "name": "octal",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "010",
+      "result": {
+        "name": "010",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "00010",
+      "result": {
+        "name": "00010",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "08",
+      "result": {
+        "name": "08",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Invalid digit in octal integer literal",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "p",
+      "result": {
+        "name": "p",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x00101488",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "313cee30-402c-4e56-b419-d2563cc3ea5d"
+      }
+    },
+    {
+      "expression": "q",
+      "result": {
+        "name": "q",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x00101480",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "a72ea5b0-e202-4b70-933f-21fccf3326a5"
+      }
+    },
+    {
+      "expression": "p + q",
+      "result": {
+        "name": "p + q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Adding two pointers is invalid",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "p - q",
+      "result": {
+        "name": "p - q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer subtraction is unsupported: common array provenance cannot be verified",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "p + 1",
+      "result": {
+        "name": "p + 1",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x0010148c",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "3584aee2-9233-4792-8814-8eee1ed9af75"
+      }
+    },
+    {
+      "expression": "1 + p",
+      "result": {
+        "name": "1 + p",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Unsupported pointer operation",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "(+f) + 1",
+      "result": {
+        "name": "(+f) + 1",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "(-f) - 1",
+      "result": {
+        "name": "(-f) - 1",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "-16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "p[-1]",
+      "result": {
+        "name": "p[-1]",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "error",
+        "reason": "Array index outside inspection bounds",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "*(p-1)",
+      "result": {
+        "name": "*(p-1)",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "22",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    }
+  ],
+  "termination": {
+    "sessionId": "4f8dcd4a-cd2a-411b-8aba-5b204611538f",
+    "buildId": "build-a781b98e-ea23-42cf-9ba7-b3bbd7cd4ad2",
+    "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+    "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+    "eventSeq": 7,
+    "kind": "terminated",
+    "reason": "exit",
+    "exitCode": 0
+  },
+  "events": [
+    {
+      "sessionId": "4f8dcd4a-cd2a-411b-8aba-5b204611538f",
+      "buildId": "build-a781b98e-ea23-42cf-9ba7-b3bbd7cd4ad2",
+      "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 1,
+      "kind": "state",
+      "state": "starting"
+    },
+    {
+      "sessionId": "4f8dcd4a-cd2a-411b-8aba-5b204611538f",
+      "buildId": "build-a781b98e-ea23-42cf-9ba7-b3bbd7cd4ad2",
+      "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 2,
+      "kind": "breakpoints",
+      "bindings": [
+        {
+          "breakpointId": "fae0c38d-a589-4fb6-980d-d543d5b4ce7f",
+          "requested": {
+            "sourcePath": "main.cpp",
+            "line": 8,
+            "column": 1
+          },
+          "status": "bound",
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 8,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessionId": "4f8dcd4a-cd2a-411b-8aba-5b204611538f",
+      "buildId": "build-a781b98e-ea23-42cf-9ba7-b3bbd7cd4ad2",
+      "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 3,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "4f8dcd4a-cd2a-411b-8aba-5b204611538f",
+      "buildId": "build-a781b98e-ea23-42cf-9ba7-b3bbd7cd4ad2",
+      "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 4,
+      "kind": "paused",
+      "pauseId": "e905620f-791b-476e-ac63-0942933ae50f",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "4f8dcd4a-cd2a-411b-8aba-5b204611538f",
+      "buildId": "build-a781b98e-ea23-42cf-9ba7-b3bbd7cd4ad2",
+      "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 5,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "4f8dcd4a-cd2a-411b-8aba-5b204611538f",
+      "buildId": "build-a781b98e-ea23-42cf-9ba7-b3bbd7cd4ad2",
+      "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 6,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "target octal=8 difference=2 plus=16777216 minus=-16777216\n"
+    },
+    {
+      "sessionId": "4f8dcd4a-cd2a-411b-8aba-5b204611538f",
+      "buildId": "build-a781b98e-ea23-42cf-9ba7-b3bbd7cd4ad2",
+      "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 7,
+      "kind": "terminated",
+      "reason": "exit",
+      "exitCode": 0
+    }
+  ],
+  "invalidPrograms": [
+    {
+      "caseId": "invalid-octal",
+      "source": "int main() { return 08; }\n",
+      "result": {
+        "requestId": "1b7f3814-46bc-413e-8e0f-c4651d1a5427",
+        "sourceHash": "sha256:097c56959d2ec19a88f2858284d42d1be2dab79b4c1558345748d63f9a8c681a",
+        "status": "failed",
+        "diagnostics": [
+          {
+            "severity": "error",
+            "message": "invalid digit '8' in octal constant",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 1,
+                "column": 22
+              }
+            }
+          }
+        ],
+        "reason": "compiler-exit"
+      }
+    },
+    {
+      "caseId": "pointer-plus-pointer",
+      "source": "int main() { int a[3] = {11,22,33}; int *p = &a[2]; int *q = &a[0]; return p + q; }\n",
+      "result": {
+        "requestId": "c33486f6-4cc8-4fc1-83ea-6f07abb8b07b",
+        "sourceHash": "sha256:4cb2d58d9d332a4b5ffba7615a4792d2f6bca6ed90b60c04bd836aa0ec282546",
+        "status": "failed",
+        "diagnostics": [
+          {
+            "severity": "error",
+            "message": "invalid operands to binary expression ('int *' and 'int *')",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 1,
+                "column": 78
+              }
+            }
+          }
+        ],
+        "reason": "compiler-exit"
+      }
+    }
+  ],
+  "scope": [
+    "Program execution is independently compared with native WebAssembly using the compiler smoke host.",
+    "Reported contradictions concern the debugger evaluate query; source execution output matches.",
+    "Floating watch arithmetic is an appendix because the README promises only tested integer arithmetic.",
+    "Negative pointer indexing and integer-plus-pointer are recorded as subset limitations, not added release blockers."
+  ]
+}

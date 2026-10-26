@@ -1,0 +1,148 @@
+{
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "browserTested": false,
+    "ipadTested": false
+  },
+  "independentTemporaryPath": "tests/evidence/integrated-role03-watch-fix-2026-10-27",
+  "sourceInputs": [
+    {
+      "path": "debugger/src/variables.mjs",
+      "byteLength": 43287,
+      "sha256": "7a678889ab7b8f21dcc39f83c51771b9fff8df7103bec92275937c8ff40f996c"
+    },
+    {
+      "path": "debugger/src/wasm-runtime.mjs",
+      "byteLength": 49136,
+      "sha256": "17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+    },
+    {
+      "path": "debugger/checks/watch-semantics.test.mjs",
+      "byteLength": 10908,
+      "sha256": "b4ba6e61e15b31aa376cc70eff02e4199b73bd7a000bcd17231ab75334130a9e"
+    }
+  ],
+  "records": [
+    {
+      "name": "toolchain",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "compiler/scripts/prepare-toolchain.mjs",
+        "--verify-only",
+        "--json"
+      ],
+      "startedAt": "2026-10-26T23:53:37.441Z",
+      "durationMs": 115.1164,
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "debugger",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "debugger/checks/*.test.mjs"
+      ],
+      "startedAt": "2026-10-26T23:53:37.559Z",
+      "durationMs": 11307.8042,
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "integration",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "app/integration/checks/*.test.mjs"
+      ],
+      "startedAt": "2026-10-26T23:53:48.867Z",
+      "durationMs": 3522.0872,
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "shadow",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/reproduce.mjs",
+        "shadow"
+      ],
+      "startedAt": "2026-10-26T23:53:52.389Z",
+      "durationMs": 801.588099999999,
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "loop-header",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/reproduce.mjs",
+        "loop-header"
+      ],
+      "startedAt": "2026-10-26T23:53:53.191Z",
+      "durationMs": 874.6944000000021,
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "initializer",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/initializer-lifetime.mjs"
+      ],
+      "startedAt": "2026-10-26T23:53:54.066Z",
+      "durationMs": 2796.4140000000007,
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "independent",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/run-validation.mjs"
+      ],
+      "startedAt": "2026-10-26T23:53:56.862Z",
+      "durationMs": 8995.9355,
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "baseline",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "scripts/check-baseline.mjs"
+      ],
+      "startedAt": "2026-10-26T23:54:05.858Z",
+      "durationMs": 112.89509999999791,
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "contracts",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "contracts/checks/*.test.mjs"
+      ],
+      "startedAt": "2026-10-26T23:54:05.971Z",
+      "durationMs": 192.89600000000064,
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "original-review-after",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "app/offline/evidence/deep-review-2026-10-26/engine-reproduce.mjs"
+      ],
+      "startedAt": "2026-10-26T23:54:06.164Z",
+      "durationMs": 1277.5082000000002,
+      "exitCode": 0,
+      "signal": null
+    }
+  ]
+}
