@@ -1,0 +1,6 @@
+{
+  "gutter4": "false",
+  "panel": "编辑稿没有断点；变更在下次编译生效。",
+  "readOnly": false,
+  "source": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// edited draft\n"
+}

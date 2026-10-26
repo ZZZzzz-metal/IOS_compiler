@@ -1,0 +1,7 @@
+{
+  "gutter4": "true",
+  "panel": "当前调试快照的断点（只读）main.cpp:4:1 · 已绑定 → main.cpp:4:1",
+  "readOnly": true,
+  "source": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n",
+  "variables": "total int 0i int 0"
+}

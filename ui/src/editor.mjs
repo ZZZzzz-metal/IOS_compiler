@@ -1,4 +1,12 @@
 const escape=text=>text.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+/** Keep editable requests separate from the adapter's authoritative snapshot bindings. */
+export function breakpointView({snapshotMode=false,requested=[],bindings=[],sourceUnchanged=false,sessionMatchesSnapshot=false}={}){
+  if(snapshotMode)return {readOnly:true,entries:sessionMatchesSnapshot?bindings:[]};
+  return {readOnly:false,entries:requested.map(bp=>{
+    const binding=sourceUnchanged&&sessionMatchesSnapshot?bindings.find(item=>item.breakpointId===bp.breakpointId):null;
+    return {breakpointId:bp.breakpointId,requested:bp.requested,status:binding?.status??'pending',actual:binding?.actual??[],...(binding?.reason?{reason:binding.reason}:{})};
+  })};
+}
 export function highlight(text,currentLine){
   const re=/(\/\*[\s\S]*?\*\/|\/\/[^\n]*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\b(?:int|long|short|void|char|float|double|bool|auto|const|unsigned|signed|return|if|else|while|for|do|break|continue|struct|class|public|private|protected|using|namespace|include|template|typename|switch|case|default|sizeof|nullptr|true|false|new|delete|static)\b|\b\d+(?:\.\d+)?\b)/g;
   let result='',offset=0;

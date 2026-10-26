@@ -1,0 +1,8 @@
+{
+  "exit": "exit · 返回 3",
+  "gutter4": "false",
+  "panel": "当前调试快照没有断点。",
+  "readOnly": true,
+  "source": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// edited draft\n",
+  "status": "已结束"
+}
