@@ -1,0 +1,58 @@
+{
+  "kind": "integration-checks",
+  "delivery": "VAL-004 integration package",
+  "checks": [
+    {
+      "name": "structure",
+      "args": [
+        "scripts/check-baseline.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-26T03:50:41.558Z",
+      "finishedAt": "2026-10-26T03:50:41.696Z"
+    },
+    {
+      "name": "contracts",
+      "args": [
+        "--test",
+        "contracts/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-26T03:50:41.696Z",
+      "finishedAt": "2026-10-26T03:50:41.897Z"
+    },
+    {
+      "name": "ui-storage",
+      "args": [
+        "--test",
+        "ui/checks/*.test.mjs",
+        "storage/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-26T03:50:41.897Z",
+      "finishedAt": "2026-10-26T03:50:45.145Z"
+    },
+    {
+      "name": "pipeline",
+      "args": [
+        "--test",
+        "app/integration/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-26T03:50:45.145Z",
+      "finishedAt": "2026-10-26T03:50:48.777Z"
+    },
+    {
+      "name": "offline-worker",
+      "args": [
+        "--test",
+        "app/offline/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-26T03:50:48.777Z",
+      "finishedAt": "2026-10-26T03:50:49.036Z"
+    }
+  ],
+  "ipad": "unverified",
+  "person05Signoff": "pending"
+}

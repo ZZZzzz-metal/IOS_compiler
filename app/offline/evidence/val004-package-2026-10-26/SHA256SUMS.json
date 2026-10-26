@@ -1,0 +1,77 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "browser-observations.json",
+    "byteLength": 1804,
+    "sha256": "f005c15fdc78690d80b6665133e2ce93b8e35e3f3dbe163a7e1ce5960f196b7e"
+  },
+  {
+    "file": "build.json",
+    "byteLength": 1008,
+    "sha256": "15107f7bd967b9fe48f6288774ddefc8040674e13974b88978d0fed66528a816"
+  },
+  {
+    "file": "bundle.json",
+    "byteLength": 11302,
+    "sha256": "3e0570536c4167b13950f3a4875299b1ee023fb734cfe93b7a9bbca441f5f6a7"
+  },
+  {
+    "file": "checks.json",
+    "byteLength": 1358,
+    "sha256": "56a8c02163fd7d495ad30de44604085857fb7a50d39754645756a217184b831d"
+  },
+  {
+    "file": "contracts.txt",
+    "byteLength": 1043,
+    "sha256": "9acda76091fe19cbc751c3f9d2cc8756f66541a8923bc97c750c190b0477dc28"
+  },
+  {
+    "file": "https.json",
+    "byteLength": 678,
+    "sha256": "9434bc849844a05554127af5f8b4bcc3432977cd929043d48e216f1c77ad1bd2"
+  },
+  {
+    "file": "new-build-exit3.png",
+    "byteLength": 79424,
+    "sha256": "a2a73abdf873afa7bb2b9d3821618e8852704947cebe01b1bae2374f07036911"
+  },
+  {
+    "file": "offline-worker.txt",
+    "byteLength": 1418,
+    "sha256": "ddbd15f21c5046c0308d21ab6ea5dcc6092cbdebee324c21734cdea618f8880f"
+  },
+  {
+    "file": "package.json",
+    "byteLength": 1759,
+    "sha256": "21be6381eb4e12e92b5e553690511de0717ec43b4038a5e24c12dd723a1ad5a7"
+  },
+  {
+    "file": "pipeline.txt",
+    "byteLength": 419,
+    "sha256": "dc53fcb73bc8c5153539fce4433eb551b1767f62c69ff00d44e9e7690216ecee"
+  },
+  {
+    "file": "snapshot-i1.png",
+    "byteLength": 83681,
+    "sha256": "0e3b9f58b779a2db7f1528677dca83da0c02d9601d890b7051ae87e2cdfc9310"
+  },
+  {
+    "file": "source-fingerprints.json",
+    "byteLength": 1674,
+    "sha256": "6b33939cddca28952dbff4e69107e0db96bbc0fad9d2258b081aaa25fa50d2cf"
+  },
+  {
+    "file": "structure.txt",
+    "byteLength": 277,
+    "sha256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48"
+  },
+  {
+    "file": "ui-storage.txt",
+    "byteLength": 3165,
+    "sha256": "9062adbce3aabce2eeb23cad0b5d8056c5422e5c1bbe6a28b34183c2744c9490"
+  }
+]

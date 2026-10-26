@@ -1,6 +1,6 @@
 {
   "name": "ipad-offline-debugger",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "description": "Local Wasm C/C++ compiler and source debugger integration prototype; iPad validation pending.",
   "type": "module",

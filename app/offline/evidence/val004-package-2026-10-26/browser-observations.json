@@ -1,0 +1,48 @@
+{
+  "kind": "manual-visible-dom-observations",
+  "date": "2026-10-26",
+  "bundleId": "ipad-web-probe-49831342833678ecf1fccd03",
+  "origin": "http://127.0.0.1:4189",
+  "staticServerStoppedBeforeCloseReopenAndNewSource": true,
+  "physicalNetworkDisabled": false,
+  "ipad": false,
+  "person05Signoff": "pending",
+  "observations": [
+    {
+      "test": "first-breakpoint",
+      "status": "已暂停 · main.cpp:4:1",
+      "variables": "total int 0\n\ni int 0"
+    },
+    {
+      "test": "old-snapshot-after-draft-delete",
+      "breakpoints": "当前调试快照的断点（只读）\nmain.cpp:4:1 · 已绑定 → main.cpp:4:1",
+      "dom": {
+        "gutter": [
+          {
+            "disabled": true,
+            "line": "4"
+          }
+        ],
+        "readOnly": true,
+        "source": "int main() { // PACKAGED-VAL004-20261026-A\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+      }
+    },
+    {
+      "test": "old-snapshot-second-pause",
+      "status": "已暂停 · main.cpp:4:1",
+      "breakpoints": "当前调试快照的断点（只读）\nmain.cpp:4:1 · 已绑定 → main.cpp:4:1",
+      "variables": "total int 0\n\ni int 1"
+    },
+    {
+      "test": "changed-editor-still-isolated",
+      "breakpoints": "编辑稿没有断点；变更在下次编译生效。",
+      "source": "int main() { // PACKAGED-VAL004-20261026-A\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// edited draft, breakpoint removed for next build\n"
+    },
+    {
+      "test": "new-build-no-old-breakpoint",
+      "status": "已结束",
+      "exit": "exit · 返回 3",
+      "breakpoints": "尚未设置断点。点击行号，或使用“在当前行切换断点”。"
+    }
+  ]
+}

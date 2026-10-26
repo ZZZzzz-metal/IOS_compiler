@@ -1,5 +1,7 @@
 # 共同基线启动与交接
 
+最新固定交付为 `integration-v0.4.1`：含4号87973fa修复、50项新离线集合和完整ZIP，所有旧标签保持不动。新一轮独立复验应记录 `git rev-parse integration-v0.4.1` 并使用 [打包报告](VAL004-PACKAGE-2026-10-26.md) 中的新bundle，平板步骤见 [更新手册](IPAD-UPDATE-v0.4.1.md)。以下首次集成历史和旧基线复验说明仍保留，不能混用为新版本签收。
+
 仓库：`C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger`
 
 更新：2026-10-26。集成分支integration；统一界面与新初始化修复的交付为integration-v0.3.0，追加完整Web缓存实验与平板手册为integration-v0.4.0。所有旧标签均固定不动。协议仍为0.1.0-draft.1。后续修订另发标签，不移动旧标签。当前没有上传GitHub或发布应用；来源、实际结果及限制见 [v0.3.0统一界面报告](UI-INTEGRATION-2026-10-25.md) 和 [v0.4.0离线入口报告](OFFLINE-INTEGRATION-2026-10-26.md)。5号若已在复验v0.3.0，先保持原目标并完成证据，再另行复验离线增量，不在测试中途改基线。
