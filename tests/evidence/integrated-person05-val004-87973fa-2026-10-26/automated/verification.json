@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-26T03:53:15.637Z",
+  "testedRevision": "87973fa01b4e7065dd5a9f4a3c97c117d9e7d617",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "browserTested": false,
+    "ipadTested": false,
+    "networkDisabled": false,
+    "npm": "11.17.0",
+    "timezone": "Asia/Shanghai",
+    "executable": "C:\\Program Files\\nodejs\\node.exe"
+  },
+  "commandsVerified": 9,
+  "commandChecks": [
+    {
+      "id": "toolchain-verify",
+      "exitCode": 0,
+      "outputFile": "toolchain-verify.txt",
+      "byteLength": 224,
+      "sha256": "ba597264da94dc065bd4c304a6d667aab9b97812c00be6f634d7add0e95b5fec",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "check",
+      "exitCode": 0,
+      "outputFile": "check.txt",
+      "byteLength": 349,
+      "sha256": "3d282aa5adeab3ccc547576ffa80d0d2ccdc5db39aaa97178afe475f776c05bc",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "contracts",
+      "exitCode": 0,
+      "outputFile": "contracts.txt",
+      "byteLength": 1125,
+      "sha256": "f414763b39dbb96660c5161bfd5d33dbeece1fa8122539de71d13698c2857afb",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "integration",
+      "exitCode": 0,
+      "outputFile": "integration.txt",
+      "byteLength": 517,
+      "sha256": "964e7e9785c30964897444482a7d0bd88d3978b48e16f6b5640a56378b185a74",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "ui-storage",
+      "exitCode": 0,
+      "outputFile": "ui-storage.txt",
+      "byteLength": 3265,
+      "sha256": "8792e7fde9df584ece28fd5b805ac9b894f1b06de9c9290cb5425b55915014a0",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "acceptance",
+      "exitCode": 0,
+      "outputFile": "acceptance.txt",
+      "byteLength": 1690,
+      "sha256": "1e290786f82aeb9fb7452e43927cebddbeba8b92968b2c60be1549892b6148bd",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "modules",
+      "exitCode": 0,
+      "outputFile": "modules.txt",
+      "byteLength": 10360,
+      "sha256": "8301f31fe77106ac3d435c27e4e89bf0a9acd3f2a719aa8c020c083a73af686c",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "regressions",
+      "exitCode": 0,
+      "outputFile": "regressions.txt",
+      "byteLength": 2561,
+      "sha256": "a3f059a9a6e08bbe93f17c5ad1c055a9d94ffa3674796319c2d7d65630601292",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "initializer",
+      "exitCode": 0,
+      "outputFile": "initializer.txt",
+      "byteLength": 401,
+      "sha256": "8e323dcde83f1fb43bc8872a62c88b9f2cb0f5b15eda5deddf48cd731a9eacd3",
+      "recordedHashMatched": true
+    }
+  ],
+  "rawJSONChecks": [
+    {
+      "file": "acceptance/independent.json",
+      "byteLength": 605678,
+      "sha256": "cbc6c182baec37226d4e80404a28e1537b90f4969efda9055780a32365c7c025",
+      "gitRevision": "87973fa01b4e7065dd5a9f4a3c97c117d9e7d617",
+      "counts": {
+        "passed": 21,
+        "failed": 0
+      },
+      "platform": "win32",
+      "ipadTested": false
+    },
+    {
+      "file": "regressions/regression-shadow.json",
+      "byteLength": 64970,
+      "sha256": "7ebba7a85883da69eff2fd48ea34fba4afc35872101f4c23099563357169ba96",
+      "gitRevision": "87973fa01b4e7065dd5a9f4a3c97c117d9e7d617",
+      "counts": {
+        "status": "passed"
+      },
+      "ipadTested": false
+    },
+    {
+      "file": "regressions/regression-loop-header.json",
+      "byteLength": 114865,
+      "sha256": "c95e29f93c6730a320ba08cd75311bb7a721ffebe014a9484c05282606a82a25",
+      "gitRevision": "87973fa01b4e7065dd5a9f4a3c97c117d9e7d617",
+      "counts": {
+        "status": "passed"
+      },
+      "ipadTested": false
+    },
+    {
+      "file": "initializer/initializer-lifetime.json",
+      "byteLength": 544883,
+      "sha256": "486af27319511ca1bc71fff59778ef3e25cac39dfb7dbfeae16767620f8c752a",
+      "gitRevision": "87973fa01b4e7065dd5a9f4a3c97c117d9e7d617",
+      "counts": {
+        "passed": 6,
+        "failed": 0
+      },
+      "platform": "win32",
+      "ipadTested": false
+    }
+  ],
+  "newUITestTitles": [
+    "✔ VAL-004: deleting draft requests cannot hide an existing snapshot binding (1.6153ms)",
+    "✔ new dirty-draft requests stay separate from the old snapshot collection (0.1869ms)",
+    "✔ editable binding status is associated only with both matching source and session (0.1627ms)",
+    "✔ a snapshot from a different or absent session cannot inherit its bindings (0.1231ms)",
+    "✔ snapshot remains read-only even while draft source bytes still match (0.0922ms)",
+    "✔ snapshot preserves pending, invalid reasons, and all relocated actual positions (0.1248ms)",
+    "✔ user.inc and driver retain separate requested and actual source paths (0.1447ms)",
+    "✔ replacement bindings and an authoritative empty resync replace the selected snapshot collection (0.0903ms)",
+    "✔ display selection leaves input requests, reasons and actual arrays unchanged (0.1814ms)",
+    "✔ editable driver compiles real separate user.inc and driver.cpp and preserves driver edit identity (1352.6719ms)",
+    "✔ resync refuses an older snapshot and keeps inspection disabled (0.4484ms)",
+    "✔ resync buffer overflow requests another authoritative snapshot (0.1756ms)",
+    "✔ VAL-004 real session keeps deleted-draft breakpoint at i=0/i=1; a new build has no breakpoint and exits 3 (1025.6663ms)"
+  ],
+  "totalPassed": 170,
+  "totalFailed": 0,
+  "countsMatchExpected": true,
+  "testedSourcesUnchanged": true,
+  "note": "UI/storage output includes nine pure breakpoint display-selection checks and one real Worker compilation/execution regression. Browser DOM verification and real iPad offline verification are separate tasks."
+}

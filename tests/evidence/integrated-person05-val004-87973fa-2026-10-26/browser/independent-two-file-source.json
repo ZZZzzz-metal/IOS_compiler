@@ -1,0 +1,6 @@
+{
+  "user": "int twice(int input) {\n    int value = input * 2;\n    return value;\n}\n",
+  "driver": "#include \"user.inc\"\nint main() {\n    int answer = twice(8);\n    return answer;\n}\n",
+  "stdin": "",
+  "language": "C++17"
+}
