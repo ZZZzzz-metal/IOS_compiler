@@ -1,0 +1,3597 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-27T04:39:35.363Z",
+  "startedAt": "2026-10-27T04:39:34.917Z",
+  "owner": "05 independent read-only preservation of two prior independent rounds",
+  "currentTestedRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "endRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "arch": "x64"
+  },
+  "scope": {
+    "historicalRoots": [
+      "tests/evidence/integrated-person05-v0.3.0-2026-10-25",
+      "tests/evidence/integrated-person05-val004-87973fa-2026-10-26"
+    ],
+    "manifestsPerRoot": [
+      "SHA256SUMS.json",
+      "automated/SHA256SUMS.json"
+    ],
+    "onlyNewReport": "tests/evidence/integrated-person05-rev004005-66db2bb-2026-10-27/review/history-preservation.json",
+    "fullHistoricalManifestSweep": false
+  },
+  "method": {
+    "targetCheck": "Read each explicitly recorded relative path and compare exact byte length and SHA-256; no byte normalization is applied.",
+    "manifestMetadata": "Each old manifest file has its own raw-byte fingerprint and line-ending metadata below. Target byte mismatches and manifest metadata differences are separate matters.",
+    "gitComparisonPerformed": false,
+    "gitComparisonNote": "Git was used only for the current HEAD identity. Old manifests were not compared to Git blobs; no claim is made that manifest bytes equal their Git representation. CRLF/LF differences in manifest text do not by themselves establish changes to recorded target files.",
+    "unsupportedPolicy": "Unknown manifest shapes or record fields are retained as unsupported and never guessed to be passing.",
+    "noTestsOrOldSealInvoked": true
+  },
+  "manifests": [
+    {
+      "name": "integrated-person05-v0.3.0-2026-10-25",
+      "main": {
+        "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/SHA256SUMS.json",
+        "byteLength": 7633,
+        "sha256": "53770e43ca4415510214238c72d59b3673cabb276a69a14ec6c505ac5aed428f",
+        "textMetadata": {
+          "crlfCount": 0,
+          "bareLFCount": 242,
+          "hasUtf8BOM": false
+        },
+        "root": "tests/evidence/integrated-person05-v0.3.0-2026-10-25",
+        "manifestRelativeToRoot": "SHA256SUMS.json",
+        "format": "array-of-file-byteLength-sha256-records",
+        "recordFields": [
+          "file",
+          "byteLength",
+          "sha256"
+        ],
+        "expectedRecordCount": 48,
+        "recordedCount": 48,
+        "countMatchesExpected": true,
+        "passedCount": 48,
+        "failedCount": 0,
+        "unsupportedCount": 0,
+        "allPassed": true,
+        "entries": [
+          {
+            "recordIndex": 0,
+            "record": {
+              "file": ".gitattributes",
+              "byteLength": 8,
+              "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/.gitattributes",
+            "expectedByteLength": 8,
+            "actualByteLength": 8,
+            "expectedSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "actualSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 1,
+            "record": {
+              "file": "automated/.gitattributes",
+              "byteLength": 8,
+              "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/.gitattributes",
+            "expectedByteLength": 8,
+            "actualByteLength": 8,
+            "expectedSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "actualSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 2,
+            "record": {
+              "file": "automated/SHA256SUMS.json",
+              "byteLength": 4075,
+              "sha256": "e8897ed8a7769ef5439b91fa2db325705943c5393c7efcd911bcb95446a44602"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/SHA256SUMS.json",
+            "expectedByteLength": 4075,
+            "actualByteLength": 4075,
+            "expectedSHA256": "e8897ed8a7769ef5439b91fa2db325705943c5393c7efcd911bcb95446a44602",
+            "actualSHA256": "e8897ed8a7769ef5439b91fa2db325705943c5393c7efcd911bcb95446a44602",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 3,
+            "record": {
+              "file": "automated/acceptance-command.json",
+              "byteLength": 726,
+              "sha256": "c48b556087c091a0b0fcbcf5d7ba6ceee68ed3e79867bfd7cd0cebf5808f5fe4"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance-command.json",
+            "expectedByteLength": 726,
+            "actualByteLength": 726,
+            "expectedSHA256": "c48b556087c091a0b0fcbcf5d7ba6ceee68ed3e79867bfd7cd0cebf5808f5fe4",
+            "actualSHA256": "c48b556087c091a0b0fcbcf5d7ba6ceee68ed3e79867bfd7cd0cebf5808f5fe4",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 4,
+            "record": {
+              "file": "automated/acceptance.txt",
+              "byteLength": 1690,
+              "sha256": "20eea470817b3b014f744aa5c9555022a6bc32d070f49aae0db3d23a302fb8de"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance.txt",
+            "expectedByteLength": 1690,
+            "actualByteLength": 1690,
+            "expectedSHA256": "20eea470817b3b014f744aa5c9555022a6bc32d070f49aae0db3d23a302fb8de",
+            "actualSHA256": "20eea470817b3b014f744aa5c9555022a6bc32d070f49aae0db3d23a302fb8de",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 5,
+            "record": {
+              "file": "automated/acceptance/independent.json",
+              "byteLength": 605654,
+              "sha256": "cb35f81fc2b546bc3dc4b9fdc8d8e89b0d84ebc99912effc1e717286f164cae0"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance/independent.json",
+            "expectedByteLength": 605654,
+            "actualByteLength": 605654,
+            "expectedSHA256": "cb35f81fc2b546bc3dc4b9fdc8d8e89b0d84ebc99912effc1e717286f164cae0",
+            "actualSHA256": "cb35f81fc2b546bc3dc4b9fdc8d8e89b0d84ebc99912effc1e717286f164cae0",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 6,
+            "record": {
+              "file": "automated/acceptance/independent.tap",
+              "byteLength": 1606,
+              "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance/independent.tap",
+            "expectedByteLength": 1606,
+            "actualByteLength": 1606,
+            "expectedSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "actualSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 7,
+            "record": {
+              "file": "automated/check-command.json",
+              "byteLength": 649,
+              "sha256": "b98d9b954fd55d5aa40bebe47ad44b2deae8ca6185a12a8003a47aceffa5f7de"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/check-command.json",
+            "expectedByteLength": 649,
+            "actualByteLength": 649,
+            "expectedSHA256": "b98d9b954fd55d5aa40bebe47ad44b2deae8ca6185a12a8003a47aceffa5f7de",
+            "actualSHA256": "b98d9b954fd55d5aa40bebe47ad44b2deae8ca6185a12a8003a47aceffa5f7de",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 8,
+            "record": {
+              "file": "automated/check.txt",
+              "byteLength": 349,
+              "sha256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/check.txt",
+            "expectedByteLength": 349,
+            "actualByteLength": 349,
+            "expectedSHA256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83",
+            "actualSHA256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 9,
+            "record": {
+              "file": "automated/contracts-command.json",
+              "byteLength": 726,
+              "sha256": "0cbec4376ba2288fa6a45a1dbca8dfc2892d0e617d4eaa4475c165444661392a"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/contracts-command.json",
+            "expectedByteLength": 726,
+            "actualByteLength": 726,
+            "expectedSHA256": "0cbec4376ba2288fa6a45a1dbca8dfc2892d0e617d4eaa4475c165444661392a",
+            "actualSHA256": "0cbec4376ba2288fa6a45a1dbca8dfc2892d0e617d4eaa4475c165444661392a",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 10,
+            "record": {
+              "file": "automated/contracts.txt",
+              "byteLength": 1125,
+              "sha256": "dfbca3aa58f70c0af387fa588d77c5aa149a88638b46916d96ed9237272ff194"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/contracts.txt",
+            "expectedByteLength": 1125,
+            "actualByteLength": 1125,
+            "expectedSHA256": "dfbca3aa58f70c0af387fa588d77c5aa149a88638b46916d96ed9237272ff194",
+            "actualSHA256": "dfbca3aa58f70c0af387fa588d77c5aa149a88638b46916d96ed9237272ff194",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 11,
+            "record": {
+              "file": "automated/initializer-command.json",
+              "byteLength": 730,
+              "sha256": "050d6dc1b7db4993ee8a4d7639b2a4596c5cc73f079e776b9f36253b62d5e85c"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer-command.json",
+            "expectedByteLength": 730,
+            "actualByteLength": 730,
+            "expectedSHA256": "050d6dc1b7db4993ee8a4d7639b2a4596c5cc73f079e776b9f36253b62d5e85c",
+            "actualSHA256": "050d6dc1b7db4993ee8a4d7639b2a4596c5cc73f079e776b9f36253b62d5e85c",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 12,
+            "record": {
+              "file": "automated/initializer.txt",
+              "byteLength": 401,
+              "sha256": "cb21977332b56b1da5c5c1356f2de88b8f85f66fd38d7579b854d52f68ae7a79"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer.txt",
+            "expectedByteLength": 401,
+            "actualByteLength": 401,
+            "expectedSHA256": "cb21977332b56b1da5c5c1356f2de88b8f85f66fd38d7579b854d52f68ae7a79",
+            "actualSHA256": "cb21977332b56b1da5c5c1356f2de88b8f85f66fd38d7579b854d52f68ae7a79",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 13,
+            "record": {
+              "file": "automated/initializer/initializer-lifetime.json",
+              "byteLength": 544880,
+              "sha256": "ecaeac2189c130d723ad148b951826aeab0ca0c8bba2f8adc7c30cae2d0657df"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer/initializer-lifetime.json",
+            "expectedByteLength": 544880,
+            "actualByteLength": 544880,
+            "expectedSHA256": "ecaeac2189c130d723ad148b951826aeab0ca0c8bba2f8adc7c30cae2d0657df",
+            "actualSHA256": "ecaeac2189c130d723ad148b951826aeab0ca0c8bba2f8adc7c30cae2d0657df",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 14,
+            "record": {
+              "file": "automated/initializer/initializer-lifetime.tap",
+              "byteLength": 310,
+              "sha256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer/initializer-lifetime.tap",
+            "expectedByteLength": 310,
+            "actualByteLength": 310,
+            "expectedSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "actualSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 15,
+            "record": {
+              "file": "automated/integration-command.json",
+              "byteLength": 769,
+              "sha256": "97b721c96eda83b1e53559659a9b8e6d050f6fdbe69ace64e65cc3564575207e"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/integration-command.json",
+            "expectedByteLength": 769,
+            "actualByteLength": 769,
+            "expectedSHA256": "97b721c96eda83b1e53559659a9b8e6d050f6fdbe69ace64e65cc3564575207e",
+            "actualSHA256": "97b721c96eda83b1e53559659a9b8e6d050f6fdbe69ace64e65cc3564575207e",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 16,
+            "record": {
+              "file": "automated/integration.txt",
+              "byteLength": 516,
+              "sha256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/integration.txt",
+            "expectedByteLength": 516,
+            "actualByteLength": 516,
+            "expectedSHA256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c",
+            "actualSHA256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 17,
+            "record": {
+              "file": "automated/modules-command.json",
+              "byteLength": 755,
+              "sha256": "ee34e8a2725b1f98c804de8c7bfcdce45d4beff6e4cdeb6243d4fe8f82560f41"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/modules-command.json",
+            "expectedByteLength": 755,
+            "actualByteLength": 755,
+            "expectedSHA256": "ee34e8a2725b1f98c804de8c7bfcdce45d4beff6e4cdeb6243d4fe8f82560f41",
+            "actualSHA256": "ee34e8a2725b1f98c804de8c7bfcdce45d4beff6e4cdeb6243d4fe8f82560f41",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 18,
+            "record": {
+              "file": "automated/modules.txt",
+              "byteLength": 10363,
+              "sha256": "e4589102cf90f8e10ad00f4c725bd32aab31a920af975e8b1020d89b8cd21d24"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/modules.txt",
+            "expectedByteLength": 10363,
+            "actualByteLength": 10363,
+            "expectedSHA256": "e4589102cf90f8e10ad00f4c725bd32aab31a920af975e8b1020d89b8cd21d24",
+            "actualSHA256": "e4589102cf90f8e10ad00f4c725bd32aab31a920af975e8b1020d89b8cd21d24",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 19,
+            "record": {
+              "file": "automated/regressions-command.json",
+              "byteLength": 722,
+              "sha256": "85658cc5dee13f04eac0a3c3dc1f68dae69e5b6a97cc462842846375f26c42f4"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions-command.json",
+            "expectedByteLength": 722,
+            "actualByteLength": 722,
+            "expectedSHA256": "85658cc5dee13f04eac0a3c3dc1f68dae69e5b6a97cc462842846375f26c42f4",
+            "actualSHA256": "85658cc5dee13f04eac0a3c3dc1f68dae69e5b6a97cc462842846375f26c42f4",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 20,
+            "record": {
+              "file": "automated/regressions.txt",
+              "byteLength": 2561,
+              "sha256": "329b5d8492206eccd513a9372370af5ba02d09bd7a685d43cbc609490cc510d7"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions.txt",
+            "expectedByteLength": 2561,
+            "actualByteLength": 2561,
+            "expectedSHA256": "329b5d8492206eccd513a9372370af5ba02d09bd7a685d43cbc609490cc510d7",
+            "actualSHA256": "329b5d8492206eccd513a9372370af5ba02d09bd7a685d43cbc609490cc510d7",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 21,
+            "record": {
+              "file": "automated/regressions/regression-loop-header.json",
+              "byteLength": 114857,
+              "sha256": "8e2e05c441ab7a7f51d19a5a95782e3b813929dc108d2ce07a27b5e94eb2199d"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions/regression-loop-header.json",
+            "expectedByteLength": 114857,
+            "actualByteLength": 114857,
+            "expectedSHA256": "8e2e05c441ab7a7f51d19a5a95782e3b813929dc108d2ce07a27b5e94eb2199d",
+            "actualSHA256": "8e2e05c441ab7a7f51d19a5a95782e3b813929dc108d2ce07a27b5e94eb2199d",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 22,
+            "record": {
+              "file": "automated/regressions/regression-shadow.json",
+              "byteLength": 64951,
+              "sha256": "dc135cf0e94e12d75cc4b88a5d3814289bfa6b886d5fcfb58a6d9e24a7e88f82"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions/regression-shadow.json",
+            "expectedByteLength": 64951,
+            "actualByteLength": 64951,
+            "expectedSHA256": "dc135cf0e94e12d75cc4b88a5d3814289bfa6b886d5fcfb58a6d9e24a7e88f82",
+            "actualSHA256": "dc135cf0e94e12d75cc4b88a5d3814289bfa6b886d5fcfb58a6d9e24a7e88f82",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 23,
+            "record": {
+              "file": "automated/run-suite.mjs",
+              "byteLength": 6949,
+              "sha256": "8bb5445de693c88475349c6666ee5a44067898e5a0b2ee8af5801d5ea8e3d482"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/run-suite.mjs",
+            "expectedByteLength": 6949,
+            "actualByteLength": 6949,
+            "expectedSHA256": "8bb5445de693c88475349c6666ee5a44067898e5a0b2ee8af5801d5ea8e3d482",
+            "actualSHA256": "8bb5445de693c88475349c6666ee5a44067898e5a0b2ee8af5801d5ea8e3d482",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 24,
+            "record": {
+              "file": "automated/summary.json",
+              "byteLength": 9330,
+              "sha256": "b44e447ff17c2c5b50d706dcbb9e19f2337368895304c7aefa15722ccaf94518"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/summary.json",
+            "expectedByteLength": 9330,
+            "actualByteLength": 9330,
+            "expectedSHA256": "b44e447ff17c2c5b50d706dcbb9e19f2337368895304c7aefa15722ccaf94518",
+            "actualSHA256": "b44e447ff17c2c5b50d706dcbb9e19f2337368895304c7aefa15722ccaf94518",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 25,
+            "record": {
+              "file": "automated/toolchain-verify-command.json",
+              "byteLength": 748,
+              "sha256": "32b147eb778e17c83e9f924013107241f20217241c2e4c26956079f761126890"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/toolchain-verify-command.json",
+            "expectedByteLength": 748,
+            "actualByteLength": 748,
+            "expectedSHA256": "32b147eb778e17c83e9f924013107241f20217241c2e4c26956079f761126890",
+            "actualSHA256": "32b147eb778e17c83e9f924013107241f20217241c2e4c26956079f761126890",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 26,
+            "record": {
+              "file": "automated/toolchain-verify.txt",
+              "byteLength": 224,
+              "sha256": "6562bb8566e41ddbee6cef99cf963a0ae3fbdd67d845607d748fa29c5dc60e68"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/toolchain-verify.txt",
+            "expectedByteLength": 224,
+            "actualByteLength": 224,
+            "expectedSHA256": "6562bb8566e41ddbee6cef99cf963a0ae3fbdd67d845607d748fa29c5dc60e68",
+            "actualSHA256": "6562bb8566e41ddbee6cef99cf963a0ae3fbdd67d845607d748fa29c5dc60e68",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 27,
+            "record": {
+              "file": "automated/ui-storage-command.json",
+              "byteLength": 751,
+              "sha256": "f7a0e935380cc2b2ebd1560ed020888bf78b1452fba8c0f45db968d3bacdba00"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/ui-storage-command.json",
+            "expectedByteLength": 751,
+            "actualByteLength": 751,
+            "expectedSHA256": "f7a0e935380cc2b2ebd1560ed020888bf78b1452fba8c0f45db968d3bacdba00",
+            "actualSHA256": "f7a0e935380cc2b2ebd1560ed020888bf78b1452fba8c0f45db968d3bacdba00",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 28,
+            "record": {
+              "file": "automated/ui-storage.txt",
+              "byteLength": 2314,
+              "sha256": "5c8bbe953256c2c3fac5362bbd5548e927a2d944200860decaea7599ac4928b5"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/ui-storage.txt",
+            "expectedByteLength": 2314,
+            "actualByteLength": 2314,
+            "expectedSHA256": "5c8bbe953256c2c3fac5362bbd5548e927a2d944200860decaea7599ac4928b5",
+            "actualSHA256": "5c8bbe953256c2c3fac5362bbd5548e927a2d944200860decaea7599ac4928b5",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 29,
+            "record": {
+              "file": "browser/bad-import.json",
+              "byteLength": 72,
+              "sha256": "c9c84227c8201856a4818dc44d5cefce05326913f56001fb531a5fb9fca3fbbc"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/bad-import.json",
+            "expectedByteLength": 72,
+            "actualByteLength": 72,
+            "expectedSHA256": "c9c84227c8201856a4818dc44d5cefce05326913f56001fb531a5fb9fca3fbbc",
+            "actualSHA256": "c9c84227c8201856a4818dc44d5cefce05326913f56001fb531a5fb9fca3fbbc",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 30,
+            "record": {
+              "file": "browser/breakpoint-visibility-mismatch.png",
+              "byteLength": 115678,
+              "sha256": "bda3d6a37a51cb5e3f25df909b598093c79d62f1a4801d23d21b47c1b794c683"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/breakpoint-visibility-mismatch.png",
+            "expectedByteLength": 115678,
+            "actualByteLength": 115678,
+            "expectedSHA256": "bda3d6a37a51cb5e3f25df909b598093c79d62f1a4801d23d21b47c1b794c683",
+            "actualSHA256": "bda3d6a37a51cb5e3f25df909b598093c79d62f1a4801d23d21b47c1b794c683",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 31,
+            "record": {
+              "file": "browser/conflict-results.json",
+              "byteLength": 229,
+              "sha256": "70cb6953d2b22869d710804d64c1a630053a1401add11dc1e80d770aaf1e99b7"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/conflict-results.json",
+            "expectedByteLength": 229,
+            "actualByteLength": 229,
+            "expectedSHA256": "70cb6953d2b22869d710804d64c1a630053a1401add11dc1e80d770aaf1e99b7",
+            "actualSHA256": "70cb6953d2b22869d710804d64c1a630053a1401add11dc1e80d770aaf1e99b7",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 32,
+            "record": {
+              "file": "browser/downloaded-complete-draft.json",
+              "byteLength": 589,
+              "sha256": "56c273f1a67140f68c62365a903c6b9b0d0bbcf126400842d5b589dfdc69f34e"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/downloaded-complete-draft.json",
+            "expectedByteLength": 589,
+            "actualByteLength": 589,
+            "expectedSHA256": "56c273f1a67140f68c62365a903c6b9b0d0bbcf126400842d5b589dfdc69f34e",
+            "actualSHA256": "56c273f1a67140f68c62365a903c6b9b0d0bbcf126400842d5b589dfdc69f34e",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 33,
+            "record": {
+              "file": "browser/observations.json",
+              "byteLength": 153729,
+              "sha256": "b7bdf59188636474b2f55acd0350ae4c477948a712739ebadb9f3c1a62291d1d"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/observations.json",
+            "expectedByteLength": 153729,
+            "actualByteLength": 153729,
+            "expectedSHA256": "b7bdf59188636474b2f55acd0350ae4c477948a712739ebadb9f3c1a62291d1d",
+            "actualSHA256": "b7bdf59188636474b2f55acd0350ae4c477948a712739ebadb9f3c1a62291d1d",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 34,
+            "record": {
+              "file": "browser/operation-facts.json",
+              "byteLength": 1434,
+              "sha256": "5956d117ff5b67ec838efe5e9f5dc4cb79a890bdfa3658b759dc475b4ff36357"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/operation-facts.json",
+            "expectedByteLength": 1434,
+            "actualByteLength": 1434,
+            "expectedSHA256": "5956d117ff5b67ec838efe5e9f5dc4cb79a890bdfa3658b759dc475b4ff36357",
+            "actualSHA256": "5956d117ff5b67ec838efe5e9f5dc4cb79a890bdfa3658b759dc475b4ff36357",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 35,
+            "record": {
+              "file": "browser/paused-live.png",
+              "byteLength": 121161,
+              "sha256": "e73c471ac970c48dfd5213f6de4f05863e26e6f03ed19361beb7005eec53de02"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/paused-live.png",
+            "expectedByteLength": 121161,
+            "actualByteLength": 121161,
+            "expectedSHA256": "e73c471ac970c48dfd5213f6de4f05863e26e6f03ed19361beb7005eec53de02",
+            "actualSHA256": "e73c471ac970c48dfd5213f6de4f05863e26e6f03ed19361beb7005eec53de02",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 36,
+            "record": {
+              "file": "browser/recovery-reopened.png",
+              "byteLength": 68388,
+              "sha256": "85ce9b08a690b00a4f66a8c74ddd65a4a3ba027dba6464abec529514d20ff0dc"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/recovery-reopened.png",
+            "expectedByteLength": 68388,
+            "actualByteLength": 68388,
+            "expectedSHA256": "85ce9b08a690b00a4f66a8c74ddd65a4a3ba027dba6464abec529514d20ff0dc",
+            "actualSHA256": "85ce9b08a690b00a4f66a8c74ddd65a4a3ba027dba6464abec529514d20ff0dc",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 37,
+            "record": {
+              "file": "browser/results.json",
+              "byteLength": 7526,
+              "sha256": "a2dcf7f23af7c27c12d585fe4bef36d6d1f47c9b9df172da708668405ae5c38f"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/results.json",
+            "expectedByteLength": 7526,
+            "actualByteLength": 7526,
+            "expectedSHA256": "a2dcf7f23af7c27c12d585fe4bef36d6d1f47c9b9df172da708668405ae5c38f",
+            "actualSHA256": "a2dcf7f23af7c27c12d585fe4bef36d6d1f47c9b9df172da708668405ae5c38f",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 38,
+            "record": {
+              "file": "browser/two-window-conflict.png",
+              "byteLength": 78460,
+              "sha256": "6bde5e072afc5c32ae9ea386afe2ee102f8250c60aed44047205dbd0e58b2bc3"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/two-window-conflict.png",
+            "expectedByteLength": 78460,
+            "actualByteLength": 78460,
+            "expectedSHA256": "6bde5e072afc5c32ae9ea386afe2ee102f8250c60aed44047205dbd0e58b2bc3",
+            "actualSHA256": "6bde5e072afc5c32ae9ea386afe2ee102f8250c60aed44047205dbd0e58b2bc3",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 39,
+            "record": {
+              "file": "browser/val004-minimal-results.json",
+              "byteLength": 4075,
+              "sha256": "508635897f31049570b47213d08e076e7ea491624b472d1700b84d3044e3c82c"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+            "expectedByteLength": 4075,
+            "actualByteLength": 4075,
+            "expectedSHA256": "508635897f31049570b47213d08e076e7ea491624b472d1700b84d3044e3c82c",
+            "actualSHA256": "508635897f31049570b47213d08e076e7ea491624b472d1700b84d3044e3c82c",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 40,
+            "record": {
+              "file": "browser/val004-minimal.png",
+              "byteLength": 80828,
+              "sha256": "9b91f269d65572488c46440bda28c713df29116fce0539ad33c6ca97c91c192b"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal.png",
+            "expectedByteLength": 80828,
+            "actualByteLength": 80828,
+            "expectedSHA256": "9b91f269d65572488c46440bda28c713df29116fce0539ad33c6ca97c91c192b",
+            "actualSHA256": "9b91f269d65572488c46440bda28c713df29116fce0539ad33c6ca97c91c192b",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 41,
+            "record": {
+              "file": "provenance.json",
+              "byteLength": 6845,
+              "sha256": "e66b4fdbd7a77cf004c079092587dfb4607f0d2e0605774ab0a6d66271794450"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/provenance.json",
+            "expectedByteLength": 6845,
+            "actualByteLength": 6845,
+            "expectedSHA256": "e66b4fdbd7a77cf004c079092587dfb4607f0d2e0605774ab0a6d66271794450",
+            "actualSHA256": "e66b4fdbd7a77cf004c079092587dfb4607f0d2e0605774ab0a6d66271794450",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 42,
+            "record": {
+              "file": "review/history-integrity.json",
+              "byteLength": 66815,
+              "sha256": "adb26407af993aab2c3a1e8d17735e7ae73e85b28d848c1496ef024987cc5c92"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/review/history-integrity.json",
+            "expectedByteLength": 66815,
+            "actualByteLength": 66815,
+            "expectedSHA256": "adb26407af993aab2c3a1e8d17735e7ae73e85b28d848c1496ef024987cc5c92",
+            "actualSHA256": "adb26407af993aab2c3a1e8d17735e7ae73e85b28d848c1496ef024987cc5c92",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 43,
+            "record": {
+              "file": "review/key-values.json",
+              "byteLength": 513586,
+              "sha256": "c6cc1c05af8fe475c9282c0e48432fe219766834f5d06f66a4250120e3dfe276"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/review/key-values.json",
+            "expectedByteLength": 513586,
+            "actualByteLength": 513586,
+            "expectedSHA256": "c6cc1c05af8fe475c9282c0e48432fe219766834f5d06f66a4250120e3dfe276",
+            "actualSHA256": "c6cc1c05af8fe475c9282c0e48432fe219766834f5d06f66a4250120e3dfe276",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 44,
+            "record": {
+              "file": "review/ui-storage-readonly-review.md",
+              "byteLength": 3534,
+              "sha256": "02c089ea9eea2d40b5a9cb4df6d8fb9ed4ac53b59c305ae578f9509a21f76f49"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/review/ui-storage-readonly-review.md",
+            "expectedByteLength": 3534,
+            "actualByteLength": 3534,
+            "expectedSHA256": "02c089ea9eea2d40b5a9cb4df6d8fb9ed4ac53b59c305ae578f9509a21f76f49",
+            "actualSHA256": "02c089ea9eea2d40b5a9cb4df6d8fb9ed4ac53b59c305ae578f9509a21f76f49",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 45,
+            "record": {
+              "file": "review/val-004-static-analysis.md",
+              "byteLength": 4898,
+              "sha256": "b03ad32f0242187f8c5f07e980f9dbfeb639ae593d336b0505712dddc39980d0"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/review/val-004-static-analysis.md",
+            "expectedByteLength": 4898,
+            "actualByteLength": 4898,
+            "expectedSHA256": "b03ad32f0242187f8c5f07e980f9dbfeb639ae593d336b0505712dddc39980d0",
+            "actualSHA256": "b03ad32f0242187f8c5f07e980f9dbfeb639ae593d336b0505712dddc39980d0",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 46,
+            "record": {
+              "file": "seal-evidence.mjs",
+              "byteLength": 11271,
+              "sha256": "c712cf64e21f9d44a404d78808af12a79b0c5adb2e7ae07eacc0c3486f2bace9"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/seal-evidence.mjs",
+            "expectedByteLength": 11271,
+            "actualByteLength": 11271,
+            "expectedSHA256": "c712cf64e21f9d44a404d78808af12a79b0c5adb2e7ae07eacc0c3486f2bace9",
+            "actualSHA256": "c712cf64e21f9d44a404d78808af12a79b0c5adb2e7ae07eacc0c3486f2bace9",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 47,
+            "record": {
+              "file": "summary.json",
+              "byteLength": 1119,
+              "sha256": "598818391261524e37137873b13a2a19e2b8cdb2ae8c7fe531fd80b2da0755e0"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/summary.json",
+            "expectedByteLength": 1119,
+            "actualByteLength": 1119,
+            "expectedSHA256": "598818391261524e37137873b13a2a19e2b8cdb2ae8c7fe531fd80b2da0755e0",
+            "actualSHA256": "598818391261524e37137873b13a2a19e2b8cdb2ae8c7fe531fd80b2da0755e0",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          }
+        ]
+      },
+      "automated": {
+        "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/SHA256SUMS.json",
+        "byteLength": 4075,
+        "sha256": "e8897ed8a7769ef5439b91fa2db325705943c5393c7efcd911bcb95446a44602",
+        "textMetadata": {
+          "crlfCount": 0,
+          "bareLFCount": 137,
+          "hasUtf8BOM": false
+        },
+        "root": "tests/evidence/integrated-person05-v0.3.0-2026-10-25",
+        "manifestRelativeToRoot": "automated/SHA256SUMS.json",
+        "format": "array-of-file-byteLength-sha256-records",
+        "recordFields": [
+          "file",
+          "byteLength",
+          "sha256"
+        ],
+        "expectedRecordCount": 27,
+        "recordedCount": 27,
+        "countMatchesExpected": true,
+        "passedCount": 27,
+        "failedCount": 0,
+        "unsupportedCount": 0,
+        "allPassed": true,
+        "entries": [
+          {
+            "recordIndex": 0,
+            "record": {
+              "file": ".gitattributes",
+              "byteLength": 8,
+              "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/.gitattributes",
+            "expectedByteLength": 8,
+            "actualByteLength": 8,
+            "expectedSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "actualSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 1,
+            "record": {
+              "file": "acceptance/independent.json",
+              "byteLength": 605654,
+              "sha256": "cb35f81fc2b546bc3dc4b9fdc8d8e89b0d84ebc99912effc1e717286f164cae0"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance/independent.json",
+            "expectedByteLength": 605654,
+            "actualByteLength": 605654,
+            "expectedSHA256": "cb35f81fc2b546bc3dc4b9fdc8d8e89b0d84ebc99912effc1e717286f164cae0",
+            "actualSHA256": "cb35f81fc2b546bc3dc4b9fdc8d8e89b0d84ebc99912effc1e717286f164cae0",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 2,
+            "record": {
+              "file": "acceptance/independent.tap",
+              "byteLength": 1606,
+              "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance/independent.tap",
+            "expectedByteLength": 1606,
+            "actualByteLength": 1606,
+            "expectedSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "actualSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 3,
+            "record": {
+              "file": "acceptance-command.json",
+              "byteLength": 726,
+              "sha256": "c48b556087c091a0b0fcbcf5d7ba6ceee68ed3e79867bfd7cd0cebf5808f5fe4"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance-command.json",
+            "expectedByteLength": 726,
+            "actualByteLength": 726,
+            "expectedSHA256": "c48b556087c091a0b0fcbcf5d7ba6ceee68ed3e79867bfd7cd0cebf5808f5fe4",
+            "actualSHA256": "c48b556087c091a0b0fcbcf5d7ba6ceee68ed3e79867bfd7cd0cebf5808f5fe4",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 4,
+            "record": {
+              "file": "acceptance.txt",
+              "byteLength": 1690,
+              "sha256": "20eea470817b3b014f744aa5c9555022a6bc32d070f49aae0db3d23a302fb8de"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance.txt",
+            "expectedByteLength": 1690,
+            "actualByteLength": 1690,
+            "expectedSHA256": "20eea470817b3b014f744aa5c9555022a6bc32d070f49aae0db3d23a302fb8de",
+            "actualSHA256": "20eea470817b3b014f744aa5c9555022a6bc32d070f49aae0db3d23a302fb8de",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 5,
+            "record": {
+              "file": "check-command.json",
+              "byteLength": 649,
+              "sha256": "b98d9b954fd55d5aa40bebe47ad44b2deae8ca6185a12a8003a47aceffa5f7de"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/check-command.json",
+            "expectedByteLength": 649,
+            "actualByteLength": 649,
+            "expectedSHA256": "b98d9b954fd55d5aa40bebe47ad44b2deae8ca6185a12a8003a47aceffa5f7de",
+            "actualSHA256": "b98d9b954fd55d5aa40bebe47ad44b2deae8ca6185a12a8003a47aceffa5f7de",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 6,
+            "record": {
+              "file": "check.txt",
+              "byteLength": 349,
+              "sha256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/check.txt",
+            "expectedByteLength": 349,
+            "actualByteLength": 349,
+            "expectedSHA256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83",
+            "actualSHA256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 7,
+            "record": {
+              "file": "contracts-command.json",
+              "byteLength": 726,
+              "sha256": "0cbec4376ba2288fa6a45a1dbca8dfc2892d0e617d4eaa4475c165444661392a"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/contracts-command.json",
+            "expectedByteLength": 726,
+            "actualByteLength": 726,
+            "expectedSHA256": "0cbec4376ba2288fa6a45a1dbca8dfc2892d0e617d4eaa4475c165444661392a",
+            "actualSHA256": "0cbec4376ba2288fa6a45a1dbca8dfc2892d0e617d4eaa4475c165444661392a",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 8,
+            "record": {
+              "file": "contracts.txt",
+              "byteLength": 1125,
+              "sha256": "dfbca3aa58f70c0af387fa588d77c5aa149a88638b46916d96ed9237272ff194"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/contracts.txt",
+            "expectedByteLength": 1125,
+            "actualByteLength": 1125,
+            "expectedSHA256": "dfbca3aa58f70c0af387fa588d77c5aa149a88638b46916d96ed9237272ff194",
+            "actualSHA256": "dfbca3aa58f70c0af387fa588d77c5aa149a88638b46916d96ed9237272ff194",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 9,
+            "record": {
+              "file": "initializer/initializer-lifetime.json",
+              "byteLength": 544880,
+              "sha256": "ecaeac2189c130d723ad148b951826aeab0ca0c8bba2f8adc7c30cae2d0657df"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer/initializer-lifetime.json",
+            "expectedByteLength": 544880,
+            "actualByteLength": 544880,
+            "expectedSHA256": "ecaeac2189c130d723ad148b951826aeab0ca0c8bba2f8adc7c30cae2d0657df",
+            "actualSHA256": "ecaeac2189c130d723ad148b951826aeab0ca0c8bba2f8adc7c30cae2d0657df",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 10,
+            "record": {
+              "file": "initializer/initializer-lifetime.tap",
+              "byteLength": 310,
+              "sha256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer/initializer-lifetime.tap",
+            "expectedByteLength": 310,
+            "actualByteLength": 310,
+            "expectedSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "actualSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 11,
+            "record": {
+              "file": "initializer-command.json",
+              "byteLength": 730,
+              "sha256": "050d6dc1b7db4993ee8a4d7639b2a4596c5cc73f079e776b9f36253b62d5e85c"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer-command.json",
+            "expectedByteLength": 730,
+            "actualByteLength": 730,
+            "expectedSHA256": "050d6dc1b7db4993ee8a4d7639b2a4596c5cc73f079e776b9f36253b62d5e85c",
+            "actualSHA256": "050d6dc1b7db4993ee8a4d7639b2a4596c5cc73f079e776b9f36253b62d5e85c",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 12,
+            "record": {
+              "file": "initializer.txt",
+              "byteLength": 401,
+              "sha256": "cb21977332b56b1da5c5c1356f2de88b8f85f66fd38d7579b854d52f68ae7a79"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/initializer.txt",
+            "expectedByteLength": 401,
+            "actualByteLength": 401,
+            "expectedSHA256": "cb21977332b56b1da5c5c1356f2de88b8f85f66fd38d7579b854d52f68ae7a79",
+            "actualSHA256": "cb21977332b56b1da5c5c1356f2de88b8f85f66fd38d7579b854d52f68ae7a79",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 13,
+            "record": {
+              "file": "integration-command.json",
+              "byteLength": 769,
+              "sha256": "97b721c96eda83b1e53559659a9b8e6d050f6fdbe69ace64e65cc3564575207e"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/integration-command.json",
+            "expectedByteLength": 769,
+            "actualByteLength": 769,
+            "expectedSHA256": "97b721c96eda83b1e53559659a9b8e6d050f6fdbe69ace64e65cc3564575207e",
+            "actualSHA256": "97b721c96eda83b1e53559659a9b8e6d050f6fdbe69ace64e65cc3564575207e",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 14,
+            "record": {
+              "file": "integration.txt",
+              "byteLength": 516,
+              "sha256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/integration.txt",
+            "expectedByteLength": 516,
+            "actualByteLength": 516,
+            "expectedSHA256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c",
+            "actualSHA256": "fc3283399c06b4ebf5c347a0548de7f3f3dff9b986e80c152687c8621e15db8c",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 15,
+            "record": {
+              "file": "modules-command.json",
+              "byteLength": 755,
+              "sha256": "ee34e8a2725b1f98c804de8c7bfcdce45d4beff6e4cdeb6243d4fe8f82560f41"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/modules-command.json",
+            "expectedByteLength": 755,
+            "actualByteLength": 755,
+            "expectedSHA256": "ee34e8a2725b1f98c804de8c7bfcdce45d4beff6e4cdeb6243d4fe8f82560f41",
+            "actualSHA256": "ee34e8a2725b1f98c804de8c7bfcdce45d4beff6e4cdeb6243d4fe8f82560f41",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 16,
+            "record": {
+              "file": "modules.txt",
+              "byteLength": 10363,
+              "sha256": "e4589102cf90f8e10ad00f4c725bd32aab31a920af975e8b1020d89b8cd21d24"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/modules.txt",
+            "expectedByteLength": 10363,
+            "actualByteLength": 10363,
+            "expectedSHA256": "e4589102cf90f8e10ad00f4c725bd32aab31a920af975e8b1020d89b8cd21d24",
+            "actualSHA256": "e4589102cf90f8e10ad00f4c725bd32aab31a920af975e8b1020d89b8cd21d24",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 17,
+            "record": {
+              "file": "regressions/regression-loop-header.json",
+              "byteLength": 114857,
+              "sha256": "8e2e05c441ab7a7f51d19a5a95782e3b813929dc108d2ce07a27b5e94eb2199d"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions/regression-loop-header.json",
+            "expectedByteLength": 114857,
+            "actualByteLength": 114857,
+            "expectedSHA256": "8e2e05c441ab7a7f51d19a5a95782e3b813929dc108d2ce07a27b5e94eb2199d",
+            "actualSHA256": "8e2e05c441ab7a7f51d19a5a95782e3b813929dc108d2ce07a27b5e94eb2199d",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 18,
+            "record": {
+              "file": "regressions/regression-shadow.json",
+              "byteLength": 64951,
+              "sha256": "dc135cf0e94e12d75cc4b88a5d3814289bfa6b886d5fcfb58a6d9e24a7e88f82"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions/regression-shadow.json",
+            "expectedByteLength": 64951,
+            "actualByteLength": 64951,
+            "expectedSHA256": "dc135cf0e94e12d75cc4b88a5d3814289bfa6b886d5fcfb58a6d9e24a7e88f82",
+            "actualSHA256": "dc135cf0e94e12d75cc4b88a5d3814289bfa6b886d5fcfb58a6d9e24a7e88f82",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 19,
+            "record": {
+              "file": "regressions-command.json",
+              "byteLength": 722,
+              "sha256": "85658cc5dee13f04eac0a3c3dc1f68dae69e5b6a97cc462842846375f26c42f4"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions-command.json",
+            "expectedByteLength": 722,
+            "actualByteLength": 722,
+            "expectedSHA256": "85658cc5dee13f04eac0a3c3dc1f68dae69e5b6a97cc462842846375f26c42f4",
+            "actualSHA256": "85658cc5dee13f04eac0a3c3dc1f68dae69e5b6a97cc462842846375f26c42f4",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 20,
+            "record": {
+              "file": "regressions.txt",
+              "byteLength": 2561,
+              "sha256": "329b5d8492206eccd513a9372370af5ba02d09bd7a685d43cbc609490cc510d7"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/regressions.txt",
+            "expectedByteLength": 2561,
+            "actualByteLength": 2561,
+            "expectedSHA256": "329b5d8492206eccd513a9372370af5ba02d09bd7a685d43cbc609490cc510d7",
+            "actualSHA256": "329b5d8492206eccd513a9372370af5ba02d09bd7a685d43cbc609490cc510d7",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 21,
+            "record": {
+              "file": "run-suite.mjs",
+              "byteLength": 6949,
+              "sha256": "8bb5445de693c88475349c6666ee5a44067898e5a0b2ee8af5801d5ea8e3d482"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/run-suite.mjs",
+            "expectedByteLength": 6949,
+            "actualByteLength": 6949,
+            "expectedSHA256": "8bb5445de693c88475349c6666ee5a44067898e5a0b2ee8af5801d5ea8e3d482",
+            "actualSHA256": "8bb5445de693c88475349c6666ee5a44067898e5a0b2ee8af5801d5ea8e3d482",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 22,
+            "record": {
+              "file": "summary.json",
+              "byteLength": 9330,
+              "sha256": "b44e447ff17c2c5b50d706dcbb9e19f2337368895304c7aefa15722ccaf94518"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/summary.json",
+            "expectedByteLength": 9330,
+            "actualByteLength": 9330,
+            "expectedSHA256": "b44e447ff17c2c5b50d706dcbb9e19f2337368895304c7aefa15722ccaf94518",
+            "actualSHA256": "b44e447ff17c2c5b50d706dcbb9e19f2337368895304c7aefa15722ccaf94518",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 23,
+            "record": {
+              "file": "toolchain-verify-command.json",
+              "byteLength": 748,
+              "sha256": "32b147eb778e17c83e9f924013107241f20217241c2e4c26956079f761126890"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/toolchain-verify-command.json",
+            "expectedByteLength": 748,
+            "actualByteLength": 748,
+            "expectedSHA256": "32b147eb778e17c83e9f924013107241f20217241c2e4c26956079f761126890",
+            "actualSHA256": "32b147eb778e17c83e9f924013107241f20217241c2e4c26956079f761126890",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 24,
+            "record": {
+              "file": "toolchain-verify.txt",
+              "byteLength": 224,
+              "sha256": "6562bb8566e41ddbee6cef99cf963a0ae3fbdd67d845607d748fa29c5dc60e68"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/toolchain-verify.txt",
+            "expectedByteLength": 224,
+            "actualByteLength": 224,
+            "expectedSHA256": "6562bb8566e41ddbee6cef99cf963a0ae3fbdd67d845607d748fa29c5dc60e68",
+            "actualSHA256": "6562bb8566e41ddbee6cef99cf963a0ae3fbdd67d845607d748fa29c5dc60e68",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 25,
+            "record": {
+              "file": "ui-storage-command.json",
+              "byteLength": 751,
+              "sha256": "f7a0e935380cc2b2ebd1560ed020888bf78b1452fba8c0f45db968d3bacdba00"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/ui-storage-command.json",
+            "expectedByteLength": 751,
+            "actualByteLength": 751,
+            "expectedSHA256": "f7a0e935380cc2b2ebd1560ed020888bf78b1452fba8c0f45db968d3bacdba00",
+            "actualSHA256": "f7a0e935380cc2b2ebd1560ed020888bf78b1452fba8c0f45db968d3bacdba00",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 26,
+            "record": {
+              "file": "ui-storage.txt",
+              "byteLength": 2314,
+              "sha256": "5c8bbe953256c2c3fac5362bbd5548e927a2d944200860decaea7599ac4928b5"
+            },
+            "target": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/ui-storage.txt",
+            "expectedByteLength": 2314,
+            "actualByteLength": 2314,
+            "expectedSHA256": "5c8bbe953256c2c3fac5362bbd5548e927a2d944200860decaea7599ac4928b5",
+            "actualSHA256": "5c8bbe953256c2c3fac5362bbd5548e927a2d944200860decaea7599ac4928b5",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "integrated-person05-val004-87973fa-2026-10-26",
+      "main": {
+        "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/SHA256SUMS.json",
+        "byteLength": 6524,
+        "sha256": "01dbe811170852096ac5bcfcf202d546ecd6f3846960897bdd3a2f24554cac4f",
+        "textMetadata": {
+          "crlfCount": 0,
+          "bareLFCount": 207,
+          "hasUtf8BOM": false
+        },
+        "root": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26",
+        "manifestRelativeToRoot": "SHA256SUMS.json",
+        "format": "array-of-file-byteLength-sha256-records",
+        "recordFields": [
+          "file",
+          "byteLength",
+          "sha256"
+        ],
+        "expectedRecordCount": 41,
+        "recordedCount": 41,
+        "countMatchesExpected": true,
+        "passedCount": 41,
+        "failedCount": 0,
+        "unsupportedCount": 0,
+        "allPassed": true,
+        "entries": [
+          {
+            "recordIndex": 0,
+            "record": {
+              "file": ".gitattributes",
+              "byteLength": 9,
+              "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/.gitattributes",
+            "expectedByteLength": 9,
+            "actualByteLength": 9,
+            "expectedSHA256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
+            "actualSHA256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 1,
+            "record": {
+              "file": "automated/.gitattributes",
+              "byteLength": 8,
+              "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/.gitattributes",
+            "expectedByteLength": 8,
+            "actualByteLength": 8,
+            "expectedSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "actualSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 2,
+            "record": {
+              "file": "automated/SHA256SUMS.json",
+              "byteLength": 4378,
+              "sha256": "514efff2d39f8d1242fe9a5ce001193d83fbb2a3968970bfb4cfddba4dc3f621"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/SHA256SUMS.json",
+            "expectedByteLength": 4378,
+            "actualByteLength": 4378,
+            "expectedSHA256": "514efff2d39f8d1242fe9a5ce001193d83fbb2a3968970bfb4cfddba4dc3f621",
+            "actualSHA256": "514efff2d39f8d1242fe9a5ce001193d83fbb2a3968970bfb4cfddba4dc3f621",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 3,
+            "record": {
+              "file": "automated/acceptance-command.json",
+              "byteLength": 718,
+              "sha256": "4b08226272e174944f0141d46a7cd911475f9ce9cebf08f5dcd6709174656063"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/acceptance-command.json",
+            "expectedByteLength": 718,
+            "actualByteLength": 718,
+            "expectedSHA256": "4b08226272e174944f0141d46a7cd911475f9ce9cebf08f5dcd6709174656063",
+            "actualSHA256": "4b08226272e174944f0141d46a7cd911475f9ce9cebf08f5dcd6709174656063",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 4,
+            "record": {
+              "file": "automated/acceptance.txt",
+              "byteLength": 1690,
+              "sha256": "1e290786f82aeb9fb7452e43927cebddbeba8b92968b2c60be1549892b6148bd"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/acceptance.txt",
+            "expectedByteLength": 1690,
+            "actualByteLength": 1690,
+            "expectedSHA256": "1e290786f82aeb9fb7452e43927cebddbeba8b92968b2c60be1549892b6148bd",
+            "actualSHA256": "1e290786f82aeb9fb7452e43927cebddbeba8b92968b2c60be1549892b6148bd",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 5,
+            "record": {
+              "file": "automated/acceptance/independent.json",
+              "byteLength": 605678,
+              "sha256": "cbc6c182baec37226d4e80404a28e1537b90f4969efda9055780a32365c7c025"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/acceptance/independent.json",
+            "expectedByteLength": 605678,
+            "actualByteLength": 605678,
+            "expectedSHA256": "cbc6c182baec37226d4e80404a28e1537b90f4969efda9055780a32365c7c025",
+            "actualSHA256": "cbc6c182baec37226d4e80404a28e1537b90f4969efda9055780a32365c7c025",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 6,
+            "record": {
+              "file": "automated/acceptance/independent.tap",
+              "byteLength": 1606,
+              "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/acceptance/independent.tap",
+            "expectedByteLength": 1606,
+            "actualByteLength": 1606,
+            "expectedSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "actualSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 7,
+            "record": {
+              "file": "automated/check-command.json",
+              "byteLength": 658,
+              "sha256": "a57a0529648455040baf11fba82097bdbbc258ae6cf11acca5ad96fb0538ad1e"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/check-command.json",
+            "expectedByteLength": 658,
+            "actualByteLength": 658,
+            "expectedSHA256": "a57a0529648455040baf11fba82097bdbbc258ae6cf11acca5ad96fb0538ad1e",
+            "actualSHA256": "a57a0529648455040baf11fba82097bdbbc258ae6cf11acca5ad96fb0538ad1e",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 8,
+            "record": {
+              "file": "automated/check.txt",
+              "byteLength": 349,
+              "sha256": "3d282aa5adeab3ccc547576ffa80d0d2ccdc5db39aaa97178afe475f776c05bc"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/check.txt",
+            "expectedByteLength": 349,
+            "actualByteLength": 349,
+            "expectedSHA256": "3d282aa5adeab3ccc547576ffa80d0d2ccdc5db39aaa97178afe475f776c05bc",
+            "actualSHA256": "3d282aa5adeab3ccc547576ffa80d0d2ccdc5db39aaa97178afe475f776c05bc",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 9,
+            "record": {
+              "file": "automated/contracts-command.json",
+              "byteLength": 726,
+              "sha256": "c481f7bd29c6cc1c048ffa62b5579e1b45f2a5749b757c47c5d71a6a88b2f51f"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/contracts-command.json",
+            "expectedByteLength": 726,
+            "actualByteLength": 726,
+            "expectedSHA256": "c481f7bd29c6cc1c048ffa62b5579e1b45f2a5749b757c47c5d71a6a88b2f51f",
+            "actualSHA256": "c481f7bd29c6cc1c048ffa62b5579e1b45f2a5749b757c47c5d71a6a88b2f51f",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 10,
+            "record": {
+              "file": "automated/contracts.txt",
+              "byteLength": 1125,
+              "sha256": "f414763b39dbb96660c5161bfd5d33dbeece1fa8122539de71d13698c2857afb"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/contracts.txt",
+            "expectedByteLength": 1125,
+            "actualByteLength": 1125,
+            "expectedSHA256": "f414763b39dbb96660c5161bfd5d33dbeece1fa8122539de71d13698c2857afb",
+            "actualSHA256": "f414763b39dbb96660c5161bfd5d33dbeece1fa8122539de71d13698c2857afb",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 11,
+            "record": {
+              "file": "automated/history-preservation.json",
+              "byteLength": 58976,
+              "sha256": "2ebfad6ead227ffd46604f03622e837aca543d9522df68f132a374762a82865d"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/history-preservation.json",
+            "expectedByteLength": 58976,
+            "actualByteLength": 58976,
+            "expectedSHA256": "2ebfad6ead227ffd46604f03622e837aca543d9522df68f132a374762a82865d",
+            "actualSHA256": "2ebfad6ead227ffd46604f03622e837aca543d9522df68f132a374762a82865d",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 12,
+            "record": {
+              "file": "automated/initializer-command.json",
+              "byteLength": 731,
+              "sha256": "9f61cf01939da858e5932ee608a651c3d1cecced864771236eb054043aed7195"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/initializer-command.json",
+            "expectedByteLength": 731,
+            "actualByteLength": 731,
+            "expectedSHA256": "9f61cf01939da858e5932ee608a651c3d1cecced864771236eb054043aed7195",
+            "actualSHA256": "9f61cf01939da858e5932ee608a651c3d1cecced864771236eb054043aed7195",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 13,
+            "record": {
+              "file": "automated/initializer.txt",
+              "byteLength": 401,
+              "sha256": "8e323dcde83f1fb43bc8872a62c88b9f2cb0f5b15eda5deddf48cd731a9eacd3"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/initializer.txt",
+            "expectedByteLength": 401,
+            "actualByteLength": 401,
+            "expectedSHA256": "8e323dcde83f1fb43bc8872a62c88b9f2cb0f5b15eda5deddf48cd731a9eacd3",
+            "actualSHA256": "8e323dcde83f1fb43bc8872a62c88b9f2cb0f5b15eda5deddf48cd731a9eacd3",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 14,
+            "record": {
+              "file": "automated/initializer/initializer-lifetime.json",
+              "byteLength": 544883,
+              "sha256": "486af27319511ca1bc71fff59778ef3e25cac39dfb7dbfeae16767620f8c752a"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/initializer/initializer-lifetime.json",
+            "expectedByteLength": 544883,
+            "actualByteLength": 544883,
+            "expectedSHA256": "486af27319511ca1bc71fff59778ef3e25cac39dfb7dbfeae16767620f8c752a",
+            "actualSHA256": "486af27319511ca1bc71fff59778ef3e25cac39dfb7dbfeae16767620f8c752a",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 15,
+            "record": {
+              "file": "automated/initializer/initializer-lifetime.tap",
+              "byteLength": 310,
+              "sha256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/initializer/initializer-lifetime.tap",
+            "expectedByteLength": 310,
+            "actualByteLength": 310,
+            "expectedSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "actualSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 16,
+            "record": {
+              "file": "automated/integration-command.json",
+              "byteLength": 760,
+              "sha256": "0dd17dd2930114bd906c591d44f54980d42d5e1c4a38a4d4fd904c4a1589d5f7"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/integration-command.json",
+            "expectedByteLength": 760,
+            "actualByteLength": 760,
+            "expectedSHA256": "0dd17dd2930114bd906c591d44f54980d42d5e1c4a38a4d4fd904c4a1589d5f7",
+            "actualSHA256": "0dd17dd2930114bd906c591d44f54980d42d5e1c4a38a4d4fd904c4a1589d5f7",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 17,
+            "record": {
+              "file": "automated/integration.txt",
+              "byteLength": 517,
+              "sha256": "964e7e9785c30964897444482a7d0bd88d3978b48e16f6b5640a56378b185a74"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/integration.txt",
+            "expectedByteLength": 517,
+            "actualByteLength": 517,
+            "expectedSHA256": "964e7e9785c30964897444482a7d0bd88d3978b48e16f6b5640a56378b185a74",
+            "actualSHA256": "964e7e9785c30964897444482a7d0bd88d3978b48e16f6b5640a56378b185a74",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 18,
+            "record": {
+              "file": "automated/modules-command.json",
+              "byteLength": 747,
+              "sha256": "9bd497e69ab6db7d1bffa7e079489d3777a8025c86509b59913150a81f6b8651"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/modules-command.json",
+            "expectedByteLength": 747,
+            "actualByteLength": 747,
+            "expectedSHA256": "9bd497e69ab6db7d1bffa7e079489d3777a8025c86509b59913150a81f6b8651",
+            "actualSHA256": "9bd497e69ab6db7d1bffa7e079489d3777a8025c86509b59913150a81f6b8651",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 19,
+            "record": {
+              "file": "automated/modules.txt",
+              "byteLength": 10360,
+              "sha256": "8301f31fe77106ac3d435c27e4e89bf0a9acd3f2a719aa8c020c083a73af686c"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/modules.txt",
+            "expectedByteLength": 10360,
+            "actualByteLength": 10360,
+            "expectedSHA256": "8301f31fe77106ac3d435c27e4e89bf0a9acd3f2a719aa8c020c083a73af686c",
+            "actualSHA256": "8301f31fe77106ac3d435c27e4e89bf0a9acd3f2a719aa8c020c083a73af686c",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 20,
+            "record": {
+              "file": "automated/regressions-command.json",
+              "byteLength": 731,
+              "sha256": "9f9aadc9037a391a61942e74935021f0f537145f68690ccb7220f961c67df5b9"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/regressions-command.json",
+            "expectedByteLength": 731,
+            "actualByteLength": 731,
+            "expectedSHA256": "9f9aadc9037a391a61942e74935021f0f537145f68690ccb7220f961c67df5b9",
+            "actualSHA256": "9f9aadc9037a391a61942e74935021f0f537145f68690ccb7220f961c67df5b9",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 21,
+            "record": {
+              "file": "automated/regressions.txt",
+              "byteLength": 2561,
+              "sha256": "a3f059a9a6e08bbe93f17c5ad1c055a9d94ffa3674796319c2d7d65630601292"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/regressions.txt",
+            "expectedByteLength": 2561,
+            "actualByteLength": 2561,
+            "expectedSHA256": "a3f059a9a6e08bbe93f17c5ad1c055a9d94ffa3674796319c2d7d65630601292",
+            "actualSHA256": "a3f059a9a6e08bbe93f17c5ad1c055a9d94ffa3674796319c2d7d65630601292",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 22,
+            "record": {
+              "file": "automated/regressions/regression-loop-header.json",
+              "byteLength": 114865,
+              "sha256": "c95e29f93c6730a320ba08cd75311bb7a721ffebe014a9484c05282606a82a25"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/regressions/regression-loop-header.json",
+            "expectedByteLength": 114865,
+            "actualByteLength": 114865,
+            "expectedSHA256": "c95e29f93c6730a320ba08cd75311bb7a721ffebe014a9484c05282606a82a25",
+            "actualSHA256": "c95e29f93c6730a320ba08cd75311bb7a721ffebe014a9484c05282606a82a25",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 23,
+            "record": {
+              "file": "automated/regressions/regression-shadow.json",
+              "byteLength": 64970,
+              "sha256": "7ebba7a85883da69eff2fd48ea34fba4afc35872101f4c23099563357169ba96"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/regressions/regression-shadow.json",
+            "expectedByteLength": 64970,
+            "actualByteLength": 64970,
+            "expectedSHA256": "7ebba7a85883da69eff2fd48ea34fba4afc35872101f4c23099563357169ba96",
+            "actualSHA256": "7ebba7a85883da69eff2fd48ea34fba4afc35872101f4c23099563357169ba96",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 24,
+            "record": {
+              "file": "automated/run-suite.mjs",
+              "byteLength": 7567,
+              "sha256": "bccfb3ca86b388b41dc546db56c3d4ed9b91693c91610a1db9652090cfeaaf91"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/run-suite.mjs",
+            "expectedByteLength": 7567,
+            "actualByteLength": 7567,
+            "expectedSHA256": "bccfb3ca86b388b41dc546db56c3d4ed9b91693c91610a1db9652090cfeaaf91",
+            "actualSHA256": "bccfb3ca86b388b41dc546db56c3d4ed9b91693c91610a1db9652090cfeaaf91",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 25,
+            "record": {
+              "file": "automated/summary.json",
+              "byteLength": 9689,
+              "sha256": "2984f7f3356a4e1c02c0ae620991398fda54d14d5f5aa780dd84313c3bff9ff7"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/summary.json",
+            "expectedByteLength": 9689,
+            "actualByteLength": 9689,
+            "expectedSHA256": "2984f7f3356a4e1c02c0ae620991398fda54d14d5f5aa780dd84313c3bff9ff7",
+            "actualSHA256": "2984f7f3356a4e1c02c0ae620991398fda54d14d5f5aa780dd84313c3bff9ff7",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 26,
+            "record": {
+              "file": "automated/toolchain-verify-command.json",
+              "byteLength": 757,
+              "sha256": "c4e5e055992b23098f108e7f4117a141c2bfc241303e533aa78b366079d813f1"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/toolchain-verify-command.json",
+            "expectedByteLength": 757,
+            "actualByteLength": 757,
+            "expectedSHA256": "c4e5e055992b23098f108e7f4117a141c2bfc241303e533aa78b366079d813f1",
+            "actualSHA256": "c4e5e055992b23098f108e7f4117a141c2bfc241303e533aa78b366079d813f1",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 27,
+            "record": {
+              "file": "automated/toolchain-verify.txt",
+              "byteLength": 224,
+              "sha256": "ba597264da94dc065bd4c304a6d667aab9b97812c00be6f634d7add0e95b5fec"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/toolchain-verify.txt",
+            "expectedByteLength": 224,
+            "actualByteLength": 224,
+            "expectedSHA256": "ba597264da94dc065bd4c304a6d667aab9b97812c00be6f634d7add0e95b5fec",
+            "actualSHA256": "ba597264da94dc065bd4c304a6d667aab9b97812c00be6f634d7add0e95b5fec",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 28,
+            "record": {
+              "file": "automated/ui-storage-command.json",
+              "byteLength": 742,
+              "sha256": "7aecafdc13809965bf64f477b600e7f6156ef4d1961ab4e77cb326758bf06544"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/ui-storage-command.json",
+            "expectedByteLength": 742,
+            "actualByteLength": 742,
+            "expectedSHA256": "7aecafdc13809965bf64f477b600e7f6156ef4d1961ab4e77cb326758bf06544",
+            "actualSHA256": "7aecafdc13809965bf64f477b600e7f6156ef4d1961ab4e77cb326758bf06544",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 29,
+            "record": {
+              "file": "automated/ui-storage.txt",
+              "byteLength": 3265,
+              "sha256": "8792e7fde9df584ece28fd5b805ac9b894f1b06de9c9290cb5425b55915014a0"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/ui-storage.txt",
+            "expectedByteLength": 3265,
+            "actualByteLength": 3265,
+            "expectedSHA256": "8792e7fde9df584ece28fd5b805ac9b894f1b06de9c9290cb5425b55915014a0",
+            "actualSHA256": "8792e7fde9df584ece28fd5b805ac9b894f1b06de9c9290cb5425b55915014a0",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 30,
+            "record": {
+              "file": "automated/verification.json",
+              "byteLength": 5738,
+              "sha256": "6bab82cf15ed6a11b67fa44eda67e617b66f5252626a0a793c6c130cef04ad3c"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/verification.json",
+            "expectedByteLength": 5738,
+            "actualByteLength": 5738,
+            "expectedSHA256": "6bab82cf15ed6a11b67fa44eda67e617b66f5252626a0a793c6c130cef04ad3c",
+            "actualSHA256": "6bab82cf15ed6a11b67fa44eda67e617b66f5252626a0a793c6c130cef04ad3c",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 31,
+            "record": {
+              "file": "browser/independent-two-file-source.json",
+              "byteLength": 233,
+              "sha256": "77b25f4485df3c28ac8e93f2ea9c4c05251240b157ebaad1614ef660d351fe48"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/independent-two-file-source.json",
+            "expectedByteLength": 233,
+            "actualByteLength": 233,
+            "expectedSHA256": "77b25f4485df3c28ac8e93f2ea9c4c05251240b157ebaad1614ef660d351fe48",
+            "actualSHA256": "77b25f4485df3c28ac8e93f2ea9c4c05251240b157ebaad1614ef660d351fe48",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 32,
+            "record": {
+              "file": "browser/new-build-exit3.png",
+              "byteLength": 77592,
+              "sha256": "a46aec8493850bf001deaa2b8e6b7d4539f7b0f18dccfa8f35d3874435f9b1f0"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/new-build-exit3.png",
+            "expectedByteLength": 77592,
+            "actualByteLength": 77592,
+            "expectedSHA256": "a46aec8493850bf001deaa2b8e6b7d4539f7b0f18dccfa8f35d3874435f9b1f0",
+            "actualSHA256": "a46aec8493850bf001deaa2b8e6b7d4539f7b0f18dccfa8f35d3874435f9b1f0",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 33,
+            "record": {
+              "file": "browser/observations.json",
+              "byteLength": 91270,
+              "sha256": "007ef05573e944cc6aa83589c035c859c445e34a7744b8acddd966dd9f5024f1"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+            "expectedByteLength": 91270,
+            "actualByteLength": 91270,
+            "expectedSHA256": "007ef05573e944cc6aa83589c035c859c445e34a7744b8acddd966dd9f5024f1",
+            "actualSHA256": "007ef05573e944cc6aa83589c035c859c445e34a7744b8acddd966dd9f5024f1",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 34,
+            "record": {
+              "file": "browser/repaired-snapshot-i1.png",
+              "byteLength": 81988,
+              "sha256": "fac64c2cb5aa35f060d10ffd9d4ff3adc3ab5e602ea3a7e7c1f29a1598e40038"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/repaired-snapshot-i1.png",
+            "expectedByteLength": 81988,
+            "actualByteLength": 81988,
+            "expectedSHA256": "fac64c2cb5aa35f060d10ffd9d4ff3adc3ab5e602ea3a7e7c1f29a1598e40038",
+            "actualSHA256": "fac64c2cb5aa35f060d10ffd9d4ff3adc3ab5e602ea3a7e7c1f29a1598e40038",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 35,
+            "record": {
+              "file": "browser/results.json",
+              "byteLength": 3047,
+              "sha256": "cce82a42ddad2202b1618133eae778ab26d5eea6c167fd98d7324c1a4fcdbd35"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/results.json",
+            "expectedByteLength": 3047,
+            "actualByteLength": 3047,
+            "expectedSHA256": "cce82a42ddad2202b1618133eae778ab26d5eea6c167fd98d7324c1a4fcdbd35",
+            "actualSHA256": "cce82a42ddad2202b1618133eae778ab26d5eea6c167fd98d7324c1a4fcdbd35",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 36,
+            "record": {
+              "file": "provenance.json",
+              "byteLength": 6618,
+              "sha256": "970beeddef344c5d10440e9c68debc402ea75b189393317625799ce794743a18"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/provenance.json",
+            "expectedByteLength": 6618,
+            "actualByteLength": 6618,
+            "expectedSHA256": "970beeddef344c5d10440e9c68debc402ea75b189393317625799ce794743a18",
+            "actualSHA256": "970beeddef344c5d10440e9c68debc402ea75b189393317625799ce794743a18",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 37,
+            "record": {
+              "file": "review/all-history-integrity.json",
+              "byteLength": 239345,
+              "sha256": "425487404ebc2b07233355e2eba40fb66bb08d10146b8243ac39a936bed15551"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/review/all-history-integrity.json",
+            "expectedByteLength": 239345,
+            "actualByteLength": 239345,
+            "expectedSHA256": "425487404ebc2b07233355e2eba40fb66bb08d10146b8243ac39a936bed15551",
+            "actualSHA256": "425487404ebc2b07233355e2eba40fb66bb08d10146b8243ac39a936bed15551",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 38,
+            "record": {
+              "file": "review/val004-fix-static-review.md",
+              "byteLength": 5828,
+              "sha256": "39049a948ae8ae1995c8a62a5e334a4bc075f70944faf8d69bff07838de3eb6b"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/review/val004-fix-static-review.md",
+            "expectedByteLength": 5828,
+            "actualByteLength": 5828,
+            "expectedSHA256": "39049a948ae8ae1995c8a62a5e334a4bc075f70944faf8d69bff07838de3eb6b",
+            "actualSHA256": "39049a948ae8ae1995c8a62a5e334a4bc075f70944faf8d69bff07838de3eb6b",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 39,
+            "record": {
+              "file": "seal-evidence.mjs",
+              "byteLength": 11030,
+              "sha256": "0a240a6d30a18cb3c8ab7403d4c9c85fe989adc9bd37937fe682fa418961c0cf"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/seal-evidence.mjs",
+            "expectedByteLength": 11030,
+            "actualByteLength": 11030,
+            "expectedSHA256": "0a240a6d30a18cb3c8ab7403d4c9c85fe989adc9bd37937fe682fa418961c0cf",
+            "actualSHA256": "0a240a6d30a18cb3c8ab7403d4c9c85fe989adc9bd37937fe682fa418961c0cf",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 40,
+            "record": {
+              "file": "summary.json",
+              "byteLength": 1011,
+              "sha256": "c2188b60ae2bf51fcdb9c189ced03825ddb0c0f8a1e9df6f0ee2bf1762c3ca4d"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/summary.json",
+            "expectedByteLength": 1011,
+            "actualByteLength": 1011,
+            "expectedSHA256": "c2188b60ae2bf51fcdb9c189ced03825ddb0c0f8a1e9df6f0ee2bf1762c3ca4d",
+            "actualSHA256": "c2188b60ae2bf51fcdb9c189ced03825ddb0c0f8a1e9df6f0ee2bf1762c3ca4d",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          }
+        ]
+      },
+      "automated": {
+        "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/SHA256SUMS.json",
+        "byteLength": 4378,
+        "sha256": "514efff2d39f8d1242fe9a5ce001193d83fbb2a3968970bfb4cfddba4dc3f621",
+        "textMetadata": {
+          "crlfCount": 0,
+          "bareLFCount": 147,
+          "hasUtf8BOM": false
+        },
+        "root": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26",
+        "manifestRelativeToRoot": "automated/SHA256SUMS.json",
+        "format": "array-of-file-byteLength-sha256-records",
+        "recordFields": [
+          "file",
+          "byteLength",
+          "sha256"
+        ],
+        "expectedRecordCount": 29,
+        "recordedCount": 29,
+        "countMatchesExpected": true,
+        "passedCount": 29,
+        "failedCount": 0,
+        "unsupportedCount": 0,
+        "allPassed": true,
+        "entries": [
+          {
+            "recordIndex": 0,
+            "record": {
+              "file": ".gitattributes",
+              "byteLength": 8,
+              "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/.gitattributes",
+            "expectedByteLength": 8,
+            "actualByteLength": 8,
+            "expectedSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "actualSHA256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 1,
+            "record": {
+              "file": "acceptance-command.json",
+              "byteLength": 718,
+              "sha256": "4b08226272e174944f0141d46a7cd911475f9ce9cebf08f5dcd6709174656063"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/acceptance-command.json",
+            "expectedByteLength": 718,
+            "actualByteLength": 718,
+            "expectedSHA256": "4b08226272e174944f0141d46a7cd911475f9ce9cebf08f5dcd6709174656063",
+            "actualSHA256": "4b08226272e174944f0141d46a7cd911475f9ce9cebf08f5dcd6709174656063",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 2,
+            "record": {
+              "file": "acceptance.txt",
+              "byteLength": 1690,
+              "sha256": "1e290786f82aeb9fb7452e43927cebddbeba8b92968b2c60be1549892b6148bd"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/acceptance.txt",
+            "expectedByteLength": 1690,
+            "actualByteLength": 1690,
+            "expectedSHA256": "1e290786f82aeb9fb7452e43927cebddbeba8b92968b2c60be1549892b6148bd",
+            "actualSHA256": "1e290786f82aeb9fb7452e43927cebddbeba8b92968b2c60be1549892b6148bd",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 3,
+            "record": {
+              "file": "acceptance/independent.json",
+              "byteLength": 605678,
+              "sha256": "cbc6c182baec37226d4e80404a28e1537b90f4969efda9055780a32365c7c025"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/acceptance/independent.json",
+            "expectedByteLength": 605678,
+            "actualByteLength": 605678,
+            "expectedSHA256": "cbc6c182baec37226d4e80404a28e1537b90f4969efda9055780a32365c7c025",
+            "actualSHA256": "cbc6c182baec37226d4e80404a28e1537b90f4969efda9055780a32365c7c025",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 4,
+            "record": {
+              "file": "acceptance/independent.tap",
+              "byteLength": 1606,
+              "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/acceptance/independent.tap",
+            "expectedByteLength": 1606,
+            "actualByteLength": 1606,
+            "expectedSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "actualSHA256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 5,
+            "record": {
+              "file": "check-command.json",
+              "byteLength": 658,
+              "sha256": "a57a0529648455040baf11fba82097bdbbc258ae6cf11acca5ad96fb0538ad1e"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/check-command.json",
+            "expectedByteLength": 658,
+            "actualByteLength": 658,
+            "expectedSHA256": "a57a0529648455040baf11fba82097bdbbc258ae6cf11acca5ad96fb0538ad1e",
+            "actualSHA256": "a57a0529648455040baf11fba82097bdbbc258ae6cf11acca5ad96fb0538ad1e",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 6,
+            "record": {
+              "file": "check.txt",
+              "byteLength": 349,
+              "sha256": "3d282aa5adeab3ccc547576ffa80d0d2ccdc5db39aaa97178afe475f776c05bc"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/check.txt",
+            "expectedByteLength": 349,
+            "actualByteLength": 349,
+            "expectedSHA256": "3d282aa5adeab3ccc547576ffa80d0d2ccdc5db39aaa97178afe475f776c05bc",
+            "actualSHA256": "3d282aa5adeab3ccc547576ffa80d0d2ccdc5db39aaa97178afe475f776c05bc",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 7,
+            "record": {
+              "file": "contracts-command.json",
+              "byteLength": 726,
+              "sha256": "c481f7bd29c6cc1c048ffa62b5579e1b45f2a5749b757c47c5d71a6a88b2f51f"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/contracts-command.json",
+            "expectedByteLength": 726,
+            "actualByteLength": 726,
+            "expectedSHA256": "c481f7bd29c6cc1c048ffa62b5579e1b45f2a5749b757c47c5d71a6a88b2f51f",
+            "actualSHA256": "c481f7bd29c6cc1c048ffa62b5579e1b45f2a5749b757c47c5d71a6a88b2f51f",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 8,
+            "record": {
+              "file": "contracts.txt",
+              "byteLength": 1125,
+              "sha256": "f414763b39dbb96660c5161bfd5d33dbeece1fa8122539de71d13698c2857afb"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/contracts.txt",
+            "expectedByteLength": 1125,
+            "actualByteLength": 1125,
+            "expectedSHA256": "f414763b39dbb96660c5161bfd5d33dbeece1fa8122539de71d13698c2857afb",
+            "actualSHA256": "f414763b39dbb96660c5161bfd5d33dbeece1fa8122539de71d13698c2857afb",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 9,
+            "record": {
+              "file": "history-preservation.json",
+              "byteLength": 58976,
+              "sha256": "2ebfad6ead227ffd46604f03622e837aca543d9522df68f132a374762a82865d"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/history-preservation.json",
+            "expectedByteLength": 58976,
+            "actualByteLength": 58976,
+            "expectedSHA256": "2ebfad6ead227ffd46604f03622e837aca543d9522df68f132a374762a82865d",
+            "actualSHA256": "2ebfad6ead227ffd46604f03622e837aca543d9522df68f132a374762a82865d",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 10,
+            "record": {
+              "file": "initializer-command.json",
+              "byteLength": 731,
+              "sha256": "9f61cf01939da858e5932ee608a651c3d1cecced864771236eb054043aed7195"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/initializer-command.json",
+            "expectedByteLength": 731,
+            "actualByteLength": 731,
+            "expectedSHA256": "9f61cf01939da858e5932ee608a651c3d1cecced864771236eb054043aed7195",
+            "actualSHA256": "9f61cf01939da858e5932ee608a651c3d1cecced864771236eb054043aed7195",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 11,
+            "record": {
+              "file": "initializer.txt",
+              "byteLength": 401,
+              "sha256": "8e323dcde83f1fb43bc8872a62c88b9f2cb0f5b15eda5deddf48cd731a9eacd3"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/initializer.txt",
+            "expectedByteLength": 401,
+            "actualByteLength": 401,
+            "expectedSHA256": "8e323dcde83f1fb43bc8872a62c88b9f2cb0f5b15eda5deddf48cd731a9eacd3",
+            "actualSHA256": "8e323dcde83f1fb43bc8872a62c88b9f2cb0f5b15eda5deddf48cd731a9eacd3",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 12,
+            "record": {
+              "file": "initializer/initializer-lifetime.json",
+              "byteLength": 544883,
+              "sha256": "486af27319511ca1bc71fff59778ef3e25cac39dfb7dbfeae16767620f8c752a"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/initializer/initializer-lifetime.json",
+            "expectedByteLength": 544883,
+            "actualByteLength": 544883,
+            "expectedSHA256": "486af27319511ca1bc71fff59778ef3e25cac39dfb7dbfeae16767620f8c752a",
+            "actualSHA256": "486af27319511ca1bc71fff59778ef3e25cac39dfb7dbfeae16767620f8c752a",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 13,
+            "record": {
+              "file": "initializer/initializer-lifetime.tap",
+              "byteLength": 310,
+              "sha256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/initializer/initializer-lifetime.tap",
+            "expectedByteLength": 310,
+            "actualByteLength": 310,
+            "expectedSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "actualSHA256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 14,
+            "record": {
+              "file": "integration-command.json",
+              "byteLength": 760,
+              "sha256": "0dd17dd2930114bd906c591d44f54980d42d5e1c4a38a4d4fd904c4a1589d5f7"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/integration-command.json",
+            "expectedByteLength": 760,
+            "actualByteLength": 760,
+            "expectedSHA256": "0dd17dd2930114bd906c591d44f54980d42d5e1c4a38a4d4fd904c4a1589d5f7",
+            "actualSHA256": "0dd17dd2930114bd906c591d44f54980d42d5e1c4a38a4d4fd904c4a1589d5f7",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 15,
+            "record": {
+              "file": "integration.txt",
+              "byteLength": 517,
+              "sha256": "964e7e9785c30964897444482a7d0bd88d3978b48e16f6b5640a56378b185a74"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/integration.txt",
+            "expectedByteLength": 517,
+            "actualByteLength": 517,
+            "expectedSHA256": "964e7e9785c30964897444482a7d0bd88d3978b48e16f6b5640a56378b185a74",
+            "actualSHA256": "964e7e9785c30964897444482a7d0bd88d3978b48e16f6b5640a56378b185a74",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 16,
+            "record": {
+              "file": "modules-command.json",
+              "byteLength": 747,
+              "sha256": "9bd497e69ab6db7d1bffa7e079489d3777a8025c86509b59913150a81f6b8651"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/modules-command.json",
+            "expectedByteLength": 747,
+            "actualByteLength": 747,
+            "expectedSHA256": "9bd497e69ab6db7d1bffa7e079489d3777a8025c86509b59913150a81f6b8651",
+            "actualSHA256": "9bd497e69ab6db7d1bffa7e079489d3777a8025c86509b59913150a81f6b8651",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 17,
+            "record": {
+              "file": "modules.txt",
+              "byteLength": 10360,
+              "sha256": "8301f31fe77106ac3d435c27e4e89bf0a9acd3f2a719aa8c020c083a73af686c"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/modules.txt",
+            "expectedByteLength": 10360,
+            "actualByteLength": 10360,
+            "expectedSHA256": "8301f31fe77106ac3d435c27e4e89bf0a9acd3f2a719aa8c020c083a73af686c",
+            "actualSHA256": "8301f31fe77106ac3d435c27e4e89bf0a9acd3f2a719aa8c020c083a73af686c",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 18,
+            "record": {
+              "file": "regressions-command.json",
+              "byteLength": 731,
+              "sha256": "9f9aadc9037a391a61942e74935021f0f537145f68690ccb7220f961c67df5b9"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/regressions-command.json",
+            "expectedByteLength": 731,
+            "actualByteLength": 731,
+            "expectedSHA256": "9f9aadc9037a391a61942e74935021f0f537145f68690ccb7220f961c67df5b9",
+            "actualSHA256": "9f9aadc9037a391a61942e74935021f0f537145f68690ccb7220f961c67df5b9",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 19,
+            "record": {
+              "file": "regressions.txt",
+              "byteLength": 2561,
+              "sha256": "a3f059a9a6e08bbe93f17c5ad1c055a9d94ffa3674796319c2d7d65630601292"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/regressions.txt",
+            "expectedByteLength": 2561,
+            "actualByteLength": 2561,
+            "expectedSHA256": "a3f059a9a6e08bbe93f17c5ad1c055a9d94ffa3674796319c2d7d65630601292",
+            "actualSHA256": "a3f059a9a6e08bbe93f17c5ad1c055a9d94ffa3674796319c2d7d65630601292",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 20,
+            "record": {
+              "file": "regressions/regression-loop-header.json",
+              "byteLength": 114865,
+              "sha256": "c95e29f93c6730a320ba08cd75311bb7a721ffebe014a9484c05282606a82a25"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/regressions/regression-loop-header.json",
+            "expectedByteLength": 114865,
+            "actualByteLength": 114865,
+            "expectedSHA256": "c95e29f93c6730a320ba08cd75311bb7a721ffebe014a9484c05282606a82a25",
+            "actualSHA256": "c95e29f93c6730a320ba08cd75311bb7a721ffebe014a9484c05282606a82a25",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 21,
+            "record": {
+              "file": "regressions/regression-shadow.json",
+              "byteLength": 64970,
+              "sha256": "7ebba7a85883da69eff2fd48ea34fba4afc35872101f4c23099563357169ba96"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/regressions/regression-shadow.json",
+            "expectedByteLength": 64970,
+            "actualByteLength": 64970,
+            "expectedSHA256": "7ebba7a85883da69eff2fd48ea34fba4afc35872101f4c23099563357169ba96",
+            "actualSHA256": "7ebba7a85883da69eff2fd48ea34fba4afc35872101f4c23099563357169ba96",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 22,
+            "record": {
+              "file": "run-suite.mjs",
+              "byteLength": 7567,
+              "sha256": "bccfb3ca86b388b41dc546db56c3d4ed9b91693c91610a1db9652090cfeaaf91"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/run-suite.mjs",
+            "expectedByteLength": 7567,
+            "actualByteLength": 7567,
+            "expectedSHA256": "bccfb3ca86b388b41dc546db56c3d4ed9b91693c91610a1db9652090cfeaaf91",
+            "actualSHA256": "bccfb3ca86b388b41dc546db56c3d4ed9b91693c91610a1db9652090cfeaaf91",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 23,
+            "record": {
+              "file": "summary.json",
+              "byteLength": 9689,
+              "sha256": "2984f7f3356a4e1c02c0ae620991398fda54d14d5f5aa780dd84313c3bff9ff7"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/summary.json",
+            "expectedByteLength": 9689,
+            "actualByteLength": 9689,
+            "expectedSHA256": "2984f7f3356a4e1c02c0ae620991398fda54d14d5f5aa780dd84313c3bff9ff7",
+            "actualSHA256": "2984f7f3356a4e1c02c0ae620991398fda54d14d5f5aa780dd84313c3bff9ff7",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 24,
+            "record": {
+              "file": "toolchain-verify-command.json",
+              "byteLength": 757,
+              "sha256": "c4e5e055992b23098f108e7f4117a141c2bfc241303e533aa78b366079d813f1"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/toolchain-verify-command.json",
+            "expectedByteLength": 757,
+            "actualByteLength": 757,
+            "expectedSHA256": "c4e5e055992b23098f108e7f4117a141c2bfc241303e533aa78b366079d813f1",
+            "actualSHA256": "c4e5e055992b23098f108e7f4117a141c2bfc241303e533aa78b366079d813f1",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 25,
+            "record": {
+              "file": "toolchain-verify.txt",
+              "byteLength": 224,
+              "sha256": "ba597264da94dc065bd4c304a6d667aab9b97812c00be6f634d7add0e95b5fec"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/toolchain-verify.txt",
+            "expectedByteLength": 224,
+            "actualByteLength": 224,
+            "expectedSHA256": "ba597264da94dc065bd4c304a6d667aab9b97812c00be6f634d7add0e95b5fec",
+            "actualSHA256": "ba597264da94dc065bd4c304a6d667aab9b97812c00be6f634d7add0e95b5fec",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 26,
+            "record": {
+              "file": "ui-storage-command.json",
+              "byteLength": 742,
+              "sha256": "7aecafdc13809965bf64f477b600e7f6156ef4d1961ab4e77cb326758bf06544"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/ui-storage-command.json",
+            "expectedByteLength": 742,
+            "actualByteLength": 742,
+            "expectedSHA256": "7aecafdc13809965bf64f477b600e7f6156ef4d1961ab4e77cb326758bf06544",
+            "actualSHA256": "7aecafdc13809965bf64f477b600e7f6156ef4d1961ab4e77cb326758bf06544",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 27,
+            "record": {
+              "file": "ui-storage.txt",
+              "byteLength": 3265,
+              "sha256": "8792e7fde9df584ece28fd5b805ac9b894f1b06de9c9290cb5425b55915014a0"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/ui-storage.txt",
+            "expectedByteLength": 3265,
+            "actualByteLength": 3265,
+            "expectedSHA256": "8792e7fde9df584ece28fd5b805ac9b894f1b06de9c9290cb5425b55915014a0",
+            "actualSHA256": "8792e7fde9df584ece28fd5b805ac9b894f1b06de9c9290cb5425b55915014a0",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          },
+          {
+            "recordIndex": 28,
+            "record": {
+              "file": "verification.json",
+              "byteLength": 5738,
+              "sha256": "6bab82cf15ed6a11b67fa44eda67e617b66f5252626a0a793c6c130cef04ad3c"
+            },
+            "target": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/verification.json",
+            "expectedByteLength": 5738,
+            "actualByteLength": 5738,
+            "expectedSHA256": "6bab82cf15ed6a11b67fa44eda67e617b66f5252626a0a793c6c130cef04ad3c",
+            "actualSHA256": "6bab82cf15ed6a11b67fa44eda67e617b66f5252626a0a793c6c130cef04ad3c",
+            "byteLengthMatches": true,
+            "sha256Matches": true,
+            "status": "matched",
+            "passed": true
+          }
+        ]
+      }
+    }
+  ],
+  "manifestFingerprints": [
+    {
+      "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/SHA256SUMS.json",
+      "byteLength": 7633,
+      "sha256": "53770e43ca4415510214238c72d59b3673cabb276a69a14ec6c505ac5aed428f",
+      "textMetadata": {
+        "crlfCount": 0,
+        "bareLFCount": 242,
+        "hasUtf8BOM": false
+      }
+    },
+    {
+      "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/SHA256SUMS.json",
+      "byteLength": 4075,
+      "sha256": "e8897ed8a7769ef5439b91fa2db325705943c5393c7efcd911bcb95446a44602",
+      "textMetadata": {
+        "crlfCount": 0,
+        "bareLFCount": 137,
+        "hasUtf8BOM": false
+      }
+    },
+    {
+      "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/SHA256SUMS.json",
+      "byteLength": 6524,
+      "sha256": "01dbe811170852096ac5bcfcf202d546ecd6f3846960897bdd3a2f24554cac4f",
+      "textMetadata": {
+        "crlfCount": 0,
+        "bareLFCount": 207,
+        "hasUtf8BOM": false
+      }
+    },
+    {
+      "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/SHA256SUMS.json",
+      "byteLength": 4378,
+      "sha256": "514efff2d39f8d1242fe9a5ce001193d83fbb2a3968970bfb4cfddba4dc3f621",
+      "textMetadata": {
+        "crlfCount": 0,
+        "bareLFCount": 147,
+        "hasUtf8BOM": false
+      }
+    }
+  ],
+  "historicalConclusions": {
+    "originalV03": {
+      "defect": "VAL-004",
+      "originalStatusPreserved": true,
+      "values": [
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+          "jsonPath": "$.defect",
+          "actual": "VAL-004"
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+          "jsonPath": "$.result",
+          "actual": "failed"
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+          "jsonPath": "$.testedRevision",
+          "actual": "fff15bee97ed47cf2485b83c4344a020e9e190f7"
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+          "jsonPath": "$.falseEmptyMessage",
+          "actual": true
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+          "jsonPath": "$.initialBreakpointLine",
+          "actual": 4
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+          "jsonPath": "$.initialObservedI",
+          "actual": 0
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+          "jsonPath": "$.afterContinueObservedI",
+          "actual": 1
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+          "jsonPath": "$.actualPause",
+          "actual": "main.cpp:4:1"
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+          "jsonPath": "$.oldSnapshotEditor",
+          "actual": {
+            "readOnly": true,
+            "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+          }
+        }
+      ],
+      "failedWorkflow": {
+        "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/results.json",
+        "jsonPath": "$.workflows[11]",
+        "actual": {
+          "id": "old-debug-snapshot-breakpoint-display",
+          "status": "failed",
+          "defect": "VAL-004",
+          "owner": "04 UI",
+          "severity": "P2",
+          "evidence": [
+            {
+              "file": "browser/observations.json",
+              "index": 12,
+              "step": "stale-snapshot-breakpoint-panel-after-editing-breakpoints"
+            },
+            {
+              "file": "browser/observations.json",
+              "index": 37,
+              "step": "val004-minimal-breakpoint4-i0-bound"
+            },
+            {
+              "file": "browser/observations.json",
+              "index": 38,
+              "step": "val004-minimal-readonly-snapshot-falsely-no-breakpoints"
+            },
+            {
+              "file": "browser/observations.json",
+              "index": 39,
+              "step": "val004-minimal-hidden-breakpoint-still-stops-i1"
+            }
+          ],
+          "details": "browser/val004-minimal-results.json"
+        }
+      },
+      "summaryConclusion": {
+        "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/summary.json",
+        "jsonPath": "$.overall",
+        "actual": "Incomplete acceptance: VAL-004 open and G2/G3 pending"
+      },
+      "keyArtifacts": [
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal-results.json",
+          "manifest": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/SHA256SUMS.json",
+          "manifestRecordIndex": 39,
+          "expectedByteLength": 4075,
+          "actualByteLength": 4075,
+          "expectedSHA256": "508635897f31049570b47213d08e076e7ea491624b472d1700b84d3044e3c82c",
+          "actualSHA256": "508635897f31049570b47213d08e076e7ea491624b472d1700b84d3044e3c82c",
+          "status": "matched",
+          "passed": true
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal.png",
+          "manifest": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/SHA256SUMS.json",
+          "manifestRecordIndex": 40,
+          "expectedByteLength": 80828,
+          "actualByteLength": 80828,
+          "expectedSHA256": "9b91f269d65572488c46440bda28c713df29116fce0539ad33c6ca97c91c192b",
+          "actualSHA256": "9b91f269d65572488c46440bda28c713df29116fce0539ad33c6ca97c91c192b",
+          "status": "matched",
+          "passed": true
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/breakpoint-visibility-mismatch.png",
+          "manifest": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/SHA256SUMS.json",
+          "manifestRecordIndex": 30,
+          "expectedByteLength": 115678,
+          "actualByteLength": 115678,
+          "expectedSHA256": "bda3d6a37a51cb5e3f25df909b598093c79d62f1a4801d23d21b47c1b794c683",
+          "actualSHA256": "bda3d6a37a51cb5e3f25df909b598093c79d62f1a4801d23d21b47c1b794c683",
+          "status": "matched",
+          "passed": true
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/results.json",
+          "manifest": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/SHA256SUMS.json",
+          "manifestRecordIndex": 37,
+          "expectedByteLength": 7526,
+          "actualByteLength": 7526,
+          "expectedSHA256": "a2dcf7f23af7c27c12d585fe4bef36d6d1f47c9b9df172da708668405ae5c38f",
+          "actualSHA256": "a2dcf7f23af7c27c12d585fe4bef36d6d1f47c9b9df172da708668405ae5c38f",
+          "status": "matched",
+          "passed": true
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/observations.json",
+          "manifest": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/SHA256SUMS.json",
+          "manifestRecordIndex": 33,
+          "expectedByteLength": 153729,
+          "actualByteLength": 153729,
+          "expectedSHA256": "b7bdf59188636474b2f55acd0350ae4c477948a712739ebadb9f3c1a62291d1d",
+          "actualSHA256": "b7bdf59188636474b2f55acd0350ae4c477948a712739ebadb9f3c1a62291d1d",
+          "status": "matched",
+          "passed": true
+        },
+        {
+          "file": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/summary.json",
+          "manifest": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/SHA256SUMS.json",
+          "manifestRecordIndex": 47,
+          "expectedByteLength": 1119,
+          "actualByteLength": 1119,
+          "expectedSHA256": "598818391261524e37137873b13a2a19e2b8cdb2ae8c7fe531fd80b2da0755e0",
+          "actualSHA256": "598818391261524e37137873b13a2a19e2b8cdb2ae8c7fe531fd80b2da0755e0",
+          "status": "matched",
+          "passed": true
+        }
+      ]
+    },
+    "fixed87973fa": {
+      "defect": "VAL-004",
+      "recordedRetestConclusionPreserved": true,
+      "summaryConclusion": {
+        "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/summary.json",
+        "jsonPath": "$.result",
+        "actual": "VAL-004 confirmed fixed on this commit within tested desktop scope"
+      },
+      "browserConclusion": {
+        "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/results.json",
+        "jsonPath": "$.conclusion",
+        "actual": "Confirmed fixed on this commit in tested desktop scope"
+      },
+      "checks": {
+        "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/results.json",
+        "jsonPath": "$.checks",
+        "actual": [
+          {
+            "id": "original-seven-line-failure-sequence-fixed",
+            "status": "passed",
+            "observations": [
+              {
+                "step": "minimal-breakpoint4-i0",
+                "index": 2
+              },
+              {
+                "step": "dirty-draft-breakpoints-removed",
+                "index": 4
+              },
+              {
+                "step": "repaired-snapshot-retains-bound4-after-draft-removal",
+                "index": 5
+              },
+              {
+                "step": "repaired-snapshot-continue-i1-bound4-visible",
+                "index": 6
+              }
+            ]
+          },
+          {
+            "id": "same-source-snapshot-readonly",
+            "status": "passed",
+            "observations": [
+              {
+                "step": "unchanged-source-snapshot-readonly",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "id": "new-draft6-isolated-from-old-snapshot4",
+            "status": "passed",
+            "observations": [
+              {
+                "step": "dirty-draft-new6-pending-not-old4",
+                "index": 7
+              },
+              {
+                "step": "snapshot-old4-not-new-draft6",
+                "index": 8
+              }
+            ]
+          },
+          {
+            "id": "stop-recompile-does-not-carry-old-breakpoints",
+            "status": "passed",
+            "observations": [
+              {
+                "step": "new-build-entry2-empty-breakpoints",
+                "index": 11
+              },
+              {
+                "step": "new-build-no-old-breakpoint-exits3",
+                "index": 12
+              }
+            ]
+          },
+          {
+            "id": "user-driver-file-markers-and-real-breakpoint",
+            "status": "passed",
+            "observations": [
+              {
+                "step": "two-file-snapshot-driver3-only-gutter-marked",
+                "index": 15
+              },
+              {
+                "step": "two-file-snapshot-user2-only-gutter-marked",
+                "index": 16
+              },
+              {
+                "step": "two-file-old-user2-binding-retained",
+                "index": 18
+              },
+              {
+                "step": "two-file-continue-real-user2-input8",
+                "index": 19
+              }
+            ]
+          }
+        ]
+      },
+      "recordedScope": {
+        "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/results.json",
+        "jsonPath": "$.notRetested",
+        "actual": [
+          "Real iPad offline/G2/G3",
+          "New immutable offline package or v0.4.0 offline browser increment",
+          "Actual IndexedDB import/export or cross-window workflow this round",
+          "Injected late same-source old-session events/resync DOM updates",
+          "Restoring dirty source to original bytes and associated wording"
+        ]
+      },
+      "keyObservations": [
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "jsonPath": "$.observations[2]",
+          "actual": {
+            "step": "minimal-breakpoint4-i0",
+            "at": "2026-10-26T03:52:41.924Z",
+            "editor": {
+              "readOnly": false,
+              "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+            },
+            "gutters": [
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "1"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "2"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "3"
+              },
+              {
+                "bp": "true",
+                "current": "true",
+                "disabled": false,
+                "line": "4"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "5"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "6"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "7"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "8"
+              }
+            ],
+            "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n    - text: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) {\"\n    - generic: total += i;\n    - text: \"} return total; }\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿断点\n    - generic: main.cpp:4:1 · 已绑定 → main.cpp:4:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"0\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询"
+          }
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "jsonPath": "$.observations[4]",
+          "actual": {
+            "step": "dirty-draft-breakpoints-removed",
+            "at": "2026-10-26T03:52:42.822Z",
+            "editor": {
+              "readOnly": false,
+              "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// independent person05 VAL004 retest 87973fa\n"
+            },
+            "gutters": [
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "1"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "2"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "3"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "4"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "5"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "6"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "7"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "8"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "9"
+              }
+            ],
+            "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 源码已修改 · 请重新编译\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 修改待保存…\n    - generic \"断点与编译诊断\"\n    - generic: 编辑稿没有断点；变更在下次编译生效。\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"0\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询"
+          }
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "jsonPath": "$.observations[5]",
+          "actual": {
+            "step": "repaired-snapshot-retains-bound4-after-draft-removal",
+            "at": "2026-10-26T03:52:48.627Z",
+            "editor": {
+              "readOnly": true,
+              "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+            },
+            "gutters": [
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "1"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "2"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "3"
+              },
+              {
+                "bp": "true",
+                "current": "true",
+                "disabled": true,
+                "line": "4"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "5"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "6"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "7"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "8"
+              }
+            ],
+            "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [active] [pressed]\n    - generic: main.cpp\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n      - button \"6\" [disabled]\n      - button \"7\" [disabled]\n      - button \"8\" [disabled]\n    - text: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) {\"\n    - generic: total += i;\n    - text: \"} return total; }\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: main.cpp:4:1 · 已绑定 → main.cpp:4:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"0\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询"
+          }
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "jsonPath": "$.observations[6]",
+          "actual": {
+            "step": "repaired-snapshot-continue-i1-bound4-visible",
+            "at": "2026-10-26T03:52:56.402Z",
+            "editor": {
+              "readOnly": true,
+              "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+            },
+            "gutters": [
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "1"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "2"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "3"
+              },
+              {
+                "bp": "true",
+                "current": "true",
+                "disabled": true,
+                "line": "4"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "5"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "6"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "7"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "8"
+              }
+            ],
+            "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:4:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [pressed]\n    - generic: main.cpp\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n      - button \"6\" [disabled]\n      - button \"7\" [disabled]\n      - button \"8\" [disabled]\n    - text: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) {\"\n    - generic: total += i;\n    - text: \"} return total; }\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: main.cpp:4:1 · 已绑定 → main.cpp:4:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:4:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: \"0\"\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: \"1\"\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询"
+          }
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "jsonPath": "$.observations[11]",
+          "actual": {
+            "step": "new-build-entry2-empty-breakpoints",
+            "at": "2026-10-26T03:53:11.183Z",
+            "editor": {
+              "readOnly": false,
+              "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// independent person05 VAL004 retest 87973fa\n"
+            },
+            "gutters": [
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "1"
+              },
+              {
+                "bp": "false",
+                "current": "true",
+                "disabled": false,
+                "line": "2"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "3"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "4"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "5"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "6"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "7"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "8"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "9"
+              }
+            ],
+            "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · main.cpp:2:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - text: \"int main() {\"\n    - generic: int total = 0;\n    - text: \"for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 尚未设置断点。点击行号，或使用“在当前行切换断点”。\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · main.cpp:2:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - paragraph:\n      - code: i\n      - emphasis: int\n      - text: 不可读取：Variable is outside its lexical scope\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询"
+          }
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "jsonPath": "$.observations[12]",
+          "actual": {
+            "step": "new-build-no-old-breakpoint-exits3",
+            "at": "2026-10-26T03:53:47.527Z",
+            "editor": {
+              "readOnly": false,
+              "value": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n// independent person05 VAL004 retest 87973fa\n"
+            },
+            "gutters": [
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "1"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "2"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "3"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "4"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "5"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "6"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "7"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "8"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": false,
+                "line": "9"
+              }
+            ],
+            "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\"\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\"\n  - button \"编译调试\"\n  - button \"继续\" [disabled]\n  - button \"进入\" [disabled]\n  - button \"跳过\" [disabled]\n  - button \"跳出\" [disabled]\n  - button \"停止\" [disabled]\n  - status: 已结束\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - textbox \"源代码\": \"int main() { int total = 0; for (int i = 0; i < 3; ++i) { total += i; } return total; } // independent person05 VAL004 retest 87973fa\"\n    - button \"在当前行切换断点\"\n    - button \"缩进\"\n    - button \"取消缩进\"\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n    - generic: 尚未设置断点。点击行号，或使用“在当前行切换断点”。\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 exit · 返回 3\" [level=2]\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询"
+          }
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "jsonPath": "$.observations[15]",
+          "actual": {
+            "step": "two-file-snapshot-driver3-only-gutter-marked",
+            "at": "2026-10-26T03:54:36.760Z",
+            "editor": {
+              "readOnly": true,
+              "value": "#include \"user.inc\"\nint main() {\n    int answer = twice(8);\n    return answer;\n}\n"
+            },
+            "gutters": [
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "1"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "2"
+              },
+              {
+                "bp": "true",
+                "current": "true",
+                "disabled": true,
+                "line": "3"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "4"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "5"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "6"
+              }
+            ],
+            "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · driver.cpp:3:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\"\n    - button \"测试驱动\" [pressed]\n    - button \"返回编辑稿\" [active] [pressed]\n    - generic: driver.cpp\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n      - button \"6\" [disabled]\n    - text: \"#include \\\"user.inc\\\" int main() {\"\n    - generic: int answer = twice(8);\n    - text: \"return answer; }\"\n    - textbox \"源代码\": \"#include \\\"user.inc\\\" int main() { int answer = twice(8); return answer; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 5\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: user.inc:2:1 · 已绑定 → user.inc:2:1\n    - generic: driver.cpp:3:1 · 已绑定 → driver.cpp:3:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · driver.cpp:3:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: answer\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询"
+          }
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "jsonPath": "$.observations[16]",
+          "actual": {
+            "step": "two-file-snapshot-user2-only-gutter-marked",
+            "at": "2026-10-26T03:54:37.062Z",
+            "editor": {
+              "readOnly": true,
+              "value": "int twice(int input) {\n    int value = input * 2;\n    return value;\n}\n"
+            },
+            "gutters": [
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "1"
+              },
+              {
+                "bp": "true",
+                "current": "false",
+                "disabled": true,
+                "line": "2"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "3"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "4"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "5"
+              }
+            ],
+            "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · driver.cpp:3:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [active] [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [pressed]\n    - generic: user.inc\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n    - generic: \"int twice(int input) { int value = input * 2; return value; }\"\n    - textbox \"源代码\": \"int twice(int input) { int value = input * 2; return value; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 5\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: user.inc:2:1 · 已绑定 → user.inc:2:1\n    - generic: driver.cpp:3:1 · 已绑定 → driver.cpp:3:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · driver.cpp:3:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: answer\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询"
+          }
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "jsonPath": "$.observations[18]",
+          "actual": {
+            "step": "two-file-old-user2-binding-retained",
+            "at": "2026-10-26T03:54:37.973Z",
+            "editor": {
+              "readOnly": true,
+              "value": "int twice(int input) {\n    int value = input * 2;\n    return value;\n}\n"
+            },
+            "gutters": [
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "1"
+              },
+              {
+                "bp": "true",
+                "current": "false",
+                "disabled": true,
+                "line": "2"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "3"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "4"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "5"
+              }
+            ],
+            "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · driver.cpp:3:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [active] [pressed]\n    - generic: user.inc\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n    - generic: \"int twice(int input) { int value = input * 2; return value; }\"\n    - textbox \"源代码\": \"int twice(int input) { int value = input * 2; return value; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 6\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: user.inc:2:1 · 已绑定 → user.inc:2:1\n    - generic: driver.cpp:3:1 · 已绑定 → driver.cpp:3:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"main · driver.cpp:3:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: answer\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询"
+          }
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "jsonPath": "$.observations[19]",
+          "actual": {
+            "step": "two-file-continue-real-user2-input8",
+            "at": "2026-10-26T03:54:43.380Z",
+            "editor": {
+              "readOnly": true,
+              "value": "int twice(int input) {\n    int value = input * 2;\n    return value;\n}\n"
+            },
+            "gutters": [
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "1"
+              },
+              {
+                "bp": "true",
+                "current": "true",
+                "disabled": true,
+                "line": "2"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "3"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "4"
+              },
+              {
+                "bp": "false",
+                "current": "false",
+                "disabled": true,
+                "line": "5"
+              }
+            ],
+            "dom": "- banner:\n  - strong: 算法工作台\n  - text: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- text: iPad 离线冷启动待验证 · 当前工具链 Clang 8.0.1 / wasm32 ·\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]\n  - button \"编译调试\" [disabled]\n  - button \"继续\"\n  - button \"进入\"\n  - button \"跳过\"\n  - button \"跳出\"\n  - button \"停止\"\n  - status: 已暂停 · user.inc:2:1\n- main:\n  - region \"源码编辑\":\n    - button \"粘贴代码\"\n    - button \"复制题站源码\"\n    - button \"导入\"\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\"\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [pressed]\n    - generic: user.inc\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n    - text: \"int twice(int input) {\"\n    - generic: int value = input * 2;\n    - text: \"return value; }\"\n    - textbox \"源代码\": \"int twice(int input) { int value = input * 2; return value; }\"\n    - button \"在当前行切换断点\" [disabled]\n    - button \"缩进\" [disabled]\n    - button \"取消缩进\" [disabled]\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 6\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: user.inc:2:1 · 已绑定 → user.inc:2:1\n    - generic: driver.cpp:3:1 · 已绑定 → driver.cpp:3:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]\n    - button \"twice · user.inc:2:1\" [pressed]\n    - button \"main · driver.cpp:3:1\"\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]\n    - paragraph:\n      - code: input\n      - emphasis: int\n      - text: \"8\"\n    - paragraph:\n      - code: value\n      - emphasis: int\n      - text: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询"
+          }
+        }
+      ],
+      "keyArtifacts": [
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/results.json",
+          "manifest": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/SHA256SUMS.json",
+          "manifestRecordIndex": 35,
+          "expectedByteLength": 3047,
+          "actualByteLength": 3047,
+          "expectedSHA256": "cce82a42ddad2202b1618133eae778ab26d5eea6c167fd98d7324c1a4fcdbd35",
+          "actualSHA256": "cce82a42ddad2202b1618133eae778ab26d5eea6c167fd98d7324c1a4fcdbd35",
+          "status": "matched",
+          "passed": true
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/observations.json",
+          "manifest": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/SHA256SUMS.json",
+          "manifestRecordIndex": 33,
+          "expectedByteLength": 91270,
+          "actualByteLength": 91270,
+          "expectedSHA256": "007ef05573e944cc6aa83589c035c859c445e34a7744b8acddd966dd9f5024f1",
+          "actualSHA256": "007ef05573e944cc6aa83589c035c859c445e34a7744b8acddd966dd9f5024f1",
+          "status": "matched",
+          "passed": true
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/repaired-snapshot-i1.png",
+          "manifest": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/SHA256SUMS.json",
+          "manifestRecordIndex": 34,
+          "expectedByteLength": 81988,
+          "actualByteLength": 81988,
+          "expectedSHA256": "fac64c2cb5aa35f060d10ffd9d4ff3adc3ab5e602ea3a7e7c1f29a1598e40038",
+          "actualSHA256": "fac64c2cb5aa35f060d10ffd9d4ff3adc3ab5e602ea3a7e7c1f29a1598e40038",
+          "status": "matched",
+          "passed": true
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/new-build-exit3.png",
+          "manifest": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/SHA256SUMS.json",
+          "manifestRecordIndex": 32,
+          "expectedByteLength": 77592,
+          "actualByteLength": 77592,
+          "expectedSHA256": "a46aec8493850bf001deaa2b8e6b7d4539f7b0f18dccfa8f35d3874435f9b1f0",
+          "actualSHA256": "a46aec8493850bf001deaa2b8e6b7d4539f7b0f18dccfa8f35d3874435f9b1f0",
+          "status": "matched",
+          "passed": true
+        },
+        {
+          "file": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/summary.json",
+          "manifest": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/SHA256SUMS.json",
+          "manifestRecordIndex": 40,
+          "expectedByteLength": 1011,
+          "actualByteLength": 1011,
+          "expectedSHA256": "c2188b60ae2bf51fcdb9c189ced03825ddb0c0f8a1e9df6f0ee2bf1762c3ca4d",
+          "actualSHA256": "c2188b60ae2bf51fcdb9c189ced03825ddb0c0f8a1e9df6f0ee2bf1762c3ca4d",
+          "status": "matched",
+          "passed": true
+        }
+      ]
+    },
+    "note": "The earlier failed result and the later limited desktop repair confirmation remain separate historical records. This preservation audit does not reclassify either round or extend its scope."
+  },
+  "summary": {
+    "manifestCount": 4,
+    "primaryRecords": 89,
+    "nestedAutomatedRecords": 56,
+    "recordedReferences": 145,
+    "matchedReferences": 145,
+    "failedReferences": 0,
+    "unsupportedRecords": 0,
+    "uniqueReferencedFiles": 89,
+    "allTargetBytesMatched": true,
+    "originalFailurePreserved": true,
+    "priorFixRetestPreserved": true,
+    "countNote": "Nested automated records overlap their respective root manifests. These are file-reference counts, not functional tests."
+  },
+  "writes": {
+    "onlyNewReport": "tests/evidence/integrated-person05-rev004005-66db2bb-2026-10-27/review/history-preservation.json",
+    "historicalFilesModified": false,
+    "productFilesModified": false,
+    "automatedDirectoryModified": false,
+    "testsExecuted": false,
+    "committed": false
+  }
+}

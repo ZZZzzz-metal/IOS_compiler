@@ -1,0 +1,41 @@
+{
+  "final": {
+    "path": "harness-final.mjs",
+    "sha256": "3c7c3b2c228ce95651db3bcc69851279b74b445dcf9abc20165a0d4fe233ea4b",
+    "byteLength": 22270,
+    "matchesInputs": [
+      {
+        "run": "fixed-run-02",
+        "sha256": "3c7c3b2c228ce95651db3bcc69851279b74b445dcf9abc20165a0d4fe233ea4b",
+        "byteLength": 22270
+      },
+      {
+        "run": "baseline-run-02",
+        "sha256": "3c7c3b2c228ce95651db3bcc69851279b74b445dcf9abc20165a0d4fe233ea4b",
+        "byteLength": 22270
+      }
+    ]
+  },
+  "initial": {
+    "archived": true,
+    "path": "harness-run01.mjs",
+    "candidateSha256": "026f396b9768433ef19e5c8c12a66ac12009c33322eeff9d191e3befc8f2da2b",
+    "candidateByteLength": 21445,
+    "reconstruction": "Removed only the exact final patch: two usage-comment lines and REV004-06 case; archived only if both run-01 input hashes and lengths match",
+    "matchesInputs": [
+      {
+        "run": "fixed-run-01",
+        "sha256": "026f396b9768433ef19e5c8c12a66ac12009c33322eeff9d191e3befc8f2da2b",
+        "byteLength": 21445,
+        "matches": true
+      },
+      {
+        "run": "baseline-run-01",
+        "sha256": "026f396b9768433ef19e5c8c12a66ac12009c33322eeff9d191e3befc8f2da2b",
+        "byteLength": 21445,
+        "matches": true
+      }
+    ]
+  },
+  "entrypoint": "tests/ui-concurrency-independent.mjs"
+}

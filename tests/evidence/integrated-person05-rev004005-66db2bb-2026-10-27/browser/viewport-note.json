@@ -1,0 +1,9 @@
+{
+  "requested": {
+    "width": 375,
+    "height": 812
+  },
+  "observed": 1265,
+  "acceptedAsNarrowTest": false,
+  "reason": "Viewport capability returned success but DOM stayed at desktop width 1265; no narrow-layout pass claimed. Temporary override reset."
+}
