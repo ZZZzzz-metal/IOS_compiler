@@ -354,3 +354,25 @@ dialog .toolbar { justify-content: flex-end; margin-top: 18px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+.shortcut-guide { margin: -4px 0 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+.shortcut-guide > summary { cursor: pointer; padding: 11px 15px; color: var(--green-dark); font-weight: 600; }
+.shortcut-guide > summary span { margin-left: 12px; color: var(--muted); font-size: 12px; font-weight: 400; }
+.shortcut-guide > summary:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.shortcut-body { padding: 0 16px 12px; }
+.shortcut-settings { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; padding: 4px 0 12px; }
+.shortcut-settings label { font-weight: 600; }
+.shortcut-settings select { max-width: 100%; }
+#shortcut-save, .shortcut-body p { color: var(--muted); font-size: 12px; line-height: 1.7; }
+.shortcut-table-wrap { overflow-x: auto; }
+.shortcut-table { border-collapse: collapse; width: 100%; text-align: left; font-size: 12px; }
+.shortcut-table caption { text-align: left; padding-bottom: 8px; font-weight: 600; }
+.shortcut-table th, .shortcut-table td { padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.shortcut-table thead { background: var(--paper-soft); color: var(--muted); }
+.shortcut-table tbody th { font-weight: 500; }
+.shortcut-table kbd { white-space: nowrap; }
+@media (max-width: 640px) {
+  .shortcut-guide > summary { padding: 10px 12px; }
+  .shortcut-guide > summary span { margin-left: 5px; font-size: 11px; }
+  .shortcut-body { padding: 0 10px 10px; }
+  .shortcut-table th, .shortcut-table td { padding: 8px 6px; font-size: 11px; }
+}

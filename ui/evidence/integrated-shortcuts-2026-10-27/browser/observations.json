@@ -1,0 +1,1270 @@
+{
+  "observations": [
+    {
+      "label": "unprepared-F5-no-reload",
+      "breakpoints": "尚未设置断点。点击行号，或使用“在当前行切换断点”。",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run",
+          "title": "编译运行（Ctrl+F5 / Ctrl+6）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug",
+          "title": "编译调试（F5 / Ctrl+5）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue",
+          "title": "继续（F5 / Ctrl+5）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto",
+          "title": "进入（F11 / Ctrl+-）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver",
+          "title": "跳过（F10 / Ctrl+0）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut",
+          "title": "跳出（Shift+F11 / Ctrl+Shift+-）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop",
+          "title": "停止（Shift+F5 / Ctrl+Shift+5）"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint",
+          "title": "当前行断点（F9 / Ctrl+9）"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "control-number",
+      "selection": 166,
+      "source": "#include <stdio.h>\nint add(int x) {\n    int y = x + 2;\n    return y;\n}\nint main() {\n    int n = 3;\n    int total = add(n);\n    printf(\"%d\\n\", total);\n    return 0;\n}\n",
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "idle",
+      "status": "准备就绪后可以编译。",
+      "url": "http://127.0.0.1:4205/ui/probe.html?check=keyboard-20261027#draft=keyboard-20261027",
+      "variables": "调试暂停后读取变量"
+    },
+    {
+      "label": "standard-F9-set-line9",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 待绑定",
+      "controls": [
+        {
+          "aria": "Control+F5 Control+6",
+          "disabled": false,
+          "id": "run",
+          "title": "编译运行（Ctrl+F5 / Ctrl+6）"
+        },
+        {
+          "aria": "F5 Control+5",
+          "disabled": false,
+          "id": "debug",
+          "title": "编译调试（F5 / Ctrl+5）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue",
+          "title": "继续（F5 / Ctrl+5）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto",
+          "title": "进入（F11 / Ctrl+-）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver",
+          "title": "跳过（F10 / Ctrl+0）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut",
+          "title": "跳出（Shift+F11 / Ctrl+Shift+-）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop",
+          "title": "停止（Shift+F5 / Ctrl+Shift+5）"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint",
+          "title": "当前行断点（F9 / Ctrl+9）"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "control-number",
+      "selection": 123,
+      "source": "#include <stdio.h>\nint add(int x) {\n    int y = x + 2;\n    return y;\n}\nint main() {\n    int n = 3;\n    int total = add(n);\n    printf(\"%d\\n\", total);\n    return 0;\n}\n",
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "idle",
+      "status": "可编译运行或启动调试。",
+      "url": "http://127.0.0.1:4205/ui/probe.html?check=keyboard-20261027#draft=keyboard-20261027",
+      "variables": "调试暂停后读取变量"
+    },
+    {
+      "label": "alternative-Ctrl9-removes",
+      "breakpoints": "尚未设置断点。点击行号，或使用“在当前行切换断点”。",
+      "controls": [
+        {
+          "aria": "Control+F5 Control+6",
+          "disabled": false,
+          "id": "run",
+          "title": "编译运行（Ctrl+F5 / Ctrl+6）"
+        },
+        {
+          "aria": "F5 Control+5",
+          "disabled": false,
+          "id": "debug",
+          "title": "编译调试（F5 / Ctrl+5）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue",
+          "title": "继续（F5 / Ctrl+5）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto",
+          "title": "进入（F11 / Ctrl+-）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver",
+          "title": "跳过（F10 / Ctrl+0）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut",
+          "title": "跳出（Shift+F11 / Ctrl+Shift+-）"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop",
+          "title": "停止（Shift+F5 / Ctrl+Shift+5）"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint",
+          "title": "当前行断点（F9 / Ctrl+9）"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "control-number",
+      "selection": 123,
+      "source": "#include <stdio.h>\nint add(int x) {\n    int y = x + 2;\n    return y;\n}\nint main() {\n    int n = 3;\n    int total = add(n);\n    printf(\"%d\\n\", total);\n    return 0;\n}\n",
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "idle",
+      "status": "可编译运行或启动调试。",
+      "url": "http://127.0.0.1:4205/ui/probe.html?check=keyboard-20261027#draft=keyboard-20261027",
+      "variables": "调试暂停后读取变量"
+    },
+    {
+      "label": "alternative-Ctrl5-entry",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5 Control+5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11 Control+-",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10 Control+0",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11 Control+Shift+-",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5 Control+Shift+5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "control-number",
+      "selection": 123,
+      "stack": "main · main.cpp:7:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:7:1",
+      "variables": "n int 不可读取：Variable declaration has not executed at this stoptotal int 不可读取：Variable declaration has not executed at this stop"
+    },
+    {
+      "label": "alternative-Ctrl0-step-over",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5 Control+5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11 Control+-",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10 Control+0",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11 Control+Shift+-",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5 Control+Shift+5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "control-number",
+      "selection": 123,
+      "stack": "main · main.cpp:8:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:8:1",
+      "variables": "n int 3total int 不可读取：Variable declaration has not executed at this stop"
+    },
+    {
+      "label": "alternative-CtrlMinus-step-into",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5 Control+5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11 Control+-",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10 Control+0",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11 Control+Shift+-",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5 Control+Shift+5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "control-number",
+      "selection": 123,
+      "stack": "add · main.cpp:3:1main · main.cpp:8:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:3:1",
+      "variables": "x int 3y int 不可读取：Variable declaration has not executed at this stop"
+    },
+    {
+      "label": "alternative-CtrlShiftMinus-step-out",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5 Control+5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11 Control+-",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10 Control+0",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11 Control+Shift+-",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5 Control+Shift+5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "control-number",
+      "selection": 123,
+      "stack": "main · main.cpp:8:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:8:1",
+      "variables": "n int 3total int 不可读取：Storage has not been initialized during this declaration lifetime"
+    },
+    {
+      "label": "alternative-stop",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": "Control+F5 Control+6",
+          "disabled": false,
+          "id": "run"
+        },
+        {
+          "aria": "F5 Control+5",
+          "disabled": false,
+          "id": "debug"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "stop",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "control-number",
+      "selection": 123,
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "terminated",
+      "status": "已结束",
+      "variables": "调试暂停后读取变量"
+    },
+    {
+      "label": "standard-scheme-ignores-Ctrl5",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": "Control+F5",
+          "disabled": false,
+          "id": "run"
+        },
+        {
+          "aria": "F5",
+          "disabled": false,
+          "id": "debug"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "stop",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "selection": 123,
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "terminated",
+      "status": "已结束",
+      "variables": "调试暂停后读取变量"
+    },
+    {
+      "label": "standard-F5-entry",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "selection": 123,
+      "stack": "main · main.cpp:7:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:7:1",
+      "variables": "n int 不可读取：Variable declaration has not executed at this stoptotal int 不可读取：Variable declaration has not executed at this stop"
+    },
+    {
+      "label": "stdin-F10-does-not-step",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "stdin",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "selection": 123,
+      "stack": "main · main.cpp:7:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:7:1",
+      "variables": "n int 不可读取：Variable declaration has not executed at this stoptotal int 不可读取：Variable declaration has not executed at this stop"
+    },
+    {
+      "label": "standard-F10-step-over",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "selection": 123,
+      "stack": "main · main.cpp:8:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:8:1",
+      "variables": "n int 3total int 不可读取：Variable declaration has not executed at this stop"
+    },
+    {
+      "label": "standard-F11-step-into",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "selection": 123,
+      "stack": "add · main.cpp:3:1main · main.cpp:8:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:3:1",
+      "variables": "x int 3y int 不可读取：Variable declaration has not executed at this stop"
+    },
+    {
+      "label": "standard-ShiftF11-step-out",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "selection": 123,
+      "stack": "main · main.cpp:8:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:8:1",
+      "variables": "n int 3total int 不可读取：Storage has not been initialized during this declaration lifetime"
+    },
+    {
+      "label": "standard-F10-assignment-completed",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "selection": 123,
+      "stack": "main · main.cpp:9:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:9:1",
+      "variables": "n int 3total int 5"
+    },
+    {
+      "label": "standard-F5-continue-output",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": "Control+F5",
+          "disabled": false,
+          "id": "run"
+        },
+        {
+          "aria": "F5",
+          "disabled": false,
+          "id": "debug"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "exit · 返回 0",
+      "focus": "source",
+      "output": "5\n",
+      "scheme": "standard",
+      "selection": 123,
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "terminated",
+      "status": "已结束",
+      "variables": "调试暂停后读取变量"
+    },
+    {
+      "label": "standard-CtrlF5-run",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 待绑定",
+      "controls": [
+        {
+          "aria": "Control+F5",
+          "disabled": false,
+          "id": "run"
+        },
+        {
+          "aria": "F5",
+          "disabled": false,
+          "id": "debug"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "exit · 返回 0",
+      "focus": "",
+      "output": "5\n",
+      "scheme": "standard",
+      "selection": 123,
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "terminated",
+      "status": "已结束",
+      "variables": "调试暂停后读取变量"
+    },
+    {
+      "label": "standard-ShiftF5-stop",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 已绑定 → main.cpp:9:1",
+      "controls": [
+        {
+          "aria": "Control+F5",
+          "disabled": false,
+          "id": "run"
+        },
+        {
+          "aria": "F5",
+          "disabled": false,
+          "id": "debug"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "stop",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "selection": 18,
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "terminated",
+      "status": "已结束",
+      "variables": "调试暂停后读取变量"
+    },
+    {
+      "label": "alternative-Ctrl6-run-output",
+      "breakpoints": "编辑稿断点main.cpp:9:1 · 待绑定",
+      "controls": [
+        {
+          "aria": "Control+F5 Control+6",
+          "disabled": false,
+          "id": "run"
+        },
+        {
+          "aria": "F5 Control+5",
+          "disabled": false,
+          "id": "debug"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "exit · 返回 0",
+      "focus": "source",
+      "output": "5\n",
+      "scheme": "control-number",
+      "selection": 18,
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "terminated",
+      "status": "已结束",
+      "variables": "调试暂停后读取变量"
+    },
+    {
+      "label": "scheme-standard-persists-after-reload",
+      "breakpoints": "尚未设置断点。点击行号，或使用“在当前行切换断点”。",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop"
+        },
+        {
+          "aria": "F9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "selection": 166,
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "idle",
+      "status": "准备就绪后可以编译。",
+      "variables": "调试暂停后读取变量"
+    },
+    {
+      "label": "reopened-alternative-debug-entry",
+      "breakpoints": "尚未设置断点。点击行号，或使用“在当前行切换断点”。",
+      "controls": [
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "run"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "debug"
+        },
+        {
+          "aria": "F5 Control+5",
+          "disabled": false,
+          "id": "continue"
+        },
+        {
+          "aria": "F11 Control+-",
+          "disabled": false,
+          "id": "stepInto"
+        },
+        {
+          "aria": "F10 Control+0",
+          "disabled": false,
+          "id": "stepOver"
+        },
+        {
+          "aria": "Shift+F11 Control+Shift+-",
+          "disabled": false,
+          "id": "stepOut"
+        },
+        {
+          "aria": "Shift+F5 Control+Shift+5",
+          "disabled": false,
+          "id": "stop"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "",
+      "focus": "source",
+      "output": "尚无输出",
+      "scheme": "control-number",
+      "selection": 166,
+      "stack": "main · main.cpp:7:1main · 未提供源码位置_start · 未提供源码位置",
+      "state": "paused",
+      "status": "已暂停 · main.cpp:7:1",
+      "variables": "n int 不可读取：Variable declaration has not executed at this stoptotal int 不可读取：Variable declaration has not executed at this stop"
+    },
+    {
+      "label": "alternative-Ctrl5-continue-to-exit",
+      "breakpoints": "尚未设置断点。点击行号，或使用“在当前行切换断点”。",
+      "controls": [
+        {
+          "aria": "Control+F5 Control+6",
+          "disabled": false,
+          "id": "run"
+        },
+        {
+          "aria": "F5 Control+5",
+          "disabled": false,
+          "id": "debug"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "continue"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepInto"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOver"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stepOut"
+        },
+        {
+          "aria": null,
+          "disabled": true,
+          "id": "stop"
+        },
+        {
+          "aria": "F9 Control+9",
+          "disabled": false,
+          "id": "breakpoint"
+        }
+      ],
+      "exit": "exit · 返回 0",
+      "focus": "source",
+      "output": "5\n",
+      "scheme": "control-number",
+      "selection": 166,
+      "stack": "调试暂停后显示真实调用栈",
+      "state": "terminated",
+      "status": "已结束",
+      "variables": "调试暂停后读取变量"
+    }
+  ],
+  "layouts": [
+    {
+      "documentWidth": 305,
+      "height": 720,
+      "schemeWidth": 208.6666717529297,
+      "tableViewport": 259,
+      "tableWidth": 259,
+      "width": 320
+    },
+    {
+      "documentWidth": 729,
+      "height": 1133,
+      "schemeWidth": 208.6666717529297,
+      "tableViewport": 655,
+      "tableWidth": 655,
+      "width": 744
+    },
+    {
+      "documentWidth": 1009,
+      "height": 768,
+      "schemeWidth": 208.6666717529297,
+      "tableViewport": 935,
+      "tableWidth": 935,
+      "width": 1024
+    }
+  ]
+}
