@@ -1,0 +1,116 @@
+{
+  "baseline": "dc65469c85616f175a735b9977cb37f8c6f188c2",
+  "testsRead": "working source bytes",
+  "inputs": {
+    "docs/handoffs/04.md": {
+      "working": {
+        "byteLength": 17388,
+        "sha256": "86f2e7e34ea55fe846316ffea5d971993056daeb3a9831ef209aa9e0aed91a2a"
+      },
+      "staged": {
+        "byteLength": 17388,
+        "sha256": "86f2e7e34ea55fe846316ffea5d971993056daeb3a9831ef209aa9e0aed91a2a"
+      },
+      "difference": "none"
+    },
+    "ui/README.md": {
+      "working": {
+        "byteLength": 7876,
+        "sha256": "28f21faa83028bdc2467fac5fcbcdf6b087adc35e6c61a8ca325958bef22db2c"
+      },
+      "staged": {
+        "byteLength": 7876,
+        "sha256": "28f21faa83028bdc2467fac5fcbcdf6b087adc35e6c61a8ca325958bef22db2c"
+      },
+      "difference": "none"
+    },
+    "ui/SHORTCUTS.md": {
+      "working": {
+        "byteLength": 6711,
+        "sha256": "934d572129acacf559da1e2ede146f45bd4cc0325c5dcebd327f4a974463a5a1"
+      },
+      "staged": {
+        "byteLength": 6711,
+        "sha256": "934d572129acacf559da1e2ede146f45bd4cc0325c5dcebd327f4a974463a5a1"
+      },
+      "difference": "none"
+    },
+    "ui/checks/keyboard-dispatch.test.mjs": {
+      "working": {
+        "byteLength": 27889,
+        "sha256": "7838ba948102e3a18bbfe656c532a74a098ff3dfb6ae9b6eec714d394c93e79f"
+      },
+      "staged": {
+        "byteLength": 27889,
+        "sha256": "7838ba948102e3a18bbfe656c532a74a098ff3dfb6ae9b6eec714d394c93e79f"
+      },
+      "difference": "none"
+    },
+    "ui/checks/preparation-gate.test.mjs": {
+      "working": {
+        "byteLength": 17453,
+        "sha256": "e70c515f71ee2713eee160c7f3642206101a3b2ef30fca8927744ef1c4e8c620"
+      },
+      "staged": {
+        "byteLength": 17453,
+        "sha256": "e70c515f71ee2713eee160c7f3642206101a3b2ef30fca8927744ef1c4e8c620"
+      },
+      "difference": "none"
+    },
+    "ui/checks/shortcuts.test.mjs": {
+      "working": {
+        "byteLength": 7188,
+        "sha256": "1bfe0140ae5e0f0ddc84151a905a65ee27abd10fce97cdd6844fe44f266b52c2"
+      },
+      "staged": {
+        "byteLength": 7188,
+        "sha256": "1bfe0140ae5e0f0ddc84151a905a65ee27abd10fce97cdd6844fe44f266b52c2"
+      },
+      "difference": "none"
+    },
+    "ui/probe.html": {
+      "working": {
+        "byteLength": 13408,
+        "sha256": "dc9cb38bd36454410113a76701865a0716b5d09cdeee6b1d16142b91d96f729b"
+      },
+      "staged": {
+        "byteLength": 13407,
+        "sha256": "ff4d14c5ef86083b1585ace72f3bb02760506c7324716741106bfc45ee8ca178"
+      },
+      "difference": "CRLF normalized to LF"
+    },
+    "ui/src/editor.mjs": {
+      "working": {
+        "byteLength": 5372,
+        "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+      },
+      "staged": {
+        "byteLength": 5372,
+        "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+      },
+      "difference": "none"
+    },
+    "ui/src/main.mjs": {
+      "working": {
+        "byteLength": 32193,
+        "sha256": "61adf9f24e5ff2328fb096978999445397a077c11c1dc779894f6d6b342e6b64"
+      },
+      "staged": {
+        "byteLength": 32193,
+        "sha256": "61adf9f24e5ff2328fb096978999445397a077c11c1dc779894f6d6b342e6b64"
+      },
+      "difference": "none"
+    },
+    "ui/style.css": {
+      "working": {
+        "byteLength": 25727,
+        "sha256": "64f5e606e8680d8a53fa223e7feb6af5a423b8bf41a2fe64b3a0647ce0a8e831"
+      },
+      "staged": {
+        "byteLength": 25726,
+        "sha256": "19b7d4484b2ee722f408db30e7da747529efcb4b916fc2421253f7b076db36ee"
+      },
+      "difference": "CRLF normalized to LF"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  ".gitattributes": {
+    "byteLength": 53,
+    "sha256": "634224353cdf3c112041465ca0dd66824b987c2d871d5710857f714d48035b18"
+  },
+  "README.md": {
+    "byteLength": 3739,
+    "sha256": "4aef7a309b6fe898498a90ee86d69637d18881c1354e25f42808492552c2d778"
+  },
+  "automated-final/SHA256SUMS.json": {
+    "byteLength": 536,
+    "sha256": "95c0638a27007ba78a685cd4fd0b1e13ecc08357237cbb9bf99975a062a93736"
+  },
+  "automated-final/baseline-check.txt": {
+    "byteLength": 277,
+    "sha256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48"
+  },
+  "automated-final/contracts.tap": {
+    "byteLength": 2352,
+    "sha256": "a4b2b8a96fa15839b93ad3bff1e35dfd1118412106147bcbb7f2e586c3ba7f05"
+  },
+  "automated-final/integration.tap": {
+    "byteLength": 833,
+    "sha256": "4500fd893538db08e2ddea95d51a3073cbac939cd92e2cfcdf686bf583fee47f"
+  },
+  "automated-final/module-tests.tap": {
+    "byteLength": 20189,
+    "sha256": "9f176f4c07df81063be32359882f57bf23668a96d29d20cd5e3885fe10629971"
+  },
+  "automated/SHA256SUMS.json": {
+    "byteLength": 536,
+    "sha256": "3298828e48c67504810116e16327c89fd3c07dad30a7d75cf7e0fa94362e4eb3"
+  },
+  "automated/baseline-check.txt": {
+    "byteLength": 277,
+    "sha256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48"
+  },
+  "automated/contracts.tap": {
+    "byteLength": 2353,
+    "sha256": "3297a4eac22105ac2f030bcdca9cad6f75b0fcd81bfec8ef80c0e563979c56b9"
+  },
+  "automated/integration.tap": {
+    "byteLength": 832,
+    "sha256": "bbd1a6cb6391e3168d831fc9e358b295016ecb591886b92105719ba1ca60854c"
+  },
+  "automated/module-tests.tap": {
+    "byteLength": 19373,
+    "sha256": "d4859653a2412c5f29420d75326739d0cc2d243429f43533138fc39ed57edd99"
+  },
+  "browser/observations.json": {
+    "byteLength": 32681,
+    "sha256": "b87a33ff70140c19b3e8b6816e6285fcf853aa1875a8b812910327383eba493f"
+  },
+  "browser/shortcut-guide.png": {
+    "byteLength": 75601,
+    "sha256": "5ba6aec4a2ba70f13b7de34d56730d6ad070318a1dace14b9d530a2939b1b9ff"
+  },
+  "npm-check.txt": {
+    "byteLength": 359,
+    "sha256": "80097acb70feda13bf71abed632ab88ee12fdd1aaf16adfd71c028c7ef826cf3"
+  },
+  "npm-test.txt": {
+    "byteLength": 1147,
+    "sha256": "afc7c62a8a1afd80b0f51aca53134a39aaf19cf8d5fa3dc140fedd146fce7adc"
+  },
+  "seal-evidence.mjs": {
+    "byteLength": 2464,
+    "sha256": "4ee718d764c436bdbfea6b0a201a0cd040a6139ee4d1bd48a9d255c269d54ef1"
+  },
+  "source-inputs.json": {
+    "byteLength": 3616,
+    "sha256": "ddfd95dc988093283887f8e49d0f574efda80ef27b6d46c425b515d167c10bc1"
+  },
+  "source-stage-verification.json": {
+    "byteLength": 221,
+    "sha256": "9452e33f1fc7f4ca425515b19085579e176e8880cc3aaea927c7d56f160277e3"
+  }
+}

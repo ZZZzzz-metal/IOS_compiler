@@ -9,6 +9,7 @@ import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {randomUUID} from 'node:crypto';
 import {createSnapshot} from '../../compiler/src/source.mjs';
+import {shortcutLabels} from '../src/editor.mjs';
 
 const root=new URL('../../',import.meta.url),ref=process.env.UI_REVIEW_REF;
 if(ref&&!/^[a-zA-Z0-9][a-zA-Z0-9._/-]{0,127}$/u.test(ref))throw Error('UI_REVIEW_REF must be a local Git revision or tag');
@@ -31,10 +32,10 @@ const emptyView=()=>({session:null,actions:{},frames:[],scopes:[],variables:[],b
 function fixture({prepared=candidate('previous'),ready=true,restored=true,recovering=false,trust=async()=>({offline:false}),digest=async()=>checkedHash}={}){
   const elements=new Map(),calls={fetch:[],trust:[],digest:[],debugger:[],controllers:[],compiler:[],compile:[],start:[],cancel:[],control:[],register:[],frames:[]};
   const element=id=>{
-    if(!elements.has(id))elements.set(id,{id,disabled:false,hidden:false,textContent:'',value:'',dataset:{}});
+    if(!elements.has(id))elements.set(id,{id,disabled:false,hidden:false,textContent:'',value:'',dataset:{},setAttribute(){},removeAttribute(){}});
     return elements.get(id);
   };
-  const controls=['continue','stepInto','stepOver','stepOut'].map(command=>({disabled:false,dataset:{command}}));
+  const controls=['continue','stepInto','stepOver','stepOut'].map(command=>({disabled:false,textContent:command,dataset:{command},setAttribute(){},removeAttribute(){}}));
   class FakeDebuggerAdapter{
     constructor(options){this.options=options;calls.debugger.push({options,instance:this});}
     dispose(){this.disposed=true;}
@@ -63,7 +64,7 @@ function fixture({prepared=candidate('previous'),ready=true,restored=true,recove
     document:{getElementById:element,querySelectorAll:()=>controls,body:{dataset:{}}},
     requestAnimationFrame(callback){calls.frames.push(callback);return calls.frames.length;},
     createDraft:options=>({id:'main',revision:0,driverText:'',language:{language:'cpp',standard:'c++17'},...options}),
-    createDraftStore:()=>({}),createSnapshot,
+    createDraftStore:()=>({}),createSnapshot,shortcutLabels,
     fetch(...args){const pending=deferred();calls.fetch.push({args,...pending});return pending.promise;},
     async assertTrustedOfflineWorkers(...args){calls.trust.push(args);return trust(...args);},
     async digest(bytes){calls.digest.push(bytes);return digest(bytes);},
