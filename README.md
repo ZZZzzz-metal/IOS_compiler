@@ -1,46 +1,56 @@
-# iPad 离线 C/C++ 编译调试工具
+# IOS_compiler · iPad 离线 C/C++ 编译调试工作台
 
-**编译器、修复后的调试器、最小操作界面、本地草稿与独立回归已统一合入桌面开发原型。** 可以编辑新 C/C++ 源码、提供输入、真实编译运行，使用断点、三种单步、变量和调用栈，并保存或导出草稿。真实 iPad 完全离线、安装及最终产品验收仍待完成，路线未冻结。
+在浏览器设备内编译、运行和调试 C/C++，用于刷题与算法练习。项目已将真实 Wasm 编译器、源码调试器、编辑界面、本地草稿和独立回归整合为可运行的桌面原型；正在验证完整缓存与 iPad 使用流程。
 
-## 版本与交接
+**目前还没有通过 iPad 真机验收，也没有原生 IPA 安装包。** 当前进度、固定版本和待验证项以 [集成状态](docs/architecture/STATUS.md) 为准。`integration` 是集成分支，合并请求由仓库维护者手动合并。
 
-- 仓库：`C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger`
-- 分支：`integration`；本轮4号修复集成交付：`integration-v0.4.3`。
-- 旧标签 baseline-v0.1.0、integration-v0.2.0、integration-v0.2.1、integration-v0.3.0、integration-v0.4.0、integration-v0.4.1、integration-v0.4.2 保持原样；协议仍为 `0.1.0-draft.1`。
-- [离线入口交付](docs/architecture/OFFLINE-INTEGRATION-2026-10-26.md)、[v0.3.0组合复验步骤](docs/architecture/UI-INTEGRATION-2026-10-25.md)、[统一状态](docs/architecture/STATUS.md)。
+## 可以做什么
 
-## 启动统一工作台
+- 编辑或导入 C/C++ 源码，运行前提供完整输入，编译后查看输出和诊断。
+- 在用户代码处暂停，使用断点、进入、跳过、跳出，查看变量、调用栈和基础监视表达式。
+- 为仅有函数或 `Solution` 的题目补写测试驱动；复制题站源码时保持驱动分离。
+- 自动保存本地草稿、导入导出完整草稿；编辑后的内容与活动调试快照分开显示。
+- 首次联网准备按版本隔离的完整 Web 缓存，再测试断网关闭重开和新源码编译调试。服务器只提供静态文件，编译和调试在浏览器 Worker 内完成。
 
-开发电脑需要 Node.js 22+，零第三方 npm 依赖：
+这些是已测桌面原型的工作流程。正式支持声明仍以 [能力表](contracts/capabilities.json) 为唯一来源；接口存在、按钮可见或缓存校验成功都不能代替设备验收。
+
+## 在电脑上启动
+
+需要 **Node.js 22 或更新版本**与 Git。项目没有第三方 npm 依赖，无需先运行 `npm install`。
 
 ```powershell
-Set-Location -LiteralPath 'C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger'
-npm.cmd run prepare:toolchain -- --verify-only
+git clone --branch integration https://github.com/ZZZzzz-metal/IOS_compiler.git
+cd IOS_compiler
+npm.cmd run prepare:toolchain
 npm.cmd start
 ```
 
-当前电脑的 11 项工具链资源已准备。新 checkout 不包含四个 Git 忽略的大文件，缺少时可运行 `npm.cmd run prepare:toolchain` 首次联网获取固定资源，或复制已校验的本地副本。
+首次准备工具链需要联网，脚本按 [锁定清单](compiler/resources/toolchain.lock.json) 下载并校验固定资源。新的 checkout 不包含四个被 Git 忽略的大型二进制文件。已有本地副本时可先运行 `npm.cmd run prepare:toolchain -- --verify-only` 检查。
 
-`npm start` 自动按实际组件字节生成开发组合，再启动仅本机访问的静态服务。打开 [算法工作台](http://127.0.0.1:4184/ui/probe.html)，点击“校验本地资源”，随后编译运行或调试。编译和执行在浏览器 Worker 内完成，服务器不提供计算服务。
+启动后用电脑浏览器打开 [算法工作台](http://127.0.0.1:4184/ui/probe.html)，点击“校验本地资源”，再选择“编译运行”或“编译调试”。停止本地服务可在启动窗口按 `Ctrl+C`。
 
-`npm.cmd run start:ui` 与 `npm start` 相同。状态报告改用 `npm.cmd run status`，也可直接运行 `node app/main.mjs`。只重建组合用 `npm.cmd run prepare:ui`；组件更新后重新准备并刷新页面。
+`npm.cmd run status` 查看集成状态；`npm.cmd run prepare:ui` 只重建开发组合。组件更新后需要重新准备并刷新页面。若默认端口已有旧实验，可先设置 `$env:UI_PROBE_PORT='4186'` 再启动；不同端口使用不同草稿库，切换前请导出重要草稿。
 
-若当前端口存在旧模块实验缓存，可在启动前设置 `$env:UI_PROBE_PORT='4186'`，再 `npm.cmd start`。不同端口是独立草稿库，原草稿仍在原地址，可导出再导入；不要清理旧数据。本机 localhost 不是 iPad 安装入口。
+上述命令使用 Windows PowerShell 的 `npm.cmd`；其他环境可使用 `npm`。电脑的 `127.0.0.1` 不能作为平板访问地址。
 
-## 离线实验与平板操作
+## 完整离线实验与 iPad 操作
 
-1号新增按版本隔离、逐项校验的完整 Web 缓存实验。电脑端运行 `npm.cmd run prepare:offline`，再 `npm.cmd run start:offline`，打开命令输出的本机地址，进入固定版本后点“准备离线资源”。该入口与上面的未缓存开发入口分开；平板需要另行提供可达且受信任的 HTTPS 地址。详见 [离线实验说明](app/offline/README.md)。
+准备好工具链后，在电脑运行：
 
-**你在 iPad 上的逐步操作见 [平板操作手册](docs/architecture/IPAD-USER-MANUAL.md)**：首次准备、添加主屏、断网关闭重开、新源码编译、调试、停止恢复及草稿备份都有具体步骤和预期。本次HTTPS地址见下面的更新说明，平板实际可达性和G2真机结果仍待反馈；没有原生安装包，不把完整缓存生成成功称为 iPad 已通过。
+```powershell
+npm.cmd run prepare:offline
+npm.cmd run start:offline
+```
 
-2026-10-27已合入4号66db2bb：资源准备门禁、迟到导入隔离修复及浅色工作台已接入，REV-004/005待5号独立复验。1号启动恢复修复保留；3号REV-002/003监视求值仍待修。VAL-004限定桌面独立关闭不变。新包与固定入口见 [v0.4.3平板更新](docs/architecture/IPAD-UPDATE-v0.4.3.md)，94项本轮检查和实际浏览器范围见 [集成报告](docs/architecture/UI-RACE-INTEGRATION-2026-10-27.md)。旧标签/包保留，真实iPad仍待验证。
+打开命令输出的地址，进入**固定版本准备页**，点击“准备离线资源”。完整校验通过后打开工作台，再点击“校验本地资源”。关闭页面、停止服务器，重新打开记录下来的固定版本完整地址，才能验证缓存冷启动；外层版本选择首页不在离线缓存中。
 
-## 工作流与检查
+平板首次准备需要可访问且受信任的 **HTTPS** 地址，普通局域网 HTTP 不满足缓存安装条件。维护者需按 [离线入口说明](app/offline/README.md) 与 [本地 HTTPS 配置](app/offline/LOCAL-HTTPS.md) 准备服务，再提供实际地址。生成目录和精确资源身份记录在 `app/offline/.local/`，不随 Git 上传。
 
-- 带 main 的 C/C++ 直接粘贴到题站源码；仅函数/Solution 可在测试驱动中手写 main 并 include user.inc。
-- 编译调试在用户入口暂停；行号设置断点，继续、进入、跳过、跳出均有按钮。变量和调用栈来自真实适配器。
-- 编辑后提示重新编译，旧调试位置只对应原始只读快照。复制题站源码不夹带测试驱动；完整草稿导出保留驱动、语言和输入。
-- 草稿自动保存采用版本比较，冲突或失败保留当前编辑并提供恢复副本/导出。浏览器强制关闭前最后一次异步保存、系统存储清理及iPad行为尚未验收。
+**平板上的逐步操作见 [iPad 操作手册](docs/architecture/IPAD-USER-MANUAL.md)**：首次准备、添加主屏、断网关闭重开、关闭辅助电脑、编译全新源码、断点与单步、草稿备份和问题反馈都有步骤。平板无需安装 Node.js。固定版本更新说明从 [集成状态](docs/architecture/STATUS.md) 进入；历史说明里的局域网地址和证书有效期仅属于当时的本地实验。
+
+## 验证与当前限制
+
+日常检查：
 
 ```powershell
 npm.cmd run check
@@ -48,24 +58,31 @@ npm.cmd test
 npm.cmd run test:modules
 npm.cmd run test:ui
 npm.cmd run test:integration
+npm.cmd run test:offline
 npm.cmd run test:acceptance
 npm.cmd run test:regressions
 npm.cmd run test:initializer
 ```
 
-自动检查的范围与实际结果见本轮报告。`npm.cmd run demo:integration` 另输出真实全接口流水线的构建与事件。`verify:ui` 归档UI、契约及流水线检查；新证据另存并拒绝覆盖历史。重复归档请设置新的 `UI_EVIDENCE_DIR=ui/evidence/integrated-新名称`。
+自动检查、实际桌面浏览器、独立验收与 iPad 真机结果分别记录，不能相互替代。验收脚本会创建新的证据目录；不要复用或覆盖封存目录。设置输出位置、模块复验和证据规则见 [测试说明](tests/README.md) 及各模块交接。
 
-独立验收脚本默认创建唯一的 `tests/evidence/integrated-run-*` 目录。需要同一轮命令归档在同一目录时，显式设置新的 `VALIDATION_EVIDENCE_DIR=tests/evidence/integrated-新名称`。不得复用封存证据目录；5号原始失败、已签收版本与本轮集成结果分别保留。
+本轮已合入 5 号对 REV-004/005 的独立复验，在其已测桌面范围关闭资源准备门禁和导入次序缺陷，详见 [独立报告](docs/validation/rev004005-person05-66db2bb-2026-10-27.md)。3 号的监视求值修复也已合入：八进制 `010` 按 8 求值，拒绝指针相加，指针相减明确返回不支持，浮点一元运算保留原类型；这批调试器修复仍待 5 号独立复验。
 
-## 当前边界
+当前固定开发工具链为 Clang/LLD 8.0.1、旧 `wasi_unstable`、wasm32、小端、O0 与嵌入 DWARF4。`string` / `vector` 只覆盖已测 libc++ `std::__2` 布局。完整语言与标准库、C++ 异常/RTTI、线程、新 Wasm 提案和完整 C++ 表达式未建立支持结论；`bits/stdc++.h`、交互式 stdin、运行中主动暂停不支持。
 
-固定开发组合为 Clang/LLD 8.0.1、旧 wasi_unstable、wasm32、小端、O0 与嵌入 DWARF4，string/vector 针对已测 libc++ std::__2 布局。完整语言/标准库、C++异常/RTTI、线程、新Wasm提案和完整C++表达式未建立支持结论；bits/stdc++.h、交互stdin及运行中主动暂停不支持。工具链源码重建和完整依赖许可映射仍待补齐。
+正式兼容组合仍未选择，产品 `offline-bundle` 仍为 `unprepared`。G2 真机离线与 G3 完整流程验收尚未通过；耗时、内存、后台切换、键鼠与中文输入、系统清理后恢复等需要实际 iPad 证据。完整支持边界见 [验收关卡](docs/architecture/GATES.md)。
 
-开发profile的30项清单只覆盖编译调试组件；UI、Node开发宿主和安装系统不在该集合内。正式兼容注册仍未选择，产品offline-bundle仍unprepared。资源校验通过不等于完整产品离线就绪。3/4号完成本轮待修项后交1号整合、5号独立复验；真实iPad仍需按G2断网关闭重开、关闭辅助电脑后编译全新源码并完成调试。
+## 项目记录与协作经验
 
-- [启动与工作区](docs/architecture/START-HERE.md)
-- [范围与驱动](docs/architecture/SCOPE.md)
-- [共享接口](contracts/README.md)
-- [真机关卡](docs/architecture/GATES.md)
-- [离线资源设计](docs/architecture/OFFLINE.md)
-- [1号交接](docs/handoffs/01.md)
+| 内容 | 入口 |
+|---|---|
+| 当前进度、下一步与版本 | [STATUS](docs/architecture/STATUS.md) |
+| 最初六份任务分工 | [原始计划归档](docs/architecture/original-plan/) |
+| 集成过程、缺陷与经验 | [项目复盘](docs/architecture/PROJECT-RETROSPECTIVE-2026-10-27.md) |
+| 共享协议与支持声明 | [接口说明](contracts/README.md)、[能力表](contracts/capabilities.json) |
+| 工作区与目录所有权 | [启动说明](docs/architecture/START-HERE.md)、[分工](docs/architecture/OWNERSHIP.md) |
+| 1—5 号交接 | [总架构](docs/handoffs/01.md)、[编译](docs/handoffs/02.md)、[调试](docs/handoffs/03.md)、[界面与保存](docs/handoffs/04.md)、[独立验收](docs/handoffs/05.md) |
+
+各模块通过独立分支交付，再在 `integration` 合并、检查实际组件身份、复验并交独立验收。原始失败、修复证据、版本标签和旧缓存入口保留，避免用后来的成功改写历史结果。
+
+仓库公开保存源码、资源锁定清单、任务与交接文档，以及已纳入 Git 的小型样例和验证证据。完整工具链二进制、生成的运行包、临时文件和本地 TLS 材料由忽略规则排除；私钥不得上传。第三方二进制到源码及依赖的完整映射、许可与通知仍有缺口，详见 [资源许可记录](compiler/resources/LICENSES.md)。本仓库尚未指定统一项目许可证，不应将上游组件许可证当作整个项目的授权声明。

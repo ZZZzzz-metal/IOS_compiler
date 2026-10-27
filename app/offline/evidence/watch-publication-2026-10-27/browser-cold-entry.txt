@@ -1,0 +1,7 @@
+Browser tab: 3, Title: "算法工作台 · 离线准备", URL: "http://127.0.0.1:4197/releases/ipad-web-probe-40b0be1b9616e4ec152be87a/index.html".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 13-14
+~			11 button 准备离线资源, ID: prepare
+~			12 button 检查已存资源, ID: verify
++			37 text 已检查 50 项资源，可以打开工作台。iPad 完全离线仍需按手册实测。
+The focused UI element is 0 AXWebArea 算法工作台 · 离线准备, URL: 127.0.0.1:4197/releases/ipad-web-probe-40b0be1b9616e4ec152be87a/index.html

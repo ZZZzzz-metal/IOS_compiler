@@ -1,0 +1,34 @@
+[
+  {
+    "expression": "010",
+    "text": "010\nint\n8"
+  },
+  {
+    "expression": "077",
+    "text": "077\nint\n63"
+  },
+  {
+    "expression": "08",
+    "text": "08\n<expression>\n不可读取：Invalid digit in octal integer literal"
+  },
+  {
+    "expression": "p+q",
+    "text": "p+q\n<expression>\n不可读取：Adding two pointers is invalid"
+  },
+  {
+    "expression": "p-q",
+    "text": "p-q\n<expression>\n不可读取：Pointer subtraction is unsupported: common array provenance cannot be verified"
+  },
+  {
+    "expression": "*(p-1)",
+    "text": "*(p-1)\nint\n22"
+  },
+  {
+    "expression": "(+f)+1",
+    "text": "(+f)+1\nfloat\n16777216"
+  },
+  {
+    "expression": "(-f)-1",
+    "text": "(-f)-1\nfloat\n-16777216"
+  }
+]

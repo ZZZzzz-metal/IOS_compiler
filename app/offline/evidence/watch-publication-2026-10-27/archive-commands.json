@@ -1,0 +1,12 @@
+{
+  "commands": [
+    {
+      "command": "python app/offline/.local/packages/build-v0.4.4.py",
+      "exitCode": 0
+    }
+  ],
+  "generatorSha256": "7fdd512d3a4b7f8021abaa350f08e4b6b2f35922f7b4c7a9fd8ad7356e4385dd",
+  "historicalArchivesVerified": 6,
+  "zipFilesIgnoredAndUntracked": true,
+  "declaration": "Only archive byte verification. No current HTTPS, browser, real iPad, independent new debugger acceptance, or distribution license claim."
+}

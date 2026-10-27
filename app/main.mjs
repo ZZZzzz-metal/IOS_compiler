@@ -22,13 +22,13 @@ if (requested && !Object.hasOwn(moduleDefinitions, requested)) {
   const profiles = await json('contracts/compatibility-profiles.json');
   console.log(JSON.stringify({
     project: 'iPad 离线 C/C++ 编译调试工具', location: fileURLToPath(root),
-    delivery: '4号准备/导入竞态修复与浅色工作台已集成，待5号独立复验；3号另有两项监视问题待修', baseline: 'integration-v0.4.3',
+    delivery: '已集成3号监视语义修复及5号界面竞态独立复验；新引擎与完整缓存包待独立验收', baseline: 'integration-v0.4.4',
     protocolVersion: capabilities.protocolVersion, selectedRoute: profiles.selectedCompatibilityId,
     offlineReady: false, deviceValidation: '待验证',
     verifiedCapabilities: capabilities.capabilities.filter(item => item.status === 'verified').length,
     implementedUnverifiedCapabilities: capabilities.capabilities.filter(item => item.status === 'implemented-unverified').length,
     modules: moduleDefinitions,
     commands: { workbench: 'npm start', prepareOffline: 'npm run prepare:offline', offlineEntry: 'npm run start:offline', offlineChecks: 'npm run test:offline', status: 'npm run status', demo: 'npm run demo:integration', tests: 'npm run test:integration', ui: 'npm run test:ui', acceptance: 'npm run test:acceptance', regressions: 'npm run test:regressions', initializer: 'npm run test:initializer' },
-    next: '5号基于v0.4.3独立复验REV-004/005及新包；3号修REV-002/003。真实iPad按新版手册执行G2，尚未通过。',
+    next: '5号复验新监视语义、REV-001恢复及v0.4.4完整缓存包。真实iPad按手册执行G2，尚未通过；GitHub合并由用户手动完成。',
   }, null, 2));
 }

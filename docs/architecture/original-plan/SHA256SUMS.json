@@ -1,0 +1,32 @@
+[
+  {
+    "path": "00-总览与启动顺序.md",
+    "byteLength": 5488,
+    "sha256": "f5829876a5450c4f3e6fcaac2a8c688a80bfa48067d7298bef3757c473f3c836"
+  },
+  {
+    "path": "01-总架构与集成.md",
+    "byteLength": 4913,
+    "sha256": "decc2d3e06ac9c987f2edf40f4bdedc3b2050f8a6ceb107583657112e800e65a"
+  },
+  {
+    "path": "02-离线编译工具链.md",
+    "byteLength": 4883,
+    "sha256": "67bbb4e59e276d56255cce9464facde9a6987b6f720cd5d55c181dfd3d08f72c"
+  },
+  {
+    "path": "03-运行与源码级调试.md",
+    "byteLength": 5228,
+    "sha256": "d8291f7dfb67777a7459f8ce34283c98992af643a27d3d0d6fbcdddc056e40ef"
+  },
+  {
+    "path": "04-iPad编辑器与调试界面.md",
+    "byteLength": 5154,
+    "sha256": "acdd56c87607011e4cfeda21cecfa3a95fb621bd433e7ffd3fd7b46d1b70b8a3"
+  },
+  {
+    "path": "05-独立测试与验收.md",
+    "byteLength": 5293,
+    "sha256": "c4f1b27f7a57b6e20651c931e99545ce018f42ba52d1f7600e2116af684403de"
+  }
+]

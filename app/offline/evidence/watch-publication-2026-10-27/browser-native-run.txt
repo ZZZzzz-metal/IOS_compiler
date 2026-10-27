@@ -1,0 +1,28 @@
+Browser tab: 4, Title: "算法工作台 · 四号验证原型", URL: "http://127.0.0.1:4197/releases/ipad-web-probe-40b0be1b9616e4ec152be87a/ui/probe.html".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 102-105
+~		5 button 校验本地资源, ID: prepare
+~		15 button 编译运行, ID: run
+~		16 button 编译调试, ID: debug
+~			22 button (disabled) 停止, ID: stop
+~		88 text 已结束
+~			38 checkbox 查看调试快照, Value: 0, ID: snapshot-toggle
+~				91 button 1, Help: 第 1 行：切换断点
+~				92 button 2, Help: 第 2 行：切换断点
+~				93 button 3, Help: 第 3 行：切换断点
+~				94 button 4, Help: 第 4 行：切换断点
+~				95 button 5, Help: 第 5 行：切换断点
+~				96 button 6, Help: 第 6 行：切换断点
+~				97 button 7, Help: 第 7 行：切换断点
+~				98 button 8, Help: 第 8 行：切换断点
+~				99 button 9, Help: 第 9 行：切换断点
+~				100 button 10, Help: 第 10 行：切换断点
+~				101 button 11, Help: 第 11 行：切换断点
+~				69 heading 程序输出 exit · 返回 0, Value: 2
++					102 text exit · 返回 0
++					103 text V044=8:2:22:16777216:-16777216
+
++				104 text 调试暂停后显示真实调用栈
++				105 text 调试暂停后读取变量
++				106 text 选择暂停栈帧后查询
+The focused UI element is 0 AXWebArea 算法工作台 · 四号验证原型, URL: 127.0.0.1:4197/releases/ipad-web-probe-40b0be1b9616e4ec152be87a/ui/probe.html
