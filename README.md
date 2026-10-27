@@ -5,8 +5,8 @@
 ## 版本与交接
 
 - 仓库：`C:\Users\20964\Documents\ChatGPT\C++算法编译器\ipad-offline-debugger`
-- 分支：`integration`；本轮复查修复交付：`integration-v0.4.2`。
-- 旧标签 baseline-v0.1.0、integration-v0.2.0、integration-v0.2.1、integration-v0.3.0、integration-v0.4.0、integration-v0.4.1 保持原样；协议仍为 `0.1.0-draft.1`。
+- 分支：`integration`；本轮4号修复集成交付：`integration-v0.4.3`。
+- 旧标签 baseline-v0.1.0、integration-v0.2.0、integration-v0.2.1、integration-v0.3.0、integration-v0.4.0、integration-v0.4.1、integration-v0.4.2 保持原样；协议仍为 `0.1.0-draft.1`。
 - [离线入口交付](docs/architecture/OFFLINE-INTEGRATION-2026-10-26.md)、[v0.3.0组合复验步骤](docs/architecture/UI-INTEGRATION-2026-10-25.md)、[统一状态](docs/architecture/STATUS.md)。
 
 ## 启动统一工作台
@@ -33,7 +33,7 @@ npm.cmd start
 
 **你在 iPad 上的逐步操作见 [平板操作手册](docs/architecture/IPAD-USER-MANUAL.md)**：首次准备、添加主屏、断网关闭重开、新源码编译、调试、停止恢复及草稿备份都有具体步骤和预期。本次HTTPS地址见下面的更新说明，平板实际可达性和G2真机结果仍待反馈；没有原生安装包，不把完整缓存生成成功称为 iPad 已通过。
 
-2026-10-27复查确认5项问题，1号已修复启动缓存损坏后的恢复入口，另4项分别待3号监视求值、4号准备/导入竞态修复。已合入5号23b8794，VAL-004在已测桌面范围独立关闭；新离线包及iPad仍待独立验收。新完整ZIP与固定入口见 [v0.4.2平板更新](docs/architecture/IPAD-UPDATE-v0.4.2.md)，问题、复现与69项本轮检查见 [复查报告](docs/architecture/DEEP-REVIEW-2026-10-27.md)。旧v0.4.1及更早标签/包保留。
+2026-10-27已合入4号66db2bb：资源准备门禁、迟到导入隔离修复及浅色工作台已接入，REV-004/005待5号独立复验。1号启动恢复修复保留；3号REV-002/003监视求值仍待修。VAL-004限定桌面独立关闭不变。新包与固定入口见 [v0.4.3平板更新](docs/architecture/IPAD-UPDATE-v0.4.3.md)，94项本轮检查和实际浏览器范围见 [集成报告](docs/architecture/UI-RACE-INTEGRATION-2026-10-27.md)。旧标签/包保留，真实iPad仍待验证。
 
 ## 工作流与检查
 

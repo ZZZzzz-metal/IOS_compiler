@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-27T04:38:33.627Z",
+  "node": "v24.19.0",
+  "mergeBase": "6ead71151721098d5ff5a3e21265b366569406e0",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--test",
+    "contracts/checks/*.test.mjs",
+    "ui/checks/*.test.mjs",
+    "storage/checks/*.test.mjs",
+    "app/integration/checks/*.test.mjs",
+    "app/offline/checks/*.test.mjs"
+  ],
+  "testCounts": {
+    "contracts": 10,
+    "uiAndStorage": 59,
+    "integration": 3,
+    "offline": 22,
+    "total": 94,
+    "pass": 94,
+    "fail": 0
+  },
+  "structure": "pass",
+  "toolchain": "11 resources / 60412435 bytes verified",
+  "scope": "Primary integrator affected-suite verification; no iPad, independent signoff or full engine rerun implied."
+}

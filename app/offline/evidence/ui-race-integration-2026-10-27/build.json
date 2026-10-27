@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-27T04:38:34.471Z",
+  "sourceBaseRevision": "6ead71151721098d5ff5a3e21265b366569406e0",
+  "bundleId": "ipad-web-probe-1934f34d48ba1a8c94eadd93",
+  "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+  "resourceManifestHash": "sha256:cf02b4efe9477db1eeda5a0d36a1066dbf67aaf6f3785c31666980ee303911ec",
+  "resourceCount": 50,
+  "totalBytes": 60847962,
+  "releaseDirectory": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\app\\offline\\.local\\site\\releases\\ipad-web-probe-1934f34d48ba1a8c94eadd93",
+  "entryPath": "/releases/ipad-web-probe-1934f34d48ba1a8c94eadd93/index.html",
+  "workerSha256": "sha256:592f89978944e72ded1737236c7c429762a31a5fad9a85ad677c5a64ceb1ef1b",
+  "descriptorSha256": "sha256:88f5b9911425347062bc0c24dba22ed2111a82abc97611d8afa695437bdddf1d",
+  "declaration": "Local Web experiment package only. No hosted iPad URL, G2 result, frozen profile or distribution license clearance is implied."
+}

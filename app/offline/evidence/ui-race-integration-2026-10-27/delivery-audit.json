@@ -1,0 +1,97 @@
+{
+  "checkedAt": "2026-10-27T04:37:45.086Z",
+  "revision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "base": "9727c51915325732e8d1b365f5e9bf672c717aaf",
+  "changedFiles": 49,
+  "ownership": "all allowed",
+  "checksumManifests": [
+    {
+      "manifest": "ui/evidence/integrated-paper-style-2026-10-26/SHA256SUMS.json",
+      "records": 17
+    },
+    {
+      "manifest": "ui/evidence/integrated-paper-style-2026-10-26/automated/SHA256SUMS.json",
+      "records": 4
+    },
+    {
+      "manifest": "ui/evidence/integrated-rev004005-2026-10-27/SHA256SUMS.json",
+      "records": 22
+    },
+    {
+      "manifest": "ui/evidence/integrated-rev004005-2026-10-27/automated-final/SHA256SUMS.json",
+      "records": 4
+    },
+    {
+      "manifest": "ui/evidence/integrated-rev004005-2026-10-27/automated/SHA256SUMS.json",
+      "records": 4
+    }
+  ],
+  "targetReferences": 51,
+  "uniqueTargets": 39,
+  "sourceChecks": [
+    {
+      "path": "ui/src/main.mjs",
+      "gitMatches": true,
+      "declaredWorkingMatches": true,
+      "newlineDifference": false
+    },
+    {
+      "path": "ui/checks/import-order.test.mjs",
+      "gitMatches": true,
+      "declaredWorkingMatches": true,
+      "newlineDifference": false
+    },
+    {
+      "path": "ui/checks/preparation-gate.test.mjs",
+      "gitMatches": true,
+      "declaredWorkingMatches": true,
+      "newlineDifference": false
+    },
+    {
+      "path": "storage/src/draft-store.mjs",
+      "gitMatches": true,
+      "declaredWorkingMatches": true,
+      "newlineDifference": false
+    },
+    {
+      "path": "storage/src/autosave.mjs",
+      "gitMatches": true,
+      "declaredWorkingMatches": true,
+      "newlineDifference": false
+    },
+    {
+      "path": "ui/probe.html",
+      "gitMatches": true,
+      "declaredWorkingMatches": true,
+      "newlineDifference": true
+    },
+    {
+      "path": "ui/style.css",
+      "gitMatches": true,
+      "declaredWorkingMatches": true,
+      "newlineDifference": true
+    },
+    {
+      "path": "app/offline/browser/trust.mjs",
+      "gitMatches": true,
+      "declaredWorkingMatches": true,
+      "newlineDifference": false
+    },
+    {
+      "path": "app/integration/candidate.mjs",
+      "gitMatches": true,
+      "declaredWorkingMatches": true,
+      "newlineDifference": false
+    }
+  ],
+  "originalUIIds": 51,
+  "totalIDs": 72,
+  "addedDecorativeSymbols": 21,
+  "dataCommands": [
+    "continue",
+    "stepInto",
+    "stepOut",
+    "stepOver"
+  ],
+  "declaration": "Static delivery and raw Git-byte evidence audit only; not independent acceptance or iPad validation. Subagent reviews did not complete, so this is the primary integrator review."
+}

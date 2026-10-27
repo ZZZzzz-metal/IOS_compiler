@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-27T04:43:15.374Z",
+  "kind": "same-computer-https-interface-check",
+  "url": "https://100.65.235.35:4187/releases/ipad-web-probe-1934f34d48ba1a8c94eadd93/index.html",
+  "bundleId": "ipad-web-probe-1934f34d48ba1a8c94eadd93",
+  "resourceCount": 50,
+  "totalBytes": 60847962,
+  "rootCertificateName": "iPad Debugger Local Test Root a065aa18",
+  "rootSHA256": "sha256:87991d2b7d332034beddb95ed35ddabc906c0e0b2bd1dd174ec4a25b826e349f",
+  "expiresAt": "2026-11-02T01:29:59.0000000+00:00",
+  "tlsHostnameAndCAValidated": true,
+  "entry200": true,
+  "manifestAndWorkerHashVerified": true,
+  "privatePaths404": true,
+  "ipadConnectivity": "pending-user-test"
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 26,
+    "sha256": "11b9f1f626d619b3bf9fd7f000e86a0cd80c42552203ec6dde71d737eddeddfb"
+  },
+  {
+    "file": "automated-results.json",
+    "byteLength": 734,
+    "sha256": "a8782732093833076a5a5d02de3167267a4e7902ad02876b809f5c9cc89d51bb"
+  },
+  {
+    "file": "browser-import.cpp",
+    "byteLength": 115,
+    "sha256": "ce19947ce1d56971ecac9616e8299dbb99c5a7d11a8699bf5d75dd3c61ab2df2"
+  },
+  {
+    "file": "browser-results.json",
+    "byteLength": 8526,
+    "sha256": "81a599bc2ea7e0dc645fea83d39256550866b5793a51d64aa1fc845358144f16"
+  },
+  {
+    "file": "build.json",
+    "byteLength": 1008,
+    "sha256": "16f85f37b3fa392f70d86ba9ad056aa631e91f0668dc9b47e3df4d9faa1b91a4"
+  },
+  {
+    "file": "delivery-audit.json",
+    "byteLength": 2642,
+    "sha256": "6c8304643d4b424cfe6cdb6db89914aee1a1122cdadc2db1546dbf391d2e1bf7"
+  },
+  {
+    "file": "delivery-audit.mjs",
+    "byteLength": 3514,
+    "sha256": "929b03579e70688a67ee043e7b4a110f743299ea60c8dae5ad8f7a67131f8527"
+  },
+  {
+    "file": "https-check.json",
+    "byteLength": 678,
+    "sha256": "c7e8f1ed6cf9d12655a5ca760dbd1af117dab4c1c9affce2975305ded523636f"
+  },
+  {
+    "file": "integration-tests.txt",
+    "byteLength": 9086,
+    "sha256": "9d466d8f2e73a54e93b6bd9ce3072604f3612fb92ce12d2dab7502162bc550d7"
+  },
+  {
+    "file": "layout-checks.json",
+    "byteLength": 1203,
+    "sha256": "3833a3fd03f36fe571f9076036ec51d08d0b16de8f20354680957ee3a2111f7b"
+  },
+  {
+    "file": "offline-breakpoint-ax.txt",
+    "byteLength": 4456,
+    "sha256": "888056ac3c44474a97fe7a7869df86a8c1ea7a1fac2e7c3432b9253f58dea5bc"
+  },
+  {
+    "file": "offline-breakpoint.png",
+    "byteLength": 58998,
+    "sha256": "519c8bbb2bc24261e9f544f43e6d9ac184e9da8d82d94c08cba19ce71fdf460d"
+  },
+  {
+    "file": "offline-exit-ax.txt",
+    "byteLength": 4557,
+    "sha256": "0b4ec2253b9d4540c7e4919a5928b38ce5232df2a6a7449717bf7922e75c2890"
+  },
+  {
+    "file": "offline-exit.png",
+    "byteLength": 58741,
+    "sha256": "39aa80cc2627acadfa97145c3c39eebde9cdd5a561109194e685ff5f0a51acce"
+  },
+  {
+    "file": "older-archives.json",
+    "byteLength": 855,
+    "sha256": "59cd72f90035a93e78aff8698ec6c26464899487b0a640906926ed95032608ca"
+  },
+  {
+    "file": "package-archives.py",
+    "byteLength": 14041,
+    "sha256": "6724191deb560a6d39bad91802519777de4540292dbf100f5744aa33f6c3f1f5"
+  },
+  {
+    "file": "package.json",
+    "byteLength": 2525,
+    "sha256": "b974beefb8a22553db7feb097ebf7e68f10366ef06c3d195246c94ca738fa69a"
+  },
+  {
+    "file": "seal-evidence.mjs",
+    "byteLength": 3186,
+    "sha256": "bb23e05f85b7ef7c428de019086aa0f98c6fa1ca971da013c0c677c4ccb5c92b"
+  },
+  {
+    "file": "snapshot-ax.txt",
+    "byteLength": 1670,
+    "sha256": "a9da2cdd8aeab84a0a05877c83daed3476292ce4d8a7c7d9b046754c0160dcdb"
+  },
+  {
+    "file": "source-inputs.json",
+    "byteLength": 5901,
+    "sha256": "eb4dc8e3276863f23e7e07d3b40451f6f7e24e01c940e18da6d3780c5fd888b9"
+  },
+  {
+    "file": "structure-check.txt",
+    "byteLength": 277,
+    "sha256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48"
+  },
+  {
+    "file": "toolchain-check.txt",
+    "byteLength": 114,
+    "sha256": "60757ef91aa9fef00f1014022c72bd27a45e8602db0db52455341e00b2da0be6"
+  }
+]
