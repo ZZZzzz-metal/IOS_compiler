@@ -1,0 +1,57 @@
+{
+  "kind": "generated-resource-byte-verification-not-browser-execution",
+  "version": "5e1ae21816681e5c1e0644c3affc0d20d8816e71719f992872dd249fb6f689b7",
+  "byteLength": 60637493,
+  "resourceCount": 34,
+  "moduleProfile": {
+    "compatibilityId": "debugger-prototype-2ec582229fe2b1d3",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:2ec582229fe2b1d3bc2c48f986cedd870d76e9f70cba63b96963c8e17c7439be",
+    "status": "candidate",
+    "evidence": [
+      "Desktop candidate; only module runtime/debugger resources are verified here. Full offline bundle and iPad remain unverified."
+    ]
+  },
+  "browserTested": false,
+  "ipadTested": false
+}

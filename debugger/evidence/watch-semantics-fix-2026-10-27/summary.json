@@ -1,0 +1,55 @@
+{
+  "capturedAt": "2026-10-26T23:56:06.052Z",
+  "basedOn": "9727c51915325732e8d1b365f5e9bf672c717aaf",
+  "testedSourceState": "working tree; exact tested source bytes are recorded in commands.json and tested-resources.json",
+  "issueStatus": {
+    "REV002": "correct unsuffixed octal values and integer conversions; invalid octal rejected",
+    "REV003": "pointer addition rejected; subtraction explicitly unsupported without verified common array provenance",
+    "floatingAppendix": "unary float32 width retained in the tested expressions; not a full floating-point claim"
+  },
+  "results": {
+    "debugger": "75/75",
+    "independent": "21/21",
+    "initializerIndependent": "6/6",
+    "pipeline": "3/3",
+    "contracts": "10/10",
+    "shadow": "exit 0",
+    "loopHeader": "exit 0",
+    "npmCheck": "exit 0; product offline NOT READY",
+    "npmTest": "10/10",
+    "fixedToolchain": "11 resources verified",
+    "originalReview": "seven observed result differences asserted; execution unchanged",
+    "workerQueryObservations": 70
+  },
+  "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+  "resourceManifestHash": "sha256:b02def5d2c6e7f39177b8d523583e53bc24708e493c9f0300ac8e729b7b56fe8",
+  "exactOriginalArtifactComparison": {
+    "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+    "sha256": "sha256:1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5"
+  },
+  "oldReviewEvidence": {
+    "entriesVerified": 31,
+    "changed": false
+  },
+  "evidenceProvenance": {
+    "independentTemporaryPath": "tests/evidence/integrated-role03-watch-fix-2026-10-27",
+    "archivedAs": "debugger/evidence/watch-semantics-fix-2026-10-27/independent",
+    "workerTemporaryPath": "debugger/.local/watch-semantics-green-final-20261027",
+    "archivedWorkerAs": "debugger/evidence/watch-semantics-fix-2026-10-27/worker-regression",
+    "bytesMovedWithoutRewriting": true,
+    "typeOracle": "captured during development under its recorded temporary profile; compiler type assertions remain separate from final watch tests"
+  },
+  "scope": {
+    "browserTested": false,
+    "ipadTested": false,
+    "productionBundleRebuilt": false,
+    "sharedContractsChanged": false,
+    "compilerChanged": false,
+    "guestExecutionChanged": false,
+    "pending": [
+      "Role 1 integration and new immutable product bundle",
+      "Role 5 independent revalidation",
+      "Real iPad G2/G3"
+    ]
+  }
+}

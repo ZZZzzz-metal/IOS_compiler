@@ -442,7 +442,7 @@ class ExpressionParser {
       fail('Expression must contain 1–2048 characters', 'unsupported');
     this.inspector = inspector; this.frame = frame; this.expression = expression;
     this.tokens = []; this.pos = 0; this.depth = 0;
-    const token = /\s*(?:(0x[\da-fA-F]+|\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)|([A-Za-z_$][\w$]*)|(->|\+\+|--|<<|>>|<=|>=|==|!=|&&|\|\||[+\-*/%~!<>&|^()[\].=,?:]))/y;
+    const token = /\s*(?:(0[xX][\da-fA-F]+|\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)|([A-Za-z_$][\w$]*)|(->|\+\+|--|<<|>>|<=|>=|==|!=|&&|\|\||[+\-*/%~!<>&|^()[\].=,?:]))/y;
     let offset = 0;
     while (offset < expression.length) {
       if (!expression.slice(offset).trim()) break;
@@ -465,6 +465,10 @@ class ExpressionParser {
     if (value.state !== 'available') fail(value.reason ?? 'Expression operand is unavailable', value.state);
     if (value._scalar === undefined) fail('Scalar operand required', 'unsupported');
     return value._scalar;
+  }
+  isPointer(value) {
+    // A void pointer has no target DIE, but is still a pointer operand.
+    return !!value._pointerTarget || this.inspector.symbols.canonical(value._type)?.tag === TAG.pointer;
   }
   literal(value, type = typeof value === 'number' ? 'double' : 'int', integer = typeof value === 'bigint' ? { bits: 32, signed: true } : undefined) {
     return { name: this.expression, type, value: String(value), state: 'available', namedVariables: 0,
@@ -491,12 +495,15 @@ class ExpressionParser {
     return this.literal(this.converted(value, type), `${type.signed ? '' : 'unsigned '}${type.bits === 64 ? 'long long' : 'int'}`, type);
   }
   numericLiteral(text) {
-    if (/[.eE]/.test(text) && !/^0x/.test(text)) {
+    const hexadecimal = /^0[xX]/.test(text);
+    if (/[.eE]/.test(text) && !hexadecimal) {
       const value = Number(text);
       if (!Number.isFinite(value)) fail('Floating literal is outside the finite supported range', 'unsupported');
       return this.literal(value);
     }
-    const value = BigInt(text), candidates = /^0x/.test(text)
+    const octal = !hexadecimal && text.startsWith('0');
+    if (octal && !/^[0-7]+$/.test(text)) fail('Invalid digit in octal integer literal', 'unsupported');
+    const value = BigInt(octal ? `0o${text}` : text), candidates = hexadecimal || octal
       ? [{ bits: 32, signed: true }, { bits: 32, signed: false }, { bits: 64, signed: true }, { bits: 64, signed: false }]
       : [{ bits: 32, signed: true }, { bits: 64, signed: true }];
     const type = candidates.find(type => value < 1n << BigInt(type.bits - (type.signed ? 1 : 0)));
@@ -518,23 +525,29 @@ class ExpressionParser {
       if (!evaluate) { left = this.literal(0n); continue; }
       if (shortCircuit) { left = this.literal(op === '&&' ? 0n : 1n, 'bool', { bits: 8, signed: false, boolean: true }); continue; }
       const a = this.scalar(left), b = this.scalar(right);
+      const leftPointer = this.isPointer(left), rightPointer = this.isPointer(right);
+      if (leftPointer && rightPointer && ['+', '-'].includes(op))
+        fail(op === '+' ? 'Adding two pointers is invalid' :
+          'Pointer subtraction is unsupported: common array provenance cannot be verified', 'unsupported');
       // Pointer arithmetic scales by the actual DWARF element size.
-      if (left._pointerTarget && ['+', '-'].includes(op) && typeof b === 'bigint') {
+      if (leftPointer && !rightPointer && ['+', '-'].includes(op) && right._integer && typeof b === 'bigint') {
         const size = this.inspector.symbols.byteSize(left._pointerTarget);
         if (!size) fail('Pointer target size unavailable', 'unsupported');
         left = { ...left, _scalar: a + (op === '+' ? b : -b) * BigInt(size) };
+        // Arithmetic produces a value, not the original pointer variable's slot.
+        delete left.address; delete left.immediate;
         left.value = `0x${addressNumber(left._scalar).toString(16).padStart(8, '0')}`; continue;
       }
-      if (left._pointerTarget || right._pointerTarget) {
+      if (leftPointer || rightPointer) {
         if (!['==', '!=', '<', '>', '<=', '>=', '&&', '||'].includes(op)) fail('Unsupported pointer operation', 'unsupported');
-        if (!left._pointerTarget || !right._pointerTarget) {
-          const integer = left._pointerTarget ? b : a;
+        if (!leftPointer || !rightPointer) {
+          const integer = leftPointer ? b : a;
           if (integer !== 0n || !['==', '!=', '&&', '||'].includes(op)) fail('Only null integer comparisons with pointers are supported', 'unsupported');
         }
       }
       const floating = typeof a === 'number' || typeof b === 'number';
       const logical = ['&&', '||'].includes(op), comparison = ['==', '!=', '<', '>', '<=', '>='].includes(op);
-      const pointerComparison = !!(left._pointerTarget || right._pointerTarget);
+      const pointerComparison = leftPointer || rightPointer;
       const shift = ['<<', '>>'].includes(op);
       const type = floating || logical || pointerComparison ? undefined : shift ? this.integerType(left) : this.commonType(left, right);
       const x = floating ? Number(a) : type ? this.converted(a, type) : a;
@@ -579,8 +592,13 @@ class ExpressionParser {
       const scalar = this.scalar(value);
       if (op === '~' && typeof scalar !== 'bigint') fail('Integer operand required', 'unsupported');
       if (op === '!') return this.literal(BigInt(!scalar), 'bool', { bits: 8, signed: false, boolean: true });
-      if (value._pointerTarget) fail('Unary arithmetic on pointers is unsupported', 'unsupported');
-      if (typeof scalar === 'number') return this.literal(op === '-' ? -scalar : scalar);
+      if (this.isPointer(value)) fail('Unary arithmetic on pointers is unsupported', 'unsupported');
+      if (typeof scalar === 'number') {
+        const bits = value._floatBits;
+        if (![32, 64].includes(bits)) fail('Floating type information is unavailable', 'unsupported');
+        const result = op === '-' ? -scalar : scalar;
+        return { ...this.literal(bits === 32 ? Math.fround(result) : result, bits === 32 ? 'float' : 'double'), _floatBits: bits };
+      }
       const type = this.integerType(value), promoted = this.converted(scalar, type);
       return this.integerResult(op === '+' ? promoted : op === '-' ? -promoted : ~promoted, type);
     }
@@ -615,6 +633,7 @@ class ExpressionParser {
         this.pos++; const indexValue = this.binary(0, evaluate); this.take(']');
         if (!evaluate) { value = this.literal(0n); continue; }
         const index = this.scalar(indexValue);
+        if (this.isPointer(indexValue) || !indexValue._integer) fail('Integer array index required', 'unsupported');
         if (typeof index !== 'bigint' || index < 0n || index > BigInt(MAX_ELEMENTS)) fail('Array index outside inspection bounds', 'error');
         if (value._elements) {
           const { type, address, stride, count } = value._elements;

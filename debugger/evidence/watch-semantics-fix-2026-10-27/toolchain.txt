@@ -1,0 +1,77 @@
+{
+  "status": "verified",
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "upstreamCommit": "648c4a89997a351eef75cdaec3ef5b89d4937dec",
+  "resourceCount": 11,
+  "totalBytes": 60412435,
+  "sourceRebuildVerified": false,
+  "distributionLicenseReviewComplete": false,
+  "files": [
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "state": "verified"
+    },
+    {
+      "filename": "lld",
+      "byteLength": 19490094,
+      "sha256": "36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+      "state": "verified"
+    },
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "state": "verified"
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "state": "verified"
+    },
+    {
+      "filename": "shared.js",
+      "byteLength": 23973,
+      "sha256": "4de0be862bda1a7571c1f0632abe3c62c47a56e734cc6b703155805a4b160b1c",
+      "state": "verified"
+    },
+    {
+      "filename": "worker.js",
+      "byteLength": 2758,
+      "sha256": "c0d4c3f3ef0e2047c0f109922f0a4ee9e0f2b12947a569a835da83b6bdcf995e",
+      "state": "verified"
+    },
+    {
+      "filename": "d8.js",
+      "byteLength": 1722,
+      "sha256": "a7ae2decd5330e2deadb6c258cfa11b4f0c5645807feb7f0114d319335e4a4b5",
+      "state": "verified"
+    },
+    {
+      "filename": "shared_web.js",
+      "byteLength": 8110,
+      "sha256": "90f2eb3c832b9d3af7f0ef7aa63c71554182efb73eba734810607e20d4cb5681",
+      "state": "verified"
+    },
+    {
+      "filename": "LICENSE",
+      "byteLength": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "state": "verified"
+    },
+    {
+      "filename": "LICENSE.llvm",
+      "byteLength": 15140,
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47",
+      "state": "verified"
+    },
+    {
+      "filename": "README.md",
+      "byteLength": 1446,
+      "sha256": "2ded8e20209ca550698c829ab65dfff3e4e26e90fc21240bae5f0c4f1cbd7a57",
+      "state": "verified"
+    }
+  ]
+}

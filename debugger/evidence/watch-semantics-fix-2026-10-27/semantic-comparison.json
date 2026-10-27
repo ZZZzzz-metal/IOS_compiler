@@ -1,0 +1,162 @@
+{
+  "kind": "asserted-real-worker-before-after",
+  "sourceHash": "sha256:dfea4f120d8887392b67f2bab5f7f952670ace5ccbf12cfc61f442ef4b84d83a",
+  "artifactSHA256": "sha256:1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5",
+  "native": {
+    "exitCode": 0,
+    "stdout": "target octal=8 difference=2 plus=16777216 minus=-16777216\n",
+    "stderr": "",
+    "memoryBytes": 1179648
+  },
+  "checks": [
+    {
+      "expression": "010",
+      "before": {
+        "name": "010",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "010",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "00010",
+      "before": {
+        "name": "00010",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "00010",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "08",
+      "before": {
+        "name": "08",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "08",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Invalid digit in octal integer literal",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "p + q",
+      "before": {
+        "name": "p + q",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x00506688",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "f2883121-de6d-4148-ade3-4032f54ef091"
+      },
+      "after": {
+        "name": "p + q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Adding two pointers is invalid",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "p - q",
+      "before": {
+        "name": "p - q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Address is outside wasm32 memory",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "p - q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer subtraction is unsupported: common array provenance cannot be verified",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "(+f) + 1",
+      "before": {
+        "name": "(+f) + 1",
+        "type": "double",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "16777217",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "(+f) + 1",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "(-f) - 1",
+      "before": {
+        "name": "(-f) - 1",
+        "type": "double",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "-16777217",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "(-f) - 1",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "-16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    }
+  ],
+  "note": "Pointer subtraction now reports unsupported, not a computed difference. Original review script exit 0 means workflow completed, not that its old watch results were correct."
+}

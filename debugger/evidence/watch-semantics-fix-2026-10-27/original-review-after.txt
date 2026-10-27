@@ -1,0 +1,218 @@
+{
+  "output": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03\\debugger\\evidence\\watch-semantics-fix-2026-10-27\\after-fix",
+  "native": {
+    "exitCode": 0,
+    "stdout": "target octal=8 difference=2 plus=16777216 minus=-16777216\n",
+    "stderr": "",
+    "memoryBytes": 1179648
+  },
+  "results": [
+    {
+      "expression": "octal",
+      "result": {
+        "name": "octal",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "010",
+      "result": {
+        "name": "010",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "00010",
+      "result": {
+        "name": "00010",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "08",
+      "result": {
+        "name": "08",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Invalid digit in octal integer literal",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "p",
+      "result": {
+        "name": "p",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x00101488",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "313cee30-402c-4e56-b419-d2563cc3ea5d"
+      }
+    },
+    {
+      "expression": "q",
+      "result": {
+        "name": "q",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x00101480",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "a72ea5b0-e202-4b70-933f-21fccf3326a5"
+      }
+    },
+    {
+      "expression": "p + q",
+      "result": {
+        "name": "p + q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Adding two pointers is invalid",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "p - q",
+      "result": {
+        "name": "p - q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer subtraction is unsupported: common array provenance cannot be verified",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "p + 1",
+      "result": {
+        "name": "p + 1",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x0010148c",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "3584aee2-9233-4792-8814-8eee1ed9af75"
+      }
+    },
+    {
+      "expression": "1 + p",
+      "result": {
+        "name": "1 + p",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Unsupported pointer operation",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "(+f) + 1",
+      "result": {
+        "name": "(+f) + 1",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "(-f) - 1",
+      "result": {
+        "name": "(-f) - 1",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "-16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "p[-1]",
+      "result": {
+        "name": "p[-1]",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "error",
+        "reason": "Array index outside inspection bounds",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expression": "*(p-1)",
+      "result": {
+        "name": "*(p-1)",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "22",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    }
+  ],
+  "invalidPrograms": [
+    {
+      "caseId": "invalid-octal",
+      "status": "failed",
+      "diagnostics": [
+        {
+          "severity": "error",
+          "message": "invalid digit '8' in octal constant",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 1,
+              "column": 22
+            }
+          }
+        }
+      ]
+    },
+    {
+      "caseId": "pointer-plus-pointer",
+      "status": "failed",
+      "diagnostics": [
+        {
+          "severity": "error",
+          "message": "invalid operands to binary expression ('int *' and 'int *')",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 1,
+              "column": 78
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
