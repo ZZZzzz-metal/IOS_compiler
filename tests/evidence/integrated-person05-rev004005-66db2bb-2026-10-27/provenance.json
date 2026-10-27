@@ -1,0 +1,168 @@
+{
+  "recordedAt": "2026-10-27T04:48:56.454Z",
+  "timezone": "Asia/Shanghai",
+  "testedRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "baseTag": "integration-v0.4.2",
+  "baseRevision": "9727c51915325732e8d1b365f5e9bf672c717aaf",
+  "negativeReference": "b9ed5d1faade2eedd7e9d840fb8e2ffa8504bebf",
+  "headAtSeal": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "productDiffFromCommit": "",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "browser": "Codex IAB; engine version not collected",
+    "ipadTested": false,
+    "networkDisabled": false
+  },
+  "host": {
+    "url": "http://127.0.0.1:4215/ui/probe.html",
+    "controls": "http://127.0.0.1:4215/_validation/control",
+    "implementation": "browser/serve-controlled-host.mjs",
+    "altered": "only next candidate HTTP response; unmodified app/Workers/File.text"
+  },
+  "engineProfile": {
+    "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:cf02b4efe9477db1eeda5a0d36a1066dbf67aaf6f3785c31666980ee303911ec",
+    "status": "candidate",
+    "evidence": [
+      "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+    ]
+  },
+  "engineResourceCount": 30,
+  "preparedCandidate": {
+    "file": "ui/.local/candidate.json",
+    "byteLength": 47377,
+    "sha256": "ac6da5b05848858d9a5d51393e64312f5b6770ee835671ce04d340cff4d7c59e"
+  },
+  "sourceFiles": [
+    {
+      "file": "app/integration/candidate.mjs",
+      "byteLength": 3889,
+      "sha256": "37ca48dc2f83b57b3dc9e6291ef4d400e81f1050b99e9d5a883117369a14c184",
+      "fixedGitBlob": "e23e469f30238e5b93405d299f0a3e8d7f9b1df3",
+      "fixedBlobSHA256": "37ca48dc2f83b57b3dc9e6291ef4d400e81f1050b99e9d5a883117369a14c184",
+      "equalAfterLFNormalization": true
+    },
+    {
+      "file": "storage/src/autosave.mjs",
+      "byteLength": 2767,
+      "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff",
+      "fixedGitBlob": "56e3520ed4902baaa6a65e0a08fc10e1f19d3fee",
+      "fixedBlobSHA256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff",
+      "equalAfterLFNormalization": true
+    },
+    {
+      "file": "storage/src/draft-store.mjs",
+      "byteLength": 8047,
+      "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755",
+      "fixedGitBlob": "da091c220b8c937ed5617ef45e36d15d6f7632b8",
+      "fixedBlobSHA256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755",
+      "equalAfterLFNormalization": true
+    },
+    {
+      "file": "ui/probe.html",
+      "byteLength": 11333,
+      "sha256": "08927bd3874067037941936bebd0456eea993bb69564f19ab878e1723b04f499",
+      "fixedGitBlob": "43cda0034cbca3082f133aca517718b6bccbd391",
+      "fixedBlobSHA256": "08927bd3874067037941936bebd0456eea993bb69564f19ab878e1723b04f499",
+      "equalAfterLFNormalization": true
+    },
+    {
+      "file": "ui/scripts/prepare-probe.mjs",
+      "byteLength": 870,
+      "sha256": "a3e29869d4e2dc11fa8d1e251bac5c6d8bedbf825092375bab7f013abd69c9a0",
+      "fixedGitBlob": "65e6e833575beb9cb97abf610ab0c31009a29d90",
+      "fixedBlobSHA256": "a3e29869d4e2dc11fa8d1e251bac5c6d8bedbf825092375bab7f013abd69c9a0",
+      "equalAfterLFNormalization": true
+    },
+    {
+      "file": "ui/scripts/serve-probe.mjs",
+      "byteLength": 1708,
+      "sha256": "154611dfffdc9f2f04986eec93d35b288d8ec72b0872a648f01e1f82fdca0398",
+      "fixedGitBlob": "3713832dc10063f5134c05500da3bd7989744e52",
+      "fixedBlobSHA256": "154611dfffdc9f2f04986eec93d35b288d8ec72b0872a648f01e1f82fdca0398",
+      "equalAfterLFNormalization": true
+    },
+    {
+      "file": "ui/src/editor.mjs",
+      "byteLength": 2518,
+      "sha256": "26e0eb00f16f4fac9cebde7c7db702559823c2acb9288cf8fde89da35a2767e6",
+      "fixedGitBlob": "04bb5e7b0e81eeb6585c22d5fbe12f171a133694",
+      "fixedBlobSHA256": "26e0eb00f16f4fac9cebde7c7db702559823c2acb9288cf8fde89da35a2767e6",
+      "equalAfterLFNormalization": true
+    },
+    {
+      "file": "ui/src/main.mjs",
+      "byteLength": 28933,
+      "sha256": "1b00e1821a0b3bf1e37d4d7109fa0a684dce13b1af29f1f322b8d1eb5674ea6f",
+      "fixedGitBlob": "a64afe3cd81bba898caea43b781df07966299d5b",
+      "fixedBlobSHA256": "1b00e1821a0b3bf1e37d4d7109fa0a684dce13b1af29f1f322b8d1eb5674ea6f",
+      "equalAfterLFNormalization": true
+    },
+    {
+      "file": "ui/src/session-controller.mjs",
+      "byteLength": 17167,
+      "sha256": "ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84",
+      "fixedGitBlob": "e0cda5556aa72b9454c23123c8b74c3c647246a9",
+      "fixedBlobSHA256": "ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84",
+      "equalAfterLFNormalization": true
+    },
+    {
+      "file": "ui/style.css",
+      "byteLength": 24157,
+      "sha256": "55448fc37ed3599c53ae6b2dea890ad2d0e3a33f57c18dda8ca1d56aa1467091",
+      "fixedGitBlob": "7c6b5817b14c001362e470b5429d06664b629cf7",
+      "fixedBlobSHA256": "55448fc37ed3599c53ae6b2dea890ad2d0e3a33f57c18dda8ca1d56aa1467091",
+      "equalAfterLFNormalization": true
+    }
+  ],
+  "testHarness": {
+    "file": "tests/ui-concurrency-independent.mjs",
+    "byteLength": 22270,
+    "sha256": "3c7c3b2c228ce95651db3bcc69851279b74b445dcf9abc20165a0d4fe233ea4b"
+  },
+  "offlinePackageRebuiltOrAccepted": false
+}

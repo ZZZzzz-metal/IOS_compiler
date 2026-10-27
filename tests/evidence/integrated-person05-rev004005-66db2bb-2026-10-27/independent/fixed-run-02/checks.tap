@@ -1,0 +1,16 @@
+TAP version 13
+ok 1 - REV005-01: last selected B survives reverse A/B completion and real autosave
+ok 2 - REV005-02: source typed during reading survives with an explanatory conflict prompt
+ok 3 - REV005-03-stdin: stdin change during reading invalidates the file without losing the edited project
+ok 4 - REV005-03-language: language change during reading invalidates the file without losing the edited project
+ok 5 - REV005-03-driver: driver change during reading invalidates the file without losing the edited project
+ok 6 - REV005-04: obsolete read failure cannot replace the actual newer malformed-project error
+ok 7 - REV005-05: obsolete finally does not clear the currently selected and still-reading B input
+ok 8 - REV005-06: a current malformed project preserves the restored draft and never schedules a write
+ok 9 - REV004-01: re-prepare locks all three entries before await and real editor render keeps them locked
+ok 10 - REV004-02: direct duplicate preparation is rejected instead of starting overlapping requests
+ok 11 - REV004-03: direct run/debug refuses preparation even when stale DOM reports enabled
+ok 12 - REV004-04: failed re-check discards the old candidate and retry alone restores compile availability
+ok 13 - REV004-05: one compilation retains the same candidate through adapters, handoff, request and start
+ok 14 - REV004-06: an in-flight compilation rejects a direct second compile despite enabled DOM
+1..14

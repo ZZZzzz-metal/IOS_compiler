@@ -1,0 +1,54 @@
+{
+  "origin": "http://127.0.0.1:4215",
+  "nextCandidateHeld": false,
+  "heldAttempt": null,
+  "candidateRequests": 3,
+  "events": [
+    {
+      "at": "2026-10-27T04:40:01.174Z",
+      "kind": "candidate-request",
+      "attempt": 1,
+      "hold": false
+    },
+    {
+      "at": "2026-10-27T04:40:09.828Z",
+      "kind": "armed"
+    },
+    {
+      "at": "2026-10-27T04:40:09.913Z",
+      "kind": "candidate-request",
+      "attempt": 2,
+      "hold": true
+    },
+    {
+      "at": "2026-10-27T04:40:09.914Z",
+      "kind": "candidate-held",
+      "attempt": 2
+    },
+    {
+      "at": "2026-10-27T04:40:28.736Z",
+      "kind": "released-503",
+      "attempt": 2
+    },
+    {
+      "at": "2026-10-27T04:40:29.933Z",
+      "kind": "armed"
+    },
+    {
+      "at": "2026-10-27T04:40:30.007Z",
+      "kind": "candidate-request",
+      "attempt": 3,
+      "hold": true
+    },
+    {
+      "at": "2026-10-27T04:40:30.008Z",
+      "kind": "candidate-held",
+      "attempt": 3
+    },
+    {
+      "at": "2026-10-27T04:40:30.312Z",
+      "kind": "released-original",
+      "attempt": 3
+    }
+  ]
+}
