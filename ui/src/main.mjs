@@ -11,10 +11,11 @@ import {assertTrustedOfflineWorkers} from '../../app/offline/browser/trust.mjs';
 const $=id=>document.getElementById(id),uuid=()=>crypto.randomUUID();
 const example='#include <cstdio>\n#include <vector>\n#include <string>\n\nint add(int left, int right) {\n    int answer = left + right;\n    return answer;\n}\n\nint main() {\n    int n = 3;\n    std::scanf("%d", &n);\n    std::vector<int> values = {1, 2, 3};\n    std::string label = "sum";\n    int array[3] = {4, 5, 6};\n    int total = add(n, values[0]);\n    for (int i = 0; i < 3; ++i) {\n        total += array[i];\n    }\n    std::printf("%s=%d\\n", label.c_str(), total);\n    return 0;\n}\n';
 let draft=createDraft({userText:example,stdin:'3\n'}),currentTab='user',snapshotMode=false;
-let activeSnapshot=null,diagnosticSnapshot=null,diagnostics=[],requested=[],ready=false,prepared=null;
+let activeSnapshot=null,diagnosticSnapshot=null,diagnostics=[],requested=[],ready=false,prepared=null,preparing=false;
 let adapter=null,controller=null,compiler=null,compilation=null,restored=false,saveFailed=false;
 let renderPending=false,renderedInspection='',watchKey='',watched=null,autoSave;
 let unqueuedEdits=false,recovering=false;
+let importSequence=0,draftGeneration=0;
 const store=createDraftStore();
 const fault=error=>{ $('message').hidden=false;$('message').textContent=error?.message??String(error); };
 const safe=action=>(...args)=>Promise.resolve().then(()=>action(...args)).catch(fault);
@@ -37,6 +38,7 @@ function displayedText(){
 }
 function scheduleRender(){if(renderPending)return;renderPending=true;requestAnimationFrame(()=>{renderPending=false;render();});}
 function scheduleSave(){
+  draftGeneration++;
   draft.updatedAt=new Date().toISOString();
   try{if(!restored)throw Error('原草稿尚未成功读取。请导出当前编辑，或存为恢复副本，避免覆盖原稿。');autoSave.schedule(draft);}catch(error){unqueuedEdits=true;saveFailed=true;$('save-recovery').hidden=false;fault(error);}
 }
@@ -147,8 +149,11 @@ function renderInspection(s){
 }
 function render(){
   const s=view(),active=s.session&&!['terminated','failed'].includes(s.session.state);
-  $('run').disabled=$('debug').disabled=!restored||!ready||Boolean(compilation)||Boolean(active);
-  $('prepare').disabled=Boolean(compilation)||Boolean(active);
+  document.body.dataset.executionState=preparing?'preparing':compilation?'compiling':s.session?.synchronized===false?'syncing':s.session?.state??'idle';
+  document.body.dataset.resourceReady=String(ready);
+  document.body.dataset.sourceView=snapshotMode?'snapshot':'draft';
+  $('run').disabled=$('debug').disabled=!restored||recovering||!ready||!prepared||preparing||Boolean(compilation)||Boolean(active);
+  $('prepare').disabled=!restored||recovering||preparing||Boolean(compilation)||Boolean(active);
   $('stop').disabled=!compilation&&!s.actions.stop;
   $('resync').hidden=!s.session||s.session.synchronized;
   for(const button of document.querySelectorAll('[data-command]')){
@@ -156,7 +161,8 @@ function render(){
     button.disabled=!s.actions[button.dataset.command]||!supports(map[button.dataset.command]);
   }
   $('evaluate').disabled=!s.actions.inspect||!s.session?.frameId||!supports('watch-basic');
-  if(compilation)$('status').textContent=compilation.cancelled?'正在取消编译…':({loading:'正在准备本机编译器…',compiling:'正在编译源码…',linking:'正在生成程序…',handoff:'正在准备执行环境…'}[compilation.phase]??'正在本机编译，源码仍可编辑…');
+  if(preparing)$('status').textContent='正在校验本机编译与调试资源…';
+  else if(compilation)$('status').textContent=compilation.cancelled?'正在取消编译…':({loading:'正在准备本机编译器…',compiling:'正在编译源码…',linking:'正在生成程序…',handoff:'正在准备执行环境…'}[compilation.phase]??'正在本机编译，源码仍可编辑…');
   else if(s.session){
     const names={created:'正在创建会话',starting:'正在启动',running:'正在运行',paused:'已暂停',stopping:'正在停止',terminated:'已结束',failed:'执行失败'};
     $('status').textContent=!s.session.synchronized?'会话状态待重新同步':`${names[s.session.state]}${s.session.position?' · '+labelPosition(s.session.position):''}${s.session.pendingControl?' · 等待执行确认':''}`;
@@ -169,7 +175,11 @@ function render(){
 }
 function supports(id){return ['implemented-unverified','verified'].includes(prepared?.capabilities.capabilities.find(c=>c.id===id)?.status);}
 async function prepare(){
-  ready=false;$('prepare').disabled=true;$('resources').textContent='正在读取并校验本机编译与调试资源…';
+  const s=view(),active=s.session&&!['terminated','failed'].includes(s.session.state);
+  if(!restored||recovering||preparing||compilation||active)return;
+  preparing=true;ready=false;prepared=null;
+  $('message').hidden=true;$('resources').textContent='正在读取并校验本机编译与调试资源…';
+  render();
   try{
     const response=await fetch('./.local/candidate.json',{cache:'no-store'});if(!response.ok)throw Error('请先运行四号原型准备步骤。');
     const candidate=await response.json();
@@ -183,22 +193,24 @@ async function prepare(){
       if(bytes.length!==resource.byteLength||await digest(bytes)!==resource.sha256)throw Error(`本地资源校验失败：${resource.relativePath}`);
     }
     prepared=candidate;ready=true;$('resources').textContent=offline?.offline?'本版本离线资源已校验 · iPad 真机待验证':'本机资源已校验 · 完整离线状态待集成验收';$('status').textContent='可编译运行或启动调试。';
-  }catch(error){$('resources').textContent='资源未就绪';fault(error);}finally{render();}
+  }catch(error){ready=false;prepared=null;$('resources').textContent='资源未就绪';$('status').textContent='资源校验失败，请重试。';fault(error);}finally{preparing=false;render();}
 }
 async function compile(mode){
-  if($('run').disabled)return;
+  const s=view(),active=s.session&&!['terminated','failed'].includes(s.session.state);
+  if(!restored||recovering||!ready||!prepared||preparing||compilation||active)return;
+  const candidate=prepared;
   $('message').hidden=true;diagnostics=[];
   const snapshot=makeSnapshot(),requestId=uuid(),task={requestId,cancelled:false};
   compilation=task;diagnosticSnapshot=snapshot;activeSnapshot=null;snapshotMode=false;
   try{
     controller?.dispose();adapter?.dispose();controller=null;adapter=null;compiler=null;
-    adapter=new WorkerDebuggerAdapter({profile:prepared.profile,resources:prepared.resources,baseURL:new URL('../',location.href).href});
+    adapter=new WorkerDebuggerAdapter({profile:candidate.profile,resources:candidate.resources,baseURL:new URL('../',location.href).href});
     controller=new SessionController({adapter,onChange:scheduleRender});
-    compiler=new CompilerAdapter({profile:prepared.profile,lock:prepared.lock,
+    compiler=new CompilerAdapter({profile:candidate.profile,lock:candidate.lock,
       onProgress:event=>{if(compilation===task){task.phase=event.phase;scheduleRender();}},
       writeResource:(path,bytes)=>{task.phase='handoff';scheduleRender();return adapter.registerResource(path,bytes);}});
     showText();
-    const result=await compiler.compile({requestId,snapshot,...draft.language,compatibilityId:prepared.profile.compatibilityId,mode,optimization:'O0'});
+    const result=await compiler.compile({requestId,snapshot,...draft.language,compatibilityId:candidate.profile.compatibilityId,mode,optimization:'O0'});
     if(compilation!==task)return;
     if(task.cancelled){$('status').textContent='编译已取消，可以重新编译。';return;}
     if(result.requestId!==requestId||result.sourceHash!==snapshot.sourceHash)throw Error('编译返回的源码身份不匹配，请重新编译。');
@@ -206,7 +218,7 @@ async function compile(mode){
     if(result.status!=='succeeded'){$('status').textContent=result.status==='cancelled'?'编译已取消':'编译失败，请查看诊断。';return;}
     if(!unchanged(snapshot)){$('status').textContent='编译期间源码已修改，请重新编译当前稿。';return;}
     activeSnapshot=snapshot;
-    const key={sessionId:uuid(),buildId:result.build.buildId,sourceHash:snapshot.sourceHash,compatibilityId:prepared.profile.compatibilityId};
+    const key={sessionId:uuid(),buildId:result.build.buildId,sourceHash:snapshot.sourceHash,compatibilityId:candidate.profile.compatibilityId};
     const ack=await controller.start({...key,build:result.build,snapshot,stdin:{text:draft.stdin,encoding:'utf-8',eof:true},mode,
       initialBreakpoints:mode==='debug'?requested.filter(bp=>snapshot.files.some(f=>f.path===bp.requested.sourcePath)):[],stopOnEntry:mode==='debug',
       limits:{runningTimeMs:30000,outputBytes:65536,variablePageSize:100,memoryBytes:268435456}});
@@ -242,6 +254,7 @@ function findNext(){const text=$('source').value,term=$('find').value;if(!term)r
 function download(result){const url=URL.createObjectURL(new Blob([result.text],{type:result.mediaType}));const anchor=document.createElement('a');anchor.href=url;anchor.download=result.filename;anchor.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
 function manualClipboard(kind){$('clipboard-title').textContent=kind==='copy'?'复制题站源码':'粘贴题站源码';$('clipboard-text').value=kind==='copy'?draft.userText:'';$('clipboard-apply').hidden=kind==='copy';$('clipboard-dialog').showModal();$('clipboard-text').focus();if(kind==='copy')$('clipboard-text').select();}
 function saveStatus(status){
+  document.body.dataset.saveState=status.state;
   saveFailed=status.state==='error';const names={loading:'正在读取本地草稿…',idle:'当前为示例，编辑后自动保存',dirty:'修改待保存…',saving:'正在保存…',saved:`草稿已保存 · 版本 ${status.revision??''}`,error:status.error?.message??'保存失败，请导出当前内容。'};
   $('draft-status').textContent=names[status.state]??status.state;$('save-recovery').hidden=!saveFailed;
 }
@@ -262,8 +275,19 @@ $('copy').onclick=safe(async()=>{try{await navigator.clipboard.writeText(draft.u
 $('paste').onclick=safe(async()=>{try{draft.userText=await navigator.clipboard.readText();currentTab='user';snapshotMode=false;scheduleSave();showText();}catch{manualClipboard('paste');}});
 $('clipboard-dialog').addEventListener('close',()=>{if($('clipboard-dialog').returnValue==='apply'){draft.userText=$('clipboard-text').value;currentTab='user';snapshotMode=false;scheduleSave();showText();}});
 $('import').onclick=()=>$('file').click();$('file').onchange=safe(async()=>{
-  const file=$('file').files[0];if(!file)return;
-  try{if(file.size>2*1024*1024)throw Error('原型单文件导入上限为 2 MB。');draft=parseImport(await file.text(),{filename:file.name,id:draft.id});requested=[];currentTab='user';snapshotMode=false;$('language').value=language();$('stdin').value=draft.stdin;scheduleSave();showText();}finally{$('file').value='';}
+  const file=$('file').files[0];if(!file||recovering)return;
+  const request=++importSequence,generation=draftGeneration,target=draft;
+  const isCurrent=()=>request===importSequence;
+  const matchesDraft=()=>!recovering&&draft===target&&draftGeneration===generation;
+  try{
+    if(file.size>2*1024*1024)throw Error('原型单文件导入上限为 2 MB。');
+    const text=await file.text();
+    if(!isCurrent())return;
+    if(!matchesDraft()){fault('读取文件期间草稿已修改或切换，已保留当前内容。请重新选择文件导入。');return;}
+    const imported=parseImport(text,{filename:file.name,id:target.id});
+    draft=imported;requested=[];currentTab='user';snapshotMode=false;$('language').value=language();$('stdin').value=draft.stdin;
+    $('message').hidden=true;scheduleSave();showText();
+  }catch(error){if(isCurrent()&&matchesDraft())fault(error);}finally{if(isCurrent())$('file').value='';}
 });
 $('export').onclick=safe(()=>download(serializeDraft(draft,$('export-mode').value)));
 $('download-current').onclick=safe(()=>download(serializeDraft(draft,'complete-project')));
@@ -276,7 +300,7 @@ $('retry-save').onclick=safe(async()=>{
   autoSave.schedule(draft);unqueuedEdits=false;await autoSave.retry();
 });
 $('recover-save').onclick=safe(async()=>{
-  if(recovering)return;recovering=true;document.querySelector('main').setAttribute('inert','');document.querySelector('.execution').setAttribute('inert','');
+  if(recovering)return;recovering=true;draftGeneration++;render();document.querySelector('main').setAttribute('inert','');document.querySelector('.execution').setAttribute('inert','');
   try{
     const recovered=createDraft({...draft,id:'recovery-'+uuid(),revision:0});await store.save(recovered,null);
     const recoveryAutosave=createAutosave({store,onStatus:saveStatus,delayMs:350});
@@ -284,7 +308,7 @@ $('recover-save').onclick=safe(async()=>{
     autoSave.dispose();autoSave=recoveryAutosave;draft=saved;restored=true;unqueuedEdits=false;
     history.replaceState(null,'',`#draft=${encodeURIComponent(recovered.id)}`);
     $('draft-status').textContent='当前内容已存为恢复副本，重开此地址可继续恢复。';showText();
-  }finally{recovering=false;document.querySelector('main').removeAttribute('inert');document.querySelector('.execution').removeAttribute('inert');}
+  }finally{recovering=false;document.querySelector('main').removeAttribute('inert');document.querySelector('.execution').removeAttribute('inert');render();}
 });
 $('evaluate').onclick=safe(async()=>{const token=inspectionKey(view()),reply=await controller.evaluate($('expression').value);if(token!==inspectionKey(view())||!reply)return;$('watch').replaceChildren();$('watch').className='list';if(reply.kind==='evaluate'){$('watch').append(createVariable(reply.result,view()));watched=reply.result;}else fault(reply.message);});
 for(const [id,panel] of [['show-code','code'],['show-panels','debug']])$(id).onclick=()=>{document.body.dataset.panel=panel;$('show-code').setAttribute('aria-pressed',String(panel==='code'));$('show-panels').setAttribute('aria-pressed',String(panel==='debug'));};

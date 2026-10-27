@@ -1,0 +1,670 @@
+TAP version 13
+# Subtest: REV-005: B finishing before A is the only import delivered to autosave
+not ok 1 - REV-005: B finishing before A is the only import delivered to autosave
+  ---
+  duration_ms: 4.9222
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:104:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'int value = 11;\n'
+    - 'int value = 22;\n'
+                   ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: |-
+    int value = 22;
+    
+  actual: |-
+    int value = 11;
+    
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:113:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: REV-005: obsolete A failure neither overwrites B feedback nor clears B selection
+not ok 2 - REV-005: obsolete A failure neither overwrites B feedback nor clears B selection
+  ---
+  duration_ms: 1.4976
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:119:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + '旧 A 读取失败'
+    - 'B 的当前提示'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'B 的当前提示'
+  actual: '旧 A 读取失败'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:128:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REV-005: A success/finally cannot clear the file input while B is reading
+not ok 3 - REV-005: A success/finally cannot clear the file input while B is reading
+  ---
+  duration_ms: 0.7488
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:137:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    '' !== 'B.cpp'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'B.cpp'
+  actual: ''
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:144:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REV-005: a late A error does not replace feedback after B has completed
+not ok 4 - REV-005: a late A error does not replace feedback after B has completed
+  ---
+  duration_ms: 0.8229
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:153:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    successful B import must dismiss the prior error
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:162:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REV-005: a late A read error cannot replace the actual newer B import error
+not ok 5 - REV-005: a late A read error cannot replace the actual newer B import error
+  ---
+  duration_ms: 0.9502
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:171:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + '迟到的 A 文件读取错误'
+    - '完整草稿文件无法读取，原草稿未改变。'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: '完整草稿文件无法读取，原草稿未改变。'
+  actual: '迟到的 A 文件读取错误'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:181:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REV-005: edits made while the file is reading survive and produce an explanatory prompt
+not ok 6 - REV-005: edits made while the file is reading survive and produce an explanatory prompt
+  ---
+  duration_ms: 0.802
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:188:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'older imported source\n'
+    - 'newer user edit\n'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: |-
+    newer user edit
+    
+  actual: |-
+    older imported source
+    
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:194:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REV-005: real source, stdin and language handlers all increment the edit generation
+not ok 7 - REV-005: real source, stdin and language handlers all increment the edit generation
+  ---
+  duration_ms: 0.6861
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:202:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:208:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REV-005: switching draft objects during a read never imports into the new draft
+not ok 8 - REV-005: switching draft objects during a read never imports into the new draft
+  ---
+  duration_ms: 1.0901
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:223:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected "actual" to be reference-equal to "expected":
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        driverText: '',
+        id: 'other',
+        language: {
+          language: 'cpp',
+    ...
+        revision: 0,
+    +   stdin: '',
+    -   stdin: 'other input',
+        updatedAt: '2026-10-27T00:16:57.843Z',
+    +   userText: 'incoming source'
+    -   userText: 'other draft\n'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    id: 'other'
+    revision: 0
+    userText: |-
+      other draft
+      
+    driverText: ''
+    language:
+      language: 'cpp'
+      standard: 'c++17'
+    stdin: 'other input'
+    updatedAt: '2026-10-27T00:16:57.843Z'
+  actual:
+    id: 'other'
+    revision: 0
+    userText: 'incoming source'
+    driverText: ''
+    language:
+      language: 'cpp'
+      standard: 'c++17'
+    stdin: ''
+    updatedAt: '2026-10-27T00:16:57.843Z'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:231:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REV-005: replacing the same draft id still invalidates the old read by object identity
+not ok 9 - REV-005: replacing the same draft id still invalidates the old read by object identity
+  ---
+  duration_ms: 0.7965
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:238:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected "actual" to be reference-equal to "expected":
+    + actual - expected
+    ... Skipped lines
+    
+      {
+        driverText: '',
+        id: 'main',
+        language: {
+          language: 'cpp',
+    ...
+        updatedAt: '2026-10-27T00:16:57.844Z',
+    +   userText: 'obsolete source'
+    -   userText: 'restored replacement\n'
+      }
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    id: 'main'
+    revision: 0
+    userText: |-
+      restored replacement
+      
+    driverText: ''
+    language:
+      language: 'cpp'
+      standard: 'c++17'
+    stdin: ''
+    updatedAt: '2026-10-27T00:16:57.844Z'
+  actual:
+    id: 'main'
+    revision: 0
+    userText: 'obsolete source'
+    driverText: ''
+    language:
+      language: 'cpp'
+      standard: 'c++17'
+    stdin: ''
+    updatedAt: '2026-10-27T00:16:57.844Z'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:245:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REV-005: entering recovery while reading prevents import and saving
+not ok 10 - REV-005: entering recovery while reading prevents import and saving
+  ---
+  duration_ms: 0.7466
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:250:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'must not replace recovery'
+    - 'original source\n'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: |-
+    original source
+    
+  actual: 'must not replace recovery'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:256:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REV-005: import requested during recovery is rejected without changing the draft
+not ok 11 - REV-005: import requested during recovery is rejected without changing the draft
+  ---
+  duration_ms: 0.7212
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\import-order.test.mjs:262:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'must not replace recovery'
+    - 'original source\n'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: |-
+    original source
+    
+  actual: 'must not replace recovery'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/import-order.test.mjs:268:10)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: REV-005: the latest import error preserves source, driver, input and persisted draft
+ok 12 - REV-005: the latest import error preserves source, driver, input and persisted draft
+  ---
+  duration_ms: 1.0364
+  type: 'test'
+  ...
+# Subtest: REV-005: a normal C import updates the editor and is saved with the existing CAS revision
+ok 13 - REV-005: a normal C import updates the editor and is saved with the existing CAS revision
+  ---
+  duration_ms: 0.6724
+  type: 'test'
+  ...
+# Subtest: REV-005: complete-project JSON imports driver/input but retains the local draft identity
+ok 14 - REV-005: complete-project JSON imports driver/input but retains the local draft identity
+  ---
+  duration_ms: 1.3794
+  type: 'test'
+  ...
+# Subtest: prepare synchronously locks run/debug/prepare before its first await; renders and duplicate calls cannot reopen the gate
+not ok 15 - prepare synchronously locks run/debug/prepare before its first await; renders and duplicate calls cannot reopen the gate
+  ---
+  duration_ms: 2.134
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\preparation-gate.test.mjs:105:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    before the candidate fetch resolves: run must stay disabled
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    assertPreparationLocked (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/preparation-gate.test.mjs:94:52)
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/preparation-gate.test.mjs:109:3)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: prepare stays locked through trust and resource checks and unlocks only on successful completion
+not ok 16 - prepare stays locked through trust and resource checks and unlocks only on successful completion
+  ---
+  duration_ms: 0.6828
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\preparation-gate.test.mjs:133:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    while trusted worker validation is pending: run must stay disabled
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    assertPreparationLocked (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/preparation-gate.test.mjs:94:52)
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/preparation-gate.test.mjs:137:3)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: failed preparation clears the old candidate, keeps compile disabled, and permits a later retry
+not ok 17 - failed preparation clears the old candidate, keeps compile disabled, and permits a later retry
+  ---
+  duration_ms: 1.1301
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\preparation-gate.test.mjs:149:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    fetch
+    + actual - expected
+    
+    + {
+    +   capabilities: {
+    +     capabilities: [
+    +       {
+    +         id: 'continue',
+    +         status: 'implemented-unverified'
+    +       },
+    +       {
+    +         id: 'step-into',
+    +         status: 'implemented-unverified'
+    +       },
+    +       {
+    +         id: 'step-over',
+    +         status: 'implemented-unverified'
+    +       },
+    +       {
+    +         id: 'step-out',
+    +         status: 'implemented-unverified'
+    +       },
+    +       {
+    +         id: 'watch-basic',
+    +         status: 'implemented-unverified'
+    +       }
+    +     ]
+    +   },
+    +   lock: {
+    +     toolchainId: 'lock-previous'
+    +   },
+    +   profile: {
+    +     compatibilityId: 'previous'
+    +   },
+    +   resources: []
+    + }
+    - null
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: ~
+  actual:
+    profile:
+      compatibilityId: 'previous'
+    lock:
+      toolchainId: 'lock-previous'
+    resources:
+    capabilities:
+      capabilities:
+        0:
+          id: 'continue'
+          status: 'implemented-unverified'
+        1:
+          id: 'step-into'
+          status: 'implemented-unverified'
+        2:
+          id: 'step-over'
+          status: 'implemented-unverified'
+        3:
+          id: 'step-out'
+          status: 'implemented-unverified'
+        4:
+          id: 'watch-basic'
+          status: 'implemented-unverified'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/preparation-gate.test.mjs:166:52)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: prepare rejects direct entry while draft restoration, recovery, compilation, or a live session owns the gate
+not ok 18 - prepare rejects direct entry while draft restoration, recovery, compilation, or a live session owns the gate
+  ---
+  duration_ms: 0.6168
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\preparation-gate.test.mjs:180:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    unrestored: no resource fetch may start
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/preparation-gate.test.mjs:189:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: compile enforces state guards rather than trusting enabled buttons
+not ok 19 - compile enforces state guards rather than trusting enabled buttons
+  ---
+  duration_ms: 1.8256
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\preparation-gate.test.mjs:194:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    unrestored/run: no execution adapter construction
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/preparation-gate.test.mjs:204:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: terminal sessions allow preparation again without accidentally reusing the old candidate
+not ok 20 - terminal sessions allow preparation again without accidentally reusing the old candidate
+  ---
+  duration_ms: 0.7727
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\preparation-gate.test.mjs:213:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    terminated
+    + actual - expected
+    
+    + {
+    +   capabilities: {
+    +     capabilities: [
+    +       {
+    +         id: 'continue',
+    +         status: 'implemented-unverified'
+    +       },
+    +       {
+    +         id: 'step-into',
+    +         status: 'implemented-unverified'
+    +       },
+    +       {
+    +         id: 'step-over',
+    +         status: 'implemented-unverified'
+    +       },
+    +       {
+    +         id: 'step-out',
+    +         status: 'implemented-unverified'
+    +       },
+    +       {
+    +         id: 'watch-basic',
+    +         status: 'implemented-unverified'
+    +       }
+    +     ]
+    +   },
+    +   lock: {
+    +     toolchainId: 'lock-previous'
+    +   },
+    +   profile: {
+    +     compatibilityId: 'previous'
+    +   },
+    +   resources: []
+    + }
+    - null
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: ~
+  actual:
+    profile:
+      compatibilityId: 'previous'
+    lock:
+      toolchainId: 'lock-previous'
+    resources:
+    capabilities:
+      capabilities:
+        0:
+          id: 'continue'
+          status: 'implemented-unverified'
+        1:
+          id: 'step-into'
+          status: 'implemented-unverified'
+        2:
+          id: 'step-over'
+          status: 'implemented-unverified'
+        3:
+          id: 'step-out'
+          status: 'implemented-unverified'
+        4:
+          id: 'watch-basic'
+          status: 'implemented-unverified'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/preparation-gate.test.mjs:217:12)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: a compilation captures one candidate for adapter construction, compiler request, resource handoff and start
+not ok 21 - a compilation captures one candidate for adapter construction, compiler request, resource handoff and start
+  ---
+  duration_ms: 1.7848
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\preparation-gate.test.mjs:223:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    start must not read the replacement global candidate
+    + actual - expected
+    
+    + 'replacement-run'
+    - 'captured-run'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'captured-run'
+  actual: 'replacement-run'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/preparation-gate.test.mjs:242:12)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: stop cancels pending compilation without starting a stale result and releases the preparation gate
+not ok 22 - stop cancels pending compilation without starting a stale result and releases the preparation gate
+  ---
+  duration_ms: 1.4146
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04\\ui\\checks\\preparation-gate.test.mjs:253:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-04/ui/checks/preparation-gate.test.mjs:256:45)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 3
+# fail 19
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 297.6673

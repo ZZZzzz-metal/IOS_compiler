@@ -1,0 +1,15 @@
+{
+  "codeWidth": 0,
+  "gutterLineHeight": "24px",
+  "highlightMetrics": {
+    "font": "",
+    "padding": "16px 12px"
+  },
+  "panelsDisplay": "block",
+  "scrollWidth": 360,
+  "sourceMetrics": {
+    "font": "",
+    "padding": "16px 12px"
+  },
+  "viewport": 360
+}

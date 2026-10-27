@@ -1,0 +1,6 @@
+Baseline structure and 29 capability records: PASS
+Offline resource readiness: NOT READY (expected for baseline)
+  Bundle is not active
+  No matching compatibility profile
+  No bundled resources
+These checks do not verify a compiler, debugger, iPad device, or installable app.

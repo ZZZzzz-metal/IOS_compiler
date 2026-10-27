@@ -1,0 +1,346 @@
+TAP version 13
+# Subtest: source export preserves exact user bytes while project export round-trips driver and stdin
+ok 1 - source export preserves exact user bytes while project export round-trips driver and stdin
+  ---
+  duration_ms: 4.1744
+  type: 'test'
+  ...
+# Subtest: invalid or unsupported project imports fail without invoking storage
+ok 2 - invalid or unsupported project imports fail without invoking storage
+  ---
+  duration_ms: 0.7603
+  type: 'test'
+  ...
+# Subtest: unavailable local storage returns an explicit failure
+ok 3 - unavailable local storage returns an explicit failure
+  ---
+  duration_ms: 0.32
+  type: 'test'
+  ...
+# Subtest: autosave serializes writes and coalesces typing during a slow save
+ok 4 - autosave serializes writes and coalesces typing during a slow save
+  ---
+  duration_ms: 0.5707
+  type: 'test'
+  ...
+# Subtest: failed in-flight save retains the latest edit for an explicit retry
+ok 5 - failed in-flight save retains the latest edit for an explicit retry
+  ---
+  duration_ms: 0.3049
+  type: 'test'
+  ...
+# Subtest: a failed restore cannot silently create a new draft over unread local data
+ok 6 - a failed restore cannot silently create a new draft over unread local data
+  ---
+  duration_ms: 0.2074
+  type: 'test'
+  ...
+# Subtest: VAL-004: deleting draft requests cannot hide an existing snapshot binding
+ok 7 - VAL-004: deleting draft requests cannot hide an existing snapshot binding
+  ---
+  duration_ms: 1.6039
+  type: 'test'
+  ...
+# Subtest: new dirty-draft requests stay separate from the old snapshot collection
+ok 8 - new dirty-draft requests stay separate from the old snapshot collection
+  ---
+  duration_ms: 0.2298
+  type: 'test'
+  ...
+# Subtest: editable binding status is associated only with both matching source and session
+ok 9 - editable binding status is associated only with both matching source and session
+  ---
+  duration_ms: 0.1638
+  type: 'test'
+  ...
+# Subtest: a snapshot from a different or absent session cannot inherit its bindings
+ok 10 - a snapshot from a different or absent session cannot inherit its bindings
+  ---
+  duration_ms: 0.1381
+  type: 'test'
+  ...
+# Subtest: snapshot remains read-only even while draft source bytes still match
+ok 11 - snapshot remains read-only even while draft source bytes still match
+  ---
+  duration_ms: 0.1278
+  type: 'test'
+  ...
+# Subtest: snapshot preserves pending, invalid reasons, and all relocated actual positions
+ok 12 - snapshot preserves pending, invalid reasons, and all relocated actual positions
+  ---
+  duration_ms: 0.172
+  type: 'test'
+  ...
+# Subtest: user.inc and driver retain separate requested and actual source paths
+ok 13 - user.inc and driver retain separate requested and actual source paths
+  ---
+  duration_ms: 0.1952
+  type: 'test'
+  ...
+# Subtest: replacement bindings and an authoritative empty resync replace the selected snapshot collection
+ok 14 - replacement bindings and an authoritative empty resync replace the selected snapshot collection
+  ---
+  duration_ms: 0.1267
+  type: 'test'
+  ...
+# Subtest: display selection leaves input requests, reasons and actual arrays unchanged
+ok 15 - display selection leaves input requests, reasons and actual arrays unchanged
+  ---
+  duration_ms: 0.2204
+  type: 'test'
+  ...
+# Subtest: highlight escapes source markup and keeps multiline comments inside valid per-line spans
+ok 16 - highlight escapes source markup and keeps multiline comments inside valid per-line spans
+  ---
+  duration_ms: 1.3822
+  type: 'test'
+  ...
+# Subtest: indent at the beginning of an empty first line does not duplicate the newline
+ok 17 - indent at the beginning of an empty first line does not duplicate the newline
+  ---
+  duration_ms: 0.5596
+  type: 'test'
+  ...
+# Subtest: multiline indent and outdent exclude the line after a selected newline
+ok 18 - multiline indent and outdent exclude the line after a selected newline
+  ---
+  duration_ms: 0.1384
+  type: 'test'
+  ...
+# Subtest: REV-005: B finishing before A is the only import delivered to autosave
+ok 19 - REV-005: B finishing before A is the only import delivered to autosave
+  ---
+  duration_ms: 5.0105
+  type: 'test'
+  ...
+# Subtest: REV-005: obsolete A failure neither overwrites B feedback nor clears B selection
+ok 20 - REV-005: obsolete A failure neither overwrites B feedback nor clears B selection
+  ---
+  duration_ms: 1.6886
+  type: 'test'
+  ...
+# Subtest: REV-005: A success/finally cannot clear the file input while B is reading
+ok 21 - REV-005: A success/finally cannot clear the file input while B is reading
+  ---
+  duration_ms: 0.9489
+  type: 'test'
+  ...
+# Subtest: REV-005: a late A error does not replace feedback after B has completed
+ok 22 - REV-005: a late A error does not replace feedback after B has completed
+  ---
+  duration_ms: 1.292
+  type: 'test'
+  ...
+# Subtest: REV-005: a late A read error cannot replace the actual newer B import error
+ok 23 - REV-005: a late A read error cannot replace the actual newer B import error
+  ---
+  duration_ms: 1.1879
+  type: 'test'
+  ...
+# Subtest: REV-005: edits made while the file is reading survive and produce an explanatory prompt
+ok 24 - REV-005: edits made while the file is reading survive and produce an explanatory prompt
+  ---
+  duration_ms: 1.034
+  type: 'test'
+  ...
+# Subtest: REV-005: real source, stdin and language handlers all increment the edit generation
+ok 25 - REV-005: real source, stdin and language handlers all increment the edit generation
+  ---
+  duration_ms: 0.9683
+  type: 'test'
+  ...
+# Subtest: REV-005: switching draft objects during a read never imports into the new draft
+ok 26 - REV-005: switching draft objects during a read never imports into the new draft
+  ---
+  duration_ms: 1.2356
+  type: 'test'
+  ...
+# Subtest: REV-005: replacing the same draft id still invalidates the old read by object identity
+ok 27 - REV-005: replacing the same draft id still invalidates the old read by object identity
+  ---
+  duration_ms: 1.0399
+  type: 'test'
+  ...
+# Subtest: REV-005: entering recovery while reading prevents import and saving
+ok 28 - REV-005: entering recovery while reading prevents import and saving
+  ---
+  duration_ms: 0.8612
+  type: 'test'
+  ...
+# Subtest: REV-005: import requested during recovery is rejected without changing the draft
+ok 29 - REV-005: import requested during recovery is rejected without changing the draft
+  ---
+  duration_ms: 0.6539
+  type: 'test'
+  ...
+# Subtest: REV-005: the latest import error preserves source, driver, input and persisted draft
+ok 30 - REV-005: the latest import error preserves source, driver, input and persisted draft
+  ---
+  duration_ms: 0.714
+  type: 'test'
+  ...
+# Subtest: REV-005: a normal C import updates the editor and is saved with the existing CAS revision
+ok 31 - REV-005: a normal C import updates the editor and is saved with the existing CAS revision
+  ---
+  duration_ms: 0.8587
+  type: 'test'
+  ...
+# Subtest: REV-005: complete-project JSON imports driver/input but retains the local draft identity
+ok 32 - REV-005: complete-project JSON imports driver/input but retains the local draft identity
+  ---
+  duration_ms: 1.4343
+  type: 'test'
+  ...
+# Subtest: prepare synchronously locks run/debug/prepare before its first await; renders and duplicate calls cannot reopen the gate
+ok 33 - prepare synchronously locks run/debug/prepare before its first await; renders and duplicate calls cannot reopen the gate
+  ---
+  duration_ms: 3.402
+  type: 'test'
+  ...
+# Subtest: prepare stays locked through trust and resource checks and unlocks only on successful completion
+ok 34 - prepare stays locked through trust and resource checks and unlocks only on successful completion
+  ---
+  duration_ms: 1.171
+  type: 'test'
+  ...
+# Subtest: failed preparation clears the old candidate, keeps compile disabled, and permits a later retry
+ok 35 - failed preparation clears the old candidate, keeps compile disabled, and permits a later retry
+  ---
+  duration_ms: 4.1489
+  type: 'test'
+  ...
+# Subtest: prepare rejects direct entry while draft restoration, recovery, compilation, or a live session owns the gate
+ok 36 - prepare rejects direct entry while draft restoration, recovery, compilation, or a live session owns the gate
+  ---
+  duration_ms: 6.4061
+  type: 'test'
+  ...
+# Subtest: compile enforces state guards rather than trusting enabled buttons
+ok 37 - compile enforces state guards rather than trusting enabled buttons
+  ---
+  duration_ms: 11.1262
+  type: 'test'
+  ...
+# Subtest: terminal sessions allow preparation again without accidentally reusing the old candidate
+ok 38 - terminal sessions allow preparation again without accidentally reusing the old candidate
+  ---
+  duration_ms: 1.1093
+  type: 'test'
+  ...
+# Subtest: a compilation captures one candidate for adapter construction, compiler request, resource handoff and start
+ok 39 - a compilation captures one candidate for adapter construction, compiler request, resource handoff and start
+  ---
+  duration_ms: 5.551
+  type: 'test'
+  ...
+# Subtest: stop cancels pending compilation without starting a stale result and releases the preparation gate
+ok 40 - stop cancels pending compilation without starting a stale result and releases the preparation gate
+  ---
+  duration_ms: 1.691
+  type: 'test'
+  ...
+# Subtest: UI consumer reads a fresh actual C++ build, bound breakpoint, all steps, caller, containers and output
+ok 41 - UI consumer reads a fresh actual C++ build, bound breakpoint, all steps, caller, containers and output
+  ---
+  duration_ms: 1375.0259
+  type: 'test'
+  ...
+# Subtest: editable driver compiles real separate user.inc and driver.cpp and preserves driver edit identity
+ok 42 - editable driver compiles real separate user.inc and driver.cpp and preserves driver edit identity
+  ---
+  duration_ms: 1369.6889
+  type: 'test'
+  ...
+# Subtest: late start ACK cannot replace an already terminated short program
+ok 43 - late start ACK cannot replace an already terminated short program
+  ---
+  duration_ms: 1.7023
+  type: 'test'
+  ...
+# Subtest: resume immediately invalidates pause; stale stack and ACK do not restore it
+ok 44 - resume immediately invalidates pause; stale stack and ACK do not restore it
+  ---
+  duration_ms: 1.3067
+  type: 'test'
+  ...
+# Subtest: stop dispatches while start ACK remains unresolved
+ok 45 - stop dispatches while start ACK remains unresolved
+  ---
+  duration_ms: 0.2338
+  type: 'test'
+  ...
+# Subtest: foreign sessions and duplicate events cannot overwrite current view
+ok 46 - foreign sessions and duplicate events cannot overwrite current view
+  ---
+  duration_ms: 0.2664
+  type: 'test'
+  ...
+# Subtest: sequence gap clears pause, then resync replays only newer contiguous events
+ok 47 - sequence gap clears pause, then resync replays only newer contiguous events
+  ---
+  duration_ms: 0.7476
+  type: 'test'
+  ...
+# Subtest: resync refuses an older snapshot and keeps inspection disabled
+ok 48 - resync refuses an older snapshot and keeps inspection disabled
+  ---
+  duration_ms: 0.4273
+  type: 'test'
+  ...
+# Subtest: a previous frame variable response cannot replace selected caller data
+ok 49 - a previous frame variable response cannot replace selected caller data
+  ---
+  duration_ms: 1.113
+  type: 'test'
+  ...
+# Subtest: resync buffer overflow requests another authoritative snapshot
+ok 50 - resync buffer overflow requests another authoritative snapshot
+  ---
+  duration_ms: 0.2032
+  type: 'test'
+  ...
+# Subtest: scope pagination advertises unread values and appends each page once
+ok 51 - scope pagination advertises unread values and appends each page once
+  ---
+  duration_ms: 0.5891
+  type: 'test'
+  ...
+# Subtest: a rejected stale query does not display an error on a new pause
+ok 52 - a rejected stale query does not display an error on a new pause
+  ---
+  duration_ms: 0.4631
+  type: 'test'
+  ...
+# Subtest: output history stays bounded and truncation is explicit
+ok 53 - output history stays bounded and truncation is explicit
+  ---
+  duration_ms: 0.2881
+  type: 'test'
+  ...
+# Subtest: breakpoint replacements are serialized and actual bindings come from events
+ok 54 - breakpoint replacements are serialized and actual bindings come from events
+  ---
+  duration_ms: 0.2949
+  type: 'test'
+  ...
+# Subtest: an old rejected ACK cannot invalidate the authoritative resynced pause
+ok 55 - an old rejected ACK cannot invalidate the authoritative resynced pause
+  ---
+  duration_ms: 0.1921
+  type: 'test'
+  ...
+# Subtest: VAL-004 real session keeps deleted-draft breakpoint at i=0/i=1; a new build has no breakpoint and exits 3
+ok 56 - VAL-004 real session keeps deleted-draft breakpoint at i=0/i=1; a new build has no breakpoint and exits 3
+  ---
+  duration_ms: 1186.4726
+  type: 'test'
+  ...
+1..56
+# tests 56
+# suites 0
+# pass 56
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3072.0156

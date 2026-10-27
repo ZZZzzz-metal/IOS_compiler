@@ -1,0 +1,16 @@
+{
+  "format": "ipad-offline-debugger-draft",
+  "schemaVersion": 1,
+  "draft": {
+    "id": "main",
+    "revision": 0,
+    "userText": "#include <stdio.h>\nint main(void) { printf(\"28\\n\"); return 28; }\n",
+    "driverText": "",
+    "language": {
+      "language": "c",
+      "standard": "c11"
+    },
+    "stdin": "sample input\n",
+    "updatedAt": "2026-10-26T23:53:26.361Z"
+  }
+}
