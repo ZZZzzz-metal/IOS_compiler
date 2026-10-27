@@ -1,0 +1,16 @@
+639c8e1afe0e81f8515793a1fc47b2c6ac870319	refs/heads/integration
+ab1cbd67fe37cdf4898bb36830fd0718641542ce	refs/heads/main
+34e46b92249e9b8f8870dcf8cc09c5037fdc318e	refs/heads/module/02-compiler
+21f21357ac728b7ddc3cd9728bf1a6fe2491b9d6	refs/heads/module/03-debugger
+dc65469c85616f175a735b9977cb37f8c6f188c2	refs/heads/module/04-ui
+d12aad000b3474f9ce597d798ecc861b57b4ea4d	refs/heads/module/05-validation
+59c7080ae44b27c45cb0f94639752b3adbb28649	refs/tags/baseline-v0.1.0
+cc2fa6a2e05153a676c570e325caf9f1baceb5df	refs/tags/integration-v0.2.0
+7e92d2330b8e0fef1c75021d7e93522d8e6c6293	refs/tags/integration-v0.2.1
+fff15bee97ed47cf2485b83c4344a020e9e190f7	refs/tags/integration-v0.3.0
+b4973e177ff6b29583fccb666fbba8f0cd1efa89	refs/tags/integration-v0.4.0
+0e7be0bbe2fdd53f59db363a2fa3578f7b0003ae	refs/tags/integration-v0.4.1
+9727c51915325732e8d1b365f5e9bf672c717aaf	refs/tags/integration-v0.4.2
+0c577595ca9647f6ac9cd7a7b60a17c14ae038c9	refs/tags/integration-v0.4.3
+803b97c56a9e99e111f4337b006cfe96592672bd	refs/tags/integration-v0.4.4
+639c8e1afe0e81f8515793a1fc47b2c6ac870319	refs/tags/integration-v0.4.4^{}
