@@ -1,0 +1,665 @@
+{
+  "testedRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "ipadTested": false,
+  "networkDisabled": false,
+  "observations": [
+    {
+      "step": "actual-import-A-saved1",
+      "at": "2026-10-27T04:40:01.129Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 编译资源未校验\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 准备就绪后可以编译。\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\" [active]:\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n    - generic: \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "idle",
+          "resourceReady": "false",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": false,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int value = 31;\n    std::printf(\"person05-A=%d\\n\", value);\n    return 0;\n}\n// Independent person05 REV004005 source A, 2026-10-27\n",
+        "sourceReadOnly": false,
+        "stdin": "",
+        "width": 1265
+      }
+    },
+    {
+      "step": "initial-ready-with-old-verified-candidate",
+      "at": "2026-10-27T04:40:09.774Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 可编译运行或启动调试。\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n    - generic: \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "idle",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": false,
+            "id": "prepare"
+          },
+          {
+            "disabled": false,
+            "id": "run"
+          },
+          {
+            "disabled": false,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int value = 31;\n    std::printf(\"person05-A=%d\\n\", value);\n    return 0;\n}\n// Independent person05 REV004005 source A, 2026-10-27\n",
+        "sourceReadOnly": false,
+        "stdin": "",
+        "width": 1265
+      }
+    },
+    {
+      "step": "reprepare-held-three-entries-locked",
+      "at": "2026-10-27T04:40:10.184Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 正在读取并校验本机编译与调试资源…\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 正在校验本机编译与调试资源…\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n    - generic: \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "preparing",
+          "resourceReady": "false",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": true,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int value = 31;\n    std::printf(\"person05-A=%d\\n\", value);\n    return 0;\n}\n// Independent person05 REV004005 source A, 2026-10-27\n",
+        "sourceReadOnly": false,
+        "stdin": "",
+        "width": 1265
+      }
+    },
+    {
+      "step": "held-after-edit-tabs-and-F5-still-locked",
+      "at": "2026-10-27T04:40:19.302Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 正在读取并校验本机编译与调试资源…\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 正在校验本机编译与调试资源…\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27 // edited while the candidate response is held\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27 // edited while the candidate response is held\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "preparing",
+          "resourceReady": "false",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": true,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int value = 31;\n    std::printf(\"person05-A=%d\\n\", value);\n    return 0;\n}\n// Independent person05 REV004005 source A, 2026-10-27\n// edited while the candidate response is held\n",
+        "sourceReadOnly": false,
+        "stdin": "",
+        "width": 1265
+      }
+    },
+    {
+      "step": "fixture-exactly-one-held-request-after-F5",
+      "at": "2026-10-27T04:40:20.487Z",
+      "url": "http://127.0.0.1:4215/_validation/control?",
+      "dom": "- heading \"5号独立HTTP夹具\" [level=1]\n- paragraph: 仅控制本测试origin的下一次candidate响应；产品脚本、File.text、Worker和草稿不替换。\n- button \"挂起下一次清单请求\"\n- button \"放行原始清单\"\n- button \"以503结束当前请求\"\n- button \"刷新夹具状态\"\n- generic: \"{ \\\"origin\\\": \\\"http://127.0.0.1:4215\\\", \\\"nextCandidateHeld\\\": false, \\\"heldAttempt\\\": 2, \\\"candidateRequests\\\": 2, \\\"events\\\": [ { \\\"at\\\": \\\"2026-10-27T04:40:01.174Z\\\", \\\"kind\\\": \\\"candidate-request\\\", \\\"attempt\\\": 1, \\\"hold\\\": false }, { \\\"at\\\": \\\"2026-10-27T04:40:09.828Z\\\", \\\"kind\\\": \\\"armed\\\" }, { \\\"at\\\": \\\"2026-10-27T04:40:09.913Z\\\", \\\"kind\\\": \\\"candidate-request\\\", \\\"attempt\\\": 2, \\\"hold\\\": true }, { \\\"at\\\": \\\"2026-10-27T04:40:09.914Z\\\", \\\"kind\\\": \\\"candidate-held\\\", \\\"attempt\\\": 2 } ] }\"",
+      "fields": {
+        "bodyData": {},
+        "buttons": [
+          {
+            "id": "prepare"
+          },
+          {
+            "id": "run"
+          },
+          {
+            "id": "debug"
+          },
+          {
+            "id": "stop"
+          }
+        ],
+        "scrollWidth": 1280,
+        "width": 1280
+      }
+    },
+    {
+      "step": "503-recheck-failure-clears-ready-and-blocks-compile",
+      "at": "2026-10-27T04:40:28.823Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 资源未就绪\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 资源校验失败，请重试。\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- alert: 请先运行四号原型准备步骤。\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27 // edited while the candidate response is held\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27 // edited while the candidate response is held\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "idle",
+          "resourceReady": "false",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": false,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int value = 31;\n    std::printf(\"person05-A=%d\\n\", value);\n    return 0;\n}\n// Independent person05 REV004005 source A, 2026-10-27\n// edited while the candidate response is held\n",
+        "sourceReadOnly": false,
+        "stdin": "",
+        "width": 1265
+      }
+    },
+    {
+      "step": "retry-held-unready-cannot-run",
+      "at": "2026-10-27T04:40:30.275Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 正在读取并校验本机编译与调试资源…\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 正在校验本机编译与调试资源…\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27 // edited while the candidate response is held\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27 // edited while the candidate response is held\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "preparing",
+          "resourceReady": "false",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": true,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int value = 31;\n    std::printf(\"person05-A=%d\\n\", value);\n    return 0;\n}\n// Independent person05 REV004005 source A, 2026-10-27\n// edited while the candidate response is held\n",
+        "sourceReadOnly": false,
+        "stdin": "",
+        "width": 1265
+      }
+    },
+    {
+      "step": "retry-success-restores-compile-entries",
+      "at": "2026-10-27T04:40:30.948Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 可编译运行或启动调试。\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27 // edited while the candidate response is held\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27 // edited while the candidate response is held\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "idle",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": false,
+            "id": "prepare"
+          },
+          {
+            "disabled": false,
+            "id": "run"
+          },
+          {
+            "disabled": false,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int value = 31;\n    std::printf(\"person05-A=%d\\n\", value);\n    return 0;\n}\n// Independent person05 REV004005 source A, 2026-10-27\n// edited while the candidate response is held\n",
+        "sourceReadOnly": false,
+        "stdin": "",
+        "width": 1265
+      }
+    },
+    {
+      "step": "real-run-A31-after-retry",
+      "at": "2026-10-27T04:40:39.301Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27 // edited while the candidate response is held\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int value = 31; std::printf(\\\"person05-A=%d\\\\n\\\", value); return 0; } // Independent person05 REV004005 source A, 2026-10-27 // edited while the candidate response is held\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 exit · 返回 0\" [level=2]:\n      - text: 程序输出\n      - generic: exit · 返回 0\n    - generic \"程序输出\": person05-A=31\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": false,
+            "id": "prepare"
+          },
+          {
+            "disabled": false,
+            "id": "run"
+          },
+          {
+            "disabled": false,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int value = 31;\n    std::printf(\"person05-A=%d\\n\", value);\n    return 0;\n}\n// Independent person05 REV004005 source A, 2026-10-27\n// edited while the candidate response is held\n",
+        "sourceReadOnly": false,
+        "stdin": "",
+        "width": 1265
+      }
+    },
+    {
+      "step": "actual-full-import-B-saved3",
+      "at": "2026-10-27T04:41:04.170Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\" [active]:\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 源码已修改 · 请重新编译\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - generic: \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 3\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n      - text: \"45\"\n    - heading \"程序输出 exit · 返回 0\" [level=2]:\n      - text: 程序输出\n      - generic: exit · 返回 0\n    - generic \"程序输出\": person05-A=31\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": false,
+            "id": "prepare"
+          },
+          {
+            "disabled": false,
+            "id": "run"
+          },
+          {
+            "disabled": false,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int received = 0;\n    std::scanf(\"%d\", &received);\n    std::printf(\"person05-B=%d\\n\", received + 2);\n    return 0;\n}\n// Independent person05 latest full import B\n",
+        "sourceReadOnly": false,
+        "stdin": "45\n",
+        "width": 1265
+      }
+    },
+    {
+      "step": "paper-B-real-debug-entry3",
+      "at": "2026-10-27T04:41:05.639Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:3:1\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - text: \"#include <cstdio> int main() {\"\n    - generic: int received = 0;\n    - text: \"std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 3\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n      - text: \"45\"\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:3:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: received\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": true,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": false,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int received = 0;\n    std::scanf(\"%d\", &received);\n    std::printf(\"person05-B=%d\\n\", received + 2);\n    return 0;\n}\n// Independent person05 latest full import B\n",
+        "sourceReadOnly": false,
+        "stdin": "45\n",
+        "width": 1265
+      }
+    },
+    {
+      "step": "paper-B-breakpoint5-received45",
+      "at": "2026-10-27T04:41:05.972Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:5:1\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n    - text: \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received);\"\n    - generic: std::printf(\"person05-B=%d\\n\", received + 2);\n    - text: \"return 0; } // Independent person05 latest full import B\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 3\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n      - text: \"45\"\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:5:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: received\n      - emphasis: int\n      - generic: \"45\"\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": true,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": false,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int received = 0;\n    std::scanf(\"%d\", &received);\n    std::printf(\"person05-B=%d\\n\", received + 2);\n    return 0;\n}\n// Independent person05 latest full import B\n",
+        "sourceReadOnly": false,
+        "stdin": "45\n",
+        "width": 1265
+      }
+    },
+    {
+      "step": "paper-VAL004-old-snapshot-binding5-retained",
+      "at": "2026-10-27T04:41:25.769Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:5:1\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [pressed]\n    - generic: main.cpp\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n      - button \"6\" [disabled]\n      - button \"7\" [disabled]\n      - button \"8\" [disabled]\n      - button \"9\" [disabled]\n    - text: \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received);\"\n    - generic: std::printf(\"person05-B=%d\\n\", received + 2);\n    - text: \"return 0; } // Independent person05 latest full import B\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B\"\n    - button \"在当前行切换断点\" [disabled]: 切换断点\n    - button \"缩进\" [disabled]:\n      - text: 缩进\n    - button \"取消缩进\" [disabled]:\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 4\n    - generic \"断点与编译诊断\" [active]\n    - generic: 当前调试快照的断点（只读）\n    - generic: main.cpp:5:1 · 已绑定 → main.cpp:5:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n      - text: \"45\"\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:5:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: received\n      - emphasis: int\n      - generic: \"45\"\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "snapshot"
+        },
+        "buttons": [
+          {
+            "disabled": true,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": false,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int received = 0;\n    std::scanf(\"%d\", &received);\n    std::printf(\"person05-B=%d\\n\", received + 2);\n    return 0;\n}\n// Independent person05 latest full import B\n",
+        "sourceReadOnly": true,
+        "stdin": "45\n",
+        "width": 1265
+      }
+    },
+    {
+      "step": "paper-B-actual-output47-exit0",
+      "at": "2026-10-27T04:41:27.149Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"返回编辑稿\" [pressed]\n    - generic: main.cpp\n    - generic: 调试快照 · 只读\n    - generic \"行号与断点\":\n      - button \"1\" [disabled]\n      - button \"2\" [disabled]\n      - button \"3\" [disabled]\n      - button \"4\" [disabled]\n      - button \"5\" [disabled]\n      - button \"6\" [disabled]\n      - button \"7\" [disabled]\n      - button \"8\" [disabled]\n      - button \"9\" [disabled]\n    - generic: \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B\"\n    - button \"在当前行切换断点\" [disabled]: 切换断点\n    - button \"缩进\" [disabled]:\n      - text: 缩进\n    - button \"取消缩进\" [disabled]:\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 4\n    - generic \"断点与编译诊断\"\n    - generic: 当前调试快照的断点（只读）\n    - generic: main.cpp:5:1 · 已绑定 → main.cpp:5:1\n    - generic: 暂无编译诊断\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n      - text: \"45\"\n    - heading \"程序输出 exit · 返回 0\" [level=2]:\n      - text: 程序输出\n      - generic: exit · 返回 0\n    - generic \"程序输出\": person05-B=47\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "snapshot"
+        },
+        "buttons": [
+          {
+            "disabled": false,
+            "id": "prepare"
+          },
+          {
+            "disabled": false,
+            "id": "run"
+          },
+          {
+            "disabled": false,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int received = 0;\n    std::scanf(\"%d\", &received);\n    std::printf(\"person05-B=%d\\n\", received + 2);\n    return 0;\n}\n// Independent person05 latest full import B\n",
+        "sourceReadOnly": true,
+        "stdin": "45\n",
+        "width": 1265
+      }
+    },
+    {
+      "step": "page-reopen-B-edited-source-stdin45-revision4",
+      "at": "2026-10-27T04:41:27.268Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 编译资源未校验\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 准备就绪后可以编译。\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n    - generic: \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B // edited B while paused; keep original snapshot\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B // edited B while paused; keep original snapshot\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 4\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n      - text: \"45\"\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "idle",
+          "resourceReady": "false",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": false,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int received = 0;\n    std::scanf(\"%d\", &received);\n    std::printf(\"person05-B=%d\\n\", received + 2);\n    return 0;\n}\n// Independent person05 latest full import B\n// edited B while paused; keep original snapshot\n",
+        "sourceReadOnly": false,
+        "stdin": "45\n",
+        "width": 1265
+      }
+    },
+    {
+      "step": "paper-layout375-code-no-overflow",
+      "at": "2026-10-27T04:42:07.265Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 编译资源未校验\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 准备就绪后可以编译。\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n    - generic: \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B // edited B while paused; keep original snapshot\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B // edited B while paused; keep original snapshot\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 4\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n      - text: \"45\"\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "idle",
+          "resourceReady": "false",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": false,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int received = 0;\n    std::scanf(\"%d\", &received);\n    std::printf(\"person05-B=%d\\n\", received + 2);\n    return 0;\n}\n// Independent person05 latest full import B\n// edited B while paused; keep original snapshot\n",
+        "sourceReadOnly": false,
+        "stdin": "45\n",
+        "width": 1265
+      }
+    },
+    {
+      "step": "desktop-viewport-restored-narrow-not-validated",
+      "at": "2026-10-27T04:42:43.372Z",
+      "url": "http://127.0.0.1:4215/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 编译资源未校验\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 准备就绪后可以编译。\n  - generic: F5\n  - text: 继续\n  - generic: F10\n  - text: 跳过\n  - generic: F11\n  - text: 进入\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n    - generic: \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B // edited B while paused; keep original snapshot\"\n    - textbox \"源代码\": \"#include <cstdio> int main() { int received = 0; std::scanf(\\\"%d\\\", &received); std::printf(\\\"person05-B=%d\\\\n\\\", received + 2); return 0; } // Independent person05 latest full import B // edited B while paused; keep original snapshot\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 4\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n      - text: \"45\"\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "idle",
+          "resourceReady": "false",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "buttons": [
+          {
+            "disabled": false,
+            "id": "prepare"
+          },
+          {
+            "disabled": true,
+            "id": "run"
+          },
+          {
+            "disabled": true,
+            "id": "debug"
+          },
+          {
+            "disabled": true,
+            "id": "stop"
+          }
+        ],
+        "language": "cpp",
+        "scrollWidth": 1265,
+        "source": "#include <cstdio>\nint main() {\n    int received = 0;\n    std::scanf(\"%d\", &received);\n    std::printf(\"person05-B=%d\\n\", received + 2);\n    return 0;\n}\n// Independent person05 latest full import B\n// edited B while paused; keep original snapshot\n",
+        "sourceReadOnly": false,
+        "stdin": "45\n",
+        "width": 1265
+      }
+    },
+    {
+      "step": "fixture-final-exact-three-candidate-requests",
+      "at": "2026-10-27T04:42:43.472Z",
+      "url": "http://127.0.0.1:4215/_validation/control?",
+      "dom": "- heading \"5号独立HTTP夹具\" [level=1]\n- paragraph: 仅控制本测试origin的下一次candidate响应；产品脚本、File.text、Worker和草稿不替换。\n- button \"挂起下一次清单请求\"\n- button \"放行原始清单\"\n- button \"以503结束当前请求\"\n- button \"刷新夹具状态\"\n- generic: \"{ \\\"origin\\\": \\\"http://127.0.0.1:4215\\\", \\\"nextCandidateHeld\\\": false, \\\"heldAttempt\\\": null, \\\"candidateRequests\\\": 3, \\\"events\\\": [ { \\\"at\\\": \\\"2026-10-27T04:40:01.174Z\\\", \\\"kind\\\": \\\"candidate-request\\\", \\\"attempt\\\": 1, \\\"hold\\\": false }, { \\\"at\\\": \\\"2026-10-27T04:40:09.828Z\\\", \\\"kind\\\": \\\"armed\\\" }, { \\\"at\\\": \\\"2026-10-27T04:40:09.913Z\\\", \\\"kind\\\": \\\"candidate-request\\\", \\\"attempt\\\": 2, \\\"hold\\\": true }, { \\\"at\\\": \\\"2026-10-27T04:40:09.914Z\\\", \\\"kind\\\": \\\"candidate-held\\\", \\\"attempt\\\": 2 }, { \\\"at\\\": \\\"2026-10-27T04:40:28.736Z\\\", \\\"kind\\\": \\\"released-503\\\", \\\"attempt\\\": 2 }, { \\\"at\\\": \\\"2026-10-27T04:40:29.933Z\\\", \\\"kind\\\": \\\"armed\\\" }, { \\\"at\\\": \\\"2026-10-27T04:40:30.007Z\\\", \\\"kind\\\": \\\"candidate-request\\\", \\\"attempt\\\": 3, \\\"hold\\\": true }, { \\\"at\\\": \\\"2026-10-27T04:40:30.008Z\\\", \\\"kind\\\": \\\"candidate-held\\\", \\\"attempt\\\": 3 }, { \\\"at\\\": \\\"2026-10-27T04:40:30.312Z\\\", \\\"kind\\\": \\\"released-original\\\", \\\"attempt\\\": 3 } ] }\"",
+      "fields": {
+        "bodyData": {},
+        "buttons": [
+          {
+            "id": "prepare"
+          },
+          {
+            "id": "run"
+          },
+          {
+            "id": "debug"
+          },
+          {
+            "id": "stop"
+          }
+        ],
+        "scrollWidth": 1265,
+        "width": 1265
+      }
+    }
+  ]
+}

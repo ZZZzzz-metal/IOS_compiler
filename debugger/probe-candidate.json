@@ -1,0 +1,170 @@
+{
+  "profile": {
+    "compatibilityId": "debugger-prototype-2ec582229fe2b1d3",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:2ec582229fe2b1d3bc2c48f986cedd870d76e9f70cba63b96963c8e17c7439be",
+    "status": "candidate",
+    "evidence": [
+      "Desktop candidate; only module runtime/debugger resources are verified here. Full offline bundle and iPad remain unverified."
+    ]
+  },
+  "resources": [
+    {
+      "id": "debugger/src/wasm-runtime.mjs",
+      "relativePath": "debugger/src/wasm-runtime.mjs",
+      "sha256": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f",
+      "byteLength": 49136,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "runtime"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/wasm-runtime.mjs"
+    },
+    {
+      "id": "debugger/src/dwarf.mjs",
+      "relativePath": "debugger/src/dwarf.mjs",
+      "sha256": "sha256:a90c5783958fb814fa7dc8bd074166fe490d50ba2ecf6c9e82b79c5c3e58eb95",
+      "byteLength": 25566,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/dwarf.mjs"
+    },
+    {
+      "id": "debugger/src/variables.mjs",
+      "relativePath": "debugger/src/variables.mjs",
+      "sha256": "sha256:7a678889ab7b8f21dcc39f83c51771b9fff8df7103bec92275937c8ff40f996c",
+      "byteLength": 43287,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/variables.mjs"
+    },
+    {
+      "id": "debugger/src/integrity.mjs",
+      "relativePath": "debugger/src/integrity.mjs",
+      "sha256": "sha256:6c705f346157d4ed07d1e7797474ad90cf653e7431b27bcf32ee4b282f3eeb07",
+      "byteLength": 7031,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/integrity.mjs"
+    },
+    {
+      "id": "debugger/src/debugger-adapter.mjs",
+      "relativePath": "debugger/src/debugger-adapter.mjs",
+      "sha256": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c",
+      "byteLength": 21034,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/debugger-adapter.mjs"
+    },
+    {
+      "id": "debugger/src/worker-adapter.mjs",
+      "relativePath": "debugger/src/worker-adapter.mjs",
+      "sha256": "sha256:1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6",
+      "byteLength": 8478,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/worker-adapter.mjs"
+    },
+    {
+      "id": "debugger/src/worker-bridge.mjs",
+      "relativePath": "debugger/src/worker-bridge.mjs",
+      "sha256": "sha256:b1271d7c34651296ef9011c69493f6c0e0f62d97db71d8f3fe27c9561e54eda1",
+      "byteLength": 1673,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/worker-bridge.mjs"
+    },
+    {
+      "id": "debugger/src/debugger-worker.mjs",
+      "relativePath": "debugger/src/debugger-worker.mjs",
+      "sha256": "sha256:4b867a736ada849efddffc1c074739eed039d5dd4f222ab8d99c24f2fe9e559d",
+      "byteLength": 600,
+      "mediaType": "text/javascript",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/src/debugger-worker.mjs"
+    },
+    {
+      "id": "debugger/LICENSE",
+      "relativePath": "debugger/LICENSE",
+      "sha256": "sha256:810a7126a235c23fe56bd32f0d78617232260ee5d03fd1cb32462ac679cd8cf5",
+      "byteLength": 600,
+      "mediaType": "text/plain",
+      "version": "0.1.0-prototype.1",
+      "roles": [
+        "debugger"
+      ],
+      "licenseFile": "debugger/LICENSE",
+      "sourceURL": "local-source:module/03-debugger/debugger/LICENSE"
+    }
+  ]
+}

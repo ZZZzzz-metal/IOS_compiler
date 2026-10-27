@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-27T14:53:51.753Z",
+  "completedAt": "2026-10-27T14:54:18.406Z",
+  "revision": "dc65469c85616f175a735b9977cb37f8c6f188c2",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "commands": [
+    {
+      "name": "baseline",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "scripts/check-baseline.mjs"
+      ],
+      "equivalentNpmScript": "npm run check",
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 130,
+      "hashes": {
+        "stdout": {
+          "byteLength": 277,
+          "sha256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48"
+        },
+        "stderr": {
+          "byteLength": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "contracts",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "contracts/checks/*.test.mjs"
+      ],
+      "equivalentNpmScript": "npm test",
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 205,
+      "hashes": {
+        "stdout": {
+          "byteLength": 1045,
+          "sha256": "e29c051e01a28c845769465171cbe269d20b606bbe1ad6b4284a50685e28af3e"
+        },
+        "stderr": {
+          "byteLength": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "combined",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "contracts/checks/*.test.mjs",
+        "compiler/checks/*.test.mjs",
+        "debugger/checks/*.test.mjs",
+        "ui/checks/*.test.mjs",
+        "storage/checks/*.test.mjs",
+        "app/integration/checks/*.test.mjs",
+        "app/offline/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 11704,
+      "hashes": {
+        "stdout": {
+          "byteLength": 20135,
+          "sha256": "e0158b491559ed0cb17047c0041e9e7e6ecd7b736e35586c0af7168dd459795c"
+        },
+        "stderr": {
+          "byteLength": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "acceptance",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/run-validation.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 9445,
+      "hashes": {
+        "stdout": {
+          "byteLength": 1610,
+          "sha256": "d4dc6b6e02066ebe6f530b4d9ac7edd61476fa75e681ee70c07b7aa226c4d89d"
+        },
+        "stderr": {
+          "byteLength": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "regression-shadow",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/reproduce.mjs",
+        "shadow"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 779,
+      "hashes": {
+        "stdout": {
+          "byteLength": 610,
+          "sha256": "6233516b09436d2569169c7083caad392d68ea82ad927087ef28528975c2f915"
+        },
+        "stderr": {
+          "byteLength": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "regression-loop-header",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/reproduce.mjs",
+        "loop-header"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 844,
+      "hashes": {
+        "stdout": {
+          "byteLength": 1828,
+          "sha256": "137a2923575539401592fab9d105a85466b477a4f16fdd82a3e261c31dc19f0d"
+        },
+        "stderr": {
+          "byteLength": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "initializer",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/initializer-lifetime.mjs"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 2909,
+      "hashes": {
+        "stdout": {
+          "byteLength": 314,
+          "sha256": "825bc1ea034a3d8771c9dc645f3200213317c29fea010aaa6673577312776c75"
+        },
+        "stderr": {
+          "byteLength": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "name": "ui-independent",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/ui-concurrency-independent.mjs",
+        "--ref",
+        "dc65469c85616f175a735b9977cb37f8c6f188c2",
+        "--out",
+        "tests/evidence/integrated-person01-publication-v044-2026-10-27/independent/run-01"
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "durationMs": 594,
+      "hashes": {
+        "stdout": {
+          "byteLength": 306,
+          "sha256": "39960a7bb977f590c7b07bb0cf3e131f2e6fa0fa4922d44b47d33a45cc53101d"
+        },
+        "stderr": {
+          "byteLength": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  ],
+  "allCommandsPassed": true,
+  "boundary": "Desktop Node tests include real freshly compiled Wasm and direct/Node Worker execution. Independent UI 14 scenarios use controlled DOM/File/network/compiler/debugger/storage transports and real parsing/autosave/editor/source modules. No browser, physical iPad, offline cold start or system storage durability result.",
+  "temporaryEvidenceDirectory": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\tests\\evidence\\integrated-person01-publication-v044-2026-10-27",
+  "archivedRawDirectory": "validation-raw"
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "ARCHIVES.md",
+    "byteLength": 2174,
+    "sha256": "6cd14e65adc139c4dae9ce684c3f6ad7f11fc07571df3be801aa23220c6ed62f"
+  },
+  {
+    "file": "archive-commands.json",
+    "byteLength": 448,
+    "sha256": "94bbcb7f453bab297debd313336f5b42e87fb4eb1f769aab3eb9b53ed52c1a3f"
+  },
+  {
+    "file": "browser-cold-entry.txt",
+    "byteLength": 693,
+    "sha256": "bd9196daff46bce0acb672913c68afff0faa4b79332f6a5d176bdda12341f1d9"
+  },
+  {
+    "file": "browser-completed.txt",
+    "byteLength": 368,
+    "sha256": "feb1c3c8515b5794535ac0cb50e9177bd4d9da47cca635e9dfda7d54013c1da7"
+  },
+  {
+    "file": "browser-draft-reopened.txt",
+    "byteLength": 368,
+    "sha256": "4b66d4bae30acba0829c58f74e134d1e0a756e235c664618dd502bcb920fca12"
+  },
+  {
+    "file": "browser-fresh-source.cpp",
+    "byteLength": 278,
+    "sha256": "e94b501d182da38e3bd2a9a361a993b3907dacd60f7826c97996c8d00541be6f"
+  },
+  {
+    "file": "browser-native-run.png",
+    "byteLength": 65077,
+    "sha256": "282c27b883664b8ef8fdf52dc7adce75f3d6fe8c0b2e2f79fbe71b3b2c7538a4"
+  },
+  {
+    "file": "browser-native-run.txt",
+    "byteLength": 1579,
+    "sha256": "11014451e37e281bf14ac6af5ef00b983f0c13d36dd9e50b62b68a162ab7d0ae"
+  },
+  {
+    "file": "browser-paused.txt",
+    "byteLength": 529,
+    "sha256": "7b83326ea60d1b5b0a33d70f3a5202682ba14f148dc30ff7637b23b41076a061"
+  },
+  {
+    "file": "browser-prepared.txt",
+    "byteLength": 350,
+    "sha256": "d9a11fba6d5bc8865b5218cd431e0cb1aecc5877800438911c8eeff4074cdb45"
+  },
+  {
+    "file": "browser-summary.json",
+    "byteLength": 1540,
+    "sha256": "dc189c65822116df27bd6bf1bed3505094b57e49a192baefecaad3cc37ae40d5"
+  },
+  {
+    "file": "browser-watch-observations.json",
+    "byteLength": 735,
+    "sha256": "da1a01d76382a607e3ba59de565d90ed819ac7d382b57065c298c28adcc9ae0a"
+  },
+  {
+    "file": "browser-watch.png",
+    "byteLength": 30180,
+    "sha256": "4f4b80429822f2f8a19a1a933058da86b4621b04e470bccf960b445eddb7911c"
+  },
+  {
+    "file": "build.json",
+    "byteLength": 1008,
+    "sha256": "4468e255dd4b5bc8b6b1a0687247e37ad1ff08af916275c0d084c352bc8d6886"
+  },
+  {
+    "file": "bundle.json",
+    "byteLength": 11304,
+    "sha256": "2c9e7a0b33e1cb478c45c5f78075694aa7a18ce3d226c7fa50bfd10567c707d0"
+  },
+  {
+    "file": "final-npm-check.txt",
+    "byteLength": 359,
+    "sha256": "3d8221145197f4b17f3b8059a8c9c89db8f6bbf75c3ed56df4e3d320d48db917"
+  },
+  {
+    "file": "final-npm-test.txt",
+    "byteLength": 1146,
+    "sha256": "8880b555e711f1018e22c94c1200156259f1fdb5c15bc75a5c32ae8db4617ca4"
+  },
+  {
+    "file": "git-publication-audit.json",
+    "byteLength": 24799,
+    "sha256": "37a5f440cbd330b944fd546a211cf753d4411b935382b2cf40fe5e7ca0e96d99"
+  },
+  {
+    "file": "git-publication-audit.md",
+    "byteLength": 1857,
+    "sha256": "28efd88382cfcdb062f869ad369d40c84ca67832099c5eceb9239a749f83ae6a"
+  },
+  {
+    "file": "git-publication-audit.mjs",
+    "byteLength": 10504,
+    "sha256": "540b20a79b63031f08112534bead58ed2ccc63dc76911a2c19b2e6d8aa8f6c6c"
+  },
+  {
+    "file": "git-publication-files.json",
+    "byteLength": 167951,
+    "sha256": "3e67ca0e99d6ca40128afadb8f5666c95f3197777af4fbe73f06637703168bad"
+  },
+  {
+    "file": "lan-current-check.json",
+    "byteLength": 678,
+    "sha256": "028f567fde92479cd03246db63016454830cfb543fa3cc211737e2f4bb90649d"
+  },
+  {
+    "file": "package-archives.py",
+    "byteLength": 15414,
+    "sha256": "7fdd512d3a4b7f8021abaa350f08e4b6b2f35922f7b4c7a9fd8ad7356e4385dd"
+  },
+  {
+    "file": "package.json",
+    "byteLength": 3300,
+    "sha256": "a18404f073ef2b6d162bbcbf801c3a491aef56cd4d3d281882184ae944d9f8f2"
+  },
+  {
+    "file": "previous-archives.json",
+    "byteLength": 1924,
+    "sha256": "ee97b7190fe214fb6d259a620ed670f25865546dab6db6f6fd7c56d513860e67"
+  },
+  {
+    "file": "seal-evidence.mjs",
+    "byteLength": 3692,
+    "sha256": "5995038e05572c9208d9fe123eb5940d7c2d0ae9319827b32978f68ef09a76be"
+  },
+  {
+    "file": "source-inputs.json",
+    "byteLength": 8145,
+    "sha256": "ad646a13f7f53f40b72fa405c97907fb2d1e57f2ae7738b89858ca779b99fa5f"
+  }
+]

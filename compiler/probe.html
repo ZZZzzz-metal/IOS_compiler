@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2 号离线编译器实验</title>
+<style>
+body{max-width:960px;margin:24px auto;padding:0 16px;font:16px/1.6 system-ui,sans-serif;color:#172130;background:#f7f8fa}h1{font-size:25px}textarea{width:100%;box-sizing:border-box;font:14px/1.55 ui-monospace,monospace;padding:12px;border:1px solid #bbc4cf;border-radius:4px;background:white}#source{min-height:300px}button,select{font:inherit;padding:7px 12px;margin:5px 5px 5px 0}button{cursor:pointer}button:disabled{cursor:default}pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:14px;background:#e9edf3}label{display:block;margin-top:15px}.note{color:#4d5c70}
+</style>
+<h1>2 号离线编译器实验</h1>
+<p class="note">本页验证本机编译与输入输出，产物交给 3 号对接源码调试。iPad 断点、单步和变量查看仍待验证。</p>
+<button id="prepare">准备并校验离线编译资源</button>
+<p id="resource-status" role="status">首次使用需要准备完整资源。</p>
+<label for="language">语言</label>
+<select id="language"><option value="cpp">C++17</option><option value="c">C11</option></select>
+<label for="source">源码（需包含 main）</label>
+<textarea id="source" spellcheck="false">#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+int main() {
+    int n = 0;
+    std::cin &gt;&gt; n;
+    std::vector&lt;int&gt; values = {n, 7, 2};
+    std::sort(values.begin(), values.end());
+    for (int value : values) std::cout &lt;&lt; value &lt;&lt; ' ';
+    std::cout &lt;&lt; '\n';
+}
+</textarea>
+<label for="stdin">输入输出检查使用的 stdin（运行前完整输入）</label>
+<textarea id="stdin" rows="2" spellcheck="false">3
+</textarea>
+<p><button id="compile" disabled>编译</button><button id="smoke" disabled>编译并检查输入输出</button><button id="cancel" disabled>取消</button><button id="download" disabled>导出 Wasm 与证据</button></p>
+<p id="status" role="status">等待资源准备。</p>
+<pre id="result" aria-label="编译结果"></pre>
+<script type="module" src="./probe-page.mjs"></script>
+</html>

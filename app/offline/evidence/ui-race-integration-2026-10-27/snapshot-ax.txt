@@ -1,0 +1,30 @@
+Browser tab: 2, Title: "算法工作台 · 四号验证原型", URL: "http://127.0.0.1:4193/releases/ipad-web-probe-1934f34d48ba1a8c94eadd93/ui/probe.html".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 184-196, 198
++		198 text 已暂停 · main.cpp:5:1
+~			39 checkbox 返回编辑稿, Value: 1, ID: snapshot-toggle
++			199 text main.cpp
++			200 text 调试快照 · 只读
++				201 button (disabled) 1, Help: 第 1 行：切换断点
++				202 button (disabled) 2, Help: 第 2 行：切换断点
++				203 button (disabled) 3, Help: 第 3 行：切换断点
++				204 button (disabled) 4, Help: 第 4 行：切换断点
++				205 button (disabled) 5, Help: 第 5 行：切换断点
++				206 button (disabled) 6, Help: 第 6 行：切换断点
++				207 button (disabled) 7, Help: 第 7 行：切换断点
++				208 button (disabled) 8, Help: 第 8 行：切换断点
++				209 button (disabled) 9, Help: 第 9 行：切换断点
+~			66 text entry area Description: 源代码, ID: source, Value: #include <cstdio>
+int main() {
+  int value = 31;
+  value += 12;
+  std::printf("UI-043=%d\n", value);
+  return 0;
+}
+// edit during resource check
+
+~			67 button (disabled) Description: 在当前行切换断点, Help: 在当前行设置或移除断点, ID: breakpoint
+~			68 button (disabled) 缩进, Help: 缩进（Tab）, ID: indent
+~			69 button (disabled) 取消缩进, Help: 取消缩进（Shift+Tab）, ID: outdent
++					210 text 尚无输出
+The focused UI element is 39 checkbox 返回编辑稿, Value: 1, ID: snapshot-toggle

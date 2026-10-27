@@ -1,0 +1,736 @@
+{
+  "schemaVersion": 1,
+  "evidenceStatus": "expectations-only",
+  "lineBase": 1,
+  "columnUnit": "utf-16",
+  "breakpointSemantics": "Before executing the marked source statement; initialization targets on that line must not be asserted initialized.",
+  "cases": [
+    {
+      "id": "c-core",
+      "source": "c-core.c",
+      "language": "c",
+      "standard": "c11",
+      "stdin": "2 5 8\n",
+      "expected": {
+        "compileStatus": "compiled",
+        "stdout": "sum=15 adjusted=18 triangle=6 middle=5\n",
+        "stderr": "",
+        "exitCode": 0
+      },
+      "checkpoints": [
+        {
+          "name": "loop-body",
+          "line": 27,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "i": "0",
+              "sum": "0",
+              "*pointer": "5"
+            },
+            "visits": [
+              {
+                "i": "0",
+                "sum": "0"
+              },
+              {
+                "i": "1",
+                "sum": "2"
+              },
+              {
+                "i": "2",
+                "sum": "7"
+              }
+            ],
+            "stackTop": "main"
+          }
+        },
+        {
+          "name": "triangle-call",
+          "line": 29,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "sum": "15",
+              "values[0]": "2",
+              "values[1]": "5",
+              "values[2]": "8",
+              "*pointer": "5"
+            },
+            "stackTop": "main"
+          },
+          "stepExpectations": {
+            "stepInto": {
+              "function": "triangular",
+              "variables": {
+                "depth": "3"
+              }
+            },
+            "stepOver": {
+              "checkpoint": "add-call",
+              "variables": {
+                "triangle": "6"
+              }
+            }
+          }
+        },
+        {
+          "name": "recurse-call",
+          "line": 8,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "depth": "3",
+              "local": "3"
+            },
+            "visits": [
+              {
+                "depth": "3",
+                "local": "3"
+              },
+              {
+                "depth": "2",
+                "local": "2"
+              },
+              {
+                "depth": "1",
+                "local": "1"
+              }
+            ],
+            "stackTop": "triangular",
+            "stackContains": [
+              "main"
+            ]
+          }
+        },
+        {
+          "name": "recurse-return",
+          "line": 10,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "depth": "1",
+              "local": "1",
+              "tail": "0",
+              "result": "1"
+            },
+            "visits": [
+              {
+                "depth": "1",
+                "tail": "0",
+                "result": "1"
+              },
+              {
+                "depth": "2",
+                "tail": "1",
+                "result": "3"
+              },
+              {
+                "depth": "3",
+                "tail": "3",
+                "result": "6"
+              }
+            ],
+            "stackTop": "triangular"
+          }
+        },
+        {
+          "name": "add-call",
+          "line": 30,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "sum": "15",
+              "triangle": "6",
+              "*pointer": "5"
+            },
+            "stackTop": "main"
+          },
+          "stepExpectations": {
+            "stepInto": {
+              "function": "add_bias",
+              "variables": {
+                "value": "15"
+              }
+            },
+            "stepOver": {
+              "checkpoint": "ready",
+              "variables": {
+                "adjusted": "18"
+              }
+            }
+          }
+        },
+        {
+          "name": "add-return",
+          "line": 16,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "value": "15",
+              "bias": "3",
+              "result": "18"
+            },
+            "stackTop": "add_bias",
+            "stackContains": [
+              "main"
+            ]
+          },
+          "stepExpectations": {
+            "stepOut": {
+              "callerFunction": "main",
+              "checkpoint": "ready",
+              "variables": {
+                "adjusted": "18"
+              }
+            }
+          }
+        },
+        {
+          "name": "ready",
+          "line": 31,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "sum": "15",
+              "triangle": "6",
+              "adjusted": "18",
+              "*pointer": "5"
+            },
+            "containers": {
+              "values": {
+                "elements": [
+                  "2",
+                  "5",
+                  "8"
+                ]
+              }
+            },
+            "stackTop": "main"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cpp-core",
+      "source": "cpp-core.cpp",
+      "language": "cpp",
+      "standard": "c++17",
+      "stdin": "4\n",
+      "expected": {
+        "compileStatus": "compiled",
+        "stdout": "core=105 input=8 pointer=6 vector=7,1,8 strings=0,3,48,10 outer=5\n",
+        "stderr": "",
+        "exitCode": 0
+      },
+      "checkpoints": [
+        {
+          "name": "step-call",
+          "line": 35,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "seed": "4",
+              "shadow": "5",
+              "*pointer": "6"
+            },
+            "containers": {
+              "raw": {
+                "elements": [
+                  "4",
+                  "6",
+                  "9"
+                ]
+              },
+              "values": {
+                "elements": [
+                  "7",
+                  "1",
+                  "8"
+                ]
+              },
+              "empty": {
+                "text": ""
+              },
+              "shortText": {
+                "text": "pad"
+              },
+              "longText": {
+                "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+              },
+              "utf8": {
+                "text": "中文😀",
+                "utf8Bytes": 10
+              }
+            },
+            "stackTop": "main"
+          },
+          "stepExpectations": {
+            "stepInto": {
+              "function": "twice",
+              "variables": {
+                "value": "4"
+              }
+            },
+            "stepOver": {
+              "checkpoint": "main-recurse-call",
+              "variables": {
+                "doubled": "8"
+              }
+            }
+          }
+        },
+        {
+          "name": "twice-return",
+          "line": 7,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "value": "4",
+              "doubled": "8"
+            },
+            "visits": [
+              {
+                "value": "4",
+                "doubled": "8"
+              },
+              {
+                "value": "36",
+                "doubled": "72"
+              }
+            ],
+            "stackTop": "twice",
+            "stackContains": [
+              "main"
+            ]
+          },
+          "stepExpectations": {
+            "stepOut": {
+              "callerFunction": "main",
+              "checkpoint": "main-recurse-call",
+              "variables": {
+                "doubled": "8"
+              }
+            }
+          }
+        },
+        {
+          "name": "main-recurse-call",
+          "line": 36,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "doubled": "8",
+              "seed": "4"
+            },
+            "stackTop": "main"
+          },
+          "stepExpectations": {
+            "stepInto": {
+              "function": "recurse",
+              "variables": {
+                "depth": "2"
+              }
+            },
+            "stepOver": {
+              "sourceLinePurpose": "initialization of loopTotal after the call",
+              "variables": {
+                "recurrence": "33"
+              }
+            }
+          }
+        },
+        {
+          "name": "recurse-call",
+          "line": 15,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "depth": "2",
+              "token": "12"
+            },
+            "visits": [
+              {
+                "depth": "2",
+                "token": "12"
+              },
+              {
+                "depth": "1",
+                "token": "11"
+              }
+            ],
+            "stackTop": "recurse",
+            "stackContains": [
+              "main"
+            ],
+            "recursiveFrameSelection": {
+              "whenTopDepth": "1",
+              "callerDepth": "2",
+              "callerToken": "12",
+              "distinctFrameIds": true
+            }
+          }
+        },
+        {
+          "name": "recurse-return",
+          "line": 16,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "depth": "1",
+              "token": "11",
+              "nested": "10"
+            },
+            "visits": [
+              {
+                "depth": "1",
+                "token": "11",
+                "nested": "10"
+              },
+              {
+                "depth": "2",
+                "token": "12",
+                "nested": "21"
+              }
+            ],
+            "stackTop": "recurse"
+          }
+        },
+        {
+          "name": "loop-body",
+          "line": 39,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "i": "0",
+              "loopTotal": "0"
+            },
+            "visits": [
+              {
+                "i": "0",
+                "loopTotal": "0"
+              },
+              {
+                "i": "1",
+                "loopTotal": "4"
+              },
+              {
+                "i": "2",
+                "loopTotal": "10"
+              }
+            ],
+            "stackTop": "main"
+          }
+        },
+        {
+          "name": "shadow-inner",
+          "line": 44,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "shadow": "17",
+              "innerSeen": "36",
+              "loopTotal": "19"
+            },
+            "stackTop": "main",
+            "lexicalScope": "inner block; inner shadow hides outer shadow=5"
+          }
+        },
+        {
+          "name": "shadow-outer",
+          "line": 46,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "shadow": "5",
+              "loopTotal": "36",
+              "recurrence": "33"
+            },
+            "unavailableExpressions": [
+              "innerSeen"
+            ],
+            "stackTop": "main",
+            "lexicalScope": "outside inner block; outer shadow is visible again"
+          }
+        },
+        {
+          "name": "ready",
+          "line": 48,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "seed": "4",
+              "doubled": "8",
+              "recurrence": "33",
+              "marker": "72",
+              "finalValue": "105",
+              "loopTotal": "36",
+              "shadow": "5",
+              "*pointer": "6"
+            },
+            "containers": {
+              "raw": {
+                "elements": [
+                  "4",
+                  "6",
+                  "9"
+                ]
+              },
+              "values": {
+                "elements": [
+                  "7",
+                  "1",
+                  "8"
+                ]
+              },
+              "empty": {
+                "text": ""
+              },
+              "shortText": {
+                "text": "pad"
+              },
+              "longText": {
+                "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+              },
+              "utf8": {
+                "text": "中文😀",
+                "utf8Bytes": 10
+              }
+            },
+            "stackTop": "main"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cpp-stl",
+      "source": "cpp-stl.cpp",
+      "language": "cpp",
+      "standard": "c++17",
+      "stdin": "",
+      "expected": {
+        "compileStatus": "compiled",
+        "stdout": "min=2 max=9 first=2:2 queue=4 heap=9 empty=0\n",
+        "stderr": "",
+        "exitCode": 0
+      },
+      "checkpoints": [
+        {
+          "name": "ready",
+          "line": 22,
+          "semantics": "before-line",
+          "expected": {
+            "containers": {
+              "values": {
+                "elements": [
+                  "2",
+                  "2",
+                  "6",
+                  "9"
+                ]
+              },
+              "emptyValues": {
+                "elements": []
+              }
+            },
+            "stackTop": "main"
+          }
+        }
+      ]
+    },
+    {
+      "id": "compile-error",
+      "source": "compile-error.cpp",
+      "language": "cpp",
+      "standard": "c++17",
+      "stdin": "",
+      "expected": {
+        "compileStatus": "failed",
+        "diagnostic": {
+          "token": "missing_value",
+          "line": 4,
+          "column": 40,
+          "columnUnit": "utf-16",
+          "severity": "error"
+        },
+        "mustNotProduceExecutable": true
+      },
+      "checkpoints": [
+        {
+          "name": "diagnostic",
+          "line": 4,
+          "semantics": "before-line",
+          "expected": {
+            "kind": "diagnostic-location"
+          }
+        }
+      ]
+    },
+    {
+      "id": "runtime-trap",
+      "source": "runtime-trap.c",
+      "language": "c",
+      "standard": "c11",
+      "stdin": "",
+      "expected": {
+        "compileStatus": "compiled",
+        "stdout": "",
+        "stderr": "before-controlled-trap\n",
+        "terminationReason": "trap"
+      },
+      "checkpoints": [
+        {
+          "name": "trap",
+          "line": 5,
+          "semantics": "before-line",
+          "expected": {
+            "stackTop": "main",
+            "nextOperation": "controlled compiler intrinsic trap; source breakpoint can pause before it"
+          }
+        }
+      ]
+    },
+    {
+      "id": "infinite-loop",
+      "source": "infinite-loop.c",
+      "language": "c",
+      "standard": "c11",
+      "stdin": "",
+      "expected": {
+        "compileStatus": "compiled",
+        "stdout": "",
+        "stderr": "",
+        "terminationReason": "stop",
+        "userStopRequired": true
+      },
+      "checkpoints": [
+        {
+          "name": "loop",
+          "line": 4,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "counter": "0"
+            },
+            "visitsNote": "counter increases after each executed loop line; unsigned arithmetic has defined wraparound",
+            "stackTop": "main"
+          }
+        }
+      ]
+    },
+    {
+      "id": "output-flood",
+      "source": "output-flood.c",
+      "language": "c",
+      "standard": "c11",
+      "stdin": "",
+      "expected": {
+        "compileStatus": "compiled",
+        "stdoutRepeat": {
+          "text": "中文😀0123456789\n",
+          "count": 256
+        },
+        "stdoutUtf8Bytes": 5376,
+        "stderr": "",
+        "exitCode": 7,
+        "limitedRun": {
+          "outputBytes": 64,
+          "requireTruncationEvent": true,
+          "requireValidUtf8": true,
+          "preserveExitCode": 7
+        }
+      },
+      "checkpoints": [
+        {
+          "name": "output",
+          "line": 5,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "i": "0"
+            },
+            "stackTop": "main"
+          }
+        }
+      ]
+    },
+    {
+      "id": "solution-driver",
+      "source": "solution-driver.cpp",
+      "language": "cpp",
+      "standard": "c++17",
+      "stdin": "20 2\n",
+      "expected": {
+        "compileStatus": "compiled",
+        "stdout": "answer=42\n",
+        "stderr": "",
+        "exitCode": 0
+      },
+      "checkpoints": [
+        {
+          "name": "driver-call",
+          "line": 20,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "left": "20",
+              "right": "2"
+            },
+            "stackTop": "main"
+          },
+          "stepExpectations": {
+            "stepInto": {
+              "function": "Solution::solve",
+              "variables": {
+                "left": "20",
+                "right": "2"
+              }
+            },
+            "stepOver": {
+              "checkpoint": "ready",
+              "variables": {
+                "actual": "42"
+              }
+            }
+          }
+        },
+        {
+          "name": "solution-return",
+          "line": 8,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "left": "20",
+              "right": "2",
+              "answer": "42"
+            },
+            "stackTop": "Solution::solve",
+            "stackContains": [
+              "main"
+            ]
+          },
+          "stepExpectations": {
+            "stepOut": {
+              "callerFunction": "main",
+              "checkpoint": "ready",
+              "variables": {
+                "actual": "42"
+              }
+            }
+          }
+        },
+        {
+          "name": "ready",
+          "line": 21,
+          "semantics": "before-line",
+          "expected": {
+            "variables": {
+              "actual": "42"
+            },
+            "stackTop": "main"
+          }
+        }
+      ]
+    }
+  ]
+}

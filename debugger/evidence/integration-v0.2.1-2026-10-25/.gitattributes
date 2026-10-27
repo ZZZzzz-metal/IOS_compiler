@@ -1,0 +1,3 @@
+# Preserve captured bytes so the evidence SHA-256 manifest survives checkout.
+# Console captures retain Windows CRLF line endings.
+* -text whitespace=blank-at-eol,space-before-tab,cr-at-eol

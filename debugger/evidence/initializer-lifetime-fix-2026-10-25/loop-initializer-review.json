@@ -1,0 +1,3536 @@
+{
+  "kind": "role3-loop-initializer-lifetime-fix",
+  "recordedAt": "2026-10-25T06:23:05.461Z",
+  "scope": "desktop-node-real-CompilerProbe-and-WasmRuntime",
+  "ipadTested": false,
+  "finding": {
+    "priority": "P2",
+    "status": "fixed",
+    "integrationBaselineReproduces": true,
+    "expected": "Each new x initialization remains unavailable until its actual store; body values are 10 and 11.",
+    "actual": "Both iterations hide x during seed and the return continuation; completed initializations expose 10 and 11.",
+    "source": "debugger/src/variables.mjs",
+    "explanation": "Initialization must use the current declaration execution lifetime, not any prior write to a reused stack slot."
+  },
+  "provenance": {
+    "revision": "bfc3f229c68a7e156f0f0fa6be1791fe6fc8efee",
+    "tag": "integration-v0.2.1",
+    "tagRevision": "7e92d2330b8e0fef1c75021d7e93522d8e6c6293",
+    "fixRevision": "cc2fa6a2e05153a676c570e325caf9f1baceb5df",
+    "beforeFixRevision": "e4e1cebe6854b9652a850bd9d0e8fcc4d34af8ed",
+    "currentVariablesSHA256": "sha256:a20f10518433d3dbb48d58bf2a7bae930669c49de5531476ffcfadfbf28ba139",
+    "currentRuntimeSHA256": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f",
+    "workingTree": [
+      "M debugger/README.md",
+      " M debugger/checks/runtime.test.mjs",
+      " M debugger/scripts/review-loop-initializer.mjs",
+      " M debugger/src/variables.mjs",
+      " M debugger/src/wasm-runtime.mjs",
+      "?? debugger/checks/initializer-adapter.test.mjs",
+      "?? debugger/checks/initializer-lifetime.test.mjs",
+      "?? debugger/evidence/initializer-lifetime-fix-2026-10-25/",
+      "?? tests/evidence/integrated-role03-initializer-fix-2026-10-25/"
+    ],
+    "integrationBaselineVariablesSHA256": "sha256:2f19981059895bb541e5f79ab0b75d73f992c2bc5f0965d127bb7e1e34481477",
+    "beforeFixVariablesSHA256": "sha256:c5c775c23a747577a2bab1655c97f0b56b01a81a833530c10fbde19f903a7d28",
+    "preFixLoading": "git show parent:debugger/src/variables.mjs; one known dwarf import changed to current absolute file URL; module loaded from an in-memory data URL.",
+    "diagnosticSHA256": "sha256:0f731950310bcbe0789d24d0170d153dc05c8f0e78101d6b9d25695571489074"
+  },
+  "source": "int seed(int n) {\n  return n + 10;\n}\nint main() {\n  int total = 0;\n  for (int i = 0; i < 2; ++i) {\n    int x = seed(i);\n    total += x;\n  }\n  return total;\n}\n",
+  "snapshot": {
+    "snapshotId": "18a2be8e-65fa-4871-9c55-56f58cbeffe5",
+    "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "int seed(int n) {\n  return n + 10;\n}\nint main() {\n  int total = 0;\n  for (int i = 0; i < 2; ++i) {\n    int x = seed(i);\n    total += x;\n  }\n  return total;\n}\n",
+        "contentHash": "sha256:4d0dac928d8b2ce4b6d4b1c5a11f57cfdd5b0380217390a4a1d9240ffe49d0db"
+      }
+    ]
+  },
+  "compilation": {
+    "requestId": "role3-readonly-review-loop-initializer",
+    "status": "compiled",
+    "executableSHA256": "sha256:26ae821aee785bdd5e9638f035f8006efbc0242d7d3f7f0b5d0dfc63f55255fa",
+    "executableBytes": 13980,
+    "compilerArguments": [
+      "-cc1",
+      "-emit-obj",
+      "-triple",
+      "wasm32-unknown-wasi",
+      "-main-file-name",
+      "main.cpp",
+      "-disable-free",
+      "-isysroot",
+      "/",
+      "-internal-isystem",
+      "/include/c++/v1",
+      "-internal-isystem",
+      "/lib/clang/8.0.1/include",
+      "-internal-isystem",
+      "/include",
+      "-I",
+      "/project",
+      "-O0",
+      "-ferror-limit",
+      "20",
+      "-fmessage-length",
+      "0",
+      "-debug-info-kind=standalone",
+      "-dwarf-version=4",
+      "-debugger-tuning=lldb",
+      "-fdebug-compilation-dir",
+      "/project",
+      "-std=c++17",
+      "-x",
+      "c++",
+      "-o",
+      "build/main.o",
+      "/project/main.cpp"
+    ],
+    "linkerArguments": [
+      "--no-threads",
+      "--export-dynamic",
+      "-z",
+      "stack-size=1048576",
+      "--max-memory=268435456",
+      "-Llib/wasm32-wasi",
+      "lib/wasm32-wasi/crt1.o",
+      "build/main.o",
+      "-lc++",
+      "-lc++abi",
+      "-lc",
+      "-lm",
+      "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+      "-o",
+      "build/main.wasm"
+    ],
+    "target": {
+      "targetTriple": "wasm32-unknown-wasi",
+      "abi": "wasi_unstable",
+      "addressBits": 32,
+      "endianness": "little",
+      "artifactFormat": "wasm-v1",
+      "debugInfoFormat": "dwarf-4-embedded",
+      "requiredFeatures": [
+        "mvp",
+        "mutable-globals"
+      ]
+    },
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+    "nativeSmoke": {
+      "exitCode": 21,
+      "stdout": "",
+      "stderr": "",
+      "memoryBytes": 1179648
+    }
+  },
+  "runs": {
+    "current": {
+      "version": "current-working-source",
+      "status": "passed",
+      "assertions": [
+        {
+          "label": "iteration 0: caller x is unavailable while seed executes",
+          "passed": true
+        },
+        {
+          "label": "iteration 0: caller x is unavailable after return and before store",
+          "passed": true
+        },
+        {
+          "label": "iteration 0: body x is the initialized value 10",
+          "passed": true
+        },
+        {
+          "label": "iteration 1: caller x is unavailable while seed executes",
+          "passed": true
+        },
+        {
+          "label": "iteration 1: caller x is unavailable after return and before store",
+          "passed": true
+        },
+        {
+          "label": "iteration 1: body x is the initialized value 11",
+          "passed": true
+        }
+      ],
+      "records": [
+        {
+          "stage": "inside-initializer-callee",
+          "step": 2248,
+          "iteration": 0,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            },
+            {
+              "id": "wasm-frame-23",
+              "funcIndex": 10,
+              "name": "seed",
+              "pc": 487,
+              "lastPC": 484,
+              "callPC": null
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "calleeFrameId": "wasm-frame-23",
+          "calleeFuncIndex": 10,
+          "calleePC": 487,
+          "calleePosition": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 1
+          },
+          "actualWasmParameter0": "0",
+          "callerIsImmediatelyBelowCallee": true,
+          "actualCallTargetsCallee": true,
+          "callerPCIsCallContinuation": true,
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "unavailable",
+              "value": "<unavailable>",
+              "reason": "Storage has not been initialized during this declaration lifetime",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "unavailable",
+            "value": "<unavailable>",
+            "reason": "Storage has not been initialized during this declaration lifetime",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 0,
+            "coveredByAnyEarlierWriteInFrame": false,
+            "recordedWriteRangesCoveringSlot": []
+          }
+        },
+        {
+          "stage": "initializer-returned-before-store",
+          "step": 2259,
+          "iteration": 0,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "unavailable",
+              "value": "<unavailable>",
+              "reason": "Storage has not been initialized during this declaration lifetime",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "unavailable",
+            "value": "<unavailable>",
+            "reason": "Storage has not been initialized during this declaration lifetime",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 0,
+            "coveredByAnyEarlierWriteInFrame": false,
+            "recordedWriteRangesCoveringSlot": []
+          }
+        },
+        {
+          "stage": "body-after-initialization",
+          "step": 2263,
+          "iteration": 0,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 636,
+              "lastPC": 633,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 636,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 8,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 633,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 636,
+            "absolutePC": 1072,
+            "opcode": 32,
+            "nextPC": 638,
+            "index": 2
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "available",
+              "value": "10",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "10",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 10,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        },
+        {
+          "stage": "inside-initializer-callee",
+          "step": 2327,
+          "iteration": 1,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            },
+            {
+              "id": "wasm-frame-24",
+              "funcIndex": 10,
+              "name": "seed",
+              "pc": 487,
+              "lastPC": 484,
+              "callPC": null
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "calleeFrameId": "wasm-frame-24",
+          "calleeFuncIndex": 10,
+          "calleePC": 487,
+          "calleePosition": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 1
+          },
+          "actualWasmParameter0": "1",
+          "callerIsImmediatelyBelowCallee": true,
+          "actualCallTargetsCallee": true,
+          "callerPCIsCallContinuation": true,
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "10",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "1",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "unavailable",
+              "value": "<unavailable>",
+              "reason": "Storage has not been initialized during this declaration lifetime",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "unavailable",
+            "value": "<unavailable>",
+            "reason": "Storage has not been initialized during this declaration lifetime",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 10,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        },
+        {
+          "stage": "initializer-returned-before-store",
+          "step": 2338,
+          "iteration": 1,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "10",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "1",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "unavailable",
+              "value": "<unavailable>",
+              "reason": "Storage has not been initialized during this declaration lifetime",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "unavailable",
+            "value": "<unavailable>",
+            "reason": "Storage has not been initialized during this declaration lifetime",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 10,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        },
+        {
+          "stage": "body-after-initialization",
+          "step": 2342,
+          "iteration": 1,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 636,
+              "lastPC": 633,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 636,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 8,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 633,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 636,
+            "absolutePC": 1072,
+            "opcode": 32,
+            "nextPC": 638,
+            "index": 2
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "10",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "1",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "available",
+              "value": "11",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "11",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              11,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 11,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        }
+      ],
+      "actualInitializationStores": [
+        {
+          "iteration": 0,
+          "step": 2262,
+          "instruction": {
+            "pc": 633,
+            "absolutePC": 1069,
+            "opcode": 54,
+            "nextPC": 636,
+            "offset": 0
+          },
+          "address": "1050080",
+          "valueOnRealOperandStack": "10",
+          "beforeBytes": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "afterBytes": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "afterX": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "10",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          }
+        },
+        {
+          "iteration": 1,
+          "step": 2341,
+          "instruction": {
+            "pc": 633,
+            "absolutePC": 1069,
+            "opcode": 54,
+            "nextPC": 636,
+            "offset": 0
+          },
+          "address": "1050080",
+          "valueOnRealOperandStack": "11",
+          "beforeBytes": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "afterBytes": [
+            11,
+            0,
+            0,
+            0
+          ],
+          "afterX": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "11",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          }
+        }
+      ],
+      "bindings": {
+        "callee": {
+          "verified": true,
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 1
+            }
+          ],
+          "pcs": [
+            487
+          ]
+        },
+        "body": {
+          "verified": true,
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 8,
+              "column": 1
+            }
+          ],
+          "pcs": [
+            636
+          ]
+        }
+      },
+      "execution": {
+        "steps": 2419,
+        "done": true,
+        "exitCode": 21,
+        "trap": null
+      }
+    },
+    "integrationBaseline": {
+      "version": "integration-v0.2.1",
+      "status": "failed",
+      "assertions": [
+        {
+          "label": "iteration 0: caller x is unavailable while seed executes",
+          "passed": true
+        },
+        {
+          "label": "iteration 0: caller x is unavailable after return and before store",
+          "passed": true
+        },
+        {
+          "label": "iteration 0: body x is the initialized value 10",
+          "passed": true
+        },
+        {
+          "label": "iteration 1: caller x is unavailable while seed executes",
+          "passed": false,
+          "message": "the new x initialization has not completed"
+        },
+        {
+          "label": "iteration 1: caller x is unavailable after return and before store",
+          "passed": false,
+          "message": "the initializer return value has not been stored in x"
+        },
+        {
+          "label": "iteration 1: body x is the initialized value 11",
+          "passed": true
+        }
+      ],
+      "records": [
+        {
+          "stage": "inside-initializer-callee",
+          "step": 2248,
+          "iteration": 0,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            },
+            {
+              "id": "wasm-frame-23",
+              "funcIndex": 10,
+              "name": "seed",
+              "pc": 487,
+              "lastPC": 484,
+              "callPC": null
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "calleeFrameId": "wasm-frame-23",
+          "calleeFuncIndex": 10,
+          "calleePC": 487,
+          "calleePosition": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 1
+          },
+          "actualWasmParameter0": "0",
+          "callerIsImmediatelyBelowCallee": true,
+          "actualCallTargetsCallee": true,
+          "callerPCIsCallContinuation": true,
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "unavailable",
+              "value": "<unavailable>",
+              "reason": "Storage has not been initialized during this frame",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "unavailable",
+            "value": "<unavailable>",
+            "reason": "Storage has not been initialized during this frame",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 0,
+            "coveredByAnyEarlierWriteInFrame": false,
+            "recordedWriteRangesCoveringSlot": []
+          }
+        },
+        {
+          "stage": "initializer-returned-before-store",
+          "step": 2259,
+          "iteration": 0,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "unavailable",
+              "value": "<unavailable>",
+              "reason": "Storage has not been initialized during this frame",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "unavailable",
+            "value": "<unavailable>",
+            "reason": "Storage has not been initialized during this frame",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 0,
+            "coveredByAnyEarlierWriteInFrame": false,
+            "recordedWriteRangesCoveringSlot": []
+          }
+        },
+        {
+          "stage": "body-after-initialization",
+          "step": 2263,
+          "iteration": 0,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 636,
+              "lastPC": 633,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 636,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 8,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 633,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 636,
+            "absolutePC": 1072,
+            "opcode": 32,
+            "nextPC": 638,
+            "index": 2
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "0",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "available",
+              "value": "10",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "10",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 10,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        },
+        {
+          "stage": "inside-initializer-callee",
+          "step": 2327,
+          "iteration": 1,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            },
+            {
+              "id": "wasm-frame-24",
+              "funcIndex": 10,
+              "name": "seed",
+              "pc": 487,
+              "lastPC": 484,
+              "callPC": null
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "calleeFrameId": "wasm-frame-24",
+          "calleeFuncIndex": 10,
+          "calleePC": 487,
+          "calleePosition": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 1
+          },
+          "actualWasmParameter0": "1",
+          "callerIsImmediatelyBelowCallee": true,
+          "actualCallTargetsCallee": true,
+          "callerPCIsCallContinuation": true,
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "10",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "1",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "available",
+              "value": "10",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "10",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 10,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        },
+        {
+          "stage": "initializer-returned-before-store",
+          "step": 2338,
+          "iteration": 1,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "10",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "1",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "available",
+              "value": "10",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "10",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 10,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        },
+        {
+          "stage": "body-after-initialization",
+          "step": 2342,
+          "iteration": 1,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 636,
+              "lastPC": 633,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 636,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 8,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 633,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 636,
+            "absolutePC": 1072,
+            "opcode": 32,
+            "nextPC": 638,
+            "index": 2
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "10",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 0
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "1",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 1
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "available",
+              "value": "11",
+              "lexicalInScope": true,
+              "declarationReached": true,
+              "scopeDepth": 2
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "11",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              11,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 11,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        }
+      ],
+      "actualInitializationStores": [
+        {
+          "iteration": 0,
+          "step": 2262,
+          "instruction": {
+            "pc": 633,
+            "absolutePC": 1069,
+            "opcode": 54,
+            "nextPC": 636,
+            "offset": 0
+          },
+          "address": "1050080",
+          "valueOnRealOperandStack": "10",
+          "beforeBytes": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "afterBytes": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "afterX": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "10",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          }
+        },
+        {
+          "iteration": 1,
+          "step": 2341,
+          "instruction": {
+            "pc": 633,
+            "absolutePC": 1069,
+            "opcode": 54,
+            "nextPC": 636,
+            "offset": 0
+          },
+          "address": "1050080",
+          "valueOnRealOperandStack": "11",
+          "beforeBytes": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "afterBytes": [
+            11,
+            0,
+            0,
+            0
+          ],
+          "afterX": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "11",
+            "lexicalInScope": true,
+            "declarationReached": true,
+            "scopeDepth": 2
+          }
+        }
+      ],
+      "bindings": {
+        "callee": {
+          "verified": true,
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 1
+            }
+          ],
+          "pcs": [
+            487
+          ]
+        },
+        "body": {
+          "verified": true,
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 8,
+              "column": 1
+            }
+          ],
+          "pcs": [
+            636
+          ]
+        }
+      },
+      "execution": {
+        "steps": 2419,
+        "done": true,
+        "exitCode": 21,
+        "trap": null
+      }
+    },
+    "beforeFix": {
+      "version": "parent-of-cc2fa6a",
+      "status": "passed",
+      "assertions": [
+        {
+          "label": "iteration 0: caller x is unavailable while seed executes",
+          "passed": true
+        },
+        {
+          "label": "iteration 0: caller x is unavailable after return and before store",
+          "passed": true
+        },
+        {
+          "label": "iteration 0: body x is the initialized value 10",
+          "passed": true
+        },
+        {
+          "label": "iteration 1: caller x is unavailable while seed executes",
+          "passed": true
+        },
+        {
+          "label": "iteration 1: caller x is unavailable after return and before store",
+          "passed": true
+        },
+        {
+          "label": "iteration 1: body x is the initialized value 11",
+          "passed": true
+        }
+      ],
+      "records": [
+        {
+          "stage": "inside-initializer-callee",
+          "step": 2248,
+          "iteration": 0,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            },
+            {
+              "id": "wasm-frame-23",
+              "funcIndex": 10,
+              "name": "seed",
+              "pc": 487,
+              "lastPC": 484,
+              "callPC": null
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "calleeFrameId": "wasm-frame-23",
+          "calleeFuncIndex": 10,
+          "calleePC": 487,
+          "calleePosition": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 1
+          },
+          "actualWasmParameter0": "0",
+          "callerIsImmediatelyBelowCallee": true,
+          "actualCallTargetsCallee": true,
+          "callerPCIsCallContinuation": true,
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "0"
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "0"
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "outOfScope",
+              "value": "<outOfScope>",
+              "reason": "Variable declaration has not executed at this stop"
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "<expression>",
+            "state": "unavailable",
+            "value": "<unavailable>",
+            "reason": "Identifier x is unavailable or ambiguous"
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 0,
+            "coveredByAnyEarlierWriteInFrame": false,
+            "recordedWriteRangesCoveringSlot": []
+          }
+        },
+        {
+          "stage": "initializer-returned-before-store",
+          "step": 2259,
+          "iteration": 0,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "0"
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "0"
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "outOfScope",
+              "value": "<outOfScope>",
+              "reason": "Variable declaration has not executed at this stop"
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "<expression>",
+            "state": "unavailable",
+            "value": "<unavailable>",
+            "reason": "Identifier x is unavailable or ambiguous"
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 0,
+            "coveredByAnyEarlierWriteInFrame": false,
+            "recordedWriteRangesCoveringSlot": []
+          }
+        },
+        {
+          "stage": "body-after-initialization",
+          "step": 2263,
+          "iteration": 0,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 636,
+              "lastPC": 633,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 636,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 8,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 633,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 636,
+            "absolutePC": 1072,
+            "opcode": 32,
+            "nextPC": 638,
+            "index": 2
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "0"
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "0"
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "available",
+              "value": "10"
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "10"
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 10,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        },
+        {
+          "stage": "inside-initializer-callee",
+          "step": 2327,
+          "iteration": 1,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            },
+            {
+              "id": "wasm-frame-24",
+              "funcIndex": 10,
+              "name": "seed",
+              "pc": 487,
+              "lastPC": 484,
+              "callPC": null
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "calleeFrameId": "wasm-frame-24",
+          "calleeFuncIndex": 10,
+          "calleePC": 487,
+          "calleePosition": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 1
+          },
+          "actualWasmParameter0": "1",
+          "callerIsImmediatelyBelowCallee": true,
+          "actualCallTargetsCallee": true,
+          "callerPCIsCallContinuation": true,
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "10"
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "1"
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "outOfScope",
+              "value": "<outOfScope>",
+              "reason": "Variable declaration has not executed at this stop"
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "<expression>",
+            "state": "unavailable",
+            "value": "<unavailable>",
+            "reason": "Identifier x is unavailable or ambiguous"
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 10,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        },
+        {
+          "stage": "initializer-returned-before-store",
+          "step": 2338,
+          "iteration": 1,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 627,
+              "lastPC": 621,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 627,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 621,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 627,
+            "absolutePC": 1063,
+            "opcode": 33,
+            "nextPC": 629,
+            "index": 12
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "10"
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "1"
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "outOfScope",
+              "value": "<outOfScope>",
+              "reason": "Variable declaration has not executed at this stop"
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "<expression>",
+            "state": "unavailable",
+            "value": "<unavailable>",
+            "reason": "Identifier x is unavailable or ambiguous"
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              10,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 10,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        },
+        {
+          "stage": "body-after-initialization",
+          "step": 2342,
+          "iteration": 1,
+          "stack": [
+            {
+              "id": "wasm-frame-1",
+              "funcIndex": 9,
+              "name": "_start",
+              "pc": 391,
+              "lastPC": 385,
+              "callPC": 385
+            },
+            {
+              "id": "wasm-frame-21",
+              "funcIndex": 12,
+              "name": "main",
+              "pc": 733,
+              "lastPC": 727,
+              "callPC": 727
+            },
+            {
+              "id": "wasm-frame-22",
+              "funcIndex": 11,
+              "name": "main",
+              "pc": 636,
+              "lastPC": 633,
+              "callPC": 621
+            }
+          ],
+          "callerFrameId": "wasm-frame-22",
+          "callerFuncIndex": 11,
+          "callerPC": 636,
+          "callerPosition": {
+            "sourcePath": "main.cpp",
+            "line": 8,
+            "column": 1
+          },
+          "callerCallPC": 621,
+          "callerLastPC": 633,
+          "callInstruction": {
+            "pc": 621,
+            "absolutePC": 1057,
+            "opcode": 16,
+            "nextPC": 627,
+            "index": 10
+          },
+          "nextInstruction": {
+            "pc": 636,
+            "absolutePC": 1072,
+            "opcode": 32,
+            "nextPC": 638,
+            "index": 2
+          },
+          "locals": [
+            {
+              "name": "total",
+              "type": "int",
+              "state": "available",
+              "value": "10"
+            },
+            {
+              "name": "i",
+              "type": "int",
+              "state": "available",
+              "value": "1"
+            },
+            {
+              "name": "x",
+              "type": "int",
+              "state": "available",
+              "value": "11"
+            }
+          ],
+          "x": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "11"
+          },
+          "dwarf": {
+            "variableDieOffset": 141,
+            "declarationLine": 7,
+            "locationExpression": [
+              35,
+              0
+            ],
+            "actualLexicalInScope": true,
+            "scopes": [
+              {
+                "dieOffset": 132,
+                "tag": 11,
+                "ranges": [
+                  [
+                    612,
+                    664
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 109,
+                "tag": 11,
+                "ranges": [
+                  [
+                    559,
+                    693
+                  ]
+                ],
+                "containsCaller": true
+              },
+              {
+                "dieOffset": 76,
+                "tag": 46,
+                "name": "main",
+                "ranges": [
+                  [
+                    511,
+                    723
+                  ]
+                ],
+                "containsCaller": true
+              }
+            ],
+            "frameBase": {
+              "address": 1050080,
+              "size": 16,
+              "localIndex": 2,
+              "globalIndex": 0,
+              "readyPC": 533,
+              "provenance": "clang-8-verified-prologue"
+            }
+          },
+          "memory": {
+            "address": "1050080",
+            "byteSize": 4,
+            "bytes": [
+              11,
+              0,
+              0,
+              0
+            ],
+            "signedValue": 11,
+            "coveredByAnyEarlierWriteInFrame": true,
+            "recordedWriteRangesCoveringSlot": [
+              [
+                1050076,
+                1050096
+              ]
+            ]
+          }
+        }
+      ],
+      "actualInitializationStores": [
+        {
+          "iteration": 0,
+          "step": 2262,
+          "instruction": {
+            "pc": 633,
+            "absolutePC": 1069,
+            "opcode": 54,
+            "nextPC": 636,
+            "offset": 0
+          },
+          "address": "1050080",
+          "valueOnRealOperandStack": "10",
+          "beforeBytes": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "afterBytes": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "afterX": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "10"
+          }
+        },
+        {
+          "iteration": 1,
+          "step": 2341,
+          "instruction": {
+            "pc": 633,
+            "absolutePC": 1069,
+            "opcode": 54,
+            "nextPC": 636,
+            "offset": 0
+          },
+          "address": "1050080",
+          "valueOnRealOperandStack": "11",
+          "beforeBytes": [
+            10,
+            0,
+            0,
+            0
+          ],
+          "afterBytes": [
+            11,
+            0,
+            0,
+            0
+          ],
+          "afterX": {
+            "name": "x",
+            "type": "int",
+            "state": "available",
+            "value": "11"
+          }
+        }
+      ],
+      "bindings": {
+        "callee": {
+          "verified": true,
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 1
+            }
+          ],
+          "pcs": [
+            487
+          ]
+        },
+        "body": {
+          "verified": true,
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 8,
+              "column": 1
+            }
+          ],
+          "pcs": [
+            636
+          ]
+        }
+      },
+      "execution": {
+        "steps": 2419,
+        "done": true,
+        "exitCode": 21,
+        "trap": null
+      }
+    }
+  },
+  "limitations": [
+    "Runtime-level caller-frame query; no DebuggerAdapter pauseId/frameId transport exercised.",
+    "All frame PCs come from actual execution. Callee stops use real source-bound instruction PCs; caller PC is the verified call continuation.",
+    "The diagnostic itself changes no product implementation, fixture binaries, candidate profiles, or global test registrations.",
+    "Historical inspectors use the same current runtime and symbols to isolate variable-inspection behavior; this is not a full historical runtime replay."
+  ]
+}

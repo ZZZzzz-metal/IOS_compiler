@@ -1,0 +1,22 @@
+{
+  "baseline-check.txt": {
+    "byteLength": 277,
+    "sha256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48"
+  },
+  "contracts.tap": {
+    "byteLength": 2352,
+    "sha256": "1b65e9487864b42bcb14a8fa9d4257c39b46a967a23f9cf01ef7b758bea1f4cf"
+  },
+  "integration.tap": {
+    "byteLength": 832,
+    "sha256": "ceb67c69001803aef86b8312b95ce69cd737fab628e187e66a9289d42d9a8dfa"
+  },
+  "module-tests.tap": {
+    "byteLength": 5214,
+    "sha256": "9eee2e5ec32e047b6cb5e96b7261935c66b098d649755b6217b514bf1052f7b5"
+  },
+  "provenance.json": {
+    "byteLength": 20127,
+    "sha256": "2f2fc03acfc7d5dcab1b081dc6baffe6bc4921a195b2746a764376a859428baa"
+  }
+}

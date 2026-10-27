@@ -1,0 +1,3 @@
+Browser tab: 3, Title: "算法工作台 · 四号验证原型", URL: "http://127.0.0.1:4197/releases/ipad-web-probe-40b0be1b9616e4ec152be87a/ui/probe.html".
+There has been no change in the accessibility tree.
+The focused UI element is 1 AXWebArea 算法工作台 · 四号验证原型, URL: 127.0.0.1:4197/releases/ipad-web-probe-40b0be1b9616e4ec152be87a/ui/probe.html

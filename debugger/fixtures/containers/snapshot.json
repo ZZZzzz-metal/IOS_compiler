@@ -1,0 +1,15 @@
+{
+  "snapshotId": "27086b51-ee2c-4e2d-b844-264829857b0b",
+  "sourceHash": "sha256:e233c94d2ba38483698468b8644c2c21cd137685bf0b4354efdaf3debff98dff",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "#include <vector>\n#include <string>\nint main() {\n    std::vector<int> empty;\n    std::vector<int> values = {11, 22};\n    std::string blank;\n    std::string shortText = \"中文😀\";\n    std::string longText(80, 'z');\n    long long big = 9223372036854775806LL;\n    int* invalid = nullptr;\n    values.push_back(33);\n    values[0] = 99;\n    return values[0] == 99 && values.size() == 3 ? 0 : 1;\n}\n",
+      "contentHash": "sha256:595bb1a640ffa2f8c2127d37035c0513b2319f6b96f6c476ea4e098333c32fc1"
+    }
+  ]
+}

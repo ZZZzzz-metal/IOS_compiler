@@ -1,0 +1,6 @@
+{
+  "gutter4": "false",
+  "panel": "尚未设置断点。点击行号，或使用“在当前行切换断点”。",
+  "readOnly": true,
+  "source": "int main() {\n    int total = 0;\n    for (int i = 0; i < 3; ++i) {\n        total += i;\n    }\n    return total;\n}\n"
+}

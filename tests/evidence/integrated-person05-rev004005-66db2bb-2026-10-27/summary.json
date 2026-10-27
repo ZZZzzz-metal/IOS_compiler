@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "owner": "05 independent validation",
+  "dateAsiaShanghai": "2026-10-27",
+  "testedRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "baseTag": "integration-v0.4.2",
+  "result": "REV-004/005 confirmed fixed within tested branch scope",
+  "automated": {
+    "passed": 195,
+    "failed": 0,
+    "evidence": "automated/summary.json",
+    "allCommandsExitZero": true
+  },
+  "independentControlled": {
+    "fixed": {
+      "passed": 14,
+      "failed": 0
+    },
+    "baseline": {
+      "passed": 1,
+      "behaviorFailures": 13,
+      "infrastructureFailures": 0
+    },
+    "finalEvidence": "independent/*-run-02/",
+    "intermediate13CaseRunsRetained": true
+  },
+  "browser": {
+    "workflowGroupsPassed": 4,
+    "evidence": "browser/results.json",
+    "narrowViewportAccepted": false
+  },
+  "history": {
+    "previousIndependentReferences": 145,
+    "uniqueTargets": 89,
+    "evidence": "review/history-preservation.json",
+    "fullHistorySweep": false,
+    "manifestVsGitComparison": false
+  },
+  "pending": [
+    "Integration and new immutable offline release",
+    "REV-001 independent offline recovery validation",
+    "REV-002/003 debugger fixes outside this target",
+    "Real iPad offline, G2/G3, physical input and full draft durability",
+    "Full responsive and accessibility acceptance"
+  ],
+  "productModified": false,
+  "report": "docs/validation/rev004005-person05-66db2bb-2026-10-27.md"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "owner": "05 independent validation",
+  "testedTag": "integration-v0.3.0",
+  "testedRevision": "fff15bee97ed47cf2485b83c4344a020e9e190f7",
+  "runDatesAsiaShanghai": [
+    "2026-10-25",
+    "2026-10-26"
+  ],
+  "evidenceDirectoryStartedOn": "2026-10-25",
+  "automated": {
+    "passed": 160,
+    "failed": 0,
+    "allCommandsExitZero": true,
+    "evidence": "automated/summary.json",
+    "warning": "Includes contracts and fault injection; not 160 user/device workflows"
+  },
+  "browser": {
+    "evidence": "browser/results.json",
+    "domObservationCount": 40,
+    "newDefects": [
+      "VAL-004"
+    ],
+    "result": "Executed desktop workflows passed except old snapshot breakpoint display; full UI acceptance not signed"
+  },
+  "history": {
+    "manifests": 9,
+    "matchedRecords": 107,
+    "evidence": "review/history-integrity.json"
+  },
+  "keyValues": "review/key-values.json",
+  "overall": "Incomplete acceptance: VAL-004 open and G2/G3 pending",
+  "productSourceModified": false,
+  "productFixImplemented": false,
+  "documentation": "docs/validation/ui-person05-v0.3.0-2026-10-26.md"
+}

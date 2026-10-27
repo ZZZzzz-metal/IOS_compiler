@@ -1,0 +1,6 @@
+{
+  "protocolVersion": "0.1.0-draft.1",
+  "selectedCompatibilityId": null,
+  "profiles": [],
+  "reason": "2/3 桌面开发候选由 app/integration/candidate.mjs 按实际资源生成，见 docs/architecture/INTEGRATION-2026-10-25.md。完整产品及 G2 尚未验收，不登记或选择冻结组合。"
+}

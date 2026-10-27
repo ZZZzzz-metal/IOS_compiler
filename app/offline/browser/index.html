@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#151a22">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>算法工作台 · 离线准备</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main>
+  <header><span class="badge">iPad 真机待验证</span><h1>算法工作台</h1><p>首次联网保存资源，随后在本机编译和调试。</p></header>
+  <section aria-labelledby="prepare-heading">
+    <h2 id="prepare-heading">离线准备</h2>
+    <p id="bundle-details">正在读取本版本资源清单…</p>
+    <p class="muted">准备期间保持页面打开。资源逐项校验，完成后才能打开离线工作台。重新准备前先关闭本版本的其他工作台窗口；原草稿与其他版本会保留。</p>
+    <div class="actions"><button id="prepare" class="primary" disabled>准备离线资源</button><button id="verify" disabled>检查已存资源</button></div>
+    <p id="status" role="status" aria-live="polite">正在检查运行环境…</p>
+    <progress id="progress" aria-label="正在逐项校验资源" hidden></progress>
+    <p id="error" role="alert" hidden></p>
+    <a id="open-workbench" class="button disabled" href="./ui/probe.html" aria-disabled="true" tabindex="-1">打开工作台</a>
+  </section>
+  <section aria-labelledby="ipad-heading">
+    <h2 id="ipad-heading">在平板上继续</h2>
+    <ol><li>先完成上面的资源准备。</li><li>在 Safari 分享菜单中添加到主屏幕。</li><li>从主屏幕重新打开，联网再检查一次资源。</li><li>按操作手册关闭网络与辅助电脑，关闭重开后编译一份新源码。</li></ol>
+    <p><a href="./manual.html">查看平板操作手册</a></p>
+    <p class="muted">添加到主屏幕和资源校验成功都不代表真机验收通过。浏览器可能回收网站存储，请定期导出草稿。</p>
+    <button id="persist" disabled>申请保留网站存储</button><p id="storage-status" class="muted" role="status">存储保留由系统决定，不保证永久保存。</p>
+  </section>
+  <footer>本地验证原型 · 不上传源码 · 未完成正式产品安装与分发验收</footer>
+</main>
+<script type="module" src="./launcher.mjs"></script>
+</body>
+</html>

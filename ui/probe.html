@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3f5f1">
+  <title>算法工作台 · 四号验证原型</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"/></symbol>
+    <symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z"/></symbol>
+    <symbol id="icon-debug" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="13" rx="5"/><path d="M9 7V5a3 3 0 0 1 6 0v2M3 10h4m10 0h4M3 16h4m10 0h4M5 4l3 4m11-4-3 4M12 8v12"/></symbol>
+    <symbol id="icon-stop" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/></symbol>
+    <symbol id="icon-enter" viewBox="0 0 24 24"><path d="M12 3v13m-5-5 5 5 5-5M4 21h16"/></symbol>
+    <symbol id="icon-over" viewBox="0 0 24 24"><path d="M4 15a8 8 0 0 1 16 0m-4-4 4 4 3-4M4 21h16"/></symbol>
+    <symbol id="icon-out" viewBox="0 0 24 24"><path d="M12 20V7m-5 5 5-5 5 5M4 3h16"/></symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24"><path d="M20 8a8 8 0 0 0-14-3L3 8m0-5v5h5m-4 8a8 8 0 0 0 14 3l3-3m0 5v-5h-5"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="icon-paste" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M8 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-3M8 11h8m-8 5h6"/></symbol>
+    <symbol id="icon-import" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 16v4h16v-4"/></symbol>
+    <symbol id="icon-export" viewBox="0 0 24 24"><path d="M12 16V4m-4 4 4-4 4 4M4 16v4h16v-4"/></symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24"><path d="M14 2H5v20h14V7ZM14 2v5h5M8 12h8m-8 4h6"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="icon-indent" viewBox="0 0 24 24"><path d="M4 4h16M10 9h10m-10 6h10M4 20h16m-16-12 4 4-4 4"/></symbol>
+    <symbol id="icon-outdent" viewBox="0 0 24 24"><path d="M4 4h16M10 9h10m-10 6h10M4 20h16M7 8l-4 4 4 4"/></symbol>
+    <symbol id="icon-terminal" viewBox="0 0 24 24"><path d="m4 6 6 6-6 6m9 0h7"/></symbol>
+    <symbol id="icon-stack" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8Zm-9 10 9 5 9-5m-18 5 9 5 9-5"/></symbol>
+    <symbol id="icon-variable" viewBox="0 0 24 24"><path d="M8 3H6a2 2 0 0 0-2 2v4a3 3 0 0 1-2 3 3 3 0 0 1 2 3v4a2 2 0 0 0 2 2h2m8-18h2a2 2 0 0 1 2 2v4a3 3 0 0 0 2 3 3 3 0 0 0-2 3v4a2 2 0 0 1-2 2h-2"/></symbol>
+    <symbol id="icon-input" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 9h1m4 0h1m4 0h2M6 13h1m4 0h1m4 0h2M8 16h8"/></symbol>
+    <symbol id="icon-watch" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  </defs>
+</svg>
+<div class="app-shell">
+  <header class="app-header">
+    <div class="identity">
+      <svg class="brand-mark" aria-hidden="true"><use href="#icon-code"/></svg>
+      <div><div class="title-row"><h1>算法工作台</h1><span class="badge">开发验证原型</span></div><p>粘贴代码，带着输入运行，在暂停处排错。</p></div>
+    </div>
+    <div class="resource">
+      <button id="prepare" class="resource-button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-refresh"/></svg>校验本地资源</button>
+      <span id="resources" role="status">编译资源未校验</span>
+    </div>
+  </header>
+  <div class="notice"><span>iPad 离线冷启动待验证</span><span class="environment-note">Clang 8.0.1 / wasm32</span><a href="./README.md">原型说明与验证步骤</a></div>
+  <nav class="execution" aria-label="运行与调试" inert>
+    <div class="execution-actions">
+      <div class="primary-actions">
+        <select id="language" aria-label="语言"><option value="cpp">C++17</option><option value="c">C11</option></select>
+        <button id="run" class="primary" disabled><svg class="icon" aria-hidden="true"><use href="#icon-play"/></svg>编译运行</button>
+        <button id="debug" class="debug-start" disabled><svg class="icon" aria-hidden="true"><use href="#icon-debug"/></svg>编译调试</button>
+      </div>
+      <div class="debug-controls" role="group" aria-label="调试控制">
+        <button data-command="continue" title="继续（F5）" disabled><svg class="icon" aria-hidden="true"><use href="#icon-play"/></svg>继续</button>
+        <button data-command="stepInto" title="单步进入（F11）" disabled><svg class="icon" aria-hidden="true"><use href="#icon-enter"/></svg>进入</button>
+        <button data-command="stepOver" title="单步跳过（F10）" disabled><svg class="icon" aria-hidden="true"><use href="#icon-over"/></svg>跳过</button>
+        <button data-command="stepOut" title="单步跳出（Shift+F11）" disabled><svg class="icon" aria-hidden="true"><use href="#icon-out"/></svg>跳出</button>
+        <button id="stop" class="stop-button" disabled><svg class="icon" aria-hidden="true"><use href="#icon-stop"/></svg>停止</button>
+      </div>
+      <button id="resync" hidden>重新同步</button>
+    </div>
+    <div class="status-line"><span class="status-indicator" aria-hidden="true"></span><span id="status" role="status" aria-live="polite">准备就绪后可以编译。</span><span class="shortcut-hint" aria-hidden="true"><kbd>F5</kbd> 继续 <kbd>F10</kbd> 跳过 <kbd>F11</kbd> 进入</span></div>
+  </nav>
+  <div id="message" role="alert" hidden></div>
+  <nav class="mobile-nav" aria-label="窄窗面板"><button id="show-code" aria-pressed="true">代码</button><button id="show-panels" aria-pressed="false">调试与输入输出</button></nav>
+  <main class="workspace" inert>
+    <section class="code-pane" aria-label="源码编辑">
+      <div class="editor-heading"><h2>代码</h2><div class="toolbar document-actions">
+        <button id="paste"><svg class="icon" aria-hidden="true"><use href="#icon-paste"/></svg>粘贴代码</button>
+        <button id="copy"><svg class="icon" aria-hidden="true"><use href="#icon-copy"/></svg>复制题站源码</button>
+        <span class="toolbar-divider" aria-hidden="true"></span>
+        <button id="import"><svg class="icon" aria-hidden="true"><use href="#icon-import"/></svg>导入</button>
+        <select id="export-mode" aria-label="导出内容"><option value="user-source">仅题站源码</option><option value="complete-project">完整草稿</option></select>
+        <button id="export"><svg class="icon" aria-hidden="true"><use href="#icon-export"/></svg>导出</button>
+        <input id="file" type="file" accept=".c,.cc,.cpp,.cxx,.h,.hpp,.json,.txt" hidden>
+      </div></div>
+      <div class="tabs"><div class="file-tabs"><button id="user-tab" aria-pressed="true">题站源码</button><button id="driver-tab" aria-pressed="false">测试驱动</button></div><button id="snapshot-toggle" aria-pressed="false" disabled>查看调试快照</button></div>
+      <div class="filebar"><span class="file-identity"><svg class="icon" aria-hidden="true"><use href="#icon-file"/></svg><span id="filename">main.cpp</span></span><span id="snapshot-label">编辑中的草稿</span></div>
+      <div id="driver-help" class="hint" hidden>仅有函数或 Solution 类时，在此手动编写 main，并使用 #include "user.inc"。清空驱动即恢复单文件。<button id="driver-template">插入驱动起点</button></div>
+      <div class="editor-shell"><div id="gutter" aria-label="行号与断点"></div><div class="editor-layer"><pre id="highlight" aria-hidden="true"></pre><textarea id="source" aria-label="源代码" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" wrap="off"></textarea></div></div>
+      <div class="toolbar edit-tools">
+        <button id="breakpoint" aria-label="在当前行切换断点" title="在当前行设置或移除断点">切换断点</button>
+        <div class="indent-tools"><button id="indent" title="缩进（Tab）"><svg class="icon" aria-hidden="true"><use href="#icon-indent"/></svg>缩进</button><button id="outdent" title="取消缩进（Shift+Tab）"><svg class="icon" aria-hidden="true"><use href="#icon-outdent"/></svg>取消缩进</button></div>
+        <div class="find-tools"><label class="find-field"><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg><input id="find" type="search" placeholder="查找源码" aria-label="查找源码"></label><button id="find-next">下一处</button></div>
+      </div>
+      <div class="save-strip"><span class="save-indicator" aria-hidden="true"></span><div id="draft-status" role="status">正在恢复草稿…</div></div>
+      <div id="save-recovery" class="toolbar" hidden><button id="retry-save">重试保存</button><button id="recover-save">将当前编辑存为恢复副本</button><button id="download-current">导出当前未保存内容</button></div>
+      <details class="problems"><summary>断点与编译诊断</summary><div id="breakpoints" class="list empty">尚未设置断点</div><div id="diagnostics" class="list empty">暂无编译诊断</div></details>
+    </section>
+    <aside class="panels" aria-label="输入输出与调试面板">
+      <section><h2><svg class="icon" aria-hidden="true"><use href="#icon-input"/></svg>样例输入 <small>运行前一次性提供</small></h2><textarea id="stdin" aria-label="标准输入" spellcheck="false" rows="3" placeholder="在这里粘贴输入样例"></textarea></section>
+      <section><h2><svg class="icon" aria-hidden="true"><use href="#icon-terminal"/></svg>程序输出 <span id="exit" class="muted"></span></h2><pre id="output" tabindex="0" aria-label="程序输出">尚未运行</pre></section>
+      <section><h2><svg class="icon" aria-hidden="true"><use href="#icon-stack"/></svg>调用栈</h2><div id="stack" class="list empty">调试暂停后显示真实调用栈</div></section>
+      <section><h2><svg class="icon" aria-hidden="true"><use href="#icon-variable"/></svg>局部变量</h2><div id="variables" class="list empty">调试暂停后读取变量</div></section>
+      <section><h2><svg class="icon" aria-hidden="true"><use href="#icon-watch"/></svg>基础监视</h2><div class="toolbar watch-tools"><input id="expression" placeholder="如 values[0] 或 total" aria-label="监视表达式"><button id="evaluate" disabled>查看</button></div><p class="hint">支持范围以适配器为准；函数调用、赋值和自增不可用。</p><div id="watch" class="list empty">选择暂停栈帧后查询</div></section>
+    </aside>
+  </main>
+</div>
+<dialog id="clipboard-dialog"><form method="dialog"><h2 id="clipboard-title">手动复制或粘贴</h2><p>使用系统菜单或键盘完成复制粘贴。</p><textarea id="clipboard-text" rows="12" aria-label="手动剪贴板内容"></textarea><div class="toolbar"><button id="clipboard-apply" value="apply">将内容放入题站源码</button><button value="close">关闭</button></div></form></dialog>
+<script type="module" src="./src/main.mjs"></script>
+</body>
+</html>

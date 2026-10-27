@@ -1,0 +1,91 @@
+{
+  "kind": "real-desktop-browser-with-delayed-static-candidate-response",
+  "origin": "http://127.0.0.1:4204",
+  "events": [
+    {
+      "stage": "first-prepare-immediate",
+      "debug": true,
+      "prepare": true,
+      "resource": "正在读取并校验本机编译与调试资源…",
+      "run": true,
+      "state": "preparing"
+    },
+    {
+      "stage": "real-source-import",
+      "language": "cpp",
+      "resource": "本机资源已校验 · 完整离线状态待集成验收",
+      "save": "草稿已保存 · 版本 1",
+      "source": "#include <cstdio>\nint main() {\n    int revised = 27;\n    std::printf(\"%d\\n\", revised);\n    return revised;\n}\n"
+    },
+    {
+      "stage": "repeat-prepare-immediate",
+      "debug": true,
+      "prepare": true,
+      "run": true,
+      "state": "preparing"
+    },
+    {
+      "stage": "edit-and-F5-while-preparing",
+      "debug": true,
+      "prepare": true,
+      "run": true,
+      "state": "preparing",
+      "status": "正在校验本机编译与调试资源…"
+    },
+    {
+      "stage": "repeat-prepare-success",
+      "debug": false,
+      "prepare": false,
+      "resources": "本机资源已校验 · 完整离线状态待集成验收",
+      "run": false,
+      "state": "idle"
+    },
+    {
+      "stage": "failed-prepare",
+      "debug": true,
+      "message": "请先运行四号原型准备步骤。",
+      "prepare": false,
+      "resources": "资源未就绪",
+      "run": true,
+      "state": "idle",
+      "status": "资源校验失败，请重试。"
+    },
+    {
+      "stage": "retry-success",
+      "debug": false,
+      "prepare": false,
+      "resources": "本机资源已校验 · 完整离线状态待集成验收",
+      "run": false,
+      "save": "草稿已保存 · 版本 2",
+      "state": "idle"
+    },
+    {
+      "stage": "imported-source-real-execution",
+      "exit": "exit · 返回 27",
+      "output": "27\n",
+      "save": "草稿已保存 · 版本 2",
+      "source": "#include <cstdio>\nint main() {\n    int revised = 27;\n    std::printf(\"%d\\n\", revised);\n    return revised;\n}\n\n// Edited during resource verification.\n",
+      "state": "terminated",
+      "status": "已结束"
+    },
+    {
+      "stage": "reopen-saved-import",
+      "save": "草稿已保存 · 版本 2",
+      "source": "#include <cstdio>\nint main() {\n    int revised = 27;\n    std::printf(\"%d\\n\", revised);\n    return revised;\n}\n\n// Edited during resource verification.\n"
+    },
+    {
+      "stage": "final-source-reload-execution",
+      "debugDisabled": false,
+      "exit": "exit · 返回 27",
+      "output": "27\n",
+      "prepareDisabled": false,
+      "resources": "本机资源已校验 · 完整离线状态待集成验收",
+      "runDisabled": false,
+      "save": "草稿已保存 · 版本 2",
+      "source": "#include <cstdio>\nint main() {\n    int revised = 27;\n    std::printf(\"%d\\n\", revised);\n    return revised;\n}\n\n// Edited during resource verification.\n",
+      "state": "terminated",
+      "status": "已结束"
+    }
+  ],
+  "boundary": "Native file chooser/File.text, real IndexedDB save/reopen and compiler/debugger adapters. Candidate response delayed 4s and third request failed 503 in static host. Out-of-order File.text is covered by deterministic Node tests, not injected in this browser."
+}

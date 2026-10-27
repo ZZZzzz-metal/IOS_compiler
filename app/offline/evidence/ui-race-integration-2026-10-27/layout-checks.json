@@ -1,0 +1,45 @@
+{
+  "kind": "actual-desktop-browser-DOM-viewport-checks",
+  "layouts": [
+    {
+      "stage": "portrait-code",
+      "clientWidth": 729,
+      "codeDisplay": "block",
+      "documentWidth": 729,
+      "gutterLineHeight": "24px",
+      "height": 1133,
+      "highlightFont": "",
+      "panelsDisplay": "none",
+      "sourceFont": "",
+      "sourceLineHeight": "24px",
+      "width": 744
+    },
+    {
+      "stage": "portrait-debug-panels",
+      "clientWidth": 744,
+      "codeDisplay": "none",
+      "documentWidth": 744,
+      "gutterLineHeight": "24px",
+      "height": 1133,
+      "highlightFont": "",
+      "panelsDisplay": "block",
+      "sourceFont": "",
+      "sourceLineHeight": "24px",
+      "width": 744
+    },
+    {
+      "stage": "desktop-reset",
+      "clientWidth": 1265,
+      "codeDisplay": "block",
+      "documentWidth": 1265,
+      "gutterLineHeight": "24px",
+      "height": 720,
+      "highlightFont": "",
+      "panelsDisplay": "block",
+      "sourceFont": "",
+      "sourceLineHeight": "24px",
+      "width": 1280
+    }
+  ],
+  "boundary": "744x1133 is a desktop CSS viewport test, not an iPad or touch/soft-keyboard validation. No narrow screenshot is used as device evidence."
+}

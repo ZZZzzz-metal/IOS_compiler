@@ -1,0 +1,22 @@
+{
+  "id": "check",
+  "command": "npm.cmd run check",
+  "invokedVia": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "args": [
+      "--prefix",
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "run",
+      "check"
+    ]
+  },
+  "startedAt": "2026-10-25T11:46:09.035Z",
+  "finishedAt": "2026-10-25T11:46:09.755Z",
+  "durationMs": 719.9238,
+  "exitCode": 0,
+  "signal": null,
+  "errorMessage": null,
+  "outputFile": "check.txt",
+  "outputSHA256": "88b459ca5d751f3885af2f94b62e6b9e7db4d957f0d386a9436189feb059bf83"
+}

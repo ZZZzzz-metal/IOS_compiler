@@ -1,0 +1,22 @@
+✔ complete installation serves navigation and engine with no network after disconnect (23.6524ms)
+✔ wrong bytes never commits a partial cache or removes the previous version (6.0016ms)
+✔ network interrupted never commits a partial cache or removes the previous version (3.571ms)
+✔ HTTP failure never commits a partial cache or removes the previous version (3.8393ms)
+✔ new complete version preserves old version and unrelated caches (4.1058ms)
+✔ unknown files and evicted files return 503 without network repair (2.3843ms)
+✔ cached corruption and descriptor corruption fail the full startup check (5.3048ms)
+✔ explicit prepare repairs corruption through a new full transaction and preserves old cache (3.4794ms)
+✔ failed explicit repair retains the previous complete package (2.3602ms)
+✔ missing launcher navigation supplies a local recovery page without fetching network resources (2.318ms)
+✔ explicit prepare rejects an open workbench and non-launcher callers before any network (2.3989ms)
+✔ a new workbench opened during repair prevents cache commit (2.5834ms)
+✔ ordinary development entry works without a covering worker; foreign covering worker stays rejected (1.5473ms)
+✔ workbench trust checks bundle scope and component identity after the worker handshake (1.0322ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 161.4668

@@ -1,0 +1,126 @@
+
+> ipad-offline-debugger@0.4.0 test:regressions
+> node tests/reproduce.mjs shadow && node tests/reproduce.mjs loop-header
+
+{
+  "name": "shadow",
+  "status": "passed",
+  "samples": [
+    {
+      "line": 6,
+      "actual": {
+        "name": "value",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "19",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "expected": "19"
+    },
+    {
+      "line": 8,
+      "actual": {
+        "name": "value",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "7",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "expected": "7"
+    }
+  ]
+}
+{
+  "name": "loop-header",
+  "status": "passed",
+  "samples": [
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "outOfScope",
+        "reason": "Variable declaration has not executed at this stop",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "2",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "2",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    }
+  ]
+}

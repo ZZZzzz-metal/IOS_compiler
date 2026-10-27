@@ -1,0 +1,1251 @@
+{
+  "kind": "fresh-compiler-to-debugger-initializer-regression",
+  "source": "int seed(int n) {\n  return n + 10;\n}\nint main() {\n  int total = 0;\n  for (int i = 0; i < 2; ++i) {\n    int x = seed(i);\n    total += x;\n  }\n  return total;\n}\n",
+  "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+  "artifactSHA256": "sha256:26ae821aee785bdd5e9638f035f8006efbc0242d7d3f7f0b5d0dfc63f55255fa",
+  "compilerArguments": [
+    "-cc1",
+    "-emit-obj",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-debug-info-kind=standalone",
+    "-dwarf-version=4",
+    "-debugger-tuning=lldb",
+    "-fdebug-compilation-dir",
+    "/project",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-o",
+    "build/main.o",
+    "/project/main.cpp"
+  ],
+  "linkerArguments": [
+    "--no-threads",
+    "--export-dynamic",
+    "-z",
+    "stack-size=1048576",
+    "--max-memory=268435456",
+    "-Llib/wasm32-wasi",
+    "lib/wasm32-wasi/crt1.o",
+    "build/main.o",
+    "-lc++",
+    "-lc++abi",
+    "-lc",
+    "-lm",
+    "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+    "-o",
+    "build/main.wasm"
+  ],
+  "observations": [
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 0,
+      "repetition": 0,
+      "pauseId": "b5cd224a-e9b5-43a7-b897-0fe2eca99e83",
+      "frameId": "b5cd224a-e9b5-43a7-b897-0fe2eca99e83:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2248
+      }
+    },
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 0,
+      "repetition": 1,
+      "pauseId": "b5cd224a-e9b5-43a7-b897-0fe2eca99e83",
+      "frameId": "b5cd224a-e9b5-43a7-b897-0fe2eca99e83:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2248
+      }
+    },
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 0,
+      "repetition": 2,
+      "pauseId": "b5cd224a-e9b5-43a7-b897-0fe2eca99e83",
+      "frameId": "b5cd224a-e9b5-43a7-b897-0fe2eca99e83:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2248
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 0,
+      "repetition": 0,
+      "pauseId": "4e5644c1-1848-4bfb-baa9-1a6de2f81492",
+      "frameId": "4e5644c1-1848-4bfb-baa9-1a6de2f81492:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2259
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 0,
+      "repetition": 1,
+      "pauseId": "4e5644c1-1848-4bfb-baa9-1a6de2f81492",
+      "frameId": "4e5644c1-1848-4bfb-baa9-1a6de2f81492:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2259
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 0,
+      "repetition": 2,
+      "pauseId": "4e5644c1-1848-4bfb-baa9-1a6de2f81492",
+      "frameId": "4e5644c1-1848-4bfb-baa9-1a6de2f81492:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2259
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 0,
+      "repetition": 0,
+      "pauseId": "c5a1ce99-49d3-437f-b5f0-42b4a11d180b",
+      "frameId": "c5a1ce99-49d3-437f-b5f0-42b4a11d180b:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2263
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 0,
+      "repetition": 1,
+      "pauseId": "c5a1ce99-49d3-437f-b5f0-42b4a11d180b",
+      "frameId": "c5a1ce99-49d3-437f-b5f0-42b4a11d180b:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2263
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 0,
+      "repetition": 2,
+      "pauseId": "c5a1ce99-49d3-437f-b5f0-42b4a11d180b",
+      "frameId": "c5a1ce99-49d3-437f-b5f0-42b4a11d180b:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2263
+      }
+    },
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 1,
+      "repetition": 0,
+      "pauseId": "b0e691e2-8173-4789-b756-59f012d9549b",
+      "frameId": "b0e691e2-8173-4789-b756-59f012d9549b:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2327
+      }
+    },
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 1,
+      "repetition": 1,
+      "pauseId": "b0e691e2-8173-4789-b756-59f012d9549b",
+      "frameId": "b0e691e2-8173-4789-b756-59f012d9549b:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2327
+      }
+    },
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 1,
+      "repetition": 2,
+      "pauseId": "b0e691e2-8173-4789-b756-59f012d9549b",
+      "frameId": "b0e691e2-8173-4789-b756-59f012d9549b:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2327
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 1,
+      "repetition": 0,
+      "pauseId": "8e4df40f-ed35-4066-81ec-8acc7141e520",
+      "frameId": "8e4df40f-ed35-4066-81ec-8acc7141e520:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2338
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 1,
+      "repetition": 1,
+      "pauseId": "8e4df40f-ed35-4066-81ec-8acc7141e520",
+      "frameId": "8e4df40f-ed35-4066-81ec-8acc7141e520:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2338
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 1,
+      "repetition": 2,
+      "pauseId": "8e4df40f-ed35-4066-81ec-8acc7141e520",
+      "frameId": "8e4df40f-ed35-4066-81ec-8acc7141e520:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2338
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 1,
+      "repetition": 0,
+      "pauseId": "647e61f5-879d-4870-928c-ee1cac0f122f",
+      "frameId": "647e61f5-879d-4870-928c-ee1cac0f122f:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "11",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "11",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          11,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 11,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2342
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 1,
+      "repetition": 1,
+      "pauseId": "647e61f5-879d-4870-928c-ee1cac0f122f",
+      "frameId": "647e61f5-879d-4870-928c-ee1cac0f122f:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "11",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "11",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          11,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 11,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2342
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 1,
+      "repetition": 2,
+      "pauseId": "647e61f5-879d-4870-928c-ee1cac0f122f",
+      "frameId": "647e61f5-879d-4870-928c-ee1cac0f122f:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "11",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "11",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          11,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 11,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2342
+      }
+    }
+  ],
+  "failures": [],
+  "events": [
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 1,
+      "kind": "state",
+      "state": "starting"
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 2,
+      "kind": "breakpoints",
+      "bindings": [
+        {
+          "breakpointId": "b46de593-6e93-45cf-b853-eb615498e299",
+          "requested": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 1
+          },
+          "status": "bound",
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 3,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 4,
+      "kind": "paused",
+      "pauseId": "b5cd224a-e9b5-43a7-b897-0fe2eca99e83",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 2,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 5,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 6,
+      "kind": "paused",
+      "pauseId": "4e5644c1-1848-4bfb-baa9-1a6de2f81492",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 7,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 8,
+      "kind": "paused",
+      "pauseId": "c5a1ce99-49d3-437f-b5f0-42b4a11d180b",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 9,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 10,
+      "kind": "paused",
+      "pauseId": "b0e691e2-8173-4789-b756-59f012d9549b",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 2,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 11,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 12,
+      "kind": "paused",
+      "pauseId": "8e4df40f-ed35-4066-81ec-8acc7141e520",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 13,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 14,
+      "kind": "paused",
+      "pauseId": "647e61f5-879d-4870-928c-ee1cac0f122f",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 15,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "42ca22fe-f478-4323-87d6-9303a980efa0",
+      "buildId": "build-99323c5f-dcc1-4ffb-b595-a8e6c639bc15",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 16,
+      "kind": "terminated",
+      "reason": "exit",
+      "exitCode": 21
+    }
+  ]
+}

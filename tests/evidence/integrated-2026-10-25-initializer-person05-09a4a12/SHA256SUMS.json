@@ -1,0 +1,107 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "acceptance-command.json",
+    "byteLength": 339,
+    "sha256": "c01c7f1bd7c7337dbe79bc01a8344e05adfa79488966f38f13f61b6caf5a9066"
+  },
+  {
+    "file": "acceptance-output.txt",
+    "byteLength": 1632,
+    "sha256": "4fa763a35818a7cca3db619e0cff85b8d4d2c9315c5fca839ebad90bbfa09091"
+  },
+  {
+    "file": "check-output.txt",
+    "byteLength": 359,
+    "sha256": "dafe45a77763f0bb85e2fd04f7720666451d79a52f552d93ec6ce5f4a325443a"
+  },
+  {
+    "file": "history-preservation.json",
+    "byteLength": 6305,
+    "sha256": "dc99b11a2e494ec867cd4bc74bbfc31700850edff447f6019e6ffbb87d099061"
+  },
+  {
+    "file": "independent.json",
+    "byteLength": 592326,
+    "sha256": "98b1cde0bf6d920c29c2443ccc8ac5ab5a1fc83e84563d7e4499ddb40b1070e4"
+  },
+  {
+    "file": "independent.tap",
+    "byteLength": 1606,
+    "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+  },
+  {
+    "file": "initializer-lifetime.json",
+    "byteLength": 531754,
+    "sha256": "0058ad7c87abb18cb0831b07759ef4835e018c109745ab601dd26aeda7839690"
+  },
+  {
+    "file": "initializer-lifetime.tap",
+    "byteLength": 310,
+    "sha256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029"
+  },
+  {
+    "file": "integration-command.json",
+    "byteLength": 340,
+    "sha256": "6b386824b5239e212403dad0191b72dde15309ff5d8d91205426dab8cbc023fc"
+  },
+  {
+    "file": "integration-output.txt",
+    "byteLength": 531,
+    "sha256": "5939cdd220c65dbca4a518a7294e9ab26b243ca69c727ba3f156cd44136f87c8"
+  },
+  {
+    "file": "integration-profile.json",
+    "byteLength": 17529,
+    "sha256": "666d216c82e40bc926038397c6f5597a71e4192074eab860e2a08566e43750c9"
+  },
+  {
+    "file": "modules-command.json",
+    "byteLength": 336,
+    "sha256": "1bdcbe52577dfd5a5408b3550d544fb49a5017cb367daaa4aa403849e90dee4f"
+  },
+  {
+    "file": "modules-output.txt",
+    "byteLength": 10481,
+    "sha256": "e52488b6f7be69565cf277ca80c283bbfc53d9eeea624d120cc9df6da8960bc8"
+  },
+  {
+    "file": "regression-loop-header.json",
+    "byteLength": 103339,
+    "sha256": "9ab565f355234e8ba189f13c95d6a0d2a68f13fbebd9576cf7dc0d497a9251cb"
+  },
+  {
+    "file": "regression-shadow.json",
+    "byteLength": 53654,
+    "sha256": "db0e1b5a9ac4304b74b2f7ce05e887c35fefd81adb466e96b161e196a8ef3124"
+  },
+  {
+    "file": "shared-checks.json",
+    "byteLength": 474,
+    "sha256": "f004c98639149a6da6e6210c3e06fbb63a8d1041bf7eea31c1a5d5f9279e6be1"
+  },
+  {
+    "file": "summary.json",
+    "byteLength": 2280,
+    "sha256": "68cdc4acad1633c0711cb1652f5033eb4a09b0b190724070276f6d6da40e614e"
+  },
+  {
+    "file": "test-output.txt",
+    "byteLength": 1145,
+    "sha256": "e2dce4254289cc6fafa6ef215d58d36cead875e47b72d45e190232b35c1b3b5c"
+  },
+  {
+    "file": "test-regressions-output.txt",
+    "byteLength": 2687,
+    "sha256": "02423d395b0b00465dbb33c11235f3d0f53f1692026d52b26642fea36c425137"
+  },
+  {
+    "file": "verify-comparison.mjs",
+    "byteLength": 6918,
+    "sha256": "64e10c86a40575282f38d4cae7a111885cd8dd46cc8a9c419b9afc41d4b8ae49"
+  }
+]

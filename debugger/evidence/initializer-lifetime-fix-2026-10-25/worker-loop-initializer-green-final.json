@@ -1,0 +1,856 @@
+{
+  "kind": "fresh-compiler-to-real-node-worker-initializer-regression",
+  "source": "int seed(int n) {\n  return n + 10;\n}\nint main() {\n  int total = 0;\n  for (int i = 0; i < 2; ++i) {\n    int x = seed(i);\n    total += x;\n  }\n  return total;\n}\n",
+  "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+  "artifactSHA256": "sha256:26ae821aee785bdd5e9638f035f8006efbc0242d7d3f7f0b5d0dfc63f55255fa",
+  "observations": [
+    {
+      "stage": "worker-callee-before-store",
+      "iteration": 0,
+      "repetition": 0,
+      "pauseId": "abae5de6-50b0-462e-8f0d-ffbc1d0764dd",
+      "frameId": "abae5de6-50b0-462e-8f0d-ffbc1d0764dd:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-callee-before-store",
+      "iteration": 0,
+      "repetition": 1,
+      "pauseId": "abae5de6-50b0-462e-8f0d-ffbc1d0764dd",
+      "frameId": "abae5de6-50b0-462e-8f0d-ffbc1d0764dd:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-callee-before-store",
+      "iteration": 0,
+      "repetition": 2,
+      "pauseId": "abae5de6-50b0-462e-8f0d-ffbc1d0764dd",
+      "frameId": "abae5de6-50b0-462e-8f0d-ffbc1d0764dd:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-returned-before-store",
+      "iteration": 0,
+      "repetition": 0,
+      "pauseId": "3669385c-790c-4ff9-b540-d27417416625",
+      "frameId": "3669385c-790c-4ff9-b540-d27417416625:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-returned-before-store",
+      "iteration": 0,
+      "repetition": 1,
+      "pauseId": "3669385c-790c-4ff9-b540-d27417416625",
+      "frameId": "3669385c-790c-4ff9-b540-d27417416625:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-returned-before-store",
+      "iteration": 0,
+      "repetition": 2,
+      "pauseId": "3669385c-790c-4ff9-b540-d27417416625",
+      "frameId": "3669385c-790c-4ff9-b540-d27417416625:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-body-after-store",
+      "iteration": 0,
+      "repetition": 0,
+      "pauseId": "d1b4590f-0c5f-4d86-a6e7-75e8404c3c58",
+      "frameId": "d1b4590f-0c5f-4d86-a6e7-75e8404c3c58:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-body-after-store",
+      "iteration": 0,
+      "repetition": 1,
+      "pauseId": "d1b4590f-0c5f-4d86-a6e7-75e8404c3c58",
+      "frameId": "d1b4590f-0c5f-4d86-a6e7-75e8404c3c58:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-body-after-store",
+      "iteration": 0,
+      "repetition": 2,
+      "pauseId": "d1b4590f-0c5f-4d86-a6e7-75e8404c3c58",
+      "frameId": "d1b4590f-0c5f-4d86-a6e7-75e8404c3c58:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-callee-before-store",
+      "iteration": 1,
+      "repetition": 0,
+      "pauseId": "e71f3948-7784-40b3-970b-af0f33598c6d",
+      "frameId": "e71f3948-7784-40b3-970b-af0f33598c6d:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-callee-before-store",
+      "iteration": 1,
+      "repetition": 1,
+      "pauseId": "e71f3948-7784-40b3-970b-af0f33598c6d",
+      "frameId": "e71f3948-7784-40b3-970b-af0f33598c6d:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-callee-before-store",
+      "iteration": 1,
+      "repetition": 2,
+      "pauseId": "e71f3948-7784-40b3-970b-af0f33598c6d",
+      "frameId": "e71f3948-7784-40b3-970b-af0f33598c6d:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-returned-before-store",
+      "iteration": 1,
+      "repetition": 0,
+      "pauseId": "e205a2b6-9a80-4d6a-a3e6-9a1c9a3d1050",
+      "frameId": "e205a2b6-9a80-4d6a-a3e6-9a1c9a3d1050:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-returned-before-store",
+      "iteration": 1,
+      "repetition": 1,
+      "pauseId": "e205a2b6-9a80-4d6a-a3e6-9a1c9a3d1050",
+      "frameId": "e205a2b6-9a80-4d6a-a3e6-9a1c9a3d1050:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-returned-before-store",
+      "iteration": 1,
+      "repetition": 2,
+      "pauseId": "e205a2b6-9a80-4d6a-a3e6-9a1c9a3d1050",
+      "frameId": "e205a2b6-9a80-4d6a-a3e6-9a1c9a3d1050:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this declaration lifetime",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this declaration lifetime",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-body-after-store",
+      "iteration": 1,
+      "repetition": 0,
+      "pauseId": "11e095ca-7a9f-4ce8-a557-5708b6afb1c5",
+      "frameId": "11e095ca-7a9f-4ce8-a557-5708b6afb1c5:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "11",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "11",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-body-after-store",
+      "iteration": 1,
+      "repetition": 1,
+      "pauseId": "11e095ca-7a9f-4ce8-a557-5708b6afb1c5",
+      "frameId": "11e095ca-7a9f-4ce8-a557-5708b6afb1c5:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "11",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "11",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    },
+    {
+      "stage": "worker-body-after-store",
+      "iteration": 1,
+      "repetition": 2,
+      "pauseId": "11e095ca-7a9f-4ce8-a557-5708b6afb1c5",
+      "frameId": "11e095ca-7a9f-4ce8-a557-5708b6afb1c5:wasm-frame-22",
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "11",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "11",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 1,
+      "kind": "state",
+      "state": "starting"
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 2,
+      "kind": "breakpoints",
+      "bindings": [
+        {
+          "breakpointId": "90ae3b53-a53b-4451-bd52-3f7d61f0606b",
+          "requested": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 1
+          },
+          "status": "bound",
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 3,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 4,
+      "kind": "paused",
+      "pauseId": "abae5de6-50b0-462e-8f0d-ffbc1d0764dd",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 2,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 5,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 6,
+      "kind": "paused",
+      "pauseId": "3669385c-790c-4ff9-b540-d27417416625",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 7,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 8,
+      "kind": "paused",
+      "pauseId": "d1b4590f-0c5f-4d86-a6e7-75e8404c3c58",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 9,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 10,
+      "kind": "paused",
+      "pauseId": "e71f3948-7784-40b3-970b-af0f33598c6d",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 2,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 11,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 12,
+      "kind": "paused",
+      "pauseId": "e205a2b6-9a80-4d6a-a3e6-9a1c9a3d1050",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 13,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 14,
+      "kind": "paused",
+      "pauseId": "11e095ca-7a9f-4ce8-a557-5708b6afb1c5",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 15,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "120a5465-8c4b-4e76-a228-9dc0a7a090a2",
+      "buildId": "build-9fcf7c36-94a0-4be3-8e9b-ff2368985ae4",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-cf02b4efe9477db1",
+      "eventSeq": 16,
+      "kind": "terminated",
+      "reason": "exit",
+      "exitCode": 21
+    }
+  ]
+}

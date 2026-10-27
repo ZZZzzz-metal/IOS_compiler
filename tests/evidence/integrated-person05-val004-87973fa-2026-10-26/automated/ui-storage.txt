@@ -1,0 +1,46 @@
+
+> ipad-offline-debugger@0.4.0 test:ui
+> node --test ui/checks/*.test.mjs storage/checks/*.test.mjs
+
+✔ source export preserves exact user bytes while project export round-trips driver and stdin (3.8312ms)
+✔ invalid or unsupported project imports fail without invoking storage (0.4651ms)
+✔ unavailable local storage returns an explicit failure (0.233ms)
+✔ autosave serializes writes and coalesces typing during a slow save (0.5712ms)
+✔ failed in-flight save retains the latest edit for an explicit retry (0.9434ms)
+✔ a failed restore cannot silently create a new draft over unread local data (0.1731ms)
+✔ VAL-004: deleting draft requests cannot hide an existing snapshot binding (1.6153ms)
+✔ new dirty-draft requests stay separate from the old snapshot collection (0.1869ms)
+✔ editable binding status is associated only with both matching source and session (0.1627ms)
+✔ a snapshot from a different or absent session cannot inherit its bindings (0.1231ms)
+✔ snapshot remains read-only even while draft source bytes still match (0.0922ms)
+✔ snapshot preserves pending, invalid reasons, and all relocated actual positions (0.1248ms)
+✔ user.inc and driver retain separate requested and actual source paths (0.1447ms)
+✔ replacement bindings and an authoritative empty resync replace the selected snapshot collection (0.0903ms)
+✔ display selection leaves input requests, reasons and actual arrays unchanged (0.1814ms)
+✔ highlight escapes source markup and keeps multiline comments inside valid per-line spans (1.7192ms)
+✔ indent at the beginning of an empty first line does not duplicate the newline (0.6663ms)
+✔ multiline indent and outdent exclude the line after a selected newline (0.1895ms)
+✔ UI consumer reads a fresh actual C++ build, bound breakpoint, all steps, caller, containers and output (1247.4665ms)
+✔ editable driver compiles real separate user.inc and driver.cpp and preserves driver edit identity (1352.6719ms)
+✔ late start ACK cannot replace an already terminated short program (1.8023ms)
+✔ resume immediately invalidates pause; stale stack and ACK do not restore it (0.984ms)
+✔ stop dispatches while start ACK remains unresolved (0.209ms)
+✔ foreign sessions and duplicate events cannot overwrite current view (0.2319ms)
+✔ sequence gap clears pause, then resync replays only newer contiguous events (0.6172ms)
+✔ resync refuses an older snapshot and keeps inspection disabled (0.4484ms)
+✔ a previous frame variable response cannot replace selected caller data (1.1108ms)
+✔ resync buffer overflow requests another authoritative snapshot (0.1756ms)
+✔ scope pagination advertises unread values and appends each page once (0.4797ms)
+✔ a rejected stale query does not display an error on a new pause (0.3545ms)
+✔ output history stays bounded and truncation is explicit (0.2886ms)
+✔ breakpoint replacements are serialized and actual bindings come from events (0.2775ms)
+✔ an old rejected ACK cannot invalidate the authoritative resynced pause (0.1817ms)
+✔ VAL-004 real session keeps deleted-draft breakpoint at i=0/i=1; a new build has no breakpoint and exits 3 (1025.6663ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 34
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2832.3626

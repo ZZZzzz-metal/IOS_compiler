@@ -1,0 +1,1276 @@
+{
+  "kind": "fresh-compiler-to-debugger-initializer-regression",
+  "source": "int seed(int n) {\n  return n + 10;\n}\nint main() {\n  int total = 0;\n  for (int i = 0; i < 2; ++i) {\n    int x = seed(i);\n    total += x;\n  }\n  return total;\n}\n",
+  "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+  "artifactSHA256": "sha256:26ae821aee785bdd5e9638f035f8006efbc0242d7d3f7f0b5d0dfc63f55255fa",
+  "compilerArguments": [
+    "-cc1",
+    "-emit-obj",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-debug-info-kind=standalone",
+    "-dwarf-version=4",
+    "-debugger-tuning=lldb",
+    "-fdebug-compilation-dir",
+    "/project",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-o",
+    "build/main.o",
+    "/project/main.cpp"
+  ],
+  "linkerArguments": [
+    "--no-threads",
+    "--export-dynamic",
+    "-z",
+    "stack-size=1048576",
+    "--max-memory=268435456",
+    "-Llib/wasm32-wasi",
+    "lib/wasm32-wasi/crt1.o",
+    "build/main.o",
+    "-lc++",
+    "-lc++abi",
+    "-lc",
+    "-lm",
+    "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+    "-o",
+    "build/main.wasm"
+  ],
+  "observations": [
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 0,
+      "repetition": 0,
+      "pauseId": "3f9e5760-b2fd-46d7-9f55-0ea0d17fe68c",
+      "frameId": "3f9e5760-b2fd-46d7-9f55-0ea0d17fe68c:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this frame",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this frame",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2248
+      }
+    },
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 0,
+      "repetition": 1,
+      "pauseId": "3f9e5760-b2fd-46d7-9f55-0ea0d17fe68c",
+      "frameId": "3f9e5760-b2fd-46d7-9f55-0ea0d17fe68c:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this frame",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this frame",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2248
+      }
+    },
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 0,
+      "repetition": 2,
+      "pauseId": "3f9e5760-b2fd-46d7-9f55-0ea0d17fe68c",
+      "frameId": "3f9e5760-b2fd-46d7-9f55-0ea0d17fe68c:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this frame",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this frame",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2248
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 0,
+      "repetition": 0,
+      "pauseId": "c2c27586-6691-4cc9-89a6-e19ef87ddde5",
+      "frameId": "c2c27586-6691-4cc9-89a6-e19ef87ddde5:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this frame",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this frame",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2259
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 0,
+      "repetition": 1,
+      "pauseId": "c2c27586-6691-4cc9-89a6-e19ef87ddde5",
+      "frameId": "c2c27586-6691-4cc9-89a6-e19ef87ddde5:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this frame",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this frame",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2259
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 0,
+      "repetition": 2,
+      "pauseId": "c2c27586-6691-4cc9-89a6-e19ef87ddde5",
+      "frameId": "c2c27586-6691-4cc9-89a6-e19ef87ddde5:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "unavailable",
+        "reason": "Storage has not been initialized during this frame",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "unavailable",
+          "reason": "Storage has not been initialized during this frame",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 0,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2259
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 0,
+      "repetition": 0,
+      "pauseId": "182b9ddf-dea3-4ab9-badd-36356b0ca0df",
+      "frameId": "182b9ddf-dea3-4ab9-badd-36356b0ca0df:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2263
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 0,
+      "repetition": 1,
+      "pauseId": "182b9ddf-dea3-4ab9-badd-36356b0ca0df",
+      "frameId": "182b9ddf-dea3-4ab9-badd-36356b0ca0df:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2263
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 0,
+      "repetition": 2,
+      "pauseId": "182b9ddf-dea3-4ab9-badd-36356b0ca0df",
+      "frameId": "182b9ddf-dea3-4ab9-badd-36356b0ca0df:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2263
+      }
+    },
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 1,
+      "repetition": 0,
+      "pauseId": "45fca0ec-06f3-4657-947b-47945ed43494",
+      "frameId": "45fca0ec-06f3-4657-947b-47945ed43494:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2327
+      }
+    },
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 1,
+      "repetition": 1,
+      "pauseId": "45fca0ec-06f3-4657-947b-47945ed43494",
+      "frameId": "45fca0ec-06f3-4657-947b-47945ed43494:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2327
+      }
+    },
+    {
+      "stage": "callee-before-initializer-store",
+      "iteration": 1,
+      "repetition": 2,
+      "pauseId": "45fca0ec-06f3-4657-947b-47945ed43494",
+      "frameId": "45fca0ec-06f3-4657-947b-47945ed43494:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2327
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 1,
+      "repetition": 0,
+      "pauseId": "2326e7e0-0a45-40b1-a3fc-e75f4997c17c",
+      "frameId": "2326e7e0-0a45-40b1-a3fc-e75f4997c17c:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2338
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 1,
+      "repetition": 1,
+      "pauseId": "2326e7e0-0a45-40b1-a3fc-e75f4997c17c",
+      "frameId": "2326e7e0-0a45-40b1-a3fc-e75f4997c17c:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2338
+      }
+    },
+    {
+      "stage": "returned-before-initializer-store",
+      "iteration": 1,
+      "repetition": 2,
+      "pauseId": "2326e7e0-0a45-40b1-a3fc-e75f4997c17c",
+      "frameId": "2326e7e0-0a45-40b1-a3fc-e75f4997c17c:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "10",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          10,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 10,
+        "pc": 627,
+        "callPC": 621,
+        "lastPC": 621,
+        "executedInstructions": 2338
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 1,
+      "repetition": 0,
+      "pauseId": "fcf4ad5f-a3d5-4048-8fc6-90be14218871",
+      "frameId": "fcf4ad5f-a3d5-4048-8fc6-90be14218871:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "11",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "11",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          11,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 11,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2342
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 1,
+      "repetition": 1,
+      "pauseId": "fcf4ad5f-a3d5-4048-8fc6-90be14218871",
+      "frameId": "fcf4ad5f-a3d5-4048-8fc6-90be14218871:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "11",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "11",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          11,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 11,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2342
+      }
+    },
+    {
+      "stage": "body-after-actual-initializer-store",
+      "iteration": 1,
+      "repetition": 2,
+      "pauseId": "fcf4ad5f-a3d5-4048-8fc6-90be14218871",
+      "frameId": "fcf4ad5f-a3d5-4048-8fc6-90be14218871:wasm-frame-22",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      },
+      "index": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "x": {
+        "name": "x",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "11",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "localX": [
+        {
+          "name": "x",
+          "type": "int",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "11",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      ],
+      "machine": {
+        "address": 1050080,
+        "bytes": [
+          11,
+          0,
+          0,
+          0
+        ],
+        "signedValue": 11,
+        "pc": 636,
+        "callPC": 621,
+        "lastPC": 633,
+        "executedInstructions": 2342
+      }
+    }
+  ],
+  "failures": [
+    {
+      "label": "callee-before-initializer-store, iteration 1, query 0: nearest x",
+      "message": "unfinished new lifetime must not expose prior x: {\"name\":\"x\",\"type\":\"int\",\"truncated\":false,\"availability\":\"available\",\"displayValue\":\"10\",\"namedCount\":0,\"indexedCount\":0}"
+    },
+    {
+      "label": "callee-before-initializer-store, iteration 1, query 1: nearest x",
+      "message": "unfinished new lifetime must not expose prior x: {\"name\":\"x\",\"type\":\"int\",\"truncated\":false,\"availability\":\"available\",\"displayValue\":\"10\",\"namedCount\":0,\"indexedCount\":0}"
+    },
+    {
+      "label": "callee-before-initializer-store, iteration 1, query 2: nearest x",
+      "message": "unfinished new lifetime must not expose prior x: {\"name\":\"x\",\"type\":\"int\",\"truncated\":false,\"availability\":\"available\",\"displayValue\":\"10\",\"namedCount\":0,\"indexedCount\":0}"
+    },
+    {
+      "label": "returned-before-initializer-store, iteration 1, query 0: nearest x",
+      "message": "unfinished new lifetime must not expose prior x: {\"name\":\"x\",\"type\":\"int\",\"truncated\":false,\"availability\":\"available\",\"displayValue\":\"10\",\"namedCount\":0,\"indexedCount\":0}"
+    },
+    {
+      "label": "returned-before-initializer-store, iteration 1, query 1: nearest x",
+      "message": "unfinished new lifetime must not expose prior x: {\"name\":\"x\",\"type\":\"int\",\"truncated\":false,\"availability\":\"available\",\"displayValue\":\"10\",\"namedCount\":0,\"indexedCount\":0}"
+    },
+    {
+      "label": "returned-before-initializer-store, iteration 1, query 2: nearest x",
+      "message": "unfinished new lifetime must not expose prior x: {\"name\":\"x\",\"type\":\"int\",\"truncated\":false,\"availability\":\"available\",\"displayValue\":\"10\",\"namedCount\":0,\"indexedCount\":0}"
+    }
+  ],
+  "events": [
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 1,
+      "kind": "state",
+      "state": "starting"
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 2,
+      "kind": "breakpoints",
+      "bindings": [
+        {
+          "breakpointId": "8fd6c06e-07a2-477f-b70f-9a46755214eb",
+          "requested": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 1
+          },
+          "status": "bound",
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 3,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 4,
+      "kind": "paused",
+      "pauseId": "3f9e5760-b2fd-46d7-9f55-0ea0d17fe68c",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 2,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 5,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 6,
+      "kind": "paused",
+      "pauseId": "c2c27586-6691-4cc9-89a6-e19ef87ddde5",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 7,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 8,
+      "kind": "paused",
+      "pauseId": "182b9ddf-dea3-4ab9-badd-36356b0ca0df",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 9,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 10,
+      "kind": "paused",
+      "pauseId": "45fca0ec-06f3-4657-947b-47945ed43494",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 2,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 11,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 12,
+      "kind": "paused",
+      "pauseId": "2326e7e0-0a45-40b1-a3fc-e75f4997c17c",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 13,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 14,
+      "kind": "paused",
+      "pauseId": "fcf4ad5f-a3d5-4048-8fc6-90be14218871",
+      "reason": "step",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 8,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 15,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "c3af5fb8-cee0-4fcf-b8a9-e5fe333df739",
+      "buildId": "build-627c1d7f-5c5c-425e-918a-b0b60a3ddfe6",
+      "sourceHash": "sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee",
+      "compatibilityId": "integration-prototype-c992f82a5f1bad99",
+      "eventSeq": 16,
+      "kind": "terminated",
+      "reason": "exit",
+      "exitCode": 21
+    }
+  ]
+}

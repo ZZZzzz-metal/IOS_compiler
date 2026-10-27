@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "sourceBaseRevision": "dc65469c85616f175a735b9977cb37f8c6f188c2",
+  "scope": "Actual working-tree bytes sealed after integration, browser and archive checks. Source base contains both delivered modules; root increments are explicitly fingerprinted. Product capabilities and device acceptance are not changed.",
+  "sources": [
+    {
+      "file": "AGENTS.md",
+      "byteLength": 2925,
+      "sha256": "22cb0ce9a2b0b9e209900177cdef24270bb9ad7429906e7f495b0d4e735917b3"
+    },
+    {
+      "file": "README.md",
+      "byteLength": 7182,
+      "sha256": "b36dc03bc995b667150057f193b7f334d8b634d1d32b583d2d3f126b2f65a41e"
+    },
+    {
+      "file": "package.json",
+      "byteLength": 1862,
+      "sha256": "fc20e5f3a34957c80a159fb20959b39a1910f6c3f4481b191a4266081e91ced6"
+    },
+    {
+      "file": "package-lock.json",
+      "byteLength": 256,
+      "sha256": "7b1f413b82527a7ff05fe096447e8f36216482519a1797685a0bcedab7b2eadf"
+    },
+    {
+      "file": "app/main.mjs",
+      "byteLength": 2824,
+      "sha256": "292bc882e80092949069e79986cc93c9c22255b2b40330e43545c9ca82a99e12"
+    },
+    {
+      "file": "app/offline/build.mjs",
+      "byteLength": 8908,
+      "sha256": "a035b12d05209fab7b63a93030e90ef046bf6bcf1bf2215ec3a0a2994e4bf6cd"
+    },
+    {
+      "file": "app/offline/serve.mjs",
+      "byteLength": 2712,
+      "sha256": "51352af4a20579a4e2279e4072c1f6d1b270e64f96ab6a3f09dda2a045bc96b8"
+    },
+    {
+      "file": "app/offline/browser/worker-template.js",
+      "byteLength": 8520,
+      "sha256": "345f5a5cbaac68ae60ab2a4815f88ea0ab49178bb90d91694ba3d484b79e8c45"
+    },
+    {
+      "file": "app/offline/browser/index.html",
+      "byteLength": 2498,
+      "sha256": "5b52ac7c5891f1d0276f91b143d9baca96907d01fe3a406187d1681e06461053"
+    },
+    {
+      "file": "app/offline/browser/launcher.mjs",
+      "byteLength": 5841,
+      "sha256": "dcc012c895f7bda8135882271e11071fcbbe161a4f875644e821a4c82bb5e05e"
+    },
+    {
+      "file": "app/offline/browser/trust.mjs",
+      "byteLength": 2412,
+      "sha256": "fbd1013dbfd3b3b986c9b79882434000cb72af738eb4985349e3634459ae300e"
+    },
+    {
+      "file": "app/offline/checks/worker.test.mjs",
+      "byteLength": 15980,
+      "sha256": "9768cd325506ae7cb267e84903d57bc796529247b5690c1bfd6aa3cf155a235c"
+    },
+    {
+      "file": "ui/probe.html",
+      "byteLength": 11333,
+      "sha256": "08927bd3874067037941936bebd0456eea993bb69564f19ab878e1723b04f499"
+    },
+    {
+      "file": "ui/style.css",
+      "byteLength": 24157,
+      "sha256": "55448fc37ed3599c53ae6b2dea890ad2d0e3a33f57c18dda8ca1d56aa1467091"
+    },
+    {
+      "file": "ui/src/main.mjs",
+      "byteLength": 28933,
+      "sha256": "1b00e1821a0b3bf1e37d4d7109fa0a684dce13b1af29f1f322b8d1eb5674ea6f"
+    },
+    {
+      "file": "ui/src/editor.mjs",
+      "byteLength": 2518,
+      "sha256": "26e0eb00f16f4fac9cebde7c7db702559823c2acb9288cf8fde89da35a2767e6"
+    },
+    {
+      "file": "ui/src/session-controller.mjs",
+      "byteLength": 17167,
+      "sha256": "ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84"
+    },
+    {
+      "file": "ui/checks/import-order.test.mjs",
+      "byteLength": 16960,
+      "sha256": "72af3c49877895d08368251c3bcfc35f4a8c71eb0d9dde2274a6e0141ddc2155"
+    },
+    {
+      "file": "ui/checks/preparation-gate.test.mjs",
+      "byteLength": 17294,
+      "sha256": "4ba2d1a476f950740769693e1ca4568fe74af6b42f421fbf5392def8ad39d764"
+    },
+    {
+      "file": "storage/src/draft-store.mjs",
+      "byteLength": 8047,
+      "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+    },
+    {
+      "file": "storage/src/autosave.mjs",
+      "byteLength": 2767,
+      "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+    },
+    {
+      "file": "debugger/src/variables.mjs",
+      "byteLength": 43287,
+      "sha256": "7a678889ab7b8f21dcc39f83c51771b9fff8df7103bec92275937c8ff40f996c"
+    },
+    {
+      "file": "debugger/src/worker-adapter.mjs",
+      "byteLength": 8478,
+      "sha256": "1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6"
+    },
+    {
+      "file": "docs/architecture/IPAD-USER-MANUAL.md",
+      "byteLength": 24919,
+      "sha256": "7d1c003bd3d4f52dd0ce82738c77acecc67a10252567d05aa3eafc968fe9ec51"
+    },
+    {
+      "file": "docs/architecture/IPAD-UPDATE-v0.4.4.md",
+      "byteLength": 3640,
+      "sha256": "6ad0b6d48b614a10fbaa6cb1fa30784610115c56f4952a69b21b3c9141bba450"
+    },
+    {
+      "file": "docs/architecture/WATCH-PUBLICATION-INTEGRATION-2026-10-27.md",
+      "byteLength": 7231,
+      "sha256": "fc8b09767f45aa95fe90eba7904151049db4044a9f5fcb563e9909372fc89886"
+    },
+    {
+      "file": "docs/architecture/STATUS.md",
+      "byteLength": 8537,
+      "sha256": "9fec86c1582fc9824d0707a303fda72bcec69e40ff77f0e775e65cbef8e4cdea"
+    },
+    {
+      "file": "docs/architecture/GATES.md",
+      "byteLength": 6995,
+      "sha256": "44b3ed24daedd3ec2c42c4380193c998792af400d77f3d1fd867b544003bd5e2"
+    },
+    {
+      "file": "docs/architecture/START-HERE.md",
+      "byteLength": 7049,
+      "sha256": "5b20e5194d0480781a6e7a93315b68779de4773e6d08b0436e0abdfddbc86c8e"
+    },
+    {
+      "file": "docs/handoffs/01.md",
+      "byteLength": 19075,
+      "sha256": "95dd654d69f55f3de16f22dd6b654bf12b0ed6994c127bac375a7af7501de1a7"
+    },
+    {
+      "file": "contracts/capabilities.json",
+      "byteLength": 21256,
+      "sha256": "4f727ff3669658907ed98fae841901a236ebe9bbb8497060a77d2b6c1599cd13"
+    },
+    {
+      "file": "contracts/compatibility-profiles.json",
+      "byteLength": 307,
+      "sha256": "c350debe885bcee8f4c39f7b870184e14255ce64070d1d6a42fe913014a3cd47"
+    },
+    {
+      "file": "contracts/offline-bundle.json",
+      "byteLength": 265,
+      "sha256": "d1174a23123aeff163fcb182b147a5ebd284baea315fa720b4bd6bcf1d3910e0"
+    },
+    {
+      "file": "debugger/checks/watch-semantics.test.mjs",
+      "byteLength": 10908,
+      "sha256": "b4ba6e61e15b31aa376cc70eff02e4199b73bd7a000bcd17231ab75334130a9e"
+    },
+    {
+      "file": "tests/ui-concurrency-independent.mjs",
+      "byteLength": 22270,
+      "sha256": "3c7c3b2c228ce95651db3bcc69851279b74b445dcf9abc20165a0d4fe233ea4b"
+    },
+    {
+      "file": "docs/architecture/PROJECT-RETROSPECTIVE-2026-10-27.md",
+      "byteLength": 15559,
+      "sha256": "751f265fc5686d9c774ae4e9af685b14e20282f40b37f0169b252103b97c32da"
+    },
+    {
+      "file": "docs/architecture/original-plan/.gitattributes",
+      "byteLength": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "file": "docs/architecture/original-plan/00-总览与启动顺序.md",
+      "byteLength": 5488,
+      "sha256": "f5829876a5450c4f3e6fcaac2a8c688a80bfa48067d7298bef3757c473f3c836"
+    },
+    {
+      "file": "docs/architecture/original-plan/01-总架构与集成.md",
+      "byteLength": 4913,
+      "sha256": "decc2d3e06ac9c987f2edf40f4bdedc3b2050f8a6ceb107583657112e800e65a"
+    },
+    {
+      "file": "docs/architecture/original-plan/02-离线编译工具链.md",
+      "byteLength": 4883,
+      "sha256": "67bbb4e59e276d56255cce9464facde9a6987b6f720cd5d55c181dfd3d08f72c"
+    },
+    {
+      "file": "docs/architecture/original-plan/03-运行与源码级调试.md",
+      "byteLength": 5228,
+      "sha256": "d8291f7dfb67777a7459f8ce34283c98992af643a27d3d0d6fbcdddc056e40ef"
+    },
+    {
+      "file": "docs/architecture/original-plan/04-iPad编辑器与调试界面.md",
+      "byteLength": 5154,
+      "sha256": "acdd56c87607011e4cfeda21cecfa3a95fb621bd433e7ffd3fd7b46d1b70b8a3"
+    },
+    {
+      "file": "docs/architecture/original-plan/05-独立测试与验收.md",
+      "byteLength": 5293,
+      "sha256": "c4f1b27f7a57b6e20651c931e99545ce018f42ba52d1f7600e2116af684403de"
+    },
+    {
+      "file": "docs/architecture/original-plan/README.md",
+      "byteLength": 1100,
+      "sha256": "c36e52719789098c78939c3ced70ef63ce8d44c0f7125a36eae453910b05f73b"
+    },
+    {
+      "file": "docs/architecture/original-plan/SHA256SUMS.json",
+      "byteLength": 983,
+      "sha256": "428b6021edc64e7b6bd41e5a629353e30778ca0fd774d302e5f552eec7fcc77c"
+    }
+  ]
+}

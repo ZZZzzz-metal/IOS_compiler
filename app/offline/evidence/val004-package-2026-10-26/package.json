@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "kind": "verified-static-web-archives",
+  "version": "0.4.1",
+  "sourceBaseRevision": "4f013c403d63415d5ffa53192211cd96297183fe",
+  "uiFixCommit": "87973fa01b4e7065dd5a9f4a3c97c117d9e7d617",
+  "bundleId": "ipad-web-probe-49831342833678ecf1fccd03",
+  "entryURL": "https://100.65.235.35:4187/releases/ipad-web-probe-49831342833678ecf1fccd03/index.html",
+  "resourceCount": 50,
+  "resourceBytes": 60817604,
+  "completePackage": {
+    "path": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\app\\offline\\.local\\packages\\ipad-offline-debugger-v0.4.1.zip",
+    "filename": "ipad-offline-debugger-v0.4.1.zip",
+    "byteLength": 19273324,
+    "sha256": "fb82747c9845798d56fcae0e787e03fda4bf39c66204f397ca2f509ea786c83f",
+    "fileCount": 59,
+    "allArchivedFilesVerified": true
+  },
+  "firstSetupPackage": {
+    "path": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\app\\offline\\.local\\packages\\ipad-first-setup-v0.4.1.zip",
+    "filename": "ipad-first-setup-v0.4.1.zip",
+    "byteLength": 16738,
+    "sha256": "87875f8a73f1bd856b8cef6606b1e8af645dd5ee1332358f413f725817b72c79",
+    "fileCount": 6,
+    "allArchivedFilesVerified": true
+  },
+  "verification": {
+    "allRuntimeResourceHashes": 50,
+    "controlPlaneHashes": 2,
+    "publicRootDERMatchesProfile": true,
+    "profilePayloadCount": 1,
+    "rootSHA256": "87991d2b7d332034beddb95ed35ddabc906c0e0b2bd1dd174ec4a25b826e349f",
+    "profileRemovable": true,
+    "privateKeysExcluded": true,
+    "onlyCurrentReleaseIncluded": true
+  },
+  "declaration": "Archive byte verification only. HTTPS connectivity and browser smoke are recorded separately. Real iPad and person05 independent closure remain pending."
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "file": "toolchain-verify.json",
+    "args": [
+      "compiler/scripts/prepare-toolchain.mjs",
+      "--verify-only",
+      "--json"
+    ],
+    "kind": "resource-verification",
+    "expectedChecks": 11,
+    "startedAt": "2026-10-25T06:51:04.112Z",
+    "durationMs": 194,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "reportedCounts": {}
+  },
+  {
+    "file": "modules.tap",
+    "args": [
+      "--test",
+      "--test-reporter=tap",
+      "compiler/checks/*.test.mjs",
+      "debugger/checks/*.test.mjs"
+    ],
+    "kind": "module-checks-including-fault-injection",
+    "expectedChecks": 94,
+    "startedAt": "2026-10-25T06:51:04.308Z",
+    "durationMs": 11394,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "reportedCounts": {
+      "tests": 94,
+      "pass": 94,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "file": "contracts.tap",
+    "args": [
+      "--test",
+      "--test-reporter=tap",
+      "contracts/checks/*.test.mjs"
+    ],
+    "kind": "contract-invariants",
+    "expectedChecks": 10,
+    "startedAt": "2026-10-25T06:51:15.706Z",
+    "durationMs": 205,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "reportedCounts": {
+      "tests": 10,
+      "pass": 10,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "file": "pipeline.tap",
+    "args": [
+      "--test",
+      "--test-reporter=tap",
+      "app/integration/checks/*.test.mjs"
+    ],
+    "kind": "full-compiler-adapter-worker-pipeline",
+    "expectedChecks": 3,
+    "startedAt": "2026-10-25T06:51:15.912Z",
+    "durationMs": 3735,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "reportedCounts": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  {
+    "file": "acceptance-output.txt",
+    "args": [
+      "tests/run-validation.mjs"
+    ],
+    "kind": "independent-actual-source-acceptance",
+    "expectedChecks": 21,
+    "startedAt": "2026-10-25T06:51:19.648Z",
+    "durationMs": 9619,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "reportedCounts": {}
+  },
+  {
+    "file": "shadow-output.txt",
+    "args": [
+      "tests/reproduce.mjs",
+      "shadow"
+    ],
+    "kind": "actual-minimal-regression",
+    "expectedChecks": 1,
+    "startedAt": "2026-10-25T06:51:29.268Z",
+    "durationMs": 819,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "reportedCounts": {}
+  },
+  {
+    "file": "loop-header-output.txt",
+    "args": [
+      "tests/reproduce.mjs",
+      "loop-header"
+    ],
+    "kind": "actual-minimal-regression",
+    "expectedChecks": 1,
+    "startedAt": "2026-10-25T06:51:30.088Z",
+    "durationMs": 903,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "reportedCounts": {}
+  },
+  {
+    "file": "initializer-output.txt",
+    "args": [
+      "tests/initializer-lifetime.mjs"
+    ],
+    "kind": "actual-initializer-lifetime-regression",
+    "expectedChecks": 6,
+    "startedAt": "2026-10-25T06:51:30.992Z",
+    "durationMs": 2879,
+    "exitCode": 0,
+    "signal": null,
+    "error": null,
+    "reportedCounts": {}
+  }
+]

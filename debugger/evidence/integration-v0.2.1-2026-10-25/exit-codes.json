@@ -1,0 +1,26 @@
+[
+  {
+    "check": "VAL-001",
+    "exitCode": 0
+  },
+  {
+    "check": "VAL-002",
+    "exitCode": 0
+  },
+  {
+    "check": "independent-acceptance",
+    "exitCode": 0
+  },
+  {
+    "check": "full-pipeline",
+    "exitCode": 0
+  },
+  {
+    "check": "baseline",
+    "exitCode": 0
+  },
+  {
+    "check": "contracts",
+    "exitCode": 0
+  }
+]

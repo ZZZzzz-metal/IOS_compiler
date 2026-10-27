@@ -1,0 +1,5 @@
+{
+  "panel": "当前调试快照的断点（只读）main.cpp:4:1 · 已绑定 → main.cpp:4:1",
+  "status": "已暂停 · main.cpp:4:1",
+  "variables": "total int 0i int 1"
+}

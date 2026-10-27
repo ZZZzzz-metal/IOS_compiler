@@ -1,0 +1,7 @@
+Browser tab: 3, Title: "算法工作台 · 四号验证原型", URL: "http://127.0.0.1:4197/releases/ipad-web-probe-40b0be1b9616e4ec152be87a/ui/probe.html".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~				97 text field (settable) Description: 监视表达式, Value: 010, ID: expression
+~					173 text 010
+~					174 text int
+~					175 text 8
+The focused UI element is 98 button 查看, ID: evaluate

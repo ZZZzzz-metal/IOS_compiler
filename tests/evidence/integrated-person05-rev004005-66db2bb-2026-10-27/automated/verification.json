@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-27T04:39:42.273Z",
+  "testedRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "testedBaseTag": "integration-v0.4.2",
+  "baseTagRevision": "9727c51915325732e8d1b365f5e9bf672c717aaf",
+  "baseTagIsAncestor": true,
+  "environment": {
+    "node": "v24.19.0",
+    "npm": "11.17.0",
+    "timezone": "Asia/Shanghai",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "arch": "x64",
+    "browserTested": false,
+    "ipadTested": false,
+    "networkDisabled": false,
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "UI_REVIEW_REF": null,
+    "explicitHarnessCompilerRoot": "C:/Users/20964/Documents/ChatGPT/C++算法编译器/ipad-debugger-05",
+    "explicitHarnessDebuggerRoot": "C:/Users/20964/Documents/ChatGPT/C++算法编译器/ipad-debugger-05"
+  },
+  "commandChecks": [
+    {
+      "id": "toolchain-verify",
+      "command": "npm.cmd run prepare:toolchain -- --verify-only",
+      "exitCode": 0,
+      "outputFile": "toolchain-verify.txt",
+      "byteLength": 224,
+      "sha256": "fa328fbe24d5c80c25ad9bbf5d862b11c87d3958d17c9563c0a023c717acf792",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "check",
+      "command": "npm.cmd run check",
+      "exitCode": 0,
+      "outputFile": "check.txt",
+      "byteLength": 349,
+      "sha256": "e4a1240ecdaa3714056ede16ac7984f9ea0368b49990557c4ab48089464f3346",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "contracts",
+      "command": "npm.cmd test",
+      "exitCode": 0,
+      "outputFile": "contracts.txt",
+      "byteLength": 1123,
+      "sha256": "e90416b2f8bf0b6c9d6aacf42bc36fa08057fb95e8a4712d5dffe47feb2e4d79",
+      "recordedHashMatched": true,
+      "counts": {
+        "tests": 10,
+        "passed": 10,
+        "failed": 0
+      }
+    },
+    {
+      "id": "integration",
+      "command": "npm.cmd run test:integration",
+      "exitCode": 0,
+      "outputFile": "integration.txt",
+      "byteLength": 516,
+      "sha256": "e47a5fe89e78782bb0a0394b3827b9181e21cd2e110c486729d36b12aec7aca2",
+      "recordedHashMatched": true,
+      "counts": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    },
+    {
+      "id": "ui-storage",
+      "command": "npm.cmd run test:ui",
+      "exitCode": 0,
+      "outputFile": "ui-storage.txt",
+      "byteLength": 5826,
+      "sha256": "b4d70436e79bcf9c88523e4fe07233ddfd5b2b8a027dbde0b53d4cc802e9fc86",
+      "recordedHashMatched": true,
+      "counts": {
+        "tests": 59,
+        "passed": 59,
+        "failed": 0
+      }
+    },
+    {
+      "id": "modules",
+      "command": "npm.cmd run test:modules",
+      "exitCode": 0,
+      "outputFile": "modules.txt",
+      "byteLength": 10363,
+      "sha256": "b44208cf6f4c51d608b7c07363356a28d01e1dfb908e696108707b6b8c75a3f4",
+      "recordedHashMatched": true,
+      "counts": {
+        "tests": 94,
+        "passed": 94,
+        "failed": 0
+      }
+    },
+    {
+      "id": "acceptance",
+      "command": "npm.cmd run test:acceptance",
+      "exitCode": 0,
+      "outputFile": "acceptance.txt",
+      "byteLength": 1690,
+      "sha256": "e21c3f844582b012e2d4de5ab27478b0b2ac83abde7d9a95c88c29061bf08c1d",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "regressions",
+      "command": "npm.cmd run test:regressions",
+      "exitCode": 0,
+      "outputFile": "regressions.txt",
+      "byteLength": 2561,
+      "sha256": "070baabb44736c314cf4a5311df1dcbfcc22b91508d0d6b1b882256751684ce0",
+      "recordedHashMatched": true
+    },
+    {
+      "id": "initializer",
+      "command": "npm.cmd run test:initializer",
+      "exitCode": 0,
+      "outputFile": "initializer.txt",
+      "byteLength": 401,
+      "sha256": "f35a9facebd8a0bdd8864d7b8f67d9b87e5cabb39be8abbbde812edcbd4c9e20",
+      "recordedHashMatched": true
+    }
+  ],
+  "rawJSONChecks": [
+    {
+      "file": "acceptance/independent.json",
+      "byteLength": 605673,
+      "sha256": "a2cd97fc8b0b27ce4e863f0392c648f191ca87c0314b8ecf6edcf08cb5d5e559",
+      "gitRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+      "recordedCounts": {
+        "passed": 21,
+        "failed": 0
+      },
+      "scope": "desktop-node-real-compiler-and-interpreter",
+      "ipadTested": false,
+      "browserTested": false
+    },
+    {
+      "file": "regressions/regression-shadow.json",
+      "byteLength": 64963,
+      "sha256": "06b4ba8bf59718d24b7f15dfdb4a57af63e1c8e82be7a1502fb94f4884b47adc",
+      "gitRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+      "recordedCounts": {
+        "status": "passed"
+      },
+      "scope": "desktop-node-real-program",
+      "ipadTested": false,
+      "browserTested": false
+    },
+    {
+      "file": "regressions/regression-loop-header.json",
+      "byteLength": 114878,
+      "sha256": "958542fa51c9a055d20634ad55ab149d68c89f442dbe3607d4a6dbc99a5da6f6",
+      "gitRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+      "recordedCounts": {
+        "status": "passed"
+      },
+      "scope": "desktop-node-real-program",
+      "ipadTested": false,
+      "browserTested": false
+    },
+    {
+      "file": "initializer/initializer-lifetime.json",
+      "byteLength": 544882,
+      "sha256": "8e7fab7def7130d5fba440532c7a9db4590355f0884cb1507a7b3393855cbfc6",
+      "gitRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+      "recordedCounts": {
+        "passed": 6,
+        "failed": 0
+      },
+      "ipadTested": false,
+      "browserTested": false
+    }
+  ],
+  "toolchainVerifyOnly": {
+    "resources": 11,
+    "byteLength": 60412435,
+    "networkDownloadInvoked": false
+  },
+  "raceRegressionCoverage": {
+    "scope": "Current main functions executed with controlled DOM/network/File.text/adapter/storage-transport doubles; real parseImport and autosave logic. This count is not a browser DOM, IndexedDB transport, or real iPad result.",
+    "newPreparationTests": 8,
+    "newImportTests": 17,
+    "preparationPassLines": [
+      "✔ prepare synchronously locks run/debug/prepare before its first await; renders and duplicate calls cannot reopen the gate (3.2639ms)",
+      "✔ prepare stays locked through trust and resource checks and unlocks only on successful completion (1.422ms)",
+      "✔ failed preparation clears the old candidate, keeps compile disabled, and permits a later retry (4.6935ms)",
+      "✔ prepare rejects direct entry while draft restoration, recovery, compilation, or a live session owns the gate (6.5144ms)",
+      "✔ compile enforces state guards rather than trusting enabled buttons (11.6175ms)",
+      "✔ terminal sessions allow preparation again without accidentally reusing the old candidate (1.3039ms)",
+      "✔ a compilation captures one candidate for adapter construction, compiler request, resource handoff and start (5.4177ms)",
+      "✔ stop cancels pending compilation without starting a stale result and releases the preparation gate (1.8152ms)"
+    ],
+    "importPassLines": [
+      "✔ REV-005: B finishing before A is the only import delivered to autosave (6.1785ms)",
+      "✔ REV-005: obsolete A failure neither overwrites B feedback nor clears B selection (2.021ms)",
+      "✔ REV-005: A success/finally cannot clear the file input while B is reading (1.2782ms)",
+      "✔ REV-005: a late A error does not replace feedback after B has completed (1.5507ms)",
+      "✔ REV-005: a late A read error cannot replace the actual newer B import error (1.477ms)",
+      "✔ REV-005: a pending read rejection after editing preserves the newer operation's prompt (1.5346ms)",
+      "✔ REV-005: a pending read rejection after switching drafts preserves the newer operation's prompt (0.9436ms)",
+      "✔ REV-005: a pending read rejection after starting recovery preserves the newer operation's prompt (0.8957ms)",
+      "✔ REV-005: edits made while the file is reading survive and produce an explanatory prompt (1.0984ms)",
+      "✔ REV-005: real source, stdin and language handlers all increment the edit generation (1.0378ms)",
+      "✔ REV-005: switching draft objects during a read never imports into the new draft (0.8901ms)",
+      "✔ REV-005: replacing the same draft id still invalidates the old read by object identity (0.8378ms)",
+      "✔ REV-005: entering recovery while reading prevents import and saving (0.9955ms)",
+      "✔ REV-005: import requested during recovery is rejected without changing the draft (1.7756ms)",
+      "✔ REV-005: the latest import error preserves source, driver, input and persisted draft (1.0373ms)",
+      "✔ REV-005: a normal C import updates the editor and is saved with the existing CAS revision (1.3251ms)",
+      "✔ REV-005: complete-project JSON imports driver/input but retains the local draft identity (1.117ms)"
+    ],
+    "totalNewTests": 25,
+    "existingUITests": 34,
+    "totalUITests": 59
+  },
+  "totalPassed": 195,
+  "totalFailed": 0,
+  "testedSourcesUnchanged": true,
+  "note": "Module counts include fault-injection and boundary checks. Independent browser/styling review is handled separately by the parent task; real iPad offline validation remains pending."
+}

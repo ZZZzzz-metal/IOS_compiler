@@ -1,0 +1,26 @@
+{
+  "defect":"VAL-004",
+  "dateAsiaShanghai":"2026-10-26",
+  "owner":4,
+  "baseline":"integration-v0.4.0",
+  "baselineRevision":"b4973e177ff6b29583fccb666fbba8f0cd1efa89",
+  "branch":"module/04-ui",
+  "status":"fixed in owner4 branch; integration/new release and independent owner5 retest pending",
+  "cause":"Snapshot gutter, breakpoint list and empty state all enumerated editable requested. Deleting the draft request hid a binding that the old session correctly retained.",
+  "change":"A shared breakpointView selects matching authoritative bindings for snapshots and editable requests for drafts. Snapshot breakpoint controls are read-only. Dirty-draft isolation and same-source live edits remain intact.",
+  "automated":{"contracts":10,"uiStorage":34,"integration":3,"total":47,"failed":0,"structureCheck":"pass","newRegressionChecks":10,"evidence":"automated/"},
+  "browser":{
+    "environment":"Windows desktop Codex in-app browser; exact engine version not collected",
+    "url":"http://127.0.0.1:4198/ui/probe.html",
+    "before":"Baseline reproduced false empty panel and gutter4=false on a read-only original snapshot after the draft request was removed. See before-dom.json.",
+    "beforeContinueCaptureBoundary":"before-continue.json was collected before the asynchronous next variable reply settled and still shows i=0. It is not used as proof of i=1. The original owner5 failure evidence is preserved separately.",
+    "after":"after-dom.json retains bound main.cpp:4:1, gutter4=true, original read-only source and i=0. after-continue.json waits for i=1 and retains the same displayed binding.",
+    "editing":"editing-dom.json retains the changed draft, empty draft breakpoints and gutter4=false.",
+    "restart":"restart-dom.json shows freshly compiled edited source, empty snapshot breakpoints, gutter4=false, normal exit3 after only the entry pause.",
+    "result":"pass for the minimal desktop workflow",
+    "screenshots":"Two capture attempts returned Unable to capture screenshot. No screenshot or simulated replacement is claimed; actual visible DOM observations are saved."
+  },
+  "unchangedHistoricalEvidence":"Original owner5 failures and all previously sealed evidence directories were not rewritten.",
+  "integration":"No shared protocol, engine, root configuration or existing offline release was modified. Existing release remains unchanged; owner1 must merge and build a new version, then owner5 independently retests.",
+  "unverified":["owner5 independent closure","new integrated offline release","real iPad/iPadOS"]
+}

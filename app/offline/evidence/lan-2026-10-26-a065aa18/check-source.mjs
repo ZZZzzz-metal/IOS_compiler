@@ -1,0 +1,20 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {request} from 'node:https';
+import {createHash,X509Certificate} from 'node:crypto';
+const tls='app/offline/.local/tls/local-https-20261026T012959Z-a065aa18/';
+const setup=JSON.parse(await readFile(tls+'setup.json','utf8'));
+const ca=await readFile(tls+'root-ca.pem');
+const build=JSON.parse(await readFile('app/offline/.local/latest-build.json','utf8'));
+const get=path=>new Promise((resolve,reject)=>{
+ const req=request({hostname:setup.address,port:setup.port,path,ca,rejectUnauthorized:true,method:'GET',timeout:10000},res=>{const authorized=res.socket.authorized;const chunks=[];res.on('data',b=>chunks.push(b));res.on('end',()=>resolve({status:res.statusCode,authorized,body:Buffer.concat(chunks),type:res.headers['content-type']}));});req.on('timeout',()=>req.destroy(new Error('HTTPS timeout')));req.on('error',reject);req.end();
+});
+const base=build.entryPath.slice(0,-'index.html'.length);
+const entry=await get(build.entryPath);assert.equal(entry.status,200);assert(entry.authorized);
+const manifest=await get(base+'bundle.json');assert.equal(manifest.status,200);const descriptor=JSON.parse(manifest.body);assert.equal(descriptor.bundleId,build.bundleId);
+assert.equal('sha256:'+createHash('sha256').update(manifest.body).digest('hex'),build.descriptorSha256);
+const worker=await get(base+'sw.js');assert.equal(worker.status,200);assert.equal('sha256:'+createHash('sha256').update(worker.body).digest('hex'),build.workerSha256);assert.match(worker.type,/javascript/);
+for(const path of ['/server-key.pem','/.git/config','/../app/offline/.local/tls/local-https-20261026T012959Z-a065aa18/server-key.pem'])assert.equal((await get(path)).status,404);
+const root=new X509Certificate(ca);assert(root.ca);assert.equal('sha256:'+createHash('sha256').update(root.raw).digest('hex'),setup.rootSHA256);
+const result={checkedAt:new Date().toISOString(),kind:'same-computer-https-interface-check',url:setup.httpsURL+build.entryPath.slice(1),bundleId:build.bundleId,resourceCount:build.resourceCount,totalBytes:build.totalBytes,rootCertificateName:setup.rootCertificateName,rootSHA256:setup.rootSHA256,expiresAt:setup.expiresAt,tlsHostnameAndCAValidated:true,entry200:true,manifestAndWorkerHashVerified:true,privatePaths404:true,ipadConnectivity:'pending-user-test'};
+await writeFile('app/offline/.local/lan-check-a065aa18.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));

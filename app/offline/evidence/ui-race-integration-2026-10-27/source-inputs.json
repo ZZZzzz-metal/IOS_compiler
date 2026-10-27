@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "sourceBaseRevision": "6ead71151721098d5ff5a3e21265b366569406e0",
+  "deliveredUICommit": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "scope": "Actual working-tree bytes for integrated UI, unchanged engine/trust inputs and root metadata/manual. The base commit contains delivered UI fixes; dirty root increments are separately fingerprinted here and in bundle resource hashes.",
+  "sources": [
+    {
+      "file": "AGENTS.md",
+      "byteLength": 2336,
+      "sha256": "8dce564c68a7c7a9107d96133cda5dbfd1c6ffd681f911835ac46b92398bee5f"
+    },
+    {
+      "file": "README.md",
+      "byteLength": 6244,
+      "sha256": "7ab54928fbf95c7123bad888b89cb03edaeaea33b8f4971daf3afb0adb134a9b"
+    },
+    {
+      "file": "package.json",
+      "byteLength": 1862,
+      "sha256": "6ef3c2db116823cf8d5e541a0c3d1108951f9dc61fdf04160b5439dc67bc6f06"
+    },
+    {
+      "file": "package-lock.json",
+      "byteLength": 256,
+      "sha256": "d1a197e47de8ef0341f84a36e8ef6876fcf5d5b8c0d96bf3f9c2ec9f012208e6"
+    },
+    {
+      "file": "app/main.mjs",
+      "byteLength": 2806,
+      "sha256": "0c264ac6f90e3967fae14ee6289f68f8a04d0908aac5fe1ae4b6a2651af4049d"
+    },
+    {
+      "file": "app/offline/build.mjs",
+      "byteLength": 8908,
+      "sha256": "a035b12d05209fab7b63a93030e90ef046bf6bcf1bf2215ec3a0a2994e4bf6cd"
+    },
+    {
+      "file": "app/offline/serve.mjs",
+      "byteLength": 2712,
+      "sha256": "51352af4a20579a4e2279e4072c1f6d1b270e64f96ab6a3f09dda2a045bc96b8"
+    },
+    {
+      "file": "app/offline/browser/worker-template.js",
+      "byteLength": 8520,
+      "sha256": "345f5a5cbaac68ae60ab2a4815f88ea0ab49178bb90d91694ba3d484b79e8c45"
+    },
+    {
+      "file": "app/offline/browser/index.html",
+      "byteLength": 2498,
+      "sha256": "5b52ac7c5891f1d0276f91b143d9baca96907d01fe3a406187d1681e06461053"
+    },
+    {
+      "file": "app/offline/browser/launcher.mjs",
+      "byteLength": 5841,
+      "sha256": "dcc012c895f7bda8135882271e11071fcbbe161a4f875644e821a4c82bb5e05e"
+    },
+    {
+      "file": "app/offline/browser/trust.mjs",
+      "byteLength": 2412,
+      "sha256": "fbd1013dbfd3b3b986c9b79882434000cb72af738eb4985349e3634459ae300e"
+    },
+    {
+      "file": "app/offline/checks/worker.test.mjs",
+      "byteLength": 15980,
+      "sha256": "9768cd325506ae7cb267e84903d57bc796529247b5690c1bfd6aa3cf155a235c"
+    },
+    {
+      "file": "ui/probe.html",
+      "byteLength": 11333,
+      "sha256": "08927bd3874067037941936bebd0456eea993bb69564f19ab878e1723b04f499"
+    },
+    {
+      "file": "ui/style.css",
+      "byteLength": 24157,
+      "sha256": "55448fc37ed3599c53ae6b2dea890ad2d0e3a33f57c18dda8ca1d56aa1467091"
+    },
+    {
+      "file": "ui/src/main.mjs",
+      "byteLength": 28933,
+      "sha256": "1b00e1821a0b3bf1e37d4d7109fa0a684dce13b1af29f1f322b8d1eb5674ea6f"
+    },
+    {
+      "file": "ui/src/editor.mjs",
+      "byteLength": 2518,
+      "sha256": "26e0eb00f16f4fac9cebde7c7db702559823c2acb9288cf8fde89da35a2767e6"
+    },
+    {
+      "file": "ui/src/session-controller.mjs",
+      "byteLength": 17167,
+      "sha256": "ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84"
+    },
+    {
+      "file": "ui/checks/import-order.test.mjs",
+      "byteLength": 16960,
+      "sha256": "72af3c49877895d08368251c3bcfc35f4a8c71eb0d9dde2274a6e0141ddc2155"
+    },
+    {
+      "file": "ui/checks/preparation-gate.test.mjs",
+      "byteLength": 17294,
+      "sha256": "4ba2d1a476f950740769693e1ca4568fe74af6b42f421fbf5392def8ad39d764"
+    },
+    {
+      "file": "storage/src/draft-store.mjs",
+      "byteLength": 8047,
+      "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+    },
+    {
+      "file": "storage/src/autosave.mjs",
+      "byteLength": 2767,
+      "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+    },
+    {
+      "file": "debugger/src/variables.mjs",
+      "byteLength": 42029,
+      "sha256": "a20f10518433d3dbb48d58bf2a7bae930669c49de5531476ffcfadfbf28ba139"
+    },
+    {
+      "file": "debugger/src/worker-adapter.mjs",
+      "byteLength": 8478,
+      "sha256": "1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6"
+    },
+    {
+      "file": "docs/architecture/IPAD-USER-MANUAL.md",
+      "byteLength": 24626,
+      "sha256": "23b1d680e0d6abe741a65913a872df43c3d801d4c1d0733c4e37266441b903a1"
+    },
+    {
+      "file": "docs/architecture/IPAD-UPDATE-v0.4.3.md",
+      "byteLength": 2668,
+      "sha256": "25e6b3ec87f58073dcf2399218cb3b3c6e1f2c6fe4ea3bb5d1dedf18e9adbebf"
+    },
+    {
+      "file": "docs/architecture/UI-RACE-INTEGRATION-2026-10-27.md",
+      "byteLength": 6475,
+      "sha256": "1580443912bf43206b6adca774a265fd57cdc4e0ba65205874a11c13fa60f447"
+    },
+    {
+      "file": "docs/architecture/STATUS.md",
+      "byteLength": 6476,
+      "sha256": "0cd55b457ae0d64ec20747e71e1672b7ed561636639fc633db36183e07174e59"
+    },
+    {
+      "file": "docs/architecture/GATES.md",
+      "byteLength": 6316,
+      "sha256": "242b87f7104a8b4b7405f8a4afab74d2a62ce79120f12e138330d8dea0444634"
+    },
+    {
+      "file": "docs/architecture/START-HERE.md",
+      "byteLength": 7049,
+      "sha256": "5b20e5194d0480781a6e7a93315b68779de4773e6d08b0436e0abdfddbc86c8e"
+    },
+    {
+      "file": "docs/handoffs/01.md",
+      "byteLength": 16374,
+      "sha256": "828cc8cdf71d93da525a32c8901663d2dc445afc5392369af4fc50d3e3775055"
+    },
+    {
+      "file": "contracts/capabilities.json",
+      "byteLength": 21256,
+      "sha256": "4f727ff3669658907ed98fae841901a236ebe9bbb8497060a77d2b6c1599cd13"
+    },
+    {
+      "file": "contracts/compatibility-profiles.json",
+      "byteLength": 307,
+      "sha256": "c350debe885bcee8f4c39f7b870184e14255ce64070d1d6a42fe913014a3cd47"
+    },
+    {
+      "file": "contracts/offline-bundle.json",
+      "byteLength": 265,
+      "sha256": "d1174a23123aeff163fcb182b147a5ebd284baea315fa720b4bd6bcf1d3910e0"
+    }
+  ]
+}

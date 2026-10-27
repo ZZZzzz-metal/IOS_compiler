@@ -1,0 +1,34 @@
+{
+  "date":"2026-10-25",
+  "owner":4,
+  "baseline":"integration-v0.2.1 / 7e92d2330b8e0fef1c75021d7e93522d8e6c6293",
+  "environment":"Windows desktop, Codex in-app browser; exact browser engine version not collected",
+  "url":"http://127.0.0.1:4184/ui/probe.html",
+  "scope":"Actual browser UI and IndexedDB development verification; not iPad or full offline cold-start evidence",
+  "passed":[
+    "Verified all30 pinned resources before enabling compilation",
+    "C++ entry then breakpoint main.cpp:16; n=3, vector(size=3,capacity=3), vector elements1,2,3; string sum; array4,5,6; unavailable total reason shown",
+    "StepInto add line6 with left=3,right=1; caller frame n=3; StepOut line16; StepOver line17 total=4",
+    "Basic watch values[1] returned actual int2",
+    "Edited while paused; old snapshot read-only; new draft requires recompile; old execution output sum=19",
+    "Clipboard compared equal to edited user source; with separate driver copied Solution without main",
+    "Downloaded project JSON compared equal to edited source; actual file chooser import compared equal",
+    "IndexedDB page reload restored source, language and stdin",
+    "Two pages read revision1; A saved revision2; B received conflict and retained unsaved content; recovery copy reopened B while main reopened A",
+    "C11 input21 printed ui-c=42 and exited0",
+    "Running infinite loop remained editable; Stop terminated; fresh changed C source printed ui-c=43 and exited0",
+    "Separate user.inc Solution and driver.cpp printed driver=42",
+    "Actual Clang failure at driver.cpp:6:12; clicking after switching to user tab opened driver and cursor offset123 matched the diagnostic",
+    "Narrow panel exposed code/debug switch;1180x820 override exposed side-by-side panels; desktop only",
+    "Final scroll alignment recheck: source/gutter/highlight scrollTop all0; current gutter16 matched actual int total = add(n, values[0]) source line",
+    "Earlier stalled compilation cancelled and buttons recovered"
+  ],
+  "issues":[
+    "Sandboxed local server initially inaccessible; approved loopback-only host was accessible",
+    "Native Edge automation stopped because URL could not be reliably identified; no further native actions; successful verification used explicit in-app browser URLs",
+    "Port4174 had an earlier compiler Service Worker. Current-page resource checks succeeded but compiler Worker stalled. Static trace showed compiler/service-worker.js update and no live compiler Worker request. Clean port4184 compiled immediately. Added startup conflict detection and separate origin without deleting old data. Exact old cached Worker bytes were not extracted, so the cause remains a cache-conflict inference",
+    "Actual file chooser import took about four minutes in automation; no iPad latency conclusion"
+  ],
+  "screenshots":["browser-breakpoint.jpg","browser-conflict.jpg","browser-c-output.jpg","browser-stop-restart.jpg","browser-diagnostic.jpg"],
+  "unverified":["real iPad/iPadOS","complete offline resource bundle","network-off full-app cold start","physical keyboard/mouse and IME","iPad clipboard and file permissions","quota eviction and forced app termination","owner5 independent signoff"]
+}

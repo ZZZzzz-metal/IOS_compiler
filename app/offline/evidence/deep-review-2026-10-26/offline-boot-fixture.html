@@ -1,0 +1,23 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>离线启动恢复专项测试</title>
+<h1>离线启动恢复专项测试</h1>
+<p>只操作本次 localhost:4191 的新建测试缓存，不访问草稿。保留启动脚本原始副本，可恢复。</p>
+<button id="damage">备份并损坏本次测试启动脚本</button>
+<button id="restore" disabled>恢复原始测试脚本</button>
+<p id="status" role="status">尚未修改测试缓存。</p>
+<script>
+const bundle='ipad-web-probe-de095f337b9f4e4f1f7b4e32';
+const base=new URL('/releases/'+bundle+'/',location.href).href;
+let saved=null,selected=null;
+function guard(){if(location.origin!=='http://127.0.0.1:4191')throw Error('此夹具仅限隔离的4191测试源。');}
+document.getElementById('damage').onclick=async()=>{
+ try{guard();const names=(await caches.keys()).filter(name=>name.startsWith('ipad-debugger-offline:'+bundle+':'));
+ if(names.length!==1)throw Error('测试需恰好一个新版本缓存，实际'+names.length);
+ selected=await caches.open(names[0]);const url=new URL('launcher.mjs',base).href;
+ saved=await selected.match(url);if(!saved)throw Error('原测试脚本缺失');
+ await selected.put(url,new Response('damaged test-only launcher',{headers:{'Content-Type':'text/javascript'}}));
+ document.getElementById('status').textContent='已备份并损坏本次测试启动脚本。请重开固定入口，预期显示本地恢复页。';
+ document.getElementById('damage').disabled=true;document.getElementById('restore').disabled=false;
+ }catch(error){document.getElementById('status').textContent=error.message;}
+};
+document.getElementById('restore').onclick=async()=>{guard();if(saved&&selected){await selected.put(new URL('launcher.mjs',base).href,saved.clone());document.getElementById('status').textContent='原始测试脚本已恢复。';}};
+</script></html>

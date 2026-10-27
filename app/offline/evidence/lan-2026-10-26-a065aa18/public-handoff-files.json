@@ -1,0 +1,32 @@
+[
+  {
+    "file": "root-ca.cer",
+    "byteLength": 814,
+    "sha256": "87991d2b7d332034beddb95ed35ddabc906c0e0b2bd1dd174ec4a25b826e349f"
+  },
+  {
+    "file": "root-only.mobileconfig",
+    "byteLength": 2530,
+    "sha256": "f392da529a338e8ef398a8558cbc684afdcb2e2eb45fd588914caf38bbc4ce26"
+  },
+  {
+    "file": "平板完整操作手册.html",
+    "byteLength": 26052,
+    "sha256": "b08ef50633bfe72f2f42f6f37b2ffe6f1d12e7f8eec50501a65a0c1d78d30210"
+  },
+  {
+    "file": "平板完整操作手册.md",
+    "byteLength": 23469,
+    "sha256": "30b1ed98eaee844fc055e4326cc8733af69bab2130015fa703e1725f55d6ee8f"
+  },
+  {
+    "file": "本次首次连接.md",
+    "byteLength": 4605,
+    "sha256": "88ab9ec9b7b0a4dc08dff29384facfbedc978bc6bcb8c36bae3343f534d0425d"
+  },
+  {
+    "file": "证书指纹.txt",
+    "byteLength": 351,
+    "sha256": "0bf3ed04faf8cda1b1e8c7e50af5c113457758e6b27b5ea2b436b48105968443"
+  }
+]

@@ -1,0 +1,93 @@
+{
+  "testedRevision": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "checks": [
+    {
+      "id": "REV004-real-reprepare-lock-render-keyboard",
+      "status": "passed",
+      "observations": [
+        {
+          "step": "initial-ready-with-old-verified-candidate",
+          "index": 1
+        },
+        {
+          "step": "reprepare-held-three-entries-locked",
+          "index": 2
+        },
+        {
+          "step": "held-after-edit-tabs-and-F5-still-locked",
+          "index": 3
+        },
+        {
+          "step": "fixture-exactly-one-held-request-after-F5",
+          "index": 4
+        }
+      ]
+    },
+    {
+      "id": "REV004-real-503-and-retry",
+      "status": "passed",
+      "observations": [
+        {
+          "step": "503-recheck-failure-clears-ready-and-blocks-compile",
+          "index": 5
+        },
+        {
+          "step": "retry-held-unready-cannot-run",
+          "index": 6
+        },
+        {
+          "step": "retry-success-restores-compile-entries",
+          "index": 7
+        },
+        {
+          "step": "real-run-A31-after-retry",
+          "index": 8
+        }
+      ]
+    },
+    {
+      "id": "actual-import-B-debug-output-reopen",
+      "status": "passed",
+      "observations": [
+        {
+          "step": "actual-full-import-B-saved3",
+          "index": 9
+        },
+        {
+          "step": "paper-B-breakpoint5-received45",
+          "index": 11
+        },
+        {
+          "step": "paper-B-actual-output47-exit0",
+          "index": 13
+        },
+        {
+          "step": "page-reopen-B-edited-source-stdin45-revision4",
+          "index": 14
+        }
+      ]
+    },
+    {
+      "id": "VAL004-still-correct-in-paper-style",
+      "status": "passed",
+      "observations": [
+        {
+          "step": "paper-VAL004-old-snapshot-binding5-retained",
+          "index": 12
+        }
+      ]
+    }
+  ],
+  "method": "Actual browser controls/file chooser/IndexedDB page reopen/real Worker execution; test host controls only candidate HTTP response",
+  "fileReadReorderingObservedInRealBrowser": false,
+  "controlledFileReadEvidence": "independent/fixed-run-02/results.json",
+  "viewport": {
+    "desktopWidth": 1265,
+    "documentWidth": 1265,
+    "narrowAccepted": false,
+    "explanation": "viewport-note.json"
+  },
+  "internalSessionIdsCollected": false,
+  "ipadTested": false,
+  "networkDisabled": false
+}

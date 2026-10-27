@@ -1,0 +1,15 @@
+{
+  "snapshotId": "150a328d-d515-46c2-a89c-c94ac781e1bb",
+  "sourceHash": "sha256:c0c5abe626bb48ff936f3a423f5968fccc60c80a686083f9a813d36b75d3aad2",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.c",
+  "files": [
+    {
+      "path": "main.c",
+      "role": "user",
+      "text": "int main(void) {\n    volatile unsigned int n = 0;\n    while (1) { n++; }\n}\n",
+      "contentHash": "sha256:1bb39b497f948426e511ca64eeff257dc993fc16a5c69cd5767a4d8847561d45"
+    }
+  ]
+}

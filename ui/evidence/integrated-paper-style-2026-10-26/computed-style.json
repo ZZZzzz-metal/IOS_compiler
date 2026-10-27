@@ -1,0 +1,27 @@
+{
+  "contrasts": {
+    "disabledContinue": 5.12,
+    "disabledRun": 4.61,
+    "lineNumber": 4.92,
+    "expressionText": 12.7
+  },
+  "gutterLineHeight": "24px",
+  "highlight": {
+    "fontFamily": "ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "lineHeight": "24px",
+    "padding": "16px 18px",
+    "tabSize": "4"
+  },
+  "source": {
+    "fontFamily": "ui-monospace, SFMono-Regular, Menlo, Consolas, \"Liberation Mono\", monospace",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "lineHeight": "24px",
+    "padding": "16px 18px",
+    "tabSize": "4"
+  }
+}

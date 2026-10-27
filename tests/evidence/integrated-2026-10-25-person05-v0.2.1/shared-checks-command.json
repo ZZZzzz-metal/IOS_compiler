@@ -1,0 +1,20 @@
+[
+  {
+    "task": "check",
+    "startedAt": "2026-10-25T00:53:58.8657890Z",
+    "finishedAt": "2026-10-25T00:54:00.6783992Z",
+    "exitCode": 0
+  },
+  {
+    "task": "test",
+    "startedAt": "2026-10-25T00:54:00.6818467Z",
+    "finishedAt": "2026-10-25T00:54:01.5606752Z",
+    "exitCode": 0
+  },
+  {
+    "task": "test:integration",
+    "startedAt": "2026-10-25T00:54:01.5607867Z",
+    "finishedAt": "2026-10-25T00:54:05.9234763Z",
+    "exitCode": 0
+  }
+]

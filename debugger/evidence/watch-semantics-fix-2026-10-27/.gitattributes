@@ -1,0 +1,2 @@
+# Preserve the exact captured bytes on Windows and across Git checkout.
+* -text whitespace=blank-at-eol,space-before-tab,cr-at-eol

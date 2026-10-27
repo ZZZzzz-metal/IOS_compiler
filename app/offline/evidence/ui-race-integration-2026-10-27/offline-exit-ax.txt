@@ -1,0 +1,101 @@
+Browser tab: 2, Title: "算法工作台 · 四号验证原型", URL: "http://127.0.0.1:4193/releases/ipad-web-probe-1934f34d48ba1a8c94eadd93/ui/probe.html".
+1 AXWebArea 算法工作台 · 四号验证原型, URL: 127.0.0.1:4193/releases/ipad-web-probe-1934f34d48ba1a8c94eadd93/ui/probe.html
+	2 container
+		3 heading 算法工作台, Value: 1
+			4 text 算法工作台
+		5 text 开发验证原型 粘贴代码，带着输入运行，在暂停处排错。
+		6 button 校验本地资源, ID: prepare
+		101 text 本版本离线资源已校验 · iPad 真机待验证
+	8 text iPad 离线冷启动待验证
+	9 text Clang 8.0.1 / wasm32
+	10 link Description: 原型说明与验证步骤, Value: 127.0.0.1:4193/releases/ipad-web-probe-1934f34d48ba1a8c94eadd93/ui/README.md
+	11 container 运行与调试
+		12 pop up button (collapsed, settable) Description: 语言, Value: C++17, ID: language, Secondary Actions: Expand
+			13 menu
+				14 (selected) C++17
+				15 C11
+		16 button 编译运行, ID: run
+		17 button 编译调试, ID: debug
+		18 container 调试控制
+			19 button (disabled) 继续, Help: 继续（F5）
+			20 button (disabled) 进入, Help: 单步进入（F11）
+			21 button (disabled) 跳过, Help: 单步跳过（F10）
+			22 button (disabled) 跳出, Help: 单步跳出（Shift+F11）
+			23 button (disabled) 停止, ID: stop
+		102 text 已结束
+	103 container
+		104 container 源码编辑
+			105 heading 代码, Value: 2
+				106 text 代码
+			107 button 粘贴代码, ID: paste
+			108 button 复制题站源码, ID: copy
+			109 button 导入, ID: import
+			110 pop up button (collapsed, settable) Description: 导出内容, Value: 仅题站源码, ID: export-mode, Secondary Actions: Expand
+				111 menu
+					112 (selected) 仅题站源码
+					113 完整草稿
+			114 button 导出, ID: export
+			115 checkbox 题站源码, Value: 1, ID: user-tab
+			116 checkbox 测试驱动, Value: 0, ID: driver-tab
+			117 checkbox 查看调试快照, Value: 0, ID: snapshot-toggle
+			118 text main.cpp
+			119 text 编辑中的草稿
+			120 container Description: 行号与断点, ID: gutter
+				121 button 1, Help: 第 1 行：切换断点
+				122 button 2, Help: 第 2 行：切换断点
+				123 button 3, Help: 第 3 行：切换断点
+				124 button 4, Help: 第 4 行：切换断点
+				125 button 5, Help: 第 5 行：切换断点
+				126 button 6, Help: 第 6 行：切换断点
+				127 button 7, Help: 第 7 行：切换断点
+				128 button 8, Help: 第 8 行：切换断点
+				129 button 9, Help: 第 9 行：切换断点
+				130 button 10, Help: 第 10 行：切换断点
+			131 text entry area (settable) Description: 源代码, ID: source, Value: #include <cstdio>
+int main() {
+  int value = 31;
+  value += 12;
+  std::printf("UI-043=%d\n", value);
+  return 0;
+}
+// edit during resource check
+// draft changed after pause
+
+			132 button Description: 在当前行切换断点, Help: 在当前行设置或移除断点, ID: breakpoint
+			133 button 缩进, Help: 缩进（Tab）, ID: indent
+			134 button 取消缩进, Help: 取消缩进（Shift+Tab）, ID: outdent
+			135 search text field (settable) Description: 查找源码, ID: find
+			136 button 下一处, ID: find-next
+			137 text 草稿已保存 · 版本 3
+			138 button (collapsed) 断点与编译诊断, Secondary Actions: Expand
+				139 text 断点与编译诊断
+		140 container 输入输出与调试面板
+			141 container
+				142 heading 样例输入 运行前一次性提供, Value: 2
+					143 text 样例输入
+					144 text 运行前一次性提供
+				145 text entry area (settable) Description: 标准输入, ID: stdin
+			146 container
+				147 heading 程序输出 exit · 返回 0, Value: 2
+					148 text 程序输出
+					149 text exit · 返回 0
+				150 container Description: 程序输出, ID: output
+					151 text UI-043=43
+
+			152 container
+				153 heading 调用栈, Value: 2
+					154 text 调用栈
+				155 text 调试暂停后显示真实调用栈
+			156 container
+				157 heading 局部变量, Value: 2
+					158 text 局部变量
+				159 text 调试暂停后读取变量
+			160 container
+				161 heading 基础监视, Value: 2
+					162 text 基础监视
+				163 text field (settable) Description: 监视表达式, ID: expression
+				164 button (disabled) 查看, ID: evaluate
+				165 text 支持范围以适配器为准；函数调用、赋值和自增不可用。
+				166 text 选择暂停栈帧后查询
+
+The focused UI element is 1 AXWebArea 算法工作台 · 四号验证原型, URL: 127.0.0.1:4193/releases/ipad-web-probe-1934f34d48ba1a8c94eadd93/ui/probe.html

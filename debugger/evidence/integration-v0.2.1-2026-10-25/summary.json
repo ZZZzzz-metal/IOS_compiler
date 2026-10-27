@@ -1,0 +1,64 @@
+{
+  "recordedAt": "2026-10-25T05:44:09.030Z",
+  "scope": "Role3 synchronization and read-only desktop review; no implementation repair",
+  "source": {
+    "fromRevision": "4138dcd",
+    "tag": "integration-v0.2.1",
+    "tagRevision": "7e92d2330b8e0fef1c75021d7e93522d8e6c6293",
+    "fixRevision": "cc2fa6a2e05153a676c570e325caf9f1baceb5df",
+    "synchronization": "fast-forward",
+    "preSyncTrackedOrUntrackedChanges": [],
+    "existingIgnoredFilesPreserved": true
+  },
+  "suiteResults": {
+    "specifiedRegressions": {
+      "passed": 2,
+      "failed": 0
+    },
+    "debugger": {
+      "passed": 51,
+      "failed": 0,
+      "skipped": 0
+    },
+    "independentAcceptance": {
+      "passed": 21,
+      "failed": 0
+    },
+    "fullPipeline": {
+      "passed": 3,
+      "failed": 0
+    },
+    "contracts": {
+      "passed": 10,
+      "failed": 0
+    },
+    "baseline": "passed"
+  },
+  "additionalBoundary": {
+    "status": "failed",
+    "expectedCheckFailureExit": 1,
+    "priority": "P2",
+    "currentAssertions": {
+      "passed": 4,
+      "failed": 2
+    },
+    "beforeFixAssertions": {
+      "passed": 6,
+      "failed": 0
+    },
+    "finding": {
+      "priority": "P2",
+      "introducedByFix": true,
+      "expected": "Each new x initialization remains unavailable until its actual store; body values are 10 and 11.",
+      "actual": "During the second seed call and its return continuation, current-tag x exposes previous-iteration value 10.",
+      "source": "debugger/src/variables.mjs:137",
+      "explanation": "The declaration PC comparison permits later initializer instructions; per-frame memory-write coverage includes the previous lifetime of the same stack slot."
+    }
+  },
+  "productSourceUnchangedFromTag": true,
+  "historyHashesPreserved": 7,
+  "profile": "integration-prototype-c992f82a5f1bad99",
+  "browserRetested": false,
+  "ipadTested": false,
+  "productOfflineReady": false
+}

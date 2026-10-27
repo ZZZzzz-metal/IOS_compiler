@@ -1,0 +1,1574 @@
+{
+  "kind": "fresh-compiler-adapter-real-worker-watch-regression",
+  "capturedAt": "2026-10-26T23:53:40.506Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "browserTested": false,
+    "ipadTested": false
+  },
+  "profile": {
+    "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:b02def5d2c6e7f39177b8d523583e53bc24708e493c9f0300ac8e729b7b56fe8",
+    "status": "candidate",
+    "evidence": [
+      "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+    ]
+  },
+  "build": {
+    "status": "succeeded",
+    "compilationMs": 535,
+    "snapshot": {
+      "snapshotId": "5cfe5a6b-598f-4924-ba16-93b84a9fdbb1",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <cstdio>\nint main() {\n  int array[3] = {11,22,33};\n  int other[3] = {44,55,66};\n  short small[2] = {7,8};\n  int *p = &array[2];\n  int *q = &array[0];\n  int *r = &other[0];\n  short *s = &small[0];\n  int *nullPointer = 0;\n  void *opaque = p;\n  int octal = 010;\n  float f = 16777216.0f;\n  std::printf(\"integer0=%lld\\n\", (long long)(0));\n  std::printf(\"integer1=%lld\\n\", (long long)(010));\n  std::printf(\"integer2=%lld\\n\", (long long)(00010));\n  std::printf(\"integer3=%lld\\n\", (long long)(077));\n  std::printf(\"integer4=%lld\\n\", (long long)(10));\n  std::printf(\"integer5=%lld\\n\", (long long)(0x10));\n  std::printf(\"integer6=%lld\\n\", (long long)(010 + 0x10));\n  std::printf(\"integer7=%lld\\n\", (long long)(077 & 0xF));\n  std::printf(\"integer8=%lld\\n\", (long long)(037777777777 + 1));\n  std::printf(\"integer9=%lld\\n\", (long long)(020000000000 < -1));\n  std::printf(\"integer10=%lld\\n\", (long long)(037777777777 == -1));\n  std::printf(\"integer11=%lld\\n\", (long long)(2147483648 + 1));\n  std::printf(\"integer12=%lld\\n\", (long long)(0xffffffff + 1));\n  std::printf(\"integer13=%lld\\n\", (long long)(010 == 8));\n  std::printf(\"integer14=%lld\\n\", (long long)(0X10));\n  std::printf(\"integer15=%lld\\n\", (long long)(020000000000 + 020000000000));\n  std::printf(\"integer16=%lld\\n\", (long long)(-1 < 020000000000));\n  std::printf(\"target octal=%d difference=%d middle=%d null=%d plus=%.0f minus=%.0f\\n\", octal, int(p-q), *(p-1), int(nullPointer == 0), (+f)+1, (-f)-1);\n  return 0;\n}\n",
+          "contentHash": "sha256:73d2429c3de28800c351163a7e5dffb8ccab19a7eb255c5c235f70244ca6b740"
+        }
+      ]
+    },
+    "build": {
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "requestId": "437dcb79-d4f2-4f2c-ba6b-36a56bf4c36d",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "snapshotId": "5cfe5a6b-598f-4924-ba16-93b84a9fdbb1",
+      "profile": {
+        "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+        "protocolVersion": "0.1.0-draft.1",
+        "compiler": {
+          "id": "binji-wasm-clang-648c4a89997a/clang",
+          "version": "8.0.1",
+          "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        },
+        "linker": {
+          "id": "binji-wasm-clang-648c4a89997a/lld",
+          "version": "8.0.1",
+          "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+        },
+        "sysroot": {
+          "id": "binji-wasm-clang-648c4a89997a/sysroot",
+          "version": "binji-wasm-clang-648c4a89997a",
+          "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        "standardLibrary": {
+          "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+          "version": "binji-wasm-clang-648c4a89997a",
+          "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        "runtime": {
+          "id": "project-js-wasm-interpreter",
+          "version": "0.1.0-prototype.1",
+          "buildHash": "sha256:17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+        },
+        "debugger": {
+          "id": "project-dwarf4-debugger",
+          "version": "0.1.0-prototype.1",
+          "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+        },
+        "targetTriple": "wasm32-unknown-wasi",
+        "abi": "wasi_unstable",
+        "addressBits": 32,
+        "endianness": "little",
+        "artifactFormat": "wasm-v1",
+        "debugInfoFormat": "dwarf-4-embedded",
+        "requiredFeatures": [
+          "mvp",
+          "mutable-globals"
+        ],
+        "resourceManifestHash": "sha256:b02def5d2c6e7f39177b8d523583e53bc24708e493c9f0300ac8e729b7b56fe8",
+        "status": "candidate",
+        "evidence": [
+          "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+        ]
+      },
+      "mode": "debug",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "compilerArguments": [
+        "-cc1",
+        "-emit-obj",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-O0",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-debug-info-kind=standalone",
+        "-dwarf-version=4",
+        "-debugger-tuning=lldb",
+        "-fdebug-compilation-dir",
+        "/project",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-o",
+        "build/main.o",
+        "/project/main.cpp"
+      ],
+      "linkerArguments": [
+        "--no-threads",
+        "--export-dynamic",
+        "-z",
+        "stack-size=1048576",
+        "--max-memory=268435456",
+        "-Llib/wasm32-wasi",
+        "lib/wasm32-wasi/crt1.o",
+        "build/main.o",
+        "-lc++",
+        "-lc++abi",
+        "-lc",
+        "-lm",
+        "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+        "-o",
+        "build/main.wasm"
+      ],
+      "executable": {
+        "id": "wasm-3ce62621fb7b994fefd0ee39ef3475ec0eca8fc1cfc809bacb90886d506ebfd4",
+        "relativePath": "compiler-builds/wasm-3ce62621fb7b994fefd0ee39ef3475ec0eca8fc1cfc809bacb90886d506ebfd4/main.wasm",
+        "sha256": "sha256:3ce62621fb7b994fefd0ee39ef3475ec0eca8fc1cfc809bacb90886d506ebfd4",
+        "byteLength": 35870,
+        "mediaType": "application/wasm",
+        "version": "binji-wasm-clang-648c4a89997a"
+      },
+      "debugInfo": [
+        {
+          "id": "wasm-3ce62621fb7b994fefd0ee39ef3475ec0eca8fc1cfc809bacb90886d506ebfd4",
+          "relativePath": "compiler-builds/wasm-3ce62621fb7b994fefd0ee39ef3475ec0eca8fc1cfc809bacb90886d506ebfd4/main.wasm",
+          "sha256": "sha256:3ce62621fb7b994fefd0ee39ef3475ec0eca8fc1cfc809bacb90886d506ebfd4",
+          "byteLength": 35870,
+          "mediaType": "application/wasm",
+          "version": "binji-wasm-clang-648c4a89997a"
+        }
+      ],
+      "sourceMappings": []
+    },
+    "persistedBytes": 35870,
+    "persistedSHA256": "sha256:3ce62621fb7b994fefd0ee39ef3475ec0eca8fc1cfc809bacb90886d506ebfd4"
+  },
+  "native": {
+    "exitCode": 0,
+    "stdout": "integer0=0\ninteger1=8\ninteger2=8\ninteger3=63\ninteger4=10\ninteger5=16\ninteger6=24\ninteger7=15\ninteger8=0\ninteger9=1\ninteger10=1\ninteger11=2147483649\ninteger12=0\ninteger13=1\ninteger14=16\ninteger15=0\ninteger16=0\ntarget octal=8 difference=2 middle=22 null=1 plus=16777216 minus=-16777216\n",
+    "stderr": "",
+    "memoryBytes": 1179648
+  },
+  "pause": {
+    "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+    "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+    "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+    "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+    "eventSeq": 4,
+    "kind": "paused",
+    "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+    "reason": "breakpoint",
+    "position": {
+      "sourcePath": "main.cpp",
+      "line": 14,
+      "column": 1
+    }
+  },
+  "frame": {
+    "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22",
+    "functionName": "main",
+    "position": {
+      "sourcePath": "main.cpp",
+      "line": 14,
+      "column": 1
+    },
+    "module": "wasm-3ce62621fb7b994fefd0ee39ef3475ec0eca8fc1cfc809bacb90886d506ebfd4"
+  },
+  "observations": [
+    {
+      "expression": "0",
+      "result": {
+        "name": "0",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "010",
+      "result": {
+        "name": "010",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "00010",
+      "result": {
+        "name": "00010",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "077",
+      "result": {
+        "name": "077",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "63",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "10",
+      "result": {
+        "name": "10",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "10",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "0x10",
+      "result": {
+        "name": "0x10",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "16",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "010 + 0x10",
+      "result": {
+        "name": "010 + 0x10",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "24",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "077 & 0xF",
+      "result": {
+        "name": "077 & 0xF",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "15",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "037777777777 + 1",
+      "result": {
+        "name": "037777777777 + 1",
+        "type": "unsigned int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "020000000000 < -1",
+      "result": {
+        "name": "020000000000 < -1",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "037777777777 == -1",
+      "result": {
+        "name": "037777777777 == -1",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "2147483648 + 1",
+      "result": {
+        "name": "2147483648 + 1",
+        "type": "long long",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "2147483649",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "0xffffffff + 1",
+      "result": {
+        "name": "0xffffffff + 1",
+        "type": "unsigned int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "010 == 8",
+      "result": {
+        "name": "010 == 8",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "0X10",
+      "result": {
+        "name": "0X10",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "16",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "020000000000 + 020000000000",
+      "result": {
+        "name": "020000000000 + 020000000000",
+        "type": "unsigned int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "-1 < 020000000000",
+      "result": {
+        "name": "-1 < 020000000000",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "08",
+      "result": {
+        "name": "08",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Invalid digit in octal integer literal",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "09",
+      "result": {
+        "name": "09",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Invalid digit in octal integer literal",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "0009",
+      "result": {
+        "name": "0009",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Invalid digit in octal integer literal",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "08 + 1",
+      "result": {
+        "name": "08 + 1",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Invalid digit in octal integer literal",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "1 + 09",
+      "result": {
+        "name": "1 + 09",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Invalid digit in octal integer literal",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "true || 08",
+      "result": {
+        "name": "true || 08",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Invalid digit in octal integer literal",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "false && 09",
+      "result": {
+        "name": "false && 09",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Invalid digit in octal integer literal",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p + q",
+      "result": {
+        "name": "p + q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Adding two pointers is invalid",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "q + p",
+      "result": {
+        "name": "q + p",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Adding two pointers is invalid",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p - q",
+      "result": {
+        "name": "p - q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer subtraction is unsupported: common array provenance cannot be verified",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "q - p",
+      "result": {
+        "name": "q - p",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer subtraction is unsupported: common array provenance cannot be verified",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p - p",
+      "result": {
+        "name": "p - p",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer subtraction is unsupported: common array provenance cannot be verified",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p - r",
+      "result": {
+        "name": "p - r",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer subtraction is unsupported: common array provenance cannot be verified",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p - s",
+      "result": {
+        "name": "p - s",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer subtraction is unsupported: common array provenance cannot be verified",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p + nullPointer",
+      "result": {
+        "name": "p + nullPointer",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Adding two pointers is invalid",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "opaque + p",
+      "result": {
+        "name": "opaque + p",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Adding two pointers is invalid",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p + opaque",
+      "result": {
+        "name": "p + opaque",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Adding two pointers is invalid",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "opaque - p",
+      "result": {
+        "name": "opaque - p",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer subtraction is unsupported: common array provenance cannot be verified",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p - opaque",
+      "result": {
+        "name": "p - opaque",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer subtraction is unsupported: common array provenance cannot be verified",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "opaque + 1",
+      "result": {
+        "name": "opaque + 1",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer target size unavailable",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "opaque - 1",
+      "result": {
+        "name": "opaque - 1",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Pointer target size unavailable",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p",
+      "result": {
+        "name": "p",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x001015b8",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "445d4f6f-0503-4511-b29c-90298fd6c6ca"
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "q",
+      "result": {
+        "name": "q",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x001015b0",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "832e54cd-9ade-4d78-98e7-527d54e4e26e"
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p + 1",
+      "result": {
+        "name": "p + 1",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x001015bc",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "a1f77941-e9c2-4b39-8834-afbb21e04ce2"
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p - 1",
+      "result": {
+        "name": "p - 1",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x001015b4",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "188d1e76-5fce-40c5-90cd-5959d20d738f"
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "*(p-1)",
+      "result": {
+        "name": "*(p-1)",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "22",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "*(q+2)",
+      "result": {
+        "name": "*(q+2)",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "33",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p == 0",
+      "result": {
+        "name": "p == 0",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p != 0",
+      "result": {
+        "name": "p != 0",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "nullPointer == 0",
+      "result": {
+        "name": "nullPointer == 0",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "0 == nullPointer",
+      "result": {
+        "name": "0 == nullPointer",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p == q",
+      "result": {
+        "name": "p == q",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p != q",
+      "result": {
+        "name": "p != q",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p - 0",
+      "result": {
+        "name": "p - 0",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x001015b8",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "2538d252-ff49-43a0-90ac-a752c3a1b8c5"
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p + 1.0",
+      "result": {
+        "name": "p + 1.0",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Unsupported pointer operation",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p - 1.0",
+      "result": {
+        "name": "p - 1.0",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Unsupported pointer operation",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "1 - p",
+      "result": {
+        "name": "1 - p",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Unsupported pointer operation",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p * q",
+      "result": {
+        "name": "p * q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Unsupported pointer operation",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p / q",
+      "result": {
+        "name": "p / q",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Unsupported pointer operation",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "&(p+1)",
+      "result": {
+        "name": "&(p+1)",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Operand has no addressable location",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "array[p]",
+      "result": {
+        "name": "array[p]",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Integer array index required",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "p[q]",
+      "result": {
+        "name": "p[q]",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "unsupported",
+        "reason": "Integer array index required",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "&p",
+      "result": {
+        "name": "&p",
+        "type": "int**",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x00101598",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "3504ee80-0e15-4b4e-85e3-e854a97773c9"
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "*(&p)",
+      "result": {
+        "name": "*(&p)",
+        "type": "int*",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0x001015b8",
+        "namedCount": 1,
+        "indexedCount": 0,
+        "variablesReference": "8d846c8f-3e1c-40ec-b28d-e9c66cb4f543"
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "opaque == 0",
+      "result": {
+        "name": "opaque == 0",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "opaque != 0",
+      "result": {
+        "name": "opaque != 0",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "+f",
+      "result": {
+        "name": "+f",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "-f",
+      "result": {
+        "name": "-f",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "-16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "(+f) + 1",
+      "result": {
+        "name": "(+f) + 1",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "(-f) - 1",
+      "result": {
+        "name": "(-f) - 1",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "-16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "+(-f)",
+      "result": {
+        "name": "+(-f)",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "-16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "-(-f)",
+      "result": {
+        "name": "-(-f)",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "16777216",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    },
+    {
+      "expression": "octal",
+      "result": {
+        "name": "octal",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "8",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "frameId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916:wasm-frame-22"
+    }
+  ],
+  "invalidPrograms": [
+    {
+      "caseId": "08",
+      "source": "int main() { return 08; }\n",
+      "result": {
+        "requestId": "e0e1ca56-837d-4a49-ae8a-2dbedfce5c3f",
+        "sourceHash": "sha256:097c56959d2ec19a88f2858284d42d1be2dab79b4c1558345748d63f9a8c681a",
+        "status": "failed",
+        "diagnostics": [
+          {
+            "severity": "error",
+            "message": "invalid digit '8' in octal constant",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 1,
+                "column": 22
+              }
+            }
+          }
+        ],
+        "reason": "compiler-exit"
+      }
+    },
+    {
+      "caseId": "09",
+      "source": "int main() { return 09; }\n",
+      "result": {
+        "requestId": "abf169d2-927d-4a1f-94db-478f5520ca6c",
+        "sourceHash": "sha256:ff4b93d97d62940a0fbaf7864f239acf63f8483bcb69ffc6960472276de5d819",
+        "status": "failed",
+        "diagnostics": [
+          {
+            "severity": "error",
+            "message": "invalid digit '9' in octal constant",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 1,
+                "column": 22
+              }
+            }
+          }
+        ],
+        "reason": "compiler-exit"
+      }
+    },
+    {
+      "caseId": "pointer-addition",
+      "source": "int main() { int a[3] = {11,22,33}; int *p = &a[2]; int *q = &a[0]; return p + q; }\n",
+      "result": {
+        "requestId": "2bc01976-b424-4ada-b325-14b6e1c357e4",
+        "sourceHash": "sha256:4cb2d58d9d332a4b5ffba7615a4792d2f6bca6ed90b60c04bd836aa0ec282546",
+        "status": "failed",
+        "diagnostics": [
+          {
+            "severity": "error",
+            "message": "invalid operands to binary expression ('int *' and 'int *')",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 1,
+                "column": 78
+              }
+            }
+          }
+        ],
+        "reason": "compiler-exit"
+      }
+    }
+  ],
+  "interpreterOutput": "integer0=0\ninteger1=8\ninteger2=8\ninteger3=63\ninteger4=10\ninteger5=16\ninteger6=24\ninteger7=15\ninteger8=0\ninteger9=1\ninteger10=1\ninteger11=2147483649\ninteger12=0\ninteger13=1\ninteger14=16\ninteger15=0\ninteger16=0\ntarget octal=8 difference=2 middle=22 null=1 plus=16777216 minus=-16777216\n",
+  "termination": {
+    "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+    "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+    "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+    "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+    "eventSeq": 24,
+    "kind": "terminated",
+    "reason": "exit",
+    "exitCode": 0
+  },
+  "events": [
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 1,
+      "kind": "state",
+      "state": "starting"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 2,
+      "kind": "breakpoints",
+      "bindings": [
+        {
+          "breakpointId": "4f5dfe89-0f88-4779-b32d-daeeb3ecca8e",
+          "requested": {
+            "sourcePath": "main.cpp",
+            "line": 14,
+            "column": 1
+          },
+          "status": "bound",
+          "actual": [
+            {
+              "sourcePath": "main.cpp",
+              "line": 14,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 3,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 4,
+      "kind": "paused",
+      "pauseId": "8f9cbf6b-ac99-4be1-b784-5dff6805d916",
+      "reason": "breakpoint",
+      "position": {
+        "sourcePath": "main.cpp",
+        "line": 14,
+        "column": 1
+      }
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 5,
+      "kind": "state",
+      "state": "running"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 6,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer0=0\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 7,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer1=8\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 8,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer2=8\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 9,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer3=63\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 10,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer4=10\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 11,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer5=16\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 12,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer6=24\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 13,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer7=15\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 14,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer8=0\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 15,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer9=1\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 16,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer10=1\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 17,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer11=2147483649\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 18,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer12=0\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 19,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer13=1\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 20,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer14=16\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 21,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer15=0\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 22,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "integer16=0\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 23,
+      "kind": "output",
+      "stream": "stdout",
+      "text": "target octal=8 difference=2 middle=22 null=1 plus=16777216 minus=-16777216\n"
+    },
+    {
+      "sessionId": "cd6d0bf8-bf40-4099-9a27-3b45bebe2776",
+      "buildId": "build-16b223c3-49c4-4302-87c5-612bdb23c63c",
+      "sourceHash": "sha256:cf500a7bfa46409e8c86e2ee3f609d918e76cb339e3e720b5e18ed8ba7ccacee",
+      "compatibilityId": "integration-prototype-b02def5d2c6e7f39",
+      "eventSeq": 24,
+      "kind": "terminated",
+      "reason": "exit",
+      "exitCode": 0
+    }
+  ],
+  "scope": "Pointer subtraction is explicitly unsupported because the evaluator does not establish common array provenance."
+}

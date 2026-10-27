@@ -1,0 +1,26 @@
+{
+  "id": "contracts",
+  "command": "npm.cmd test",
+  "invokedVia": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "args": [
+      "--prefix",
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "test"
+    ]
+  },
+  "startedAt": "2026-10-27T04:38:24.156Z",
+  "finishedAt": "2026-10-27T04:38:25.327Z",
+  "durationMs": 1171.6151000000004,
+  "exitCode": 0,
+  "signal": null,
+  "errorMessage": null,
+  "outputFile": "contracts.txt",
+  "outputSHA256": "e90416b2f8bf0b6c9d6aacf42bc36fa08057fb95e8a4712d5dffe47feb2e4d79",
+  "observedCounts": {
+    "tests": 10,
+    "passed": 10,
+    "failed": 0
+  }
+}

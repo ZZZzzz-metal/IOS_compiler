@@ -1,0 +1,649 @@
+{
+  "startedAt": "2026-10-27T04:42:00.978Z",
+  "completedAt": "2026-10-27T04:42:01.003Z",
+  "revision": "b9ed5d1faade2eedd7e9d840fb8e2ffa8504bebf",
+  "sourceSha256": "dad33658c34e67daaa4d2c887a94def02b041bf57844a6b221aa9c3a7c3ff133",
+  "method": "full actual main module evaluated in VM; only import declarations replaced by explicit dependencies",
+  "boundary": "Controlled DOM/File.text/network/trust/compiler/debugger/controller and memory store. Real parser/autosave/editor/source modules. No actual browser, IndexedDB, byte trust, compilation, offline or iPad result.",
+  "counts": {
+    "total": 13,
+    "passed": 1,
+    "failed": 12,
+    "infrastructureFailures": 0
+  },
+  "inputs": [
+    {
+      "path": "storage/src/draft-store.mjs",
+      "byteLength": 8047,
+      "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+    },
+    {
+      "path": "storage/src/autosave.mjs",
+      "byteLength": 2767,
+      "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+    },
+    {
+      "path": "compiler/src/source.mjs",
+      "byteLength": 7201,
+      "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+    },
+    {
+      "path": "ui/src/editor.mjs",
+      "byteLength": 2518,
+      "sha256": "26e0eb00f16f4fac9cebde7c7db702559823c2acb9288cf8fde89da35a2767e6"
+    },
+    {
+      "path": "ui/src/main.mjs",
+      "revision": "b9ed5d1faade2eedd7e9d840fb8e2ffa8504bebf",
+      "byteLength": 27611,
+      "sha256": "dad33658c34e67daaa4d2c887a94def02b041bf57844a6b221aa9c3a7c3ff133"
+    },
+    {
+      "path": "tests/ui-concurrency-independent.mjs",
+      "byteLength": 21445,
+      "sha256": "026f396b9768433ef19e5c8c12a66ac12009c33322eeff9d191e3befc8f2da2b"
+    }
+  ],
+  "results": [
+    {
+      "id": "REV005-01",
+      "title": "last selected B survives reverse A/B completion and real autosave",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'int obsolete_A = 15;\\n'\n- 'int chosen_B = 25;\\n'\n       ^\n",
+        "expected": "'int chosen_B = 25;\\n'",
+        "actual": "'int obsolete_A = 15;\\n'",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'int obsolete_A = 15;\\n'\n- 'int chosen_B = 25;\\n'\n       ^\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:152:10)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 0,
+            "userText": "int obsolete_A = 15;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "",
+            "updatedAt": "2026-10-27T04:42:00.984Z"
+          },
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int chosen_B = 25;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "",
+                "updatedAt": "2026-10-27T04:42:00.984Z"
+              }
+            },
+            {
+              "expected": 5,
+              "draft": {
+                "id": "main",
+                "revision": 6,
+                "userText": "int obsolete_A = 15;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "",
+                "updatedAt": "2026-10-27T04:42:00.984Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-02",
+      "title": "source typed during reading survives with an explanatory conflict prompt",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'int stale_file = 10;\\n'\n- 'int typed_later = 35;\\n'\n       ^\n",
+        "expected": "'int typed_later = 35;\\n'",
+        "actual": "'int stale_file = 10;\\n'",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'int stale_file = 10;\\n'\n- 'int typed_later = 35;\\n'\n       ^\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:160:10)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 0,
+            "userText": "int stale_file = 10;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "",
+            "updatedAt": "2026-10-27T04:42:00.987Z"
+          },
+          "message": "",
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int typed_later = 35;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "4\n",
+                "updatedAt": "2026-10-27T04:42:00.987Z"
+              }
+            },
+            {
+              "expected": 5,
+              "draft": {
+                "id": "main",
+                "revision": 6,
+                "userText": "int stale_file = 10;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "",
+                "updatedAt": "2026-10-27T04:42:00.987Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-03-stdin",
+      "title": "stdin change during reading invalidates the file without losing the edited project",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    driverText: '',\n    id: 'main',\n    language: {\n      language: 'cpp',\n      standard: 'c++17'\n    },\n+   revision: 0,\n+   stdin: '',\n-   revision: 4,\n-   stdin: 'new input\\n',\n    updatedAt: '2026-10-27T04:42:00.989Z',\n+   userText: 'int stale_file = 10;\\n'\n-   userText: 'int original = 4;\\n'\n  }\n",
+        "expected": "{\n  id: 'main',\n  revision: 4,\n  userText: 'int original = 4;\\n',\n  driverText: '',\n  language: { language: 'cpp', standard: 'c++17' },\n  stdin: 'new input\\n',\n  updatedAt: '2026-10-27T04:42:00.989Z'\n}",
+        "actual": "{\n  id: 'main',\n  revision: 0,\n  userText: 'int stale_file = 10;\\n',\n  driverText: '',\n  language: { language: 'cpp', standard: 'c++17' },\n  stdin: '',\n  updatedAt: '2026-10-27T04:42:00.989Z'\n}",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    driverText: '',\n    id: 'main',\n    language: {\n      language: 'cpp',\n      standard: 'c++17'\n    },\n+   revision: 0,\n+   stdin: '',\n-   revision: 4,\n-   stdin: 'new input\\n',\n    updatedAt: '2026-10-27T04:42:00.989Z',\n+   userText: 'int stale_file = 10;\\n'\n-   userText: 'int original = 4;\\n'\n  }\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:171:10)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "field": "stdin",
+          "edited": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "new input\n",
+            "updatedAt": "2026-10-27T04:42:00.989Z"
+          },
+          "after": {
+            "id": "main",
+            "revision": 0,
+            "userText": "int stale_file = 10;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "",
+            "updatedAt": "2026-10-27T04:42:00.989Z"
+          },
+          "message": "",
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int original = 4;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "new input\n",
+                "updatedAt": "2026-10-27T04:42:00.989Z"
+              }
+            },
+            {
+              "expected": 5,
+              "draft": {
+                "id": "main",
+                "revision": 6,
+                "userText": "int stale_file = 10;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "",
+                "updatedAt": "2026-10-27T04:42:00.989Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-03-language",
+      "title": "language change during reading invalidates the file without losing the edited project",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    driverText: '',\n    id: 'main',\n    language: {\n+     language: 'cpp',\n+     standard: 'c++17'\n-     language: 'c',\n-     standard: 'c11'\n    },\n+   revision: 0,\n+   stdin: '',\n+   updatedAt: '2026-10-27T04:42:00.991Z',\n+   userText: 'int stale_file = 10;\\n'\n-   revision: 4,\n-   stdin: '4\\n',\n-   updatedAt: '2026-10-27T04:42:00.990Z',\n-   userText: 'int original = 4;\\n'\n  }\n",
+        "expected": "{\n  id: 'main',\n  revision: 4,\n  userText: 'int original = 4;\\n',\n  driverText: '',\n  language: { language: 'c', standard: 'c11' },\n  stdin: '4\\n',\n  updatedAt: '2026-10-27T04:42:00.990Z'\n}",
+        "actual": "{\n  id: 'main',\n  revision: 0,\n  userText: 'int stale_file = 10;\\n',\n  driverText: '',\n  language: { language: 'cpp', standard: 'c++17' },\n  stdin: '',\n  updatedAt: '2026-10-27T04:42:00.991Z'\n}",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n    driverText: '',\n    id: 'main',\n    language: {\n+     language: 'cpp',\n+     standard: 'c++17'\n-     language: 'c',\n-     standard: 'c11'\n    },\n+   revision: 0,\n+   stdin: '',\n+   updatedAt: '2026-10-27T04:42:00.991Z',\n+   userText: 'int stale_file = 10;\\n'\n-   revision: 4,\n-   stdin: '4\\n',\n-   updatedAt: '2026-10-27T04:42:00.990Z',\n-   userText: 'int original = 4;\\n'\n  }\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:171:10)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "field": "language",
+          "edited": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "",
+            "language": {
+              "language": "c",
+              "standard": "c11"
+            },
+            "stdin": "4\n",
+            "updatedAt": "2026-10-27T04:42:00.990Z"
+          },
+          "after": {
+            "id": "main",
+            "revision": 0,
+            "userText": "int stale_file = 10;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "",
+            "updatedAt": "2026-10-27T04:42:00.991Z"
+          },
+          "message": "",
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int original = 4;\n",
+                "driverText": "",
+                "language": {
+                  "language": "c",
+                  "standard": "c11"
+                },
+                "stdin": "4\n",
+                "updatedAt": "2026-10-27T04:42:00.990Z"
+              }
+            },
+            {
+              "expected": 5,
+              "draft": {
+                "id": "main",
+                "revision": 6,
+                "userText": "int stale_file = 10;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "",
+                "updatedAt": "2026-10-27T04:42:00.991Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-03-driver",
+      "title": "driver change during reading invalidates the file without losing the edited project",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   driverText: '',\n-   driverText: '#include \"user.inc\"\\nint main() { return 6; }\\n',\n    id: 'main',\n    language: {\n      language: 'cpp',\n      standard: 'c++17'\n    },\n+   revision: 0,\n+   stdin: '',\n-   revision: 4,\n-   stdin: '4\\n',\n    updatedAt: '2026-10-27T04:42:00.992Z',\n+   userText: 'int stale_file = 10;\\n'\n-   userText: 'int original = 4;\\n'\n  }\n",
+        "expected": "{\n  id: 'main',\n  revision: 4,\n  userText: 'int original = 4;\\n',\n  driverText: '#include \"user.inc\"\\nint main() { return 6; }\\n',\n  language: { language: 'cpp', standard: 'c++17' },\n  stdin: '4\\n',\n  updatedAt: '2026-10-27T04:42:00.992Z'\n}",
+        "actual": "{\n  id: 'main',\n  revision: 0,\n  userText: 'int stale_file = 10;\\n',\n  driverText: '',\n  language: { language: 'cpp', standard: 'c++17' },\n  stdin: '',\n  updatedAt: '2026-10-27T04:42:00.992Z'\n}",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   driverText: '',\n-   driverText: '#include \"user.inc\"\\nint main() { return 6; }\\n',\n    id: 'main',\n    language: {\n      language: 'cpp',\n      standard: 'c++17'\n    },\n+   revision: 0,\n+   stdin: '',\n-   revision: 4,\n-   stdin: '4\\n',\n    updatedAt: '2026-10-27T04:42:00.992Z',\n+   userText: 'int stale_file = 10;\\n'\n-   userText: 'int original = 4;\\n'\n  }\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:171:10)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "field": "driver",
+          "edited": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "#include \"user.inc\"\nint main() { return 6; }\n",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "4\n",
+            "updatedAt": "2026-10-27T04:42:00.992Z"
+          },
+          "after": {
+            "id": "main",
+            "revision": 0,
+            "userText": "int stale_file = 10;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "",
+            "updatedAt": "2026-10-27T04:42:00.992Z"
+          },
+          "message": "",
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int original = 4;\n",
+                "driverText": "#include \"user.inc\"\nint main() { return 6; }\n",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "4\n",
+                "updatedAt": "2026-10-27T04:42:00.992Z"
+              }
+            },
+            {
+              "expected": 5,
+              "draft": {
+                "id": "main",
+                "revision": 6,
+                "userText": "int stale_file = 10;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "",
+                "updatedAt": "2026-10-27T04:42:00.992Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-04",
+      "title": "obsolete read failure cannot replace the actual newer malformed-project error",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'OBSOLETE_READ_ERROR'\n- '完整草稿文件无法读取，原草稿未改变。'\n",
+        "expected": "'完整草稿文件无法读取，原草稿未改变。'",
+        "actual": "'OBSOLETE_READ_ERROR'",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'OBSOLETE_READ_ERROR'\n- '完整草稿文件无法读取，原草稿未改变。'\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:178:42)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "expected": "完整草稿文件无法读取，原草稿未改变。",
+          "after": "OBSOLETE_READ_ERROR",
+          "writes": []
+        }
+      ]
+    },
+    {
+      "id": "REV005-05",
+      "title": "obsolete finally does not clear the currently selected and still-reading B input",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ ''\n- 'C:\\\\fakepath\\\\new.cpp'\n",
+        "expected": "'C:\\\\fakepath\\\\new.cpp'",
+        "actual": "''",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ ''\n- 'C:\\\\fakepath\\\\new.cpp'\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:185:10)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "selected": "C:\\fakepath\\new.cpp",
+          "whileReading": {
+            "input": "",
+            "draft": {
+              "id": "main",
+              "revision": 0,
+              "userText": "int obsolete = 1;\n",
+              "driverText": "",
+              "language": {
+                "language": "cpp",
+                "standard": "c++17"
+              },
+              "stdin": "",
+              "updatedAt": "2026-10-27T04:42:00.994Z"
+            }
+          },
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int latest = 2;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "",
+                "updatedAt": "2026-10-27T04:42:00.994Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-06",
+      "title": "a current malformed project preserves the restored draft and never schedules a write",
+      "status": "passed",
+      "observations": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "4\n",
+            "updatedAt": "2026-10-27T04:42:00.995Z"
+          },
+          "writes": [],
+          "message": "完整草稿文件无法读取，原草稿未改变。"
+        }
+      ]
+    },
+    {
+      "id": "REV004-01",
+      "title": "re-prepare locks all three entries before await and real editor render keeps them locked",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   debug: false,\n-   debug: true,\n    prepare: true,\n+   run: false\n-   run: true\n  }\n",
+        "expected": "{ run: true, debug: true, prepare: true }",
+        "actual": "{ run: false, debug: false, prepare: true }",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  {\n+   debug: false,\n-   debug: true,\n    prepare: true,\n+   run: false\n-   run: true\n  }\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:198:10)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "beforeEdit": {
+            "run": false,
+            "debug": false,
+            "prepare": true
+          },
+          "afterEdit": {
+            "run": true,
+            "debug": true,
+            "prepare": false
+          },
+          "afterSuccess": {
+            "run": false,
+            "debug": false,
+            "prepare": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "REV004-02",
+      "title": "direct duplicate preparation is rejected instead of starting overlapping requests",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly equal:\n\n3 !== 1\n",
+        "expected": "1",
+        "actual": "3",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n3 !== 1\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:205:122)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "started": 3,
+          "final": "answer-3"
+        }
+      ]
+    },
+    {
+      "id": "REV004-03",
+      "title": "direct run/debug refuses preparation even when stale DOM reports enabled",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly equal:\n\n1 !== 0\n",
+        "expected": "0",
+        "actual": "1",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 0\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:213:10)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "entered": 1,
+          "debuggerConstructors": 1
+        }
+      ]
+    },
+    {
+      "id": "REV004-04",
+      "title": "failed re-check discards the old candidate and retry alone restores compile availability",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   capabilities: {\n+     capabilities: []\n+   },\n+   lock: {\n+     id: 'lock-old'\n+   },\n+   profile: {\n+     compatibilityId: 'old'\n+   },\n+   resources: []\n+ }\n- null\n",
+        "expected": "null",
+        "actual": "{\n  profile: { compatibilityId: 'old' },\n  resources: [],\n  lock: { id: 'lock-old' },\n  capabilities: { capabilities: [] }\n}",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ {\n+   capabilities: {\n+     capabilities: []\n+   },\n+   lock: {\n+     id: 'lock-old'\n+   },\n+   profile: {\n+     compatibilityId: 'old'\n+   },\n+   resources: []\n+ }\n- null\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:219:43)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "failed": {
+            "ready": false,
+            "prepared": {
+              "profile": {
+                "compatibilityId": "old"
+              },
+              "resources": [],
+              "lock": {
+                "id": "lock-old"
+              },
+              "capabilities": {
+                "capabilities": []
+              }
+            },
+            "buttons": {
+              "run": true,
+              "debug": true,
+              "prepare": false
+            },
+            "resource": "资源未就绪"
+          },
+          "retry": {
+            "ready": true,
+            "identity": "retry",
+            "buttons": {
+              "run": false,
+              "debug": false,
+              "prepare": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "REV004-05",
+      "title": "one compilation retains the same candidate through adapters, handoff, request and start",
+      "status": "failed",
+      "assertionFailure": true,
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    'candidate-A',\n    'candidate-A',\n    'candidate-A',\n+   'candidate-B'\n-   'candidate-A'\n  ]\n",
+        "expected": "[ 'candidate-A', 'candidate-A', 'candidate-A', 'candidate-A' ]",
+        "actual": "[ 'candidate-A', 'candidate-A', 'candidate-A', 'candidate-B' ]",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    'candidate-A',\n    'candidate-A',\n    'candidate-A',\n+   'candidate-B'\n-   'candidate-A'\n  ]\n\n    at Object.run (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:231:10)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-concurrency-independent.mjs:238:25"
+      },
+      "observations": [
+        {
+          "debugger": "candidate-A",
+          "compiler": "candidate-A",
+          "request": "candidate-A",
+          "start": "candidate-B",
+          "registered": [
+            {
+              "path": "virtual/new.wasm",
+              "bytes": [
+                7,
+                8
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

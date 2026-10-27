@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-25T16:55:09.459Z",
+  "packageId": "local-https-20261025T165419Z-6dcce5a1",
+  "rootSHA256": "sha256:dcb39bf1e2c78d7ec384dc203cce84ebabc61afd5262b54a00f7b16a7d9360de",
+  "checks": {
+    "rootSelfSignature": true,
+    "leafSignatureByRoot": true,
+    "CAConstraints": true,
+    "subjectAlternativeNameIP": true,
+    "subjectAlternativeNameLocalhost": true,
+    "privateKeyMatchesLeaf": true,
+    "fingerprintMatchesDER": true,
+    "expiryMatchesReport": true,
+    "rootKeyNotSaved": true,
+    "customCARootHTTPS200": true,
+    "systemTrustStillRejects": true,
+    "privateKeyNotServed": true
+  },
+  "declaration": "Node HTTPS/X509 loopback verification only. No system certificate installation, LAN exposure, or iPad verification."
+}

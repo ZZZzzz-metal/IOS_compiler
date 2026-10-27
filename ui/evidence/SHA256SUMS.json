@@ -1,0 +1,46 @@
+{
+  "baseline-check.txt": {
+    "byteLength": 277,
+    "sha256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48"
+  },
+  "browser-2026-10-25.json": {
+    "byteLength": 3215,
+    "sha256": "ba8d4ff86f90966d3874c7e92fa24db475673561c3a68bcee8e869c17e686237"
+  },
+  "browser-breakpoint.jpg": {
+    "byteLength": 119349,
+    "sha256": "ad01f3e3d369a4a29f40b59bd4d6f30f26cf9b858cac648596ac2827ec5bc38e"
+  },
+  "browser-c-output.jpg": {
+    "byteLength": 71144,
+    "sha256": "ccbc88f8ace505de6a38d721473a0981dbf94ca53ee9bd19d27b5b4dbfad60f0"
+  },
+  "browser-conflict.jpg": {
+    "byteLength": 96694,
+    "sha256": "4652b57d673714a6da74448f2d2ef03e66bad2251f5945be2ea8497e48a689d7"
+  },
+  "browser-diagnostic.jpg": {
+    "byteLength": 91702,
+    "sha256": "35a5f73be60ee49e1289f81c7b0e0dc33fac6efc316a25b708bc792dc7612aff"
+  },
+  "browser-stop-restart.jpg": {
+    "byteLength": 71410,
+    "sha256": "362e3bf7c8fa27b9c77ac71127273cd1af9f9c84b72f7e781737d6e46a6ef2f0"
+  },
+  "contracts.tap": {
+    "byteLength": 2352,
+    "sha256": "ca71908f69328031a5f3641e0d6343ffde82261fd86b1e5f78c7fdad1ebee5ca"
+  },
+  "draft-export.json": {
+    "byteLength": 827,
+    "sha256": "0beca307262bb296552fa9de739a59fbc3af62f9d6bba2be624af73c5cfb5c15"
+  },
+  "integration.tap": {
+    "byteLength": 833,
+    "sha256": "0799ce15a0d3bddd3d1535bc7e306f8a79d76ab4bf94fa192c772bc371127ef0"
+  },
+  "module-tests.tap": {
+    "byteLength": 5212,
+    "sha256": "48fb633cf1a798b1fdde99241f01d24699a231979602826f85c158e9370b63e9"
+  }
+}

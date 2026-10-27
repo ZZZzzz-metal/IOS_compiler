@@ -1,0 +1,16 @@
+{
+  "format": "ipad-offline-debugger-draft",
+  "schemaVersion": 1,
+  "draft": {
+    "id": "main",
+    "revision": 0,
+    "userText": "class Solution {\npublic:\n    int solve(int n) { return n * 2 + 1; }\n};\n// person05-source-only\n",
+    "driverText": "#include \"user.inc\"\n#include <cstdio>\nint main() {\n    Solution solution;\n    int result = solution.solve(21);\n    std::printf(\"driver05=%d\\n\", result);\n    return 0;\n}\n",
+    "language": {
+      "language": "cpp",
+      "standard": "c++17"
+    },
+    "stdin": "123\n",
+    "updatedAt": "2026-10-25T11:56:32.643Z"
+  }
+}

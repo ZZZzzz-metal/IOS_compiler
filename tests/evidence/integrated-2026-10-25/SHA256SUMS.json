@@ -1,0 +1,27 @@
+[
+  {
+    "file": "independent.json",
+    "byteLength": 606099,
+    "sha256": "ba13f6033268aa129623f8d298ad4e07a90cffa8b41fb54cc7e236234f5a251b"
+  },
+  {
+    "file": "independent.tap",
+    "byteLength": 1606,
+    "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+  },
+  {
+    "file": "regression-shadow.json",
+    "byteLength": 65331,
+    "sha256": "c4e0f35c0fc44d60a2be1e4ec9ce909dfa03d62ff3c9728f8dffb9d0ae079725"
+  },
+  {
+    "file": "regression-loop-header.json",
+    "byteLength": 115246,
+    "sha256": "50a5f179648c25e885f35ff93b7c47d14d4c676efa11bb60dbadfe2bc0592e00"
+  },
+  {
+    "file": "summary.json",
+    "byteLength": 2822,
+    "sha256": "e7caca94052f41c8fadf4d8e02ca6ad7fe1fa956e2402f90ab420852c368b660"
+  }
+]

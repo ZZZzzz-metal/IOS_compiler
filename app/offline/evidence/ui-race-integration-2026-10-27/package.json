@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "kind": "verified-static-web-archives",
+  "version": "0.4.3",
+  "sourceBaseRevision": "6ead71151721098d5ff5a3e21265b366569406e0",
+  "sourceBaseRevisionScope": "Merge base includes delivered UI fixes. Current manual/metadata changes are additionally bound by resource hashes and separately sealed source fingerprints.",
+  "uiFixCommit": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "independentDesktopVerificationCommit": "23b8794993b0a7824d84f9222aee91468c46bcbb",
+  "bundleId": "ipad-web-probe-1934f34d48ba1a8c94eadd93",
+  "entryURL": "https://100.65.235.35:4187/releases/ipad-web-probe-1934f34d48ba1a8c94eadd93/index.html",
+  "resourceCount": 50,
+  "resourceBytes": 60847962,
+  "workerSha256": "sha256:592f89978944e72ded1737236c7c429762a31a5fad9a85ad677c5a64ceb1ef1b",
+  "descriptorSha256": "sha256:88f5b9911425347062bc0c24dba22ed2111a82abc97611d8afa695437bdddf1d",
+  "completePackage": {
+    "path": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\app\\offline\\.local\\packages\\ipad-offline-debugger-v0.4.3.zip",
+    "filename": "ipad-offline-debugger-v0.4.3.zip",
+    "byteLength": 19281996,
+    "sha256": "05f549212f3b84734c9b753312e96469f3d1703ca691a304940acd03a6c3a49e",
+    "fileCount": 59,
+    "allArchivedFilesVerified": true
+  },
+  "firstSetupPackage": {
+    "path": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\app\\offline\\.local\\packages\\ipad-first-setup-v0.4.3.zip",
+    "filename": "ipad-first-setup-v0.4.3.zip",
+    "byteLength": 18098,
+    "sha256": "af2aafab13ca94cc4c9b8ec2462dd2dc74530d7bd1c22ef3830de093dc575d81",
+    "fileCount": 6,
+    "allArchivedFilesVerified": true
+  },
+  "knownOpenIssues": [
+    "REV-002",
+    "REV-003"
+  ],
+  "integratedPendingIndependentVerification": [
+    "REV-004",
+    "REV-005"
+  ],
+  "verification": {
+    "allRuntimeResourceHashes": 50,
+    "controlPlaneHashes": 2,
+    "publicRootDERMatchesProfile": true,
+    "profilePayloadCount": 1,
+    "rootSHA256": "87991d2b7d332034beddb95ed35ddabc906c0e0b2bd1dd174ec4a25b826e349f",
+    "profileRemovable": true,
+    "privateKeysExcluded": true,
+    "onlyCurrentReleaseIncluded": true,
+    "testControlsExcluded": true,
+    "manualMatchesRuntimePayload": true
+  },
+  "declaration": "Archive byte verification only. Current HTTPS connectivity and browser smoke are recorded separately. VAL-004 independently closed only in tested desktop scope; this new offline release, real iPad and G2/G3 remain independently unverified."
+}
