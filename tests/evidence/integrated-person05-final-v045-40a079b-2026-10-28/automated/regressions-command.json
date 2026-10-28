@@ -1,0 +1,23 @@
+{
+  "id": "regressions",
+  "command": "npm.cmd run test:regressions",
+  "invokedVia": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "args": [
+      "--prefix",
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "run",
+      "test:regressions"
+    ]
+  },
+  "startedAt": "2026-10-28T08:41:26.288Z",
+  "finishedAt": "2026-10-28T08:41:28.568Z",
+  "durationMs": 2280.2779999999984,
+  "exitCode": 0,
+  "signal": null,
+  "errorMessage": null,
+  "outputFile": "regressions.txt",
+  "outputSHA256": "3e745c45aea1330755582644435dfcdfe4cde291eedb47a75589993c180bf3f5",
+  "evidenceDirectory": "regressions"
+}

@@ -1,0 +1,65 @@
+{
+  "testedRevision": "40a079ba2065384572f268e4bb91bda437e46cec",
+  "recordedAt": "2026-10-28T09:02:52.967Z",
+  "results": [
+    {
+      "id": "check",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "startedAt": "2026-10-28T09:02:49.074Z",
+      "finishedAt": "2026-10-28T09:02:51.660Z",
+      "exitCode": 0,
+      "stdoutSHA256": "ba4ce463e7223dadae91b177323ca943d924952caaa1f0c2ed644973df9aae5a",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "test",
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "startedAt": "2026-10-28T09:02:51.661Z",
+      "finishedAt": "2026-10-28T09:02:52.614Z",
+      "exitCode": 0,
+      "stdoutSHA256": "541a438bd3be9cdd913d44a9c1d316b71ff2eb78b762a3a684ab2e6805f845a2",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "fixture-host-syntax",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--check",
+        "tests/offline-browser-host.mjs"
+      ],
+      "startedAt": "2026-10-28T09:02:52.614Z",
+      "finishedAt": "2026-10-28T09:02:52.727Z",
+      "exitCode": 0,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "diff-check",
+      "command": "git",
+      "args": [
+        "-c",
+        "safe.directory=C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+        "diff",
+        "--check"
+      ],
+      "startedAt": "2026-10-28T09:02:52.727Z",
+      "finishedAt": "2026-10-28T09:02:52.852Z",
+      "exitCode": 0,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "productDiffFromTarget": ""
+}

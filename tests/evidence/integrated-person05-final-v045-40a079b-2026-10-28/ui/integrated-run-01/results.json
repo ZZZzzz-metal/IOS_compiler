@@ -1,0 +1,679 @@
+{
+  "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+  "date": "2026-10-28T08:42:04.910Z",
+  "kind": "Correct-behavior assertions; failures remain failures. Clipboard-generation scenarios are paths of one defect, not independent defect counts.",
+  "boundary": "Complete actual frozen main module; real parser/autosave/editor/source. Controlled DOM/File/clipboard/network/trust/compiler/debugger/controller and recording memory store. No browser/IndexedDB/real compiler/iPad claim.",
+  "inputs": [
+    {
+      "path": "ui/src/main.mjs",
+      "byteLength": 33093,
+      "sha256": "ff34c70433827b17ab4e1d25db03b71c922d27e1132b12841ab7cabb2fac4b40",
+      "revision": "40a079ba2065384572f268e4bb91bda437e46cec"
+    },
+    {
+      "path": "ui/src/editor.mjs",
+      "byteLength": 5372,
+      "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+    },
+    {
+      "path": "storage/src/autosave.mjs",
+      "byteLength": 2767,
+      "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+    },
+    {
+      "path": "storage/src/draft-store.mjs",
+      "byteLength": 8047,
+      "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+    },
+    {
+      "path": "compiler/src/source.mjs",
+      "byteLength": 7201,
+      "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+    },
+    {
+      "path": "tests/ui-parallel-audit.mjs",
+      "byteLength": 10499,
+      "sha256": "163a34a7ededd0450803748fd01e39bd6645605156af0ed660c4b88a7acf0470"
+    },
+    {
+      "path": "tests/lib/ui-parallel-audit-host.mjs",
+      "byteLength": 10613,
+      "sha256": "829fbff4c045749f8784499b9f909826911566a075d1cfae91ae610aee9ce52a"
+    }
+  ],
+  "counts": {
+    "cases": 8,
+    "passed": 8,
+    "failed": 0,
+    "harnessFailures": 0,
+    "assertions": 25,
+    "failedAssertions": 0
+  },
+  "results": [
+    {
+      "id": "CLIP-EDIT",
+      "title": "pending paste must preserve a later source edit",
+      "group": "clipboard-generation",
+      "status": "passed",
+      "confirmedDefect": false,
+      "checks": [
+        {
+          "label": "source edit happened before late result",
+          "passed": true,
+          "actual": "int latest_typed = 20;\n",
+          "expected": "int latest_typed = 20;\n"
+        },
+        {
+          "label": "late result preserves current source",
+          "passed": true,
+          "actual": "int latest_typed = 20;\n",
+          "expected": "int latest_typed = 20;\n"
+        },
+        {
+          "label": "autosave preserves current source",
+          "passed": true,
+          "actual": "int latest_typed = 20;\n",
+          "expected": "int latest_typed = 20;\n"
+        }
+      ],
+      "before": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int latest_typed = 20;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.898Z"
+      },
+      "after": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int latest_typed = 20;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.898Z"
+      },
+      "saved": {
+        "id": "main",
+        "revision": 2,
+        "userText": "int latest_typed = 20;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.898Z"
+      },
+      "writes": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 1,
+            "userText": "int latest_typed = 20;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "1\n",
+            "updatedAt": "2026-10-28T08:42:04.898Z"
+          },
+          "expected": 1,
+          "index": 0,
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": "CLIP-ORDER",
+      "title": "older paste must not replace a newer completed paste",
+      "group": "clipboard-generation",
+      "status": "passed",
+      "confirmedDefect": false,
+      "checks": [
+        {
+          "label": "newer paste completed first",
+          "passed": true,
+          "actual": "int newer_paste = 60;\n",
+          "expected": "int newer_paste = 60;\n"
+        },
+        {
+          "label": "older result preserves newer source",
+          "passed": true,
+          "actual": "int newer_paste = 60;\n",
+          "expected": "int newer_paste = 60;\n"
+        },
+        {
+          "label": "autosave preserves newer source",
+          "passed": true,
+          "actual": "int newer_paste = 60;\n",
+          "expected": "int newer_paste = 60;\n"
+        }
+      ],
+      "before": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int newer_paste = 60;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.900Z"
+      },
+      "after": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int newer_paste = 60;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.900Z"
+      },
+      "saved": {
+        "id": "main",
+        "revision": 2,
+        "userText": "int newer_paste = 60;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.900Z"
+      },
+      "writes": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 1,
+            "userText": "int newer_paste = 60;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "1\n",
+            "updatedAt": "2026-10-28T08:42:04.900Z"
+          },
+          "expected": 1,
+          "index": 0,
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": "CLIP-IMPORT-CONTROL",
+      "title": "paste targeting an old draft object does not replace a later parsed import",
+      "group": null,
+      "status": "passed",
+      "confirmedDefect": false,
+      "checks": [
+        {
+          "label": "import replaced current text",
+          "passed": true,
+          "actual": "int latest_import = 40;\n",
+          "expected": "int latest_import = 40;\n"
+        },
+        {
+          "label": "imported source is preserved",
+          "passed": true,
+          "actual": "int latest_import = 40;\n",
+          "expected": "int latest_import = 40;\n"
+        },
+        {
+          "label": "saved imported source is preserved",
+          "passed": true,
+          "actual": "int latest_import = 40;\n",
+          "expected": "int latest_import = 40;\n"
+        }
+      ],
+      "before": {
+        "id": "main",
+        "revision": 0,
+        "userText": "int latest_import = 40;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "",
+        "updatedAt": "2026-10-28T08:42:04.902Z"
+      },
+      "after": {
+        "id": "main",
+        "revision": 0,
+        "userText": "int latest_import = 40;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "",
+        "updatedAt": "2026-10-28T08:42:04.902Z"
+      },
+      "saved": {
+        "id": "main",
+        "revision": 2,
+        "userText": "int latest_import = 40;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "",
+        "updatedAt": "2026-10-28T08:42:04.902Z"
+      },
+      "writes": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 1,
+            "userText": "int latest_import = 40;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "",
+            "updatedAt": "2026-10-28T08:42:04.902Z"
+          },
+          "expected": 1,
+          "index": 0,
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": "CLIP-STALE-ERROR",
+      "title": "a stale failed paste must not reopen fallback after newer paste completes",
+      "group": "clipboard-generation",
+      "status": "passed",
+      "confirmedDefect": false,
+      "checks": [
+        {
+          "label": "stale error preserves source",
+          "passed": true,
+          "actual": "int newer_paste = 80;\n",
+          "expected": "int newer_paste = 80;\n"
+        },
+        {
+          "label": "stale error preserves saved source",
+          "passed": true,
+          "actual": "int newer_paste = 80;\n",
+          "expected": "int newer_paste = 80;\n"
+        },
+        {
+          "label": "stale request does not reopen manual fallback",
+          "passed": true,
+          "actual": false,
+          "expected": false
+        }
+      ],
+      "before": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int newer_paste = 80;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.903Z"
+      },
+      "after": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int newer_paste = 80;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.903Z"
+      },
+      "saved": {
+        "id": "main",
+        "revision": 2,
+        "userText": "int newer_paste = 80;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.903Z"
+      },
+      "dialog": {
+        "open": false,
+        "title": "",
+        "text": ""
+      },
+      "writes": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 1,
+            "userText": "int newer_paste = 80;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "1\n",
+            "updatedAt": "2026-10-28T08:42:04.903Z"
+          },
+          "expected": 1,
+          "index": 0,
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": "CLIP-NORMAL-CONTROL",
+      "title": "an uncontested paste remains usable",
+      "group": null,
+      "status": "passed",
+      "confirmedDefect": false,
+      "checks": [
+        {
+          "label": "uncontested paste updates source",
+          "passed": true,
+          "actual": "int accepted_paste = 90;\n",
+          "expected": "int accepted_paste = 90;\n"
+        },
+        {
+          "label": "uncontested paste is saved",
+          "passed": true,
+          "actual": "int accepted_paste = 90;\n",
+          "expected": "int accepted_paste = 90;\n"
+        },
+        {
+          "label": "success does not open manual fallback",
+          "passed": true,
+          "actual": false,
+          "expected": false
+        }
+      ],
+      "after": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int accepted_paste = 90;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.904Z"
+      },
+      "saved": {
+        "id": "main",
+        "revision": 2,
+        "userText": "int accepted_paste = 90;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.904Z"
+      },
+      "writes": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 1,
+            "userText": "int accepted_paste = 90;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "1\n",
+            "updatedAt": "2026-10-28T08:42:04.904Z"
+          },
+          "expected": 1,
+          "index": 0,
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": "CLIP-ERROR-AFTER-EDIT",
+      "title": "failed pending paste must not reopen fallback after later source editing",
+      "group": "clipboard-generation",
+      "status": "passed",
+      "confirmedDefect": false,
+      "checks": [
+        {
+          "label": "failed read preserves latest edit",
+          "passed": true,
+          "actual": "int latest_edit = 100;\n",
+          "expected": "int latest_edit = 100;\n"
+        },
+        {
+          "label": "failed read preserves saved edit",
+          "passed": true,
+          "actual": "int latest_edit = 100;\n",
+          "expected": "int latest_edit = 100;\n"
+        },
+        {
+          "label": "obsolete failure does not open fallback",
+          "passed": true,
+          "actual": false,
+          "expected": false
+        }
+      ],
+      "before": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int latest_edit = 100;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.905Z"
+      },
+      "after": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int latest_edit = 100;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.905Z"
+      },
+      "saved": {
+        "id": "main",
+        "revision": 2,
+        "userText": "int latest_edit = 100;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.905Z"
+      },
+      "dialogOpen": false
+    },
+    {
+      "id": "CLIP-MANUAL-IMPORT",
+      "title": "manual fallback must not overwrite a later completed pending file import",
+      "group": "clipboard-generation",
+      "status": "passed",
+      "confirmedDefect": false,
+      "checks": [
+        {
+          "label": "current denied paste opens fallback",
+          "passed": true,
+          "actual": true,
+          "expected": true
+        },
+        {
+          "label": "pending file import actually completed",
+          "passed": true,
+          "actual": "int imported_during_dialog = 110;\n",
+          "expected": "int imported_during_dialog = 110;\n"
+        },
+        {
+          "label": "stale manual apply preserves imported source",
+          "passed": true,
+          "actual": "int imported_during_dialog = 110;\n",
+          "expected": "int imported_during_dialog = 110;\n"
+        },
+        {
+          "label": "stale manual apply preserves saved source",
+          "passed": true,
+          "actual": "int imported_during_dialog = 110;\n",
+          "expected": "int imported_during_dialog = 110;\n"
+        }
+      ],
+      "before": {
+        "id": "main",
+        "revision": 0,
+        "userText": "int imported_during_dialog = 110;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "",
+        "updatedAt": "2026-10-28T08:42:04.906Z"
+      },
+      "after": {
+        "id": "main",
+        "revision": 0,
+        "userText": "int imported_during_dialog = 110;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "",
+        "updatedAt": "2026-10-28T08:42:04.906Z"
+      },
+      "saved": {
+        "id": "main",
+        "revision": 2,
+        "userText": "int imported_during_dialog = 110;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "",
+        "updatedAt": "2026-10-28T08:42:04.906Z"
+      },
+      "writes": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 1,
+            "userText": "int imported_during_dialog = 110;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "",
+            "updatedAt": "2026-10-28T08:42:04.906Z"
+          },
+          "expected": 1,
+          "index": 0,
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": "CLIP-MANUAL-NORMAL-CONTROL",
+      "title": "a current manual fallback remains usable",
+      "group": null,
+      "status": "passed",
+      "confirmedDefect": false,
+      "checks": [
+        {
+          "label": "denied read opens manual fallback",
+          "passed": true,
+          "actual": true,
+          "expected": true
+        },
+        {
+          "label": "current manual apply updates source",
+          "passed": true,
+          "actual": "int accepted_manual = 130;\n",
+          "expected": "int accepted_manual = 130;\n"
+        },
+        {
+          "label": "current manual apply is saved",
+          "passed": true,
+          "actual": "int accepted_manual = 130;\n",
+          "expected": "int accepted_manual = 130;\n"
+        }
+      ],
+      "after": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int accepted_manual = 130;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.907Z"
+      },
+      "saved": {
+        "id": "main",
+        "revision": 2,
+        "userText": "int accepted_manual = 130;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-28T08:42:04.907Z"
+      },
+      "writes": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 1,
+            "userText": "int accepted_manual = 130;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "1\n",
+            "updatedAt": "2026-10-28T08:42:04.907Z"
+          },
+          "expected": 1,
+          "index": 0,
+          "completed": true
+        }
+      ]
+    }
+  ]
+}

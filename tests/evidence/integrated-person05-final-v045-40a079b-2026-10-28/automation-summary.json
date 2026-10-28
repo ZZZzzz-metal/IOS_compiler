@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-28T08:43:07.747Z",
+  "owner": "05 independent final combination automation",
+  "testedRevision": "40a079ba2065384572f268e4bb91bda437e46cec",
+  "testedTag": "integration-v0.4.5",
+  "tagObject": "b9bed1dcc54362ac3210169b734d566d5f49efc8",
+  "tagCommit": "40a079ba2065384572f268e4bb91bda437e46cec",
+  "engineProfile": {
+    "compatibilityId": "integration-prototype-60eb6729284e2729",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:60eb6729284e27295b8a76121dfe569027d8c096f9580a279021d6ada08d6789",
+    "status": "candidate",
+    "evidence": [
+      "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+    ]
+  },
+  "routine": {
+    "commandsExitZero": 10,
+    "passed": 258,
+    "failed": 0,
+    "breakdown": {
+      "compiler": 27,
+      "debugger": 83,
+      "uiAndStorage": 106,
+      "contracts": 10,
+      "integration": 3,
+      "acceptance": 21,
+      "minimalRegressions": 2,
+      "initializer": 6
+    },
+    "toolchainVerified": 11,
+    "baselineCheckPassed": true,
+    "evidence": "automated/summary.json"
+  },
+  "offlineWorkerSeparate": {
+    "passed": 22,
+    "failed": 0
+  },
+  "independentWatch": {
+    "counts": {
+      "passed": 25,
+      "failed": 0,
+      "boundaryOnly": 1
+    },
+    "unchangedProgramAndWasm": [
+      {
+        "file": "source.cpp",
+        "byteLength": 2380,
+        "sha256": "a781aa556e582cbeecd61aa561a9dc388ee8640ac7c82d3782572d893880015f",
+        "identicalToOriginalFailure": true
+      },
+      {
+        "file": "artifact.wasm",
+        "byteLength": 38373,
+        "sha256": "67b3504d64da47a6b0feb495aa6338f89c3f1056d197016f758295bb11ef95e4",
+        "identicalToOriginalFailure": true
+      }
+    ],
+    "sourceHash": "sha256:8f4ea16786be3da29608a1034506eb34c2685b8d6d268e9b057942fa3a176161",
+    "nativeAndInterpreterOutputIdentical": true
+  },
+  "independentClipboard": {
+    "scenarios": 8,
+    "passed": 8,
+    "assertions": 25,
+    "failedAssertions": 0,
+    "actualSystemClipboardTested": false,
+    "actualIndexedDBTested": false
+  },
+  "outputChecks": [
+    {
+      "id": "toolchain-verify",
+      "exitCode": 0,
+      "outputSHA256": "d3d2dbd72e2e0984a201dedcb7b27505fcb2f6f8d1a7cfb655985358dc27fee2",
+      "metadataMatches": true
+    },
+    {
+      "id": "check",
+      "exitCode": 0,
+      "outputSHA256": "ba4ce463e7223dadae91b177323ca943d924952caaa1f0c2ed644973df9aae5a",
+      "metadataMatches": true
+    },
+    {
+      "id": "offline-worker",
+      "exitCode": 0,
+      "outputSHA256": "d3704a34f950bb4a54121a16d7cdf3202fccdc455b98fbf25634d5f933d77589",
+      "metadataMatches": true,
+      "counts": {
+        "tests": 22,
+        "passed": 22,
+        "failed": 0
+      }
+    },
+    {
+      "id": "contracts",
+      "exitCode": 0,
+      "outputSHA256": "f53cbedd0975774eb0b9988d1d07032eae48b3d3fc60ff7b8692663639887987",
+      "metadataMatches": true,
+      "counts": {
+        "tests": 10,
+        "passed": 10,
+        "failed": 0
+      }
+    },
+    {
+      "id": "integration",
+      "exitCode": 0,
+      "outputSHA256": "090ed808ea2e4cd2b416967bc7476e421f03bae75a82d9792c3de971026c716e",
+      "metadataMatches": true,
+      "counts": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    },
+    {
+      "id": "ui-storage",
+      "exitCode": 0,
+      "outputSHA256": "ce4a09955e6ec42438d4333190cf40ac60e3f5f9bef9e7f04f51760dc8819e8d",
+      "metadataMatches": true,
+      "counts": {
+        "tests": 106,
+        "passed": 106,
+        "failed": 0
+      }
+    },
+    {
+      "id": "acceptance",
+      "exitCode": 0,
+      "outputSHA256": "509bb99c0eeac163521b9126e9b1e79c31df3484c7e6176d9e285935e898b2cf",
+      "metadataMatches": true
+    },
+    {
+      "id": "modules",
+      "exitCode": 0,
+      "outputSHA256": "668a80bd034c4cbfb1edc01a323957f81eef2645c46cc3adc35dd4e6416cb149",
+      "metadataMatches": true,
+      "counts": {
+        "tests": 110,
+        "passed": 110,
+        "failed": 0
+      }
+    },
+    {
+      "id": "regressions",
+      "exitCode": 0,
+      "outputSHA256": "3e745c45aea1330755582644435dfcdfe4cde291eedb47a75589993c180bf3f5",
+      "metadataMatches": true
+    },
+    {
+      "id": "initializer",
+      "exitCode": 0,
+      "outputSHA256": "2a7f20b04854cd14409331e1420e92b842b88acf28b93740dc5663f8ad658025",
+      "metadataMatches": true
+    },
+    {
+      "id": "watch-independent",
+      "exitCode": 0,
+      "outputSHA256": "3e28786ca6b731d1cfaeec8f9c2e783a7a6861dd40a1d7c38ca4b876ddc7487c",
+      "metadataMatches": true
+    },
+    {
+      "id": "clipboard-independent",
+      "exitCode": 0,
+      "outputSHA256": "806f5ee667f571035714cf9b641b9a975f132edce364992509e9e56027c388eb",
+      "metadataMatches": true
+    }
+  ],
+  "resources": [
+    {
+      "file": "debugger/src/wasm-runtime.mjs",
+      "byteLength": 49143,
+      "sha256": "8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "debugger/src/dwarf.mjs",
+      "byteLength": 25566,
+      "sha256": "a90c5783958fb814fa7dc8bd074166fe490d50ba2ecf6c9e82b79c5c3e58eb95",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "debugger/src/variables.mjs",
+      "byteLength": 44150,
+      "sha256": "9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "debugger/src/integrity.mjs",
+      "byteLength": 7031,
+      "sha256": "6c705f346157d4ed07d1e7797474ad90cf653e7431b27bcf32ee4b282f3eeb07",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "debugger/src/debugger-adapter.mjs",
+      "byteLength": 21034,
+      "sha256": "07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "debugger/src/worker-adapter.mjs",
+      "byteLength": 8478,
+      "sha256": "1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "debugger/src/worker-bridge.mjs",
+      "byteLength": 1673,
+      "sha256": "b1271d7c34651296ef9011c69493f6c0e0f62d97db71d8f3fe27c9561e54eda1",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "debugger/src/debugger-worker.mjs",
+      "byteLength": 600,
+      "sha256": "4b867a736ada849efddffc1c074739eed039d5dd4f222ab8d99c24f2fe9e559d",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "debugger/LICENSE",
+      "byteLength": 600,
+      "sha256": "810a7126a235c23fe56bd32f0d78617232260ee5d03fd1cb32462ac679cd8cf5",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/src/compiler-adapter.mjs",
+      "byteLength": 5418,
+      "sha256": "0cf84c9c6a845ad9d893dfce47c84bbbf1561d6ac7784280374c833b39d41ab9",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/src/compiler-probe.mjs",
+      "byteLength": 3912,
+      "sha256": "40327315c54e4307d8faf322ad64ed0da248e8849f9ed72ad7d691e52cafd648",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/src/compiler-worker.mjs",
+      "byteLength": 2400,
+      "sha256": "b3011c7601b957f28e358216d8a4ecfe1a339b0201b4acd32245b9e7115c1416",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/src/toolchain-engine.mjs",
+      "byteLength": 7649,
+      "sha256": "03695bb52cbf7f4ab024ef773fca630eecb01c5452faa0f54fc055b574bbe3b5",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/src/wasm-host.mjs",
+      "byteLength": 6856,
+      "sha256": "ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/src/wasm-inspect.mjs",
+      "byteLength": 1825,
+      "sha256": "dfd5ae8ea29df1b266775250e3f07e3181ef3a48bd49ae97cbcf6b929df63a21",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/src/source.mjs",
+      "byteLength": 7201,
+      "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/src/diagnostics.mjs",
+      "byteLength": 3218,
+      "sha256": "14399bd23b8eb131a20196d0ed926db1243ace34bda42a221bae687378bfbad3",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/toolchain.lock.json",
+      "byteLength": 6149,
+      "sha256": "a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/LICENSES.md",
+      "byteLength": 3998,
+      "sha256": "e6ea8147efad7549cd2a9c7830cfb808f4fdf860c043959b39abbb08dcacb3d2",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/clang",
+      "byteLength": 31214472,
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/lld",
+      "byteLength": 19490094,
+      "sha256": "36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/memfs",
+      "byteLength": 345442,
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/shared.js",
+      "byteLength": 23973,
+      "sha256": "4de0be862bda1a7571c1f0632abe3c62c47a56e734cc6b703155805a4b160b1c",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/worker.js",
+      "byteLength": 2758,
+      "sha256": "c0d4c3f3ef0e2047c0f109922f0a4ee9e0f2b12947a569a835da83b6bdcf995e",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/d8.js",
+      "byteLength": 1722,
+      "sha256": "a7ae2decd5330e2deadb6c258cfa11b4f0c5645807feb7f0114d319335e4a4b5",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/shared_web.js",
+      "byteLength": 8110,
+      "sha256": "90f2eb3c832b9d3af7f0ef7aa63c71554182efb73eba734810607e20d4cb5681",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/LICENSE",
+      "byteLength": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/LICENSE.llvm",
+      "byteLength": 15140,
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47",
+      "matchesTestedCandidate": true
+    },
+    {
+      "file": "compiler/resources/vendor/wasm-clang/README.md",
+      "byteLength": 1446,
+      "sha256": "2ded8e20209ca550698c829ab65dfff3e4e26e90fc21240bae5f0c4f1cbd7a57",
+      "matchesTestedCandidate": true
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "tests/watch-types-independent.mjs",
+      "byteLength": 9811,
+      "sha256": "e975c506ff93532c977b65f341bc7d37061d5313d3b71efb7fa95984208480cc"
+    },
+    {
+      "file": "tests/ui-parallel-audit.mjs",
+      "byteLength": 10499,
+      "sha256": "163a34a7ededd0450803748fd01e39bd6645605156af0ed660c4b88a7acf0470"
+    },
+    {
+      "file": "tests/lib/ui-parallel-audit-host.mjs",
+      "byteLength": 10613,
+      "sha256": "829fbff4c045749f8784499b9f909826911566a075d1cfae91ae610aee9ce52a"
+    },
+    {
+      "file": "debugger/src/variables.mjs",
+      "byteLength": 44150,
+      "sha256": "9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e"
+    },
+    {
+      "file": "debugger/src/wasm-runtime.mjs",
+      "byteLength": 49143,
+      "sha256": "8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    },
+    {
+      "file": "ui/src/main.mjs",
+      "byteLength": 33093,
+      "sha256": "ff34c70433827b17ab4e1d25db03b71c922d27e1132b12841ab7cabb2fac4b40"
+    },
+    {
+      "file": "ui/src/editor.mjs",
+      "byteLength": 5372,
+      "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+    },
+    {
+      "file": "storage/src/autosave.mjs",
+      "byteLength": 2767,
+      "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+    },
+    {
+      "file": "storage/src/draft-store.mjs",
+      "byteLength": 8047,
+      "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+    },
+    {
+      "file": "compiler/src/source.mjs",
+      "byteLength": 7201,
+      "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+    }
+  ],
+  "productDiffFromCommit": "",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "browserTested": false,
+    "ipadTested": false,
+    "networkDisabled": false
+  },
+  "metadataNotes": [
+    "The routine runner preserves its original baseTagRevision field from git rev-parse of the annotated tag, which is the tag object; tagCommit above records the peeled fixed commit explicitly. No original output was rewritten.",
+    "Routine counts include module fault and boundary checks; 258+22 is not a count of user workflows. Independent25 and8 are separate query/controlled UI assertions.",
+    "No offline bundle was built or accepted by this subtask; package/browser/recovery evidence belongs to the parent task."
+  ]
+}

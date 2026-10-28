@@ -1,0 +1,416 @@
+[
+  {
+    "file": "observations/001-fresh-r3-unprepared.json",
+    "step": "fresh-r3-unprepared",
+    "at": "2026-10-28T08:44:37.588Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/002-online-prepared-51.json",
+    "step": "online-prepared-51",
+    "at": "2026-10-28T08:45:11.395Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/003-online-sentinel-saved-standard.json",
+    "step": "online-sentinel-saved-standard",
+    "at": "2026-10-28T08:46:34.536Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/004-server-stopped-cold-launcher-51-passed.json",
+    "step": "server-stopped-cold-launcher-51-passed",
+    "at": "2026-10-28T08:47:48.358Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/005-offline-restored-sentinel-stdin-standard.json",
+    "step": "offline-restored-sentinel-stdin-standard",
+    "at": "2026-10-28T08:48:00.942Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/006-offline-new-source-unprepared-F5-preserved.json",
+    "step": "offline-new-source-unprepared-F5-preserved",
+    "at": "2026-10-28T08:48:14.542Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/007-offline-resource-check-ready.json",
+    "step": "offline-resource-check-ready",
+    "at": "2026-10-28T08:48:28.315Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/008-offline-standard-F9-breakpoint13.json",
+    "step": "offline-standard-F9-breakpoint13",
+    "at": "2026-10-28T08:48:28.686Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/009-offline-standard-F5-entry7.json",
+    "step": "offline-standard-F5-entry7",
+    "at": "2026-10-28T08:48:39.050Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/010-offline-standard-F10-to8.json",
+    "step": "offline-standard-F10-to8",
+    "at": "2026-10-28T08:48:58.456Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/011-offline-stdin-F10-stays8.json",
+    "step": "offline-stdin-F10-stays8",
+    "at": "2026-10-28T08:49:12.878Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/012-offline-standard-F11-enters3.json",
+    "step": "offline-standard-F11-enters3",
+    "at": "2026-10-28T08:49:12.946Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/013-offline-standard-shiftF11-returns8.json",
+    "step": "offline-standard-shiftF11-returns8",
+    "at": "2026-10-28T08:49:13.023Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/014-offline-standard-F10-stores-total29-at9.json",
+    "step": "offline-standard-F10-stores-total29-at9",
+    "at": "2026-10-28T08:49:13.102Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/015-offline-standard-F5-hits-breakpoint13.json",
+    "step": "offline-standard-F5-hits-breakpoint13",
+    "at": "2026-10-28T08:49:24.994Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/016-offline-watch-mixed-float-result0.json",
+    "step": "offline-watch-mixed-float-result0",
+    "at": "2026-10-28T08:49:42.840Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/017-offline-watch-nan-shortcircuit-result1.json",
+    "step": "offline-watch-nan-shortcircuit-result1",
+    "at": "2026-10-28T08:49:43.163Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/018-offline-standard-F5-exit-output29-0-1.json",
+    "step": "offline-standard-F5-exit-output29-0-1",
+    "at": "2026-10-28T08:49:56.204Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/019-offline-standard-controlF5-new-run-start.json",
+    "step": "offline-standard-controlF5-new-run-start",
+    "at": "2026-10-28T08:49:56.267Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/020-offline-standard-controlF5-run-output29-exit0.json",
+    "step": "offline-standard-controlF5-run-output29-exit0",
+    "at": "2026-10-28T08:50:05.037Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/021-offline-standard-second-entry7.json",
+    "step": "offline-standard-second-entry7",
+    "at": "2026-10-28T08:50:14.330Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/022-offline-standard-shiftF5-stop.json",
+    "step": "offline-standard-shiftF5-stop",
+    "at": "2026-10-28T08:50:14.395Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/023-offline-standard-control5-disabled.json",
+    "step": "offline-standard-control5-disabled",
+    "at": "2026-10-28T08:50:14.446Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/024-offline-control9-removes-breakpoint13.json",
+    "step": "offline-control9-removes-breakpoint13",
+    "at": "2026-10-28T08:50:27.881Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/025-offline-control9-restores-breakpoint13.json",
+    "step": "offline-control9-restores-breakpoint13",
+    "at": "2026-10-28T08:50:27.939Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/026-offline-control5-new-debug-start.json",
+    "step": "offline-control5-new-debug-start",
+    "at": "2026-10-28T08:50:28.006Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/027-offline-control5-entry-state.json",
+    "step": "offline-control5-entry-state",
+    "at": "2026-10-28T08:54:02.338Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/028-offline-control0-to8.json",
+    "step": "offline-control0-to8",
+    "at": "2026-10-28T08:54:34.121Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/029-offline-controlMinus-enters3.json",
+    "step": "offline-controlMinus-enters3",
+    "at": "2026-10-28T08:54:34.191Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/030-offline-controlShiftMinus-returns8.json",
+    "step": "offline-controlShiftMinus-returns8",
+    "at": "2026-10-28T08:54:34.268Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/031-offline-control0-stores29-at9.json",
+    "step": "offline-control0-stores29-at9",
+    "at": "2026-10-28T08:54:34.323Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/032-offline-control5-breakpoint13.json",
+    "step": "offline-control5-breakpoint13",
+    "at": "2026-10-28T08:54:34.382Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/033-offline-control5-exit-output.json",
+    "step": "offline-control5-exit-output",
+    "at": "2026-10-28T08:54:34.435Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/034-offline-control6-run-start.json",
+    "step": "offline-control6-run-start",
+    "at": "2026-10-28T08:54:40.098Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/035-offline-control6-run-output29-exit0.json",
+    "step": "offline-control6-run-output29-exit0",
+    "at": "2026-10-28T08:55:01.585Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/036-offline-control5-for-stop-start.json",
+    "step": "offline-control5-for-stop-start",
+    "at": "2026-10-28T08:55:01.647Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/037-control-stop-entry-after-host-restarted.json",
+    "step": "control-stop-entry-after-host-restarted",
+    "at": "2026-10-28T08:55:39.646Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/038-offline-controlShift5-stop.json",
+    "step": "offline-controlShift5-stop",
+    "at": "2026-10-28T08:56:00.936Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/039-real-cache-before-index-delete.json",
+    "step": "real-cache-before-index-delete",
+    "at": "2026-10-28T08:56:00.973Z",
+    "url": "http://127.0.0.1:4235/_person05/cache-control.html"
+  },
+  {
+    "file": "observations/040-real-cache-index-deleted.json",
+    "step": "real-cache-index-deleted",
+    "at": "2026-10-28T08:56:01.281Z",
+    "url": "http://127.0.0.1:4235/_person05/cache-control.html"
+  },
+  {
+    "file": "observations/041-index-missing-offline-recovery-page.json",
+    "step": "index-missing-offline-recovery-page",
+    "at": "2026-10-28T08:56:08.185Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/042-index-missing-offline-repair-fails-retry-preserved.json",
+    "step": "index-missing-offline-repair-fails-retry-preserved",
+    "at": "2026-10-28T08:56:08.530Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/043-index-missing-online-product-repair-start.json",
+    "step": "index-missing-online-product-repair-start",
+    "at": "2026-10-28T08:56:41.770Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/044-index-missing-product-repair-complete.json",
+    "step": "index-missing-product-repair-complete",
+    "at": "2026-10-28T08:57:06.770Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/045-index-repair-workbench-restores-source-control-scheme.json",
+    "step": "index-repair-workbench-restores-source-control-scheme",
+    "at": "2026-10-28T08:57:14.124Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/046-real-cache-after-index-product-repair.json",
+    "step": "real-cache-after-index-product-repair",
+    "at": "2026-10-28T08:57:14.412Z",
+    "url": "http://127.0.0.1:4235/_person05/cache-control.html"
+  },
+  {
+    "file": "observations/047-real-cache-trust-corrupted.json",
+    "step": "real-cache-trust-corrupted",
+    "at": "2026-10-28T08:57:14.717Z",
+    "url": "http://127.0.0.1:4235/_person05/cache-control.html"
+  },
+  {
+    "file": "observations/048-index-repair-workbench-draft-load-complete.json",
+    "step": "index-repair-workbench-draft-load-complete",
+    "at": "2026-10-28T08:57:23.983Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/049-real-cache-current-completed-before-trust-fault.json",
+    "step": "real-cache-current-completed-before-trust-fault",
+    "at": "2026-10-28T08:57:24.407Z",
+    "url": "http://127.0.0.1:4235/_person05/cache-control.html"
+  },
+  {
+    "file": "observations/050-real-cache-current-trust-corrupted.json",
+    "step": "real-cache-current-trust-corrupted",
+    "at": "2026-10-28T08:57:30.654Z",
+    "url": "http://127.0.0.1:4235/_person05/cache-control.html"
+  },
+  {
+    "file": "observations/051-trust-corrupt-offline-recovery-page.json",
+    "step": "trust-corrupt-offline-recovery-page",
+    "at": "2026-10-28T08:57:48.951Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/052-trust-corrupt-offline-repair-fails-retry-preserved.json",
+    "step": "trust-corrupt-offline-repair-fails-retry-preserved",
+    "at": "2026-10-28T08:57:49.237Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/053-trust-corrupt-online-product-repair-start.json",
+    "step": "trust-corrupt-online-product-repair-start",
+    "at": "2026-10-28T08:58:26.764Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/054-trust-corrupt-product-repair-complete.json",
+    "step": "trust-corrupt-product-repair-complete",
+    "at": "2026-10-28T08:58:49.195Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/055-trust-repair-workbench-start.json",
+    "step": "trust-repair-workbench-start",
+    "at": "2026-10-28T08:58:49.376Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/056-real-cache-after-trust-product-repair.json",
+    "step": "real-cache-after-trust-product-repair",
+    "at": "2026-10-28T08:58:49.666Z",
+    "url": "http://127.0.0.1:4235/_person05/cache-control.html"
+  },
+  {
+    "file": "observations/057-trust-repair-restored-draft-and-scheme.json",
+    "step": "trust-repair-restored-draft-and-scheme",
+    "at": "2026-10-28T08:59:08.868Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/058-real-cache-latest-repaired-all-critical-original.json",
+    "step": "real-cache-latest-repaired-all-critical-original",
+    "at": "2026-10-28T08:59:09.275Z",
+    "url": "http://127.0.0.1:4235/_person05/cache-control.html"
+  },
+  {
+    "file": "observations/059-after-repairs-server-stopped-cold-launcher.json",
+    "step": "after-repairs-server-stopped-cold-launcher",
+    "at": "2026-10-28T08:59:25.886Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/060-after-repairs-offline-launcher-51-passed.json",
+    "step": "after-repairs-offline-launcher-51-passed",
+    "at": "2026-10-28T08:59:43.476Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+  },
+  {
+    "file": "observations/061-after-repairs-offline-workbench-start.json",
+    "step": "after-repairs-offline-workbench-start",
+    "at": "2026-10-28T08:59:43.638Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/062-after-repairs-offline-draft-control-scheme-restored.json",
+    "step": "after-repairs-offline-draft-control-scheme-restored",
+    "at": "2026-10-28T09:00:08.412Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/063-after-repairs-offline-new-seed15-source-entered.json",
+    "step": "after-repairs-offline-new-seed15-source-entered",
+    "at": "2026-10-28T09:00:08.461Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/064-after-repairs-offline-resource-validation-start.json",
+    "step": "after-repairs-offline-resource-validation-start",
+    "at": "2026-10-28T09:00:08.755Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/065-after-repairs-offline-resource-validation-ready.json",
+    "step": "after-repairs-offline-resource-validation-ready",
+    "at": "2026-10-28T09:00:27.022Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/066-after-repairs-offline-new-seed15-compile-start.json",
+    "step": "after-repairs-offline-new-seed15-compile-start",
+    "at": "2026-10-28T09:00:27.080Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/067-after-repairs-offline-new-seed15-output31-exit0.json",
+    "step": "after-repairs-offline-new-seed15-output31-exit0",
+    "at": "2026-10-28T09:00:46.186Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/068-final-offline-draft3-cold-reopen-start.json",
+    "step": "final-offline-draft3-cold-reopen-start",
+    "at": "2026-10-28T09:00:47.750Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  },
+  {
+    "file": "observations/069-final-offline-draft3-restored.json",
+    "step": "final-offline-draft3-restored",
+    "at": "2026-10-28T09:00:58.988Z",
+    "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html"
+  }
+]

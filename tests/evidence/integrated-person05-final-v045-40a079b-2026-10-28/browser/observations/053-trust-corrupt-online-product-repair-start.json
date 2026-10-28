@@ -1,0 +1,10 @@
+{
+  "step": "trust-corrupt-online-product-repair-start",
+  "at": "2026-10-28T08:58:26.764Z",
+  "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html",
+  "dom": "- main:\n  - heading \"本版本离线入口需要恢复\" [level=1]\n  - paragraph: 资源可能被系统回收或损坏。请先关闭本版本的其他工作台窗口，联网后点击下面按钮。此操作保留原草稿和其他版本，不会恢复已终止的调试会话。\n  - button \"联网重新准备资源\" [disabled]\n  - status: 正在重新下载并逐项校验，请保持页面在前台…",
+  "fields": {
+    "bodyData": {},
+    "gutter": []
+  }
+}
