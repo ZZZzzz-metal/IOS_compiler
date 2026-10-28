@@ -1,0 +1,135 @@
+{
+  "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "date": "2026-10-27T23:34:59.508Z",
+  "kind": "deterministic defect reproductions, not correct-behavior acceptance checks",
+  "boundary": "Complete actual main module with real parser/autosave/editor/source. Controlled DOM/File/clipboard/network/trust/compiler/debugger/controller and recording memory store. No browser/IndexedDB/real compiler/iPad claim.",
+  "inputs": [
+    {
+      "path": "ui/src/main.mjs",
+      "byteLength": 32193,
+      "sha256": "61adf9f24e5ff2328fb096978999445397a077c11c1dc779894f6d6b342e6b64",
+      "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066"
+    },
+    {
+      "path": "ui/src/editor.mjs",
+      "byteLength": 5372,
+      "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+    },
+    {
+      "path": "storage/src/autosave.mjs",
+      "byteLength": 2767,
+      "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+    },
+    {
+      "path": "storage/src/draft-store.mjs",
+      "byteLength": 8047,
+      "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+    },
+    {
+      "path": "compiler/src/source.mjs",
+      "byteLength": 7201,
+      "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+    },
+    {
+      "path": "tests/ui-parallel-audit.mjs",
+      "byteLength": 3351,
+      "sha256": "ff4f91c6a1bb52a0b6b2531c0ff26d203405e2f8a37d924dcfb9e1d69c04a2ad"
+    },
+    {
+      "path": "tests/lib/ui-parallel-audit-host.mjs",
+      "byteLength": 10477,
+      "sha256": "0fbd9e6d17909ffb02a483cee794ed96515b4f228e00307a44212bb1eb5d1a58"
+    }
+  ],
+  "results": [
+    {
+      "id": "CLIP-EDIT",
+      "title": "older clipboard read overwrites a later source edit and is saved",
+      "status": "observed",
+      "confirmedDefect": true,
+      "before": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int latest_typed = 20;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-27T23:34:59.502Z"
+      },
+      "after": {
+        "id": "main",
+        "revision": 1,
+        "userText": "int stale_clipboard = 10;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-27T23:34:59.503Z"
+      },
+      "saved": {
+        "id": "main",
+        "revision": 3,
+        "userText": "int stale_clipboard = 10;\n",
+        "driverText": "",
+        "language": {
+          "language": "cpp",
+          "standard": "c++17"
+        },
+        "stdin": "1\n",
+        "updatedAt": "2026-10-27T23:34:59.503Z"
+      },
+      "writes": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 1,
+            "userText": "int latest_typed = 20;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "1\n",
+            "updatedAt": "2026-10-27T23:34:59.502Z"
+          },
+          "expected": 1,
+          "index": 0,
+          "completed": true
+        },
+        {
+          "draft": {
+            "id": "main",
+            "revision": 2,
+            "userText": "int stale_clipboard = 10;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "1\n",
+            "updatedAt": "2026-10-27T23:34:59.503Z"
+          },
+          "expected": 2,
+          "index": 1,
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": "CLIP-IMPORT",
+      "title": "older clipboard read overwrites a later actual parsed file import and is saved",
+      "status": "harness-failure",
+      "error": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'int latest_import = 40;\\n'\n- 'int stale_clipboard = 30;\\n'\n       ^\n",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'int latest_import = 40;\\n'\n- 'int stale_clipboard = 30;\\n'\n       ^\n\n    at Object.action (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-parallel-audit.mjs:26:10)\n    at async file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/ui-parallel-audit.mjs:30:114"
+      }
+    }
+  ]
+}

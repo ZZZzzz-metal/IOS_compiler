@@ -1,0 +1,21 @@
+{
+  "id": "watch-independent",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\watch-types-independent.mjs"
+  ],
+  "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+  "explicitEnvironment": {
+    "WATCH_TYPES_PRODUCT_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03",
+    "WATCH_TYPES_REVISION": "309cb45191a62fde2b13eeab9746a8d2502ef658",
+    "WATCH_TYPES_PROFILE": "integration-prototype-60eb6729284e2729",
+    "WATCH_TYPES_OUTPUT": "tests/evidence/integrated-person05-floating-309cb45-2026-10-28/engine/run-01/"
+  },
+  "startedAt": "2026-10-28T04:38:57.945Z",
+  "finishedAt": "2026-10-28T04:39:00.431Z",
+  "durationMs": 2484.0299999999997,
+  "exitCode": 0,
+  "signal": null,
+  "outputFile": "automated/watch-independent.txt",
+  "outputSHA256": "3e28786ca6b731d1cfaeec8f9c2e783a7a6861dd40a1d7c38ca4b876ddc7487c"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "contracts",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "test"
+  ],
+  "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03",
+  "explicitEnvironment": {},
+  "startedAt": "2026-10-28T04:39:00.476Z",
+  "finishedAt": "2026-10-28T04:39:01.216Z",
+  "durationMs": 739.7567999999997,
+  "exitCode": 0,
+  "signal": null,
+  "outputFile": "automated/contracts.txt",
+  "outputSHA256": "59cb479a3532ffb5020f40703b1b4dcd7d09fd99b1834f93ed05ebeee3f5381a"
+}

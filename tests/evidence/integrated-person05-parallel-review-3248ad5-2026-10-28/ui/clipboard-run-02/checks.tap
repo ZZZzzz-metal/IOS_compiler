@@ -1,0 +1,7 @@
+TAP version 13
+not ok 1 - CLIP-EDIT: pending paste must preserve a later source edit
+not ok 2 - CLIP-ORDER: older paste must not replace a newer completed paste
+ok 3 - CLIP-IMPORT-CONTROL: paste targeting an old draft object does not replace a later parsed import
+not ok 4 - CLIP-STALE-ERROR: a stale failed paste must not reopen fallback after newer paste completes
+ok 5 - CLIP-NORMAL-CONTROL: an uncontested paste remains usable
+1..5

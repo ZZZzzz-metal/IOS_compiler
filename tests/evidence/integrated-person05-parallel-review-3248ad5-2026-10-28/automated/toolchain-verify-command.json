@@ -1,0 +1,24 @@
+{
+  "id": "toolchain-verify",
+  "command": "npm.cmd run prepare:toolchain -- --verify-only",
+  "invokedVia": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "args": [
+      "--prefix",
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "run",
+      "prepare:toolchain",
+      "--",
+      "--verify-only"
+    ]
+  },
+  "startedAt": "2026-10-27T23:33:07.298Z",
+  "finishedAt": "2026-10-27T23:33:08.662Z",
+  "durationMs": 1364.4519,
+  "exitCode": 0,
+  "signal": null,
+  "errorMessage": null,
+  "outputFile": "toolchain-verify.txt",
+  "outputSHA256": "87c06b12058553f6afb1af3abd413b0b349796b6cc1204f2821198e14b7960e1"
+}

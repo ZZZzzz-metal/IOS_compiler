@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-28 04:39:17 UTC",
+  "dateAsiaShanghai": "2026-10-28",
+  "authorization": "用户要求同时复查，有问题立即通知相应人员修改；后续要求做好后与相应人员沟通。",
+  "testedRevision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "notices": [
+    {
+      "issues": [
+        "A float32/int common conversion",
+        "B NaN truth and short circuit"
+      ],
+      "recipients": [
+        {
+          "owner": "03",
+          "threadId": "01a16da9-49d6-7450-aa8e-9a4451b8ce96"
+        },
+        {
+          "owner": "01",
+          "threadId": "01a1693d-060e-7e00-ac16-8a18fbce8972"
+        }
+      ],
+      "delivery": "App send_message_to_thread tool returned success in earlier phase of this same review; exact original send timestamp was not separately archived",
+      "evidence": "engine/FINDINGS.md"
+    },
+    {
+      "issues": [
+        "C clipboard read overwrites later edit"
+      ],
+      "recipients": [
+        {
+          "owner": "04",
+          "threadId": "01a1719d-d35b-7033-a30c-84d1a45c8f9e"
+        },
+        {
+          "owner": "01",
+          "threadId": "01a1693d-060e-7e00-ac16-8a18fbce8972"
+        }
+      ],
+      "delivery": "App send_message_to_thread tool returned success in earlier phase of this same review; exact original send timestamp was not separately archived",
+      "evidence": "ui/clipboard-run-01/results.json"
+    },
+    {
+      "issues": [
+        "C additional order/error variants and corrected import negative control"
+      ],
+      "recipients": [
+        {
+          "owner": "04",
+          "threadId": "01a1719d-d35b-7033-a30c-84d1a45c8f9e"
+        }
+      ],
+      "delivery": "App send_message_to_thread tool returned successful destination thread ID during continuation",
+      "receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"threadId\":\"01a1719d-d35b-7033-a30c-84d1a45c8f9e\"}"
+          }
+        ],
+        "isError": false
+      },
+      "evidence": "ui/clipboard-run-02/results.json"
+    }
+  ],
+  "followup": {
+    "owner03ReportedCommit": "309cb45191a62fde2b13eeab9746a8d2502ef658",
+    "owner03IndependentRetest": "In progress separately; original failing baseline remains open in this sealed record",
+    "owner04AtRecord": "Fix in progress; no independent closure recorded here"
+  },
+  "note": "No invented unified defect IDs; prior original failure records are preserved."
+}

@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-10-28T04:43:16.738Z",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "release": "10.0.26200",
+  "arch": "x64",
+  "timezone": "Asia/Shanghai",
+  "actualBrowserClipboardTested": false,
+  "indexedDBTested": false,
+  "ipadTested": false,
+  "networkDisabled": false
+}

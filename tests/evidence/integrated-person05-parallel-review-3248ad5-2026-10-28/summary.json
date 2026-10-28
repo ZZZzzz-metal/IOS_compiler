@@ -1,0 +1,62 @@
+{
+  "testedRevision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "dateAsiaShanghai": "2026-10-28",
+  "result": "3 new P2 defects confirmed and owners notified; baseline not signed fully stable",
+  "defects": [
+    {
+      "key": "A",
+      "owner": "03",
+      "scope": "float32/integer common conversion",
+      "failedObservations": 7
+    },
+    {
+      "key": "B",
+      "owner": "03",
+      "scope": "NaN truth/short circuit",
+      "failedObservations": 4
+    },
+    {
+      "key": "C",
+      "owner": "04",
+      "scope": "stale clipboard completion/edit/order/error",
+      "failedScenarios": 3
+    }
+  ],
+  "defectNumbering": "Pending owner01 registration",
+  "automatic": {
+    "passed": 230,
+    "failed": 0,
+    "commandsExitZero": 10
+  },
+  "offlineWorkerSeparate": {
+    "passed": 22,
+    "failed": 0
+  },
+  "engine": {
+    "passed": 14,
+    "failed": 11,
+    "boundaryOnly": 1
+  },
+  "ui": {
+    "scenarios": 5,
+    "passed": 2,
+    "failed": 3,
+    "runnerErrors": 0
+  },
+  "browser": {
+    "observations": 24,
+    "twoShortcutSchemes": true,
+    "ipadTested": false
+  },
+  "offlineReview": {
+    "sourceOnly": true,
+    "generatedPackageTested": false
+  },
+  "originalFailureEvidencePreserved": true,
+  "report": "docs/validation/parallel-review-3248ad5-2026-10-28.md",
+  "pending": [
+    "Independent fixed03/04 commit retest and integration",
+    "REV-001 actual browser offline recovery and full new immutable release",
+    "Real iPad complete offline/G2/G3, physical input and full draft durability"
+  ]
+}

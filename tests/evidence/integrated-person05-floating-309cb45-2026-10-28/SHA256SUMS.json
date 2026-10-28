@@ -1,0 +1,112 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "automated/check-command.json",
+    "byteLength": 583,
+    "sha256": "ce7db974dfc352ca8f026524f95bc00131349c68f461aaeba139e103a60ec6c8"
+  },
+  {
+    "file": "automated/check.txt",
+    "byteLength": 349,
+    "sha256": "348aa6b52431c300ff7568e79fdd8601bdad983516a9fbf5d97b488828980867"
+  },
+  {
+    "file": "automated/contracts-command.json",
+    "byteLength": 578,
+    "sha256": "ba7555482ffb6f58d3a6cb72ac1e1c38a5cbafb50c27f90148f6211452fe109d"
+  },
+  {
+    "file": "automated/contracts.txt",
+    "byteLength": 1125,
+    "sha256": "59cb479a3532ffb5020f40703b1b4dcd7d09fd99b1834f93ed05ebeee3f5381a"
+  },
+  {
+    "file": "automated/debugger-command.json",
+    "byteLength": 563,
+    "sha256": "3a8815dd18b8d067af5fdc2edf41d64c0109b4f538cbc34a0607fe095c3843a2"
+  },
+  {
+    "file": "automated/debugger.txt",
+    "byteLength": 20927,
+    "sha256": "b9ccb252e33542e81f3a102332d51dcf8cb2d0b908b8b99ef8639f4a4014e893"
+  },
+  {
+    "file": "automated/integration-command.json",
+    "byteLength": 597,
+    "sha256": "2d092c481f72d3c5accf57db07c721b55d4f19b8e896649bdd7041f5eef4f721"
+  },
+  {
+    "file": "automated/integration.txt",
+    "byteLength": 517,
+    "sha256": "c3a8fac4b34a244a30a500ef0b82aff50c2779f29c9ec9dc6b0656bbe7636c9d"
+  },
+  {
+    "file": "automated/watch-independent-command.json",
+    "byteLength": 994,
+    "sha256": "d94d1c14c19437fbe1a533ce5d02e59e978a25073c72ae8ae09ee8fdca889eb5"
+  },
+  {
+    "file": "automated/watch-independent.txt",
+    "byteLength": 1294,
+    "sha256": "3e28786ca6b731d1cfaeec8f9c2e783a7a6861dd40a1d7c38ca4b876ddc7487c"
+  },
+  {
+    "file": "engine/comparison.json",
+    "byteLength": 6457,
+    "sha256": "5b055e97202af3eb9a3dc631e231abb0673a3eed3cef896ba8dfabe2468794cb"
+  },
+  {
+    "file": "engine/run-01/artifact.wasm",
+    "byteLength": 38373,
+    "sha256": "67b3504d64da47a6b0feb495aa6338f89c3f1056d197016f758295bb11ef95e4"
+  },
+  {
+    "file": "engine/run-01/checks.tap",
+    "byteLength": 827,
+    "sha256": "230cff563aca0f353e1b80e10518b8493b17c5bd275f027739bba44214042975"
+  },
+  {
+    "file": "engine/run-01/results.json",
+    "byteLength": 52143,
+    "sha256": "5be06c6595c5be94f25b3a4edc74cddd00f257e1cd17ad8b64705d9555188d9d"
+  },
+  {
+    "file": "engine/run-01/source.cpp",
+    "byteLength": 2380,
+    "sha256": "a781aa556e582cbeecd61aa561a9dc388ee8640ac7c82d3782572d893880015f"
+  },
+  {
+    "file": "engine/runner.mjs",
+    "byteLength": 9811,
+    "sha256": "e975c506ff93532c977b65f341bc7d37061d5313d3b71efb7fa95984208480cc"
+  },
+  {
+    "file": "rerun-executed.mjs",
+    "byteLength": 5667,
+    "sha256": "61a499a500a44071a95ff572939ec895a93b0767e25a8b99efe3443c71f55b08"
+  },
+  {
+    "file": "rerun.mjs",
+    "byteLength": 5768,
+    "sha256": "d93865f482e2b005ebbb6f96778e68b9acd2809fd01c5f8d89f38597eec84b10"
+  },
+  {
+    "file": "summary.json",
+    "byteLength": 6606,
+    "sha256": "37fa5daff94a650168d128f4527a64f3d50353daa0429e37c4491374ccf5597e"
+  },
+  {
+    "file": "verification.json",
+    "byteLength": 1510,
+    "sha256": "dd8beb7fc2d63e1b3e3a996f52d9e939f6ec907305e62e36d65da999a36f4e58"
+  },
+  {
+    "file": "verify-results.mjs",
+    "byteLength": 3128,
+    "sha256": "89109269c1d034d5a8c2e26f2e176d4a6e5f670fcb2ccebc34ebec9009b373fd"
+  }
+]

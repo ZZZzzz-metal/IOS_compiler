@@ -1,0 +1,787 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-28T04:35:11.872Z",
+  "testedRevision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "method": "Read-only committed-source review and independent ECMAScript static import parsing (SourceTextModule), plus existing separately recorded 22 worker lifecycle/fault checks. The buildOfflineSite function and prepare:offline were not called.",
+  "invocation": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "execArgv": [
+      "--experimental-vm-modules"
+    ],
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-parallel-review-3248ad5-2026-10-28\\automated\\offline-review\\review.mjs"
+    ]
+  },
+  "sourceFingerprints": [
+    {
+      "file": "app/offline/browser/worker-template.js",
+      "byteLength": 8520,
+      "sha256": "345f5a5cbaac68ae60ab2a4815f88ea0ab49178bb90d91694ba3d484b79e8c45",
+      "lineCount": 134
+    },
+    {
+      "file": "app/offline/build.mjs",
+      "byteLength": 8908,
+      "sha256": "a035b12d05209fab7b63a93030e90ef046bf6bcf1bf2215ec3a0a2994e4bf6cd",
+      "lineCount": 102
+    },
+    {
+      "file": "app/offline/browser/trust.mjs",
+      "byteLength": 2412,
+      "sha256": "fbd1013dbfd3b3b986c9b79882434000cb72af738eb4985349e3634459ae300e",
+      "lineCount": 38
+    },
+    {
+      "file": "app/offline/serve.mjs",
+      "byteLength": 2712,
+      "sha256": "51352af4a20579a4e2279e4072c1f6d1b270e64f96ab6a3f09dda2a045bc96b8",
+      "lineCount": 31
+    },
+    {
+      "file": "app/offline/browser/launcher.mjs",
+      "byteLength": 5841,
+      "sha256": "dcc012c895f7bda8135882271e11071fcbbe161a4f875644e821a4c82bb5e05e",
+      "lineCount": 76
+    }
+  ],
+  "findings": [
+    {
+      "topic": "cache version isolation",
+      "status": "no-confirmed-defect-in-reviewed-scope",
+      "locations": [
+        {
+          "file": "app/offline/browser/worker-template.js",
+          "lines": [
+            3,
+            4,
+            5,
+            6,
+            18,
+            20,
+            23,
+            44
+          ]
+        },
+        {
+          "file": "app/offline/build.mjs",
+          "lines": [
+            64,
+            65,
+            66,
+            67,
+            74,
+            77,
+            78,
+            79,
+            81,
+            87
+          ]
+        }
+      ],
+      "observations": [
+        "Descriptor identity includes resources and worker-template SHA; each release is published under bundleId. Runtime resolves resource and marker URLs relative to the worker location; cache lookup is restricted to its bundle prefix and marker identities.",
+        "Activation claims clients without skipWaiting or deleting other cache versions. Explicit repair only removes its own failed staging cache; full successful repairs preserve older caches."
+      ],
+      "evidence": "../offline-worker.txt: new complete version preserves old version and unrelated caches; explicit repair/failure and window-race cases"
+    },
+    {
+      "topic": "corrupt startup and explicit repair",
+      "status": "no-confirmed-defect-in-reviewed-scope",
+      "locations": [
+        {
+          "file": "app/offline/browser/worker-template.js",
+          "lines": [
+            12,
+            15,
+            27,
+            30,
+            32,
+            39,
+            46,
+            57,
+            58,
+            60,
+            61,
+            73,
+            94,
+            103,
+            104,
+            109,
+            110,
+            115,
+            123,
+            127
+          ]
+        }
+      ],
+      "observations": [
+        "Entry navigation checks index, launcher, trust module and descriptor before serving the launcher. Missing or modified startup bytes return a worker-generated local repair page.",
+        "Unknown/evicted/modified resources fail closed with 503; GET does not fetch replacement bytes. Explicit repair is limited to the same-version launcher and checks other windows before download and commit."
+      ],
+      "evidence": "../offline-worker.txt: all eight missing/corrupt startup combinations; unknown/evicted bytes; explicit repair rollback and late-window conflict"
+    },
+    {
+      "topic": "workbench trust and resource mapping",
+      "status": "no-confirmed-defect-in-reviewed-scope",
+      "locations": [
+        {
+          "file": "app/offline/browser/trust.mjs",
+          "lines": [
+            20,
+            21,
+            23,
+            25,
+            28,
+            29,
+            31,
+            32,
+            33
+          ]
+        },
+        {
+          "file": "app/offline/build.mjs",
+          "lines": [
+            15,
+            16,
+            42,
+            43,
+            46,
+            47,
+            50,
+            53,
+            57,
+            60,
+            61
+          ]
+        }
+      ],
+      "observations": [
+        "Trust rejects foreign/overlapping covering service workers and checks exact scope, script URL, bundle, compatibilityId and resourceManifestHash.",
+        "The current committed payload has no missing parsed static browser import; document-relative candidate and worker endpoints map inside the same release. This is a source mapping audit, not a generated archive verification."
+      ],
+      "evidence": "mapping below; ../offline-worker.txt covering-worker and handshake tests"
+    },
+    {
+      "topic": "static serving boundary",
+      "status": "no-confirmed-defect-in-reviewed-scope",
+      "locations": [
+        {
+          "file": "app/offline/serve.mjs",
+          "lines": [
+            7,
+            11,
+            12,
+            13,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            24,
+            25,
+            26
+          ]
+        }
+      ],
+      "observations": [
+        "Only GET/HEAD are served from the generated site root after realpath containment; traversal, staging paths and missing files fail with 404. Non-loopback binding requires both TLS inputs.",
+        "This turn did not start a server, rebuild an offline release, or inspect the separate uncommitted v0.4.5 packaging worktree."
+      ],
+      "evidence": "read-only source review"
+    }
+  ],
+  "mapping": {
+    "candidateComponentResources": 30,
+    "payloadEntries": 50,
+    "sourceBackedEntries": 47,
+    "generatedEntries": [
+      "manual.html",
+      "ui/.local/candidate.json",
+      "manifest.webmanifest"
+    ],
+    "modulesParsed": 23,
+    "staticBrowserEdges": 30,
+    "missingStaticBrowserEdges": [],
+    "edges": [
+      {
+        "from": "debugger/src/variables.mjs",
+        "specifier": "./dwarf.mjs",
+        "target": "debugger/src/dwarf.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "debugger/src/debugger-adapter.mjs",
+        "specifier": "./wasm-runtime.mjs",
+        "target": "debugger/src/wasm-runtime.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "debugger/src/debugger-adapter.mjs",
+        "specifier": "./dwarf.mjs",
+        "target": "debugger/src/dwarf.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "debugger/src/debugger-adapter.mjs",
+        "specifier": "./variables.mjs",
+        "target": "debugger/src/variables.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "debugger/src/debugger-adapter.mjs",
+        "specifier": "./integrity.mjs",
+        "target": "debugger/src/integrity.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "debugger/src/worker-adapter.mjs",
+        "specifier": "./integrity.mjs",
+        "target": "debugger/src/integrity.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "debugger/src/worker-bridge.mjs",
+        "specifier": "./debugger-adapter.mjs",
+        "target": "debugger/src/debugger-adapter.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "debugger/src/worker-bridge.mjs",
+        "specifier": "./integrity.mjs",
+        "target": "debugger/src/integrity.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "debugger/src/debugger-worker.mjs",
+        "specifier": "./worker-bridge.mjs",
+        "target": "debugger/src/worker-bridge.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "compiler/src/compiler-adapter.mjs",
+        "specifier": "./compiler-probe.mjs",
+        "target": "compiler/src/compiler-probe.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "compiler/src/compiler-adapter.mjs",
+        "specifier": "./toolchain-engine.mjs",
+        "target": "compiler/src/toolchain-engine.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "compiler/src/compiler-adapter.mjs",
+        "specifier": "./wasm-inspect.mjs",
+        "target": "compiler/src/wasm-inspect.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "compiler/src/compiler-probe.mjs",
+        "specifier": "./toolchain-engine.mjs",
+        "target": "compiler/src/toolchain-engine.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "compiler/src/compiler-worker.mjs",
+        "specifier": "./toolchain-engine.mjs",
+        "target": "compiler/src/toolchain-engine.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "compiler/src/compiler-worker.mjs",
+        "specifier": "./wasm-host.mjs",
+        "target": "compiler/src/wasm-host.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "compiler/src/toolchain-engine.mjs",
+        "specifier": "./source.mjs",
+        "target": "compiler/src/source.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "compiler/src/toolchain-engine.mjs",
+        "specifier": "./diagnostics.mjs",
+        "target": "compiler/src/diagnostics.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "compiler/src/toolchain-engine.mjs",
+        "specifier": "./wasm-host.mjs",
+        "target": "compiler/src/wasm-host.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "compiler/src/toolchain-engine.mjs",
+        "specifier": "./wasm-inspect.mjs",
+        "target": "compiler/src/wasm-inspect.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "ui/src/main.mjs",
+        "specifier": "../../compiler/src/compiler-adapter.mjs",
+        "target": "compiler/src/compiler-adapter.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "ui/src/main.mjs",
+        "specifier": "../../compiler/src/source.mjs",
+        "target": "compiler/src/source.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "ui/src/main.mjs",
+        "specifier": "../../debugger/src/worker-adapter.mjs",
+        "target": "debugger/src/worker-adapter.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "ui/src/main.mjs",
+        "specifier": "../../debugger/src/integrity.mjs",
+        "target": "debugger/src/integrity.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "ui/src/main.mjs",
+        "specifier": "./session-controller.mjs",
+        "target": "ui/src/session-controller.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "ui/src/main.mjs",
+        "specifier": "./editor.mjs",
+        "target": "ui/src/editor.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "ui/src/main.mjs",
+        "specifier": "../../storage/src/draft-store.mjs",
+        "target": "storage/src/draft-store.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "ui/src/main.mjs",
+        "specifier": "../../storage/src/autosave.mjs",
+        "target": "storage/src/autosave.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "ui/src/main.mjs",
+        "specifier": "../../app/offline/browser/trust.mjs",
+        "target": "app/offline/browser/trust.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "storage/src/autosave.mjs",
+        "specifier": "./draft-store.mjs",
+        "target": "storage/src/draft-store.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      },
+      {
+        "from": "launcher.mjs",
+        "specifier": "./app/offline/browser/trust.mjs",
+        "target": "app/offline/browser/trust.mjs",
+        "mapped": true,
+        "kind": "browser-static-import"
+      }
+    ],
+    "runtimeReferences": [
+      {
+        "from": "ui/probe.html",
+        "reference": "./src/main.mjs",
+        "target": "ui/src/main.mjs",
+        "mapped": true
+      },
+      {
+        "from": "ui/probe.html",
+        "reference": "./style.css",
+        "target": "ui/style.css",
+        "mapped": true
+      },
+      {
+        "from": "ui/src/main.mjs (document-relative fetch)",
+        "reference": "./.local/candidate.json",
+        "target": "ui/.local/candidate.json",
+        "mapped": true
+      },
+      {
+        "from": "compiler/src/compiler-probe.mjs",
+        "reference": "./compiler-worker.mjs",
+        "target": "compiler/src/compiler-worker.mjs",
+        "mapped": true
+      },
+      {
+        "from": "debugger/src/worker-adapter.mjs",
+        "reference": "./debugger-worker.mjs",
+        "target": "debugger/src/debugger-worker.mjs",
+        "mapped": true
+      },
+      {
+        "from": "index.html",
+        "reference": "./launcher.mjs",
+        "target": "launcher.mjs",
+        "mapped": true
+      },
+      {
+        "from": "launcher.mjs",
+        "reference": "./app/offline/browser/trust.mjs",
+        "target": "app/offline/browser/trust.mjs",
+        "mapped": true
+      },
+      {
+        "from": "generated service worker",
+        "reference": "bundle.json",
+        "target": "bundle.json",
+        "specialGeneratedFile": true,
+        "mapped": true
+      },
+      {
+        "from": "launcher.mjs",
+        "reference": "./sw.js",
+        "target": "sw.js",
+        "specialGeneratedFile": true,
+        "mapped": true
+      }
+    ],
+    "resources": [
+      {
+        "path": "debugger/src/wasm-runtime.mjs",
+        "source": "debugger/src/wasm-runtime.mjs",
+        "byteLength": 49136,
+        "sha256": "17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+      },
+      {
+        "path": "debugger/src/dwarf.mjs",
+        "source": "debugger/src/dwarf.mjs",
+        "byteLength": 25566,
+        "sha256": "a90c5783958fb814fa7dc8bd074166fe490d50ba2ecf6c9e82b79c5c3e58eb95"
+      },
+      {
+        "path": "debugger/src/variables.mjs",
+        "source": "debugger/src/variables.mjs",
+        "byteLength": 43287,
+        "sha256": "7a678889ab7b8f21dcc39f83c51771b9fff8df7103bec92275937c8ff40f996c"
+      },
+      {
+        "path": "debugger/src/integrity.mjs",
+        "source": "debugger/src/integrity.mjs",
+        "byteLength": 7031,
+        "sha256": "6c705f346157d4ed07d1e7797474ad90cf653e7431b27bcf32ee4b282f3eeb07"
+      },
+      {
+        "path": "debugger/src/debugger-adapter.mjs",
+        "source": "debugger/src/debugger-adapter.mjs",
+        "byteLength": 21034,
+        "sha256": "07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+      },
+      {
+        "path": "debugger/src/worker-adapter.mjs",
+        "source": "debugger/src/worker-adapter.mjs",
+        "byteLength": 8478,
+        "sha256": "1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6"
+      },
+      {
+        "path": "debugger/src/worker-bridge.mjs",
+        "source": "debugger/src/worker-bridge.mjs",
+        "byteLength": 1673,
+        "sha256": "b1271d7c34651296ef9011c69493f6c0e0f62d97db71d8f3fe27c9561e54eda1"
+      },
+      {
+        "path": "debugger/src/debugger-worker.mjs",
+        "source": "debugger/src/debugger-worker.mjs",
+        "byteLength": 600,
+        "sha256": "4b867a736ada849efddffc1c074739eed039d5dd4f222ab8d99c24f2fe9e559d"
+      },
+      {
+        "path": "debugger/LICENSE",
+        "source": "debugger/LICENSE",
+        "byteLength": 600,
+        "sha256": "810a7126a235c23fe56bd32f0d78617232260ee5d03fd1cb32462ac679cd8cf5"
+      },
+      {
+        "path": "compiler/src/compiler-adapter.mjs",
+        "source": "compiler/src/compiler-adapter.mjs",
+        "byteLength": 5418,
+        "sha256": "0cf84c9c6a845ad9d893dfce47c84bbbf1561d6ac7784280374c833b39d41ab9"
+      },
+      {
+        "path": "compiler/src/compiler-probe.mjs",
+        "source": "compiler/src/compiler-probe.mjs",
+        "byteLength": 3912,
+        "sha256": "40327315c54e4307d8faf322ad64ed0da248e8849f9ed72ad7d691e52cafd648"
+      },
+      {
+        "path": "compiler/src/compiler-worker.mjs",
+        "source": "compiler/src/compiler-worker.mjs",
+        "byteLength": 2400,
+        "sha256": "b3011c7601b957f28e358216d8a4ecfe1a339b0201b4acd32245b9e7115c1416"
+      },
+      {
+        "path": "compiler/src/toolchain-engine.mjs",
+        "source": "compiler/src/toolchain-engine.mjs",
+        "byteLength": 7649,
+        "sha256": "03695bb52cbf7f4ab024ef773fca630eecb01c5452faa0f54fc055b574bbe3b5"
+      },
+      {
+        "path": "compiler/src/wasm-host.mjs",
+        "source": "compiler/src/wasm-host.mjs",
+        "byteLength": 6856,
+        "sha256": "ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73"
+      },
+      {
+        "path": "compiler/src/wasm-inspect.mjs",
+        "source": "compiler/src/wasm-inspect.mjs",
+        "byteLength": 1825,
+        "sha256": "dfd5ae8ea29df1b266775250e3f07e3181ef3a48bd49ae97cbcf6b929df63a21"
+      },
+      {
+        "path": "compiler/src/source.mjs",
+        "source": "compiler/src/source.mjs",
+        "byteLength": 7201,
+        "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+      },
+      {
+        "path": "compiler/src/diagnostics.mjs",
+        "source": "compiler/src/diagnostics.mjs",
+        "byteLength": 3218,
+        "sha256": "14399bd23b8eb131a20196d0ed926db1243ace34bda42a221bae687378bfbad3"
+      },
+      {
+        "path": "compiler/resources/toolchain.lock.json",
+        "source": "compiler/resources/toolchain.lock.json",
+        "byteLength": 6149,
+        "sha256": "a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d"
+      },
+      {
+        "path": "compiler/resources/LICENSES.md",
+        "source": "compiler/resources/LICENSES.md",
+        "byteLength": 3998,
+        "sha256": "e6ea8147efad7549cd2a9c7830cfb808f4fdf860c043959b39abbb08dcacb3d2"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/clang",
+        "source": "compiler/resources/vendor/wasm-clang/clang",
+        "byteLength": 31214472,
+        "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/lld",
+        "source": "compiler/resources/vendor/wasm-clang/lld",
+        "byteLength": 19490094,
+        "sha256": "36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/memfs",
+        "source": "compiler/resources/vendor/wasm-clang/memfs",
+        "byteLength": 345442,
+        "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/sysroot.tar",
+        "source": "compiler/resources/vendor/wasm-clang/sysroot.tar",
+        "byteLength": 9297920,
+        "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/shared.js",
+        "source": "compiler/resources/vendor/wasm-clang/shared.js",
+        "byteLength": 23973,
+        "sha256": "4de0be862bda1a7571c1f0632abe3c62c47a56e734cc6b703155805a4b160b1c"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/worker.js",
+        "source": "compiler/resources/vendor/wasm-clang/worker.js",
+        "byteLength": 2758,
+        "sha256": "c0d4c3f3ef0e2047c0f109922f0a4ee9e0f2b12947a569a835da83b6bdcf995e"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/d8.js",
+        "source": "compiler/resources/vendor/wasm-clang/d8.js",
+        "byteLength": 1722,
+        "sha256": "a7ae2decd5330e2deadb6c258cfa11b4f0c5645807feb7f0114d319335e4a4b5"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/shared_web.js",
+        "source": "compiler/resources/vendor/wasm-clang/shared_web.js",
+        "byteLength": 8110,
+        "sha256": "90f2eb3c832b9d3af7f0ef7aa63c71554182efb73eba734810607e20d4cb5681"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/LICENSE",
+        "source": "compiler/resources/vendor/wasm-clang/LICENSE",
+        "byteLength": 11358,
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/LICENSE.llvm",
+        "source": "compiler/resources/vendor/wasm-clang/LICENSE.llvm",
+        "byteLength": 15140,
+        "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/README.md",
+        "source": "compiler/resources/vendor/wasm-clang/README.md",
+        "byteLength": 1446,
+        "sha256": "2ded8e20209ca550698c829ab65dfff3e4e26e90fc21240bae5f0c4f1cbd7a57"
+      },
+      {
+        "path": "ui/probe.html",
+        "source": "ui/probe.html",
+        "byteLength": 13407,
+        "sha256": "ff4d14c5ef86083b1585ace72f3bb02760506c7324716741106bfc45ee8ca178"
+      },
+      {
+        "path": "ui/style.css",
+        "source": "ui/style.css",
+        "byteLength": 25726,
+        "sha256": "19b7d4484b2ee722f408db30e7da747529efcb4b916fc2421253f7b076db36ee"
+      },
+      {
+        "path": "ui/src/main.mjs",
+        "source": "ui/src/main.mjs",
+        "byteLength": 32193,
+        "sha256": "61adf9f24e5ff2328fb096978999445397a077c11c1dc779894f6d6b342e6b64"
+      },
+      {
+        "path": "ui/src/session-controller.mjs",
+        "source": "ui/src/session-controller.mjs",
+        "byteLength": 17167,
+        "sha256": "ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84"
+      },
+      {
+        "path": "ui/src/editor.mjs",
+        "source": "ui/src/editor.mjs",
+        "byteLength": 5372,
+        "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+      },
+      {
+        "path": "storage/src/draft-store.mjs",
+        "source": "storage/src/draft-store.mjs",
+        "byteLength": 8047,
+        "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+      },
+      {
+        "path": "storage/src/autosave.mjs",
+        "source": "storage/src/autosave.mjs",
+        "byteLength": 2767,
+        "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+      },
+      {
+        "path": "ui/README.md",
+        "source": "ui/README.md",
+        "byteLength": 7876,
+        "sha256": "28f21faa83028bdc2467fac5fcbcdf6b087adc35e6c61a8ca325958bef22db2c"
+      },
+      {
+        "path": "storage/README.md",
+        "source": "storage/README.md",
+        "byteLength": 3584,
+        "sha256": "dfed86caed02e57e81f53f54cc481e3ad0396831d30398530482847bb53491f2"
+      },
+      {
+        "path": "compiler/README.md",
+        "source": "compiler/README.md",
+        "byteLength": 6592,
+        "sha256": "a4b349c5b863ce2e7c0fb24999614379694dcf738e0beef4887104f12f26b469"
+      },
+      {
+        "path": "debugger/README.md",
+        "source": "debugger/README.md",
+        "byteLength": 8311,
+        "sha256": "ffb1c5f467e941bbb59e18e63ef4c5068eefa34f1d128a84f2c045484e3c3a41"
+      },
+      {
+        "path": "app/offline/browser/trust.mjs",
+        "source": "app/offline/browser/trust.mjs",
+        "byteLength": 2412,
+        "sha256": "fbd1013dbfd3b3b986c9b79882434000cb72af738eb4985349e3634459ae300e"
+      },
+      {
+        "path": "index.html",
+        "source": "app/offline/browser/index.html",
+        "byteLength": 2498,
+        "sha256": "5b52ac7c5891f1d0276f91b143d9baca96907d01fe3a406187d1681e06461053"
+      },
+      {
+        "path": "launcher.mjs",
+        "source": "app/offline/browser/launcher.mjs",
+        "byteLength": 5841,
+        "sha256": "dcc012c895f7bda8135882271e11071fcbbe161a4f875644e821a4c82bb5e05e"
+      },
+      {
+        "path": "style.css",
+        "source": "app/offline/browser/style.css",
+        "byteLength": 1986,
+        "sha256": "9513a4144c0543299d9aee2bf7581092f42e50732b409ccb2edee6cd2b457ea5"
+      },
+      {
+        "path": "icon.svg",
+        "source": "app/offline/browser/icon.svg",
+        "byteLength": 280,
+        "sha256": "1c4c1270229e813c8f0470c24c532b202dd8ff19de6314d2ed06886a2e59f6d2"
+      },
+      {
+        "path": "IPAD-USER-MANUAL.md",
+        "source": "docs/architecture/IPAD-USER-MANUAL.md",
+        "byteLength": 24919,
+        "sha256": "7d1c003bd3d4f52dd0ce82738c77acecc67a10252567d05aa3eafc968fe9ec51"
+      },
+      {
+        "path": "manual.html",
+        "generated": true
+      },
+      {
+        "path": "ui/.local/candidate.json",
+        "generated": true
+      },
+      {
+        "path": "manifest.webmanifest",
+        "generated": true
+      }
+    ]
+  },
+  "conclusion": {
+    "newConfirmedProductBugs": [],
+    "readOnlyReviewCompleted": true,
+    "separateOfflineWorkerChecks": {
+      "passed": 22,
+      "failed": 0,
+      "scope": "Node VM with small Cache API/network substitutes"
+    },
+    "generatedPackageBuilt": false,
+    "browserTested": false,
+    "realIPadTested": false,
+    "knownBoundary": "This is not acceptance of the uncommitted v0.4.5 package or iPad cache eviction/HTTPS/installation behavior."
+  }
+}
