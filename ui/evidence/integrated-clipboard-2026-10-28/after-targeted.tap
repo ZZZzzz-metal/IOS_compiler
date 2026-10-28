@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: clipboard: a saved source edit survives a late read with no extra revision
+ok 1 - clipboard: a saved source edit survives a late read with no extra revision
+  ---
+  duration_ms: 9.6434
+  type: 'test'
+  ...
+# Subtest: clipboard: stdin edits invalidate an earlier read
+ok 2 - clipboard: stdin edits invalidate an earlier read
+  ---
+  duration_ms: 2.8172
+  type: 'test'
+  ...
+# Subtest: clipboard: language edits invalidate an earlier read
+ok 3 - clipboard: language edits invalidate an earlier read
+  ---
+  duration_ms: 1.4976
+  type: 'test'
+  ...
+# Subtest: clipboard: driver edits invalidate an earlier read
+ok 4 - clipboard: driver edits invalidate an earlier read
+  ---
+  duration_ms: 1.7097
+  type: 'test'
+  ...
+# Subtest: clipboard: newest request alone wins when B finishes before A
+ok 5 - clipboard: newest request alone wins when B finishes before A
+  ---
+  duration_ms: 1.8527
+  type: 'test'
+  ...
+# Subtest: clipboard: A cannot apply while a newer B read is still pending
+ok 6 - clipboard: A cannot apply while a newer B read is still pending
+  ---
+  duration_ms: 1.2097
+  type: 'test'
+  ...
+# Subtest: clipboard: old failure does not open fallback while B is pending
+ok 7 - clipboard: old failure does not open fallback while B is pending
+  ---
+  duration_ms: 1.1487
+  type: 'test'
+  ...
+# Subtest: clipboard: old failure cannot reopen fallback after B has succeeded
+ok 8 - clipboard: old failure cannot reopen fallback after B has succeeded
+  ---
+  duration_ms: 1.2891
+  type: 'test'
+  ...
+# Subtest: clipboard: failure after an edit preserves feedback and never opens fallback
+ok 9 - clipboard: failure after an edit preserves feedback and never opens fallback
+  ---
+  duration_ms: 1.5852
+  type: 'test'
+  ...
+# Subtest: clipboard: a current successful read applies Unicode source
+ok 10 - clipboard: a current successful read applies Unicode source
+  ---
+  duration_ms: 1.59
+  type: 'test'
+  ...
+# Subtest: clipboard: a current successful read applies empty text
+ok 11 - clipboard: a current successful read applies empty text
+  ---
+  duration_ms: 1.1368
+  type: 'test'
+  ...
+# Subtest: clipboard: current denied read can apply manual text exactly once
+ok 12 - clipboard: current denied read can apply manual text exactly once
+  ---
+  duration_ms: 1.2145
+  type: 'test'
+  ...
+# Subtest: clipboard: cancelling manual paste leaves draft and store unchanged
+ok 13 - clipboard: cancelling manual paste leaves draft and store unchanged
+  ---
+  duration_ms: 1.6303
+  type: 'test'
+  ...
+# Subtest: clipboard: pending import replacement blocks late read side effects (preventative)
+ok 14 - clipboard: pending import replacement blocks late read side effects (preventative)
+  ---
+  duration_ms: 1.4521
+  type: 'test'
+  ...
+# Subtest: clipboard: manual apply revalidates after an import replaces the draft
+ok 15 - clipboard: manual apply revalidates after an import replaces the draft
+  ---
+  duration_ms: 1.2447
+  type: 'test'
+  ...
+# Subtest: clipboard: recovery start invalidates reads and rejects new paste requests
+ok 16 - clipboard: recovery start invalidates reads and rejects new paste requests
+  ---
+  duration_ms: 1.4894
+  type: 'test'
+  ...
+# Subtest: clipboard: manual apply cannot write into a completed recovery copy
+ok 17 - clipboard: manual apply cannot write into a completed recovery copy
+  ---
+  duration_ms: 1.5627
+  type: 'test'
+  ...
+# Subtest: clipboard: an old error after recovery cannot open fallback or replace feedback
+ok 18 - clipboard: an old error after recovery cannot open fallback or replace feedback
+  ---
+  duration_ms: 1.2705
+  type: 'test'
+  ...
+# Subtest: clipboard: copy fallback resets prior dialog return value and cannot paste
+ok 19 - clipboard: copy fallback resets prior dialog return value and cannot paste
+  ---
+  duration_ms: 1.5876
+  type: 'test'
+  ...
+# Subtest: clipboard: late copy fallback preserves an open manual paste and its context
+ok 20 - clipboard: late copy fallback preserves an open manual paste and its context
+  ---
+  duration_ms: 1.3288
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 157.1852
