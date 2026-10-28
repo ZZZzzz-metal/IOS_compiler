@@ -1,0 +1,6 @@
+{
+  "checkedAtUtc": "2026-10-28T08:47:39.2614751Z",
+  "port": 4235,
+  "listeningCount": 0,
+  "note": "First static host was explicitly stopped through its exec session; operator Ctrl+C exit1 on Windows, not a product test failure"
+}

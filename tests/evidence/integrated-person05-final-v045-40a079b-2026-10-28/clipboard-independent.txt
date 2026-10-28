@@ -1,0 +1,1 @@
+{"revision":"40a079ba2065384572f268e4bb91bda437e46cec","evidence":"C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-final-v045-40a079b-2026-10-28\\ui\\integrated-run-01","cases":8,"passed":8,"failed":0,"harnessFailures":0,"assertions":25,"failedAssertions":0}

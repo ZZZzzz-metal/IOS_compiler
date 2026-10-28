@@ -1,0 +1,5 @@
+{
+  "at": "2026-10-28T14:00:50.405Z",
+  "exitCode": 1,
+  "reason": "Audit assumption: immediate step-over snapshot can still be reading frames/locals. Stable watch snapshot at line13 already proves total=29. This is not a product failure."
+}

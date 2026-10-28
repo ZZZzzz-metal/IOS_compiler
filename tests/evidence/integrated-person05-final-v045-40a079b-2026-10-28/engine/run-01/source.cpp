@@ -1,0 +1,43 @@
+#include <cstdio>
+int main() {
+  int array[3] = {11,22,33};
+  int *p = &array[2];
+  int *q = &array[0];
+  int *nullPointer = 0;
+  signed char signedSmall = -5;
+  unsigned short unsignedSmall = 65535;
+  long signedLong = -1;
+  unsigned long unsignedLong = 4294967295UL;
+  long long wideSigned = -1;
+  int exactInt = 16777217;
+  long long exactLong = 16777217;
+  float positive = 16777216.0f;
+  float negative = -16777216.0f;
+  float nanValue = __builtin_nanf("");
+  int zero = 0;
+  std::printf("REV002-octal=%lld\n", (long long)(010 + 077));
+  std::printf("REV002-unsigned-octal=%lld\n", (long long)(037777777777 + 1));
+  std::printf("REV003-offset=%lld\n", (long long)(*(p-1)));
+  std::printf("small-signed-promotion=%lld\n", (long long)(signedSmall + 1));
+  std::printf("small-unsigned-promotion=%lld\n", (long long)(unsignedSmall + -1));
+  std::printf("signed-unsigned-comparison=%lld\n", (long long)(signedLong < unsignedLong));
+  std::printf("wide-narrow-conversion=%lld\n", (long long)(wideSigned + unsignedLong));
+  std::printf("unsigned-wrapping=%lld\n", (long long)(unsignedLong + 1));
+  std::printf("float-unary-preserves-width=%lld\n", (long long)((+positive) + 1));
+  std::printf("mixed-float-int-addition=%lld\n", (long long)(negative + exactInt));
+  std::printf("mixed-int-float-addition=%lld\n", (long long)(exactInt + negative));
+  std::printf("mixed-float-int-subtraction=%lld\n", (long long)(positive - exactInt));
+  std::printf("mixed-float-int-equality=%lld\n", (long long)(positive == exactInt));
+  std::printf("mixed-float-int-less-than=%lld\n", (long long)(positive < exactInt));
+  std::printf("mixed-float-int-division=%lld\n", (long long)(positive / exactInt == 1));
+  std::printf("mixed-float-wide-addition=%lld\n", (long long)(negative + exactLong));
+  std::printf("nan-logical-not=%lld\n", (long long)(!nanValue));
+  std::printf("nan-logical-or=%lld\n", (long long)(nanValue || 0));
+  std::printf("nan-logical-and=%lld\n", (long long)(nanValue && 1));
+  std::printf("nan-equality=%lld\n", (long long)(nanValue == nanValue));
+  std::printf("short-circuit-null=%lld\n", (long long)(nullPointer != 0 && *nullPointer == 99));
+  std::printf("short-circuit-division=%lld\n", (long long)(1 || (1/zero)));
+  std::printf("short-circuit-nan-rhs=%lld\n", (long long)(nanValue || (1/zero)));
+  std::printf("pointer-native-difference=%d\n", int(p-q));
+  return 0;
+}

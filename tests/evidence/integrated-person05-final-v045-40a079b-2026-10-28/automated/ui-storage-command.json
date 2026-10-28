@@ -1,0 +1,27 @@
+{
+  "id": "ui-storage",
+  "command": "npm.cmd run test:ui",
+  "invokedVia": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "args": [
+      "--prefix",
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "run",
+      "test:ui"
+    ]
+  },
+  "startedAt": "2026-10-28T08:41:21.656Z",
+  "finishedAt": "2026-10-28T08:41:25.262Z",
+  "durationMs": 3605.9503999999997,
+  "exitCode": 0,
+  "signal": null,
+  "errorMessage": null,
+  "outputFile": "ui-storage.txt",
+  "outputSHA256": "ce4a09955e6ec42438d4333190cf40ac60e3f5f9bef9e7f04f51760dc8819e8d",
+  "observedCounts": {
+    "tests": 106,
+    "passed": 106,
+    "failed": 0
+  }
+}

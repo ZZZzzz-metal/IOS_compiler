@@ -1,0 +1,131 @@
+{
+  "testedRevision": "40a079ba2065384572f268e4bb91bda437e46cec",
+  "profile": {
+    "compatibilityId": "integration-prototype-60eb6729284e2729",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:60eb6729284e27295b8a76121dfe569027d8c096f9580a279021d6ada08d6789",
+    "status": "candidate",
+    "evidence": [
+      "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+    ]
+  },
+  "startedAt": "2026-10-28T08:42:01.932Z",
+  "finishedAt": "2026-10-28T08:42:05.163Z",
+  "commands": [
+    {
+      "id": "watch-independent",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/watch-types-independent.mjs"
+      ],
+      "environmentOverrides": {
+        "WATCH_TYPES_REVISION": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "WATCH_TYPES_PROFILE": "integration-prototype-60eb6729284e2729",
+        "WATCH_TYPES_PRODUCT_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+        "WATCH_TYPES_OUTPUT": "tests/evidence/integrated-person05-final-v045-40a079b-2026-10-28/engine/run-01/"
+      },
+      "startedAt": "2026-10-28T08:42:01.938Z",
+      "finishedAt": "2026-10-28T08:42:04.379Z",
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "watch-independent.txt",
+      "outputSHA256": "3e28786ca6b731d1cfaeec8f9c2e783a7a6861dd40a1d7c38ca4b876ddc7487c"
+    },
+    {
+      "id": "clipboard-independent",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/ui-parallel-audit.mjs",
+        "integrated-run-01"
+      ],
+      "environmentOverrides": {
+        "UI_PARALLEL_REVISION": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "UI_PARALLEL_OUTPUT_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-final-v045-40a079b-2026-10-28\\"
+      },
+      "startedAt": "2026-10-28T08:42:04.381Z",
+      "finishedAt": "2026-10-28T08:42:04.924Z",
+      "exitCode": 0,
+      "signal": null,
+      "errorMessage": null,
+      "outputFile": "clipboard-independent.txt",
+      "outputSHA256": "806f5ee667f571035714cf9b641b9a975f132edce364992509e9e56027c388eb"
+    }
+  ],
+  "watch": {
+    "counts": {
+      "passed": 25,
+      "failed": 0,
+      "boundaryOnly": 1
+    },
+    "sourceHash": "sha256:8f4ea16786be3da29608a1034506eb34c2685b8d6d268e9b057942fa3a176161",
+    "files": [
+      {
+        "file": "source.cpp",
+        "byteLength": 2380,
+        "sha256": "a781aa556e582cbeecd61aa561a9dc388ee8640ac7c82d3782572d893880015f",
+        "identicalToOriginalFailure": true
+      },
+      {
+        "file": "artifact.wasm",
+        "byteLength": 38373,
+        "sha256": "67b3504d64da47a6b0feb495aa6338f89c3f1056d197016f758295bb11ef95e4",
+        "identicalToOriginalFailure": true
+      }
+    ],
+    "nativeAndInterpreterOutputIdentical": true
+  },
+  "clipboard": {
+    "scenarios": 8,
+    "passed": 8,
+    "failed": 0,
+    "assertions": 25,
+    "actualSystemClipboardTested": false,
+    "actualIndexedDBTested": false
+  },
+  "productDiffFromCommit": "",
+  "browserTested": false,
+  "ipadTested": false,
+  "networkDisabled": false,
+  "note": "Independent checks are separate from the routine module/contract suites; sizeof remains a support-boundary record."
+}

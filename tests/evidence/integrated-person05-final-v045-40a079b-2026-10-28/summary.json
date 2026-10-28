@@ -1,0 +1,956 @@
+{
+  "recordedAt": "2026-10-28T14:04:36.085Z",
+  "testedRevision": "40a079ba2065384572f268e4bb91bda437e46cec",
+  "tag": "integration-v0.4.5",
+  "tagObject": "b9bed1dcc54362ac3210169b734d566d5f49efc8",
+  "tagCommit": "40a079ba2065384572f268e4bb91bda437e46cec",
+  "result": "passed in specified desktop scope; no new confirmed product defects",
+  "automation": {
+    "routine": {
+      "commandsExitZero": 10,
+      "passed": 258,
+      "failed": 0,
+      "breakdown": {
+        "compiler": 27,
+        "debugger": 83,
+        "uiAndStorage": 106,
+        "contracts": 10,
+        "integration": 3,
+        "acceptance": 21,
+        "minimalRegressions": 2,
+        "initializer": 6
+      },
+      "toolchainVerified": 11,
+      "baselineCheckPassed": true,
+      "evidence": "automated/summary.json"
+    },
+    "offlineWorkerSeparate": {
+      "passed": 22,
+      "failed": 0
+    },
+    "independentWatch": {
+      "passed": 25,
+      "failed": 0,
+      "boundaryOnly": 1
+    },
+    "independentClipboard": {
+      "scenarios": 8,
+      "passed": 8,
+      "assertions": 25,
+      "failedAssertions": 0,
+      "actualSystemClipboardTested": false,
+      "actualIndexedDBTested": false
+    }
+  },
+  "browser": {
+    "recordedAt": "2026-10-28T09:00:58.988Z",
+    "observations": 69,
+    "passed": true,
+    "sourceSHA256": "9af1a42a6cc459408c1cbbd353ca222a7ad74a04be59bdb76f541af644865bbb",
+    "recoveredSourceSHA256": "233c40a9ea02d1034977fed1bbbc812db4750cadb95b6a222cdf7bd5054b295d",
+    "manifestResources": 51,
+    "totalBytes": 60874273,
+    "logs": [
+      {
+        "file": "server-01.jsonl",
+        "sha256": "03e0882655f4f4c763bca0648b2d4c8b88059ce91e6debc074179318409944b5",
+        "requests": 60,
+        "manifestResourcesDownloaded": 51,
+        "firstAt": "2026-10-28T08:44:06.339Z",
+        "lastAt": "2026-10-28T08:45:20.068Z"
+      },
+      {
+        "file": "server-02.jsonl",
+        "sha256": "275cd70578f86f1471afaaa98096aa69b756d9f74284d6e5fa1701f8b2b64951",
+        "requests": 1,
+        "manifestResourcesDownloaded": 0,
+        "firstAt": "2026-10-28T08:55:17.400Z",
+        "lastAt": "2026-10-28T08:55:39.811Z"
+      },
+      {
+        "file": "server-03.jsonl",
+        "sha256": "95b7ab947967ae8655eb2ca9bd124cbcfae56c59749c153caa3aef26a10b2dcc",
+        "requests": 53,
+        "manifestResourcesDownloaded": 51,
+        "firstAt": "2026-10-28T08:56:26.375Z",
+        "lastAt": "2026-10-28T08:57:15.777Z"
+      },
+      {
+        "file": "server-04.jsonl",
+        "sha256": "663653c74b077f17568170c1859b4c4895ccaf8e4335efb045aef8f7f722a898",
+        "requests": 53,
+        "manifestResourcesDownloaded": 51,
+        "firstAt": "2026-10-28T08:58:04.524Z",
+        "lastAt": "2026-10-28T08:58:51.235Z"
+      }
+    ],
+    "lifecycle": [
+      {
+        "path": "stopped-before-cold-start.json",
+        "checkedAtUtc": "2026-10-28T08:47:39.2614751Z",
+        "port": 4235,
+        "listeningCount": 0,
+        "note": "First static host was explicitly stopped through its exec session; operator Ctrl+C exit1 on Windows, not a product test failure",
+        "checkedAt": "2026-10-28T08:47:39.2614751Z"
+      },
+      {
+        "path": "stopped-before-index-fault.json",
+        "checkedAt": "2026-10-28T08:55:55.0154181Z",
+        "listeningCount": 0,
+        "stage": "before-control-stop-and-index-deletion"
+      },
+      {
+        "path": "stopped-before-trust-fault.json",
+        "checkedAt": "2026-10-28T08:57:40.6102221Z",
+        "listeningCount": 0,
+        "stage": "before-current-cache-trust-corruption-cold-start"
+      },
+      {
+        "path": "stopped-after-both-repairs.json",
+        "checkedAt": "2026-10-28T08:59:19.7411978Z",
+        "listeningCount": 0,
+        "stage": "after-both-repairs-before-new-uncompiled-source"
+      }
+    ],
+    "fixtureSHA256": {
+      "offline-browser-host.mjs": "572588fbce0c87612303b42fca1eb5a184a630a12fb003157be5bdc01243d048",
+      "offline-cache-control.html": "3b46de1afbac02e5b6d242f27046e8a21d2c9c3065d223d92668bcc0e44518d7",
+      "OFFLINE-BROWSER-FIXTURE.md": "cacbd3cc5d4f5ef81d00cd43f6ee15ef00b9a642f5792230100323376a87f41c"
+    },
+    "conclusion": {
+      "coldStartAndNewCompile": "passed in actual desktop IAB with static host stopped",
+      "shortcutSchemes": "seven actions per scheme observed; standard and Control numbers",
+      "realCacheFaults": [
+        "index.html missing",
+        "trust.mjs corrupt in current completed cache"
+      ],
+      "productRepair": "both repair paths passed, 51 downloads verified each, draft/settings preserved",
+      "rev001": "independently closed only for these tested desktop cache faults",
+      "actualSystemNetworkDisabled": false,
+      "actualIpadTested": false,
+      "strongDraftDurabilityTested": false
+    },
+    "notes": [
+      "The first process started 08:44:06.339Z; fixture-only port guard was last edited 08:44:10.661Z/08:44:11.024Z. No control page was loaded in process01; release archive bytes never changed. Processes02-04 use frozen fixture bytes.",
+      "One trust corruption initially selected the old broken cache. That observation is preserved; the actual second fault explicitly selected the newly completed e659 cache and verified its intact index first.",
+      "Initial asynchronous draft-loading snapshots do not prove a missing draft; later completed snapshots independently match exact original source.",
+      "Control stop scenario began compiling offline; process02 briefly served only the control page, then was stopped before CtrlShift5. These observations are not proof of system-level network isolation.",
+      "The fixture retained response backups; successful recoveries used only the product repair button, never the fixture restore button.",
+      "Browser DOM does not expose a complete BuildManifest/session identity; automatic actual-Wasm and browser observations retain their separate evidence scopes."
+    ]
+  },
+  "archive": {
+    "schemaVersion": 1,
+    "recordedAt": "2026-10-28T08:44:58.055Z",
+    "method": "Independent fresh ZIP byte/hash extraction and validation against fixed Git blobs/locked vendor hashes; no bundle rebuild, no reuse of owner audit results.",
+    "testedRevision": "40a079ba2065384572f268e4bb91bda437e46cec",
+    "fixedTag": "integration-v0.4.5",
+    "zip": {
+      "sha256": "f1877f4e031f5a46bdafab71ea5ae611a8dd74c58c7256c9ed367e92cb00c068",
+      "byteLength": 19294031,
+      "fileCount": 60,
+      "all59ManifestEntriesVerified": true,
+      "pathContainmentBeforeExtraction": true,
+      "onlyCurrentRelease": true
+    },
+    "bundle": {
+      "bundleId": "ipad-web-probe-eb5236b6ed8f9aab4a9d9ced",
+      "resourceCount": 51,
+      "totalBytes": 60874273,
+      "compatibilityId": "integration-prototype-60eb6729284e2729",
+      "resourceManifestHash": "sha256:60eb6729284e27295b8a76121dfe569027d8c096f9580a279021d6ada08d6789",
+      "descriptorSHA256": "dddfee8ddf378f51262a0b4ab15c739f7c681cbe4961699da3077b42b3d81d72",
+      "workerSHA256": "fbc19966c4f21d2c0e5c4596ef52014ee89daac920a965d58ce2d8e24ff5cbe8",
+      "workerTemplateSHA256": "345f5a5cbaac68ae60ab2a4815f88ea0ab49178bb90d91694ba3d484b79e8c45",
+      "allResourceHashesAndLengthsVerified": true,
+      "identityDerivedFromExactResources": true,
+      "embeddedWorkerMatchesFixedTemplate": true
+    },
+    "sourceBindingCounts": {
+      "fixedGit": 44,
+      "lockedVendor": 4,
+      "generated": 3
+    },
+    "sourceBindings": [
+      {
+        "path": "IPAD-USER-MANUAL.md",
+        "source": "docs/architecture/IPAD-USER-MANUAL.md",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "0dbd989662adde12173f36c8149d58cda86ba9d9",
+        "sha256": "8434f255192c8d77bc4fd04abcf07bd47f0f0abd3cd407f71fd29e53300e7493"
+      },
+      {
+        "path": "app/offline/browser/trust.mjs",
+        "source": "app/offline/browser/trust.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "37625684470843665eb9f6b0d0a2e39b81004478",
+        "sha256": "fbd1013dbfd3b3b986c9b79882434000cb72af738eb4985349e3634459ae300e"
+      },
+      {
+        "path": "compiler/README.md",
+        "source": "compiler/README.md",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "e54933a30d64252e87287f8e7e361676990c031b",
+        "sha256": "a4b349c5b863ce2e7c0fb24999614379694dcf738e0beef4887104f12f26b469"
+      },
+      {
+        "path": "compiler/resources/LICENSES.md",
+        "source": "compiler/resources/LICENSES.md",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "54e6227e61485da4ec52d00db4fcf6948fe28140",
+        "sha256": "e6ea8147efad7549cd2a9c7830cfb808f4fdf860c043959b39abbb08dcacb3d2"
+      },
+      {
+        "path": "compiler/resources/toolchain.lock.json",
+        "source": "compiler/resources/toolchain.lock.json",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "df34b748f8fd76cec914e9abff26a54eae098009",
+        "sha256": "a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/LICENSE",
+        "source": "compiler/resources/vendor/wasm-clang/LICENSE",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/LICENSE.llvm",
+        "source": "compiler/resources/vendor/wasm-clang/LICENSE.llvm",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "24806ab4c9eb291db4d28e159901f7a0901b9fd1",
+        "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/README.md",
+        "source": "compiler/resources/vendor/wasm-clang/README.md",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "8b263add4a1e5e567c22b64759c574b8fbf9ecab",
+        "sha256": "2ded8e20209ca550698c829ab65dfff3e4e26e90fc21240bae5f0c4f1cbd7a57"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/clang",
+        "source": "compiler/resources/toolchain.lock.json#clang",
+        "kind": "locked-vendor-bytes",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/d8.js",
+        "source": "compiler/resources/vendor/wasm-clang/d8.js",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "8a9bbe3b83480aa799e49a3ebb455b195071f9db",
+        "sha256": "a7ae2decd5330e2deadb6c258cfa11b4f0c5645807feb7f0114d319335e4a4b5"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/lld",
+        "source": "compiler/resources/toolchain.lock.json#lld",
+        "kind": "locked-vendor-bytes",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "sha256": "36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/memfs",
+        "source": "compiler/resources/toolchain.lock.json#memfs",
+        "kind": "locked-vendor-bytes",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/shared.js",
+        "source": "compiler/resources/vendor/wasm-clang/shared.js",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "2304ea301c2e1f1cf132340116ca9d5829c187cf",
+        "sha256": "4de0be862bda1a7571c1f0632abe3c62c47a56e734cc6b703155805a4b160b1c"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/shared_web.js",
+        "source": "compiler/resources/vendor/wasm-clang/shared_web.js",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "0410b56d77d10d571fe0453d38ac699ca909b7ce",
+        "sha256": "90f2eb3c832b9d3af7f0ef7aa63c71554182efb73eba734810607e20d4cb5681"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/sysroot.tar",
+        "source": "compiler/resources/toolchain.lock.json#sysroot.tar",
+        "kind": "locked-vendor-bytes",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      {
+        "path": "compiler/resources/vendor/wasm-clang/worker.js",
+        "source": "compiler/resources/vendor/wasm-clang/worker.js",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "192262bf16aa14ec759c0286091b39ffd921721f",
+        "sha256": "c0d4c3f3ef0e2047c0f109922f0a4ee9e0f2b12947a569a835da83b6bdcf995e"
+      },
+      {
+        "path": "compiler/src/compiler-adapter.mjs",
+        "source": "compiler/src/compiler-adapter.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "4162faaa05ba7c3e6feb5a254bdbe0120fabe366",
+        "sha256": "0cf84c9c6a845ad9d893dfce47c84bbbf1561d6ac7784280374c833b39d41ab9"
+      },
+      {
+        "path": "compiler/src/compiler-probe.mjs",
+        "source": "compiler/src/compiler-probe.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "6ff7c80b862ad802f6ec5ab787bb813ad0adf6ee",
+        "sha256": "40327315c54e4307d8faf322ad64ed0da248e8849f9ed72ad7d691e52cafd648"
+      },
+      {
+        "path": "compiler/src/compiler-worker.mjs",
+        "source": "compiler/src/compiler-worker.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "0df71e53eb6d76b3a8ef30fecb20c49402c59ccc",
+        "sha256": "b3011c7601b957f28e358216d8a4ecfe1a339b0201b4acd32245b9e7115c1416"
+      },
+      {
+        "path": "compiler/src/diagnostics.mjs",
+        "source": "compiler/src/diagnostics.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "6fc6e88030d6ecfe56551bc2f53ae04606eff47d",
+        "sha256": "14399bd23b8eb131a20196d0ed926db1243ace34bda42a221bae687378bfbad3"
+      },
+      {
+        "path": "compiler/src/source.mjs",
+        "source": "compiler/src/source.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "1eef70834e8926e1edf68e7355a57b9f88b02eda",
+        "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+      },
+      {
+        "path": "compiler/src/toolchain-engine.mjs",
+        "source": "compiler/src/toolchain-engine.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "aa952142dab430956b60f92261c331a8155dd8e0",
+        "sha256": "03695bb52cbf7f4ab024ef773fca630eecb01c5452faa0f54fc055b574bbe3b5"
+      },
+      {
+        "path": "compiler/src/wasm-host.mjs",
+        "source": "compiler/src/wasm-host.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "60fa38b15e108eeb69683d28c94bf06531d78d84",
+        "sha256": "ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73"
+      },
+      {
+        "path": "compiler/src/wasm-inspect.mjs",
+        "source": "compiler/src/wasm-inspect.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "1f9db832b3ea46f5c1f224968e816296067af50d",
+        "sha256": "dfd5ae8ea29df1b266775250e3f07e3181ef3a48bd49ae97cbcf6b929df63a21"
+      },
+      {
+        "path": "debugger/LICENSE",
+        "source": "debugger/LICENSE",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "44e52d40b2344cba753c266c4d7503c7fc6f5ed7",
+        "sha256": "810a7126a235c23fe56bd32f0d78617232260ee5d03fd1cb32462ac679cd8cf5"
+      },
+      {
+        "path": "debugger/README.md",
+        "source": "debugger/README.md",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "b574463c01be49451c0377601b115eef5fb79837",
+        "sha256": "2d29264f5575b95c16e774df103afb16bb724e5745a4e923579611e9116370bb"
+      },
+      {
+        "path": "debugger/src/debugger-adapter.mjs",
+        "source": "debugger/src/debugger-adapter.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "12be2cbf07742d4616ba77266a8957640383cb52",
+        "sha256": "07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+      },
+      {
+        "path": "debugger/src/debugger-worker.mjs",
+        "source": "debugger/src/debugger-worker.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "fa9864546a0091259943a317495142d0b7c4ae91",
+        "sha256": "4b867a736ada849efddffc1c074739eed039d5dd4f222ab8d99c24f2fe9e559d"
+      },
+      {
+        "path": "debugger/src/dwarf.mjs",
+        "source": "debugger/src/dwarf.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "335a37e853aa9928f701ba9b3e8c1afe37037ae6",
+        "sha256": "a90c5783958fb814fa7dc8bd074166fe490d50ba2ecf6c9e82b79c5c3e58eb95"
+      },
+      {
+        "path": "debugger/src/integrity.mjs",
+        "source": "debugger/src/integrity.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "6d884d6d1bfe455b36905fca497662e65e999557",
+        "sha256": "6c705f346157d4ed07d1e7797474ad90cf653e7431b27bcf32ee4b282f3eeb07"
+      },
+      {
+        "path": "debugger/src/variables.mjs",
+        "source": "debugger/src/variables.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "30387f7b6d35dbea8e62e58f622ac52ed6254760",
+        "sha256": "9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e"
+      },
+      {
+        "path": "debugger/src/wasm-runtime.mjs",
+        "source": "debugger/src/wasm-runtime.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "fd427a30cd4eda69a9e639b9b355373b5ed7d31b",
+        "sha256": "8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+      },
+      {
+        "path": "debugger/src/worker-adapter.mjs",
+        "source": "debugger/src/worker-adapter.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "3c598c2f7f7b04aebb344aa6aeb6697c665fdfd2",
+        "sha256": "1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6"
+      },
+      {
+        "path": "debugger/src/worker-bridge.mjs",
+        "source": "debugger/src/worker-bridge.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "255c8d1c63ff53b382edb7195e8d0e77147b3686",
+        "sha256": "b1271d7c34651296ef9011c69493f6c0e0f62d97db71d8f3fe27c9561e54eda1"
+      },
+      {
+        "path": "icon.svg",
+        "source": "app/offline/browser/icon.svg",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "f6de7d8d464a65bd3cf00d0ce0ed7081235214fb",
+        "sha256": "1c4c1270229e813c8f0470c24c532b202dd8ff19de6314d2ed06886a2e59f6d2"
+      },
+      {
+        "path": "index.html",
+        "source": "app/offline/browser/index.html",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "3c33194cefe1cb6c3ae25d95ab53fdbb142b2e59",
+        "sha256": "5b52ac7c5891f1d0276f91b143d9baca96907d01fe3a406187d1681e06461053"
+      },
+      {
+        "path": "launcher.mjs",
+        "source": "app/offline/browser/launcher.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "de904fe025fb341aa8b00c81085d90c83f737ed4",
+        "sha256": "dcc012c895f7bda8135882271e11071fcbbe161a4f875644e821a4c82bb5e05e"
+      },
+      {
+        "path": "manifest.webmanifest",
+        "kind": "deterministically-generated-from-fixed-source",
+        "sha256": "b843d2b92ec8264c2f1cdb757a3d199397539b69818f5d7bbd9dc26ec20fc521"
+      },
+      {
+        "path": "manual.html",
+        "kind": "deterministically-generated-from-fixed-source",
+        "sha256": "3a1d9518f5120febf97df3bd7dc87e17624426c0bfd6f8c8d615b417d1debce3"
+      },
+      {
+        "path": "storage/README.md",
+        "source": "storage/README.md",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "b90a56c5cb3f1a4fec057740abc888cf68a069a8",
+        "sha256": "dfed86caed02e57e81f53f54cc481e3ad0396831d30398530482847bb53491f2"
+      },
+      {
+        "path": "storage/src/autosave.mjs",
+        "source": "storage/src/autosave.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "56e3520ed4902baaa6a65e0a08fc10e1f19d3fee",
+        "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+      },
+      {
+        "path": "storage/src/draft-store.mjs",
+        "source": "storage/src/draft-store.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "da091c220b8c937ed5617ef45e36d15d6f7632b8",
+        "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+      },
+      {
+        "path": "style.css",
+        "source": "app/offline/browser/style.css",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "58665d0fff1cc32f9ee1df8c1a7bb7cc80c07552",
+        "sha256": "9513a4144c0543299d9aee2bf7581092f42e50732b409ccb2edee6cd2b457ea5"
+      },
+      {
+        "path": "ui/.local/candidate.json",
+        "kind": "deterministically-generated-from-fixed-source",
+        "sha256": "92575547a3e11ee75b97103487cd9555e3062895fbc7b8c99c8da55898e82702"
+      },
+      {
+        "path": "ui/README.md",
+        "source": "ui/README.md",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "ca4adf87e3ee483435fe9a6e258a825bc3f09e97",
+        "sha256": "703f3fa0668e84d786940a0a568058b08b4cc00e78ed72a5fc91eb9a6c1656e8"
+      },
+      {
+        "path": "ui/SHORTCUTS.md",
+        "source": "ui/SHORTCUTS.md",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "c5e34e0376c2271d843eb1f765b7f373d966f533",
+        "sha256": "934d572129acacf559da1e2ede146f45bd4cc0325c5dcebd327f4a974463a5a1"
+      },
+      {
+        "path": "ui/probe.html",
+        "source": "ui/probe.html",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "2780455230136dff97d1f91ccc42e0594f08a6c0",
+        "sha256": "ff4d14c5ef86083b1585ace72f3bb02760506c7324716741106bfc45ee8ca178"
+      },
+      {
+        "path": "ui/src/editor.mjs",
+        "source": "ui/src/editor.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "67341b6f4fac22ed4edb3f7a3a2cfa0bf6e8fb87",
+        "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+      },
+      {
+        "path": "ui/src/main.mjs",
+        "source": "ui/src/main.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "f817c246935d999b5c1d8b149771b94ffeec1f3e",
+        "sha256": "ff34c70433827b17ab4e1d25db03b71c922d27e1132b12841ab7cabb2fac4b40"
+      },
+      {
+        "path": "ui/src/session-controller.mjs",
+        "source": "ui/src/session-controller.mjs",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "e0cda5556aa72b9454c23123c8b74c3c647246a9",
+        "sha256": "ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84"
+      },
+      {
+        "path": "ui/style.css",
+        "source": "ui/style.css",
+        "kind": "fixed-git-blob",
+        "revision": "40a079ba2065384572f268e4bb91bda437e46cec",
+        "gitBlob": "328a630aedb9080ce0d60040543c5645ee2a74ac",
+        "sha256": "19b7d4484b2ee722f408db30e7da747529efcb4b916fc2421253f7b076db36ee"
+      }
+    ],
+    "imports": {
+      "modulesParsed": 23,
+      "browserStaticEdges": 31,
+      "nodeOnlyEdges": 0,
+      "missingBrowserStaticDependencies": 0,
+      "edges": [
+        {
+          "from": "compiler/src/compiler-adapter.mjs",
+          "specifier": "./compiler-probe.mjs",
+          "target": "compiler/src/compiler-probe.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "compiler/src/compiler-adapter.mjs",
+          "specifier": "./toolchain-engine.mjs",
+          "target": "compiler/src/toolchain-engine.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "compiler/src/compiler-adapter.mjs",
+          "specifier": "./wasm-inspect.mjs",
+          "target": "compiler/src/wasm-inspect.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "compiler/src/compiler-probe.mjs",
+          "specifier": "./toolchain-engine.mjs",
+          "target": "compiler/src/toolchain-engine.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "compiler/src/compiler-worker.mjs",
+          "specifier": "./toolchain-engine.mjs",
+          "target": "compiler/src/toolchain-engine.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "compiler/src/compiler-worker.mjs",
+          "specifier": "./wasm-host.mjs",
+          "target": "compiler/src/wasm-host.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "compiler/src/toolchain-engine.mjs",
+          "specifier": "./source.mjs",
+          "target": "compiler/src/source.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "compiler/src/toolchain-engine.mjs",
+          "specifier": "./diagnostics.mjs",
+          "target": "compiler/src/diagnostics.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "compiler/src/toolchain-engine.mjs",
+          "specifier": "./wasm-host.mjs",
+          "target": "compiler/src/wasm-host.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "compiler/src/toolchain-engine.mjs",
+          "specifier": "./wasm-inspect.mjs",
+          "target": "compiler/src/wasm-inspect.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "debugger/src/debugger-adapter.mjs",
+          "specifier": "./wasm-runtime.mjs",
+          "target": "debugger/src/wasm-runtime.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "debugger/src/debugger-adapter.mjs",
+          "specifier": "./dwarf.mjs",
+          "target": "debugger/src/dwarf.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "debugger/src/debugger-adapter.mjs",
+          "specifier": "./variables.mjs",
+          "target": "debugger/src/variables.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "debugger/src/debugger-adapter.mjs",
+          "specifier": "./integrity.mjs",
+          "target": "debugger/src/integrity.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "debugger/src/debugger-worker.mjs",
+          "specifier": "./worker-bridge.mjs",
+          "target": "debugger/src/worker-bridge.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "debugger/src/variables.mjs",
+          "specifier": "./dwarf.mjs",
+          "target": "debugger/src/dwarf.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "debugger/src/variables.mjs",
+          "specifier": "./wasm-runtime.mjs",
+          "target": "debugger/src/wasm-runtime.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "debugger/src/worker-adapter.mjs",
+          "specifier": "./integrity.mjs",
+          "target": "debugger/src/integrity.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "debugger/src/worker-bridge.mjs",
+          "specifier": "./debugger-adapter.mjs",
+          "target": "debugger/src/debugger-adapter.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "debugger/src/worker-bridge.mjs",
+          "specifier": "./integrity.mjs",
+          "target": "debugger/src/integrity.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "launcher.mjs",
+          "specifier": "./app/offline/browser/trust.mjs",
+          "target": "app/offline/browser/trust.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "storage/src/autosave.mjs",
+          "specifier": "./draft-store.mjs",
+          "target": "storage/src/draft-store.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "ui/src/main.mjs",
+          "specifier": "../../compiler/src/compiler-adapter.mjs",
+          "target": "compiler/src/compiler-adapter.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "ui/src/main.mjs",
+          "specifier": "../../compiler/src/source.mjs",
+          "target": "compiler/src/source.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "ui/src/main.mjs",
+          "specifier": "../../debugger/src/worker-adapter.mjs",
+          "target": "debugger/src/worker-adapter.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "ui/src/main.mjs",
+          "specifier": "../../debugger/src/integrity.mjs",
+          "target": "debugger/src/integrity.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "ui/src/main.mjs",
+          "specifier": "./session-controller.mjs",
+          "target": "ui/src/session-controller.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "ui/src/main.mjs",
+          "specifier": "./editor.mjs",
+          "target": "ui/src/editor.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "ui/src/main.mjs",
+          "specifier": "../../storage/src/draft-store.mjs",
+          "target": "storage/src/draft-store.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "ui/src/main.mjs",
+          "specifier": "../../storage/src/autosave.mjs",
+          "target": "storage/src/autosave.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        },
+        {
+          "from": "ui/src/main.mjs",
+          "specifier": "../../app/offline/browser/trust.mjs",
+          "target": "app/offline/browser/trust.mjs",
+          "kind": "browser-static",
+          "mapped": true
+        }
+      ]
+    },
+    "shortcutDocumentPackagedAndMatchesGit": true,
+    "manualArchiveAndRuntimeCopiesMatchGit": true,
+    "archiveOnlyInstructions": {
+      "sha256": "18411604dc6ece8651630dabddb0f4df8ca206addcaae3cc94e9ff4314830964",
+      "generatedFromFixedPackager": "app/offline/evidence/shortcuts-package-r3-2026-10-28/package-archives.py",
+      "packagerSHA256": "407993b6b8c76e08759d41c02a7739891b2e3ee598a8b1a7fbd3ceee812acbd8",
+      "versionBundleAndLimitsChecked": true,
+      "notAnExactCopyOfRootUpdateDocument": true
+    },
+    "publicCertificate": {
+      "singleRemovableRootPayload": true,
+      "certificateMatchesEmbedded": true,
+      "containsPrivateKey": false,
+      "ca": true,
+      "validFrom": "Oct 26 01:24:59 2026 GMT",
+      "validTo": "Nov  2 01:29:59 2026 GMT"
+    },
+    "buildMetadata": {
+      "sourceBaseRevision": "c14478a49a06705cffbb536bf1bae9b4400a0e91",
+      "note": "Original build base is metadata from packaging time. All source-backed payload bytes were independently bound above to the requested final40a079b commit."
+    },
+    "extraction": {
+      "siteRoot": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\.local\\final-v045-r3\\site",
+      "entryPath": "/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/index.html"
+    },
+    "limits": {
+      "browserTested": false,
+      "offlineColdStartTested": false,
+      "ipadTested": false,
+      "distributionLicenseCleared": false
+    },
+    "newConfirmedDefects": [],
+    "result": "Archive and exact fixed-code resource binding passed; browser/offline/iPad evidence remains separate"
+  },
+  "history": {
+    "schemaVersion": 1,
+    "recordedAt": "2026-10-28T09:02:06.625Z",
+    "testedRevision": "40a079ba2065384572f268e4bb91bda437e46cec",
+    "allCommandsPassed": true,
+    "commandsExitZero": 4,
+    "manifests": 51,
+    "references": 987,
+    "uniqueTargets": 858,
+    "lengthAndSHA256": 970,
+    "SHA256Only": 17,
+    "referenceGitBlobMatches": 987,
+    "manifestRawGitMatches": 50,
+    "normalizedManifestMatches": [
+      {
+        "manifest": "tests/evidence/SHA256SUMS.json",
+        "attributes": "tests/evidence/SHA256SUMS.json: text: auto\ntests/evidence/SHA256SUMS.json: eol: lf",
+        "note": "Index LF/worktree CRLF under declared text=auto/eol=lf; no tracked change."
+      }
+    ],
+    "retainedHistoricalAliasChecks": [
+      {
+        "manifest": "tests/evidence/integrated-v0.3.0-2026-10-25/initial-SHA256SUMS.json",
+        "original": "tests/evidence/integrated-v0.3.0-2026-10-25/summary.json",
+        "retainedAlias": "tests/evidence/integrated-v0.3.0-2026-10-25/initial-summary.json",
+        "expectedByteLength": 17856,
+        "expectedSHA256": "dc72d82a2fe0184061bfca8fb26b70228c22bcd41e68ab0d5b12e2ec13239160",
+        "note": "Existing historical summary preserved as initial-summary.json; current summary covered by current SHA256SUMS.json."
+      }
+    ],
+    "testsManifests": 16,
+    "testsReferences": 432,
+    "recentRoundFiles": {
+      "parallel": 58,
+      "floating": 22,
+      "clipboard": 19
+    },
+    "oldEvidenceModified": false,
+    "currentFinalDirectorySealed": false,
+    "notes": [
+      "All writes in this rerun are exclusive wx files inside this new history directory; the audit script itself only reads old evidence.",
+      "The earlier exploratory stdin verifier initially assumed byteLength in every manifest and the pre-rename summary path; those were verifier assumptions. This archived rerun handles hash-only entries and the explicitly preserved historical alias without modifying old manifests.",
+      "SHA256Only records have no length field, so no recorded-length claim is made for those17 entries."
+    ]
+  },
+  "finalChecks": {
+    "testedRevision": "40a079ba2065384572f268e4bb91bda437e46cec",
+    "recordedAt": "2026-10-28T09:02:52.967Z",
+    "results": [
+      {
+        "id": "check",
+        "command": "cmd.exe",
+        "args": [
+          "/d",
+          "/s",
+          "/c",
+          "npm.cmd run check"
+        ],
+        "startedAt": "2026-10-28T09:02:49.074Z",
+        "finishedAt": "2026-10-28T09:02:51.660Z",
+        "exitCode": 0,
+        "stdoutSHA256": "ba4ce463e7223dadae91b177323ca943d924952caaa1f0c2ed644973df9aae5a",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "id": "test",
+        "command": "cmd.exe",
+        "args": [
+          "/d",
+          "/s",
+          "/c",
+          "npm.cmd test"
+        ],
+        "startedAt": "2026-10-28T09:02:51.661Z",
+        "finishedAt": "2026-10-28T09:02:52.614Z",
+        "exitCode": 0,
+        "stdoutSHA256": "541a438bd3be9cdd913d44a9c1d316b71ff2eb78b762a3a684ab2e6805f845a2",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "id": "fixture-host-syntax",
+        "command": "C:\\Program Files\\nodejs\\node.exe",
+        "args": [
+          "--check",
+          "tests/offline-browser-host.mjs"
+        ],
+        "startedAt": "2026-10-28T09:02:52.614Z",
+        "finishedAt": "2026-10-28T09:02:52.727Z",
+        "exitCode": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "id": "diff-check",
+        "command": "git",
+        "args": [
+          "-c",
+          "safe.directory=C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+          "diff",
+          "--check"
+        ],
+        "startedAt": "2026-10-28T09:02:52.727Z",
+        "finishedAt": "2026-10-28T09:02:52.852Z",
+        "exitCode": 0,
+        "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderrSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "productDiffFromTarget": ""
+  },
+  "report": "docs/validation/final-person05-v0.4.5-2026-10-28.md",
+  "closure": {
+    "REV001": "Two actual desktop cache faults only: index missing and current-completed-cache trust module corrupt",
+    "REV006": "Fixed final combination; tested independent Watch expression scope",
+    "REV007": "Fixed final combination; tested NaN/short circuit scope",
+    "REV008": "Fixed final combination; controlled concurrent UI semantics only"
+  },
+  "pending": [
+    "actual iPad full offline new-code compile/debug",
+    "iPad Safari UI/physical keyboard/touch/Chinese/background",
+    "installation/upgrade/eviction/quota/forced termination",
+    "strong draft reliability",
+    "G2",
+    "G3"
+  ],
+  "preserved": "All prior failures, tags and archives remain unchanged. First21:20pass1fail plus VAL002 remain two historical defects."
+}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>5号离线缓存故障夹具</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;max-width:1000px;margin:24px auto;padding:0 16px;color:#172b23;background:#f3f5f1}h1{font-size:24px}section{background:white;border:1px solid #b7c3b9;padding:16px;margin:16px 0;border-radius:8px}label{display:block;margin:10px 0}select,button{font:inherit;padding:8px;max-width:100%}button{margin:5px 6px 5px 0}pre{overflow-wrap:anywhere;white-space:pre-wrap;background:#edf2ed;padding:12px;font-size:13px}#status{font-weight:600}code{overflow-wrap:anywhere}button[data-fault]{border:2px solid #a34b31}table{border-collapse:collapse;width:100%}td,th{border:1px solid #becabd;padding:5px;text-align:left;overflow-wrap:anywhere}
+</style>
+<main>
+<h1>5号离线缓存故障夹具</h1>
+<p>这是独立测试页面。仅能检查和修改当前 localhost 测试来源中 <code>ipad-web-probe-eb5236b6ed8f9aab4a9d9ced</code> 的四个启动缓存条目。产品文件、其他来源、其他版本、草稿及调试器均不由本页改动。</p>
+<p>本页位于版本作用域之外；已加载后停止静态服务器，按钮仍可操作浏览器的真实 Cache API。所有修改由下方可见按钮明确触发；本页不会联网下载或主动修复应用。</p>
+<section>
+<label>本版本缓存 <select id="cache" aria-label="本版本缓存"></select></label>
+<label>启动资源 <select id="entry" aria-label="启动资源"><option value="index.html">index.html</option><option value="launcher.mjs">launcher.mjs</option><option value="app/offline/browser/trust.mjs">app/offline/browser/trust.mjs</option><option value="bundle.json">bundle.json</option></select></label>
+<button id="refresh">刷新缓存状态</button>
+<button id="remove" data-fault>删除选定缓存资源</button>
+<button id="corrupt" data-fault>篡改选定缓存资源</button>
+<button id="restore">恢复本页备份的选定资源</button>
+<p id="status" role="status">正在只读列举缓存…</p>
+<p>备份仅保留在本测试页内存中；刷新或关闭本页后不再可用。删除/篡改前保留原响应副本，恢复按钮只回写这一副本。</p>
+</section>
+<section><h2>实际缓存状态</h2><pre id="snapshot">尚未读取</pre></section>
+<section><h2>本页操作记录</h2><pre id="events">[]</pre></section>
+</main>
+<script>
+'use strict';
+const BUNDLE='ipad-web-probe-eb5236b6ed8f9aab4a9d9ced';
+const EXPECTED_TEST_PORT='__PERSON05_TEST_PORT__';
+const PREFIX='ipad-debugger-offline:'+BUNDLE+':';
+const paths=['index.html','launcher.mjs','app/offline/browser/trust.mjs','bundle.json'];
+const base=location.origin+'/releases/'+BUNDLE+'/';
+const get=id=>document.getElementById(id);
+const backups=new Map(),events=[];
+let busy=false;
+function supported(){
+ if(location.protocol!=='http:'||location.hostname!=='127.0.0.1'||location.port!==EXPECTED_TEST_PORT||location.pathname!=='/_person05/cache-control.html')throw Error('夹具只允许固定 localhost 端口及测试路径');
+ if(!isSecureContext||!globalThis.caches||!crypto.subtle)throw Error('需要可信 localhost 的 Cache API 与摘要接口');
+}
+async function digest(bytes){return 'sha256:'+Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),n=>n.toString(16).padStart(2,'0')).join('');}
+function log(action,data={}){events.push({at:new Date().toISOString(),action,...data});get('events').textContent=JSON.stringify(events,null,2);}
+async function cacheNames(){supported();return (await caches.keys()).filter(name=>name.startsWith(PREFIX));}
+function target(){
+ const path=get('entry').value;if(!paths.includes(path))throw Error('拒绝修改未列明的资源');
+ const name=get('cache').value;if(!name.startsWith(PREFIX))throw Error('请先准备并选择本版本缓存');
+ return {path,name,url:new URL(path,base).href,key:name+'\n'+new URL(path,base).href};
+}
+async function selected(){const info=target(),names=await cacheNames();if(!names.includes(info.name))throw Error('缓存已不存在，拒绝创建空缓存');return {...info,cache:await caches.open(info.name)};}
+async function snapshot(){
+ const names=await cacheNames(),old=get('cache').value;
+ get('cache').replaceChildren();
+ for(const name of [...names].reverse()){const option=document.createElement('option');option.value=name;option.textContent=name;get('cache').append(option);}
+ if(names.includes(old))get('cache').value=old;
+ const selection=get('cache').value;
+ if(!selection){get('snapshot').textContent=JSON.stringify({origin:location.origin,bundleId:BUNDLE,cacheNames:names,selected:null,resources:[]},null,2);return;}
+ const cache=await caches.open(selection),resources=[];
+ for(const path of paths){const url=new URL(path,base).href,response=await cache.match(url);
+  if(!response){resources.push({path,url,present:false,backupInThisPage:backups.has(selection+'\n'+url)});continue;}
+  const bytes=await response.clone().arrayBuffer();resources.push({path,url,present:true,status:response.status,byteLength:bytes.byteLength,sha256:await digest(bytes),backupInThisPage:backups.has(selection+'\n'+url)});
+ }
+ const markerResponse=await cache.match(new URL('__offline_complete__',base).href);let marker=null;
+ if(markerResponse){try{marker=await markerResponse.json();}catch{marker={error:'marker is not JSON'};}}
+ get('snapshot').textContent=JSON.stringify({origin:location.origin,bundleId:BUNDLE,cacheNames:names,selected:selection,marker,resources},null,2);
+}
+function disable(value){busy=value;for(const button of document.querySelectorAll('button'))button.disabled=value;get('cache').disabled=value;get('entry').disabled=value;}
+async function perform(action,operation){if(busy)return;disable(true);try{supported();const details=await operation();log(action,{ok:true,...details});await snapshot();get('status').textContent=action+'：完成';}catch(error){log(action,{ok:false,error:error.message});get('status').textContent=action+'：'+error.message;}finally{disable(false);}}
+get('refresh').onclick=()=>perform('刷新缓存状态',async()=>({readOnly:true}));
+get('cache').onchange=()=>perform('选择缓存并检查',async()=>({name:get('cache').value,readOnly:true}));
+get('remove').onclick=()=>perform('删除选定缓存资源',async()=>{
+ const t=await selected(),response=await t.cache.match(t.url);
+ if(response&&!backups.has(t.key))backups.set(t.key,response.clone());
+ const result=await t.cache.delete(t.url);return {cache:t.name,path:t.path,url:t.url,deleted:result,backupInThisPage:backups.has(t.key)};
+});
+get('corrupt').onclick=()=>perform('篡改选定缓存资源',async()=>{
+ const t=await selected(),response=await t.cache.match(t.url);if(!response)throw Error('资源缺失；请先恢复或重新准备后再执行篡改');
+ if(!backups.has(t.key))backups.set(t.key,response.clone());
+ const body='PERSON05 INTENTIONAL STARTUP CACHE CORRUPTION\n';
+ await t.cache.put(t.url,new Response(body,{status:200,headers:{'Content-Type':response.headers.get('content-type')||'text/plain; charset=utf-8','Cache-Control':'no-store'}}));
+ return {cache:t.name,path:t.path,url:t.url,putCompleted:true,corruptByteLength:new TextEncoder().encode(body).length,corruptSHA256:await digest(new TextEncoder().encode(body)),backupInThisPage:true};
+});
+get('restore').onclick=()=>perform('恢复本页备份的选定资源',async()=>{
+ const t=await selected(),response=backups.get(t.key);if(!response)throw Error('本页没有这一缓存条目的原响应备份');
+ await t.cache.put(t.url,response.clone());return {cache:t.name,path:t.path,url:t.url,restored:true};
+});
+perform('首次只读检查',async()=>({readOnly:true}));
+</script>
+</html>
