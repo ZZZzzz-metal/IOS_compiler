@@ -1,0 +1,22 @@
+
+> ipad-offline-debugger@0.4.5 test
+> node --test contracts/checks/*.test.mjs
+
+✔ source hashes match fixed cross-language canonical vectors (6.3198ms)
+✔ source hashing is stable across BOM/CRLF and file order, but includes driver edits (0.4331ms)
+✔ source paths and malformed Unicode cannot create ambiguous snapshots (0.4863ms)
+✔ build identity rejects edited snapshots, changed runtime versions and missing debug info (0.9486ms)
+✔ late sessions, duplicated events, sequence gaps and terminal events are rejected (0.2019ms)
+✔ variables cannot leak across pauses, stack frames or resumed execution (0.1449ms)
+✔ complete synthetic bundle validates bytes; this is not an offline product test (0.3447ms)
+✔ empty, partial, corrupted or mismatched bundles never become ready (0.4124ms)
+✔ a bundle cannot impersonate a compatible resource set by copying its compatibilityId (0.2708ms)
+✔ starting requires matching identities, initial breakpoint configuration and actual artifact bytes (0.4615ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 114.7688

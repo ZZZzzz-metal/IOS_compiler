@@ -1,0 +1,77 @@
+{
+  "scope": "Real desktop IAB stopped-loopback service. r2 later superseded; not physical iPad or hardware keyboard test.",
+  "checks": [
+    {
+      "name": "r2-standard-digit-disabled",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "status": "可编译运行或启动调试。"
+    },
+    {
+      "name": "r2-standard-breakpoint8",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "status": "可编译运行或启动调试。"
+    },
+    {
+      "name": "r2-standard-entry7",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "status": "已暂停 · main.cpp:7:1"
+    },
+    {
+      "name": "r2-standard-breakpoint8-set",
+      "output": "KEY045=5\n",
+      "scheme": "standard",
+      "status": "已结束"
+    },
+    {
+      "name": "r2-standard-call8",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "status": "已暂停 · main.cpp:8:1"
+    },
+    {
+      "name": "r2-standard-into3",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "status": "已暂停 · main.cpp:3:1"
+    },
+    {
+      "name": "r2-standard-over4",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "status": "已暂停 · main.cpp:4:1"
+    },
+    {
+      "name": "r2-standard-out8",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "status": "已暂停 · main.cpp:8:1"
+    },
+    {
+      "name": "r2-standard-result9",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "status": "已暂停 · main.cpp:9:1"
+    },
+    {
+      "name": "r2-standard-exit",
+      "output": "KEY045=5\n",
+      "scheme": "standard",
+      "status": "已结束"
+    },
+    {
+      "name": "r2-standard-run-exit",
+      "output": "KEY045=5\n",
+      "scheme": "standard",
+      "status": "已结束"
+    },
+    {
+      "name": "r2-standard-stop",
+      "output": "尚无输出",
+      "scheme": "standard",
+      "status": "已结束"
+    }
+  ]
+}

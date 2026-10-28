@@ -1,0 +1,152 @@
+[
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/.gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/archives-audit.json",
+    "byteLength": 4913,
+    "sha256": "afde273d9ae57ec4dbd3d8fa6c2306601272cb1db458a8efa631fcb3832a5dba"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/archives-r2-audit.json",
+    "byteLength": 5891,
+    "sha256": "4098ec331039e1b600784c1ad69d0b053fc6f109960cf6633dbd052df4c29a68"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/archives-r3-audit.json",
+    "byteLength": 6664,
+    "sha256": "1e693910917d58b391938d3df7d46d0ba56b7354f0e49d1b0da19730cdaca9ca"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/audit-archives-r2.py",
+    "byteLength": 7252,
+    "sha256": "faba7c556cbf338860260334b64843498795e49cc552b5a0bef4079fe6bf76ac"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/audit-archives-r3.py",
+    "byteLength": 8320,
+    "sha256": "1b479d84b5b7303b6f614386c17e34550ecacf9ce0fabb421c8bf36ab546ce03"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/audit-archives.py",
+    "byteLength": 6111,
+    "sha256": "dd5fb93c870592a9e2d9750f1d0d50a3572ba4cefcb19697b187d7c1e3b6a8f8"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/audit-delivery.mjs",
+    "byteLength": 5648,
+    "sha256": "2e9fbb49fea465fa8001fb431cacebdc722ffcf661522d1d5bcabd9bc8abd116"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/audit-photo-exclusion.mjs",
+    "byteLength": 1986,
+    "sha256": "31c516cd08b1e79fb745d5ebeb949c0648d7438cdb49f5266befb57f30353729"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/candidate-status.json",
+    "byteLength": 986,
+    "sha256": "8f4ba001b600a865d55cdc91ce4f93c25499a09351125515c095fbff0334c479"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/delivery-and-checks-audit.json",
+    "byteLength": 10291,
+    "sha256": "eeff7504c3f028e5c133dc45e98c2b6307dd63db94c4c565f8219ba2ed81b7d8"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/delivery-manifest-targets.json",
+    "byteLength": 7606,
+    "sha256": "94e7987a7b9383454139de6b43db76aa2daf36360ceb9d4ae6b27c9f81e55c36"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-audit.json",
+    "byteLength": 26044,
+    "sha256": "8e904183a5bd3b83f19935b24f38bec112980e52464fb6ae0045309a407104fc"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-audit.md",
+    "byteLength": 1848,
+    "sha256": "1f9562bd13d487490c1eadc6ec948b953351cfc473e831b6aa55208a5ac102b9"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-audit.mjs",
+    "byteLength": 10493,
+    "sha256": "12eb5cd2d7caaa8692eac479680aef41b43ad0528a6fa2b1e8848e37da4db754"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-files.json",
+    "byteLength": 186211,
+    "sha256": "b3194abbc7028f9671851ebe18a16ef58885c26437f4c2a69d8de46c31da683b"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-final-audit.json",
+    "byteLength": 27077,
+    "sha256": "f362b93404f150b76233a2db73d6fea45ad9dbf456055be91366fd826b62f791"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-final-audit.md",
+    "byteLength": 1882,
+    "sha256": "a20f0aad137edbaeca10146c7c400baabdd0e70fce70ec966d8a0b6c765a7a14"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-final-audit.mjs",
+    "byteLength": 10567,
+    "sha256": "cc397d5f59a0de6227b34931f859f92250733a39d7e4f6e57768ba6f16ebe822"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-final-files.json",
+    "byteLength": 245505,
+    "sha256": "c834d080f8958c73892de2fc73e5a0d71d2b8261b6a2d657d925cc088ad20288"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-r3-audit.json",
+    "byteLength": 26199,
+    "sha256": "600de1fff01a19ccd8fef3fcf836deaa33c816bbd4ecb93f1e8180e6a5321d51"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-r3-audit.md",
+    "byteLength": 1876,
+    "sha256": "26d883adc73d31edbf862f6696a883220e7aba6a12815eb1beba80513d986896"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-r3-audit.mjs",
+    "byteLength": 10543,
+    "sha256": "e8ddb4931a856f58c20406720694a5956514a1452ae2572c5771fb98d6c67735"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-r3-files.json",
+    "byteLength": 218327,
+    "sha256": "6e1e6e8a6588cb069fe3f8e177b57d552b9606bda09559f4e84e46a42943a067"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/initial-pattern-finding.json",
+    "byteLength": 440,
+    "sha256": "6bbdc964cdab2942645301ed0687b911222561d399fc21f4f831c5783010df6f"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/integrated-251-raw-audit.json",
+    "byteLength": 1074,
+    "sha256": "0ffa42bd713cc73b9118de3c8906a45effe454aa6f26c5d74f0e9dc5277f9151"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/photo-exclusion.json",
+    "byteLength": 542,
+    "sha256": "1883dfcb0b547d045bace717a8549edab205fcc63839ddc424c72c31c4f33c68"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/r2-ignore-checks.json",
+    "byteLength": 566,
+    "sha256": "0debafd1e09ae58297c4e42d4d465c7986ab62660d9de171a4a4ccde8f9790f5"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/r3-ignore-checks.json",
+    "byteLength": 566,
+    "sha256": "3fc46992d306349e089053b65aa8919c4d6678fb5252309c8bde67cdcc705bba"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-audit-2026-10-28/README.md",
+    "byteLength": 4643,
+    "sha256": "22035a1ace75932f4b7c0581f56113d742aab8b0dbbb1465b745103398415cce"
+  }
+]

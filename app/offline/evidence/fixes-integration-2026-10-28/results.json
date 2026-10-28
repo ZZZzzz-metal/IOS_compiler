@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "finalizedAt": "2026-10-28T04:43:33.178Z",
+  "revision": "c14478a49a06705cffbb536bf1bae9b4400a0e91",
+  "node": "v24.19.0",
+  "originalRunner": {
+    "path": "run-checks.mjs",
+    "outcome": "summary-harness-failure",
+    "explanation": "harness-failure.txt"
+  },
+  "recoveredCombined": {
+    "raw": "combined.stdout.txt",
+    "counts": {
+      "tests": 251,
+      "pass": 251,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "childExitCode": 0,
+    "childExitCodeEvidence": "Inferred from original runner control flow reaching and writing both following npm jobs; original metadata was not serialized.",
+    "rerun": false,
+    "distribution": {
+      "contracts": 10,
+      "compiler": 27,
+      "debugger": 83,
+      "uiAndStorage": 106,
+      "integration": 3,
+      "offline": 22
+    }
+  },
+  "originalNpmTest": {
+    "raw": "npm-test.stdout.txt",
+    "counts": {
+      "tests": 10,
+      "pass": 10,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    }
+  },
+  "commands": [
+    {
+      "name": "final-npm-check",
+      "command": [
+        "cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "startedAt": "2026-10-28T04:43:30.357Z",
+      "finishedAt": "2026-10-28T04:43:32.307Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "counts": null
+    },
+    {
+      "name": "final-npm-test",
+      "command": [
+        "cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "startedAt": "2026-10-28T04:43:32.307Z",
+      "finishedAt": "2026-10-28T04:43:33.174Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "counts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    }
+  ],
+  "sourceInputs": [
+    {
+      "path": "app/offline/build.mjs",
+      "byteLength": 8926,
+      "sha256": "1512214a098613e295ac9a4bbe7c423b40832b15038b1fc3892a9f51c1e50239"
+    },
+    {
+      "path": "app/main.mjs",
+      "byteLength": 2853,
+      "sha256": "b90599190720e1b0198189b36828e014b88063c6452821f8f487a9ee0db6dd36"
+    },
+    {
+      "path": "package.json",
+      "byteLength": 1862,
+      "sha256": "847e64d88f108bf57ea55dbf76f41f70da0c615151b47fb9d96ccba4e0e56083"
+    },
+    {
+      "path": "ui/src/main.mjs",
+      "byteLength": 33093,
+      "sha256": "ff34c70433827b17ab4e1d25db03b71c922d27e1132b12841ab7cabb2fac4b40"
+    },
+    {
+      "path": "ui/src/editor.mjs",
+      "byteLength": 5372,
+      "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+    },
+    {
+      "path": "debugger/src/variables.mjs",
+      "byteLength": 44150,
+      "sha256": "9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e"
+    },
+    {
+      "path": "debugger/src/wasm-runtime.mjs",
+      "byteLength": 49143,
+      "sha256": "8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    }
+  ],
+  "sourceInputsBeforeMandatory": [
+    {
+      "path": "app/offline/build.mjs",
+      "byteLength": 8926,
+      "sha256": "1512214a098613e295ac9a4bbe7c423b40832b15038b1fc3892a9f51c1e50239"
+    },
+    {
+      "path": "app/main.mjs",
+      "byteLength": 2853,
+      "sha256": "b90599190720e1b0198189b36828e014b88063c6452821f8f487a9ee0db6dd36"
+    },
+    {
+      "path": "package.json",
+      "byteLength": 1862,
+      "sha256": "847e64d88f108bf57ea55dbf76f41f70da0c615151b47fb9d96ccba4e0e56083"
+    },
+    {
+      "path": "ui/src/main.mjs",
+      "byteLength": 33093,
+      "sha256": "ff34c70433827b17ab4e1d25db03b71c922d27e1132b12841ab7cabb2fac4b40"
+    },
+    {
+      "path": "ui/src/editor.mjs",
+      "byteLength": 5372,
+      "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+    },
+    {
+      "path": "debugger/src/variables.mjs",
+      "byteLength": 44150,
+      "sha256": "9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e"
+    },
+    {
+      "path": "debugger/src/wasm-runtime.mjs",
+      "byteLength": 49143,
+      "sha256": "8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    }
+  ],
+  "preservedOriginals": [
+    {
+      "path": "run-checks.mjs",
+      "byteLength": 2218,
+      "sha256": "02ae7e58621f263e225a9a6c183ff1ea68deb913ca3d1336e7ae1c70d8a52553",
+      "modifiedAt": "2026-10-28T04:39:24.309Z"
+    },
+    {
+      "path": "combined.stdout.txt",
+      "byteLength": 58899,
+      "sha256": "781bee54fd5690455d956b1ba23cc6c4080c570c0f06cbc356d05c0ebf21a714",
+      "modifiedAt": "2026-10-28T04:40:19.255Z"
+    },
+    {
+      "path": "combined.stderr.txt",
+      "byteLength": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modifiedAt": "2026-10-28T04:40:19.256Z"
+    },
+    {
+      "path": "npm-check.stdout.txt",
+      "byteLength": 349,
+      "sha256": "ba4ce463e7223dadae91b177323ca943d924952caaa1f0c2ed644973df9aae5a",
+      "modifiedAt": "2026-10-28T04:40:21.171Z"
+    },
+    {
+      "path": "npm-check.stderr.txt",
+      "byteLength": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modifiedAt": "2026-10-28T04:40:21.172Z"
+    },
+    {
+      "path": "npm-test.stdout.txt",
+      "byteLength": 1125,
+      "sha256": "65c4ebb1cff02f48199f0f67b7a4bf1b485d0962414f6e1f0230a6d1f1b2508d",
+      "modifiedAt": "2026-10-28T04:40:22.138Z"
+    },
+    {
+      "path": "npm-test.stderr.txt",
+      "byteLength": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "modifiedAt": "2026-10-28T04:40:22.139Z"
+    }
+  ],
+  "sourceFingerprintScope": "Captured at recovery and around fresh mandatory checks, not retroactive fingerprints of the original combined run. The main agent reports only Chinese delivery wording changed in app/main.mjs after that run.",
+  "scope": "251 root integrated tests passed in preserved raw TAP. Fresh npm test 10 is already included in that suite and is not added. Prior 121/14 belong to the earlier 3248ad5 phase. Does not replace person 05 independent acceptance or real iPad testing."
+}

@@ -1,0 +1,736 @@
+TAP version 13
+# Subtest: integrated C++17 build preserves breakpoints, all steps, live variables and recursive frames
+ok 1 - integrated C++17 build preserves breakpoints, all steps, live variables and recursive frames
+  ---
+  duration_ms: 2046.407
+  type: 'test'
+  ...
+# Subtest: integrated C11 build consumes stdin and prints values read from real memory
+ok 2 - integrated C11 build consumes stdin and prints values read from real memory
+  ---
+  duration_ms: 767.6454
+  type: 'test'
+  ...
+# Subtest: stopping a compiled infinite loop permits a new source build and new Worker session
+ok 3 - stopping a compiled infinite loop permits a new source build and new Worker session
+  ---
+  duration_ms: 1063.7984
+  type: 'test'
+  ...
+# Subtest: complete installation serves navigation and engine with no network after disconnect
+ok 4 - complete installation serves navigation and engine with no network after disconnect
+  ---
+  duration_ms: 37.4088
+  type: 'test'
+  ...
+# Subtest: wrong bytes never commits a partial cache or removes the previous version
+ok 5 - wrong bytes never commits a partial cache or removes the previous version
+  ---
+  duration_ms: 8.1652
+  type: 'test'
+  ...
+# Subtest: network interrupted never commits a partial cache or removes the previous version
+ok 6 - network interrupted never commits a partial cache or removes the previous version
+  ---
+  duration_ms: 6.6663
+  type: 'test'
+  ...
+# Subtest: HTTP failure never commits a partial cache or removes the previous version
+ok 7 - HTTP failure never commits a partial cache or removes the previous version
+  ---
+  duration_ms: 5.9154
+  type: 'test'
+  ...
+# Subtest: new complete version preserves old version and unrelated caches
+ok 8 - new complete version preserves old version and unrelated caches
+  ---
+  duration_ms: 9.8991
+  type: 'test'
+  ...
+# Subtest: unknown files and evicted files return 503 without network repair
+ok 9 - unknown files and evicted files return 503 without network repair
+  ---
+  duration_ms: 4.1522
+  type: 'test'
+  ...
+# Subtest: cached corruption and descriptor corruption fail the full startup check
+ok 10 - cached corruption and descriptor corruption fail the full startup check
+  ---
+  duration_ms: 10.269
+  type: 'test'
+  ...
+# Subtest: explicit prepare repairs corruption through a new full transaction and preserves old cache
+ok 11 - explicit prepare repairs corruption through a new full transaction and preserves old cache
+  ---
+  duration_ms: 6.4121
+  type: 'test'
+  ...
+# Subtest: failed explicit repair retains the previous complete package
+ok 12 - failed explicit repair retains the previous complete package
+  ---
+  duration_ms: 4.9636
+  type: 'test'
+  ...
+# Subtest: missing launcher navigation supplies a local recovery page without fetching network resources
+ok 13 - missing launcher navigation supplies a local recovery page without fetching network resources
+  ---
+  duration_ms: 5.5282
+  type: 'test'
+  ...
+# Subtest: explicit prepare rejects an open workbench and non-launcher callers before any network
+ok 14 - explicit prepare rejects an open workbench and non-launcher callers before any network
+  ---
+  duration_ms: 3.086
+  type: 'test'
+  ...
+# Subtest: missing startup resource index.html opens local repair before launcher execution
+ok 15 - missing startup resource index.html opens local repair before launcher execution
+  ---
+  duration_ms: 7.9397
+  type: 'test'
+  ...
+# Subtest: corrupt startup resource index.html opens local repair before launcher execution
+ok 16 - corrupt startup resource index.html opens local repair before launcher execution
+  ---
+  duration_ms: 7.7066
+  type: 'test'
+  ...
+# Subtest: missing startup resource launcher.mjs opens local repair before launcher execution
+ok 17 - missing startup resource launcher.mjs opens local repair before launcher execution
+  ---
+  duration_ms: 9.3509
+  type: 'test'
+  ...
+# Subtest: corrupt startup resource launcher.mjs opens local repair before launcher execution
+ok 18 - corrupt startup resource launcher.mjs opens local repair before launcher execution
+  ---
+  duration_ms: 6.5027
+  type: 'test'
+  ...
+# Subtest: missing startup resource app/offline/browser/trust.mjs opens local repair before launcher execution
+ok 19 - missing startup resource app/offline/browser/trust.mjs opens local repair before launcher execution
+  ---
+  duration_ms: 10.0821
+  type: 'test'
+  ...
+# Subtest: corrupt startup resource app/offline/browser/trust.mjs opens local repair before launcher execution
+ok 20 - corrupt startup resource app/offline/browser/trust.mjs opens local repair before launcher execution
+  ---
+  duration_ms: 5.8305
+  type: 'test'
+  ...
+# Subtest: missing startup resource bundle.json opens local repair before launcher execution
+ok 21 - missing startup resource bundle.json opens local repair before launcher execution
+  ---
+  duration_ms: 7.2849
+  type: 'test'
+  ...
+# Subtest: corrupt startup resource bundle.json opens local repair before launcher execution
+ok 22 - corrupt startup resource bundle.json opens local repair before launcher execution
+  ---
+  duration_ms: 7.4834
+  type: 'test'
+  ...
+# Subtest: a new workbench opened during repair prevents cache commit
+ok 23 - a new workbench opened during repair prevents cache commit
+  ---
+  duration_ms: 5.5155
+  type: 'test'
+  ...
+# Subtest: ordinary development entry works without a covering worker; foreign covering worker stays rejected
+ok 24 - ordinary development entry works without a covering worker; foreign covering worker stays rejected
+  ---
+  duration_ms: 2.5662
+  type: 'test'
+  ...
+# Subtest: workbench trust checks bundle scope and component identity after the worker handshake
+ok 25 - workbench trust checks bundle scope and component identity after the worker handshake
+  ---
+  duration_ms: 4.7137
+  type: 'test'
+  ...
+# Subtest: source hashes match fixed cross-language canonical vectors
+ok 26 - source hashes match fixed cross-language canonical vectors
+  ---
+  duration_ms: 6.4454
+  type: 'test'
+  ...
+# Subtest: source hashing is stable across BOM/CRLF and file order, but includes driver edits
+ok 27 - source hashing is stable across BOM/CRLF and file order, but includes driver edits
+  ---
+  duration_ms: 0.6521
+  type: 'test'
+  ...
+# Subtest: source paths and malformed Unicode cannot create ambiguous snapshots
+ok 28 - source paths and malformed Unicode cannot create ambiguous snapshots
+  ---
+  duration_ms: 0.3422
+  type: 'test'
+  ...
+# Subtest: build identity rejects edited snapshots, changed runtime versions and missing debug info
+ok 29 - build identity rejects edited snapshots, changed runtime versions and missing debug info
+  ---
+  duration_ms: 1.1544
+  type: 'test'
+  ...
+# Subtest: late sessions, duplicated events, sequence gaps and terminal events are rejected
+ok 30 - late sessions, duplicated events, sequence gaps and terminal events are rejected
+  ---
+  duration_ms: 0.1979
+  type: 'test'
+  ...
+# Subtest: variables cannot leak across pauses, stack frames or resumed execution
+ok 31 - variables cannot leak across pauses, stack frames or resumed execution
+  ---
+  duration_ms: 0.1411
+  type: 'test'
+  ...
+# Subtest: complete synthetic bundle validates bytes; this is not an offline product test
+ok 32 - complete synthetic bundle validates bytes; this is not an offline product test
+  ---
+  duration_ms: 0.3883
+  type: 'test'
+  ...
+# Subtest: empty, partial, corrupted or mismatched bundles never become ready
+ok 33 - empty, partial, corrupted or mismatched bundles never become ready
+  ---
+  duration_ms: 0.658
+  type: 'test'
+  ...
+# Subtest: a bundle cannot impersonate a compatible resource set by copying its compatibilityId
+ok 34 - a bundle cannot impersonate a compatible resource set by copying its compatibilityId
+  ---
+  duration_ms: 0.4287
+  type: 'test'
+  ...
+# Subtest: starting requires matching identities, initial breakpoint configuration and actual artifact bytes
+ok 35 - starting requires matching identities, initial breakpoint configuration and actual artifact bytes
+  ---
+  duration_ms: 0.5746
+  type: 'test'
+  ...
+# Subtest: source export preserves exact user bytes while project export round-trips driver and stdin
+ok 36 - source export preserves exact user bytes while project export round-trips driver and stdin
+  ---
+  duration_ms: 4.2321
+  type: 'test'
+  ...
+# Subtest: invalid or unsupported project imports fail without invoking storage
+ok 37 - invalid or unsupported project imports fail without invoking storage
+  ---
+  duration_ms: 0.5375
+  type: 'test'
+  ...
+# Subtest: unavailable local storage returns an explicit failure
+ok 38 - unavailable local storage returns an explicit failure
+  ---
+  duration_ms: 0.2691
+  type: 'test'
+  ...
+# Subtest: autosave serializes writes and coalesces typing during a slow save
+ok 39 - autosave serializes writes and coalesces typing during a slow save
+  ---
+  duration_ms: 0.6109
+  type: 'test'
+  ...
+# Subtest: failed in-flight save retains the latest edit for an explicit retry
+ok 40 - failed in-flight save retains the latest edit for an explicit retry
+  ---
+  duration_ms: 0.3113
+  type: 'test'
+  ...
+# Subtest: a failed restore cannot silently create a new draft over unread local data
+ok 41 - a failed restore cannot silently create a new draft over unread local data
+  ---
+  duration_ms: 0.1691
+  type: 'test'
+  ...
+# Subtest: VAL-004: deleting draft requests cannot hide an existing snapshot binding
+ok 42 - VAL-004: deleting draft requests cannot hide an existing snapshot binding
+  ---
+  duration_ms: 1.7573
+  type: 'test'
+  ...
+# Subtest: new dirty-draft requests stay separate from the old snapshot collection
+ok 43 - new dirty-draft requests stay separate from the old snapshot collection
+  ---
+  duration_ms: 0.2919
+  type: 'test'
+  ...
+# Subtest: editable binding status is associated only with both matching source and session
+ok 44 - editable binding status is associated only with both matching source and session
+  ---
+  duration_ms: 0.5087
+  type: 'test'
+  ...
+# Subtest: a snapshot from a different or absent session cannot inherit its bindings
+ok 45 - a snapshot from a different or absent session cannot inherit its bindings
+  ---
+  duration_ms: 0.1569
+  type: 'test'
+  ...
+# Subtest: snapshot remains read-only even while draft source bytes still match
+ok 46 - snapshot remains read-only even while draft source bytes still match
+  ---
+  duration_ms: 0.1262
+  type: 'test'
+  ...
+# Subtest: snapshot preserves pending, invalid reasons, and all relocated actual positions
+ok 47 - snapshot preserves pending, invalid reasons, and all relocated actual positions
+  ---
+  duration_ms: 0.166
+  type: 'test'
+  ...
+# Subtest: user.inc and driver retain separate requested and actual source paths
+ok 48 - user.inc and driver retain separate requested and actual source paths
+  ---
+  duration_ms: 0.2101
+  type: 'test'
+  ...
+# Subtest: replacement bindings and an authoritative empty resync replace the selected snapshot collection
+ok 49 - replacement bindings and an authoritative empty resync replace the selected snapshot collection
+  ---
+  duration_ms: 0.1553
+  type: 'test'
+  ...
+# Subtest: display selection leaves input requests, reasons and actual arrays unchanged
+ok 50 - display selection leaves input requests, reasons and actual arrays unchanged
+  ---
+  duration_ms: 0.2425
+  type: 'test'
+  ...
+# Subtest: highlight escapes source markup and keeps multiline comments inside valid per-line spans
+ok 51 - highlight escapes source markup and keeps multiline comments inside valid per-line spans
+  ---
+  duration_ms: 1.3726
+  type: 'test'
+  ...
+# Subtest: indent at the beginning of an empty first line does not duplicate the newline
+ok 52 - indent at the beginning of an empty first line does not duplicate the newline
+  ---
+  duration_ms: 0.6875
+  type: 'test'
+  ...
+# Subtest: multiline indent and outdent exclude the line after a selected newline
+ok 53 - multiline indent and outdent exclude the line after a selected newline
+  ---
+  duration_ms: 0.2163
+  type: 'test'
+  ...
+# Subtest: REV-005: B finishing before A is the only import delivered to autosave
+ok 54 - REV-005: B finishing before A is the only import delivered to autosave
+  ---
+  duration_ms: 5.5521
+  type: 'test'
+  ...
+# Subtest: REV-005: obsolete A failure neither overwrites B feedback nor clears B selection
+ok 55 - REV-005: obsolete A failure neither overwrites B feedback nor clears B selection
+  ---
+  duration_ms: 1.3372
+  type: 'test'
+  ...
+# Subtest: REV-005: A success/finally cannot clear the file input while B is reading
+ok 56 - REV-005: A success/finally cannot clear the file input while B is reading
+  ---
+  duration_ms: 1.2429
+  type: 'test'
+  ...
+# Subtest: REV-005: a late A error does not replace feedback after B has completed
+ok 57 - REV-005: a late A error does not replace feedback after B has completed
+  ---
+  duration_ms: 1.4338
+  type: 'test'
+  ...
+# Subtest: REV-005: a late A read error cannot replace the actual newer B import error
+ok 58 - REV-005: a late A read error cannot replace the actual newer B import error
+  ---
+  duration_ms: 1.1692
+  type: 'test'
+  ...
+# Subtest: REV-005: a pending read rejection after editing preserves the newer operation's prompt
+ok 59 - REV-005: a pending read rejection after editing preserves the newer operation's prompt
+  ---
+  duration_ms: 1.1774
+  type: 'test'
+  ...
+# Subtest: REV-005: a pending read rejection after switching drafts preserves the newer operation's prompt
+ok 60 - REV-005: a pending read rejection after switching drafts preserves the newer operation's prompt
+  ---
+  duration_ms: 0.8597
+  type: 'test'
+  ...
+# Subtest: REV-005: a pending read rejection after starting recovery preserves the newer operation's prompt
+ok 61 - REV-005: a pending read rejection after starting recovery preserves the newer operation's prompt
+  ---
+  duration_ms: 1.0505
+  type: 'test'
+  ...
+# Subtest: REV-005: edits made while the file is reading survive and produce an explanatory prompt
+ok 62 - REV-005: edits made while the file is reading survive and produce an explanatory prompt
+  ---
+  duration_ms: 1.0195
+  type: 'test'
+  ...
+# Subtest: REV-005: real source, stdin and language handlers all increment the edit generation
+ok 63 - REV-005: real source, stdin and language handlers all increment the edit generation
+  ---
+  duration_ms: 0.9701
+  type: 'test'
+  ...
+# Subtest: REV-005: switching draft objects during a read never imports into the new draft
+ok 64 - REV-005: switching draft objects during a read never imports into the new draft
+  ---
+  duration_ms: 0.7009
+  type: 'test'
+  ...
+# Subtest: REV-005: replacing the same draft id still invalidates the old read by object identity
+ok 65 - REV-005: replacing the same draft id still invalidates the old read by object identity
+  ---
+  duration_ms: 0.7813
+  type: 'test'
+  ...
+# Subtest: REV-005: entering recovery while reading prevents import and saving
+ok 66 - REV-005: entering recovery while reading prevents import and saving
+  ---
+  duration_ms: 1.345
+  type: 'test'
+  ...
+# Subtest: REV-005: import requested during recovery is rejected without changing the draft
+ok 67 - REV-005: import requested during recovery is rejected without changing the draft
+  ---
+  duration_ms: 0.7078
+  type: 'test'
+  ...
+# Subtest: REV-005: the latest import error preserves source, driver, input and persisted draft
+ok 68 - REV-005: the latest import error preserves source, driver, input and persisted draft
+  ---
+  duration_ms: 0.6597
+  type: 'test'
+  ...
+# Subtest: REV-005: a normal C import updates the editor and is saved with the existing CAS revision
+ok 69 - REV-005: a normal C import updates the editor and is saved with the existing CAS revision
+  ---
+  duration_ms: 0.802
+  type: 'test'
+  ...
+# Subtest: REV-005: complete-project JSON imports driver/input but retains the local draft identity
+ok 70 - REV-005: complete-project JSON imports driver/input but retains the local draft identity
+  ---
+  duration_ms: 0.8825
+  type: 'test'
+  ...
+# Subtest: saved standard mode is restored; unknown, absent and denied settings fall back to Control alternatives
+ok 71 - saved standard mode is restored; unknown, absent and denied settings fall back to Control alternatives
+  ---
+  duration_ms: 17.6499
+  type: 'test'
+  ...
+# Subtest: changing a shortcut scheme persists it and immediately updates labels, ARIA and actual dispatch
+ok 72 - changing a shortcut scheme persists it and immediately updates labels, ARIA and actual dispatch
+  ---
+  duration_ms: 6.0951
+  type: 'test'
+  ...
+# Subtest: denied setting writes keep the selected scheme effective for this page and show the Chinese recovery hint
+ok 73 - denied setting writes keep the selected scheme effective for this page and show the Chinese recovery hint
+  ---
+  duration_ms: 3.6688
+  type: 'test'
+  ...
+# Subtest: standard keys and physical Control alternatives dispatch the actual main intents
+ok 74 - standard keys and physical Control alternatives dispatch the actual main intents
+  ---
+  duration_ms: 18.194
+  type: 'test'
+  ...
+# Subtest: F5 continues a paused session while the run key never recompiles an active session
+ok 75 - F5 continues a paused session while the run key never recompiles an active session
+  ---
+  duration_ms: 4.0864
+  type: 'test'
+  ...
+# Subtest: compile buttons and both keyboard entry modes share restoration, resource, recovery and active-session guards
+ok 76 - compile buttons and both keyboard entry modes share restoration, resource, recovery and active-session guards
+  ---
+  duration_ms: 22.2822
+  type: 'test'
+  ...
+# Subtest: step-out has its own action and capability gate and agrees with its rendered button
+ok 77 - step-out has its own action and capability gate and agrees with its rendered button
+  ---
+  duration_ms: 30.9975
+  type: 'test'
+  ...
+# Subtest: continue and each step also reject preparation, recovery, restoration and compilation ownership
+ok 78 - continue and each step also reject preparation, recovery, restoration and compilation ownership
+  ---
+  duration_ms: 19.5587
+  type: 'test'
+  ...
+# Subtest: unmapped extra modifiers and number-pad keys are neither consumed nor dispatched
+ok 79 - unmapped extra modifiers and number-pad keys are neither consumed nor dispatched
+  ---
+  duration_ms: 8.9345
+  type: 'test'
+  ...
+# Subtest: composition and handled events are ignored; recognized repeats are consumed without execution
+ok 80 - composition and handled events are ignored; recognized repeats are consumed without execution
+  ---
+  duration_ms: 16.5971
+  type: 'test'
+  ...
+# Subtest: other text fields and dialogs retain their keys; source and non-editable controls allow dispatch
+ok 81 - other text fields and dialogs retain their keys; source and non-editable controls allow dispatch
+  ---
+  duration_ms: 8.4645
+  type: 'test'
+  ...
+# Subtest: recovery and inert surfaces consume known keys without invoking actions
+ok 82 - recovery and inert surfaces consume known keys without invoking actions
+  ---
+  duration_ms: 2.5842
+  type: 'test'
+  ...
+# Subtest: F9 only changes editable source requests; dirty edits and snapshots leave old session bindings intact
+ok 83 - F9 only changes editable source requests; dirty edits and snapshots leave old session bindings intact
+  ---
+  duration_ms: 2.9605
+  type: 'test'
+  ...
+# Subtest: the actual prepare function blocks keyboard compilation until the controlled resource check succeeds
+ok 84 - the actual prepare function blocks keyboard compilation until the controlled resource check succeeds
+  ---
+  duration_ms: 2.6803
+  type: 'test'
+  ...
+# Subtest: keyboard stop cancels compiling once and a queued duplicate start cannot construct another compiler
+ok 85 - keyboard stop cancels compiling once and a queued duplicate start cannot construct another compiler
+  ---
+  duration_ms: 2.5078
+  type: 'test'
+  ...
+# Subtest: pending continue invalidates repeated actions immediately while stop bypasses its unresolved ACK
+ok 86 - pending continue invalidates repeated actions immediately while stop bypasses its unresolved ACK
+  ---
+  duration_ms: 1.6512
+  type: 'test'
+  ...
+# Subtest: pending startup blocks another start and allows independent stop before its ACK
+ok 87 - pending startup blocks another start and allows independent stop before its ACK
+  ---
+  duration_ms: 1.5033
+  type: 'test'
+  ...
+# Subtest: source search keeps its exact modifier and focus behavior without invoking debug actions
+ok 88 - source search keeps its exact modifier and focus behavior without invoking debug actions
+  ---
+  duration_ms: 4.3801
+  type: 'test'
+  ...
+# Subtest: prepare synchronously locks run/debug/prepare before its first await; renders and duplicate calls cannot reopen the gate
+ok 89 - prepare synchronously locks run/debug/prepare before its first await; renders and duplicate calls cannot reopen the gate
+  ---
+  duration_ms: 2.7842
+  type: 'test'
+  ...
+# Subtest: prepare stays locked through trust and resource checks and unlocks only on successful completion
+ok 90 - prepare stays locked through trust and resource checks and unlocks only on successful completion
+  ---
+  duration_ms: 1.1685
+  type: 'test'
+  ...
+# Subtest: failed preparation clears the old candidate, keeps compile disabled, and permits a later retry
+ok 91 - failed preparation clears the old candidate, keeps compile disabled, and permits a later retry
+  ---
+  duration_ms: 4.9291
+  type: 'test'
+  ...
+# Subtest: prepare rejects direct entry while draft restoration, recovery, compilation, or a live session owns the gate
+ok 92 - prepare rejects direct entry while draft restoration, recovery, compilation, or a live session owns the gate
+  ---
+  duration_ms: 6.9087
+  type: 'test'
+  ...
+# Subtest: compile enforces state guards rather than trusting enabled buttons
+ok 93 - compile enforces state guards rather than trusting enabled buttons
+  ---
+  duration_ms: 14.3653
+  type: 'test'
+  ...
+# Subtest: terminal sessions allow preparation again without accidentally reusing the old candidate
+ok 94 - terminal sessions allow preparation again without accidentally reusing the old candidate
+  ---
+  duration_ms: 1.3352
+  type: 'test'
+  ...
+# Subtest: a compilation captures one candidate for adapter construction, compiler request, resource handoff and start
+ok 95 - a compilation captures one candidate for adapter construction, compiler request, resource handoff and start
+  ---
+  duration_ms: 5.0485
+  type: 'test'
+  ...
+# Subtest: stop cancels pending compilation without starting a stale result and releases the preparation gate
+ok 96 - stop cancels pending compilation without starting a stale result and releases the preparation gate
+  ---
+  duration_ms: 1.9965
+  type: 'test'
+  ...
+# Subtest: UI consumer reads a fresh actual C++ build, bound breakpoint, all steps, caller, containers and output
+ok 97 - UI consumer reads a fresh actual C++ build, bound breakpoint, all steps, caller, containers and output
+  ---
+  duration_ms: 1461.2371
+  type: 'test'
+  ...
+# Subtest: editable driver compiles real separate user.inc and driver.cpp and preserves driver edit identity
+ok 98 - editable driver compiles real separate user.inc and driver.cpp and preserves driver edit identity
+  ---
+  duration_ms: 1392.5083
+  type: 'test'
+  ...
+# Subtest: late start ACK cannot replace an already terminated short program
+ok 99 - late start ACK cannot replace an already terminated short program
+  ---
+  duration_ms: 2.2018
+  type: 'test'
+  ...
+# Subtest: resume immediately invalidates pause; stale stack and ACK do not restore it
+ok 100 - resume immediately invalidates pause; stale stack and ACK do not restore it
+  ---
+  duration_ms: 1.224
+  type: 'test'
+  ...
+# Subtest: stop dispatches while start ACK remains unresolved
+ok 101 - stop dispatches while start ACK remains unresolved
+  ---
+  duration_ms: 0.2221
+  type: 'test'
+  ...
+# Subtest: foreign sessions and duplicate events cannot overwrite current view
+ok 102 - foreign sessions and duplicate events cannot overwrite current view
+  ---
+  duration_ms: 0.4379
+  type: 'test'
+  ...
+# Subtest: sequence gap clears pause, then resync replays only newer contiguous events
+ok 103 - sequence gap clears pause, then resync replays only newer contiguous events
+  ---
+  duration_ms: 0.9221
+  type: 'test'
+  ...
+# Subtest: resync refuses an older snapshot and keeps inspection disabled
+ok 104 - resync refuses an older snapshot and keeps inspection disabled
+  ---
+  duration_ms: 0.5595
+  type: 'test'
+  ...
+# Subtest: a previous frame variable response cannot replace selected caller data
+ok 105 - a previous frame variable response cannot replace selected caller data
+  ---
+  duration_ms: 0.6802
+  type: 'test'
+  ...
+# Subtest: resync buffer overflow requests another authoritative snapshot
+ok 106 - resync buffer overflow requests another authoritative snapshot
+  ---
+  duration_ms: 0.2104
+  type: 'test'
+  ...
+# Subtest: scope pagination advertises unread values and appends each page once
+ok 107 - scope pagination advertises unread values and appends each page once
+  ---
+  duration_ms: 0.6525
+  type: 'test'
+  ...
+# Subtest: a rejected stale query does not display an error on a new pause
+ok 108 - a rejected stale query does not display an error on a new pause
+  ---
+  duration_ms: 0.5968
+  type: 'test'
+  ...
+# Subtest: output history stays bounded and truncation is explicit
+ok 109 - output history stays bounded and truncation is explicit
+  ---
+  duration_ms: 0.3973
+  type: 'test'
+  ...
+# Subtest: breakpoint replacements are serialized and actual bindings come from events
+ok 110 - breakpoint replacements are serialized and actual bindings come from events
+  ---
+  duration_ms: 0.3312
+  type: 'test'
+  ...
+# Subtest: an old rejected ACK cannot invalidate the authoritative resynced pause
+ok 111 - an old rejected ACK cannot invalidate the authoritative resynced pause
+  ---
+  duration_ms: 0.2211
+  type: 'test'
+  ...
+# Subtest: standard F-key commands remain available in both supported schemes
+ok 112 - standard F-key commands remain available in both supported schemes
+  ---
+  duration_ms: 1.7567
+  type: 'test'
+  ...
+# Subtest: function key modifiers are exact: unsupported combinations cannot restart or step
+ok 113 - function key modifiers are exact: unsupported combinations cannot restart or step
+  ---
+  duration_ms: 0.1919
+  type: 'test'
+  ...
+# Subtest: default alternatives use physical codes even when Shift changes the resulting character
+ok 114 - default alternatives use physical codes even when Shift changes the resulting character
+  ---
+  duration_ms: 0.1278
+  type: 'test'
+  ...
+# Subtest: alternatives do not fall back to typed digits, numpad keys or missing physical codes
+ok 115 - alternatives do not fall back to typed digits, numpad keys or missing physical codes
+  ---
+  duration_ms: 0.1628
+  type: 'test'
+  ...
+# Subtest: standard-only and unknown schemes disable physical alternatives without disabling F keys
+ok 116 - standard-only and unknown schemes disable physical alternatives without disabling F keys
+  ---
+  duration_ms: 0.1967
+  type: 'test'
+  ...
+# Subtest: Alt, Meta and AltGraph prevent commands in either scheme
+ok 117 - Alt, Meta and AltGraph prevent commands in either scheme
+  ---
+  duration_ms: 0.118
+  type: 'test'
+  ...
+# Subtest: already consumed, composing, legacy IME and repeated events never dispatch
+ok 118 - already consumed, composing, legacy IME and repeated events never dispatch
+  ---
+  duration_ms: 0.1143
+  type: 'test'
+  ...
+# Subtest: resolution neither consumes nor mutates an event and does not depend on Fn state
+ok 119 - resolution neither consumes nor mutates an event and does not depend on Fn state
+  ---
+  duration_ms: 0.1115
+  type: 'test'
+  ...
+# Subtest: shared labels expose exact standard and alternative combinations with valid ARIA modifiers
+ok 120 - shared labels expose exact standard and alternative combinations with valid ARIA modifiers
+  ---
+  duration_ms: 0.7988
+  type: 'test'
+  ...
+# Subtest: VAL-004 real session keeps deleted-draft breakpoint at i=0/i=1; a new build has no breakpoint and exits 3
+ok 121 - VAL-004 real session keeps deleted-draft breakpoint at i=0/i=1; a new build has no breakpoint and exits 3
+  ---
+  duration_ms: 1209.9212
+  type: 'test'
+  ...
+1..121
+# tests 121
+# suites 0
+# pass 121
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4012.2536

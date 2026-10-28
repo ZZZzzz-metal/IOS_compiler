@@ -1,0 +1,18 @@
+{
+  "clientDate": "2026-10-28",
+  "checks": [
+    {
+      "path": "app/offline/.local/packages/ipad-offline-debugger-v0.4.5-r2.zip",
+      "ignored": true,
+      "tracked": false,
+      "rule": ".gitignore:7:.local/\tapp/offline/.local/packages/ipad-offline-debugger-v0.4.5-r2.zip"
+    },
+    {
+      "path": "app/offline/.local/packages/ipad-first-setup-v0.4.5-r2.zip",
+      "ignored": true,
+      "tracked": false,
+      "rule": ".gitignore:7:.local/\tapp/offline/.local/packages/ipad-first-setup-v0.4.5-r2.zip"
+    }
+  ],
+  "allPassed": true
+}

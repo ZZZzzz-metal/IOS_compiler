@@ -1,0 +1,117 @@
+Browser tab: 2, Title: "算法工作台 · 四号验证原型", URL: "http://127.0.0.1:4199/releases/ipad-web-probe-d62dc8a59f565ee8ea469473/ui/probe.html".
+1 AXWebArea 算法工作台 · 四号验证原型, URL: 127.0.0.1:4199/releases/ipad-web-probe-d62dc8a59f565ee8ea469473/ui/probe.html
+	2 container
+		3 heading 算法工作台, Value: 1
+			4 text 算法工作台
+		5 text 开发验证原型 粘贴代码，带着输入运行，在暂停处排错。
+		6 button 校验本地资源, ID: prepare
+		121 text 本版本离线资源已校验 · iPad 真机待验证
+	8 text iPad 离线冷启动待验证
+	9 text Clang 8.0.1 / wasm32
+	10 link Description: 原型说明与验证步骤, Value: 127.0.0.1:4199/releases/ipad-web-probe-d62dc8a59f565ee8ea469473/ui/README.md
+	11 container 运行与调试
+		12 pop up button (collapsed, settable) Description: 语言, Value: C++17, ID: language, Secondary Actions: Expand
+			13 menu
+				14 (selected) C++17
+				15 C11
+		16 button 编译运行, Help: 编译运行（Ctrl+F5 / Ctrl+6）, ID: run
+		17 button 编译调试, Help: 编译调试（F5 / Ctrl+5）, ID: debug
+		18 container 调试控制
+			19 button (disabled) 继续, Help: 继续（F5 / Ctrl+5）
+			20 button (disabled) 进入, Help: 进入（F11 / Ctrl+-）
+			21 button (disabled) 跳过, Help: 跳过（F10 / Ctrl+0）
+			22 button (disabled) 跳出, Help: 跳出（Shift+F11 / Ctrl+Shift+-）
+			23 button (disabled) 停止, Help: 停止（Shift+F5 / Ctrl+Shift+5）, ID: stop
+		122 text 可编译运行或启动调试。
+	25 button (collapsed) 键盘快捷键 无 F 键也能调试, Secondary Actions: Expand
+		26 text 键盘快捷键 
+		27 text 无 F 键也能调试
+	28 container
+		29 container 源码编辑
+			30 heading 代码, Value: 2
+				31 text 代码
+			32 button 粘贴代码, ID: paste
+			33 button 复制题站源码, ID: copy
+			34 button 导入, ID: import
+			35 pop up button (collapsed, settable) Description: 导出内容, Value: 仅题站源码, ID: export-mode, Secondary Actions: Expand
+				36 menu
+					37 (selected) 仅题站源码
+					38 完整草稿
+			39 button 导出, ID: export
+			40 checkbox 题站源码, Value: 1, ID: user-tab
+			41 checkbox 测试驱动, Value: 0, ID: driver-tab
+			42 checkbox (disabled) 查看调试快照, Value: 0, ID: snapshot-toggle
+			123 text main.cpp
+			124 text 编辑中的草稿
+			45 container Description: 行号与断点, ID: gutter
+				125 button 1, Help: 第 1 行：切换断点
+				126 button 2, Help: 第 2 行：切换断点
+				127 button 3, Help: 第 3 行：切换断点
+				128 button 4, Help: 第 4 行：切换断点
+				129 button 5, Help: 第 5 行：切换断点
+				130 button 6, Help: 第 6 行：切换断点
+				131 button 7, Help: 第 7 行：切换断点
+				132 button 8, Help: 第 8 行：切换断点
+				133 button 9, Help: 第 9 行：切换断点
+				134 button 10, Help: 第 10 行：切换断点
+				135 button 11, Help: 第 11 行：切换断点
+				136 button 12, Help: 第 12 行：切换断点
+			69 text entry area (settable) Description: 源代码, ID: source, Value: #include <cstdio> // KEY045-FRESH-OFFLINE-20261028
+int bump(int x) {
+  int y = x + 1;
+  return y;
+}
+int main() {
+  int n = 4;
+  int result = bump(n);
+  std::printf("KEY045=%d\n", result);
+  return 0;
+}
+
+			70 button Description: 在当前行切换断点, Help: 当前行断点（F9 / Ctrl+9）, ID: breakpoint
+			71 button 缩进, Help: 缩进（Tab）, ID: indent
+			72 button 取消缩进, Help: 取消缩进（Shift+Tab）, ID: outdent
+			73 search text field (settable) Description: 查找源码, ID: find
+			74 button 下一处, ID: find-next
+			120 text 草稿已保存 · 版本 1
+			76 button (collapsed) 断点与编译诊断, Secondary Actions: Expand
+				77 text 断点与编译诊断
+		78 container 输入输出与调试面板
+			79 container
+				80 heading 样例输入 运行前一次性提供, Value: 2
+					81 text 样例输入
+					82 text 运行前一次性提供
+				83 text entry area (settable) Description: 标准输入, ID: stdin, Value: 3
+
+			84 container
+				85 heading 程序输出, Value: 2
+					86 text 程序输出
+				87 container Description: 程序输出, ID: output
+					137 text 尚无输出
+			89 container
+				90 heading 调用栈, Value: 2
+					91 text 调用栈
+				92 text 调试暂停后显示真实调用栈
+			93 container
+				94 heading 局部变量, Value: 2
+					95 text 局部变量
+				96 text 调试暂停后读取变量
+			97 container
+				98 heading 基础监视, Value: 2
+					99 text 基础监视
+				100 text field (settable) Description: 监视表达式, ID: expression
+				101 button (disabled) 查看, ID: evaluate
+				102 text 支持范围以适配器为准；函数调用、赋值和自增不可用。
+				103 text 选择暂停栈帧后查询
+
+The focused UI element is 69 text entry area (settable) Description: 源代码, ID: source, Value: #include <cstdio> // KEY045-FRESH-OFFLINE-20261028
+int bump(int x) {
+  int y = x + 1;
+  return y;
+}
+int main() {
+  int n = 4;
+  int result = bump(n);
+  std::printf("KEY045=%d\n", result);
+  return 0;
+}

@@ -1,0 +1,22 @@
+The first run-checks.mjs invocation completed its combined test process and both
+npm child processes, but failed while summarizing npm-test output. The parser
+only recognized TAP '# tests N'; npm selected Node's spec reporter and printed
+'ℹ tests 10'. The runner therefore parsed zero and asserted 0 versus 10 before
+writing results.json. This is a reporting-harness failure, not a product test
+failure. Original runner and stdout/stderr files are retained unchanged.
+
+The preserved combined.stdout.txt reports 251 tests, 251 passes, zero failures,
+zero cancelled, zero skipped and zero todo. The original npm-test.stdout.txt
+reports 10 tests and 10 passes. The runner proceeds to the next job only when
+the child exit code is zero; the presence of both later npm outputs therefore
+also supports that the combined child and npm-check child exited zero. Their
+original command metadata was not serialized before the assertion.
+
+finalize-results.mjs parses the existing combined raw output, records this
+provenance, and does not repeat the 251-test suite. It reruns only mandatory
+npm run check and npm test into separate final-* raw files, accepting both TAP
+and spec summary formats. Its source fingerprints are captured at finalization
+and the fresh mandatory checks; they are not retroactively asserted to be
+fingerprints captured by the failed runner during the original combined run.
+The main agent reports that the intervening app/main.mjs change was Chinese
+delivery-status wording. No code or raw evidence is changed by this recovery.
