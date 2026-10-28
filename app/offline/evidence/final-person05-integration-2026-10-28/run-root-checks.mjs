@@ -1,0 +1,5 @@
+import {spawnSync,execFileSync} from 'node:child_process';
+import {writeFile} from 'node:fs/promises';
+const out=new URL('./',import.meta.url), rows=[];
+for(const job of [{name:'npm-check',args:['/d','/s','/c','npm.cmd run check']},{name:'npm-test',args:['/d','/s','/c','npm.cmd test']}]){const startedAt=new Date().toISOString(),r=spawnSync('cmd.exe',job.args,{encoding:'utf8',timeout:60000});for(const s of ['stdout','stderr'])await writeFile(new URL(job.name+'.'+s+'.txt',out),r[s]??'',{flag:'wx'});rows.push({name:job.name,startedAt,finishedAt:new Date().toISOString(),exitCode:r.status,error:r.error?.message??null});if(r.status!==0)break;}
+const result={revision:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),commands:rows,scope:'Mandatory root check/test after evidence and current-status merge. No product/runtime changes; no broad repetition of independently verified 258/22.'};await writeFile(new URL('root-checks.json',out),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(result));process.exitCode=rows.some(x=>x.exitCode!==0)?1:0;

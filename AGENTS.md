@@ -1,5 +1,7 @@
 # 协作约定
 
+2026-10-28最终追加：5号e4ce507已合入。固定40a079b/r3最终组合和完整包在已测桌面范围独立通过；常规258、另列离线22、监视25加1范围、剪贴板8场景25断言及69条真实浏览器观察通过。REV-001仅入口缺失/当前完成缓存trust损坏两类实际桌面恢复独立关闭；真实iPad、草稿强可靠性和G2/G3仍待。旧标签/包/失败保留，当前结论见 [最终桌面验收追加](docs/architecture/FINAL-DESKTOP-ACCEPTANCE-v0.4.5-2026-10-28.md)。下方各轮发布时记录按当时时点保留。
+
 这是 iPad 离线 C/C++ 编译调试工具的唯一应用仓库。编译器、调试器、最小界面/草稿和独立回归已合入桌面原型；路线未冻结，尚无 iPad 安装包或真机验收。
 
 - 开始先读 README.md、docs/architecture/OWNERSHIP.md、contracts/README.md、docs/architecture/STATUS.md。
