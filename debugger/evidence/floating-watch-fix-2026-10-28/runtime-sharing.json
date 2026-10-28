@@ -1,0 +1,6 @@
+{
+  "change": "Export existing float32FromBigInt for the watch evaluator; runtime conversion algorithm and guest execution unchanged.",
+  "oldSHA256": "17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f",
+  "currentSHA256": "8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7",
+  "verifiedOnlyNamedExportAdded": true
+}

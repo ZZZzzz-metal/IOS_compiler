@@ -1,0 +1,57 @@
+{
+  "capturedAt": "2026-10-28T04:34:13.928Z",
+  "basedOn": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "testedState": "Working tree exact source bytes in commands.json, full component bytes in tested-resources.json",
+  "issues": [
+    "New P2: mixed float/integer operands must be converted before arithmetic and comparisons",
+    "New P2: C++ NaN scalar truth and short-circuiting; numbers assigned by role 1 later"
+  ],
+  "implementation": [
+    "Common float32/64 operand conversion before arithmetic/comparison",
+    "Reuse existing exact integer-to-float32 conversion to avoid double rounding",
+    "Shared scalar truth conversion for !, &&, || and skipped operand decisions"
+  ],
+  "results": {
+    "debugger": "83/83",
+    "pipeline": "3/3",
+    "independentFixtures": "21/21",
+    "initializerIndependent": "6/6",
+    "shadow": "exit 0",
+    "loopHeader": "exit 0",
+    "npmCheck": "exit 0; product offline NOT READY",
+    "npmTest": "10/10",
+    "person05ScriptRerun": {
+      "passed": 25,
+      "failed": 0,
+      "boundaryOnly": 1
+    },
+    "extraRealWorkerQueries": 70,
+    "extraFailures": 0,
+    "toolchainResourcesVerified": 11,
+    "priorEvidenceEntriesVerified": 36
+  },
+  "compatibilityId": "integration-prototype-60eb6729284e2729",
+  "resourceManifestHash": "sha256:60eb6729284e27295b8a76121dfe569027d8c096f9580a279021d6ada08d6789",
+  "scope": {
+    "browserTested": false,
+    "ipadTested": false,
+    "productionBundleRebuilt": false,
+    "person05IndependentAcceptancePending": true,
+    "sharedContractsChanged": false,
+    "compilerChanged": false,
+    "guestExecutionAlgorithmChanged": false,
+    "pending": [
+      "Role 1 integration and new immutable bundle",
+      "Role 5 new commit acceptance",
+      "Real iPad G2/G3"
+    ]
+  },
+  "provenance": {
+    "archivedPerson05Evidence": "byte copies; originals unchanged",
+    "adaptedRerun": "see after-fix/adaptation.json",
+    "independentTemporaryPath": "tests/evidence/integrated-role03-floating-fix-2026-10-28",
+    "archivedIndependentAs": "debugger/evidence/floating-watch-fix-2026-10-28/independent",
+    "role03Red": "actual 3248ad5 baseline observations and failing TAP; original program execution passed",
+    "role03Green": "complete suite emitted new unique .local directory; bytes moved without rewriting"
+  }
+}

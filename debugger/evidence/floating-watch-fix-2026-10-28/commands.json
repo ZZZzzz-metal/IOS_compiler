@@ -1,0 +1,142 @@
+{
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "browserTested": false,
+    "ipadTested": false
+  },
+  "independentTemporaryPath": "tests/evidence/integrated-role03-floating-fix-2026-10-28",
+  "sourceInputs": [
+    {
+      "path": "debugger/src/variables.mjs",
+      "byteLength": 44150,
+      "sha256": "9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e"
+    },
+    {
+      "path": "debugger/src/wasm-runtime.mjs",
+      "byteLength": 49143,
+      "sha256": "8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    },
+    {
+      "path": "debugger/checks/floating-watch.test.mjs",
+      "byteLength": 9390,
+      "sha256": "e0c66f3eadbe75436c1f68cc4cd05612d4e931d52e821645b18a9713ecc929cd"
+    }
+  ],
+  "records": [
+    {
+      "name": "toolchain",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "compiler/scripts/prepare-toolchain.mjs",
+        "--verify-only",
+        "--json"
+      ],
+      "startedAt": "2026-10-28T04:32:17.688Z",
+      "durationMs": 142.39,
+      "exitCode": 0
+    },
+    {
+      "name": "debugger",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "debugger/checks/*.test.mjs"
+      ],
+      "startedAt": "2026-10-28T04:32:17.834Z",
+      "durationMs": 11373.8426,
+      "exitCode": 0
+    },
+    {
+      "name": "integration",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "app/integration/checks/*.test.mjs"
+      ],
+      "startedAt": "2026-10-28T04:32:29.207Z",
+      "durationMs": 3663.1483000000007,
+      "exitCode": 0
+    },
+    {
+      "name": "shadow",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/reproduce.mjs",
+        "shadow"
+      ],
+      "startedAt": "2026-10-28T04:32:32.871Z",
+      "durationMs": 849.5643,
+      "exitCode": 0
+    },
+    {
+      "name": "loop-header",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/reproduce.mjs",
+        "loop-header"
+      ],
+      "startedAt": "2026-10-28T04:32:33.720Z",
+      "durationMs": 862.4167999999991,
+      "exitCode": 0
+    },
+    {
+      "name": "initializer",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/initializer-lifetime.mjs"
+      ],
+      "startedAt": "2026-10-28T04:32:34.583Z",
+      "durationMs": 2882.0699999999997,
+      "exitCode": 0
+    },
+    {
+      "name": "independent",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/run-validation.mjs"
+      ],
+      "startedAt": "2026-10-28T04:32:37.465Z",
+      "durationMs": 9244.319,
+      "exitCode": 0
+    },
+    {
+      "name": "npm-check",
+      "command": [
+        "C:\\WINDOWS\\system32\\cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "startedAt": "2026-10-28T04:32:46.709Z",
+      "durationMs": 5138.487299999997,
+      "exitCode": 0
+    },
+    {
+      "name": "npm-test",
+      "command": [
+        "C:\\WINDOWS\\system32\\cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "startedAt": "2026-10-28T04:32:51.848Z",
+      "durationMs": 891.9392999999982,
+      "exitCode": 0
+    },
+    {
+      "name": "probe-build",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "debugger/scripts/build-probe.mjs"
+      ],
+      "startedAt": "2026-10-28T04:32:52.740Z",
+      "durationMs": 172.31719999999768,
+      "exitCode": 0
+    }
+  ]
+}

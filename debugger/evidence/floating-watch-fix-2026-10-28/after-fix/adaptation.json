@@ -1,0 +1,23 @@
+{
+  "note": "Import root, new owned output prefix, and guard for new current resource identity only; same checks, generated C++ source, native oracle and failure rules. This is role 03 rerunning the independent script, not independent acceptance by person 05.",
+  "originalSHA256": "7de0eddbd3d692689745a5944f0c3bb0c56243ff64bc421d1603bcc2afb79dcb",
+  "adaptedSHA256": "742ea328570b5d342d27631f4d5d5f10a68f9655c353eb60e30e5b8d91e55490",
+  "replacements": [
+    [
+      "from '../",
+      "from 'file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/"
+    ],
+    [
+      "const root = new URL('../', import.meta.url);",
+      "const root = new URL(\"file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/\");"
+    ],
+    [
+      "new URL('tests/evidence/integrated-', root).href",
+      "new URL('debugger/evidence/floating-watch-fix-2026-10-28/after-fix/', root).href"
+    ],
+    [
+      "'integration-prototype-b02def5d2c6e7f39'",
+      "\"integration-prototype-60eb6729284e2729\""
+    ]
+  ]
+}

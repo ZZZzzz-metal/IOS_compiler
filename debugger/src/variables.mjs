@@ -1,4 +1,5 @@
 import { AT, TAG, Reader } from './dwarf.mjs';
+import { float32FromBigInt } from './wasm-runtime.mjs';
 
 const utf8 = new TextDecoder('utf-8', { fatal: false });
 const MAX_PAGE = 100, MAX_STRING = 1024, MAX_ELEMENTS = 1000000;
@@ -466,6 +467,14 @@ class ExpressionParser {
     if (value._scalar === undefined) fail('Scalar operand required', 'unsupported');
     return value._scalar;
   }
+  truth(scalar) {
+    // C++ converts NaN to true; only numeric zero (including -0) is false.
+    return typeof scalar === 'bigint' ? scalar !== 0n : scalar !== 0;
+  }
+  floatingOperand(scalar, bits) {
+    if (bits === 64) return Number(scalar);
+    return typeof scalar === 'bigint' ? float32FromBigInt(scalar) : Math.fround(scalar);
+  }
   isPointer(value) {
     // A void pointer has no target DIE, but is still a pointer operand.
     return !!value._pointerTarget || this.inspector.symbols.canonical(value._type)?.tag === TAG.pointer;
@@ -520,7 +529,7 @@ class ExpressionParser {
     let left = this.unary(evaluate);
     while (precedence.has(this.tokens[this.pos]?.text) && precedence.get(this.tokens[this.pos].text) >= minimum) {
       const op = this.tokens[this.pos++].text;
-      const shortCircuit = evaluate && (op === '&&' && !this.scalar(left) || op === '||' && !!this.scalar(left));
+      const shortCircuit = evaluate && (op === '&&' && !this.truth(this.scalar(left)) || op === '||' && this.truth(this.scalar(left)));
       const right = this.binary(precedence.get(op) + 1, evaluate && !shortCircuit);
       if (!evaluate) { left = this.literal(0n); continue; }
       if (shortCircuit) { left = this.literal(op === '&&' ? 0n : 1n, 'bool', { bits: 8, signed: false, boolean: true }); continue; }
@@ -547,11 +556,15 @@ class ExpressionParser {
       }
       const floating = typeof a === 'number' || typeof b === 'number';
       const logical = ['&&', '||'].includes(op), comparison = ['==', '!=', '<', '>', '<=', '>='].includes(op);
+      const floatBits = floating && !logical ? Math.max(left._floatBits ?? 0, right._floatBits ?? 0) : undefined;
+      if (floatBits !== undefined && ![32, 64].includes(floatBits)) fail('Floating type information is unavailable', 'unsupported');
       const pointerComparison = leftPointer || rightPointer;
       const shift = ['<<', '>>'].includes(op);
       const type = floating || logical || pointerComparison ? undefined : shift ? this.integerType(left) : this.commonType(left, right);
-      const x = floating ? Number(a) : type ? this.converted(a, type) : a;
-      const y = floating ? Number(b) : type && !shift ? this.converted(b, type) : b;
+      // Convert each operand to the common floating type before the operation,
+      // including comparisons. Rounding only the final result is too late.
+      const x = floatBits ? this.floatingOperand(a, floatBits) : type ? this.converted(a, type) : a;
+      const y = floatBits ? this.floatingOperand(b, floatBits) : type && !shift ? this.converted(b, type) : b;
       if (['/', '%'].includes(op) && type?.signed && y === -1n && x === -(1n << BigInt(type.bits - 1)))
         fail('Signed integer division overflow is unsupported', 'unsupported');
       let result;
@@ -562,7 +575,7 @@ class ExpressionParser {
         case '==': result = BigInt(x === y); break; case '!=': result = BigInt(x !== y); break;
         case '<': result = BigInt(x < y); break; case '>': result = BigInt(x > y); break;
         case '<=': result = BigInt(x <= y); break; case '>=': result = BigInt(x >= y); break;
-        case '&&': result = BigInt(!!x && !!y); break; case '||': result = BigInt(!!x || !!y); break;
+        case '&&': result = BigInt(this.truth(a) && this.truth(b)); break; case '||': result = BigInt(this.truth(a) || this.truth(b)); break;
         default:
           if (floating) fail('Integer bitwise operands required', 'unsupported');
           if (shift && (y < 0n || y >= BigInt(type.bits))) fail('Shift count outside promoted integer width', 'error');
@@ -572,8 +585,7 @@ class ExpressionParser {
       }
       if (comparison || logical) left = this.literal(result, 'bool', { bits: 8, signed: false, boolean: true });
       else if (floating) {
-        const bits = Math.max(left._floatBits ?? 0, right._floatBits ?? 0);
-        left = this.literal(bits === 32 ? Math.fround(result) : result, bits === 32 ? 'float' : 'double'); left._floatBits = bits;
+        left = this.literal(floatBits === 32 ? Math.fround(result) : result, floatBits === 32 ? 'float' : 'double'); left._floatBits = floatBits;
       } else left = this.integerResult(result, type);
     }
     this.depth--; return left;
@@ -591,7 +603,7 @@ class ExpressionParser {
       }
       const scalar = this.scalar(value);
       if (op === '~' && typeof scalar !== 'bigint') fail('Integer operand required', 'unsupported');
-      if (op === '!') return this.literal(BigInt(!scalar), 'bool', { bits: 8, signed: false, boolean: true });
+      if (op === '!') return this.literal(BigInt(!this.truth(scalar)), 'bool', { bits: 8, signed: false, boolean: true });
       if (this.isPointer(value)) fail('Unary arithmetic on pointers is unsupported', 'unsupported');
       if (typeof scalar === 'number') {
         const bits = value._floatBits;
