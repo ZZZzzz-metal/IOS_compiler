@@ -1,0 +1,26 @@
+{
+  "clientDate": "2026-10-28",
+  "rawOutputs": [
+    {
+      "path": "app/offline/evidence/fixes-integration-2026-10-28/combined.stdout.txt",
+      "byteLength": 58899,
+      "sha256": "781bee54fd5690455d956b1ba23cc6c4080c570c0f06cbc356d05c0ebf21a714",
+      "actualCounts": {
+        "tests": 251,
+        "pass": 251,
+        "fail": 0
+      }
+    },
+    {
+      "path": "app/offline/evidence/fixes-integration-2026-10-28/npm-test.stdout.txt",
+      "byteLength": 1125,
+      "sha256": "65c4ebb1cff02f48199f0f67b7a4bf1b485d0962414f6e1f0230a6d1f1b2508d",
+      "actualCounts": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0
+      }
+    }
+  ],
+  "declaration": "Counts verified directly from retained raw product-test output. Original collector only recognized TAP and failed to parse the npm test human reporter; the collection assertion is separate from product tests. Mandatory rerun/finalizer exits are owned by root and recorded separately, not inferred here. 251 already includes contracts10; npm test10 is not added again."
+}

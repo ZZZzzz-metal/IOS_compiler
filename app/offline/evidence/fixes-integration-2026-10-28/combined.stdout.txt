@@ -1,0 +1,1525 @@
+TAP version 13
+# Subtest: integrated C++17 build preserves breakpoints, all steps, live variables and recursive frames
+ok 1 - integrated C++17 build preserves breakpoints, all steps, live variables and recursive frames
+  ---
+  duration_ms: 2927.1381
+  type: 'test'
+  ...
+# Subtest: integrated C11 build consumes stdin and prints values read from real memory
+ok 2 - integrated C11 build consumes stdin and prints values read from real memory
+  ---
+  duration_ms: 913.0159
+  type: 'test'
+  ...
+# Subtest: stopping a compiled infinite loop permits a new source build and new Worker session
+ok 3 - stopping a compiled infinite loop permits a new source build and new Worker session
+  ---
+  duration_ms: 1392.0623
+  type: 'test'
+  ...
+# Subtest: complete installation serves navigation and engine with no network after disconnect
+ok 4 - complete installation serves navigation and engine with no network after disconnect
+  ---
+  duration_ms: 59.4569
+  type: 'test'
+  ...
+# Subtest: wrong bytes never commits a partial cache or removes the previous version
+ok 5 - wrong bytes never commits a partial cache or removes the previous version
+  ---
+  duration_ms: 8.7379
+  type: 'test'
+  ...
+# Subtest: network interrupted never commits a partial cache or removes the previous version
+ok 6 - network interrupted never commits a partial cache or removes the previous version
+  ---
+  duration_ms: 7.3524
+  type: 'test'
+  ...
+# Subtest: HTTP failure never commits a partial cache or removes the previous version
+ok 7 - HTTP failure never commits a partial cache or removes the previous version
+  ---
+  duration_ms: 6.0484
+  type: 'test'
+  ...
+# Subtest: new complete version preserves old version and unrelated caches
+ok 8 - new complete version preserves old version and unrelated caches
+  ---
+  duration_ms: 9.2463
+  type: 'test'
+  ...
+# Subtest: unknown files and evicted files return 503 without network repair
+ok 9 - unknown files and evicted files return 503 without network repair
+  ---
+  duration_ms: 4.4494
+  type: 'test'
+  ...
+# Subtest: cached corruption and descriptor corruption fail the full startup check
+ok 10 - cached corruption and descriptor corruption fail the full startup check
+  ---
+  duration_ms: 9.9299
+  type: 'test'
+  ...
+# Subtest: explicit prepare repairs corruption through a new full transaction and preserves old cache
+ok 11 - explicit prepare repairs corruption through a new full transaction and preserves old cache
+  ---
+  duration_ms: 7.0215
+  type: 'test'
+  ...
+# Subtest: failed explicit repair retains the previous complete package
+ok 12 - failed explicit repair retains the previous complete package
+  ---
+  duration_ms: 5.9017
+  type: 'test'
+  ...
+# Subtest: missing launcher navigation supplies a local recovery page without fetching network resources
+ok 13 - missing launcher navigation supplies a local recovery page without fetching network resources
+  ---
+  duration_ms: 6.174
+  type: 'test'
+  ...
+# Subtest: explicit prepare rejects an open workbench and non-launcher callers before any network
+ok 14 - explicit prepare rejects an open workbench and non-launcher callers before any network
+  ---
+  duration_ms: 4.9115
+  type: 'test'
+  ...
+# Subtest: missing startup resource index.html opens local repair before launcher execution
+ok 15 - missing startup resource index.html opens local repair before launcher execution
+  ---
+  duration_ms: 9.3127
+  type: 'test'
+  ...
+# Subtest: corrupt startup resource index.html opens local repair before launcher execution
+ok 16 - corrupt startup resource index.html opens local repair before launcher execution
+  ---
+  duration_ms: 8.6324
+  type: 'test'
+  ...
+# Subtest: missing startup resource launcher.mjs opens local repair before launcher execution
+ok 17 - missing startup resource launcher.mjs opens local repair before launcher execution
+  ---
+  duration_ms: 8.8958
+  type: 'test'
+  ...
+# Subtest: corrupt startup resource launcher.mjs opens local repair before launcher execution
+ok 18 - corrupt startup resource launcher.mjs opens local repair before launcher execution
+  ---
+  duration_ms: 8.5122
+  type: 'test'
+  ...
+# Subtest: missing startup resource app/offline/browser/trust.mjs opens local repair before launcher execution
+ok 19 - missing startup resource app/offline/browser/trust.mjs opens local repair before launcher execution
+  ---
+  duration_ms: 12.9792
+  type: 'test'
+  ...
+# Subtest: corrupt startup resource app/offline/browser/trust.mjs opens local repair before launcher execution
+ok 20 - corrupt startup resource app/offline/browser/trust.mjs opens local repair before launcher execution
+  ---
+  duration_ms: 10.9022
+  type: 'test'
+  ...
+# Subtest: missing startup resource bundle.json opens local repair before launcher execution
+ok 21 - missing startup resource bundle.json opens local repair before launcher execution
+  ---
+  duration_ms: 10.7177
+  type: 'test'
+  ...
+# Subtest: corrupt startup resource bundle.json opens local repair before launcher execution
+ok 22 - corrupt startup resource bundle.json opens local repair before launcher execution
+  ---
+  duration_ms: 10.0084
+  type: 'test'
+  ...
+# Subtest: a new workbench opened during repair prevents cache commit
+ok 23 - a new workbench opened during repair prevents cache commit
+  ---
+  duration_ms: 9.0162
+  type: 'test'
+  ...
+# Subtest: ordinary development entry works without a covering worker; foreign covering worker stays rejected
+ok 24 - ordinary development entry works without a covering worker; foreign covering worker stays rejected
+  ---
+  duration_ms: 10.6313
+  type: 'test'
+  ...
+# Subtest: workbench trust checks bundle scope and component identity after the worker handshake
+ok 25 - workbench trust checks bundle scope and component identity after the worker handshake
+  ---
+  duration_ms: 2.1599
+  type: 'test'
+  ...
+# Subtest: foreign request replies and malformed success identities never reach artifact storage
+ok 26 - foreign request replies and malformed success identities never reach artifact storage
+  ---
+  duration_ms: 12.061
+  type: 'test'
+  ...
+# Subtest: a valid empty Wasm with no DWARF cannot become a debug build
+ok 27 - a valid empty Wasm with no DWARF cannot become a debug build
+  ---
+  duration_ms: 1.2113
+  type: 'test'
+  ...
+# Subtest: duplicate terminal replies persist once and cancellation wins over late persistence
+ok 28 - duplicate terminal replies persist once and cancellation wins over late persistence
+  ---
+  duration_ms: 1.3498
+  type: 'test'
+  ...
+# Subtest: terminated worker late messages cannot overwrite the next request
+ok 29 - terminated worker late messages cannot overwrite the next request
+  ---
+  duration_ms: 0.4453
+  type: 'test'
+  ...
+# Subtest: timeout terminates the worker and permits another compilation
+ok 30 - timeout terminates the worker and permits another compilation
+  ---
+  duration_ms: 11.1121
+  type: 'test'
+  ...
+# Subtest: pinned Wasm compiler versions and resource bytes are real
+ok 31 - pinned Wasm compiler versions and resource bytes are real
+  ---
+  duration_ms: 228.1621
+  type: 'test'
+  ...
+# Subtest: C11 stdin/stdout, recursion, array, pointer and signed 64-bit integer
+ok 32 - C11 stdin/stdout, recursion, array, pointer and signed 64-bit integer
+  ---
+  duration_ms: 668.7384
+  type: 'test'
+  ...
+# Subtest: C++17 real STL, UTF-8 output and 32-bit target integer sizes
+ok 33 - C++17 real STL, UTF-8 output and 32-bit target integer sizes
+  ---
+  duration_ms: 2454.7373
+  type: 'test'
+  ...
+# Subtest: debug handoff artifact is executable and retains real DWARF sections
+ok 34 - debug handoff artifact is executable and retains real DWARF sections
+  ---
+  duration_ms: 771.4075
+  type: 'test'
+  ...
+# Subtest: real diagnostic byte columns map Chinese/emoji source back to UTF-16
+ok 35 - real diagnostic byte columns map Chinese/emoji source back to UTF-16
+  ---
+  duration_ms: 271.331
+  type: 'test'
+  ...
+# Subtest: link errors and nonstandard bits/stdc++.h do not produce startable artifacts
+ok 36 - link errors and nonstandard bits/stdc++.h do not produce startable artifacts
+  ---
+  duration_ms: 504.4046
+  type: 'test'
+  ...
+# Subtest: warnings survive a successful compilation
+ok 37 - warnings survive a successful compilation
+  ---
+  duration_ms: 242.7576
+  type: 'test'
+  ...
+# Subtest: editable driver and user header are both compiled and hashed
+ok 38 - editable driver and user header are both compiled and hashed
+  ---
+  duration_ms: 211.4713
+  type: 'test'
+  ...
+# Subtest: cancel actual compilation without blocking the caller, then compile again
+ok 39 - cancel actual compilation without blocking the caller, then compile again
+  ---
+  duration_ms: 601.9872
+  type: 'test'
+  ...
+# Subtest: failure, source edit and recompilation retain distinct snapshot/artifact identity
+ok 40 - failure, source edit and recompilation retain distinct snapshot/artifact identity
+  ---
+  duration_ms: 558.8596
+  type: 'test'
+  ...
+# Subtest: activated cache is rechecked, corruption is blocked on fetch, repair is explicit
+ok 41 - activated cache is rechecked, corruption is blocked on fetch, repair is explicit
+  ---
+  duration_ms: 47.9656
+  type: 'test'
+  ...
+# Subtest: failed staging keeps the old complete cache and removes partial new cache
+ok 42 - failed staging keeps the old complete cache and removes partial new cache
+  ---
+  duration_ms: 2.4464
+  type: 'test'
+  ...
+# Subtest: browser source hashing matches shared fixed vector: bom-crlf-chinese
+ok 43 - browser source hashing matches shared fixed vector: bom-crlf-chinese
+  ---
+  duration_ms: 2.8516
+  type: 'test'
+  ...
+# Subtest: browser source hashing matches shared fixed vector: utf16-order-and-json-escapes
+ok 44 - browser source hashing matches shared fixed vector: utf16-order-and-json-escapes
+  ---
+  duration_ms: 0.8471
+  type: 'test'
+  ...
+# Subtest: SHA-256 covers padding boundaries, multiple blocks and byte subviews
+ok 45 - SHA-256 covers padding boundaries, multiple blocks and byte subviews
+  ---
+  duration_ms: 10.5961
+  type: 'test'
+  ...
+# Subtest: normalization preserves Unicode and whitespace but rejects unsafe sources
+ok 46 - normalization preserves Unicode and whitespace but rejects unsafe sources
+  ---
+  duration_ms: 0.7455
+  type: 'test'
+  ...
+# Subtest: source operations work without newer String methods or WebCrypto
+ok 47 - source operations work without newer String methods or WebCrypto
+  ---
+  duration_ms: 0.4532
+  type: 'test'
+  ...
+# Subtest: validation rejects tampering and noncanonical snapshots without repairing them
+ok 48 - validation rejects tampering and noncanonical snapshots without repairing them
+  ---
+  duration_ms: 1.0087
+  type: 'test'
+  ...
+# Subtest: Clang UTF-8 columns convert to UTF-16, including tabs and emoji
+ok 49 - Clang UTF-8 columns convert to UTF-16, including tabs and emoji
+  ---
+  duration_ms: 0.242
+  type: 'test'
+  ...
+# Subtest: Clang diagnostics preserve severity/options and only map actual project sources
+ok 50 - Clang diagnostics preserve severity/options and only map actual project sources
+  ---
+  duration_ms: 1.5497
+  type: 'test'
+  ...
+# Subtest: virtual-root prefix wins over an ambiguous same-named subdirectory
+ok 51 - virtual-root prefix wins over an ambiguous same-named subdirectory
+  ---
+  duration_ms: 0.3628
+  type: 'test'
+  ...
+# Subtest: browser Worker receives its first request before any asynchronous lock loading
+ok 52 - browser Worker receives its first request before any asynchronous lock loading
+  ---
+  duration_ms: 1.8771
+  type: 'test'
+  ...
+# Subtest: source hashes match fixed cross-language canonical vectors
+ok 53 - source hashes match fixed cross-language canonical vectors
+  ---
+  duration_ms: 11.4695
+  type: 'test'
+  ...
+# Subtest: source hashing is stable across BOM/CRLF and file order, but includes driver edits
+ok 54 - source hashing is stable across BOM/CRLF and file order, but includes driver edits
+  ---
+  duration_ms: 0.7263
+  type: 'test'
+  ...
+# Subtest: source paths and malformed Unicode cannot create ambiguous snapshots
+ok 55 - source paths and malformed Unicode cannot create ambiguous snapshots
+  ---
+  duration_ms: 0.4977
+  type: 'test'
+  ...
+# Subtest: build identity rejects edited snapshots, changed runtime versions and missing debug info
+ok 56 - build identity rejects edited snapshots, changed runtime versions and missing debug info
+  ---
+  duration_ms: 1.8328
+  type: 'test'
+  ...
+# Subtest: late sessions, duplicated events, sequence gaps and terminal events are rejected
+ok 57 - late sessions, duplicated events, sequence gaps and terminal events are rejected
+  ---
+  duration_ms: 0.3333
+  type: 'test'
+  ...
+# Subtest: variables cannot leak across pauses, stack frames or resumed execution
+ok 58 - variables cannot leak across pauses, stack frames or resumed execution
+  ---
+  duration_ms: 0.3453
+  type: 'test'
+  ...
+# Subtest: complete synthetic bundle validates bytes; this is not an offline product test
+ok 59 - complete synthetic bundle validates bytes; this is not an offline product test
+  ---
+  duration_ms: 0.4913
+  type: 'test'
+  ...
+# Subtest: empty, partial, corrupted or mismatched bundles never become ready
+ok 60 - empty, partial, corrupted or mismatched bundles never become ready
+  ---
+  duration_ms: 0.5359
+  type: 'test'
+  ...
+# Subtest: a bundle cannot impersonate a compatible resource set by copying its compatibilityId
+ok 61 - a bundle cannot impersonate a compatible resource set by copying its compatibilityId
+  ---
+  duration_ms: 0.444
+  type: 'test'
+  ...
+# Subtest: starting requires matching identities, initial breakpoint configuration and actual artifact bytes
+ok 62 - starting requires matching identities, initial breakpoint configuration and actual artifact bytes
+  ---
+  duration_ms: 0.9601
+  type: 'test'
+  ...
+# Subtest: real source breakpoints bind before execution and pause at the requested user line
+ok 63 - real source breakpoints bind before execution and pause at the requested user line
+  ---
+  duration_ms: 119.2796
+  type: 'test'
+  ...
+# Subtest: stopOnEntry pauses before the first user statement and breakpoint replacement removes old bindings
+ok 64 - stopOnEntry pauses before the first user statement and breakpoint replacement removes old bindings
+  ---
+  duration_ms: 106.4112
+  type: 'test'
+  ...
+# Subtest: step over executes a real recursive call and exposes its result in the caller
+ok 65 - step over executes a real recursive call and exposes its result in the caller
+  ---
+  duration_ms: 59.7424
+  type: 'test'
+  ...
+# Subtest: step into reaches the actual callee and step out returns to its caller
+ok 66 - step into reaches the actual callee and step out returns to its caller
+  ---
+  duration_ms: 93.5802
+  type: 'test'
+  ...
+# Subtest: recursive stack frames have distinct identities and retain their own local values
+ok 67 - recursive stack frames have distinct identities and retain their own local values
+  ---
+  duration_ms: 106.0888
+  type: 'test'
+  ...
+# Subtest: real DWARF variables expose arrays, pointer targets, strings and vector contents
+ok 68 - real DWARF variables expose arrays, pointer targets, strings and vector contents
+  ---
+  duration_ms: 156.9209
+  type: 'test'
+  ...
+# Subtest: container mutation, pagination, UTF-8 strings and int64 values come from live memory
+ok 69 - container mutation, pagination, UTF-8 strings and int64 values come from live memory
+  ---
+  duration_ms: 124.1762
+  type: 'test'
+  ...
+# Subtest: side-effecting watches and foreign frame references fail without changing execution state
+ok 70 - side-effecting watches and foreign frame references fail without changing execution state
+  ---
+  duration_ms: 96.7131
+  type: 'test'
+  ...
+# Subtest: accepted controls invalidate all old pause handles and duplicate command IDs never step twice
+ok 71 - accepted controls invalidate all old pause handles and duplicate command IDs never step twice
+  ---
+  duration_ms: 142.6061
+  type: 'test'
+  ...
+# Subtest: start preflight rejects altered source, component identity and actual resource bytes
+ok 72 - start preflight rejects altered source, component identity and actual resource bytes
+  ---
+  duration_ms: 136.4057
+  type: 'test'
+  ...
+# Subtest: batch stdin and real stdio produce the expected output, with EOF available
+ok 73 - batch stdin and real stdio produce the expected output, with EOF available
+  ---
+  duration_ms: 129.4075
+  type: 'test'
+  ...
+# Subtest: ordinary run and debug execute the same real Wasm with the same deterministic result
+ok 74 - ordinary run and debug execute the same real Wasm with the same deterministic result
+  ---
+  duration_ms: 107.2269
+  type: 'test'
+  ...
+# Subtest: output is bounded and truncated explicitly while exit status survives
+ok 75 - output is bounded and truncated explicitly while exit status survives
+  ---
+  duration_ms: 9364.9628
+  type: 'test'
+  ...
+# Subtest: stop cancels a pending resource read and late bytes cannot start the cancelled session
+ok 76 - stop cancels a pending resource read and late bytes cannot start the cancelled session
+  ---
+  duration_ms: 29.06
+  type: 'test'
+  ...
+# Subtest: a stale stop cannot cancel another build while its resource verification is pending
+ok 77 - a stale stop cannot cancel another build while its resource verification is pending
+  ---
+  duration_ms: 21.225
+  type: 'test'
+  ...
+# Subtest: a real unreachable instruction is reported as a trap, distinct from normal exit
+ok 78 - a real unreachable instruction is reported as a trap, distinct from normal exit
+  ---
+  duration_ms: 27.0256
+  type: 'test'
+  ...
+# Subtest: an executing infinite loop can be stopped and a new real session started
+ok 79 - an executing infinite loop can be stopped and a new real session started
+  ---
+  duration_ms: 360.1829
+  type: 'test'
+  ...
+# Subtest: runtime timeout terminates real computation while human pause time is excluded
+ok 80 - runtime timeout terminates real computation while human pause time is excluded
+  ---
+  duration_ms: 110.2339
+  type: 'test'
+  ...
+# Subtest: backgrounding terminates real computation and never resumes it on its own
+ok 81 - backgrounding terminates real computation and never resumes it on its own
+  ---
+  duration_ms: 63.1727
+  type: 'test'
+  ...
+# Subtest: actual Clang 8 DWARF maps code-payload PCs and binds executable user lines
+ok 82 - actual Clang 8 DWARF maps code-payload PCs and binds executable user lines
+  ---
+  duration_ms: 47.9007
+  type: 'test'
+  ...
+# Subtest: actual memory reconstructs arrays, pointer, mutated vector, short/long libc++ strings
+ok 83 - actual memory reconstructs arrays, pointer, mutated vector, short/long libc++ strings
+  ---
+  duration_ms: 67.7768
+  type: 'test'
+  ...
+# Subtest: recursive live frames use their own Wasm base local and initialization history
+ok 84 - recursive live frames use their own Wasm base local and initialization history
+  ---
+  duration_ms: 36.4073
+  type: 'test'
+  ...
+# Subtest: variables at their declaration boundary are explicit instead of stale stack values
+ok 85 - variables at their declaration boundary are explicit instead of stale stack values
+  ---
+  duration_ms: 32.7656
+  type: 'test'
+  ...
+# Subtest: real STL signed/unsigned LEB constants and live i64/u64 values remain exact
+ok 86 - real STL signed/unsigned LEB constants and live i64/u64 values remain exact
+  ---
+  duration_ms: 318.2537
+  type: 'test'
+  ...
+# Subtest: corrupted real pointer/container state reports bounded unavailability
+ok 87 - corrupted real pointer/container state reports bounded unavailability
+  ---
+  duration_ms: 52.3962
+  type: 'test'
+  ...
+# Subtest: standard frame-base/fbreg/Wasm location expressions preserve i64 and concrete aggregate types
+ok 88 - standard frame-base/fbreg/Wasm location expressions preserve i64 and concrete aggregate types
+  ---
+  duration_ms: 3.8531
+  type: 'test'
+  ...
+# Subtest: malformed debug inputs fail within bounded readers
+ok 89 - malformed debug inputs fail within bounded readers
+  ---
+  duration_ms: 1.6202
+  type: 'test'
+  ...
+# Subtest: floating watch conversions and truth values agree with freshly compiled C++ execution
+    # Subtest: float32 operands convert integer inputs before arithmetic and comparison
+    ok 1 - float32 operands convert integer inputs before arithmetic and comparison
+      ---
+      duration_ms: 21.3283
+      type: 'test'
+      ...
+    # Subtest: int64 converts directly to float32 without intermediate double rounding
+    ok 2 - int64 converts directly to float32 without intermediate double rounding
+      ---
+      duration_ms: 5.5793
+      type: 'test'
+      ...
+    # Subtest: float and double NaN convert to true in logical operations
+    ok 3 - float and double NaN convert to true in logical operations
+      ---
+      duration_ms: 8.4359
+      type: 'test'
+      ...
+    # Subtest: C++ truth conversion controls actual short circuiting without evaluating the skipped branch
+    ok 4 - C++ truth conversion controls actual short circuiting without evaluating the skipped branch
+      ---
+      duration_ms: 3.6512
+      type: 'test'
+      ...
+    # Subtest: signed zero and infinity use C++ scalar truth values
+    ok 5 - signed zero and infinity use C++ scalar truth values
+      ---
+      duration_ms: 4.2991
+      type: 'test'
+      ...
+    # Subtest: double common type retains double precision and integer conversions
+    ok 6 - double common type retains double precision and integer conversions
+      ---
+      duration_ms: 3.2552
+      type: 'test'
+      ...
+    # Subtest: queries retain actual execution output and ordered event identity
+    ok 7 - queries retain actual execution output and ordered event identity
+      ---
+      duration_ms: 2950.7883
+      type: 'test'
+      ...
+    1..7
+ok 90 - floating watch conversions and truth values agree with freshly compiled C++ execution
+  ---
+  duration_ms: 4219.6793
+  type: 'test'
+  ...
+# Subtest: fresh loop initializer withholds previous iteration x until its real new store
+ok 91 - fresh loop initializer withholds previous iteration x until its real new store
+  ---
+  duration_ms: 1115.3564
+  type: 'test'
+  ...
+# {"name":"loop-initializer","sourceHash":"sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee","artifactSHA256":"sha256:26ae821aee785bdd5e9638f035f8006efbc0242d7d3f7f0b5d0dfc63f55255fa","observations":18,"failureCount":0,"exitCode":21}
+# Subtest: fresh inner initializer never falls back to outer x and restores it after lexical exit
+ok 92 - fresh inner initializer never falls back to outer x and restores it after lexical exit
+  ---
+  duration_ms: 919.5527
+  type: 'test'
+  ...
+# {"name":"shadow-initializer","sourceHash":"sha256:0b2a59a89bd3915d96eeb3f512c09f99fdddcc79ac5deb0e097c18d79a2524e1","artifactSHA256":"sha256:a10a753e839dacd074bf4b6a353500e1f0baf2a25a4b4cf20d81df86ac4d53e3","observations":19,"failureCount":0,"exitCode":21}
+# Subtest: real Node Worker transport preserves initializer lifetime through caller queries and all steps
+ok 93 - real Node Worker transport preserves initializer lifetime through caller queries and all steps
+  ---
+  duration_ms: 864.7757
+  type: 'test'
+  ...
+# {"name":"worker-loop-initializer","sourceHash":"sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee","artifactSHA256":"sha256:26ae821aee785bdd5e9638f035f8006efbc0242d7d3f7f0b5d0dfc63f55255fa","observations":18,"exitCode":21}
+# Subtest: a later call on the same source line does not hide an already constructed vector
+ok 94 - a later call on the same source line does not hide an already constructed vector
+  ---
+  duration_ms: 1428.8473
+  type: 'test'
+  ...
+# {"name":"same-line-completed-vector","sourceHash":"sha256:3156093fbcbfb6f91edd40e4aff02b38cdad2d8fa6eb8ba64e9d6c7c7c4aae47","artifactSHA256":"sha256:908188364fc04b12ee79912d5b2a1d8df3e8182df961f13c07d6347577aa5921","exitCode":11}
+# Subtest: real repeated initializer hides caller x during callee and return-before-store; body values stay 10/11
+ok 95 - real repeated initializer hides caller x during callee and return-before-store; body values stay 10/11
+  ---
+  duration_ms: 1670.2531
+  type: 'test'
+  ...
+# Subtest: lifetime updates occur without queries during the first iteration
+ok 96 - lifetime updates occur without queries during the first iteration
+  ---
+  duration_ms: 45.2387
+  type: 'test'
+  ...
+# Subtest: arrays, pointer, vector/string and partially written constructors use current lifetimes
+ok 97 - arrays, pointer, vector/string and partially written constructors use current lifetimes
+  ---
+  duration_ms: 36.9031
+  type: 'test'
+  ...
+# Subtest: a completed vector stays readable during a later initializer on the same source line
+ok 98 - a completed vector stays readable during a later initializer on the same source line
+  ---
+  duration_ms: 29.5792
+  type: 'test'
+  ...
+# Subtest: recursive activations maintain distinct declaration epochs and do not expose earlier x
+ok 99 - recursive activations maintain distinct declaration epochs and do not expose earlier x
+  ---
+  duration_ms: 21.3116
+  type: 'test'
+  ...
+# Subtest: lost lifetime metadata stays unavailable instead of falling back to historical writes
+ok 100 - lost lifetime metadata stays unavailable instead of falling back to historical writes
+  ---
+  duration_ms: 21.1782
+  type: 'test'
+  ...
+# Subtest: actual loop-header revisits retain initialized i while fresh declarations hide old storage
+ok 101 - actual loop-header revisits retain initialized i while fresh declarations hide old storage
+  ---
+  duration_ms: 32.6989
+  type: 'test'
+  ...
+# Subtest: actual nested x resolves to the nearest active declaration and restores outer x after scope exit
+ok 102 - actual nested x resolves to the nearest active declaration and restores outer x after scope exit
+  ---
+  duration_ms: 8.8156
+  type: 'test'
+  ...
+# Subtest: native validation rejects malformed binaries; unsupported imports fail explicitly
+ok 103 - native validation rejects malformed binaries; unsupported imports fail explicitly
+  ---
+  duration_ms: 2.8019
+  type: 'test'
+  ...
+# Subtest: one step means one instruction and recursion retains distinct frame locals
+ok 104 - one step means one instruction and recursion retains distinct frame locals
+  ---
+  duration_ms: 6.571
+  type: 'test'
+  ...
+# Subtest: br_if and br_table preserve label results and discard intermediate operands
+ok 105 - br_if and br_table preserve label results and discard intermediate operands
+  ---
+  duration_ms: 2.8814
+  type: 'test'
+  ...
+# Subtest: call_indirect resolves real table entries and checks null, bounds and signature
+ok 106 - call_indirect resolves real table entries and checks null, bounds and signature
+  ---
+  duration_ms: 2.2282
+  type: 'test'
+  ...
+# Subtest: all MVP integer and floating point instructions agree with the native engine
+ok 107 - all MVP integer and floating point instructions agree with the native engine
+  ---
+  duration_ms: 54.812
+  type: 'test'
+  ...
+# Subtest: memory loads, stores, growth, wrapping addresses and traps agree with native
+ok 108 - memory loads, stores, growth, wrapping addresses and traps agree with native
+  ---
+  duration_ms: 10.8305
+  type: 'test'
+  ...
+# Subtest: signaling and payload NaN bits survive reinterpretation, constants, memory and calls
+ok 109 - signaling and payload NaN bits survive reinterpretation, constants, memory and calls
+  ---
+  duration_ms: 13.6424
+  type: 'test'
+  ...
+# Subtest: module start, mutable globals, active data and loop budgets are actual execution
+ok 110 - module start, mutable globals, active data and loop budgets are actual execution
+  ---
+  duration_ms: 8.1127
+  type: 'test'
+  ...
+# Subtest: memory initialization evidence records real stores and child constructor writes
+ok 111 - memory initialization evidence records real stores and child constructor writes
+  ---
+  duration_ms: 1.0378
+  type: 'test'
+  ...
+# Subtest: declaration epochs reject previous-iteration bytes even when no intermediate variables were queried
+ok 112 - declaration epochs reject previous-iteration bytes even when no intermediate variables were queried
+  ---
+  duration_ms: 2.8515
+  type: 'test'
+  ...
+# Subtest: epoch coverage combines overlapping partial writes from real descendants and excludes older bytes
+ok 113 - epoch coverage combines overlapping partial writes from real descendants and excludes older bytes
+  ---
+  duration_ms: 1.2025
+  type: 'test'
+  ...
+# Subtest: declaration observation is per recursive activation and expires when each real frame returns
+ok 114 - declaration observation is per recursive activation and expires when each real frame returns
+  ---
+  duration_ms: 0.9623
+  type: 'test'
+  ...
+# Subtest: WASI writes performed by the declaration instruction count in that exact epoch
+ok 115 - WASI writes performed by the declaration instruction count in that exact epoch
+  ---
+  duration_ms: 0.7853
+  type: 'test'
+  ...
+# Subtest: bounded epoch history reports pruned coverage unknown while retaining newer writes
+ok 116 - bounded epoch history reports pruned coverage unknown while retaining newer writes
+  ---
+  duration_ms: 30.9739
+  type: 'test'
+  ...
+# Subtest: declaration registration is bounded, atomic, deduplicated and limited to actual instruction PCs
+ok 117 - declaration registration is bounded, atomic, deduplicated and limited to actual instruction PCs
+  ---
+  duration_ms: 2.036
+  type: 'test'
+  ...
+# Subtest: WASI stdin/output, arguments and proc_exit execute at their real call instructions
+ok 118 - WASI stdin/output, arguments and proc_exit execute at their real call instructions
+  ---
+  duration_ms: 1.0076
+  type: 'test'
+  ...
+# Subtest: one WASI I/O instruction uses bounded iovecs, short writes and bounded chunks
+ok 119 - one WASI I/O instruction uses bounded iovecs, short writes and bounded chunks
+  ---
+  duration_ms: 1.8223
+  type: 'test'
+  ...
+# Subtest: real compiler artifact debug-handoff: exit, output and linear memory match native WebAssembly
+ok 120 - real compiler artifact debug-handoff: exit, output and linear memory match native WebAssembly
+  ---
+  duration_ms: 90.8722
+  type: 'test'
+  ...
+# 18742 real Wasm instructions; 1179648 final linear memory bytes
+# Subtest: real compiler artifact c-stdio: exit, output and linear memory match native WebAssembly
+ok 121 - real compiler artifact c-stdio: exit, output and linear memory match native WebAssembly
+  ---
+  duration_ms: 35.835
+  type: 'test'
+  ...
+# 12651 real Wasm instructions; 1179648 final linear memory bytes
+# Subtest: real compiler artifact stl: exit, output and linear memory match native WebAssembly
+ok 122 - real compiler artifact stl: exit, output and linear memory match native WebAssembly
+  ---
+  duration_ms: 509.7109
+  type: 'test'
+  ...
+# 530257 real Wasm instructions; 1179648 final linear memory bytes
+# Subtest: watch semantics match fresh native Wasm or explicitly report the unsupported subset
+    # Subtest: REV-002: integer bases and subsequent integer conversions agree with compiled expressions
+    ok 1 - REV-002: integer bases and subsequent integer conversions agree with compiled expressions
+      ---
+      duration_ms: 19.9484
+      type: 'test'
+      ...
+    # Subtest: REV-002: invalid octal tokens are explicitly unsupported, including nested and skipped operands
+    ok 2 - REV-002: invalid octal tokens are explicitly unsupported, including nested and skipped operands
+      ---
+      duration_ms: 16.138
+      type: 'test'
+      ...
+    # Subtest: REV-003: two pointers never enter pointer-integer arithmetic and unknown provenance stays unsupported
+    ok 3 - REV-003: two pointers never enter pointer-integer arithmetic and unknown provenance stays unsupported
+      ---
+      duration_ms: 17.7653
+      type: 'test'
+      ...
+    # Subtest: REV-003: integer pointer offsets, dereference and null comparisons retain actual values
+    ok 4 - REV-003: integer pointer offsets, dereference and null comparisons retain actual values
+      ---
+      duration_ms: 14.3931
+      type: 'test'
+      ...
+    # Subtest: float32 unary signs preserve the operand width through arithmetic
+    ok 5 - float32 unary signs preserve the operand width through arithmetic
+      ---
+      duration_ms: 4.8759
+      type: 'test'
+      ...
+    # Subtest: real compiler separately rejects invalid octal constants and pointer addition
+    ok 6 - real compiler separately rejects invalid octal constants and pointer addition
+      ---
+      duration_ms: 958.055
+      type: 'test'
+      ...
+    # Subtest: queries leave real program execution, event identity and native output unchanged
+    ok 7 - queries leave real program execution, event identity and native output unchanged
+      ---
+      duration_ms: 935.9864
+      type: 'test'
+      ...
+    1..7
+ok 123 - watch semantics match fresh native Wasm or explicitly report the unsupported subset
+  ---
+  duration_ms: 3252.3684
+  type: 'test'
+  ...
+# Subtest: real Node Worker binds breakpoints, queries real locals, steps a recursive call and exits
+ok 124 - real Node Worker binds breakpoints, queries real locals, steps a recursive call and exits
+  ---
+  duration_ms: 545.4531
+  type: 'test'
+  ...
+# Subtest: real Node Worker transfers batch stdin and UTF-8 stdout with authoritative resync
+ok 125 - real Node Worker transfers batch stdin and UTF-8 stdout with authoritative resync
+  ---
+  duration_ms: 352.9675
+  type: 'test'
+  ...
+# Subtest: real C++ STL in Node Worker transfers Chinese, emoji and exact i64 output
+ok 126 - real C++ STL in Node Worker transfers Chinese, emoji and exact i64 output
+  ---
+  duration_ms: 1884.3547
+  type: 'test'
+  ...
+# Subtest: real infinite Wasm in Node Worker yields to Stop and permits a new real session
+ok 127 - real infinite Wasm in Node Worker yields to Stop and permits a new real session
+  ---
+  duration_ms: 451.5378
+  type: 'test'
+  ...
+# Subtest: in-memory real artifacts are copied, checked by hash and executed through Node Worker
+ok 128 - in-memory real artifacts are copied, checked by hash and executed through Node Worker
+  ---
+  duration_ms: 260.6118
+  type: 'test'
+  ...
+# Subtest: fault injection: Stop hard-kills never-ready Worker before any event
+ok 129 - fault injection: Stop hard-kills never-ready Worker before any event
+  ---
+  duration_ms: 96.9701
+  type: 'test'
+  ...
+# Subtest: fault injection: Stop hard-kills RPC-stalled Worker before any event
+ok 130 - fault injection: Stop hard-kills RPC-stalled Worker before any event
+  ---
+  duration_ms: 78.4529
+  type: 'test'
+  ...
+# Subtest: fault injection: wrong-key Stop cannot kill the current stalled Worker
+ok 131 - fault injection: wrong-key Stop cannot kill the current stalled Worker
+  ---
+  duration_ms: 79.2376
+  type: 'test'
+  ...
+# Subtest: source export preserves exact user bytes while project export round-trips driver and stdin
+ok 132 - source export preserves exact user bytes while project export round-trips driver and stdin
+  ---
+  duration_ms: 6.3522
+  type: 'test'
+  ...
+# Subtest: invalid or unsupported project imports fail without invoking storage
+ok 133 - invalid or unsupported project imports fail without invoking storage
+  ---
+  duration_ms: 1.2907
+  type: 'test'
+  ...
+# Subtest: unavailable local storage returns an explicit failure
+ok 134 - unavailable local storage returns an explicit failure
+  ---
+  duration_ms: 0.736
+  type: 'test'
+  ...
+# Subtest: autosave serializes writes and coalesces typing during a slow save
+ok 135 - autosave serializes writes and coalesces typing during a slow save
+  ---
+  duration_ms: 0.8263
+  type: 'test'
+  ...
+# Subtest: failed in-flight save retains the latest edit for an explicit retry
+ok 136 - failed in-flight save retains the latest edit for an explicit retry
+  ---
+  duration_ms: 0.6648
+  type: 'test'
+  ...
+# Subtest: a failed restore cannot silently create a new draft over unread local data
+ok 137 - a failed restore cannot silently create a new draft over unread local data
+  ---
+  duration_ms: 0.4271
+  type: 'test'
+  ...
+# Subtest: VAL-004: deleting draft requests cannot hide an existing snapshot binding
+ok 138 - VAL-004: deleting draft requests cannot hide an existing snapshot binding
+  ---
+  duration_ms: 2.7221
+  type: 'test'
+  ...
+# Subtest: new dirty-draft requests stay separate from the old snapshot collection
+ok 139 - new dirty-draft requests stay separate from the old snapshot collection
+  ---
+  duration_ms: 0.2555
+  type: 'test'
+  ...
+# Subtest: editable binding status is associated only with both matching source and session
+ok 140 - editable binding status is associated only with both matching source and session
+  ---
+  duration_ms: 0.2114
+  type: 'test'
+  ...
+# Subtest: a snapshot from a different or absent session cannot inherit its bindings
+ok 141 - a snapshot from a different or absent session cannot inherit its bindings
+  ---
+  duration_ms: 0.1272
+  type: 'test'
+  ...
+# Subtest: snapshot remains read-only even while draft source bytes still match
+ok 142 - snapshot remains read-only even while draft source bytes still match
+  ---
+  duration_ms: 0.1182
+  type: 'test'
+  ...
+# Subtest: snapshot preserves pending, invalid reasons, and all relocated actual positions
+ok 143 - snapshot preserves pending, invalid reasons, and all relocated actual positions
+  ---
+  duration_ms: 0.1525
+  type: 'test'
+  ...
+# Subtest: user.inc and driver retain separate requested and actual source paths
+ok 144 - user.inc and driver retain separate requested and actual source paths
+  ---
+  duration_ms: 0.1635
+  type: 'test'
+  ...
+# Subtest: replacement bindings and an authoritative empty resync replace the selected snapshot collection
+ok 145 - replacement bindings and an authoritative empty resync replace the selected snapshot collection
+  ---
+  duration_ms: 0.112
+  type: 'test'
+  ...
+# Subtest: display selection leaves input requests, reasons and actual arrays unchanged
+ok 146 - display selection leaves input requests, reasons and actual arrays unchanged
+  ---
+  duration_ms: 0.202
+  type: 'test'
+  ...
+# Subtest: clipboard: a saved source edit survives a late read with no extra revision
+ok 147 - clipboard: a saved source edit survives a late read with no extra revision
+  ---
+  duration_ms: 26.3206
+  type: 'test'
+  ...
+# Subtest: clipboard: stdin edits invalidate an earlier read
+ok 148 - clipboard: stdin edits invalidate an earlier read
+  ---
+  duration_ms: 9.3258
+  type: 'test'
+  ...
+# Subtest: clipboard: language edits invalidate an earlier read
+ok 149 - clipboard: language edits invalidate an earlier read
+  ---
+  duration_ms: 3.749
+  type: 'test'
+  ...
+# Subtest: clipboard: driver edits invalidate an earlier read
+ok 150 - clipboard: driver edits invalidate an earlier read
+  ---
+  duration_ms: 4.1508
+  type: 'test'
+  ...
+# Subtest: clipboard: newest request alone wins when B finishes before A
+ok 151 - clipboard: newest request alone wins when B finishes before A
+  ---
+  duration_ms: 4.6067
+  type: 'test'
+  ...
+# Subtest: clipboard: A cannot apply while a newer B read is still pending
+ok 152 - clipboard: A cannot apply while a newer B read is still pending
+  ---
+  duration_ms: 3.9623
+  type: 'test'
+  ...
+# Subtest: clipboard: old failure does not open fallback while B is pending
+ok 153 - clipboard: old failure does not open fallback while B is pending
+  ---
+  duration_ms: 4.2115
+  type: 'test'
+  ...
+# Subtest: clipboard: old failure cannot reopen fallback after B has succeeded
+ok 154 - clipboard: old failure cannot reopen fallback after B has succeeded
+  ---
+  duration_ms: 7.2745
+  type: 'test'
+  ...
+# Subtest: clipboard: failure after an edit preserves feedback and never opens fallback
+ok 155 - clipboard: failure after an edit preserves feedback and never opens fallback
+  ---
+  duration_ms: 4.358
+  type: 'test'
+  ...
+# Subtest: clipboard: a current successful read applies Unicode source
+ok 156 - clipboard: a current successful read applies Unicode source
+  ---
+  duration_ms: 2.645
+  type: 'test'
+  ...
+# Subtest: clipboard: a current successful read applies empty text
+ok 157 - clipboard: a current successful read applies empty text
+  ---
+  duration_ms: 1.8051
+  type: 'test'
+  ...
+# Subtest: clipboard: current denied read can apply manual text exactly once
+ok 158 - clipboard: current denied read can apply manual text exactly once
+  ---
+  duration_ms: 2.3743
+  type: 'test'
+  ...
+# Subtest: clipboard: cancelling manual paste leaves draft and store unchanged
+ok 159 - clipboard: cancelling manual paste leaves draft and store unchanged
+  ---
+  duration_ms: 3.3313
+  type: 'test'
+  ...
+# Subtest: clipboard: pending import replacement blocks late read side effects (preventative)
+ok 160 - clipboard: pending import replacement blocks late read side effects (preventative)
+  ---
+  duration_ms: 3.3862
+  type: 'test'
+  ...
+# Subtest: clipboard: manual apply revalidates after an import replaces the draft
+ok 161 - clipboard: manual apply revalidates after an import replaces the draft
+  ---
+  duration_ms: 2.5761
+  type: 'test'
+  ...
+# Subtest: clipboard: recovery start invalidates reads and rejects new paste requests
+ok 162 - clipboard: recovery start invalidates reads and rejects new paste requests
+  ---
+  duration_ms: 3.5282
+  type: 'test'
+  ...
+# Subtest: clipboard: manual apply cannot write into a completed recovery copy
+ok 163 - clipboard: manual apply cannot write into a completed recovery copy
+  ---
+  duration_ms: 8.0631
+  type: 'test'
+  ...
+# Subtest: clipboard: an old error after recovery cannot open fallback or replace feedback
+ok 164 - clipboard: an old error after recovery cannot open fallback or replace feedback
+  ---
+  duration_ms: 9.3505
+  type: 'test'
+  ...
+# Subtest: clipboard: copy fallback resets prior dialog return value and cannot paste
+ok 165 - clipboard: copy fallback resets prior dialog return value and cannot paste
+  ---
+  duration_ms: 4.472
+  type: 'test'
+  ...
+# Subtest: clipboard: late copy fallback preserves an open manual paste and its context
+ok 166 - clipboard: late copy fallback preserves an open manual paste and its context
+  ---
+  duration_ms: 3.1593
+  type: 'test'
+  ...
+# Subtest: highlight escapes source markup and keeps multiline comments inside valid per-line spans
+ok 167 - highlight escapes source markup and keeps multiline comments inside valid per-line spans
+  ---
+  duration_ms: 2.0281
+  type: 'test'
+  ...
+# Subtest: indent at the beginning of an empty first line does not duplicate the newline
+ok 168 - indent at the beginning of an empty first line does not duplicate the newline
+  ---
+  duration_ms: 0.8594
+  type: 'test'
+  ...
+# Subtest: multiline indent and outdent exclude the line after a selected newline
+ok 169 - multiline indent and outdent exclude the line after a selected newline
+  ---
+  duration_ms: 0.2575
+  type: 'test'
+  ...
+# Subtest: REV-005: B finishing before A is the only import delivered to autosave
+ok 170 - REV-005: B finishing before A is the only import delivered to autosave
+  ---
+  duration_ms: 8.9209
+  type: 'test'
+  ...
+# Subtest: REV-005: obsolete A failure neither overwrites B feedback nor clears B selection
+ok 171 - REV-005: obsolete A failure neither overwrites B feedback nor clears B selection
+  ---
+  duration_ms: 1.8979
+  type: 'test'
+  ...
+# Subtest: REV-005: A success/finally cannot clear the file input while B is reading
+ok 172 - REV-005: A success/finally cannot clear the file input while B is reading
+  ---
+  duration_ms: 1.8327
+  type: 'test'
+  ...
+# Subtest: REV-005: a late A error does not replace feedback after B has completed
+ok 173 - REV-005: a late A error does not replace feedback after B has completed
+  ---
+  duration_ms: 1.8047
+  type: 'test'
+  ...
+# Subtest: REV-005: a late A read error cannot replace the actual newer B import error
+ok 174 - REV-005: a late A read error cannot replace the actual newer B import error
+  ---
+  duration_ms: 1.7037
+  type: 'test'
+  ...
+# Subtest: REV-005: a pending read rejection after editing preserves the newer operation's prompt
+ok 175 - REV-005: a pending read rejection after editing preserves the newer operation's prompt
+  ---
+  duration_ms: 1.6508
+  type: 'test'
+  ...
+# Subtest: REV-005: a pending read rejection after switching drafts preserves the newer operation's prompt
+ok 176 - REV-005: a pending read rejection after switching drafts preserves the newer operation's prompt
+  ---
+  duration_ms: 2.0652
+  type: 'test'
+  ...
+# Subtest: REV-005: a pending read rejection after starting recovery preserves the newer operation's prompt
+ok 177 - REV-005: a pending read rejection after starting recovery preserves the newer operation's prompt
+  ---
+  duration_ms: 1.2857
+  type: 'test'
+  ...
+# Subtest: REV-005: edits made while the file is reading survive and produce an explanatory prompt
+ok 178 - REV-005: edits made while the file is reading survive and produce an explanatory prompt
+  ---
+  duration_ms: 1.4829
+  type: 'test'
+  ...
+# Subtest: REV-005: real source, stdin and language handlers all increment the edit generation
+ok 179 - REV-005: real source, stdin and language handlers all increment the edit generation
+  ---
+  duration_ms: 1.4702
+  type: 'test'
+  ...
+# Subtest: REV-005: switching draft objects during a read never imports into the new draft
+ok 180 - REV-005: switching draft objects during a read never imports into the new draft
+  ---
+  duration_ms: 1.074
+  type: 'test'
+  ...
+# Subtest: REV-005: replacing the same draft id still invalidates the old read by object identity
+ok 181 - REV-005: replacing the same draft id still invalidates the old read by object identity
+  ---
+  duration_ms: 1.0891
+  type: 'test'
+  ...
+# Subtest: REV-005: entering recovery while reading prevents import and saving
+ok 182 - REV-005: entering recovery while reading prevents import and saving
+  ---
+  duration_ms: 4.7348
+  type: 'test'
+  ...
+# Subtest: REV-005: import requested during recovery is rejected without changing the draft
+ok 183 - REV-005: import requested during recovery is rejected without changing the draft
+  ---
+  duration_ms: 1.5417
+  type: 'test'
+  ...
+# Subtest: REV-005: the latest import error preserves source, driver, input and persisted draft
+ok 184 - REV-005: the latest import error preserves source, driver, input and persisted draft
+  ---
+  duration_ms: 1.8229
+  type: 'test'
+  ...
+# Subtest: REV-005: a normal C import updates the editor and is saved with the existing CAS revision
+ok 185 - REV-005: a normal C import updates the editor and is saved with the existing CAS revision
+  ---
+  duration_ms: 3.5699
+  type: 'test'
+  ...
+# Subtest: REV-005: complete-project JSON imports driver/input but retains the local draft identity
+ok 186 - REV-005: complete-project JSON imports driver/input but retains the local draft identity
+  ---
+  duration_ms: 2.6517
+  type: 'test'
+  ...
+# Subtest: saved standard mode is restored; unknown, absent and denied settings fall back to Control alternatives
+ok 187 - saved standard mode is restored; unknown, absent and denied settings fall back to Control alternatives
+  ---
+  duration_ms: 24.4947
+  type: 'test'
+  ...
+# Subtest: changing a shortcut scheme persists it and immediately updates labels, ARIA and actual dispatch
+ok 188 - changing a shortcut scheme persists it and immediately updates labels, ARIA and actual dispatch
+  ---
+  duration_ms: 8.3852
+  type: 'test'
+  ...
+# Subtest: denied setting writes keep the selected scheme effective for this page and show the Chinese recovery hint
+ok 189 - denied setting writes keep the selected scheme effective for this page and show the Chinese recovery hint
+  ---
+  duration_ms: 4.6414
+  type: 'test'
+  ...
+# Subtest: standard keys and physical Control alternatives dispatch the actual main intents
+ok 190 - standard keys and physical Control alternatives dispatch the actual main intents
+  ---
+  duration_ms: 29.1261
+  type: 'test'
+  ...
+# Subtest: F5 continues a paused session while the run key never recompiles an active session
+ok 191 - F5 continues a paused session while the run key never recompiles an active session
+  ---
+  duration_ms: 4.6184
+  type: 'test'
+  ...
+# Subtest: compile buttons and both keyboard entry modes share restoration, resource, recovery and active-session guards
+ok 192 - compile buttons and both keyboard entry modes share restoration, resource, recovery and active-session guards
+  ---
+  duration_ms: 39.4554
+  type: 'test'
+  ...
+# Subtest: step-out has its own action and capability gate and agrees with its rendered button
+ok 193 - step-out has its own action and capability gate and agrees with its rendered button
+  ---
+  duration_ms: 39.5956
+  type: 'test'
+  ...
+# Subtest: continue and each step also reject preparation, recovery, restoration and compilation ownership
+ok 194 - continue and each step also reject preparation, recovery, restoration and compilation ownership
+  ---
+  duration_ms: 28.4459
+  type: 'test'
+  ...
+# Subtest: unmapped extra modifiers and number-pad keys are neither consumed nor dispatched
+ok 195 - unmapped extra modifiers and number-pad keys are neither consumed nor dispatched
+  ---
+  duration_ms: 18.988
+  type: 'test'
+  ...
+# Subtest: composition and handled events are ignored; recognized repeats are consumed without execution
+ok 196 - composition and handled events are ignored; recognized repeats are consumed without execution
+  ---
+  duration_ms: 32.6229
+  type: 'test'
+  ...
+# Subtest: other text fields and dialogs retain their keys; source and non-editable controls allow dispatch
+ok 197 - other text fields and dialogs retain their keys; source and non-editable controls allow dispatch
+  ---
+  duration_ms: 19.6012
+  type: 'test'
+  ...
+# Subtest: recovery and inert surfaces consume known keys without invoking actions
+ok 198 - recovery and inert surfaces consume known keys without invoking actions
+  ---
+  duration_ms: 5.2804
+  type: 'test'
+  ...
+# Subtest: F9 only changes editable source requests; dirty edits and snapshots leave old session bindings intact
+ok 199 - F9 only changes editable source requests; dirty edits and snapshots leave old session bindings intact
+  ---
+  duration_ms: 5.0072
+  type: 'test'
+  ...
+# Subtest: the actual prepare function blocks keyboard compilation until the controlled resource check succeeds
+ok 200 - the actual prepare function blocks keyboard compilation until the controlled resource check succeeds
+  ---
+  duration_ms: 3.4516
+  type: 'test'
+  ...
+# Subtest: keyboard stop cancels compiling once and a queued duplicate start cannot construct another compiler
+ok 201 - keyboard stop cancels compiling once and a queued duplicate start cannot construct another compiler
+  ---
+  duration_ms: 4.2715
+  type: 'test'
+  ...
+# Subtest: pending continue invalidates repeated actions immediately while stop bypasses its unresolved ACK
+ok 202 - pending continue invalidates repeated actions immediately while stop bypasses its unresolved ACK
+  ---
+  duration_ms: 2.8314
+  type: 'test'
+  ...
+# Subtest: pending startup blocks another start and allows independent stop before its ACK
+ok 203 - pending startup blocks another start and allows independent stop before its ACK
+  ---
+  duration_ms: 3.3411
+  type: 'test'
+  ...
+# Subtest: source search keeps its exact modifier and focus behavior without invoking debug actions
+ok 204 - source search keeps its exact modifier and focus behavior without invoking debug actions
+  ---
+  duration_ms: 12.031
+  type: 'test'
+  ...
+# Subtest: prepare synchronously locks run/debug/prepare before its first await; renders and duplicate calls cannot reopen the gate
+ok 205 - prepare synchronously locks run/debug/prepare before its first await; renders and duplicate calls cannot reopen the gate
+  ---
+  duration_ms: 6.9428
+  type: 'test'
+  ...
+# Subtest: prepare stays locked through trust and resource checks and unlocks only on successful completion
+ok 206 - prepare stays locked through trust and resource checks and unlocks only on successful completion
+  ---
+  duration_ms: 1.6691
+  type: 'test'
+  ...
+# Subtest: failed preparation clears the old candidate, keeps compile disabled, and permits a later retry
+ok 207 - failed preparation clears the old candidate, keeps compile disabled, and permits a later retry
+  ---
+  duration_ms: 8.3942
+  type: 'test'
+  ...
+# Subtest: prepare rejects direct entry while draft restoration, recovery, compilation, or a live session owns the gate
+ok 208 - prepare rejects direct entry while draft restoration, recovery, compilation, or a live session owns the gate
+  ---
+  duration_ms: 8.9667
+  type: 'test'
+  ...
+# Subtest: compile enforces state guards rather than trusting enabled buttons
+ok 209 - compile enforces state guards rather than trusting enabled buttons
+  ---
+  duration_ms: 22.5539
+  type: 'test'
+  ...
+# Subtest: terminal sessions allow preparation again without accidentally reusing the old candidate
+ok 210 - terminal sessions allow preparation again without accidentally reusing the old candidate
+  ---
+  duration_ms: 1.8247
+  type: 'test'
+  ...
+# Subtest: a compilation captures one candidate for adapter construction, compiler request, resource handoff and start
+ok 211 - a compilation captures one candidate for adapter construction, compiler request, resource handoff and start
+  ---
+  duration_ms: 6.2636
+  type: 'test'
+  ...
+# Subtest: stop cancels pending compilation without starting a stale result and releases the preparation gate
+ok 212 - stop cancels pending compilation without starting a stale result and releases the preparation gate
+  ---
+  duration_ms: 2.2347
+  type: 'test'
+  ...
+# Subtest: UI consumer reads a fresh actual C++ build, bound breakpoint, all steps, caller, containers and output
+ok 213 - UI consumer reads a fresh actual C++ build, bound breakpoint, all steps, caller, containers and output
+  ---
+  duration_ms: 1871.6735
+  type: 'test'
+  ...
+# Subtest: editable driver compiles real separate user.inc and driver.cpp and preserves driver edit identity
+ok 214 - editable driver compiles real separate user.inc and driver.cpp and preserves driver edit identity
+  ---
+  duration_ms: 1838.8935
+  type: 'test'
+  ...
+# Subtest: late start ACK cannot replace an already terminated short program
+ok 215 - late start ACK cannot replace an already terminated short program
+  ---
+  duration_ms: 3.1374
+  type: 'test'
+  ...
+# Subtest: resume immediately invalidates pause; stale stack and ACK do not restore it
+ok 216 - resume immediately invalidates pause; stale stack and ACK do not restore it
+  ---
+  duration_ms: 2.0636
+  type: 'test'
+  ...
+# Subtest: stop dispatches while start ACK remains unresolved
+ok 217 - stop dispatches while start ACK remains unresolved
+  ---
+  duration_ms: 0.4129
+  type: 'test'
+  ...
+# Subtest: foreign sessions and duplicate events cannot overwrite current view
+ok 218 - foreign sessions and duplicate events cannot overwrite current view
+  ---
+  duration_ms: 0.5065
+  type: 'test'
+  ...
+# Subtest: sequence gap clears pause, then resync replays only newer contiguous events
+ok 219 - sequence gap clears pause, then resync replays only newer contiguous events
+  ---
+  duration_ms: 1.1769
+  type: 'test'
+  ...
+# Subtest: resync refuses an older snapshot and keeps inspection disabled
+ok 220 - resync refuses an older snapshot and keeps inspection disabled
+  ---
+  duration_ms: 0.8405
+  type: 'test'
+  ...
+# Subtest: a previous frame variable response cannot replace selected caller data
+ok 221 - a previous frame variable response cannot replace selected caller data
+  ---
+  duration_ms: 2.5044
+  type: 'test'
+  ...
+# Subtest: resync buffer overflow requests another authoritative snapshot
+ok 222 - resync buffer overflow requests another authoritative snapshot
+  ---
+  duration_ms: 0.3431
+  type: 'test'
+  ...
+# Subtest: scope pagination advertises unread values and appends each page once
+ok 223 - scope pagination advertises unread values and appends each page once
+  ---
+  duration_ms: 0.6732
+  type: 'test'
+  ...
+# Subtest: a rejected stale query does not display an error on a new pause
+ok 224 - a rejected stale query does not display an error on a new pause
+  ---
+  duration_ms: 0.7822
+  type: 'test'
+  ...
+# Subtest: output history stays bounded and truncation is explicit
+ok 225 - output history stays bounded and truncation is explicit
+  ---
+  duration_ms: 0.9531
+  type: 'test'
+  ...
+# Subtest: breakpoint replacements are serialized and actual bindings come from events
+ok 226 - breakpoint replacements are serialized and actual bindings come from events
+  ---
+  duration_ms: 0.5831
+  type: 'test'
+  ...
+# Subtest: an old rejected ACK cannot invalidate the authoritative resynced pause
+ok 227 - an old rejected ACK cannot invalidate the authoritative resynced pause
+  ---
+  duration_ms: 0.5442
+  type: 'test'
+  ...
+# Subtest: standard F-key commands remain available in both supported schemes
+ok 228 - standard F-key commands remain available in both supported schemes
+  ---
+  duration_ms: 2.0014
+  type: 'test'
+  ...
+# Subtest: function key modifiers are exact: unsupported combinations cannot restart or step
+ok 229 - function key modifiers are exact: unsupported combinations cannot restart or step
+  ---
+  duration_ms: 0.3642
+  type: 'test'
+  ...
+# Subtest: default alternatives use physical codes even when Shift changes the resulting character
+ok 230 - default alternatives use physical codes even when Shift changes the resulting character
+  ---
+  duration_ms: 0.2313
+  type: 'test'
+  ...
+# Subtest: alternatives do not fall back to typed digits, numpad keys or missing physical codes
+ok 231 - alternatives do not fall back to typed digits, numpad keys or missing physical codes
+  ---
+  duration_ms: 0.43
+  type: 'test'
+  ...
+# Subtest: standard-only and unknown schemes disable physical alternatives without disabling F keys
+ok 232 - standard-only and unknown schemes disable physical alternatives without disabling F keys
+  ---
+  duration_ms: 0.3098
+  type: 'test'
+  ...
+# Subtest: Alt, Meta and AltGraph prevent commands in either scheme
+ok 233 - Alt, Meta and AltGraph prevent commands in either scheme
+  ---
+  duration_ms: 0.1597
+  type: 'test'
+  ...
+# Subtest: already consumed, composing, legacy IME and repeated events never dispatch
+ok 234 - already consumed, composing, legacy IME and repeated events never dispatch
+  ---
+  duration_ms: 0.1493
+  type: 'test'
+  ...
+# Subtest: resolution neither consumes nor mutates an event and does not depend on Fn state
+ok 235 - resolution neither consumes nor mutates an event and does not depend on Fn state
+  ---
+  duration_ms: 0.1245
+  type: 'test'
+  ...
+# Subtest: shared labels expose exact standard and alternative combinations with valid ARIA modifiers
+ok 236 - shared labels expose exact standard and alternative combinations with valid ARIA modifiers
+  ---
+  duration_ms: 0.9696
+  type: 'test'
+  ...
+# Subtest: VAL-004 real session keeps deleted-draft breakpoint at i=0/i=1; a new build has no breakpoint and exits 3
+ok 237 - VAL-004 real session keeps deleted-draft breakpoint at i=0/i=1; a new build has no breakpoint and exits 3
+  ---
+  duration_ms: 1515.2362
+  type: 'test'
+  ...
+1..237
+# tests 251
+# suites 0
+# pass 251
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11847.003

@@ -1,0 +1,104 @@
+{
+  "step": "control-stop-entry-after-host-restarted",
+  "at": "2026-10-28T08:55:39.646Z",
+  "url": "http://127.0.0.1:4235/releases/ipad-web-probe-eb5236b6ed8f9aab4a9d9ced/ui/probe.html",
+  "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本版本离线资源已校验 · iPad 真机待验证\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:7:1\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\" [selected]\n  - option \"仅标准 F 键\"\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n      - button \"14\"\n      - button \"15\"\n      - button \"16\"\n      - button \"17\"\n    - text: \"#include <cstdio> int lift(int n) { int answer = n * 2 + 1; return answer; } int main() {\"\n    - generic: int seed = 14;\n    - text: \"int total = lift(seed); float negative = -16777216.0f; int exactInt = 16777217; float nanValue = __builtin_nanf(\\\"\\\"); int zero = 0; std::printf(\\\"person05-r3=%d mix=%d bool=%d\\\\n\\\", total, int(negative+exactInt), int(nanValue || (1/zero))); return 0; } // independent new program entered only after static server stopped\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int lift(int n) { int answer = n * 2 + 1; return answer; } int main() { int seed = 14; int total = lift(seed); float negative = -16777216.0f; int exactInt = 16777217; float nanValue = __builtin_nanf(\\\"\\\"); int zero = 0; std::printf(\\\"person05-r3=%d mix=%d bool=%d\\\\n\\\", total, int(negative+exactInt), int(nanValue || (1/zero))); return 0; } // independent new program entered only after static server stopped\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 2\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:7:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: seed\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - paragraph:\n      - code: negative\n      - emphasis: float\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - paragraph:\n      - code: exactInt\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - paragraph:\n      - code: nanValue\n      - emphasis: float\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - paragraph:\n      - code: zero\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n      - text: nanValue || (1/zero)\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+  "fields": {
+    "bodyData": {
+      "executionState": "paused",
+      "resourceReady": "true",
+      "saveState": "saved",
+      "sourceView": "draft"
+    },
+    "gutter": [
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "1"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "2"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "3"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "4"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "5"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "6"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "7"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "8"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "9"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "10"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "11"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "12"
+      },
+      {
+        "bp": "true",
+        "disabled": false,
+        "line": "13"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "14"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "15"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "16"
+      },
+      {
+        "bp": "false",
+        "disabled": false,
+        "line": "17"
+      }
+    ],
+    "scheme": "control-number",
+    "source": "#include <cstdio>\nint lift(int n) {\n    int answer = n * 2 + 1;\n    return answer;\n}\nint main() {\n    int seed = 14;\n    int total = lift(seed);\n    float negative = -16777216.0f;\n    int exactInt = 16777217;\n    float nanValue = __builtin_nanf(\"\");\n    int zero = 0;\n    std::printf(\"person05-r3=%d mix=%d bool=%d\\n\", total, int(negative+exactInt), int(nanValue || (1/zero)));\n    return 0;\n}\n// independent new program entered only after static server stopped\n",
+    "stdin": ""
+  }
+}

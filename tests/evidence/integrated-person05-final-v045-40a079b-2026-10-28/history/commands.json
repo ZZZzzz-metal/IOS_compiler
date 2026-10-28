@@ -1,0 +1,82 @@
+{
+  "testedRevision": "40a079ba2065384572f268e4bb91bda437e46cec",
+  "commands": [
+    {
+      "id": "full-history",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/evidence/integrated-person05-final-v045-40a079b-2026-10-28/history/audit-history.mjs"
+      ],
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+      "startedAt": "2026-10-28T09:02:03.926Z",
+      "finishedAt": "2026-10-28T09:02:05.151Z",
+      "exitCode": 0,
+      "errorMessage": null,
+      "signal": null,
+      "outputFile": "full-history.stdout.json",
+      "outputSHA256": "aa1e6b6578a2029cf139b2a2b54f0adb650b0209a77907a656a109336ad0aceb",
+      "errorFile": "full-history.stderr.txt",
+      "errorSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "verify-parallel",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-parallel-review-3248ad5-2026-10-28",
+        "--verify",
+        "--git"
+      ],
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+      "startedAt": "2026-10-28T09:02:05.152Z",
+      "finishedAt": "2026-10-28T09:02:05.675Z",
+      "exitCode": 0,
+      "errorMessage": null,
+      "signal": null,
+      "outputFile": "verify-parallel.stdout.txt",
+      "outputSHA256": "9eb226b2ccb3197a63964f0fe1d6cc7d835a192ca5b2ddbf04d8f9c9861b1e54",
+      "errorFile": "verify-parallel.stderr.txt",
+      "errorSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "verify-floating",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-floating-309cb45-2026-10-28",
+        "--verify",
+        "--git"
+      ],
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+      "startedAt": "2026-10-28T09:02:05.676Z",
+      "finishedAt": "2026-10-28T09:02:06.093Z",
+      "exitCode": 0,
+      "errorMessage": null,
+      "signal": null,
+      "outputFile": "verify-floating.stdout.txt",
+      "outputSHA256": "dda814e647b4644db24299613532f8658f9c8e5fc045bda02a0cf503624a8547",
+      "errorFile": "verify-floating.stderr.txt",
+      "errorSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "verify-clipboard",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-clipboard-33c1639-2026-10-28",
+        "--verify",
+        "--git"
+      ],
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+      "startedAt": "2026-10-28T09:02:06.093Z",
+      "finishedAt": "2026-10-28T09:02:06.521Z",
+      "exitCode": 0,
+      "errorMessage": null,
+      "signal": null,
+      "outputFile": "verify-clipboard.stdout.txt",
+      "outputSHA256": "ac76519194a8de7a37fcf389cf35a69497fc945d92a2bdf3d9b08cb7a6a784cb",
+      "errorFile": "verify-clipboard.stderr.txt",
+      "errorSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

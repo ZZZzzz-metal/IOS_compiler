@@ -1,0 +1,70 @@
+{
+  ".gitattributes": {
+    "byteLength": 53,
+    "sha256": "634224353cdf3c112041465ca0dd66824b987c2d871d5710857f714d48035b18"
+  },
+  "README.md": {
+    "byteLength": 3680,
+    "sha256": "cd26fe8561c56fafdafb0592b6c7a8ada7e6336ccee728318634e0285c2c956e"
+  },
+  "after-targeted.tap": {
+    "byteLength": 4157,
+    "sha256": "5213345804c3852d269012b1505c3a723fbe771d209e226756311e774e1a1021"
+  },
+  "automated-final/SHA256SUMS.json": {
+    "byteLength": 536,
+    "sha256": "a25a48415157b710f1aa5b5643c85f79bb270032b7792d3af67c0e87e85269b3"
+  },
+  "automated-final/baseline-check.txt": {
+    "byteLength": 277,
+    "sha256": "3e5f539cc0f69ac0884a91de1a59dcd70b9a714c56b4d6ae158a09369b9cba48"
+  },
+  "automated-final/contracts.tap": {
+    "byteLength": 2352,
+    "sha256": "c9849af0cfd5246937e54466907b26f3aca06c503ba5366e07fabb8283c76252"
+  },
+  "automated-final/integration.tap": {
+    "byteLength": 832,
+    "sha256": "6888c5c6671e4233c949443f8a7ad5740375126b50f514a6bef118db83b49af6"
+  },
+  "automated-final/module-tests.tap": {
+    "byteLength": 24246,
+    "sha256": "459522f3778a2857da9dc328e702301bca1d4401842e8875845d976522cdd3b9"
+  },
+  "before-3248ad5.tap": {
+    "byteLength": 18545,
+    "sha256": "30e38228779960822fbde68b10bd455c96169bc450382818b2c59fd50fd6ea62"
+  },
+  "comparison.json": {
+    "byteLength": 410,
+    "sha256": "963c351c417d98bbdb71acdc7bfd2ff0842629ac4618d92a43af7bb5d04a0497"
+  },
+  "npm-check.txt": {
+    "byteLength": 349,
+    "sha256": "348aa6b52431c300ff7568e79fdd8601bdad983516a9fbf5d97b488828980867"
+  },
+  "npm-test.tap": {
+    "byteLength": 1123,
+    "sha256": "f9193da959c086cfd2fefce9e091f5e8dff794e37bfa47fb136f739f6074f94b"
+  },
+  "run-evidence.mjs": {
+    "byteLength": 2595,
+    "sha256": "56f41547fb6eb82896d37fe1e403829f8ff440fb5aa29904beb4ba86a20b0833"
+  },
+  "seal-evidence.mjs": {
+    "byteLength": 2623,
+    "sha256": "121f0e81c2d6caac1c8fff6c74e6656819f2fd8279b88dbda5d0e3c38ab5c765"
+  },
+  "source-inputs.json": {
+    "byteLength": 4723,
+    "sha256": "26f6bf7521c2bd5646105127d61e979f13600db0a31af8147c3335736217dd6b"
+  },
+  "source-stage-verification.json": {
+    "byteLength": 178,
+    "sha256": "78ee36cb4adccc03e91f358a8b01d57a9cb596d00d2f871da8ecf0784b9f0c68"
+  },
+  "verify-command.txt": {
+    "byteLength": 228,
+    "sha256": "cf7fda87729d7d2d0870205ed737f91b54af50fd5a0b431488cb9a9bdad2133a"
+  }
+}

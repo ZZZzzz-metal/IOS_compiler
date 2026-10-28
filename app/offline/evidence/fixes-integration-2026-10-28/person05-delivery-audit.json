@@ -1,0 +1,21 @@
+{
+  "commit": "c32cbf82250593d11ed3c1e107961636b3a61a8c",
+  "sealedEvidence": [
+    {
+      "directory": "tests/evidence/integrated-person05-parallel-review-3248ad5-2026-10-28",
+      "verifiedFiles": 58,
+      "fixedCommitBytesMatch": true
+    },
+    {
+      "directory": "tests/evidence/integrated-person05-floating-309cb45-2026-10-28",
+      "verifiedFiles": 22,
+      "fixedCommitBytesMatch": true
+    },
+    {
+      "directory": "tests/evidence/integrated-person05-clipboard-33c1639-2026-10-28",
+      "verifiedFiles": 19,
+      "fixedCommitBytesMatch": true
+    }
+  ],
+  "scope": "3 independent records only; fixed module branches closure, not final r3 release acceptance"
+}

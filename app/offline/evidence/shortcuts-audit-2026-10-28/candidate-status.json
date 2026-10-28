@@ -1,0 +1,26 @@
+{
+  "clientDate": "2026-10-28",
+  "initialCandidateBundle": "ipad-web-probe-d62dc8a59f565ee8ea469473",
+  "candidateArchiveAudit": "archives-audit.json",
+  "status": "initial-local-candidate-retained; not-final-entry",
+  "laterKnownOpenIssues": [
+    {
+      "id": "REV-006",
+      "owner": 3,
+      "status": "unfixed"
+    },
+    {
+      "id": "REV-007",
+      "owner": 3,
+      "status": "unfixed"
+    },
+    {
+      "id": "REV-008",
+      "owner": 4,
+      "status": "unfixed"
+    }
+  ],
+  "declaration": "Old candidate byte verification and its time-point empty knownOpenIssues array do not establish absence of product defects. R2 includes warnings, not fixes. Existing candidate archive report and audit JSON are retained unchanged.",
+  "secondCandidateR2Bundle": "ipad-web-probe-140bdf81578b308bc93faa7b",
+  "laterClipboardFix": "Person04 reported source fix and 19 self checks; fixed commit integration, independent closure and final rebuild pending"
+}

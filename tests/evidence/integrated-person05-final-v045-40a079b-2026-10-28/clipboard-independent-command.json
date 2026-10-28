@@ -1,0 +1,19 @@
+{
+  "id": "clipboard-independent",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/ui-parallel-audit.mjs",
+    "integrated-run-01"
+  ],
+  "environmentOverrides": {
+    "UI_PARALLEL_REVISION": "40a079ba2065384572f268e4bb91bda437e46cec",
+    "UI_PARALLEL_OUTPUT_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-final-v045-40a079b-2026-10-28\\"
+  },
+  "startedAt": "2026-10-28T08:42:04.381Z",
+  "finishedAt": "2026-10-28T08:42:04.924Z",
+  "exitCode": 0,
+  "signal": null,
+  "errorMessage": null,
+  "outputFile": "clipboard-independent.txt",
+  "outputSHA256": "806f5ee667f571035714cf9b641b9a975f132edce364992509e9e56027c388eb"
+}

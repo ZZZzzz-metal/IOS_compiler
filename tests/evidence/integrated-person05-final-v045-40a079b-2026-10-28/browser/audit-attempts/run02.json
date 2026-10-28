@@ -1,0 +1,5 @@
+{
+  "at": "2026-10-28T14:01:31.623Z",
+  "exitCode": 1,
+  "reason": "Audit parser assumed checkedAt; the preserved initial port-check record names the same UTC field checkedAtUtc. Normalize both schemas without editing original lifecycle records."
+}

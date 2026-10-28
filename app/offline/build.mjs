@@ -41,7 +41,7 @@ export async function buildOfflineSite({outputDirectory=resolve(local,'site')}={
   const add=async(path,source=path)=>payload.set(safePath(path),await readFile(resolve(root,source)));
   for(const resource of candidate.resources)await add(resource.relativePath);
   for(const path of ['ui/probe.html','ui/style.css','ui/src/main.mjs','ui/src/session-controller.mjs','ui/src/editor.mjs',
-    'storage/src/draft-store.mjs','storage/src/autosave.mjs','ui/README.md','storage/README.md',
+    'storage/src/draft-store.mjs','storage/src/autosave.mjs','ui/README.md','ui/SHORTCUTS.md','storage/README.md',
     'compiler/README.md','debugger/README.md','app/offline/browser/trust.mjs'])await add(path);
   for(const name of ['index.html','launcher.mjs','style.css','icon.svg'])await add(name,`app/offline/browser/${name}`);
   await add('IPAD-USER-MANUAL.md','docs/architecture/IPAD-USER-MANUAL.md');

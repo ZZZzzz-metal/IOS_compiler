@@ -1,0 +1,193 @@
+Browser tab: 3, Title: "算法工作台 · 四号验证原型", URL: "http://127.0.0.1:4199/releases/ipad-web-probe-140bdf81578b308bc93faa7b/ui/probe.html".
+1 AXWebArea 算法工作台 · 四号验证原型, URL: 127.0.0.1:4199/releases/ipad-web-probe-140bdf81578b308bc93faa7b/ui/probe.html
+	2 container
+		3 heading 算法工作台, Value: 1
+			4 text 算法工作台
+		5 text 开发验证原型 粘贴代码，带着输入运行，在暂停处排错。
+		6 button (disabled) 校验本地资源, ID: prepare
+		93 text 本版本离线资源已校验 · iPad 真机待验证
+	8 text iPad 离线冷启动待验证
+	9 text Clang 8.0.1 / wasm32
+	10 link Description: 原型说明与验证步骤, Value: 127.0.0.1:4199/releases/ipad-web-probe-140bdf81578b308bc93faa7b/ui/README.md
+	11 container 运行与调试
+		12 pop up button (collapsed, settable) Description: 语言, Value: C++17, ID: language, Secondary Actions: Expand
+			13 menu
+				14 (selected) C++17
+				15 C11
+		16 button (disabled) 编译运行, Help: 编译运行（Ctrl+F5）, ID: run
+		17 button (disabled) 编译调试, Help: 编译调试（F5）, ID: debug
+		18 container 调试控制
+			19 button 继续, Help: 继续（F5）
+			20 button 进入, Help: 进入（F11）
+			21 button 跳过, Help: 跳过（F10）
+			22 button 跳出, Help: 跳出（Shift+F11）
+			23 button 停止, Help: 停止（Shift+F5）, ID: stop
+		181 text 已暂停 · main.cpp:8:1
+	110 container
+		111 button (expanded) 键盘快捷键 无 F 键也能调试, Secondary Actions: Collapse
+			112 text 键盘快捷键 
+			113 text 无 F 键也能调试
+		114 text 键盘方案
+		115 pop up button (collapsed, settable) 键盘方案, Value: 仅标准 F 键, ID: shortcut-scheme, Secondary Actions: Expand
+			116 menu
+				117 无 F 键：Control＋数字行
+				118 (selected) 仅标准 F 键
+		180 text 已记住此浏览器的选择。
+		120 table VS2022 常用调试操作对照
+			121 text VS2022 常用调试操作对照
+			122 row
+				123 cell
+					124 text 操作
+				125 cell
+					126 text 标准 F 键
+				127 cell
+					128 text 无 F 键方案
+			129 row
+				130 cell
+					131 text 开始 / 继续
+				132 cell
+					133 text F5
+				134 cell
+					135 text Ctrl+5
+			136 row
+				137 cell
+					138 text 编译运行
+				139 cell
+					140 text Ctrl+F5
+				141 cell
+					142 text Ctrl+6
+			143 row
+				144 cell
+					145 text 停止 / 取消编译
+				146 cell
+					147 text Shift+F5
+				148 cell
+					149 text Ctrl+Shift+5
+			150 row
+				151 cell
+					152 text 当前行断点
+				153 cell
+					154 text F9
+				155 cell
+					156 text Ctrl+9
+			157 row
+				158 cell
+					159 text 单步跳过
+				160 cell
+					161 text F10
+				162 cell
+					163 text Ctrl+0
+			164 row
+				165 cell
+					166 text 单步进入
+				167 cell
+					168 text F11
+				169 cell
+					170 text Ctrl+-
+			171 row
+				172 cell
+					173 text 单步跳出
+				174 cell
+					175 text Shift+F11
+				176 cell
+					177 text Ctrl+Shift+-
+		178 text Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。
+		179 link Description: 中文速查与实机检查, Value: 127.0.0.1:4199/releases/ipad-web-probe-140bdf81578b308bc93faa7b/ui/SHORTCUTS.md
+	28 container
+		29 container 源码编辑
+			30 heading 代码, Value: 2
+				31 text 代码
+			32 button 粘贴代码, ID: paste
+			33 button 复制题站源码, ID: copy
+			34 button 导入, ID: import
+			35 pop up button (collapsed, settable) Description: 导出内容, Value: 仅题站源码, ID: export-mode, Secondary Actions: Expand
+				36 menu
+					37 (selected) 仅题站源码
+					38 完整草稿
+			39 button 导出, ID: export
+			40 checkbox 题站源码, Value: 1, ID: user-tab
+			41 checkbox 测试驱动, Value: 0, ID: driver-tab
+			42 checkbox 查看调试快照, Value: 0, ID: snapshot-toggle
+			182 text main.cpp
+			183 text 编辑中的草稿
+			45 container Description: 行号与断点, ID: gutter
+				184 button 1, Help: 第 1 行：切换断点
+				185 button 2, Help: 第 2 行：切换断点
+				186 button 3, Help: 第 3 行：切换断点
+				187 button 4, Help: 第 4 行：切换断点
+				188 button 5, Help: 第 5 行：切换断点
+				189 button 6, Help: 第 6 行：切换断点
+				190 button 7, Help: 第 7 行：切换断点
+				191 button 8, Help: 第 8 行：切换断点
+				192 button 9, Help: 第 9 行：切换断点
+				193 button 10, Help: 第 10 行：切换断点
+				194 button 11, Help: 第 11 行：切换断点
+				195 button 12, Help: 第 12 行：切换断点
+			58 text entry area (settable) Description: 源代码, ID: source, Value: #include <cstdio> // KEY045-FRESH-OFFLINE-20261028
+int bump(int x) {
+  int y = x + 1;
+  return y;
+}
+int main() {
+  int n = 4;
+  int result = bump(n);
+  std::printf("KEY045=%d\n", result);
+  return 0;
+}
+
+			59 button Description: 在当前行切换断点, Help: 当前行断点（F9）, ID: breakpoint
+			60 button 缩进, Help: 缩进（Tab）, ID: indent
+			61 button 取消缩进, Help: 取消缩进（Shift+Tab）, ID: outdent
+			62 search text field (settable) Description: 查找源码, ID: find
+			63 button 下一处, ID: find-next
+			64 text 草稿已保存 · 版本 1
+			65 button (collapsed) 断点与编译诊断, Secondary Actions: Expand
+				66 text 断点与编译诊断
+		67 container 输入输出与调试面板
+			68 container
+				69 heading 样例输入 运行前一次性提供, Value: 2
+					70 text 样例输入
+					71 text 运行前一次性提供
+				72 text entry area (settable) Description: 标准输入, ID: stdin, Value: 3
+
+			73 container
+				74 heading 程序输出, Value: 2
+					75 text 程序输出
+				76 container Description: 程序输出, ID: output
+					196 text 尚无输出
+			78 container
+				79 heading 调用栈, Value: 2
+					80 text 调用栈
+				197 container stack
+					198 checkbox main · main.cpp:8:1, Value: 1
+					199 checkbox main · 未提供源码位置, Value: 0
+					200 checkbox _start · 未提供源码位置, Value: 0
+			82 container
+				83 heading 局部变量, Value: 2
+					84 text 局部变量
+				201 container variables
+					205 text n
+					206 text int
+					202 text 4
+					207 text result
+					208 text int
+					203 text 不可读取：Variable declaration has not executed at this stop
+			86 container
+				87 heading 基础监视, Value: 2
+					88 text 基础监视
+				89 text field (settable) Description: 监视表达式, ID: expression
+				90 button 查看, ID: evaluate
+				91 text 支持范围以适配器为准；函数调用、赋值和自增不可用。
+				204 text 选择暂停栈帧后查询
+
+The focused UI element is 58 text entry area (settable) Description: 源代码, ID: source, Value: #include <cstdio> // KEY045-FRESH-OFFLINE-20261028
+int bump(int x) {
+  int y = x + 1;
+  return y;
+}
+int main() {
+  int n = 4;
+  int result = bump(n);
+  std::printf("KEY045=%d\n", result);
+  return 0;
+}

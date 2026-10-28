@@ -1,0 +1,97 @@
+{
+  "recordedAt": "2026-10-28T09:00:58.988Z",
+  "observations": 69,
+  "passed": true,
+  "sourceSHA256": "9af1a42a6cc459408c1cbbd353ca222a7ad74a04be59bdb76f541af644865bbb",
+  "recoveredSourceSHA256": "233c40a9ea02d1034977fed1bbbc812db4750cadb95b6a222cdf7bd5054b295d",
+  "manifestResources": 51,
+  "totalBytes": 60874273,
+  "logs": [
+    {
+      "file": "server-01.jsonl",
+      "sha256": "03e0882655f4f4c763bca0648b2d4c8b88059ce91e6debc074179318409944b5",
+      "requests": 60,
+      "manifestResourcesDownloaded": 51,
+      "firstAt": "2026-10-28T08:44:06.339Z",
+      "lastAt": "2026-10-28T08:45:20.068Z"
+    },
+    {
+      "file": "server-02.jsonl",
+      "sha256": "275cd70578f86f1471afaaa98096aa69b756d9f74284d6e5fa1701f8b2b64951",
+      "requests": 1,
+      "manifestResourcesDownloaded": 0,
+      "firstAt": "2026-10-28T08:55:17.400Z",
+      "lastAt": "2026-10-28T08:55:39.811Z"
+    },
+    {
+      "file": "server-03.jsonl",
+      "sha256": "95b7ab947967ae8655eb2ca9bd124cbcfae56c59749c153caa3aef26a10b2dcc",
+      "requests": 53,
+      "manifestResourcesDownloaded": 51,
+      "firstAt": "2026-10-28T08:56:26.375Z",
+      "lastAt": "2026-10-28T08:57:15.777Z"
+    },
+    {
+      "file": "server-04.jsonl",
+      "sha256": "663653c74b077f17568170c1859b4c4895ccaf8e4335efb045aef8f7f722a898",
+      "requests": 53,
+      "manifestResourcesDownloaded": 51,
+      "firstAt": "2026-10-28T08:58:04.524Z",
+      "lastAt": "2026-10-28T08:58:51.235Z"
+    }
+  ],
+  "lifecycle": [
+    {
+      "path": "stopped-before-cold-start.json",
+      "checkedAtUtc": "2026-10-28T08:47:39.2614751Z",
+      "port": 4235,
+      "listeningCount": 0,
+      "note": "First static host was explicitly stopped through its exec session; operator Ctrl+C exit1 on Windows, not a product test failure",
+      "checkedAt": "2026-10-28T08:47:39.2614751Z"
+    },
+    {
+      "path": "stopped-before-index-fault.json",
+      "checkedAt": "2026-10-28T08:55:55.0154181Z",
+      "listeningCount": 0,
+      "stage": "before-control-stop-and-index-deletion"
+    },
+    {
+      "path": "stopped-before-trust-fault.json",
+      "checkedAt": "2026-10-28T08:57:40.6102221Z",
+      "listeningCount": 0,
+      "stage": "before-current-cache-trust-corruption-cold-start"
+    },
+    {
+      "path": "stopped-after-both-repairs.json",
+      "checkedAt": "2026-10-28T08:59:19.7411978Z",
+      "listeningCount": 0,
+      "stage": "after-both-repairs-before-new-uncompiled-source"
+    }
+  ],
+  "fixtureSHA256": {
+    "offline-browser-host.mjs": "572588fbce0c87612303b42fca1eb5a184a630a12fb003157be5bdc01243d048",
+    "offline-cache-control.html": "3b46de1afbac02e5b6d242f27046e8a21d2c9c3065d223d92668bcc0e44518d7",
+    "OFFLINE-BROWSER-FIXTURE.md": "cacbd3cc5d4f5ef81d00cd43f6ee15ef00b9a642f5792230100323376a87f41c"
+  },
+  "conclusion": {
+    "coldStartAndNewCompile": "passed in actual desktop IAB with static host stopped",
+    "shortcutSchemes": "seven actions per scheme observed; standard and Control numbers",
+    "realCacheFaults": [
+      "index.html missing",
+      "trust.mjs corrupt in current completed cache"
+    ],
+    "productRepair": "both repair paths passed, 51 downloads verified each, draft/settings preserved",
+    "rev001": "independently closed only for these tested desktop cache faults",
+    "actualSystemNetworkDisabled": false,
+    "actualIpadTested": false,
+    "strongDraftDurabilityTested": false
+  },
+  "notes": [
+    "The first process started 08:44:06.339Z; fixture-only port guard was last edited 08:44:10.661Z/08:44:11.024Z. No control page was loaded in process01; release archive bytes never changed. Processes02-04 use frozen fixture bytes.",
+    "One trust corruption initially selected the old broken cache. That observation is preserved; the actual second fault explicitly selected the newly completed e659 cache and verified its intact index first.",
+    "Initial asynchronous draft-loading snapshots do not prove a missing draft; later completed snapshots independently match exact original source.",
+    "Control stop scenario began compiling offline; process02 briefly served only the control page, then was stopped before CtrlShift5. These observations are not proof of system-level network isolation.",
+    "The fixture retained response backups; successful recoveries used only the product repair button, never the fixture restore button.",
+    "Browser DOM does not expose a complete BuildManifest/session identity; automatic actual-Wasm and browser observations retain their separate evidence scopes."
+  ]
+}

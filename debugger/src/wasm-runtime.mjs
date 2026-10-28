@@ -154,7 +154,7 @@ function truncInteger(value, bits, signed, saturating = false) {
   }
   return bits === 64 ? s64(integer) : Number(integer) | 0;
 }
-function float32FromBigInt(value) {
+export function float32FromBigInt(value) {
   // Avoid double rounding through f64 for large i64 -> f32 conversions.
   if (value === 0n) return 0;
   const negative = value < 0n;

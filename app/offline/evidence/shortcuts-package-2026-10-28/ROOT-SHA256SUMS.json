@@ -1,0 +1,42 @@
+[
+  {
+    "path": "app/offline/evidence/shortcuts-package-2026-10-28/.gitattributes",
+    "byteLength": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-2026-10-28/build.json",
+    "byteLength": 1008,
+    "sha256": "af8a1484aa02997cc384ccb196e2d816e2f1bfbffbe1628ce94e541153ad0b74"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-2026-10-28/bundle.json",
+    "byteLength": 11514,
+    "sha256": "356afdefd66a8b1e82ffd4ae4dae9cdab89ef08bd0758cd1ea44ae6f17c9e060"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-2026-10-28/lan-check.json",
+    "byteLength": 678,
+    "sha256": "b1b0f87f23bd5bdda42329f076f4d26fa1624154e2e8cb23e130c631d3a48e26"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-2026-10-28/package-archives.py",
+    "byteLength": 13546,
+    "sha256": "e438292b7b1dcc386ba9a8cb8f80dc1bcde85cca7eb4eeaf155d9f5230f59eea"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-2026-10-28/package-command.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-2026-10-28/package-command.stdout.txt",
+    "byteLength": 3408,
+    "sha256": "48e533272ff3c2306b89cd652b8d494777ad962f2d85251312044f897e7428c4"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-2026-10-28/package.json",
+    "byteLength": 3340,
+    "sha256": "689765d9c5002856130da57cfd5bfbc35a6df3b85d4cf6fdf6ee06194610f99e"
+  }
+]

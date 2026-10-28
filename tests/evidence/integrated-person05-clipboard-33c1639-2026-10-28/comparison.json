@@ -1,0 +1,205 @@
+{
+  "oldRevision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "fixedRevision": "33c16398948c102edcac4f4c794a3e1de1cb9b19",
+  "oldCounts": {
+    "cases": 8,
+    "passed": 3,
+    "failed": 5,
+    "harnessFailures": 0,
+    "assertions": 25,
+    "failedAssertions": 8
+  },
+  "newCounts": {
+    "cases": 8,
+    "passed": 8,
+    "failed": 0,
+    "harnessFailures": 0,
+    "assertions": 25,
+    "failedAssertions": 0
+  },
+  "identicalHarnessInputs": true,
+  "cases": [
+    {
+      "id": "CLIP-EDIT",
+      "before": "failed",
+      "after": "passed"
+    },
+    {
+      "id": "CLIP-ORDER",
+      "before": "failed",
+      "after": "passed"
+    },
+    {
+      "id": "CLIP-IMPORT-CONTROL",
+      "before": "passed",
+      "after": "passed"
+    },
+    {
+      "id": "CLIP-STALE-ERROR",
+      "before": "failed",
+      "after": "passed"
+    },
+    {
+      "id": "CLIP-NORMAL-CONTROL",
+      "before": "passed",
+      "after": "passed"
+    },
+    {
+      "id": "CLIP-ERROR-AFTER-EDIT",
+      "before": "failed",
+      "after": "passed"
+    },
+    {
+      "id": "CLIP-MANUAL-IMPORT",
+      "before": "failed",
+      "after": "passed"
+    },
+    {
+      "id": "CLIP-MANUAL-NORMAL-CONTROL",
+      "before": "passed",
+      "after": "passed"
+    }
+  ],
+  "uiStorage": {
+    "passed": 106,
+    "failed": 0
+  },
+  "ownerWorktreeCleanAtStartAndEnd": true,
+  "commands": [
+    {
+      "id": "before",
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/ui-parallel-audit.mjs",
+        "before-run-01"
+      ],
+      "env": {
+        "UI_PARALLEL_REVISION": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+        "UI_PARALLEL_OUTPUT_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-clipboard-33c1639-2026-10-28\\"
+      },
+      "expectedExitCode": 1,
+      "observedExitCode": 1,
+      "signal": null,
+      "error": null,
+      "startedAt": "2026-10-28T04:41:37.619Z",
+      "finishedAt": "2026-10-28T04:41:38.212Z",
+      "outputFile": "commands/before.txt",
+      "outputSHA256": "ab94a634b1280569ce562ebd5a56ee21d9a89cee67b0a04f938fad7787e2d209"
+    },
+    {
+      "id": "after",
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/ui-parallel-audit.mjs",
+        "after-run-01"
+      ],
+      "env": {
+        "UI_PARALLEL_REVISION": "33c16398948c102edcac4f4c794a3e1de1cb9b19",
+        "UI_PARALLEL_OUTPUT_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-clipboard-33c1639-2026-10-28\\"
+      },
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "signal": null,
+      "error": null,
+      "startedAt": "2026-10-28T04:41:38.212Z",
+      "finishedAt": "2026-10-28T04:41:38.728Z",
+      "outputFile": "commands/after.txt",
+      "outputSHA256": "1f9b8b724948f5d6589618e3d8089980d21219b980e0cbb001dec6c05e54cfed"
+    },
+    {
+      "id": "entry-syntax",
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--check",
+        "tests/ui-parallel-audit.mjs"
+      ],
+      "env": {},
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "signal": null,
+      "error": null,
+      "startedAt": "2026-10-28T04:41:38.728Z",
+      "finishedAt": "2026-10-28T04:41:38.806Z",
+      "outputFile": "commands/entry-syntax.txt",
+      "outputSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "host-syntax",
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--check",
+        "tests/lib/ui-parallel-audit-host.mjs"
+      ],
+      "env": {},
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "signal": null,
+      "error": null,
+      "startedAt": "2026-10-28T04:41:38.806Z",
+      "finishedAt": "2026-10-28T04:41:38.883Z",
+      "outputFile": "commands/host-syntax.txt",
+      "outputSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "ui-storage",
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "ui/checks/*.test.mjs",
+        "storage/checks/*.test.mjs"
+      ],
+      "env": {},
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "signal": null,
+      "error": null,
+      "startedAt": "2026-10-28T04:41:38.883Z",
+      "finishedAt": "2026-10-28T04:41:41.832Z",
+      "outputFile": "commands/ui-storage.txt",
+      "outputSHA256": "5e1deb4b0e075957c697d0491cd2d62f1b5bc686658a7cffc1296c8768b79a75"
+    },
+    {
+      "id": "check",
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "check"
+      ],
+      "env": {},
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "signal": null,
+      "error": null,
+      "startedAt": "2026-10-28T04:41:41.832Z",
+      "finishedAt": "2026-10-28T04:41:45.860Z",
+      "outputFile": "commands/check.txt",
+      "outputSHA256": "348aa6b52431c300ff7568e79fdd8601bdad983516a9fbf5d97b488828980867"
+    },
+    {
+      "id": "contracts",
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-04",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "test"
+      ],
+      "env": {},
+      "expectedExitCode": 0,
+      "observedExitCode": 0,
+      "signal": null,
+      "error": null,
+      "startedAt": "2026-10-28T04:41:45.860Z",
+      "finishedAt": "2026-10-28T04:41:46.558Z",
+      "outputFile": "commands/contracts.txt",
+      "outputSHA256": "c4df7f9f016a952eaa659a7bac91a9e014e4807113cc515b878737bfe7908d8d"
+    }
+  ]
+}

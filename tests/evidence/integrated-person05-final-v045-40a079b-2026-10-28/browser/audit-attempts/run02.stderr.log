@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(new Date(lifecycle[0].checkedAt)<new Date(get('offline-new-source-unprepared-F5-preserved').at))
+
+    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/evidence/integrated-person05-final-v045-40a079b-2026-10-28/browser/verify-browser.mjs:62:1 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

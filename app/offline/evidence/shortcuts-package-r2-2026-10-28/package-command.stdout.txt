@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "verified-static-web-archives",
+  "version": "0.4.5-r2",
+  "sourceBaseRevision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "sourceBaseRevisionScope": "Merge base includes shortcuts309d29d. Root build-list/manual/metadata increments are additionally bound by resource hashes and source fingerprints.",
+  "shortcutCommit": "309d29dd703b1bc5a5beff03a88f232764c95808",
+  "archiveRevision": "r2: includes newly reported watch and clipboard warnings; initial local candidate retained",
+  "uiFixCommit": "66db2bb470cea0bd0bbc8e278e17e5fc5d84a0c9",
+  "independentDesktopVerificationCommit": "d12aad000b3474f9ce597d798ecc861b57b4ea4d",
+  "debuggerFixCommit": "21f21357ac728b7ddc3cd9728bf1a6fe2491b9d6",
+  "independentUIChecks": {
+    "existing": 195,
+    "additionalControlledUI": 14,
+    "scope": "66db2bb tested desktop scope only; not this complete offline package or iPad"
+  },
+  "bundleId": "ipad-web-probe-140bdf81578b308bc93faa7b",
+  "entryURL": "https://100.65.235.35:4187/releases/ipad-web-probe-140bdf81578b308bc93faa7b/index.html",
+  "resourceCount": 51,
+  "resourceBytes": 60872055,
+  "workerSha256": "sha256:e009022b2ac349b0b534f4818cf66a4b85b3d460fe752206fbb1ab3972db478e",
+  "descriptorSha256": "sha256:7f78d4d5b17d311712ea44d11d9ed860bb4c5994e23175c26a213dd6322c0ec6",
+  "completePackage": {
+    "path": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\app\\offline\\.local\\packages\\ipad-offline-debugger-v0.4.5-r2.zip",
+    "filename": "ipad-offline-debugger-v0.4.5-r2.zip",
+    "byteLength": 19293360,
+    "sha256": "06a8019c3233ab05ef0af45ea959d77dd2e1dc7e70be7cfd81eeab22940cf2d4",
+    "fileCount": 60,
+    "allArchivedFilesVerified": true
+  },
+  "firstSetupPackage": {
+    "path": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\app\\offline\\.local\\packages\\ipad-first-setup-v0.4.5-r2.zip",
+    "filename": "ipad-first-setup-v0.4.5-r2.zip",
+    "byteLength": 19203,
+    "sha256": "087ac3f26a1ca7f190133150c792a1133c43fee0f54683def824c3b87baadc7a",
+    "fileCount": 6,
+    "allArchivedFilesVerified": true
+  },
+  "knownOpenIssues": [
+    "REV-006",
+    "REV-007",
+    "REV-008"
+  ],
+  "independentlyClosedInTestedDesktopScope": [
+    "REV-004",
+    "REV-005"
+  ],
+  "explicitWatchLimitations": [
+    "pointer-pointer subtraction unsupported because common-array provenance cannot be established",
+    "integer literal suffixes, binary prefixes and digit separators not added",
+    "float unary fix is not complete floating-point semantics"
+  ],
+  "integratedPendingIndependentVerification": [
+    "REV-001",
+    "REV-002",
+    "REV-003",
+    "keyboard-shortcuts",
+    "complete-v0.4.5-offline-package"
+  ],
+  "verification": {
+    "allRuntimeResourceHashes": 51,
+    "controlPlaneHashes": 2,
+    "publicRootDERMatchesProfile": true,
+    "profilePayloadCount": 1,
+    "rootSHA256": "87991d2b7d332034beddb95ed35ddabc906c0e0b2bd1dd174ec4a25b826e349f",
+    "profileRemovable": true,
+    "privateKeysExcluded": true,
+    "onlyCurrentReleaseIncluded": true,
+    "testControlsExcluded": true,
+    "manualMatchesRuntimePayload": true
+  },
+  "declaration": "Archive byte verification only, not a distribution license clearance. Current HTTPS connectivity and browser smoke are recorded separately. REV-004/005 and VAL-004 are independently closed only in their tested desktop scope; new debugger corrections, REV-001, this complete offline release, real iPad and G2/G3 remain independently unverified."
+}

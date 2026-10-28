@@ -1,0 +1,633 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-27T23:35:45.558Z",
+  "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "scope": "All blobs reachable from git rev-list --objects --all, plus current cached and nonignored untracked regular files except explicitly listed temporary/current audit output paths. Current files are a snapshot and may change while root completes browser evidence and documentation.",
+  "limitations": "Finite token/private-key/password-URL and sensitive-filename patterns plus raw size checks. Does not detect every secret, certify security, grant a license or prove iPad/offline behavior. No secret values are printed in findings.",
+  "thresholds": {
+    "blobMaximumBytes": 104857600
+  },
+  "patterns": [
+    "PEM-private-key",
+    "GitHub-classic-token",
+    "GitHub-fine-grained-token",
+    "AWS-access-key-id",
+    "Slack-token",
+    "OpenAI-project-or-service-token",
+    "HTTP-URL-with-password",
+    "sensitive-filename",
+    "over-100-MiB"
+  ],
+  "refs": [
+    "refs/heads/integration 3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+    "refs/heads/module/02-compiler 34e46b92249e9b8f8870dcf8cc09c5037fdc318e",
+    "refs/heads/module/03-debugger 3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+    "refs/heads/module/04-ui 309d29dd703b1bc5a5beff03a88f232764c95808",
+    "refs/heads/module/05-validation 3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+    "refs/remotes/origin/integration 8cc96b35f39e2239f8168078599c8e745cca8566",
+    "refs/remotes/origin/main 9946398a1307263385dedc93bb9f1add0281c101",
+    "refs/remotes/origin/module/02-compiler 34e46b92249e9b8f8870dcf8cc09c5037fdc318e",
+    "refs/remotes/origin/module/03-debugger 21f21357ac728b7ddc3cd9728bf1a6fe2491b9d6",
+    "refs/remotes/origin/module/04-ui dc65469c85616f175a735b9977cb37f8c6f188c2",
+    "refs/remotes/origin/module/05-validation d12aad000b3474f9ce597d798ecc861b57b4ea4d",
+    "refs/tags/baseline-v0.1.0 59c7080ae44b27c45cb0f94639752b3adbb28649",
+    "refs/tags/integration-v0.2.0 cc2fa6a2e05153a676c570e325caf9f1baceb5df",
+    "refs/tags/integration-v0.2.1 7e92d2330b8e0fef1c75021d7e93522d8e6c6293",
+    "refs/tags/integration-v0.3.0 fff15bee97ed47cf2485b83c4344a020e9e190f7",
+    "refs/tags/integration-v0.4.0 b4973e177ff6b29583fccb666fbba8f0cd1efa89",
+    "refs/tags/integration-v0.4.1 0e7be0bbe2fdd53f59db363a2fa3578f7b0003ae",
+    "refs/tags/integration-v0.4.2 9727c51915325732e8d1b365f5e9bf672c717aaf",
+    "refs/tags/integration-v0.4.3 0c577595ca9647f6ac9cd7a7b60a17c14ae038c9",
+    "refs/tags/integration-v0.4.4 803b97c56a9e99e111f4337b006cfe96592672bd"
+  ],
+  "history": {
+    "commits": 48,
+    "objects": 1316,
+    "blobs": 918,
+    "rawBlobBytes": 27288351,
+    "largestBlobs": [
+      {
+        "oid": "6900da3077b026ff9f11ed8dd2dc75545287e2f7",
+        "type": "blob",
+        "byteLength": 2178435,
+        "path": "debugger/fixtures/stl/main.wasm"
+      },
+      {
+        "oid": "fa82fdac86be39ecb96e055c7cadc27867f4908d",
+        "type": "blob",
+        "byteLength": 606323,
+        "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/independent.json"
+      },
+      {
+        "oid": "61acfa69d7a7fcff0d67aaf64ae33a155f5686ba",
+        "type": "blob",
+        "byteLength": 606099,
+        "path": "tests/evidence/integrated-2026-10-25/independent.json"
+      },
+      {
+        "oid": "8b1205d8a19e7605af47a71bcc081d425f86de41",
+        "type": "blob",
+        "byteLength": 606040,
+        "path": "debugger/evidence/initializer-lifetime-fix-2026-10-25/independent/independent.json"
+      },
+      {
+        "oid": "03077082e25da4a6917ef29093be65af1695f00b",
+        "type": "blob",
+        "byteLength": 605857,
+        "path": "debugger/evidence/watch-semantics-fix-2026-10-27/independent/independent.json"
+      },
+      {
+        "oid": "dcc37bae4e3e6b46ed2ff0bd070616eafa70e8ba",
+        "type": "blob",
+        "byteLength": 605842,
+        "path": "app/offline/evidence/publication-integration-2026-10-27/validation-raw/independent.json"
+      },
+      {
+        "oid": "abc399ba2665ce2695ab5b5d0027b2d590cc1fe6",
+        "type": "blob",
+        "byteLength": 605772,
+        "path": "tests/evidence/integrated-v0.3.0-2026-10-25/independent.json"
+      },
+      {
+        "oid": "5f86e4fc26e7aff00ee87044bb5657382c19de85",
+        "type": "blob",
+        "byteLength": 605694,
+        "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/independent.json"
+      },
+      {
+        "oid": "9ceb34d0bf17db3af87c0b26757b1c89f10868cc",
+        "type": "blob",
+        "byteLength": 605678,
+        "path": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/acceptance/independent.json"
+      },
+      {
+        "oid": "b2c6b4125a3c8dbfe7a084de0d48e5813374f5df",
+        "type": "blob",
+        "byteLength": 605673,
+        "path": "tests/evidence/integrated-person05-rev004005-66db2bb-2026-10-27/automated/acceptance/independent.json"
+      },
+      {
+        "oid": "a27e5862dc87ab82332c7e38baad1901133caa78",
+        "type": "blob",
+        "byteLength": 605666,
+        "path": "debugger/evidence/integration-v0.2.1-2026-10-25/independent/independent.json"
+      },
+      {
+        "oid": "d3eab3eaabae50297953616561ddbca8e81eb849",
+        "type": "blob",
+        "byteLength": 605654,
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance/independent.json"
+      },
+      {
+        "oid": "5aac1fef86282c548f93d43ab0eabc9e522ec62e",
+        "type": "blob",
+        "byteLength": 592326,
+        "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/independent.json"
+      },
+      {
+        "oid": "630511d141b1d6379403ce7d1af5eb8f2961f1ed",
+        "type": "blob",
+        "byteLength": 569821,
+        "path": "tests/evidence/independent-2026-10-25.json"
+      },
+      {
+        "oid": "5b90acf09b2a339c5e54fefc658a4c5f280bca9d",
+        "type": "blob",
+        "byteLength": 545839,
+        "path": "tests/evidence/integrated-2026-10-25-initializer-person05-v0.2.1/initializer-lifetime.json"
+      }
+    ],
+    "findings": []
+  },
+  "current": {
+    "files": 874,
+    "rawBytes": 26413054,
+    "trackedFiles": 824,
+    "untrackedFiles": 50,
+    "largestFiles": [
+      {
+        "path": "debugger/fixtures/stl/main.wasm",
+        "tracked": true,
+        "byteLength": 2178435,
+        "sha256": "8bf79514536ebf823f618757fa50f207556876280fe21fedacd475d081038ca6"
+      },
+      {
+        "path": "tests/evidence/integrated-v0.3.0-2026-10-25/final-acceptance/independent.json",
+        "tracked": true,
+        "byteLength": 606323,
+        "sha256": "111fc41f927d32b9678007109d1610874bd6e894e06c76546ac698a3d249d28c"
+      },
+      {
+        "path": "tests/evidence/integrated-2026-10-25/independent.json",
+        "tracked": true,
+        "byteLength": 606099,
+        "sha256": "ba13f6033268aa129623f8d298ad4e07a90cffa8b41fb54cc7e236234f5a251b"
+      },
+      {
+        "path": "debugger/evidence/initializer-lifetime-fix-2026-10-25/independent/independent.json",
+        "tracked": true,
+        "byteLength": 606040,
+        "sha256": "193ed9cbcd1f0491a73747ff68653f45503740bf64f674b797120d604b530a71"
+      },
+      {
+        "path": "debugger/evidence/watch-semantics-fix-2026-10-27/independent/independent.json",
+        "tracked": true,
+        "byteLength": 605857,
+        "sha256": "def0e4603e52f840e73a80832dea9cffc4a0787992a0074827dd7d7e12feca92"
+      },
+      {
+        "path": "app/offline/evidence/publication-integration-2026-10-27/validation-raw/independent.json",
+        "tracked": true,
+        "byteLength": 605842,
+        "sha256": "dbc2483a9420343e6472374e5a5f2d118b96123ed65d99860f24e0294387a3ab"
+      },
+      {
+        "path": "tests/evidence/integrated-v0.3.0-2026-10-25/independent.json",
+        "tracked": true,
+        "byteLength": 605772,
+        "sha256": "c85bfe32eeba7625ff50c8762441b998f562068bfe33391b6365c47bdd267a2e"
+      },
+      {
+        "path": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/independent.json",
+        "tracked": true,
+        "byteLength": 605694,
+        "sha256": "3d4203099b8aa0f5cdb6766fa23aa7f6ed2a60dda4ade0961c9ab8c1d5694106"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/acceptance/independent.json",
+        "tracked": true,
+        "byteLength": 605678,
+        "sha256": "cbc6c182baec37226d4e80404a28e1537b90f4969efda9055780a32365c7c025"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-rev004005-66db2bb-2026-10-27/automated/acceptance/independent.json",
+        "tracked": true,
+        "byteLength": 605673,
+        "sha256": "a2cd97fc8b0b27ce4e863f0392c648f191ca87c0314b8ecf6edcf08cb5d5e559"
+      },
+      {
+        "path": "debugger/evidence/integration-v0.2.1-2026-10-25/independent/independent.json",
+        "tracked": true,
+        "byteLength": 605666,
+        "sha256": "cddaee8da0f2924893020dde0e4edbec6e6efccf61e055bdb6e586df14ca40d2"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/acceptance/independent.json",
+        "tracked": true,
+        "byteLength": 605654,
+        "sha256": "cb35f81fc2b546bc3dc4b9fdc8d8e89b0d84ebc99912effc1e717286f164cae0"
+      },
+      {
+        "path": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/independent.json",
+        "tracked": true,
+        "byteLength": 592326,
+        "sha256": "98b1cde0bf6d920c29c2443ccc8ac5ab5a1fc83e84563d7e4499ddb40b1070e4"
+      },
+      {
+        "path": "tests/evidence/independent-2026-10-25.json",
+        "tracked": true,
+        "byteLength": 569821,
+        "sha256": "b118970db8bbd297fddb114c21f509b507a9f4b5d90b1ea04fa3aaeb376e18c1"
+      },
+      {
+        "path": "tests/evidence/integrated-2026-10-25-initializer-person05-v0.2.1/initializer-lifetime.json",
+        "tracked": true,
+        "byteLength": 545839,
+        "sha256": "f53186d43b4b2fcc64a5ea1c235bf1711afd474048d3acd163d014a72d52b932"
+      }
+    ],
+    "wasmFixtures": [
+      {
+        "path": "app/offline/evidence/deep-review-2026-10-26/engine-artifact.wasm",
+        "tracked": true,
+        "byteLength": 34400,
+        "sha256": "1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5"
+      },
+      {
+        "path": "debugger/evidence/watch-semantics-fix-2026-10-27/after-fix/engine-artifact.wasm",
+        "tracked": true,
+        "byteLength": 34400,
+        "sha256": "1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5"
+      },
+      {
+        "path": "debugger/evidence/watch-semantics-fix-2026-10-27/before-fix/engine-artifact.wasm",
+        "tracked": true,
+        "byteLength": 34400,
+        "sha256": "1236aa3d2773cea21279f276baecdb6f9ae7357753728e701e02057d2cad9ad5"
+      },
+      {
+        "path": "debugger/evidence/watch-semantics-fix-2026-10-27/worker-regression/artifact.wasm",
+        "tracked": true,
+        "byteLength": 35870,
+        "sha256": "3ce62621fb7b994fefd0ee39ef3475ec0eca8fc1cfc809bacb90886d506ebfd4"
+      },
+      {
+        "path": "debugger/fixtures/containers/main.wasm",
+        "tracked": true,
+        "byteLength": 352579,
+        "sha256": "1801296ed9b7749da2aa3b41547c027782cf8082aefa646038e895e7afb5cca2"
+      },
+      {
+        "path": "debugger/fixtures/debug-handoff/main.wasm",
+        "tracked": true,
+        "byteLength": 352731,
+        "sha256": "9212af7788ee9114c2d99debd59c0b8f40eb6012b87931e1a01b548ebe00466c"
+      },
+      {
+        "path": "debugger/fixtures/infinite/main.wasm",
+        "tracked": true,
+        "byteLength": 13562,
+        "sha256": "c6987d6e85f9e0d751466d59a3a46cddca07dfc4c59cbe139d0932f193ba219a"
+      },
+      {
+        "path": "debugger/fixtures/output-flood/main.wasm",
+        "tracked": true,
+        "byteLength": 17291,
+        "sha256": "45be5e04a67e88946b9959cf03c037f3330d75f51eb46cb9ef6011ef09ba7f05"
+      },
+      {
+        "path": "debugger/fixtures/shadow-loop/main.wasm",
+        "tracked": true,
+        "byteLength": 13768,
+        "sha256": "29e40ce356a66a58a0e229782a327ecb1306499f22acf9ccbcd7f29461cea3eb"
+      },
+      {
+        "path": "debugger/fixtures/stdio/main.wasm",
+        "tracked": true,
+        "byteLength": 51247,
+        "sha256": "0a566351525341a56c783476a5b8cb93583a8969572419425b48c472563cbe43"
+      },
+      {
+        "path": "debugger/fixtures/stl/main.wasm",
+        "tracked": true,
+        "byteLength": 2178435,
+        "sha256": "8bf79514536ebf823f618757fa50f207556876280fe21fedacd475d081038ca6"
+      },
+      {
+        "path": "debugger/fixtures/trap/main.wasm",
+        "tracked": true,
+        "byteLength": 15368,
+        "sha256": "41c074f65d07cda0889b54f73a58dd0bf999053a07d2805c3b10ee5e21452848"
+      }
+    ],
+    "imageFiles": [
+      {
+        "path": "app/offline/evidence/deep-review-2026-10-26/offline-breakpoint.png",
+        "tracked": true,
+        "byteLength": 57971,
+        "sha256": "c1ebf28c6d25d9569f3a8a1bfee6b64258c89db7f5383370b30dbb70512d303f"
+      },
+      {
+        "path": "app/offline/evidence/deep-review-2026-10-26/offline-exit.png",
+        "tracked": true,
+        "byteLength": 56238,
+        "sha256": "3ca89fdcaff4be5a4c57f362590a214caae7a9f0ebcee886b79711d35ec02b17"
+      },
+      {
+        "path": "app/offline/evidence/deep-review-2026-10-26/recovery-offline.png",
+        "tracked": true,
+        "byteLength": 29267,
+        "sha256": "f7c0addf905067f059d1bda91da85fdda67026ec64b632a9e758caf90b74f835"
+      },
+      {
+        "path": "app/offline/evidence/deep-review-2026-10-26/repaired-online.png",
+        "tracked": true,
+        "byteLength": 59138,
+        "sha256": "36e6a3f1411fd65a1b458b4502768cafca238087b0eeadf2e8f10cbd816ec3fd"
+      },
+      {
+        "path": "app/offline/evidence/desktop-2026-10-26/offline-debug-paused.png",
+        "tracked": true,
+        "byteLength": 70778,
+        "sha256": "32e637ec946e195a753a1778fea7e9b086cf9d3290ce7f25b34c2a902c0357aa"
+      },
+      {
+        "path": "app/offline/evidence/desktop-2026-10-26/offline-restart.png",
+        "tracked": true,
+        "byteLength": 55171,
+        "sha256": "949e20369add9adf58616a52d5e8ff3519f722a5f1da70e9bb5f6aba284f1621"
+      },
+      {
+        "path": "app/offline/evidence/desktop-2026-10-26/prepared.png",
+        "tracked": true,
+        "byteLength": 34320,
+        "sha256": "21c0db57daa79e1fbd3b1a7988897cb0da801069a9d4a9e75aaf1bbf7087d21c"
+      },
+      {
+        "path": "app/offline/evidence/ui-race-integration-2026-10-27/offline-breakpoint.png",
+        "tracked": true,
+        "byteLength": 58998,
+        "sha256": "519c8bbb2bc24261e9f544f43e6d9ac184e9da8d82d94c08cba19ce71fdf460d"
+      },
+      {
+        "path": "app/offline/evidence/ui-race-integration-2026-10-27/offline-exit.png",
+        "tracked": true,
+        "byteLength": 58741,
+        "sha256": "39aa80cc2627acadfa97145c3c39eebde9cdd5a561109194e685ff5f0a51acce"
+      },
+      {
+        "path": "app/offline/evidence/val004-package-2026-10-26/new-build-exit3.png",
+        "tracked": true,
+        "byteLength": 79424,
+        "sha256": "a2a73abdf873afa7bb2b9d3821618e8852704947cebe01b1bae2374f07036911"
+      },
+      {
+        "path": "app/offline/evidence/val004-package-2026-10-26/snapshot-i1.png",
+        "tracked": true,
+        "byteLength": 83681,
+        "sha256": "0e3b9f58b779a2db7f1528677dca83da0c02d9601d890b7051ae87e2cdfc9310"
+      },
+      {
+        "path": "app/offline/evidence/watch-publication-2026-10-27/browser-native-run.png",
+        "tracked": true,
+        "byteLength": 65077,
+        "sha256": "282c27b883664b8ef8fdf52dc7adce75f3d6fe8c0b2e2f79fbe71b3b2c7538a4"
+      },
+      {
+        "path": "app/offline/evidence/watch-publication-2026-10-27/browser-watch.png",
+        "tracked": true,
+        "byteLength": 30180,
+        "sha256": "4f4b80429822f2f8a19a1a933058da86b4621b04e470bccf960b445eddb7911c"
+      },
+      {
+        "path": "compiler/evidence/browser-offline-2026-10-24.jpg",
+        "tracked": true,
+        "byteLength": 59594,
+        "sha256": "17e512cf00792043c7e34bf8c7a786e675dea8d51391238cb24005dce941154a"
+      },
+      {
+        "path": "debugger/evidence/browser-server-stopped-2026-10-24.png",
+        "tracked": true,
+        "byteLength": 100337,
+        "sha256": "81514cb2f6f0166e3ceb0ffff95d200bdca69d5033a1c85d254c25f89e09ae5b"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-rev004005-66db2bb-2026-10-27/browser/failed-not-ready.png",
+        "tracked": true,
+        "byteLength": 74738,
+        "sha256": "b7001a71099f9c0d03a21aa3a77b46e467b7821ff8c6f5147db5efc39acf8bb5"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-rev004005-66db2bb-2026-10-27/browser/paper-debug-snapshot.png",
+        "tracked": true,
+        "byteLength": 71844,
+        "sha256": "0306fc9b998a7210f595917219e860e7559eded98291bf32b1cde4a6a079319c"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-rev004005-66db2bb-2026-10-27/browser/preparing-locked.png",
+        "tracked": true,
+        "byteLength": 76624,
+        "sha256": "2dd08963487fb889e94be93df6d27f81e15775b006c2c10d631beeeebbefcc5b"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/breakpoint-visibility-mismatch.png",
+        "tracked": true,
+        "byteLength": 115678,
+        "sha256": "bda3d6a37a51cb5e3f25df909b598093c79d62f1a4801d23d21b47c1b794c683"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/paused-live.png",
+        "tracked": true,
+        "byteLength": 121161,
+        "sha256": "e73c471ac970c48dfd5213f6de4f05863e26e6f03ed19361beb7005eec53de02"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/recovery-reopened.png",
+        "tracked": true,
+        "byteLength": 68388,
+        "sha256": "85ce9b08a690b00a4f66a8c74ddd65a4a3ba027dba6464abec529514d20ff0dc"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/two-window-conflict.png",
+        "tracked": true,
+        "byteLength": 78460,
+        "sha256": "6bde5e072afc5c32ae9ea386afe2ee102f8250c60aed44047205dbd0e58b2bc3"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/browser/val004-minimal.png",
+        "tracked": true,
+        "byteLength": 80828,
+        "sha256": "9b91f269d65572488c46440bda28c713df29116fce0539ad33c6ca97c91c192b"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/new-build-exit3.png",
+        "tracked": true,
+        "byteLength": 77592,
+        "sha256": "a46aec8493850bf001deaa2b8e6b7d4539f7b0f18dccfa8f35d3874435f9b1f0"
+      },
+      {
+        "path": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/browser/repaired-snapshot-i1.png",
+        "tracked": true,
+        "byteLength": 81988,
+        "sha256": "fac64c2cb5aa35f060d10ffd9d4ff3adc3ab5e602ea3a7e7c1f29a1598e40038"
+      },
+      {
+        "path": "ui/evidence/browser-breakpoint.jpg",
+        "tracked": true,
+        "byteLength": 119349,
+        "sha256": "ad01f3e3d369a4a29f40b59bd4d6f30f26cf9b858cac648596ac2827ec5bc38e"
+      },
+      {
+        "path": "ui/evidence/browser-c-output.jpg",
+        "tracked": true,
+        "byteLength": 71144,
+        "sha256": "ccbc88f8ace505de6a38d721473a0981dbf94ca53ee9bd19d27b5b4dbfad60f0"
+      },
+      {
+        "path": "ui/evidence/browser-conflict.jpg",
+        "tracked": true,
+        "byteLength": 96694,
+        "sha256": "4652b57d673714a6da74448f2d2ef03e66bad2251f5945be2ea8497e48a689d7"
+      },
+      {
+        "path": "ui/evidence/browser-diagnostic.jpg",
+        "tracked": true,
+        "byteLength": 91702,
+        "sha256": "35a5f73be60ee49e1289f81c7b0e0dc33fac6efc316a25b708bc792dc7612aff"
+      },
+      {
+        "path": "ui/evidence/browser-stop-restart.jpg",
+        "tracked": true,
+        "byteLength": 71410,
+        "sha256": "362e3bf7c8fa27b9c77ac71127273cd1af9f9c84b72f7e781737d6e46a6ef2f0"
+      },
+      {
+        "path": "ui/evidence/integrated-paper-style-2026-10-26/desktop-final.jpg",
+        "tracked": true,
+        "byteLength": 112855,
+        "sha256": "5cd91ce0d3b0c78b80164e25cb9797053916ce8b5c3497c6aef4fbeea91f48c1"
+      },
+      {
+        "path": "ui/evidence/integrated-paper-style-2026-10-26/first-desktop.jpg",
+        "tracked": true,
+        "byteLength": 89518,
+        "sha256": "082c88d3703ee807ae7d7ea96fe81f17821283e37bf42e8871feb82648edcc54"
+      },
+      {
+        "path": "ui/evidence/integrated-paper-style-2026-10-26/first-narrow-code.jpg",
+        "tracked": true,
+        "byteLength": 52811,
+        "sha256": "3b4835cfe10368c40d8945f801696f53c74830dcaa7fadbfa10a3224d68df4b3"
+      },
+      {
+        "path": "ui/evidence/integrated-paper-style-2026-10-26/narrow-debug-final.jpg",
+        "tracked": true,
+        "byteLength": 8284,
+        "sha256": "e6e41d800313c2f23b0557a7818946713e63e1e30e3bdbc617ec6d2515575f7f"
+      },
+      {
+        "path": "ui/evidence/integrated-paper-style-2026-10-26/paper-workbench-final.jpg",
+        "tracked": true,
+        "byteLength": 90828,
+        "sha256": "e9259a21b12d6c818b9b38a7b17d7cf1dca1206157fe7086d9ec0cd8d5f98dac"
+      },
+      {
+        "path": "ui/evidence/integrated-rev004005-2026-10-27/browser/fixed-execution.jpg",
+        "tracked": true,
+        "byteLength": 73177,
+        "sha256": "88428aa658e66afaf6e9427036977b0cec091b21343be58b4d3858eb70255cb1"
+      },
+      {
+        "path": "ui/evidence/integrated-rev004005-2026-10-27/browser/prepare-failure.jpg",
+        "tracked": true,
+        "byteLength": 56840,
+        "sha256": "a8f2c58f48f212730d03ab88f56c647c11b2f7dd83be35d3e6bb37a9a9810b7a"
+      },
+      {
+        "path": "ui/evidence/integrated-shortcuts-2026-10-27/browser/shortcut-guide.png",
+        "tracked": true,
+        "byteLength": 75601,
+        "sha256": "5ba6aec4a2ba70f13b7de34d56730d6ad070318a1dace14b9d530a2939b1b9ff"
+      },
+      {
+        "path": "ui/evidence/integrated-v0.3.0-browser-2026-10-25/paused.png",
+        "tracked": true,
+        "byteLength": 23661,
+        "sha256": "007122aec0acd8ffbf864d22031ccb4bc21c45d23856b7bca4f9f29b906d478d"
+      },
+      {
+        "path": "ui/evidence/integrated-v0.3.0-browser-2026-10-25/restart.png",
+        "tracked": true,
+        "byteLength": 71697,
+        "sha256": "703fec646c934959f436cf89a5f84d74bb24443f731d569c52d1452830de533f"
+      }
+    ],
+    "findings": [],
+    "excludedFiles": [
+      {
+        "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-audit.json",
+        "reason": "this audit output generated after the scan; root seals final publication tree separately"
+      },
+      {
+        "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-audit.md",
+        "reason": "this audit output generated after the scan; root seals final publication tree separately"
+      },
+      {
+        "path": "app/offline/evidence/shortcuts-audit-2026-10-28/git-publication-files.json",
+        "reason": "this audit output generated after the scan; root seals final publication tree separately"
+      },
+      {
+        "path": "tests/evidence/integrated-person01-shortcuts-host-2026-10-27/independent/run-01/checks.tap",
+        "reason": "temporary new run; full raw output separately archived under root-owned publication-integration evidence"
+      },
+      {
+        "path": "tests/evidence/integrated-person01-shortcuts-host-2026-10-27/independent/run-01/results.json",
+        "reason": "temporary new run; full raw output separately archived under root-owned publication-integration evidence"
+      }
+    ]
+  },
+  "ignoreChecks": [
+    {
+      "path": "compiler/resources/vendor/wasm-clang/clang",
+      "ignored": true,
+      "tracked": false,
+      "rule": "compiler/resources/.gitignore:2:/vendor/wasm-clang/clang\tcompiler/resources/vendor/wasm-clang/clang"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/lld",
+      "ignored": true,
+      "tracked": false,
+      "rule": "compiler/resources/.gitignore:3:/vendor/wasm-clang/lld\tcompiler/resources/vendor/wasm-clang/lld"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/memfs",
+      "ignored": true,
+      "tracked": false,
+      "rule": "compiler/resources/.gitignore:4:/vendor/wasm-clang/memfs\tcompiler/resources/vendor/wasm-clang/memfs"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/sysroot.tar",
+      "ignored": true,
+      "tracked": false,
+      "rule": "compiler/resources/.gitignore:5:/vendor/wasm-clang/sysroot.tar\tcompiler/resources/vendor/wasm-clang/sysroot.tar"
+    },
+    {
+      "path": "app/offline/.local/packages/ipad-offline-debugger-v0.4.5.zip",
+      "ignored": true,
+      "tracked": false,
+      "rule": ".gitignore:7:.local/\tapp/offline/.local/packages/ipad-offline-debugger-v0.4.5.zip"
+    },
+    {
+      "path": "app/offline/.local/packages/ipad-first-setup-v0.4.5.zip",
+      "ignored": true,
+      "tracked": false,
+      "rule": ".gitignore:7:.local/\tapp/offline/.local/packages/ipad-first-setup-v0.4.5.zip"
+    },
+    {
+      "path": "app/offline/.local/tls/local-https-20261026T012959Z-a065aa18/server-key.pem",
+      "ignored": true,
+      "tracked": false,
+      "rule": ".gitignore:7:.local/\tapp/offline/.local/tls/local-https-20261026T012959Z-a065aa18/server-key.pem"
+    },
+    {
+      "path": "app/offline/.local/tls/local-https-20261026T012959Z-a065aa18/root-only.mobileconfig",
+      "ignored": true,
+      "tracked": false,
+      "rule": ".gitignore:7:.local/\tapp/offline/.local/tls/local-https-20261026T012959Z-a065aa18/root-only.mobileconfig"
+    }
+  ],
+  "ignoredResourcesExcluded": true,
+  "rootLicensePresent": false,
+  "uploadIntent": "Push integration, four module branches and existing/new fixed tags; preserve histories and small tracked fixture Wasm. Exclude ignored toolchain binaries/full ZIPs/TLS material and the duplicate temporary validation run. Remote main is left for user manual PR merge.",
+  "allFiniteChecksPassed": true
+}

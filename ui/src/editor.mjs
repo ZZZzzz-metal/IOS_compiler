@@ -29,3 +29,55 @@ export function indentSelection(text,start,end,outdent=false){
   const firstDelta=changed[0].length-lines[0].length;
   return {text:text.slice(0,lineStart)+changed.join('\n')+text.slice(lineEnd),start:Math.max(lineStart,start+firstDelta),end:Math.max(lineStart,end+delta)};
 }
+
+const shortcutRows = [
+  ['start', '启动 / 继续', { key: 'F5' }, { key: '5', code: 'Digit5', ctrl: true }],
+  ['run', '编译运行', { key: 'F5', ctrl: true }, { key: '6', code: 'Digit6', ctrl: true }],
+  ['stop', '停止', { key: 'F5', shift: true }, { key: '5', code: 'Digit5', ctrl: true, shift: true }],
+  ['breakpoint', '切换断点', { key: 'F9' }, { key: '9', code: 'Digit9', ctrl: true }],
+  ['stepOver', '单步跳过', { key: 'F10' }, { key: '0', code: 'Digit0', ctrl: true }],
+  ['stepInto', '单步进入', { key: 'F11' }, { key: '-', code: 'Minus', ctrl: true }],
+  ['stepOut', '单步跳出', { key: 'F11', shift: true }, { key: '-', code: 'Minus', ctrl: true, shift: true }],
+];
+
+function defineShortcut(action, label, scheme, binding) {
+  const ctrl = binding.ctrl ?? false, shift = binding.shift ?? false;
+  // ARIA describes physical key combinations, including Shift+5 rather than %:
+  // https://www.w3.org/TR/wai-aria-1.2/#aria-keyshortcuts
+  const aria = `${ctrl ? 'Control+' : ''}${shift ? 'Shift+' : ''}${binding.key}`;
+  return Object.freeze({ action, label, scheme, ...binding, ctrl, shift,
+    display: aria.replace('Control+', 'Ctrl+'), aria });
+}
+
+/** Read-only definitions shared by dispatch, tooltips and aria-keyshortcuts. */
+export const shortcutDefinitions = Object.freeze(shortcutRows.flatMap(([action, label, standard, alternative]) => [
+  defineShortcut(action, label, 'standard', standard),
+  defineShortcut(action, label, 'control-number', alternative),
+]));
+
+function shortcutEnabled(definition, scheme) {
+  return definition.scheme === 'standard' || scheme === 'control-number';
+}
+
+/** Resolves an intent only. The caller owns state checks and event consumption. */
+export function resolveShortcut(event, scheme = 'control-number') {
+  if (!event || event.defaultPrevented || event.isComposing || event.keyCode === 229 || event.repeat ||
+      event.altKey || event.metaKey || event.getModifierState?.('AltGraph')) return null;
+  const match = shortcutDefinitions.find(definition => shortcutEnabled(definition, scheme) &&
+    Boolean(event.ctrlKey) === definition.ctrl && Boolean(event.shiftKey) === definition.shift &&
+    (definition.code ? event.code === definition.code : event.key === definition.key));
+  return match?.action ?? null;
+}
+
+/** Unknown schemes retain the standard keys and never silently enable alternatives. */
+export function shortcutLabels(scheme = 'control-number') {
+  const labels = {};
+  for (const definition of shortcutDefinitions) {
+    if (!shortcutEnabled(definition, scheme)) continue;
+    const previous = labels[definition.action];
+    labels[definition.action] = previous
+      ? { display: `${previous.display} / ${definition.display}`, aria: `${previous.aria} ${definition.aria}` }
+      : { display: definition.display, aria: definition.aria };
+  }
+  return labels;
+}

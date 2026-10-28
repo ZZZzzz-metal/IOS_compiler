@@ -1,0 +1,10 @@
+{
+  "baseline": "dc65469c85616f175a735b9977cb37f8c6f188c2",
+  "sourceFilesChecked": 10,
+  "workingLineEndingDifferences": [
+    "ui/probe.html",
+    "ui/style.css"
+  ],
+  "unexpectedDifferences": [],
+  "result": "PASS"
+}

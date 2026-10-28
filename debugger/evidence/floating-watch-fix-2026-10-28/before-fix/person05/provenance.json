@@ -1,0 +1,35 @@
+{
+  "note": "Read-only byte copy of person 05 failing evidence; original paths were never written.",
+  "copied": [
+    {
+      "originalPath": "../ipad-debugger-05/tests/evidence/integrated-person05-parallel-review-3248ad5-2026-10-28/engine/run-01/source.cpp",
+      "archivedFile": "source.cpp",
+      "byteLength": 2380,
+      "sha256": "a781aa556e582cbeecd61aa561a9dc388ee8640ac7c82d3782572d893880015f"
+    },
+    {
+      "originalPath": "../ipad-debugger-05/tests/evidence/integrated-person05-parallel-review-3248ad5-2026-10-28/engine/run-01/artifact.wasm",
+      "archivedFile": "artifact.wasm",
+      "byteLength": 38373,
+      "sha256": "67b3504d64da47a6b0feb495aa6338f89c3f1056d197016f758295bb11ef95e4"
+    },
+    {
+      "originalPath": "../ipad-debugger-05/tests/evidence/integrated-person05-parallel-review-3248ad5-2026-10-28/engine/run-01/results.json",
+      "archivedFile": "results.json",
+      "byteLength": 56310,
+      "sha256": "23198d218510c814f3cae6ff15a988ea1363151edce1661f3cae4945cb0b8a6d"
+    },
+    {
+      "originalPath": "../ipad-debugger-05/tests/evidence/integrated-person05-parallel-review-3248ad5-2026-10-28/engine/run-01/checks.tap",
+      "archivedFile": "checks.tap",
+      "byteLength": 871,
+      "sha256": "d13391d67312de87e7ff34e7c44ccfef43897322c6939475e7b038daa8b992ed"
+    },
+    {
+      "originalPath": "../ipad-debugger-05/tests/watch-types-independent.mjs",
+      "archivedFile": "watch-types-independent.mjs",
+      "byteLength": 8741,
+      "sha256": "7de0eddbd3d692689745a5944f0c3bb0c56243ff64bc421d1603bcc2afb79dcb"
+    }
+  ]
+}

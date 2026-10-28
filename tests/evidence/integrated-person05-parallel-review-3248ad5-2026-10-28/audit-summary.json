@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-10-28T04:35:21.803Z",
+  "auditor": "05 independent evidence audit subtask",
+  "testedRevision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "scope": "Read-only validation of existing automated/ and engine/ evidence; no rerun or product modification",
+  "automatic": {
+    "commandCount": 10,
+    "allExitZero": true,
+    "commands": [
+      {
+        "id": "toolchain-verify",
+        "exitCode": 0,
+        "outputHashVerified": true,
+        "metadataVerified": true,
+        "counts": null
+      },
+      {
+        "id": "check",
+        "exitCode": 0,
+        "outputHashVerified": true,
+        "metadataVerified": true,
+        "counts": null
+      },
+      {
+        "id": "offline-worker",
+        "exitCode": 0,
+        "outputHashVerified": true,
+        "metadataVerified": true,
+        "counts": {
+          "tests": 22,
+          "passed": 22,
+          "failed": 0
+        }
+      },
+      {
+        "id": "contracts",
+        "exitCode": 0,
+        "outputHashVerified": true,
+        "metadataVerified": true,
+        "counts": {
+          "tests": 10,
+          "passed": 10,
+          "failed": 0
+        }
+      },
+      {
+        "id": "integration",
+        "exitCode": 0,
+        "outputHashVerified": true,
+        "metadataVerified": true,
+        "counts": {
+          "tests": 3,
+          "passed": 3,
+          "failed": 0
+        }
+      },
+      {
+        "id": "ui-storage",
+        "exitCode": 0,
+        "outputHashVerified": true,
+        "metadataVerified": true,
+        "counts": {
+          "tests": 86,
+          "passed": 86,
+          "failed": 0
+        }
+      },
+      {
+        "id": "acceptance",
+        "exitCode": 0,
+        "outputHashVerified": true,
+        "metadataVerified": true,
+        "counts": null
+      },
+      {
+        "id": "modules",
+        "exitCode": 0,
+        "outputHashVerified": true,
+        "metadataVerified": true,
+        "counts": {
+          "tests": 102,
+          "passed": 102,
+          "failed": 0
+        }
+      },
+      {
+        "id": "regressions",
+        "exitCode": 0,
+        "outputHashVerified": true,
+        "metadataVerified": true,
+        "counts": null
+      },
+      {
+        "id": "initializer",
+        "exitCode": 0,
+        "outputHashVerified": true,
+        "metadataVerified": true,
+        "counts": null
+      }
+    ],
+    "derivedPassed": 230,
+    "derivedFailed": 0,
+    "offlineWorkerSeparate": {
+      "passed": 22,
+      "failed": 0
+    },
+    "records": [
+      {
+        "file": "automated/acceptance/independent.json",
+        "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+        "profile": "integration-prototype-b02def5d2c6e7f39",
+        "status": null,
+        "counts": {
+          "passed": 21,
+          "failed": 0
+        }
+      },
+      {
+        "file": "automated/initializer/initializer-lifetime.json",
+        "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+        "profile": "integration-prototype-b02def5d2c6e7f39",
+        "status": null,
+        "counts": {
+          "passed": 6,
+          "failed": 0
+        }
+      },
+      {
+        "file": "automated/regressions/regression-shadow.json",
+        "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+        "profile": "integration-prototype-b02def5d2c6e7f39",
+        "status": "passed",
+        "counts": null
+      },
+      {
+        "file": "automated/regressions/regression-loop-header.json",
+        "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+        "profile": "integration-prototype-b02def5d2c6e7f39",
+        "status": "passed",
+        "counts": null
+      }
+    ],
+    "uniqueRecordedSourceHashesVerified": 21,
+    "uniqueEngineResourcesVerified": 30,
+    "toolchainVerifyOutput": "\n> ipad-offline-debugger@0.4.4 prepare:toolchain\n> node compiler/scripts/prepare-toolchain.mjs --verify-only\n\nVerified 11 resources, 60412435 bytes. Source rebuild and complete distribution license review remain unverified.\n"
+  },
+  "engine": {
+    "observations": 26,
+    "counts": {
+      "passed": 14,
+      "failed": 11,
+      "boundaryOnly": 1
+    },
+    "failedGroups": 2,
+    "nativeAndInterpreterStdoutEqual": true,
+    "nativeExitCode": 0,
+    "interpreterExitCode": 0,
+    "sourceEqualsSnapshot": true,
+    "artifactBytes": 38373,
+    "artifactSHA256": "sha256:67b3504d64da47a6b0feb495aa6338f89c3f1056d197016f758295bb11ef95e4",
+    "variablesSHA256": "7a678889ab7b8f21dcc39f83c51771b9fff8df7103bec92275937c8ff40f996c"
+  },
+  "productDiffFromTargetEmpty": true,
+  "offlineReview": {
+    "files": [
+      "command.json",
+      "report.json",
+      "review.mjs"
+    ],
+    "resultEvidenceExists": false,
+    "conclusion": "Only an unfinished review script exists here; no completed offline code audit, built offline package, browser cold start or real iPad offline acceptance."
+  },
+  "sealing": {
+    "notPerformed": true,
+    "recommendation": "Root should seal all completed evidence files except SHA256SUMS.json after final additions; retain * -text; verify disk then Git blob bytes after commit. Previous seal helpers are revision-pinned and must not be reused without a new target."
+  },
+  "issues": [],
+  "limitations": [
+    "This audit verified persisted command output consistency; it did not rerun the ten commands.",
+    "Automation passes do not close the two newly failing engine semantic groups.",
+    "No browser, physical device, clipboard, IndexedDB or offline package acceptance performed by this subtask."
+  ]
+}

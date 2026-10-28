@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import {spawnSync,execFileSync} from 'node:child_process';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
+const output=fileURLToPath(new URL('./',import.meta.url));
+const root=fileURLToPath(new URL('../../../',import.meta.url));
+const owner=resolve(root,'../ipad-debugger-04');
+const fixed='33c16398948c102edcac4f4c794a3e1de1cb9b19',old='3248ad54faa5f0f3a8b6f6501829e95e4699f066';
+const git=(cwd,...args)=>execFileSync('git',['-c',`safe.directory=${cwd}`,...args],{cwd,encoding:'utf8'}).trim();
+assert.equal(git(owner,'rev-parse','HEAD'),fixed);assert.equal(git(owner,'status','--porcelain'),'');
+await mkdir(resolve(output,'commands'),{recursive:true});
+const commands=[];
+function run(id,cwd,exe,args,{env={},expected=0}={}){
+ const startedAt=new Date().toISOString();const result=spawnSync(exe,args,{cwd,env:{...process.env,...env},encoding:'utf8',timeout:120000,maxBuffer:8*1024*1024});
+ const bytes=Buffer.from((result.stdout??'')+(result.stderr??''));
+ return (async()=>{await writeFile(resolve(output,`commands/${id}.txt`),bytes,{flag:'wx'});const item={id,cwd,executable:exe,args,env,expectedExitCode:expected,observedExitCode:result.status,signal:result.signal,error:result.error?.message??null,startedAt,finishedAt:new Date().toISOString(),outputFile:`commands/${id}.txt`,outputSHA256:createHash('sha256').update(bytes).digest('hex')};commands.push(item);assert.equal(result.status,expected,id);return item;})();
+}
+for(const [id,revision,expected] of [['before',old,1],['after',fixed,0]])await run(id,root,process.execPath,['tests/ui-parallel-audit.mjs',`${id}-run-01`],{expected,env:{UI_PARALLEL_REVISION:revision,UI_PARALLEL_OUTPUT_ROOT:output}});
+await run('entry-syntax',root,process.execPath,['--check','tests/ui-parallel-audit.mjs']);
+await run('host-syntax',root,process.execPath,['--check','tests/lib/ui-parallel-audit-host.mjs']);
+await run('ui-storage',owner,process.execPath,['--test','--test-reporter=tap','ui/checks/*.test.mjs','storage/checks/*.test.mjs']);
+const npmCli=resolve(process.execPath,'../node_modules/npm/bin/npm-cli.js');
+await run('check',owner,process.execPath,[npmCli,'run','check']);
+await run('contracts',owner,process.execPath,[npmCli,'test']);
+assert.equal(git(owner,'rev-parse','HEAD'),fixed);assert.equal(git(owner,'status','--porcelain'),'');
+const before=JSON.parse(await readFile(resolve(output,'ui/before-run-01/results.json'),'utf8'));
+const after=JSON.parse(await readFile(resolve(output,'ui/after-run-01/results.json'),'utf8'));
+const moduleOutput=await readFile(resolve(output,'commands/ui-storage.txt'),'utf8');
+assert.match(moduleOutput,/# tests 106\r?\n/);assert.match(moduleOutput,/# pass 106\r?\n/);assert.match(moduleOutput,/# fail 0\r?\n/);
+const comparison={oldRevision:old,fixedRevision:fixed,oldCounts:before.counts,newCounts:after.counts,identicalHarnessInputs:JSON.stringify(before.inputs.filter(item=>item.path.startsWith('tests/')))===JSON.stringify(after.inputs.filter(item=>item.path.startsWith('tests/'))),cases:after.results.map(item=>({id:item.id,before:before.results.find(value=>value.id===item.id)?.status,after:item.status})),uiStorage:{passed:106,failed:0},ownerWorktreeCleanAtStartAndEnd:true,commands};
+assert.equal(comparison.identicalHarnessInputs,true);assert.equal(after.counts.failed,0);assert.equal(after.counts.harnessFailures,0);
+await writeFile(resolve(output,'comparison.json'),JSON.stringify(comparison,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({old:before.counts,fixed:after.counts,uiStorage:106,commands:commands.length}));

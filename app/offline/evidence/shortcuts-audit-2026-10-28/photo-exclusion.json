@@ -1,0 +1,10 @@
+{
+  "recordedAt": "2026-10-27T23:35:43.261Z",
+  "specifiedPhotoBasename": "codex-clipboard-a134fdea-b1d9-44ba-a1aa-e1b570243ad4.jpg",
+  "originalReadOnlyCompared": true,
+  "inReachableHistoryByGitBlobId": false,
+  "inCurrentPublicationInventoryBySHA256": false,
+  "inCurrentPublicationInventoryByFilename": false,
+  "matchingFiles": [],
+  "scope": "Read-only comparison against the user-provided local photo. The image and its bytes are not copied, embedded or published by this audit. Original content hash is not written to this report."
+}

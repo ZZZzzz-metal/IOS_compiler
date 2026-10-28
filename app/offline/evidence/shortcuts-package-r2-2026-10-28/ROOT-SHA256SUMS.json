@@ -1,0 +1,37 @@
+[
+  {
+    "path": "app/offline/evidence/shortcuts-package-r2-2026-10-28/.gitattributes",
+    "byteLength": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-r2-2026-10-28/build.json",
+    "byteLength": 1008,
+    "sha256": "5fcfb4758d18666d2f5b03731f73fe1d0f0d7035e79f6b06328772a3ae5ce20a"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-r2-2026-10-28/bundle.json",
+    "byteLength": 11514,
+    "sha256": "7f78d4d5b17d311712ea44d11d9ed860bb4c5994e23175c26a213dd6322c0ec6"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-r2-2026-10-28/package-archives.py",
+    "byteLength": 14477,
+    "sha256": "d35eb13f85db7fa4dd3632cce9d05fe60f1ea6a17828d5f7aa5a8c9ef9f631ba"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-r2-2026-10-28/package-command.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-r2-2026-10-28/package-command.stdout.txt",
+    "byteLength": 3590,
+    "sha256": "a4c78151bb00da67b76c7d948e0833d310df6726836cce8e6d77defe9f3b6439"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-package-r2-2026-10-28/package.json",
+    "byteLength": 3517,
+    "sha256": "149f60602cc49215344fb77a15015cf160267bc677db068c158719a443ae9cf7"
+  }
+]

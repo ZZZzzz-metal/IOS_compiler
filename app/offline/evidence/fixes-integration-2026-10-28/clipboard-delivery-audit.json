@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-28T04:44:04.157Z",
+  "revision": "33c16398948c102edcac4f4c794a3e1de1cb9b19",
+  "scope": "Read-only fixed-commit scope and evidence hash verification; no new product test or independent person05 acceptance.",
+  "changedFiles": 22,
+  "ownershipVerified": true,
+  "allowedRoots": [
+    "ui/",
+    "docs/handoffs/04.md"
+  ],
+  "seals": [
+    {
+      "manifest": "ui/evidence/integrated-clipboard-2026-10-28/SHA256SUMS.json",
+      "verifiedEntries": 17
+    },
+    {
+      "manifest": "ui/evidence/integrated-clipboard-2026-10-28/automated-final/SHA256SUMS.json",
+      "verifiedEntries": 4
+    }
+  ],
+  "totalSealedEntries": 21,
+  "sourceInputCommitBlobsVerified": 13,
+  "sourceWorkingEqualsStaged": true,
+  "targetedRecorded": {
+    "tests": 20,
+    "pass": 20,
+    "fail": 0
+  },
+  "implementationDiff": "diff --git a/ui/src/main.mjs b/ui/src/main.mjs\nindex 32aaae1..f817c24 100644\n--- a/ui/src/main.mjs\n+++ b/ui/src/main.mjs\n@@ -15,7 +15,7 @@ let activeSnapshot=null,diagnosticSnapshot=null,diagnostics=[],requested=[],read\n let adapter=null,controller=null,compiler=null,compilation=null,restored=false,saveFailed=false;\n let renderPending=false,renderedInspection='',watchKey='',watched=null,autoSave;\n let unqueuedEdits=false,recovering=false;\n-let importSequence=0,draftGeneration=0;\n+let importSequence=0,draftGeneration=0,pasteSequence=0,manualPaste=null;\n let shortcutScheme=readShortcutScheme();\n const store=createDraftStore();\n const fault=error=>{ $('message').hidden=false;$('message').textContent=error?.message??String(error); };\n@@ -302,7 +302,19 @@ function syncScroll(){ $('highlight').scrollTop=$('source').scrollTop;$('highlig\n function indent(outdent){if(snapshotMode)return;const input=$('source'),next=indentSelection(input.value,input.selectionStart,input.selectionEnd,outdent);input.value=next.text;input.setSelectionRange(next.start,next.end);edited();input.focus();}\n function findNext(){const text=$('source').value,term=$('find').value;if(!term)return;let offset=text.indexOf(term,$('source').selectionEnd);if(offset<0)offset=text.indexOf(term);if(offset<0){fault('没有找到这段文字。');return;}$('source').focus();$('source').setSelectionRange(offset,offset+term.length);$('source').scrollTop=Math.max(0,(text.slice(0,offset).split('\\n').length-4)*24);syncScroll();}\n function download(result){const url=URL.createObjectURL(new Blob([result.text],{type:result.mediaType}));const anchor=document.createElement('a');anchor.href=url;anchor.download=result.filename;anchor.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}\n-function manualClipboard(kind){$('clipboard-title').textContent=kind==='copy'?'复制题站源码':'粘贴题站源码';$('clipboard-text').value=kind==='copy'?draft.userText:'';$('clipboard-apply').hidden=kind==='copy';$('clipboard-dialog').showModal();$('clipboard-text').focus();if(kind==='copy')$('clipboard-text').select();}\n+function currentPaste(context){return context?.request===pasteSequence;}\n+function matchesPasteDraft(context){return !recovering&&draft===context.target&&draftGeneration===context.generation;}\n+function applyPaste(context,text){\n+  if(!currentPaste(context))return;\n+  if(!matchesPasteDraft(context)){fault('读取剪贴板期间草稿已修改或切换，已保留当前内容。请重新粘贴。');return;}\n+  draft.userText=text;currentTab='user';snapshotMode=false;scheduleSave();showText();\n+}\n+function manualClipboard(kind,context=null){\n+  const dialog=$('clipboard-dialog');if(dialog.open)return;\n+  manualPaste=kind==='paste'?context:null;dialog.returnValue='';\n+  $('clipboard-title').textContent=kind==='copy'?'复制题站源码':'粘贴题站源码';$('clipboard-text').value=kind==='copy'?draft.userText:'';$('clipboard-apply').hidden=kind==='copy';\n+  dialog.showModal();$('clipboard-text').focus();if(kind==='copy')$('clipboard-text').select();\n+}\n function saveStatus(status){\n   document.body.dataset.saveState=status.state;\n   saveFailed=status.state==='error';const names={loading:'正在读取本地草稿…',idle:'当前为示例，编辑后自动保存',dirty:'修改待保存…',saving:'正在保存…',saved:`草稿已保存 · 版本 ${status.revision??''}`,error:status.error?.message??'保存失败，请导出当前内容。'};\n@@ -322,8 +334,19 @@ $('driver-template').onclick=()=>{if(draft.driverText)return;draft.driverText='#\n $('breakpoint').onclick=()=>invokeShortcut('breakpoint');\n $('indent').onclick=()=>indent(false);$('outdent').onclick=()=>indent(true);$('find-next').onclick=findNext;$('find').onkeydown=event=>{if(event.key==='Enter'){event.preventDefault();findNext();}};\n $('copy').onclick=safe(async()=>{try{await navigator.clipboard.writeText(draft.userText);$('draft-status').textContent='已复制题站源码';}catch{manualClipboard('copy');}});\n-$('paste').onclick=safe(async()=>{try{draft.userText=await navigator.clipboard.readText();currentTab='user';snapshotMode=false;scheduleSave();showText();}catch{manualClipboard('paste');}});\n-$('clipboard-dialog').addEventListener('close',()=>{if($('clipboard-dialog').returnValue==='apply'){draft.userText=$('clipboard-text').value;currentTab='user';snapshotMode=false;scheduleSave();showText();}});\n+$('paste').onclick=safe(async()=>{\n+  if(recovering)return;\n+  const context={request:++pasteSequence,target:draft,generation:draftGeneration};\n+  try{\n+    // Read first, then validate the destination. Await must not capture a writable draft reference.\n+    const text=await navigator.clipboard.readText();\n+    applyPaste(context,text);\n+  }catch{if(currentPaste(context)&&matchesPasteDraft(context))manualClipboard('paste',context);}\n+});\n+$('clipboard-dialog').addEventListener('close',()=>{\n+  const context=manualPaste;manualPaste=null;\n+  if($('clipboard-dialog').returnValue==='apply'&&context)applyPaste(context,$('clipboard-text').value);\n+});\n $('import').onclick=()=>$('file').click();$('file').onchange=safe(async()=>{\n   const file=$('file').files[0];if(!file||recovering)return;\n   const request=++importSequence,generation=draftGeneration,target=draft;\n",
+  "comparison": {
+    "baseline": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+    "before": {
+      "exitCode": 1,
+      "tests": 20,
+      "pass": 3,
+      "fail": 17
+    },
+    "after": {
+      "exitCode": 0,
+      "tests": 20,
+      "pass": 20,
+      "fail": 0
+    },
+    "boundary": "Complete actual main; real editor/parser/source/controller/autosave. Controlled DOM/clipboard and CAS memory transport. Not browser, IndexedDB or iPad acceptance."
+  }
+}

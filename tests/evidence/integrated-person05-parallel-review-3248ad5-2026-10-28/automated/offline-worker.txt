@@ -1,0 +1,34 @@
+
+> ipad-offline-debugger@0.4.4 test:offline
+> node --test app/offline/checks/*.test.mjs
+
+✔ complete installation serves navigation and engine with no network after disconnect (41.7936ms)
+✔ wrong bytes never commits a partial cache or removes the previous version (8.9301ms)
+✔ network interrupted never commits a partial cache or removes the previous version (6.5987ms)
+✔ HTTP failure never commits a partial cache or removes the previous version (5.5438ms)
+✔ new complete version preserves old version and unrelated caches (9.5997ms)
+✔ unknown files and evicted files return 503 without network repair (4.3168ms)
+✔ cached corruption and descriptor corruption fail the full startup check (10.5019ms)
+✔ explicit prepare repairs corruption through a new full transaction and preserves old cache (6.6297ms)
+✔ failed explicit repair retains the previous complete package (5.439ms)
+✔ missing launcher navigation supplies a local recovery page without fetching network resources (5.402ms)
+✔ explicit prepare rejects an open workbench and non-launcher callers before any network (3.1288ms)
+✔ missing startup resource index.html opens local repair before launcher execution (8.8785ms)
+✔ corrupt startup resource index.html opens local repair before launcher execution (6.2135ms)
+✔ missing startup resource launcher.mjs opens local repair before launcher execution (8.2714ms)
+✔ corrupt startup resource launcher.mjs opens local repair before launcher execution (7.4953ms)
+✔ missing startup resource app/offline/browser/trust.mjs opens local repair before launcher execution (14.33ms)
+✔ corrupt startup resource app/offline/browser/trust.mjs opens local repair before launcher execution (7.4883ms)
+✔ missing startup resource bundle.json opens local repair before launcher execution (7.9672ms)
+✔ corrupt startup resource bundle.json opens local repair before launcher execution (9.1365ms)
+✔ a new workbench opened during repair prevents cache commit (5.9589ms)
+✔ ordinary development entry works without a covering worker; foreign covering worker stays rejected (8.1344ms)
+✔ workbench trust checks bundle scope and component identity after the worker handshake (4.6893ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 324.8124

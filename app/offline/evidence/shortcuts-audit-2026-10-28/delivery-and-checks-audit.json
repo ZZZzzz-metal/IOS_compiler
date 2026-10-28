@@ -1,0 +1,268 @@
+{
+  "recordedAt": "2026-10-27T23:32:53.792Z",
+  "deliveryRevision": "309d29dd703b1bc5a5beff03a88f232764c95808",
+  "changedFiles": [
+    "docs/handoffs/04.md",
+    "ui/README.md",
+    "ui/SHORTCUTS.md",
+    "ui/checks/keyboard-dispatch.test.mjs",
+    "ui/checks/preparation-gate.test.mjs",
+    "ui/checks/shortcuts.test.mjs",
+    "ui/evidence/integrated-shortcuts-2026-10-27/.gitattributes",
+    "ui/evidence/integrated-shortcuts-2026-10-27/README.md",
+    "ui/evidence/integrated-shortcuts-2026-10-27/SHA256SUMS.json",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated-final/SHA256SUMS.json",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated-final/baseline-check.txt",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated-final/contracts.tap",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated-final/integration.tap",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated-final/module-tests.tap",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated/SHA256SUMS.json",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated/baseline-check.txt",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated/contracts.tap",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated/integration.tap",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated/module-tests.tap",
+    "ui/evidence/integrated-shortcuts-2026-10-27/browser/observations.json",
+    "ui/evidence/integrated-shortcuts-2026-10-27/browser/shortcut-guide.png",
+    "ui/evidence/integrated-shortcuts-2026-10-27/npm-check.txt",
+    "ui/evidence/integrated-shortcuts-2026-10-27/npm-test.txt",
+    "ui/evidence/integrated-shortcuts-2026-10-27/seal-evidence.mjs",
+    "ui/evidence/integrated-shortcuts-2026-10-27/source-inputs.json",
+    "ui/evidence/integrated-shortcuts-2026-10-27/source-stage-verification.json",
+    "ui/probe.html",
+    "ui/src/editor.mjs",
+    "ui/src/main.mjs",
+    "ui/style.css"
+  ],
+  "ownershipScopePassed": true,
+  "manifests": [
+    "ui/evidence/integrated-shortcuts-2026-10-27/SHA256SUMS.json",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated/SHA256SUMS.json",
+    "ui/evidence/integrated-shortcuts-2026-10-27/automated-final/SHA256SUMS.json"
+  ],
+  "manifestReferences": 27,
+  "uniqueManifestTargets": 19,
+  "allGitBlobTargetsVerified": true,
+  "sourceFingerprints": [
+    {
+      "path": "docs/handoffs/04.md",
+      "gitBytes": {
+        "byteLength": 17388,
+        "sha256": "86f2e7e34ea55fe846316ffea5d971993056daeb3a9831ef209aa9e0aed91a2a"
+      },
+      "recordedWorking": {
+        "byteLength": 17388,
+        "sha256": "86f2e7e34ea55fe846316ffea5d971993056daeb3a9831ef209aa9e0aed91a2a"
+      },
+      "difference": "none"
+    },
+    {
+      "path": "ui/README.md",
+      "gitBytes": {
+        "byteLength": 7876,
+        "sha256": "28f21faa83028bdc2467fac5fcbcdf6b087adc35e6c61a8ca325958bef22db2c"
+      },
+      "recordedWorking": {
+        "byteLength": 7876,
+        "sha256": "28f21faa83028bdc2467fac5fcbcdf6b087adc35e6c61a8ca325958bef22db2c"
+      },
+      "difference": "none"
+    },
+    {
+      "path": "ui/SHORTCUTS.md",
+      "gitBytes": {
+        "byteLength": 6711,
+        "sha256": "934d572129acacf559da1e2ede146f45bd4cc0325c5dcebd327f4a974463a5a1"
+      },
+      "recordedWorking": {
+        "byteLength": 6711,
+        "sha256": "934d572129acacf559da1e2ede146f45bd4cc0325c5dcebd327f4a974463a5a1"
+      },
+      "difference": "none"
+    },
+    {
+      "path": "ui/checks/keyboard-dispatch.test.mjs",
+      "gitBytes": {
+        "byteLength": 27889,
+        "sha256": "7838ba948102e3a18bbfe656c532a74a098ff3dfb6ae9b6eec714d394c93e79f"
+      },
+      "recordedWorking": {
+        "byteLength": 27889,
+        "sha256": "7838ba948102e3a18bbfe656c532a74a098ff3dfb6ae9b6eec714d394c93e79f"
+      },
+      "difference": "none"
+    },
+    {
+      "path": "ui/checks/preparation-gate.test.mjs",
+      "gitBytes": {
+        "byteLength": 17453,
+        "sha256": "e70c515f71ee2713eee160c7f3642206101a3b2ef30fca8927744ef1c4e8c620"
+      },
+      "recordedWorking": {
+        "byteLength": 17453,
+        "sha256": "e70c515f71ee2713eee160c7f3642206101a3b2ef30fca8927744ef1c4e8c620"
+      },
+      "difference": "none"
+    },
+    {
+      "path": "ui/checks/shortcuts.test.mjs",
+      "gitBytes": {
+        "byteLength": 7188,
+        "sha256": "1bfe0140ae5e0f0ddc84151a905a65ee27abd10fce97cdd6844fe44f266b52c2"
+      },
+      "recordedWorking": {
+        "byteLength": 7188,
+        "sha256": "1bfe0140ae5e0f0ddc84151a905a65ee27abd10fce97cdd6844fe44f266b52c2"
+      },
+      "difference": "none"
+    },
+    {
+      "path": "ui/probe.html",
+      "gitBytes": {
+        "byteLength": 13407,
+        "sha256": "ff4d14c5ef86083b1585ace72f3bb02760506c7324716741106bfc45ee8ca178"
+      },
+      "recordedWorking": {
+        "byteLength": 13408,
+        "sha256": "dc9cb38bd36454410113a76701865a0716b5d09cdeee6b1d16142b91d96f729b"
+      },
+      "difference": "CRLF normalized to LF"
+    },
+    {
+      "path": "ui/src/editor.mjs",
+      "gitBytes": {
+        "byteLength": 5372,
+        "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+      },
+      "recordedWorking": {
+        "byteLength": 5372,
+        "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+      },
+      "difference": "none"
+    },
+    {
+      "path": "ui/src/main.mjs",
+      "gitBytes": {
+        "byteLength": 32193,
+        "sha256": "61adf9f24e5ff2328fb096978999445397a077c11c1dc779894f6d6b342e6b64"
+      },
+      "recordedWorking": {
+        "byteLength": 32193,
+        "sha256": "61adf9f24e5ff2328fb096978999445397a077c11c1dc779894f6d6b342e6b64"
+      },
+      "difference": "none"
+    },
+    {
+      "path": "ui/style.css",
+      "gitBytes": {
+        "byteLength": 25726,
+        "sha256": "19b7d4484b2ee722f408db30e7da747529efcb4b916fc2421253f7b076db36ee"
+      },
+      "recordedWorking": {
+        "byteLength": 25727,
+        "sha256": "64f5e606e8680d8a53fa223e7feb6af5a423b8bf41a2fe64b3a0647ce0a8e831"
+      },
+      "difference": "CRLF normalized to LF"
+    }
+  ],
+  "sourceFingerprintsVerified": 10,
+  "workingLineEndingDifferences": [
+    "ui/probe.html",
+    "ui/style.css"
+  ],
+  "integratedChecks": {
+    "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+    "tests": 121,
+    "passed": 121,
+    "failed": 0,
+    "npmCheckExit": 0,
+    "npmTestExit": 0,
+    "controlledRootUI": {
+      "total": 14,
+      "passed": 14,
+      "failed": 0,
+      "infrastructureFailures": 0,
+      "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+      "adapter": "ui-concurrency-root-adapted.mjs",
+      "originalUntouched": true,
+      "scope": "Root rerun in adapted controlled VM; not independent person05, browser, IndexedDB, offline or iPad acceptance."
+    },
+    "originalPerson05HarnessUnchanged": true,
+    "adaptationSourceHashesVerified": true,
+    "copiedRawFiles": [
+      {
+        "source": "tests/evidence/integrated-person01-shortcuts-host-2026-10-27/independent/run-01/results.json",
+        "archive": "ui-host-14/results.json",
+        "byteLength": 13785,
+        "sha256": "1d2e09df881de6663136093f5a29e9f4625cebbe95ab4798dc0e4e07fe929065",
+        "originalPresent": true,
+        "archiveVerified": true
+      },
+      {
+        "source": "tests/evidence/integrated-person01-shortcuts-host-2026-10-27/independent/run-01/checks.tap",
+        "archive": "ui-host-14/checks.tap",
+        "byteLength": 1434,
+        "sha256": "1b7c2a3ba1e1a1e9cff6859e2733d2a4b3fbad27d27b7c348a25832b0bfa93f2",
+        "originalPresent": true,
+        "archiveVerified": true
+      }
+    ]
+  },
+  "checkArtifacts": [
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/automated-results.json",
+      "byteLength": 2581,
+      "sha256": "a06d122845583a1a3396b4e1ef1db9b90b157ac137a816d543a3f7715be10dd6"
+    },
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/combined-121.stdout.txt",
+      "byteLength": 28242,
+      "sha256": "cf8752d6bf1dc9d034e69c223e2dc083e3aa84b2eb777bfc88419a76a28acb47"
+    },
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/combined-121.stderr.txt",
+      "byteLength": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/npm-check.stdout.txt",
+      "byteLength": 349,
+      "sha256": "ba4ce463e7223dadae91b177323ca943d924952caaa1f0c2ed644973df9aae5a"
+    },
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/npm-check.stderr.txt",
+      "byteLength": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/npm-test.stdout.txt",
+      "byteLength": 1122,
+      "sha256": "2e3fb8f4207908c1279950682cbc91f2cc05fa381c44fba471004f5d991594ed"
+    },
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/npm-test.stderr.txt",
+      "byteLength": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/ui-host-14.stdout.txt",
+      "byteLength": 304,
+      "sha256": "6d579405caf21d62b644a8423986d9e42ce3ee94a0c68ff9380a1f16c7e1259f"
+    },
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/ui-host-14.stderr.txt",
+      "byteLength": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/ui-host-adaptation.json",
+      "byteLength": 1896,
+      "sha256": "a7380803e3c9422157c5646f99138e056716aebf134d6643718519edb5780205"
+    },
+    {
+      "path": "app/offline/evidence/shortcuts-integration-2026-10-27/ui-concurrency-root-adapted.mjs",
+      "byteLength": 22610,
+      "sha256": "0965c557916fa38380efaaead62ac71cc0cc9baca96063def767b28cfe36b727"
+    }
+  ],
+  "scope": "Git blob and local byte checks. Working CRLF/LF differences were disclosed by person04; committed normalized hashes and merged current source bytes match. Root adapted UI VM results do not constitute person05 independent, real browser, IndexedDB, iPad, G2/G3 or distribution acceptance."
+}

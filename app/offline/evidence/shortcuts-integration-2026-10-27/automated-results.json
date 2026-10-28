@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "commands": [
+    {
+      "name": "combined-121",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "contracts/checks/*.test.mjs",
+        "ui/checks/*.test.mjs",
+        "storage/checks/*.test.mjs",
+        "app/integration/checks/*.test.mjs",
+        "app/offline/checks/*.test.mjs"
+      ],
+      "startedAt": "2026-10-27T15:29:00.666Z",
+      "completedAt": "2026-10-27T15:29:04.771Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "tests": 121,
+      "expectedTests": 121
+    },
+    {
+      "name": "npm-check",
+      "command": [
+        "cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "startedAt": "2026-10-27T15:29:04.771Z",
+      "completedAt": "2026-10-27T15:29:06.457Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "tests": null,
+      "expectedTests": null
+    },
+    {
+      "name": "npm-test",
+      "command": [
+        "cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "startedAt": "2026-10-27T15:29:06.457Z",
+      "completedAt": "2026-10-27T15:29:07.302Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "tests": 10,
+      "expectedTests": 10
+    }
+  ],
+  "controlledUI": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0,
+    "infrastructureFailures": 0,
+    "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+    "adapter": "ui-concurrency-root-adapted.mjs",
+    "originalUntouched": true,
+    "scope": "Root rerun in adapted controlled VM; not independent person05, browser, IndexedDB, offline or iPad acceptance."
+  },
+  "copiedRawFiles": [
+    {
+      "source": "tests/evidence/integrated-person01-shortcuts-host-2026-10-27/independent/run-01/results.json",
+      "archive": "ui-host-14/results.json",
+      "byteLength": 13785,
+      "sha256": "1d2e09df881de6663136093f5a29e9f4625cebbe95ab4798dc0e4e07fe929065"
+    },
+    {
+      "source": "tests/evidence/integrated-person01-shortcuts-host-2026-10-27/independent/run-01/checks.tap",
+      "archive": "ui-host-14/checks.tap",
+      "byteLength": 1434,
+      "sha256": "1b7c2a3ba1e1a1e9cff6859e2733d2a4b3fbad27d27b7c348a25832b0bfa93f2"
+    }
+  ],
+  "declaration": "121 combined checks include contracts10, UI/storage86, real pipeline3 and offline22. npm test10 is already included and not added again. No unchanged backend102 rerun."
+}

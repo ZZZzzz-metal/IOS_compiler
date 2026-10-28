@@ -1,0 +1,97 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "commands/after.txt",
+    "byteLength": 318,
+    "sha256": "1f9b8b724948f5d6589618e3d8089980d21219b980e0cbb001dec6c05e54cfed"
+  },
+  {
+    "file": "commands/before.txt",
+    "byteLength": 319,
+    "sha256": "ab94a634b1280569ce562ebd5a56ee21d9a89cee67b0a04f938fad7787e2d209"
+  },
+  {
+    "file": "commands/check.txt",
+    "byteLength": 349,
+    "sha256": "348aa6b52431c300ff7568e79fdd8601bdad983516a9fbf5d97b488828980867"
+  },
+  {
+    "file": "commands/contracts.txt",
+    "byteLength": 1122,
+    "sha256": "c4df7f9f016a952eaa659a7bac91a9e014e4807113cc515b878737bfe7908d8d"
+  },
+  {
+    "file": "commands/entry-syntax.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "commands/host-syntax.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "commands/ui-storage.txt",
+    "byteLength": 24242,
+    "sha256": "5e1deb4b0e075957c697d0491cd2d62f1b5bc686658a7cffc1296c8768b79a75"
+  },
+  {
+    "file": "comparison.json",
+    "byteLength": 6370,
+    "sha256": "5616f90d5e6dc82f6969c7fd0f30cb16de3c0905e3d8a510e7e8b6e861e252d0"
+  },
+  {
+    "file": "environment.json",
+    "byteLength": 287,
+    "sha256": "5abbcab10d6961c9c313d2a418c0f2298782d65ac4a099396fbf16a30b8d783f"
+  },
+  {
+    "file": "run-review.mjs",
+    "byteLength": 3697,
+    "sha256": "ef90dd2bfb6beb7ff1a29c76153918ac0e8c27de4c0590a0c151f6044ffd1dab"
+  },
+  {
+    "file": "ui/after-run-01/checks.tap",
+    "byteLength": 703,
+    "sha256": "9dbc04c02a6571d5e25b4b9cf9936642ba12d2df79dc7c1dc65ced89b477b9c3"
+  },
+  {
+    "file": "ui/after-run-01/harness-entry.mjs",
+    "byteLength": 10499,
+    "sha256": "163a34a7ededd0450803748fd01e39bd6645605156af0ed660c4b88a7acf0470"
+  },
+  {
+    "file": "ui/after-run-01/harness-host.mjs",
+    "byteLength": 10613,
+    "sha256": "829fbff4c045749f8784499b9f909826911566a075d1cfae91ae610aee9ce52a"
+  },
+  {
+    "file": "ui/after-run-01/results.json",
+    "byteLength": 19001,
+    "sha256": "ecddd726b000ded3c89173ff70752235579d66070d47dc29730f499429eb16b7"
+  },
+  {
+    "file": "ui/before-run-01/checks.tap",
+    "byteLength": 723,
+    "sha256": "9fa302e61a9d4605f749686ea35c801946e79d30c0b65e9c193eb6ae9fb4ca69"
+  },
+  {
+    "file": "ui/before-run-01/harness-entry.mjs",
+    "byteLength": 10499,
+    "sha256": "163a34a7ededd0450803748fd01e39bd6645605156af0ed660c4b88a7acf0470"
+  },
+  {
+    "file": "ui/before-run-01/harness-host.mjs",
+    "byteLength": 10613,
+    "sha256": "829fbff4c045749f8784499b9f909826911566a075d1cfae91ae610aee9ce52a"
+  },
+  {
+    "file": "ui/before-run-01/results.json",
+    "byteLength": 22012,
+    "sha256": "017cca87a16e9b7550039366f8409b2c3dfd216a0de1e65345561312bac37583"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-28T09:02:06.625Z",
+  "testedRevision": "40a079ba2065384572f268e4bb91bda437e46cec",
+  "allCommandsPassed": true,
+  "commandsExitZero": 4,
+  "manifests": 51,
+  "references": 987,
+  "uniqueTargets": 858,
+  "lengthAndSHA256": 970,
+  "SHA256Only": 17,
+  "referenceGitBlobMatches": 987,
+  "manifestRawGitMatches": 50,
+  "normalizedManifestMatches": [
+    {
+      "manifest": "tests/evidence/SHA256SUMS.json",
+      "attributes": "tests/evidence/SHA256SUMS.json: text: auto\ntests/evidence/SHA256SUMS.json: eol: lf",
+      "note": "Index LF/worktree CRLF under declared text=auto/eol=lf; no tracked change."
+    }
+  ],
+  "retainedHistoricalAliasChecks": [
+    {
+      "manifest": "tests/evidence/integrated-v0.3.0-2026-10-25/initial-SHA256SUMS.json",
+      "original": "tests/evidence/integrated-v0.3.0-2026-10-25/summary.json",
+      "retainedAlias": "tests/evidence/integrated-v0.3.0-2026-10-25/initial-summary.json",
+      "expectedByteLength": 17856,
+      "expectedSHA256": "dc72d82a2fe0184061bfca8fb26b70228c22bcd41e68ab0d5b12e2ec13239160",
+      "note": "Existing historical summary preserved as initial-summary.json; current summary covered by current SHA256SUMS.json."
+    }
+  ],
+  "testsManifests": 16,
+  "testsReferences": 432,
+  "recentRoundFiles": {
+    "parallel": 58,
+    "floating": 22,
+    "clipboard": 19
+  },
+  "oldEvidenceModified": false,
+  "currentFinalDirectorySealed": false,
+  "notes": [
+    "All writes in this rerun are exclusive wx files inside this new history directory; the audit script itself only reads old evidence.",
+    "The earlier exploratory stdin verifier initially assumed byteLength in every manifest and the pre-rename summary path; those were verifier assumptions. This archived rerun handles hash-only entries and the explicitly preserved historical alias without modifying old manifests.",
+    "SHA256Only records have no length field, so no recorded-length claim is made for those17 entries."
+  ]
+}

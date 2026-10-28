@@ -1,0 +1,267 @@
+[
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/.gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/cold-entry.txt",
+    "byteLength": 2437,
+    "sha256": "82a225b89f1c10fa42eccfe69a8c7e0bfeae6ff0d33183ea163c337577e97593"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/control-breakpoint8.txt",
+    "byteLength": 5076,
+    "sha256": "b0cd76edd5632c4bdf867726612bc0241cd3d0762cfcb7c6ada68834b320b532"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/control-call8.txt",
+    "byteLength": 5323,
+    "sha256": "b34ee66fd857094741d663b91ae91bb7a3cb5335f119582de056492e9202b716"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/control-debug-exit.txt",
+    "byteLength": 5088,
+    "sha256": "65ef87832ae3d93e5ccf32efa0be91ab1433fc090bc23bf764a312867b15398d"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/control-entry7.txt",
+    "byteLength": 5387,
+    "sha256": "826b773c391237fec83c60566d744045483996ce2c60f398271c74e1ffa3ad0f"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/control-into3.txt",
+    "byteLength": 5367,
+    "sha256": "b4aef93c7c632c7a3b922830462de65784349f079782929a02b166c54a68bc2e"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/control-out8.txt",
+    "byteLength": 5338,
+    "sha256": "74e9ac6471dca8f30f2bffa833c57a95fe2373008c2a570569d1fda97db5cf83"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/control-over4.txt",
+    "byteLength": 5303,
+    "sha256": "6c2f71d6c88a1beee220ace194a8df237328e190feef68e063ee5dc02648526a"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/control-result9.txt",
+    "byteLength": 5259,
+    "sha256": "e23f0666603497f81a41af11721bcddf9f127849bf7afe3519355da93adfeb59"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/control-run-exit.txt",
+    "byteLength": 5088,
+    "sha256": "65ef87832ae3d93e5ccf32efa0be91ab1433fc090bc23bf764a312867b15398d"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/control-stop.txt",
+    "byteLength": 5067,
+    "sha256": "1a092a511ff3f84fd66fbb8d0e94c55a676c573a587f7cf247c8d31e2b5a4cdc"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/f5-before-prepare.txt",
+    "byteLength": 5050,
+    "sha256": "35b11254f8ee6696b0bc3d3e8f44f2651c58e94828c7a35d9078664324bf530b"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/fresh-source.cpp",
+    "byteLength": 202,
+    "sha256": "2a2932397f892a3dc735d084cbdda530d4891cce382dbd516b0b18842189cbdd"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/input-focus-no-step.txt",
+    "byteLength": 5169,
+    "sha256": "a20009f2dd234c2ee3add9fb7c71b14ff73845fdb7fe06cfe4424e92b4ea864f"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/prepared.txt",
+    "byteLength": 2437,
+    "sha256": "eeba5994cb24e6a86b64e8b0961c5bc020322c077062849db0faa7a07e221d14"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-cached-shortcuts.txt",
+    "byteLength": 7131,
+    "sha256": "3c70929f6c4763b5288c1a1a75e42ff63f7ab685d41259b1704ad5b996b7635d"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-cold-entry.txt",
+    "byteLength": 2437,
+    "sha256": "cec8d7f75ac79522776a0bab575bfeb64c881a95725fb5e223cce79e04a3a875"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-observations.json",
+    "byteLength": 1942,
+    "sha256": "b0a90d1cb4e5008db35989b84cd0fe47a2130921b01bb8d3c71f0dc23572d77d"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-prepared.txt",
+    "byteLength": 2437,
+    "sha256": "fea7b3354f95dd05e403fcc149762f6dd4ff5c053d86bfe41503d34071bce463"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-breakpoint8-set.txt",
+    "byteLength": 6984,
+    "sha256": "444eee0ba2da1637e414964a02e557458c9405e56dbfb75f5ff886768f9b4410"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-breakpoint8.txt",
+    "byteLength": 6970,
+    "sha256": "0767c78e02884edfcc073f006814c414007c8c56185a8160368ffc9731fd90be"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-call8.txt",
+    "byteLength": 7219,
+    "sha256": "9af35c8c4a20dca139e12f4f7c8fb764f5d3d15ae06f1fd641f1d604ee0fffc7"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-digit-disabled.txt",
+    "byteLength": 6965,
+    "sha256": "235a0819ea8974144b38159ccf220c83ad32bf9f313bc1f4f16c9841d87fdb66"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-entry7.txt",
+    "byteLength": 7283,
+    "sha256": "8d3ef0ad7762227e15a3a59bb3666b5f3468e638915ac67e2fed0a37086ecfbc"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-exit.txt",
+    "byteLength": 6984,
+    "sha256": "ed1dd54d966ad53589da0953fa0f3a6630d39948cf8cf548d52543cbbaf3327e"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-into3.txt",
+    "byteLength": 7263,
+    "sha256": "6c0eb6032f066358dcd14cd4b30a788d3cc0b3315f42a2f6c1b3d67a5771ec8b"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-out8.txt",
+    "byteLength": 7234,
+    "sha256": "e7ba195e6c94acdd81601eeda81f7def9cac3940b28adf95b56788c9041f0bce"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-over4.txt",
+    "byteLength": 7199,
+    "sha256": "d148c6b53b2327bd38200be315ae392467a1c642066afcd60d7de6d0652f303e"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-result9.txt",
+    "byteLength": 7155,
+    "sha256": "a086e1503d5c8ece1fafba26145363ab1e07b37a291b1ff542089ab462e80279"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-run-exit.txt",
+    "byteLength": 6984,
+    "sha256": "ed1dd54d966ad53589da0953fa0f3a6630d39948cf8cf548d52543cbbaf3327e"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r2-standard-stop.txt",
+    "byteLength": 6963,
+    "sha256": "b553874405b8daa4febc0bca997502e708567b63112d2516430e5aff1772599a"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-breakpoint-pause8.txt",
+    "byteLength": 5494,
+    "sha256": "67ca399368fb8f2f86d2d5da594c3d9c1f0411cfd22be395b1d5d367a171bc3d"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-cached-manual.txt",
+    "byteLength": 27811,
+    "sha256": "12d2594276e1524951dac6ebcef6cff1570e1a42e84a375089d8e011412a5878"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-cached-shortcuts.txt",
+    "byteLength": 7131,
+    "sha256": "07e15aa8f96a9578ff30c56463d71549bf13a54baa2be585565dae065d9a4af8"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-cold-entry.txt",
+    "byteLength": 2437,
+    "sha256": "398f1b85d7a01ce56380141b63cfc3d2165583b86bd04a728cf60e662f82a019"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-control-breakpoint8.txt",
+    "byteLength": 5039,
+    "sha256": "2c3ec298b6f9dc1b0be24c262510e6df43b76c30e766b174416a28c1e1325661"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-control-into3.txt",
+    "byteLength": 5367,
+    "sha256": "2df98dad5896214020e62a97db8cfba000fa5f20f1d77596d0ae875dcd3f4e48"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-control-out8.txt",
+    "byteLength": 5338,
+    "sha256": "e9ac0b2ae968c843e2a51a711c12d02b02a6ba3b4fc5fc4614389fad921b1f68"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-control-over8.txt",
+    "byteLength": 5323,
+    "sha256": "6dcce07ea98ce438c343b8cddf09903a466247ff6a54e4202e10c3aa159823bc"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-control-stop.txt",
+    "byteLength": 5238,
+    "sha256": "77ed122c6c910e3ccc35452e57819a4e9f50d9c1a22ed0047f0744c4b0b95f1c"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-debug-exit.txt",
+    "byteLength": 5090,
+    "sha256": "135dfd7040710d5f056955a95361108dc8729829d9602d94f1995c6a01ab1ddc"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-fresh-run.txt",
+    "byteLength": 5083,
+    "sha256": "9c783e223e86933845023ed859719d6621656056bb1cdc20fa7e80f217397f6c"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-fresh-source.cpp",
+    "byteLength": 204,
+    "sha256": "a4d592bcac792019370f80c4289cb1ef571ff7202bd9a2ddfd28940bf6881c83"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-input-no-step.txt",
+    "byteLength": 5167,
+    "sha256": "c591f71f9543124343a30e43ee254c6c3cb64ba0fcd9386e2a1428e29657049f"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-prepared.txt",
+    "byteLength": 2437,
+    "sha256": "1819c24783b418193ea000752b098990c5bad817fdd960f4a5a5da393a815bf9"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-reopened-draft-settings.txt",
+    "byteLength": 6854,
+    "sha256": "2f6c60f1b2e718cab78e55e89b8f5536528699255f1acdd7a980f4c65427a5f0"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-standard-digit-disabled.txt",
+    "byteLength": 7139,
+    "sha256": "d0231c19d3038bcce96bc6694d9ff9e5b67f46097aae7e6c443a51648e54ed6b"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-standard-run.txt",
+    "byteLength": 7245,
+    "sha256": "7ab93038aa4b9940b3b5e2c7761d23801b62262e203a623c06cf87965e95f449"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-standard-stop.txt",
+    "byteLength": 7139,
+    "sha256": "292c1f3603672a5ab84be4c737d854b9e23d174e20a4947c0958f5e7bd11bdaa"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/r3-workbench.png",
+    "byteLength": 62036,
+    "sha256": "395fbdfce99e2ecbe1d36900fd0fb97628204d9d49aa9695d86904207f6b310a"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/README.md",
+    "byteLength": 870,
+    "sha256": "68d511a11e4387f66a273544447803887e7ed531facb7e2451c2fb1380d96718"
+  },
+  {
+    "path": "app/offline/evidence/shortcuts-browser-2026-10-28/results.json",
+    "byteLength": 3378,
+    "sha256": "61bb8bed60f7de543302009e36ef0815156ab1395cf978b49e44916488febc86"
+  }
+]

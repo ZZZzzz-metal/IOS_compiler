@@ -1,0 +1,97 @@
+[
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/.gitattributes",
+    "byteLength": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/clipboard-delivery-audit.json",
+    "byteLength": 6633,
+    "sha256": "c7d2c1adc0a66cdba4a8b2fd671ec903c822e1fde6444dafccb70adcde6c8caf"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/combined.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/combined.stdout.txt",
+    "byteLength": 58899,
+    "sha256": "781bee54fd5690455d956b1ba23cc6c4080c570c0f06cbc356d05c0ebf21a714"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/final-npm-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/final-npm-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "ba4ce463e7223dadae91b177323ca943d924952caaa1f0c2ed644973df9aae5a"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/final-npm-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/final-npm-test.stdout.txt",
+    "byteLength": 1125,
+    "sha256": "431311ac6e8622e2c98c40d9c30897385c0581cb88f129ff0c71420f15d95433"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/final-source-inputs.json",
+    "byteLength": 2602,
+    "sha256": "20c8480d7b95ab2a6adfc90b5ae81061173216fddbe133e36a216db8573c251f"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/finalize-results.mjs",
+    "byteLength": 5088,
+    "sha256": "338d55c8cd5a614a26572ef737ff64c2dd6453053329572970779aaadb11fe66"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/harness-failure.txt",
+    "byteLength": 1544,
+    "sha256": "e5bed06a0a8604cc2bc625945696aa74fbe38f32926d852394a9d0af593b0163"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/npm-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/npm-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "ba4ce463e7223dadae91b177323ca943d924952caaa1f0c2ed644973df9aae5a"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/npm-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/npm-test.stdout.txt",
+    "byteLength": 1125,
+    "sha256": "65c4ebb1cff02f48199f0f67b7a4bf1b485d0962414f6e1f0230a6d1f1b2508d"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/person05-delivery-audit.json",
+    "byteLength": 702,
+    "sha256": "84698593c92274eb41a9417fc322b6db005e043a6d9d7235e1a4b9fe195590a5"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/results.json",
+    "byteLength": 6145,
+    "sha256": "399162520e16d041049d392017ea2edcbd4448aac79d51d7c3872662f03cbcfb"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/run-checks.mjs",
+    "byteLength": 2218,
+    "sha256": "02ae7e58621f263e225a9a6c183ff1ea68deb913ca3d1336e7ae1c70d8a52553"
+  },
+  {
+    "path": "app/offline/evidence/fixes-integration-2026-10-28/seal-root.py",
+    "byteLength": 2176,
+    "sha256": "40b31d178754d9b5b68b8d11472b8c7d6dbda8ab976fa101b171a21a606da087"
+  }
+]

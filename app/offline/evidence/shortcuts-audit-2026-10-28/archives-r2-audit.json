@@ -1,0 +1,138 @@
+{
+  "clientDate": "2026-10-28",
+  "packageReportPath": "app/offline/evidence/shortcuts-package-r2-2026-10-28/package.json",
+  "bundleId": "ipad-web-probe-140bdf81578b308bc93faa7b",
+  "candidateStatus": "r2 warning-bearing local candidate; later clipboard fix integration and immutable rebuild pending",
+  "knownOpenIssues": [
+    "REV-006",
+    "REV-007",
+    "REV-008"
+  ],
+  "newPackages": [
+    {
+      "kind": "completePackage",
+      "filename": "ipad-offline-debugger-v0.4.5-r2.zip",
+      "byteLength": 19293360,
+      "sha256": "06a8019c3233ab05ef0af45ea959d77dd2e1dc7e70be7cfd81eeab22940cf2d4",
+      "fileCount": 60,
+      "allZipMemberChecksums": true,
+      "noPrivateKeyOrOutsidePath": true,
+      "singlePublicRemovableRoot": true,
+      "resources": {
+        "resourceCount": 51,
+        "resourceBytes": 60872055,
+        "allPayloadHashes": true,
+        "controlPlaneHashes": 2,
+        "onlyCurrentRelease": true,
+        "shortcutMatchesFixedGitAndWorking": true,
+        "manualMatchesRuntimeDocsAndWorking": true
+      }
+    },
+    {
+      "kind": "firstSetupPackage",
+      "filename": "ipad-first-setup-v0.4.5-r2.zip",
+      "byteLength": 19203,
+      "sha256": "087ac3f26a1ca7f190133150c792a1133c43fee0f54683def824c3b87baadc7a",
+      "fileCount": 6,
+      "allZipMemberChecksums": true,
+      "noPrivateKeyOrOutsidePath": true,
+      "singlePublicRemovableRoot": true,
+      "resources": null
+    }
+  ],
+  "historicalPackages": [
+    {
+      "reportGitPath": "app/offline/evidence/deep-review-2026-10-26/package.json",
+      "reportGitSha256": "ea8462a8f454c3162dd862aff3824da589c116fe03b988b05c9ed56fe490221d",
+      "version": "0.4.2",
+      "filename": "ipad-offline-debugger-v0.4.2.zip",
+      "byteLength": 19275366,
+      "sha256": "4155d304c59849c1cfd01aa7c3cbcd4a04a427f1bb883123d909bfed32499ede",
+      "unchanged": true
+    },
+    {
+      "reportGitPath": "app/offline/evidence/deep-review-2026-10-26/package.json",
+      "reportGitSha256": "ea8462a8f454c3162dd862aff3824da589c116fe03b988b05c9ed56fe490221d",
+      "version": "0.4.2",
+      "filename": "ipad-first-setup-v0.4.2.zip",
+      "byteLength": 17886,
+      "sha256": "f65df163e1ffc532b12dc8da11343f6578c66115a39b2949ab916c39b5f05977",
+      "unchanged": true
+    },
+    {
+      "reportGitPath": "app/offline/evidence/ui-race-integration-2026-10-27/package.json",
+      "reportGitSha256": "b974beefb8a22553db7feb097ebf7e68f10366ef06c3d195246c94ca738fa69a",
+      "version": "0.4.3",
+      "filename": "ipad-offline-debugger-v0.4.3.zip",
+      "byteLength": 19281996,
+      "sha256": "05f549212f3b84734c9b753312e96469f3d1703ca691a304940acd03a6c3a49e",
+      "unchanged": true
+    },
+    {
+      "reportGitPath": "app/offline/evidence/ui-race-integration-2026-10-27/package.json",
+      "reportGitSha256": "b974beefb8a22553db7feb097ebf7e68f10366ef06c3d195246c94ca738fa69a",
+      "version": "0.4.3",
+      "filename": "ipad-first-setup-v0.4.3.zip",
+      "byteLength": 18098,
+      "sha256": "af2aafab13ca94cc4c9b8ec2462dd2dc74530d7bd1c22ef3830de093dc575d81",
+      "unchanged": true
+    },
+    {
+      "reportGitPath": "app/offline/evidence/val004-package-2026-10-26/package.json",
+      "reportGitSha256": "21be6381eb4e12e92b5e553690511de0717ec43b4038a5e24c12dd723a1ad5a7",
+      "version": "0.4.1",
+      "filename": "ipad-offline-debugger-v0.4.1.zip",
+      "byteLength": 19273324,
+      "sha256": "fb82747c9845798d56fcae0e787e03fda4bf39c66204f397ca2f509ea786c83f",
+      "unchanged": true
+    },
+    {
+      "reportGitPath": "app/offline/evidence/val004-package-2026-10-26/package.json",
+      "reportGitSha256": "21be6381eb4e12e92b5e553690511de0717ec43b4038a5e24c12dd723a1ad5a7",
+      "version": "0.4.1",
+      "filename": "ipad-first-setup-v0.4.1.zip",
+      "byteLength": 16738,
+      "sha256": "87875f8a73f1bd856b8cef6606b1e8af645dd5ee1332358f413f725817b72c79",
+      "unchanged": true
+    },
+    {
+      "reportGitPath": "app/offline/evidence/watch-publication-2026-10-27/package.json",
+      "reportGitSha256": "a18404f073ef2b6d162bbcbf801c3a491aef56cd4d3d281882184ae944d9f8f2",
+      "version": "0.4.4",
+      "filename": "ipad-offline-debugger-v0.4.4.zip",
+      "byteLength": 19283669,
+      "sha256": "124e04793eeb01cc424c320b289bf5d1cbdc81d6710702966f4eabc6762de5de",
+      "unchanged": true
+    },
+    {
+      "reportGitPath": "app/offline/evidence/watch-publication-2026-10-27/package.json",
+      "reportGitSha256": "a18404f073ef2b6d162bbcbf801c3a491aef56cd4d3d281882184ae944d9f8f2",
+      "version": "0.4.4",
+      "filename": "ipad-first-setup-v0.4.4.zip",
+      "byteLength": 18611,
+      "sha256": "41db45be8507c700302fc5ebf5bf33d6d5c97594ff87b88e812360ae81cd5709",
+      "unchanged": true
+    },
+    {
+      "reportPath": "app/offline/evidence/shortcuts-package-2026-10-28/package.json",
+      "sourceAudit": "archives-audit.json",
+      "version": "0.4.5-initial-candidate",
+      "filename": "ipad-offline-debugger-v0.4.5.zip",
+      "byteLength": 19292110,
+      "sha256": "aebdbd56183939742dff98e0b869eed42fadf70c4c94ae49456b92b3343a3692",
+      "unchanged": true
+    },
+    {
+      "reportPath": "app/offline/evidence/shortcuts-package-2026-10-28/package.json",
+      "sourceAudit": "archives-audit.json",
+      "version": "0.4.5-initial-candidate",
+      "filename": "ipad-first-setup-v0.4.5.zip",
+      "byteLength": 18522,
+      "sha256": "a29cc8fd8915e284f9c77a681f36b7504526aba7e952ea61a678898568d7ad4f",
+      "unchanged": true
+    }
+  ],
+  "historicalCount": 10,
+  "allPassed": true,
+  "scope": "Independent local byte, ZIP member and fixed Git report comparison only. No network POST or push. Does not certify distribution licenses, full secret discovery, independent person05, browser, real iPad or G2/G3 acceptance."
+}

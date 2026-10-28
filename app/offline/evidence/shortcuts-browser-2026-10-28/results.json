@@ -1,0 +1,101 @@
+{
+  "recordedOn": "2026-10-28 Asia/Shanghai",
+  "kind": "real-desktop-browser-stopped-loopback-service",
+  "bundleId": "ipad-web-probe-eb5236b6ed8f9aab4a9d9ced",
+  "profile": "integration-prototype-60eb6729284e2729",
+  "resourceCount": 51,
+  "resourceBytes": 60874273,
+  "preparation": "Online prepare all51, stop own4199static process, close/reopen cached entry and verify51 before workbench",
+  "networkBoundary": "Computer network physically remains on; other LAN HTTPS listener not used by test origin. Not physical iPad or fully disconnected computer test.",
+  "newSource": "r3-fresh-source.cpp",
+  "freshRunOutput": "KEY045R3=6",
+  "controlNumberActions": [
+    "Control+6 fresh compile/run",
+    "Control+5 start and continue",
+    "Control+9 request and actual hit breakpoint8",
+    "Control+0 over",
+    "Control+- into",
+    "Control+Shift+- out",
+    "Control+Shift+5 stop"
+  ],
+  "focusGuard": "Control+0 in stdin did not change paused line3",
+  "standardScheme": "R3 Control+5 disabled, F5 start, Shift+F5 stop, Control+F5 run; R2 separately exercised F9/F10/F11/ShiftF11 on prior bundle with unchanged editor/shortcut helpers.",
+  "persistence": "Close/reopen restored exact new source, draft version2 and control-number selection.",
+  "offlineDocuments": [
+    "ui/SHORTCUTS.md",
+    "manual.html with current fix handoff IDs"
+  ],
+  "observedRecords": [
+    {
+      "file": "r3-cold-entry.txt",
+      "contains": "已检查 51 项资源"
+    },
+    {
+      "file": "r3-fresh-run.txt",
+      "contains": "KEY045R3=6"
+    },
+    {
+      "file": "r3-control-over8.txt",
+      "contains": "已暂停 · main.cpp:8:1"
+    },
+    {
+      "file": "r3-control-into3.txt",
+      "contains": "已暂停 · main.cpp:3:1"
+    },
+    {
+      "file": "r3-input-no-step.txt",
+      "contains": "已暂停 · main.cpp:3:1"
+    },
+    {
+      "file": "r3-control-out8.txt",
+      "contains": "已暂停 · main.cpp:8:1"
+    },
+    {
+      "file": "r3-debug-exit.txt",
+      "contains": "KEY045R3=6"
+    },
+    {
+      "file": "r3-control-breakpoint8.txt",
+      "contains": "main.cpp:8:1 · 待绑定"
+    },
+    {
+      "file": "r3-breakpoint-pause8.txt",
+      "contains": "已暂停 · main.cpp:8:1"
+    },
+    {
+      "file": "r3-control-stop.txt",
+      "contains": "stop"
+    },
+    {
+      "file": "r3-standard-digit-disabled.txt",
+      "contains": "已结束"
+    },
+    {
+      "file": "r3-standard-stop.txt",
+      "contains": "stop"
+    },
+    {
+      "file": "r3-standard-run.txt",
+      "contains": "KEY045R3=6"
+    },
+    {
+      "file": "r3-cached-shortcuts.txt",
+      "contains": "Control"
+    },
+    {
+      "file": "r3-cached-manual.txt",
+      "contains": "309cb45"
+    },
+    {
+      "file": "r3-reopened-draft-settings.txt",
+      "contains": "草稿已保存 · 版本 2"
+    }
+  ],
+  "screenshot": "r3-workbench.png",
+  "historicalRecords": "Initial d62 control scheme and superseded r2 standard actions retained with prefix r2. Not assigned final package or iPad acceptance.",
+  "limitations": [
+    "Clipboard timing regression tested in controlled realmain/autosave suite; not browser system-clipboard race proof",
+    "No physical keyboard/iPad/Safari/main-screen acceptance",
+    "REV006/7/8 await person05 independent fixed-version closure"
+  ]
+}

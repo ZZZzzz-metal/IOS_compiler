@@ -1,0 +1,466 @@
+{
+  "startedAt": "2026-10-27T15:28:27.476Z",
+  "completedAt": "2026-10-27T15:28:27.499Z",
+  "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "sourceSha256": "61adf9f24e5ff2328fb096978999445397a077c11c1dc779894f6d6b342e6b64",
+  "method": "full actual main module evaluated in VM; only import declarations replaced by explicit dependencies",
+  "boundary": "Controlled DOM/File.text/network/trust/compiler/debugger/controller and memory store. Real parser/autosave/editor/source modules. No actual browser, IndexedDB, byte trust, compilation, offline or iPad result.",
+  "counts": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0,
+    "infrastructureFailures": 0
+  },
+  "inputs": [
+    {
+      "path": "storage/src/draft-store.mjs",
+      "byteLength": 8047,
+      "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+    },
+    {
+      "path": "storage/src/autosave.mjs",
+      "byteLength": 2767,
+      "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+    },
+    {
+      "path": "compiler/src/source.mjs",
+      "byteLength": 7201,
+      "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+    },
+    {
+      "path": "ui/src/editor.mjs",
+      "byteLength": 5372,
+      "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+    },
+    {
+      "path": "ui/src/main.mjs",
+      "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+      "byteLength": 32193,
+      "sha256": "61adf9f24e5ff2328fb096978999445397a077c11c1dc779894f6d6b342e6b64"
+    },
+    {
+      "path": "tests/ui-concurrency-independent.mjs",
+      "byteLength": 22610,
+      "sha256": "0965c557916fa38380efaaead62ac71cc0cc9baca96063def767b28cfe36b727"
+    }
+  ],
+  "results": [
+    {
+      "id": "REV005-01",
+      "title": "last selected B survives reverse A/B completion and real autosave",
+      "status": "passed",
+      "observations": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 0,
+            "userText": "int chosen_B = 25;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "",
+            "updatedAt": "2026-10-27T15:28:27.482Z"
+          },
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int chosen_B = 25;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "",
+                "updatedAt": "2026-10-27T15:28:27.482Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-02",
+      "title": "source typed during reading survives with an explanatory conflict prompt",
+      "status": "passed",
+      "observations": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int typed_later = 35;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "4\n",
+            "updatedAt": "2026-10-27T15:28:27.484Z"
+          },
+          "message": "读取文件期间草稿已修改或切换，已保留当前内容。请重新选择文件导入。",
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int typed_later = 35;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "4\n",
+                "updatedAt": "2026-10-27T15:28:27.484Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-03-stdin",
+      "title": "stdin change during reading invalidates the file without losing the edited project",
+      "status": "passed",
+      "observations": [
+        {
+          "field": "stdin",
+          "edited": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "new input\n",
+            "updatedAt": "2026-10-27T15:28:27.485Z"
+          },
+          "after": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "new input\n",
+            "updatedAt": "2026-10-27T15:28:27.485Z"
+          },
+          "message": "读取文件期间草稿已修改或切换，已保留当前内容。请重新选择文件导入。",
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int original = 4;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "new input\n",
+                "updatedAt": "2026-10-27T15:28:27.485Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-03-language",
+      "title": "language change during reading invalidates the file without losing the edited project",
+      "status": "passed",
+      "observations": [
+        {
+          "field": "language",
+          "edited": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "",
+            "language": {
+              "language": "c",
+              "standard": "c11"
+            },
+            "stdin": "4\n",
+            "updatedAt": "2026-10-27T15:28:27.487Z"
+          },
+          "after": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "",
+            "language": {
+              "language": "c",
+              "standard": "c11"
+            },
+            "stdin": "4\n",
+            "updatedAt": "2026-10-27T15:28:27.487Z"
+          },
+          "message": "读取文件期间草稿已修改或切换，已保留当前内容。请重新选择文件导入。",
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int original = 4;\n",
+                "driverText": "",
+                "language": {
+                  "language": "c",
+                  "standard": "c11"
+                },
+                "stdin": "4\n",
+                "updatedAt": "2026-10-27T15:28:27.487Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-03-driver",
+      "title": "driver change during reading invalidates the file without losing the edited project",
+      "status": "passed",
+      "observations": [
+        {
+          "field": "driver",
+          "edited": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "#include \"user.inc\"\nint main() { return 6; }\n",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "4\n",
+            "updatedAt": "2026-10-27T15:28:27.488Z"
+          },
+          "after": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "#include \"user.inc\"\nint main() { return 6; }\n",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "4\n",
+            "updatedAt": "2026-10-27T15:28:27.488Z"
+          },
+          "message": "读取文件期间草稿已修改或切换，已保留当前内容。请重新选择文件导入。",
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int original = 4;\n",
+                "driverText": "#include \"user.inc\"\nint main() { return 6; }\n",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "4\n",
+                "updatedAt": "2026-10-27T15:28:27.488Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-04",
+      "title": "obsolete read failure cannot replace the actual newer malformed-project error",
+      "status": "passed",
+      "observations": [
+        {
+          "expected": "完整草稿文件无法读取，原草稿未改变。",
+          "after": "完整草稿文件无法读取，原草稿未改变。",
+          "writes": []
+        }
+      ]
+    },
+    {
+      "id": "REV005-05",
+      "title": "obsolete finally does not clear the currently selected and still-reading B input",
+      "status": "passed",
+      "observations": [
+        {
+          "selected": "C:\\fakepath\\new.cpp",
+          "whileReading": {
+            "input": "C:\\fakepath\\new.cpp",
+            "draft": {
+              "id": "main",
+              "revision": 4,
+              "userText": "int original = 4;\n",
+              "driverText": "",
+              "language": {
+                "language": "cpp",
+                "standard": "c++17"
+              },
+              "stdin": "4\n",
+              "updatedAt": "2026-10-27T15:28:27.489Z"
+            }
+          },
+          "writes": [
+            {
+              "expected": 4,
+              "draft": {
+                "id": "main",
+                "revision": 5,
+                "userText": "int latest = 2;\n",
+                "driverText": "",
+                "language": {
+                  "language": "cpp",
+                  "standard": "c++17"
+                },
+                "stdin": "",
+                "updatedAt": "2026-10-27T15:28:27.490Z"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV005-06",
+      "title": "a current malformed project preserves the restored draft and never schedules a write",
+      "status": "passed",
+      "observations": [
+        {
+          "draft": {
+            "id": "main",
+            "revision": 4,
+            "userText": "int original = 4;\n",
+            "driverText": "",
+            "language": {
+              "language": "cpp",
+              "standard": "c++17"
+            },
+            "stdin": "4\n",
+            "updatedAt": "2026-10-27T15:28:27.490Z"
+          },
+          "writes": [],
+          "message": "完整草稿文件无法读取，原草稿未改变。"
+        }
+      ]
+    },
+    {
+      "id": "REV004-01",
+      "title": "re-prepare locks all three entries before await and real editor render keeps them locked",
+      "status": "passed",
+      "observations": [
+        {
+          "beforeEdit": {
+            "run": true,
+            "debug": true,
+            "prepare": true
+          },
+          "afterEdit": {
+            "run": true,
+            "debug": true,
+            "prepare": true
+          },
+          "afterSuccess": {
+            "run": false,
+            "debug": false,
+            "prepare": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "REV004-02",
+      "title": "direct duplicate preparation is rejected instead of starting overlapping requests",
+      "status": "passed",
+      "observations": [
+        {
+          "started": 1,
+          "final": "answer-1"
+        }
+      ]
+    },
+    {
+      "id": "REV004-03",
+      "title": "direct run/debug refuses preparation even when stale DOM reports enabled",
+      "status": "passed",
+      "observations": [
+        {
+          "entered": 0,
+          "debuggerConstructors": 0
+        }
+      ]
+    },
+    {
+      "id": "REV004-04",
+      "title": "failed re-check discards the old candidate and retry alone restores compile availability",
+      "status": "passed",
+      "observations": [
+        {
+          "failed": {
+            "ready": false,
+            "prepared": null,
+            "buttons": {
+              "run": true,
+              "debug": true,
+              "prepare": false
+            },
+            "resource": "资源未就绪"
+          },
+          "retry": {
+            "ready": true,
+            "identity": "retry",
+            "buttons": {
+              "run": false,
+              "debug": false,
+              "prepare": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "REV004-05",
+      "title": "one compilation retains the same candidate through adapters, handoff, request and start",
+      "status": "passed",
+      "observations": [
+        {
+          "debugger": "candidate-A",
+          "compiler": "candidate-A",
+          "request": "candidate-A",
+          "start": "candidate-A",
+          "registered": [
+            {
+              "path": "virtual/new.wasm",
+              "bytes": [
+                7,
+                8
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REV004-06",
+      "title": "an in-flight compilation rejects a direct second compile despite enabled DOM",
+      "status": "passed",
+      "observations": [
+        {
+          "entered": 1,
+          "debuggerConstructors": 1
+        }
+      ]
+    }
+  ]
+}

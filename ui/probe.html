@@ -61,8 +61,25 @@
       </div>
       <button id="resync" hidden>重新同步</button>
     </div>
-    <div class="status-line"><span class="status-indicator" aria-hidden="true"></span><span id="status" role="status" aria-live="polite">准备就绪后可以编译。</span><span class="shortcut-hint" aria-hidden="true"><kbd>F5</kbd> 继续 <kbd>F10</kbd> 跳过 <kbd>F11</kbd> 进入</span></div>
+    <div class="status-line"><span class="status-indicator" aria-hidden="true"></span><span id="status" role="status" aria-live="polite">准备就绪后可以编译。</span><span id="shortcut-hint" class="shortcut-hint" aria-hidden="true">Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入</span></div>
   </nav>
+  <details class="shortcut-guide">
+    <summary>键盘快捷键 <span>无 F 键也能调试</span></summary>
+    <div class="shortcut-body">
+      <div class="shortcut-settings"><label for="shortcut-scheme">键盘方案</label><select id="shortcut-scheme"><option value="control-number">无 F 键：Control＋数字行</option><option value="standard">仅标准 F 键</option></select><span id="shortcut-save" role="status">标准 F 键在两种方案中都有效。</span></div>
+      <div class="shortcut-table-wrap"><table class="shortcut-table"><caption>VS2022 常用调试操作对照</caption><thead><tr><th scope="col">操作</th><th scope="col">标准 F 键</th><th scope="col">无 F 键方案</th></tr></thead><tbody>
+        <tr><th scope="row">开始 / 继续</th><td><kbd>F5</kbd></td><td><kbd>Ctrl+5</kbd></td></tr>
+        <tr><th scope="row">编译运行</th><td><kbd>Ctrl+F5</kbd></td><td><kbd>Ctrl+6</kbd></td></tr>
+        <tr><th scope="row">停止 / 取消编译</th><td><kbd>Shift+F5</kbd></td><td><kbd>Ctrl+Shift+5</kbd></td></tr>
+        <tr><th scope="row">当前行断点</th><td><kbd>F9</kbd></td><td><kbd>Ctrl+9</kbd></td></tr>
+        <tr><th scope="row">单步跳过</th><td><kbd>F10</kbd></td><td><kbd>Ctrl+0</kbd></td></tr>
+        <tr><th scope="row">单步进入</th><td><kbd>F11</kbd></td><td><kbd>Ctrl+-</kbd></td></tr>
+        <tr><th scope="row">单步跳出</th><td><kbd>Shift+F11</kbd></td><td><kbd>Ctrl+Shift+-</kbd></td></tr>
+      </tbody></table></div>
+      <p>Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。</p>
+      <p>仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。<a href="./SHORTCUTS.md">中文速查与实机检查</a></p>
+    </div>
+  </details>
   <div id="message" role="alert" hidden></div>
   <nav class="mobile-nav" aria-label="窄窗面板"><button id="show-code" aria-pressed="true">代码</button><button id="show-panels" aria-pressed="false">调试与输入输出</button></nav>
   <main class="workspace" inert>

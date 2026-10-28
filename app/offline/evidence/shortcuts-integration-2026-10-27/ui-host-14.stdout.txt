@@ -1,0 +1,1 @@
+{"revision":"3248ad54faa5f0f3a8b6f6501829e95e4699f066","output":"C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\tests\\evidence\\integrated-person01-shortcuts-host-2026-10-27\\independent\\run-01","counts":{"total":14,"passed":14,"failed":0,"infrastructureFailures":0}}

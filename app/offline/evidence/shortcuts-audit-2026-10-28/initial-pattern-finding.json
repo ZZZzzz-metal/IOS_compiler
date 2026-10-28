@@ -1,0 +1,8 @@
+{
+  "kind": "initial-finite-pattern-false-positive",
+  "path": "app/offline/evidence/shortcuts-audit-2026-10-28/audit-archives.py",
+  "types": [
+    "PEM-private-key"
+  ],
+  "reason": "The archive audit source itself contained literal private-key header test strings, not any private-key payload. The identical runtime checks are now assembled from byte fragments to avoid self-matching; no private data was removed or disclosed."
+}

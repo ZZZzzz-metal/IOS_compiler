@@ -1,0 +1,64 @@
+{
+  "verifiedAt": "2026-10-28T04:40:50.380Z",
+  "manifests": [
+    {
+      "manifest": "tests/evidence/integrated-2026-10-25-initializer-person05-09a4a12/SHA256SUMS.json",
+      "entries": 21,
+      "verified": true
+    },
+    {
+      "manifest": "tests/evidence/integrated-2026-10-25-initializer-person05-v0.2.1/SHA256SUMS.json",
+      "entries": 3,
+      "verified": true
+    },
+    {
+      "manifest": "tests/evidence/integrated-2026-10-25-person05-v0.2.1/SHA256SUMS.json",
+      "entries": 19,
+      "verified": true
+    },
+    {
+      "manifest": "tests/evidence/integrated-2026-10-25/SHA256SUMS.json",
+      "entries": 5,
+      "verified": true
+    },
+    {
+      "manifest": "tests/evidence/integrated-person05-rev004005-66db2bb-2026-10-27/SHA256SUMS.json",
+      "entries": 56,
+      "verified": true
+    },
+    {
+      "manifest": "tests/evidence/integrated-person05-rev004005-66db2bb-2026-10-27/automated/SHA256SUMS.json",
+      "entries": 28,
+      "verified": true
+    },
+    {
+      "manifest": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/SHA256SUMS.json",
+      "entries": 48,
+      "verified": true
+    },
+    {
+      "manifest": "tests/evidence/integrated-person05-v0.3.0-2026-10-25/automated/SHA256SUMS.json",
+      "entries": 27,
+      "verified": true
+    },
+    {
+      "manifest": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/SHA256SUMS.json",
+      "entries": 41,
+      "verified": true
+    },
+    {
+      "manifest": "tests/evidence/integrated-person05-val004-87973fa-2026-10-26/automated/SHA256SUMS.json",
+      "entries": 29,
+      "verified": true
+    },
+    {
+      "manifest": "tests/evidence/integrated-v0.3.0-2026-10-25/SHA256SUMS.json",
+      "entries": 32,
+      "verified": true
+    }
+  ],
+  "manifestReferences": 309,
+  "skippedOtherFormats": [],
+  "trackedHistoricalEvidenceDiffFromHEAD": "",
+  "note": "Each supported manifest resolves relative to its own directory; repeated references are not unique file counts. Git diff also confirms no tracked old evidence changed. This is not a claim to recognize every old manifest schema."
+}

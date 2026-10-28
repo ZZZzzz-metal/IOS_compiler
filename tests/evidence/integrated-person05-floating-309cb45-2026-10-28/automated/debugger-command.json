@@ -1,0 +1,18 @@
+{
+  "id": "debugger",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "--test",
+    "--test-reporter=tap",
+    "debugger/checks/*.test.mjs"
+  ],
+  "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03",
+  "explicitEnvironment": {},
+  "startedAt": "2026-10-28T04:39:02.016Z",
+  "finishedAt": "2026-10-28T04:39:13.344Z",
+  "durationMs": 11328.3776,
+  "exitCode": 0,
+  "signal": null,
+  "outputFile": "automated/debugger.txt",
+  "outputSHA256": "b9ccb252e33542e81f3a102332d51dcf8cb2d0b908b8b99ef8639f4a4014e893"
+}

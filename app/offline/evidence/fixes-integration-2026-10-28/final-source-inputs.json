@@ -1,0 +1,87 @@
+[
+  {
+    "path": "AGENTS.md",
+    "byteLength": 4173,
+    "sha256": "6393f0fcc49b3a5a09825129b72a4e5a04e7a6875504b9731dcef61eb562751b"
+  },
+  {
+    "path": "README.md",
+    "byteLength": 9478,
+    "sha256": "b5dbfa1c3cf8930aaa429073e5213f88b0ab5371a0a3f927cd11cc2f5a0105e7"
+  },
+  {
+    "path": "app/main.mjs",
+    "byteLength": 2853,
+    "sha256": "b90599190720e1b0198189b36828e014b88063c6452821f8f487a9ee0db6dd36"
+  },
+  {
+    "path": "app/offline/build.mjs",
+    "byteLength": 8926,
+    "sha256": "1512214a098613e295ac9a4bbe7c423b40832b15038b1fc3892a9f51c1e50239"
+  },
+  {
+    "path": "package.json",
+    "byteLength": 1862,
+    "sha256": "847e64d88f108bf57ea55dbf76f41f70da0c615151b47fb9d96ccba4e0e56083"
+  },
+  {
+    "path": "package-lock.json",
+    "byteLength": 256,
+    "sha256": "ebf2091ffe928d16804e1eb2847afc48d54235f3bdf0b228d9d369eef3cba52f"
+  },
+  {
+    "path": "docs/architecture/GATES.md",
+    "byteLength": 8093,
+    "sha256": "552084beecd14dc9d34f15065d6cacb33061730f744829c23f18cdc10d1c370c"
+  },
+  {
+    "path": "docs/architecture/STATUS.md",
+    "byteLength": 11551,
+    "sha256": "52592bb69b6b77778732008e32f59d2f3b93d1782b555f949fb29ed6efbbcb95"
+  },
+  {
+    "path": "docs/architecture/IPAD-USER-MANUAL.md",
+    "byteLength": 27211,
+    "sha256": "8434f255192c8d77bc4fd04abcf07bd47f0f0abd3cd407f71fd29e53300e7493"
+  },
+  {
+    "path": "docs/architecture/IPAD-UPDATE-v0.4.5.md",
+    "byteLength": 4518,
+    "sha256": "627a680b94dfa2d66892ae52ad851469688f611f89706b7ae559cc4bdbbe0189"
+  },
+  {
+    "path": "docs/architecture/SHORTCUTS-INTEGRATION-2026-10-28.md",
+    "byteLength": 15151,
+    "sha256": "cf66da719fae1d2e2836d755499a9b93f6825501561b69c4a7bebbed36dae5d4"
+  },
+  {
+    "path": "docs/handoffs/01.md",
+    "byteLength": 26251,
+    "sha256": "bb3d511f6797eb774aad02c98cd439e82b0bdad82b485821d61481137d53885d"
+  },
+  {
+    "path": "ui/src/main.mjs",
+    "byteLength": 33093,
+    "sha256": "ff34c70433827b17ab4e1d25db03b71c922d27e1132b12841ab7cabb2fac4b40"
+  },
+  {
+    "path": "ui/src/editor.mjs",
+    "byteLength": 5372,
+    "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+  },
+  {
+    "path": "ui/SHORTCUTS.md",
+    "byteLength": 6711,
+    "sha256": "934d572129acacf559da1e2ede146f45bd4cc0325c5dcebd327f4a974463a5a1"
+  },
+  {
+    "path": "debugger/src/variables.mjs",
+    "byteLength": 44150,
+    "sha256": "9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e"
+  },
+  {
+    "path": "debugger/src/wasm-runtime.mjs",
+    "byteLength": 49143,
+    "sha256": "8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+  }
+]

@@ -1,0 +1,26 @@
+ok 1 - REV002-octal: available 71
+ok 2 - REV002-unsigned-octal: available 0
+ok 3 - REV003-offset: available 22
+ok 4 - small-signed-promotion: available -4
+ok 5 - small-unsigned-promotion: available 65534
+ok 6 - signed-unsigned-comparison: available 0
+ok 7 - wide-narrow-conversion: available 4294967294
+ok 8 - unsigned-wrapping: available 0
+ok 9 - float-unary-preserves-width: available 16777216
+ok 10 - mixed-float-int-addition: available 0
+ok 11 - mixed-int-float-addition: available 0
+ok 12 - mixed-float-int-subtraction: available 0
+ok 13 - mixed-float-int-equality: available 1
+ok 14 - mixed-float-int-less-than: available 0
+ok 15 - mixed-float-int-division: available 1
+ok 16 - mixed-float-wide-addition: available 0
+ok 17 - nan-logical-not: available 0
+ok 18 - nan-logical-or: available 1
+ok 19 - nan-logical-and: available 1
+ok 20 - nan-equality: available 0
+ok 21 - short-circuit-null: available 0
+ok 22 - short-circuit-division: available 1
+ok 23 - short-circuit-nan-rhs: available 1
+ok 24 - REV003-same-array-difference: unsupported Pointer subtraction is unsupported: common array provenance cannot be verified
+ok 25 - REV003-pointer-addition: unsupported Adding two pointers is invalid
+ok 26 - sizeof-unsupported-boundary: unavailable Identifier sizeof is unavailable or ambiguous

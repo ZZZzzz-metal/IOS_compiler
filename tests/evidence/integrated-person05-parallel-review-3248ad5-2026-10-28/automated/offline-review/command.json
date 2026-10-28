@@ -1,0 +1,6 @@
+{
+  "exitCode": 0,
+  "command": "node --experimental-vm-modules tests/evidence/integrated-person05-parallel-review-3248ad5-2026-10-28/automated/offline-review/review.mjs",
+  "finishedAt": "2026-10-28T04:35:12.1439640Z",
+  "output": "{\"payloadEntries\":50,\"staticBrowserEdges\":30,\"missingStaticBrowserEdges\":0,\"newConfirmedProductBugs\":0,\"generatedPackageBuilt\":false}\r\n(node:55492) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\r\n(Use `node --trace-warnings ...` to show where the warning was created)\r\n"
+}

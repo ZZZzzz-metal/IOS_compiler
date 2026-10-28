@@ -1,0 +1,48 @@
+{
+  "source": "tests/ui-concurrency-independent.mjs",
+  "originalSha256": "3c7c3b2c228ce95651db3bcc69851279b74b445dcf9abc20165a0d4fe233ea4b",
+  "originalByteLength": 22270,
+  "originalGitSha256": "3c7c3b2c228ce95651db3bcc69851279b74b445dcf9abc20165a0d4fe233ea4b",
+  "adapter": "ui-concurrency-root-adapted.mjs",
+  "adapterSha256": "0965c557916fa38380efaaead62ac71cc0cc9baca96063def767b28cfe36b727",
+  "adapterByteLength": 22610,
+  "revision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "changes": [
+    {
+      "before": "from '../storage/",
+      "after": "from '../../../../storage/",
+      "replacements": 2
+    },
+    {
+      "before": "from '../compiler/",
+      "after": "from '../../../../compiler/",
+      "replacements": 1
+    },
+    {
+      "before": "from '../ui/",
+      "after": "from '../../../../ui/",
+      "replacements": 1
+    },
+    {
+      "before": "new URL('../',import.meta.url)",
+      "after": "new URL('../../../../',import.meta.url)",
+      "replacements": 1
+    },
+    {
+      "before": "{highlight,indentSelection,breakpointView}",
+      "after": "{highlight,indentSelection,breakpointView,resolveShortcut,shortcutLabels}",
+      "replacements": 1
+    },
+    {
+      "before": "querySelector:selector=>element(selector)",
+      "after": "querySelector:selector=>selector==='dialog[open]'?null:element(selector)",
+      "replacements": 1
+    },
+    {
+      "before": "createSnapshot,highlight,indentSelection,breakpointView,",
+      "after": "createSnapshot,highlight,indentSelection,breakpointView,resolveShortcut,shortcutLabels,",
+      "replacements": 1
+    }
+  ],
+  "declaration": "Root-owned VM transport adaptation only: added real exported shortcut helpers and accurate closed-dialog selector; imports/root paths relocated. Person05 original script, assertions and historical evidence unchanged. This is root rerun, not person05 signoff or iPad evidence."
+}
