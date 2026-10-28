@@ -15,7 +15,7 @@ let activeSnapshot=null,diagnosticSnapshot=null,diagnostics=[],requested=[],read
 let adapter=null,controller=null,compiler=null,compilation=null,restored=false,saveFailed=false;
 let renderPending=false,renderedInspection='',watchKey='',watched=null,autoSave;
 let unqueuedEdits=false,recovering=false;
-let importSequence=0,draftGeneration=0;
+let importSequence=0,draftGeneration=0,pasteSequence=0,manualPaste=null;
 let shortcutScheme=readShortcutScheme();
 const store=createDraftStore();
 const fault=error=>{ $('message').hidden=false;$('message').textContent=error?.message??String(error); };
@@ -302,7 +302,19 @@ function syncScroll(){ $('highlight').scrollTop=$('source').scrollTop;$('highlig
 function indent(outdent){if(snapshotMode)return;const input=$('source'),next=indentSelection(input.value,input.selectionStart,input.selectionEnd,outdent);input.value=next.text;input.setSelectionRange(next.start,next.end);edited();input.focus();}
 function findNext(){const text=$('source').value,term=$('find').value;if(!term)return;let offset=text.indexOf(term,$('source').selectionEnd);if(offset<0)offset=text.indexOf(term);if(offset<0){fault('没有找到这段文字。');return;}$('source').focus();$('source').setSelectionRange(offset,offset+term.length);$('source').scrollTop=Math.max(0,(text.slice(0,offset).split('\n').length-4)*24);syncScroll();}
 function download(result){const url=URL.createObjectURL(new Blob([result.text],{type:result.mediaType}));const anchor=document.createElement('a');anchor.href=url;anchor.download=result.filename;anchor.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
-function manualClipboard(kind){$('clipboard-title').textContent=kind==='copy'?'复制题站源码':'粘贴题站源码';$('clipboard-text').value=kind==='copy'?draft.userText:'';$('clipboard-apply').hidden=kind==='copy';$('clipboard-dialog').showModal();$('clipboard-text').focus();if(kind==='copy')$('clipboard-text').select();}
+function currentPaste(context){return context?.request===pasteSequence;}
+function matchesPasteDraft(context){return !recovering&&draft===context.target&&draftGeneration===context.generation;}
+function applyPaste(context,text){
+  if(!currentPaste(context))return;
+  if(!matchesPasteDraft(context)){fault('读取剪贴板期间草稿已修改或切换，已保留当前内容。请重新粘贴。');return;}
+  draft.userText=text;currentTab='user';snapshotMode=false;scheduleSave();showText();
+}
+function manualClipboard(kind,context=null){
+  const dialog=$('clipboard-dialog');if(dialog.open)return;
+  manualPaste=kind==='paste'?context:null;dialog.returnValue='';
+  $('clipboard-title').textContent=kind==='copy'?'复制题站源码':'粘贴题站源码';$('clipboard-text').value=kind==='copy'?draft.userText:'';$('clipboard-apply').hidden=kind==='copy';
+  dialog.showModal();$('clipboard-text').focus();if(kind==='copy')$('clipboard-text').select();
+}
 function saveStatus(status){
   document.body.dataset.saveState=status.state;
   saveFailed=status.state==='error';const names={loading:'正在读取本地草稿…',idle:'当前为示例，编辑后自动保存',dirty:'修改待保存…',saving:'正在保存…',saved:`草稿已保存 · 版本 ${status.revision??''}`,error:status.error?.message??'保存失败，请导出当前内容。'};
@@ -322,8 +334,19 @@ $('driver-template').onclick=()=>{if(draft.driverText)return;draft.driverText='#
 $('breakpoint').onclick=()=>invokeShortcut('breakpoint');
 $('indent').onclick=()=>indent(false);$('outdent').onclick=()=>indent(true);$('find-next').onclick=findNext;$('find').onkeydown=event=>{if(event.key==='Enter'){event.preventDefault();findNext();}};
 $('copy').onclick=safe(async()=>{try{await navigator.clipboard.writeText(draft.userText);$('draft-status').textContent='已复制题站源码';}catch{manualClipboard('copy');}});
-$('paste').onclick=safe(async()=>{try{draft.userText=await navigator.clipboard.readText();currentTab='user';snapshotMode=false;scheduleSave();showText();}catch{manualClipboard('paste');}});
-$('clipboard-dialog').addEventListener('close',()=>{if($('clipboard-dialog').returnValue==='apply'){draft.userText=$('clipboard-text').value;currentTab='user';snapshotMode=false;scheduleSave();showText();}});
+$('paste').onclick=safe(async()=>{
+  if(recovering)return;
+  const context={request:++pasteSequence,target:draft,generation:draftGeneration};
+  try{
+    // Read first, then validate the destination. Await must not capture a writable draft reference.
+    const text=await navigator.clipboard.readText();
+    applyPaste(context,text);
+  }catch{if(currentPaste(context)&&matchesPasteDraft(context))manualClipboard('paste',context);}
+});
+$('clipboard-dialog').addEventListener('close',()=>{
+  const context=manualPaste;manualPaste=null;
+  if($('clipboard-dialog').returnValue==='apply'&&context)applyPaste(context,$('clipboard-text').value);
+});
 $('import').onclick=()=>$('file').click();$('file').onchange=safe(async()=>{
   const file=$('file').files[0];if(!file||recovering)return;
   const request=++importSequence,generation=draftGeneration,target=draft;

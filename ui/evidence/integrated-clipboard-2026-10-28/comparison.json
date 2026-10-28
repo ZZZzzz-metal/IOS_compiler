@@ -1,0 +1,16 @@
+{
+  "baseline": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "before": {
+    "exitCode": 1,
+    "tests": 20,
+    "pass": 3,
+    "fail": 17
+  },
+  "after": {
+    "exitCode": 0,
+    "tests": 20,
+    "pass": 20,
+    "fail": 0
+  },
+  "boundary": "Complete actual main; real editor/parser/source/controller/autosave. Controlled DOM/clipboard and CAS memory transport. Not browser, IndexedDB or iPad acceptance."
+}
