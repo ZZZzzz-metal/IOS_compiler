@@ -1,0 +1,14 @@
+{
+  "frozenRevision": "40a079ba2065384572f268e4bb91bda437e46cec",
+  "frozenEvidenceFiles": 140,
+  "frozenSourceFiles": 17,
+  "frozenHashesMatchGit": true,
+  "person05Commit": "e4ce50722f76f63d7b313dd7fe6d676342d133d8",
+  "person05EvidenceFiles": 179,
+  "person05HashesAndCurrentGitBytesMatch": true,
+  "person05ChangedFiles": 186,
+  "scopeOnlyOwner05": true,
+  "scratchExcluded": true,
+  "runtimeMatchesFrozen40a079b": true,
+  "declaration": "Current shared-status documents deliberately advance after fixed tag; original 40a079b seal verified against its Git blobs, never rewritten."
+}

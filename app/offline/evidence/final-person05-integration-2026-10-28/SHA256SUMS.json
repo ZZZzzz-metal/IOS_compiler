@@ -1,0 +1,82 @@
+[
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/.gitattributes",
+    "byteLength": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/current-source-inputs.json",
+    "byteLength": 1160,
+    "sha256": "4dacd7cb042705e7a7c34cf84ac446915e91da821a166835dc7cf0e9e10e08f8"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/fixed-delivery-audit.json",
+    "byteLength": 587,
+    "sha256": "2a9d36e5b446ebc89212cf5c4e3d30c88afaf5646c2a6a3ce1657f262c33ae10"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/git-publication-final-audit.json",
+    "byteLength": 28314,
+    "sha256": "bb9621f7cbb4e4946b2caa1ab236beb014d163d5a4e38e2e4bf00706dfb8fd80"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/git-publication-final-audit.md",
+    "byteLength": 1882,
+    "sha256": "225b9296828fe1caf9ad4453437ad35b70d2ee11641b26480f3ae7c55922a151"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/git-publication-final-files.json",
+    "byteLength": 298474,
+    "sha256": "ebe205bbe9231404ae9711a3de5fa9b56902ef14523e22be6b9a095bc2d8d167"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/internal-address-check.json",
+    "byteLength": 361,
+    "sha256": "bdaf348411dcb33eeb26fb2bf556a8d78c80315d2309eb5e9afa750e25f599a0"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/npm-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/npm-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "ba4ce463e7223dadae91b177323ca943d924952caaa1f0c2ed644973df9aae5a"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/npm-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/npm-test.stdout.txt",
+    "byteLength": 1125,
+    "sha256": "6b3d94795c71545d54ba964ffbe90169e8dedca42c288399468e5bf2a65a2ed3"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/publication-audit.mjs",
+    "byteLength": 10567,
+    "sha256": "cc397d5f59a0de6227b34931f859f92250733a39d7e4f6e57768ba6f16ebe822"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/README.md",
+    "byteLength": 625,
+    "sha256": "4e9e55cdc0c083557038897991a747fea30486f592b23dfa4b3af71182493804"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/root-checks.json",
+    "byteLength": 595,
+    "sha256": "8e566ee1f69e57a3bd198e43955db7cbc382b393d02384c1c4fa68476e102b58"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/run-root-checks.mjs",
+    "byteLength": 1090,
+    "sha256": "6980ae5dfa292217cfa27e22956a0d80aa241a3a1c540f9611128a81888784ea"
+  },
+  {
+    "path": "app/offline/evidence/final-person05-integration-2026-10-28/verify-frozen-and-delivery.py",
+    "byteLength": 2406,
+    "sha256": "2d5a00ec4cc503e98077bb49d0804478314b7bc5abe50e57c213b2a404fbce14"
+  }
+]

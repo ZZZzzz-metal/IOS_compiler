@@ -1,0 +1,37 @@
+[
+  {
+    "path": "README.md",
+    "byteLength": 10045,
+    "sha256": "b6f4987b33385a68c609aa14372c239ba91b40a20adafd8931d5ad4f1234c77d"
+  },
+  {
+    "path": "AGENTS.md",
+    "byteLength": 4740,
+    "sha256": "a1fb21ce853d1592b1c591da66efbf29e791e5a04857c3e86f2ec34e351ac19c"
+  },
+  {
+    "path": "docs/architecture/STATUS.md",
+    "byteLength": 12100,
+    "sha256": "ffc038d59a34346a0e0532339f6b5f61ce3a0db6cf4057b429558aa7d053eb9d"
+  },
+  {
+    "path": "docs/architecture/GATES.md",
+    "byteLength": 8655,
+    "sha256": "b400d47b4e524077737746f2cd7d36825a22a97101394bddb73e41bd36ab5aeb"
+  },
+  {
+    "path": "docs/architecture/GITHUB-DELIVERY-v0.4.5-2026-10-28.md",
+    "byteLength": 4206,
+    "sha256": "40b30f577c982259f06b90f0a3e61c2b9b8132f011f05a9daf3b7346489c459c"
+  },
+  {
+    "path": "docs/architecture/FINAL-DESKTOP-ACCEPTANCE-v0.4.5-2026-10-28.md",
+    "byteLength": 3437,
+    "sha256": "334b0c1d72700eac0b4c3ac60954b1bfcfa5a31036ac6453753a08726d16039a"
+  },
+  {
+    "path": "docs/handoffs/01.md",
+    "byteLength": 27041,
+    "sha256": "e232507a0e030d385d532651250301eace190aec2533d36f667c5892e3060e14"
+  }
+]

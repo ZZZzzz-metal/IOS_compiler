@@ -1,0 +1,20 @@
+{
+  "revision": "6c9b370ea4f300741a04d5773a1e47e40003bbbe",
+  "commands": [
+    {
+      "name": "npm-check",
+      "startedAt": "2026-10-28T14:11:00.946Z",
+      "finishedAt": "2026-10-28T14:11:03.405Z",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "npm-test",
+      "startedAt": "2026-10-28T14:11:03.405Z",
+      "finishedAt": "2026-10-28T14:11:04.370Z",
+      "exitCode": 0,
+      "error": null
+    }
+  ],
+  "scope": "Mandatory root check/test after evidence and current-status merge. No product/runtime changes; no broad repetition of independently verified 258/22."
+}
