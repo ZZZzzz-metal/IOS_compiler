@@ -1,0 +1,269 @@
+{
+  "kind": "asserted-real-native-and-worker-red-green",
+  "person05": {
+    "before": {
+      "passed": 14,
+      "failed": 11,
+      "boundaryOnly": 1
+    },
+    "after": {
+      "passed": 25,
+      "failed": 0,
+      "boundaryOnly": 1
+    },
+    "sourceHash": "sha256:8f4ea16786be3da29608a1034506eb34c2685b8d6d268e9b057942fa3a176161",
+    "artifactSHA256": "sha256:67b3504d64da47a6b0feb495aa6338f89c3f1056d197016f758295bb11ef95e4",
+    "fixed": [
+      {
+        "expression": "negative + exactInt",
+        "before": {
+          "name": "negative + exactInt",
+          "type": "float",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "0",
+        "after": {
+          "name": "negative + exactInt",
+          "type": "float",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      },
+      {
+        "expression": "exactInt + negative",
+        "before": {
+          "name": "exactInt + negative",
+          "type": "float",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "0",
+        "after": {
+          "name": "exactInt + negative",
+          "type": "float",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      },
+      {
+        "expression": "positive - exactInt",
+        "before": {
+          "name": "positive - exactInt",
+          "type": "float",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "-1",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "0",
+        "after": {
+          "name": "positive - exactInt",
+          "type": "float",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      },
+      {
+        "expression": "positive == exactInt",
+        "before": {
+          "name": "positive == exactInt",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "1",
+        "after": {
+          "name": "positive == exactInt",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      },
+      {
+        "expression": "positive < exactInt",
+        "before": {
+          "name": "positive < exactInt",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "0",
+        "after": {
+          "name": "positive < exactInt",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      },
+      {
+        "expression": "positive / exactInt == 1",
+        "before": {
+          "name": "positive / exactInt == 1",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "1",
+        "after": {
+          "name": "positive / exactInt == 1",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      },
+      {
+        "expression": "negative + exactLong",
+        "before": {
+          "name": "negative + exactLong",
+          "type": "float",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "0",
+        "after": {
+          "name": "negative + exactLong",
+          "type": "float",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      },
+      {
+        "expression": "!nanValue",
+        "before": {
+          "name": "!nanValue",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "0",
+        "after": {
+          "name": "!nanValue",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      },
+      {
+        "expression": "nanValue || 0",
+        "before": {
+          "name": "nanValue || 0",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "1",
+        "after": {
+          "name": "nanValue || 0",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      },
+      {
+        "expression": "nanValue && 1",
+        "before": {
+          "name": "nanValue && 1",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "0",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "1",
+        "after": {
+          "name": "nanValue && 1",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      },
+      {
+        "expression": "nanValue || (1/zero)",
+        "before": {
+          "name": "nanValue || (1/zero)",
+          "type": "<expression>",
+          "truncated": false,
+          "availability": "error",
+          "reason": "Division by zero",
+          "namedCount": 0,
+          "indexedCount": 0
+        },
+        "oracle": "1",
+        "after": {
+          "name": "nanValue || (1/zero)",
+          "type": "bool",
+          "truncated": false,
+          "availability": "available",
+          "displayValue": "1",
+          "namedCount": 0,
+          "indexedCount": 0
+        }
+      }
+    ]
+  },
+  "role03": {
+    "beforeFailures": 36,
+    "afterFailures": 0,
+    "queries": 70,
+    "sourceHash": "sha256:5c1378a36613295144f0fa183408d5a4f9be5f98d826d27862bcae575b35931c",
+    "artifactSHA256": "sha256:2444f1cbe08e533391f243b94478a63bbe3039d11be308a1c5c01e2361190262"
+  },
+  "scope": "Program bytes and native/interpreted output match before/after. Person 03 reran the archived person 05 script with documented import, output and profile guard adaptation; this is not person 05 acceptance of the new commit."
+}

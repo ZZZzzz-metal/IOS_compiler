@@ -1,9 +1,9 @@
-const VERSION="5e1ae21816681e5c1e0644c3affc0d20d8816e71719f992872dd249fb6f689b7";
+const VERSION="447cc7bb6ef498dae54b1cc9b77d686f3f7e88c5c228eaff774d89810ab50df0";
 const RESOURCES=[
   {
     "path": "debugger/src/wasm-runtime.mjs",
-    "byteLength": 49136,
-    "sha256": "17261ad99674572f0b2ab03d0ce52e700ec9c72349eacaa76ac7afeb19728c9f"
+    "byteLength": 49143,
+    "sha256": "8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
   },
   {
     "path": "debugger/src/dwarf.mjs",
@@ -12,8 +12,8 @@ const RESOURCES=[
   },
   {
     "path": "debugger/src/variables.mjs",
-    "byteLength": 43287,
-    "sha256": "7a678889ab7b8f21dcc39f83c51771b9fff8df7103bec92275937c8ff40f996c"
+    "byteLength": 44150,
+    "sha256": "9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e"
   },
   {
     "path": "debugger/src/integrity.mjs",
@@ -58,7 +58,7 @@ const RESOURCES=[
   {
     "path": "debugger/probe-candidate.json",
     "byteLength": 6125,
-    "sha256": "037051be14c08a9b8325516b4ab84cfa01142e31e280243791327c094d5b1263"
+    "sha256": "f3b500edb2b67837cc549a0863fda2fc527cdda5df4a3e27f38bf14d3ab52737"
   },
   {
     "path": "debugger/fixtures/debug-handoff/snapshot.json",

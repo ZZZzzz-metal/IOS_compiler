@@ -1,0 +1,56 @@
+{
+  "version": "447cc7bb6ef498dae54b1cc9b77d686f3f7e88c5c228eaff774d89810ab50df0",
+  "byteLength": 60638363,
+  "resourceCount": 34,
+  "moduleProfile": {
+    "compatibilityId": "debugger-prototype-123b842e7a11ea29",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:123b842e7a11ea2984a011adff5b6041d29ccfb6c07edc76eaa1eadd23e48b14",
+    "status": "candidate",
+    "evidence": [
+      "Desktop candidate; only module runtime/debugger resources are verified here. Full offline bundle and iPad remain unverified."
+    ]
+  },
+  "browserTested": false,
+  "ipadTested": false
+}

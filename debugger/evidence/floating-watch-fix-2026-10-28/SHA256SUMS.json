@@ -1,0 +1,212 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 159,
+    "sha256": "9a5256aa0317b0b92a516ea2092f3f001a0591845cc8cd0b98c1d3f8e65fbd80"
+  },
+  {
+    "file": "after-fix/adaptation.json",
+    "byteLength": 1101,
+    "sha256": "41417b773369f971ef6336cb66cc9b2c8cd6ef16d4322a9746faabb36b0a6fb6"
+  },
+  {
+    "file": "after-fix/adapted-review.mjs",
+    "byteLength": 9172,
+    "sha256": "742ea328570b5d342d27631f4d5d5f10a68f9655c353eb60e30e5b8d91e55490"
+  },
+  {
+    "file": "after-fix/person05-rerun/artifact.wasm",
+    "byteLength": 38373,
+    "sha256": "67b3504d64da47a6b0feb495aa6338f89c3f1056d197016f758295bb11ef95e4"
+  },
+  {
+    "file": "after-fix/person05-rerun/checks.tap",
+    "byteLength": 827,
+    "sha256": "230cff563aca0f353e1b80e10518b8493b17c5bd275f027739bba44214042975"
+  },
+  {
+    "file": "after-fix/person05-rerun/results.json",
+    "byteLength": 51929,
+    "sha256": "cfa956658b5be57603e93095a9b2451e6474f99775d3759ca137daca7b51109a"
+  },
+  {
+    "file": "after-fix/person05-rerun/source.cpp",
+    "byteLength": 2380,
+    "sha256": "a781aa556e582cbeecd61aa561a9dc388ee8640ac7c82d3782572d893880015f"
+  },
+  {
+    "file": "after-fix/role03/artifact.wasm",
+    "byteLength": 46808,
+    "sha256": "2444f1cbe08e533391f243b94478a63bbe3039d11be308a1c5c01e2361190262"
+  },
+  {
+    "file": "after-fix/role03/results.json",
+    "byteLength": 100121,
+    "sha256": "bf9ea82e682238745f2aaa2bd777c6a4c5e5472cc2568c6f3a6a39067d187b3e"
+  },
+  {
+    "file": "after-fix/role03/source.cpp",
+    "byteLength": 5691,
+    "sha256": "41e9de7456ee5fed374497eab48c783ae7cac33a66302f5d0474954d3c26fd93"
+  },
+  {
+    "file": "before-fix/person05/artifact.wasm",
+    "byteLength": 38373,
+    "sha256": "67b3504d64da47a6b0feb495aa6338f89c3f1056d197016f758295bb11ef95e4"
+  },
+  {
+    "file": "before-fix/person05/checks.tap",
+    "byteLength": 871,
+    "sha256": "d13391d67312de87e7ff34e7c44ccfef43897322c6939475e7b038daa8b992ed"
+  },
+  {
+    "file": "before-fix/person05/provenance.json",
+    "byteLength": 1577,
+    "sha256": "9c798f9b1410440cf0dffa77a2598ced2552c968ec08b50f0c36d369aed742c7"
+  },
+  {
+    "file": "before-fix/person05/results.json",
+    "byteLength": 56310,
+    "sha256": "23198d218510c814f3cae6ff15a988ea1363151edce1661f3cae4945cb0b8a6d"
+  },
+  {
+    "file": "before-fix/person05/source.cpp",
+    "byteLength": 2380,
+    "sha256": "a781aa556e582cbeecd61aa561a9dc388ee8640ac7c82d3782572d893880015f"
+  },
+  {
+    "file": "before-fix/person05/watch-types-independent.mjs",
+    "byteLength": 8741,
+    "sha256": "7de0eddbd3d692689745a5944f0c3bb0c56243ff64bc421d1603bcc2afb79dcb"
+  },
+  {
+    "file": "before-fix/role03-red.tap",
+    "byteLength": 50189,
+    "sha256": "9ceecb77ba94c28d01b21abdb3057c0c62ea7ae935afd30cedab66cc94661636"
+  },
+  {
+    "file": "before-fix/role03/artifact.wasm",
+    "byteLength": 46808,
+    "sha256": "2444f1cbe08e533391f243b94478a63bbe3039d11be308a1c5c01e2361190262"
+  },
+  {
+    "file": "before-fix/role03/results.json",
+    "byteLength": 119615,
+    "sha256": "350ea75933e996a32eb142a7294a1f84fdd8ae1937cc27838667030b5507a658"
+  },
+  {
+    "file": "before-fix/role03/source.cpp",
+    "byteLength": 5691,
+    "sha256": "41e9de7456ee5fed374497eab48c783ae7cac33a66302f5d0474954d3c26fd93"
+  },
+  {
+    "file": "commands.json",
+    "byteLength": 3575,
+    "sha256": "841a19ea46e12e87f7452d0277b8af11a23f2bb7c8ffebe9c4d6c0057d31d74b"
+  },
+  {
+    "file": "debugger.txt",
+    "byteLength": 20925,
+    "sha256": "f810699f28b26ed8884ef9cf738e026105c4923b41ab9011c2632cf35f3aaf3f"
+  },
+  {
+    "file": "independent.txt",
+    "byteLength": 1610,
+    "sha256": "d4dc6b6e02066ebe6f530b4d9ac7edd61476fa75e681ee70c07b7aa226c4d89d"
+  },
+  {
+    "file": "independent/independent.json",
+    "byteLength": 605880,
+    "sha256": "88581e9b54983ec06bc71eccde5860e5be66c44eee27508fe4d5c4e0d1862268"
+  },
+  {
+    "file": "independent/independent.tap",
+    "byteLength": 1606,
+    "sha256": "c23effb352e26cbf18f5066bc321648e7c1f8e15e203c6616aa1c6e395ec4799"
+  },
+  {
+    "file": "independent/initializer-lifetime.json",
+    "byteLength": 545093,
+    "sha256": "72963e5c0584d6ce12b1c3e29b464a4da6b8b1eb2b31a3f517438786c8c96cbc"
+  },
+  {
+    "file": "independent/initializer-lifetime.tap",
+    "byteLength": 310,
+    "sha256": "f342f19d2416d6d4f062a9ec62cac10295175ae88dfc7d8b1e18c64d5c4b1029"
+  },
+  {
+    "file": "independent/regression-loop-header.json",
+    "byteLength": 115048,
+    "sha256": "7f0712fa4506dd6f2e05d0035f152d1ca2e5cee7539c024d9abd94e5639aa7ef"
+  },
+  {
+    "file": "independent/regression-shadow.json",
+    "byteLength": 65083,
+    "sha256": "5982671c3f92cd4c3ec6efcdee239b897b7dd1c8d68760f8ed2747a79e9e3e27"
+  },
+  {
+    "file": "initializer.txt",
+    "byteLength": 314,
+    "sha256": "825bc1ea034a3d8771c9dc645f3200213317c29fea010aaa6673577312776c75"
+  },
+  {
+    "file": "integration.txt",
+    "byteLength": 833,
+    "sha256": "8e44eb927ac37b8f1ae3df4a7486d060ae787c4bbf60147457f53caa3afe8eef"
+  },
+  {
+    "file": "loop-header.txt",
+    "byteLength": 1828,
+    "sha256": "137a2923575539401592fab9d105a85466b477a4f16fdd82a3e261c31dc19f0d"
+  },
+  {
+    "file": "npm-check.txt",
+    "byteLength": 349,
+    "sha256": "348aa6b52431c300ff7568e79fdd8601bdad983516a9fbf5d97b488828980867"
+  },
+  {
+    "file": "npm-test.txt",
+    "byteLength": 1125,
+    "sha256": "cb8f148dadf99042a7f4ff95394978d593b8499afd3291d661d2317f7216d64d"
+  },
+  {
+    "file": "probe-build.txt",
+    "byteLength": 120,
+    "sha256": "cbc28a87ba7364326b70407d9f14b5c9a42681ae6b8a9220bfb7edb7d16b673d"
+  },
+  {
+    "file": "probe-verification.json",
+    "byteLength": 2066,
+    "sha256": "4e8579ccb61bc02781f9f21f0c03806428ece7bca121213bc3f680c8fa5d44bd"
+  },
+  {
+    "file": "runtime-sharing.json",
+    "byteLength": 347,
+    "sha256": "6dca961e75342c3367d000bf90927a05bf12930a29f81b0c6ebb3b4fd14d0ec6"
+  },
+  {
+    "file": "semantic-comparison.json",
+    "byteLength": 7434,
+    "sha256": "2cff2a5b900f179c66094e3017604d3b551e6c57849b27c67a0f9bae27e191e1"
+  },
+  {
+    "file": "shadow.txt",
+    "byteLength": 610,
+    "sha256": "6233516b09436d2569169c7083caad392d68ea82ad927087ef28528975c2f915"
+  },
+  {
+    "file": "summary.json",
+    "byteLength": 2305,
+    "sha256": "3e4d917f1087a84136fefeeedd430b1f1e2eab38376e0d5fc19d0393f75c39d0"
+  },
+  {
+    "file": "tested-resources.json",
+    "byteLength": 17529,
+    "sha256": "c41ad70f8e4820a570b874e4d8cf0a2674e7f6c4af9894595ef8470dc9b346ce"
+  },
+  {
+    "file": "toolchain.txt",
+    "byteLength": 2272,
+    "sha256": "8367cca89004a9ea7f74005f7b86d7fd0b2f6688a9d2514737ebbc3d31d3940d"
+  }
+]

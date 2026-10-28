@@ -1,0 +1,1443 @@
+TAP version 13
+# Subtest: floating watch conversions and truth values agree with freshly compiled C++ execution
+    # Subtest: float32 operands convert integer inputs before arithmetic and comparison
+    not ok 1 - float32 operands convert integer inputs before arithmetic and comparison
+      ---
+      duration_ms: 10.0491
+      type: 'test'
+      location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03\\debugger\\checks\\floating-watch.test.mjs:111:15'
+      failureType: 'testCodeFailure'
+      error: |-
+        actual Worker watch results differ from native C++ in float32 operands convert integer inputs before arithmetic and comparison
+        + actual - expected
+        
+        + [
+        +   {
+        +     expected: '0',
+        +     expression: 'negative + exactInt',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case0',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'negative + exactInt',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'exactInt + negative',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case1',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'exactInt + negative',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'positive - exactInt',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case2',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '-1',
+        +       indexedCount: 0,
+        +       name: 'positive - exactInt',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'exactInt - positive',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case3',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'exactInt - positive',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: 'positive == exactInt',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case4',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: 'positive == exactInt',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: 'exactInt == positive',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case5',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: 'exactInt == positive',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'positive < exactInt',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case6',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'positive < exactInt',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'exactInt > positive',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case7',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'exactInt > positive',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: 'positive / exactInt',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case8',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0.9999999403953552',
+        +       indexedCount: 0,
+        +       name: 'positive / exactInt',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'negative + exactLong',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case10',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'negative + exactLong',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'exactLong + negative',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case11',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'exactLong + negative',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'negative + unsignedInt',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case12',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'negative + unsignedInt',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'unsignedInt + negative',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case13',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'unsignedInt + negative',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'negative + unsignedLong',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case14',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'negative + unsignedLong',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: 'unsignedLong + negative',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case15',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: 'unsignedLong + negative',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   }
+        + ]
+        - []
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected:
+      actual:
+        0:
+          expression: 'negative + exactInt'
+          expected: '0'
+          type: 'float'
+          id: 'case0'
+          result:
+            name: 'negative + exactInt'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        1:
+          expression: 'exactInt + negative'
+          expected: '0'
+          type: 'float'
+          id: 'case1'
+          result:
+            name: 'exactInt + negative'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        2:
+          expression: 'positive - exactInt'
+          expected: '0'
+          type: 'float'
+          id: 'case2'
+          result:
+            name: 'positive - exactInt'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '-1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        3:
+          expression: 'exactInt - positive'
+          expected: '0'
+          type: 'float'
+          id: 'case3'
+          result:
+            name: 'exactInt - positive'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        4:
+          expression: 'positive == exactInt'
+          expected: '1'
+          type: 'bool'
+          id: 'case4'
+          result:
+            name: 'positive == exactInt'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        5:
+          expression: 'exactInt == positive'
+          expected: '1'
+          type: 'bool'
+          id: 'case5'
+          result:
+            name: 'exactInt == positive'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        6:
+          expression: 'positive < exactInt'
+          expected: '0'
+          type: 'bool'
+          id: 'case6'
+          result:
+            name: 'positive < exactInt'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        7:
+          expression: 'exactInt > positive'
+          expected: '0'
+          type: 'bool'
+          id: 'case7'
+          result:
+            name: 'exactInt > positive'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        8:
+          expression: 'positive / exactInt'
+          expected: '1'
+          type: 'float'
+          id: 'case8'
+          result:
+            name: 'positive / exactInt'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '0.9999999403953552'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        9:
+          expression: 'negative + exactLong'
+          expected: '0'
+          type: 'float'
+          id: 'case10'
+          result:
+            name: 'negative + exactLong'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        10:
+          expression: 'exactLong + negative'
+          expected: '0'
+          type: 'float'
+          id: 'case11'
+          result:
+            name: 'exactLong + negative'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        11:
+          expression: 'negative + unsignedInt'
+          expected: '0'
+          type: 'float'
+          id: 'case12'
+          result:
+            name: 'negative + unsignedInt'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        12:
+          expression: 'unsignedInt + negative'
+          expected: '0'
+          type: 'float'
+          id: 'case13'
+          result:
+            name: 'unsignedInt + negative'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        13:
+          expression: 'negative + unsignedLong'
+          expected: '0'
+          type: 'float'
+          id: 'case14'
+          result:
+            name: 'negative + unsignedLong'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        14:
+          expression: 'unsignedLong + negative'
+          expected: '0'
+          type: 'float'
+          id: 'case15'
+          result:
+            name: 'unsignedLong + negative'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+      operator: 'deepStrictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/floating-watch.test.mjs:120:16)
+        async Test.run (node:internal/test_runner/test:1389:7)
+        async TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/floating-watch.test.mjs:111:7)
+        async Test.run (node:internal/test_runner/test:1389:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: int64 converts directly to float32 without intermediate double rounding
+    not ok 2 - int64 converts directly to float32 without intermediate double rounding
+      ---
+      duration_ms: 3.4841
+      type: 'test'
+      location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03\\debugger\\checks\\floating-watch.test.mjs:111:15'
+      failureType: 'testCodeFailure'
+      error: |-
+        actual Worker watch results differ from native C++ in int64 converts directly to float32 without intermediate double rounding
+        + actual - expected
+        
+        + [
+        +   {
+        +     expected: '549755813888',
+        +     expression: 'roundAbove + floatZero - signedRoundBase',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case17',
+        +     oracle: '549755813888',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: 'roundAbove + floatZero - signedRoundBase',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '549755813888',
+        +     expression: 'floatZero + roundAbove - signedRoundBase',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case18',
+        +     oracle: '549755813888',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: 'floatZero + roundAbove - signedRoundBase',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '549755813888',
+        +     expression: 'roundBelow + floatZero - signedRoundBase',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case19',
+        +     oracle: '549755813888',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1099511627776',
+        +       indexedCount: 0,
+        +       name: 'roundBelow + floatZero - signedRoundBase',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '-549755813888',
+        +     expression: '(-roundAbove) + floatZero + signedRoundBase',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case20',
+        +     oracle: '-549755813888',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: '(-roundAbove) + floatZero + signedRoundBase',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   },
+        +   {
+        +     expected: '1099511627776',
+        +     expression: 'unsignedRoundAbove + floatZero - unsignedRoundBase',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case21',
+        +     oracle: '1099511627776',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: 'unsignedRoundAbove + floatZero - unsignedRoundBase',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'float'
+        +     },
+        +     type: 'float'
+        +   }
+        + ]
+        - []
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected:
+      actual:
+        0:
+          expression: 'roundAbove + floatZero - signedRoundBase'
+          expected: '549755813888'
+          type: 'float'
+          id: 'case17'
+          result:
+            name: 'roundAbove + floatZero - signedRoundBase'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '549755813888'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        1:
+          expression: 'floatZero + roundAbove - signedRoundBase'
+          expected: '549755813888'
+          type: 'float'
+          id: 'case18'
+          result:
+            name: 'floatZero + roundAbove - signedRoundBase'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '549755813888'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        2:
+          expression: 'roundBelow + floatZero - signedRoundBase'
+          expected: '549755813888'
+          type: 'float'
+          id: 'case19'
+          result:
+            name: 'roundBelow + floatZero - signedRoundBase'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '1099511627776'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '549755813888'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        3:
+          expression: '(-roundAbove) + floatZero + signedRoundBase'
+          expected: '-549755813888'
+          type: 'float'
+          id: 'case20'
+          result:
+            name: '(-roundAbove) + floatZero + signedRoundBase'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '-549755813888'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        4:
+          expression: 'unsignedRoundAbove + floatZero - unsignedRoundBase'
+          expected: '1099511627776'
+          type: 'float'
+          id: 'case21'
+          result:
+            name: 'unsignedRoundAbove + floatZero - unsignedRoundBase'
+            type: 'float'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1099511627776'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+      operator: 'deepStrictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/floating-watch.test.mjs:120:16)
+        async Test.run (node:internal/test_runner/test:1389:7)
+        async TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/floating-watch.test.mjs:111:7)
+        async Test.run (node:internal/test_runner/test:1389:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: float and double NaN convert to true in logical operations
+    not ok 3 - float and double NaN convert to true in logical operations
+      ---
+      duration_ms: 5.1666
+      type: 'test'
+      location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03\\debugger\\checks\\floating-watch.test.mjs:111:15'
+      failureType: 'testCodeFailure'
+      error: |-
+        actual Worker watch results differ from native C++ in float and double NaN convert to true in logical operations
+        + actual - expected
+        
+        + [
+        +   {
+        +     expected: '0',
+        +     expression: '!nanValue',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case24',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: '!nanValue',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: '!doubleNan',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case25',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '1',
+        +       indexedCount: 0,
+        +       name: '!doubleNan',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: 'nanValue || 0',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case26',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: 'nanValue || 0',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: '0 || nanValue',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case27',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: '0 || nanValue',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: 'nanValue && 1',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case28',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: 'nanValue && 1',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: '1 && nanValue',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case29',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: '1 && nanValue',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: 'doubleNan || 0',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case30',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: 'doubleNan || 0',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: '0 || doubleNan',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case31',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: '0 || doubleNan',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: 'doubleNan && 1',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case32',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: 'doubleNan && 1',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: '1 && doubleNan',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case33',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: '1 && doubleNan',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: '!!nanValue',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case34',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: '!!nanValue',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: '!!doubleNan',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case35',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'available',
+        +       displayValue: '0',
+        +       indexedCount: 0,
+        +       name: '!!doubleNan',
+        +       namedCount: 0,
+        +       truncated: false,
+        +       type: 'bool'
+        +     },
+        +     type: 'bool'
+        +   }
+        + ]
+        - []
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected:
+      actual:
+        0:
+          expression: '!nanValue'
+          expected: '0'
+          type: 'bool'
+          id: 'case24'
+          result:
+            name: '!nanValue'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        1:
+          expression: '!doubleNan'
+          expected: '0'
+          type: 'bool'
+          id: 'case25'
+          result:
+            name: '!doubleNan'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '1'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        2:
+          expression: 'nanValue || 0'
+          expected: '1'
+          type: 'bool'
+          id: 'case26'
+          result:
+            name: 'nanValue || 0'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        3:
+          expression: '0 || nanValue'
+          expected: '1'
+          type: 'bool'
+          id: 'case27'
+          result:
+            name: '0 || nanValue'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        4:
+          expression: 'nanValue && 1'
+          expected: '1'
+          type: 'bool'
+          id: 'case28'
+          result:
+            name: 'nanValue && 1'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        5:
+          expression: '1 && nanValue'
+          expected: '1'
+          type: 'bool'
+          id: 'case29'
+          result:
+            name: '1 && nanValue'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        6:
+          expression: 'doubleNan || 0'
+          expected: '1'
+          type: 'bool'
+          id: 'case30'
+          result:
+            name: 'doubleNan || 0'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        7:
+          expression: '0 || doubleNan'
+          expected: '1'
+          type: 'bool'
+          id: 'case31'
+          result:
+            name: '0 || doubleNan'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        8:
+          expression: 'doubleNan && 1'
+          expected: '1'
+          type: 'bool'
+          id: 'case32'
+          result:
+            name: 'doubleNan && 1'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        9:
+          expression: '1 && doubleNan'
+          expected: '1'
+          type: 'bool'
+          id: 'case33'
+          result:
+            name: '1 && doubleNan'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        10:
+          expression: '!!nanValue'
+          expected: '1'
+          type: 'bool'
+          id: 'case34'
+          result:
+            name: '!!nanValue'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        11:
+          expression: '!!doubleNan'
+          expected: '1'
+          type: 'bool'
+          id: 'case35'
+          result:
+            name: '!!doubleNan'
+            type: 'bool'
+            truncated: false
+            availability: 'available'
+            displayValue: '0'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+      operator: 'deepStrictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/floating-watch.test.mjs:120:16)
+        async Test.run (node:internal/test_runner/test:1389:7)
+        async TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/floating-watch.test.mjs:111:7)
+        async Test.run (node:internal/test_runner/test:1389:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: C++ truth conversion controls actual short circuiting without evaluating the skipped branch
+    not ok 4 - C++ truth conversion controls actual short circuiting without evaluating the skipped branch
+      ---
+      duration_ms: 2.1405
+      type: 'test'
+      location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03\\debugger\\checks\\floating-watch.test.mjs:111:15'
+      failureType: 'testCodeFailure'
+      error: |-
+        actual Worker watch results differ from native C++ in C++ truth conversion controls actual short circuiting without evaluating the skipped branch
+        + actual - expected
+        
+        + [
+        +   {
+        +     expected: '1',
+        +     expression: 'nanValue || (1 / zero)',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case42',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'error',
+        +       indexedCount: 0,
+        +       name: 'nanValue || (1 / zero)',
+        +       namedCount: 0,
+        +       reason: 'Division by zero',
+        +       truncated: false,
+        +       type: '<expression>'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: 'doubleNan || (1 / zero)',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case43',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'error',
+        +       indexedCount: 0,
+        +       name: 'doubleNan || (1 / zero)',
+        +       namedCount: 0,
+        +       reason: 'Division by zero',
+        +       truncated: false,
+        +       type: '<expression>'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '1',
+        +     expression: '(nanValue || 0) || (1 / zero)',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case46',
+        +     oracle: '1',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'error',
+        +       indexedCount: 0,
+        +       name: '(nanValue || 0) || (1 / zero)',
+        +       namedCount: 0,
+        +       reason: 'Division by zero',
+        +       truncated: false,
+        +       type: '<expression>'
+        +     },
+        +     type: 'bool'
+        +   },
+        +   {
+        +     expected: '0',
+        +     expression: '!(nanValue && 1) && (1 / zero)',
+        +     frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22',
+        +     id: 'case47',
+        +     oracle: '0',
+        +     passed: false,
+        +     pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef',
+        +     result: {
+        +       availability: 'error',
+        +       indexedCount: 0,
+        +       name: '!(nanValue && 1) && (1 / zero)',
+        +       namedCount: 0,
+        +       reason: 'Division by zero',
+        +       truncated: false,
+        +       type: '<expression>'
+        +     },
+        +     type: 'bool'
+        +   }
+        + ]
+        - []
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected:
+      actual:
+        0:
+          expression: 'nanValue || (1 / zero)'
+          expected: '1'
+          type: 'bool'
+          id: 'case42'
+          result:
+            name: 'nanValue || (1 / zero)'
+            type: '<expression>'
+            truncated: false
+            availability: 'error'
+            reason: 'Division by zero'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        1:
+          expression: 'doubleNan || (1 / zero)'
+          expected: '1'
+          type: 'bool'
+          id: 'case43'
+          result:
+            name: 'doubleNan || (1 / zero)'
+            type: '<expression>'
+            truncated: false
+            availability: 'error'
+            reason: 'Division by zero'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        2:
+          expression: '(nanValue || 0) || (1 / zero)'
+          expected: '1'
+          type: 'bool'
+          id: 'case46'
+          result:
+            name: '(nanValue || 0) || (1 / zero)'
+            type: '<expression>'
+            truncated: false
+            availability: 'error'
+            reason: 'Division by zero'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '1'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+        3:
+          expression: '!(nanValue && 1) && (1 / zero)'
+          expected: '0'
+          type: 'bool'
+          id: 'case47'
+          result:
+            name: '!(nanValue && 1) && (1 / zero)'
+            type: '<expression>'
+            truncated: false
+            availability: 'error'
+            reason: 'Division by zero'
+            namedCount: 0
+            indexedCount: 0
+          oracle: '0'
+          passed: false
+          pauseId: 'a1071760-1c40-4976-8e0c-f2e684eccdef'
+          frameId: 'a1071760-1c40-4976-8e0c-f2e684eccdef:wasm-frame-22'
+      operator: 'deepStrictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/floating-watch.test.mjs:120:16)
+        async Test.run (node:internal/test_runner/test:1389:7)
+        async TestContext.<anonymous> (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-03/debugger/checks/floating-watch.test.mjs:111:7)
+        async Test.run (node:internal/test_runner/test:1389:7)
+        async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+      ...
+    # Subtest: signed zero and infinity use C++ scalar truth values
+    ok 5 - signed zero and infinity use C++ scalar truth values
+      ---
+      duration_ms: 2.7222
+      type: 'test'
+      ...
+    # Subtest: double common type retains double precision and integer conversions
+    ok 6 - double common type retains double precision and integer conversions
+      ---
+      duration_ms: 1.6226
+      type: 'test'
+      ...
+    # Subtest: queries retain actual execution output and ordered event identity
+    ok 7 - queries retain actual execution output and ordered event identity
+      ---
+      duration_ms: 3004.345
+      type: 'test'
+      ...
+    1..7
+not ok 1 - floating watch conversions and truth values agree with freshly compiled C++ execution
+  ---
+  duration_ms: 3697.8424
+  type: 'test'
+  location: 'C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03\\debugger\\checks\\floating-watch.test.mjs:91:1'
+  failureType: 'subtestsFailed'
+  error: '4 subtests failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..1
+# tests 8
+# suites 0
+# pass 3
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3829.1073
