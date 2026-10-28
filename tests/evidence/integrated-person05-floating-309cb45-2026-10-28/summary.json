@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "testedRevision": "309cb45191a62fde2b13eeab9746a8d2502ef658",
+  "productRoot": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03",
+  "validationRoot": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+  "recordedAt": "2026-10-28T04:39:13.696Z",
+  "commands": [
+    {
+      "id": "watch-independent",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\watch-types-independent.mjs"
+      ],
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+      "explicitEnvironment": {
+        "WATCH_TYPES_PRODUCT_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03",
+        "WATCH_TYPES_REVISION": "309cb45191a62fde2b13eeab9746a8d2502ef658",
+        "WATCH_TYPES_PROFILE": "integration-prototype-60eb6729284e2729",
+        "WATCH_TYPES_OUTPUT": "tests/evidence/integrated-person05-floating-309cb45-2026-10-28/engine/run-01/"
+      },
+      "startedAt": "2026-10-28T04:38:57.945Z",
+      "finishedAt": "2026-10-28T04:39:00.431Z",
+      "durationMs": 2484.0299999999997,
+      "exitCode": 0,
+      "signal": null,
+      "outputFile": "automated/watch-independent.txt",
+      "outputSHA256": "3e28786ca6b731d1cfaeec8f9c2e783a7a6861dd40a1d7c38ca4b876ddc7487c"
+    },
+    {
+      "id": "contracts",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "test"
+      ],
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03",
+      "explicitEnvironment": {},
+      "startedAt": "2026-10-28T04:39:00.476Z",
+      "finishedAt": "2026-10-28T04:39:01.216Z",
+      "durationMs": 739.7567999999997,
+      "exitCode": 0,
+      "signal": null,
+      "outputFile": "automated/contracts.txt",
+      "outputSHA256": "59cb479a3532ffb5020f40703b1b4dcd7d09fd99b1834f93ed05ebeee3f5381a"
+    },
+    {
+      "id": "check",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "check"
+      ],
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03",
+      "explicitEnvironment": {},
+      "startedAt": "2026-10-28T04:39:00.446Z",
+      "finishedAt": "2026-10-28T04:39:02.014Z",
+      "durationMs": 1567.8569000000002,
+      "exitCode": 0,
+      "signal": null,
+      "outputFile": "automated/check.txt",
+      "outputSHA256": "348aa6b52431c300ff7568e79fdd8601bdad983516a9fbf5d97b488828980867"
+    },
+    {
+      "id": "integration",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+        "run",
+        "test:integration"
+      ],
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03",
+      "explicitEnvironment": {},
+      "startedAt": "2026-10-28T04:39:02.035Z",
+      "finishedAt": "2026-10-28T04:39:07.156Z",
+      "durationMs": 5120.7874,
+      "exitCode": 0,
+      "signal": null,
+      "outputFile": "automated/integration.txt",
+      "outputSHA256": "c3a8fac4b34a244a30a500ef0b82aff50c2779f29c9ec9dc6b0656bbe7636c9d"
+    },
+    {
+      "id": "debugger",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "--test-reporter=tap",
+        "debugger/checks/*.test.mjs"
+      ],
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-03",
+      "explicitEnvironment": {},
+      "startedAt": "2026-10-28T04:39:02.016Z",
+      "finishedAt": "2026-10-28T04:39:13.344Z",
+      "durationMs": 11328.3776,
+      "exitCode": 0,
+      "signal": null,
+      "outputFile": "automated/debugger.txt",
+      "outputSHA256": "b9ccb252e33542e81f3a102332d51dcf8cb2d0b908b8b99ef8639f4a4014e893"
+    }
+  ],
+  "allCommandsPassed": true,
+  "independentWatch": {
+    "passed": 25,
+    "failed": 0,
+    "boundaryOnly": 1
+  },
+  "profile": {
+    "compatibilityId": "integration-prototype-60eb6729284e2729",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:60eb6729284e27295b8a76121dfe569027d8c096f9580a279021d6ada08d6789",
+    "status": "candidate",
+    "evidence": [
+      "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+    ]
+  },
+  "variablesSHA256": "9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e",
+  "sourceAndWasmUnchanged": true,
+  "productStatusBefore": "",
+  "productStatusAfter": "",
+  "productTrackedDiffFromCommit": "",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64",
+    "ipadTested": false,
+    "browserTested": false,
+    "networkDisabled": false
+  },
+  "limits": [
+    "Branch-level fixed product rerun, not a new integrated release acceptance",
+    "No browser/iPad/offline cache/clipboard execution"
+  ]
+}

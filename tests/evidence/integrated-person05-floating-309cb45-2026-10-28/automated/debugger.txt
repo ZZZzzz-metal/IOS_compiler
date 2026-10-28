@@ -1,0 +1,517 @@
+TAP version 13
+# Subtest: real source breakpoints bind before execution and pause at the requested user line
+ok 1 - real source breakpoints bind before execution and pause at the requested user line
+  ---
+  duration_ms: 113.6137
+  type: 'test'
+  ...
+# Subtest: stopOnEntry pauses before the first user statement and breakpoint replacement removes old bindings
+ok 2 - stopOnEntry pauses before the first user statement and breakpoint replacement removes old bindings
+  ---
+  duration_ms: 94.9965
+  type: 'test'
+  ...
+# Subtest: step over executes a real recursive call and exposes its result in the caller
+ok 3 - step over executes a real recursive call and exposes its result in the caller
+  ---
+  duration_ms: 60.7215
+  type: 'test'
+  ...
+# Subtest: step into reaches the actual callee and step out returns to its caller
+ok 4 - step into reaches the actual callee and step out returns to its caller
+  ---
+  duration_ms: 89.226
+  type: 'test'
+  ...
+# Subtest: recursive stack frames have distinct identities and retain their own local values
+ok 5 - recursive stack frames have distinct identities and retain their own local values
+  ---
+  duration_ms: 51.5257
+  type: 'test'
+  ...
+# Subtest: real DWARF variables expose arrays, pointer targets, strings and vector contents
+ok 6 - real DWARF variables expose arrays, pointer targets, strings and vector contents
+  ---
+  duration_ms: 80.237
+  type: 'test'
+  ...
+# Subtest: container mutation, pagination, UTF-8 strings and int64 values come from live memory
+ok 7 - container mutation, pagination, UTF-8 strings and int64 values come from live memory
+  ---
+  duration_ms: 76.4081
+  type: 'test'
+  ...
+# Subtest: side-effecting watches and foreign frame references fail without changing execution state
+ok 8 - side-effecting watches and foreign frame references fail without changing execution state
+  ---
+  duration_ms: 58.2173
+  type: 'test'
+  ...
+# Subtest: accepted controls invalidate all old pause handles and duplicate command IDs never step twice
+ok 9 - accepted controls invalidate all old pause handles and duplicate command IDs never step twice
+  ---
+  duration_ms: 94.6432
+  type: 'test'
+  ...
+# Subtest: start preflight rejects altered source, component identity and actual resource bytes
+ok 10 - start preflight rejects altered source, component identity and actual resource bytes
+  ---
+  duration_ms: 83.9496
+  type: 'test'
+  ...
+# Subtest: batch stdin and real stdio produce the expected output, with EOF available
+ok 11 - batch stdin and real stdio produce the expected output, with EOF available
+  ---
+  duration_ms: 122.9799
+  type: 'test'
+  ...
+# Subtest: ordinary run and debug execute the same real Wasm with the same deterministic result
+ok 12 - ordinary run and debug execute the same real Wasm with the same deterministic result
+  ---
+  duration_ms: 95.4584
+  type: 'test'
+  ...
+# Subtest: output is bounded and truncated explicitly while exit status survives
+ok 13 - output is bounded and truncated explicitly while exit status survives
+  ---
+  duration_ms: 9435.443
+  type: 'test'
+  ...
+# Subtest: stop cancels a pending resource read and late bytes cannot start the cancelled session
+ok 14 - stop cancels a pending resource read and late bytes cannot start the cancelled session
+  ---
+  duration_ms: 29.1087
+  type: 'test'
+  ...
+# Subtest: a stale stop cannot cancel another build while its resource verification is pending
+ok 15 - a stale stop cannot cancel another build while its resource verification is pending
+  ---
+  duration_ms: 24.6432
+  type: 'test'
+  ...
+# Subtest: a real unreachable instruction is reported as a trap, distinct from normal exit
+ok 16 - a real unreachable instruction is reported as a trap, distinct from normal exit
+  ---
+  duration_ms: 23.7522
+  type: 'test'
+  ...
+# Subtest: an executing infinite loop can be stopped and a new real session started
+ok 17 - an executing infinite loop can be stopped and a new real session started
+  ---
+  duration_ms: 375.2914
+  type: 'test'
+  ...
+# Subtest: runtime timeout terminates real computation while human pause time is excluded
+ok 18 - runtime timeout terminates real computation while human pause time is excluded
+  ---
+  duration_ms: 93.4617
+  type: 'test'
+  ...
+# Subtest: backgrounding terminates real computation and never resumes it on its own
+ok 19 - backgrounding terminates real computation and never resumes it on its own
+  ---
+  duration_ms: 62.6316
+  type: 'test'
+  ...
+# Subtest: actual Clang 8 DWARF maps code-payload PCs and binds executable user lines
+ok 20 - actual Clang 8 DWARF maps code-payload PCs and binds executable user lines
+  ---
+  duration_ms: 42.4665
+  type: 'test'
+  ...
+# Subtest: actual memory reconstructs arrays, pointer, mutated vector, short/long libc++ strings
+ok 21 - actual memory reconstructs arrays, pointer, mutated vector, short/long libc++ strings
+  ---
+  duration_ms: 57.7734
+  type: 'test'
+  ...
+# Subtest: recursive live frames use their own Wasm base local and initialization history
+ok 22 - recursive live frames use their own Wasm base local and initialization history
+  ---
+  duration_ms: 33.8312
+  type: 'test'
+  ...
+# Subtest: variables at their declaration boundary are explicit instead of stale stack values
+ok 23 - variables at their declaration boundary are explicit instead of stale stack values
+  ---
+  duration_ms: 23.4711
+  type: 'test'
+  ...
+# Subtest: real STL signed/unsigned LEB constants and live i64/u64 values remain exact
+ok 24 - real STL signed/unsigned LEB constants and live i64/u64 values remain exact
+  ---
+  duration_ms: 218.9697
+  type: 'test'
+  ...
+# Subtest: corrupted real pointer/container state reports bounded unavailability
+ok 25 - corrupted real pointer/container state reports bounded unavailability
+  ---
+  duration_ms: 33.4258
+  type: 'test'
+  ...
+# Subtest: standard frame-base/fbreg/Wasm location expressions preserve i64 and concrete aggregate types
+ok 26 - standard frame-base/fbreg/Wasm location expressions preserve i64 and concrete aggregate types
+  ---
+  duration_ms: 3.0004
+  type: 'test'
+  ...
+# Subtest: malformed debug inputs fail within bounded readers
+ok 27 - malformed debug inputs fail within bounded readers
+  ---
+  duration_ms: 1.3072
+  type: 'test'
+  ...
+# Subtest: floating watch conversions and truth values agree with freshly compiled C++ execution
+    # Subtest: float32 operands convert integer inputs before arithmetic and comparison
+    ok 1 - float32 operands convert integer inputs before arithmetic and comparison
+      ---
+      duration_ms: 12.7628
+      type: 'test'
+      ...
+    # Subtest: int64 converts directly to float32 without intermediate double rounding
+    ok 2 - int64 converts directly to float32 without intermediate double rounding
+      ---
+      duration_ms: 3.3326
+      type: 'test'
+      ...
+    # Subtest: float and double NaN convert to true in logical operations
+    ok 3 - float and double NaN convert to true in logical operations
+      ---
+      duration_ms: 8.1941
+      type: 'test'
+      ...
+    # Subtest: C++ truth conversion controls actual short circuiting without evaluating the skipped branch
+    ok 4 - C++ truth conversion controls actual short circuiting without evaluating the skipped branch
+      ---
+      duration_ms: 2.9032
+      type: 'test'
+      ...
+    # Subtest: signed zero and infinity use C++ scalar truth values
+    ok 5 - signed zero and infinity use C++ scalar truth values
+      ---
+      duration_ms: 3.7801
+      type: 'test'
+      ...
+    # Subtest: double common type retains double precision and integer conversions
+    ok 6 - double common type retains double precision and integer conversions
+      ---
+      duration_ms: 2.6618
+      type: 'test'
+      ...
+    # Subtest: queries retain actual execution output and ordered event identity
+    ok 7 - queries retain actual execution output and ordered event identity
+      ---
+      duration_ms: 2977.7237
+      type: 'test'
+      ...
+    1..7
+ok 28 - floating watch conversions and truth values agree with freshly compiled C++ execution
+  ---
+  duration_ms: 4052.2301
+  type: 'test'
+  ...
+# Subtest: fresh loop initializer withholds previous iteration x until its real new store
+ok 29 - fresh loop initializer withholds previous iteration x until its real new store
+  ---
+  duration_ms: 851.9322
+  type: 'test'
+  ...
+# {"name":"loop-initializer","sourceHash":"sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee","artifactSHA256":"sha256:26ae821aee785bdd5e9638f035f8006efbc0242d7d3f7f0b5d0dfc63f55255fa","observations":18,"failureCount":0,"exitCode":21}
+# Subtest: fresh inner initializer never falls back to outer x and restores it after lexical exit
+ok 30 - fresh inner initializer never falls back to outer x and restores it after lexical exit
+  ---
+  duration_ms: 799.7907
+  type: 'test'
+  ...
+# {"name":"shadow-initializer","sourceHash":"sha256:0b2a59a89bd3915d96eeb3f512c09f99fdddcc79ac5deb0e097c18d79a2524e1","artifactSHA256":"sha256:a10a753e839dacd074bf4b6a353500e1f0baf2a25a4b4cf20d81df86ac4d53e3","observations":19,"failureCount":0,"exitCode":21}
+# Subtest: real Node Worker transport preserves initializer lifetime through caller queries and all steps
+ok 31 - real Node Worker transport preserves initializer lifetime through caller queries and all steps
+  ---
+  duration_ms: 722.4201
+  type: 'test'
+  ...
+# {"name":"worker-loop-initializer","sourceHash":"sha256:20ecd3af94701bb7ae7b650c4e714c132906c6aa3d67426e1c70a143083c5bee","artifactSHA256":"sha256:26ae821aee785bdd5e9638f035f8006efbc0242d7d3f7f0b5d0dfc63f55255fa","observations":18,"exitCode":21}
+# Subtest: a later call on the same source line does not hide an already constructed vector
+ok 32 - a later call on the same source line does not hide an already constructed vector
+  ---
+  duration_ms: 1097.6825
+  type: 'test'
+  ...
+# {"name":"same-line-completed-vector","sourceHash":"sha256:3156093fbcbfb6f91edd40e4aff02b38cdad2d8fa6eb8ba64e9d6c7c7c4aae47","artifactSHA256":"sha256:908188364fc04b12ee79912d5b2a1d8df3e8182df961f13c07d6347577aa5921","exitCode":11}
+# Subtest: real repeated initializer hides caller x during callee and return-before-store; body values stay 10/11
+ok 33 - real repeated initializer hides caller x during callee and return-before-store; body values stay 10/11
+  ---
+  duration_ms: 1355.7342
+  type: 'test'
+  ...
+# Subtest: lifetime updates occur without queries during the first iteration
+ok 34 - lifetime updates occur without queries during the first iteration
+  ---
+  duration_ms: 40.9939
+  type: 'test'
+  ...
+# Subtest: arrays, pointer, vector/string and partially written constructors use current lifetimes
+ok 35 - arrays, pointer, vector/string and partially written constructors use current lifetimes
+  ---
+  duration_ms: 27.3197
+  type: 'test'
+  ...
+# Subtest: a completed vector stays readable during a later initializer on the same source line
+ok 36 - a completed vector stays readable during a later initializer on the same source line
+  ---
+  duration_ms: 23.9928
+  type: 'test'
+  ...
+# Subtest: recursive activations maintain distinct declaration epochs and do not expose earlier x
+ok 37 - recursive activations maintain distinct declaration epochs and do not expose earlier x
+  ---
+  duration_ms: 25.1347
+  type: 'test'
+  ...
+# Subtest: lost lifetime metadata stays unavailable instead of falling back to historical writes
+ok 38 - lost lifetime metadata stays unavailable instead of falling back to historical writes
+  ---
+  duration_ms: 16.1667
+  type: 'test'
+  ...
+# Subtest: actual loop-header revisits retain initialized i while fresh declarations hide old storage
+ok 39 - actual loop-header revisits retain initialized i while fresh declarations hide old storage
+  ---
+  duration_ms: 19.0228
+  type: 'test'
+  ...
+# Subtest: actual nested x resolves to the nearest active declaration and restores outer x after scope exit
+ok 40 - actual nested x resolves to the nearest active declaration and restores outer x after scope exit
+  ---
+  duration_ms: 7.4498
+  type: 'test'
+  ...
+# Subtest: native validation rejects malformed binaries; unsupported imports fail explicitly
+ok 41 - native validation rejects malformed binaries; unsupported imports fail explicitly
+  ---
+  duration_ms: 2.2283
+  type: 'test'
+  ...
+# Subtest: one step means one instruction and recursion retains distinct frame locals
+ok 42 - one step means one instruction and recursion retains distinct frame locals
+  ---
+  duration_ms: 6.2242
+  type: 'test'
+  ...
+# Subtest: br_if and br_table preserve label results and discard intermediate operands
+ok 43 - br_if and br_table preserve label results and discard intermediate operands
+  ---
+  duration_ms: 2.6435
+  type: 'test'
+  ...
+# Subtest: call_indirect resolves real table entries and checks null, bounds and signature
+ok 44 - call_indirect resolves real table entries and checks null, bounds and signature
+  ---
+  duration_ms: 2.183
+  type: 'test'
+  ...
+# Subtest: all MVP integer and floating point instructions agree with the native engine
+ok 45 - all MVP integer and floating point instructions agree with the native engine
+  ---
+  duration_ms: 43.6496
+  type: 'test'
+  ...
+# Subtest: memory loads, stores, growth, wrapping addresses and traps agree with native
+ok 46 - memory loads, stores, growth, wrapping addresses and traps agree with native
+  ---
+  duration_ms: 8.5164
+  type: 'test'
+  ...
+# Subtest: signaling and payload NaN bits survive reinterpretation, constants, memory and calls
+ok 47 - signaling and payload NaN bits survive reinterpretation, constants, memory and calls
+  ---
+  duration_ms: 12.0773
+  type: 'test'
+  ...
+# Subtest: module start, mutable globals, active data and loop budgets are actual execution
+ok 48 - module start, mutable globals, active data and loop budgets are actual execution
+  ---
+  duration_ms: 6.0696
+  type: 'test'
+  ...
+# Subtest: memory initialization evidence records real stores and child constructor writes
+ok 49 - memory initialization evidence records real stores and child constructor writes
+  ---
+  duration_ms: 1.2943
+  type: 'test'
+  ...
+# Subtest: declaration epochs reject previous-iteration bytes even when no intermediate variables were queried
+ok 50 - declaration epochs reject previous-iteration bytes even when no intermediate variables were queried
+  ---
+  duration_ms: 3.1372
+  type: 'test'
+  ...
+# Subtest: epoch coverage combines overlapping partial writes from real descendants and excludes older bytes
+ok 51 - epoch coverage combines overlapping partial writes from real descendants and excludes older bytes
+  ---
+  duration_ms: 1.3835
+  type: 'test'
+  ...
+# Subtest: declaration observation is per recursive activation and expires when each real frame returns
+ok 52 - declaration observation is per recursive activation and expires when each real frame returns
+  ---
+  duration_ms: 0.9498
+  type: 'test'
+  ...
+# Subtest: WASI writes performed by the declaration instruction count in that exact epoch
+ok 53 - WASI writes performed by the declaration instruction count in that exact epoch
+  ---
+  duration_ms: 0.7511
+  type: 'test'
+  ...
+# Subtest: bounded epoch history reports pruned coverage unknown while retaining newer writes
+ok 54 - bounded epoch history reports pruned coverage unknown while retaining newer writes
+  ---
+  duration_ms: 27.2571
+  type: 'test'
+  ...
+# Subtest: declaration registration is bounded, atomic, deduplicated and limited to actual instruction PCs
+ok 55 - declaration registration is bounded, atomic, deduplicated and limited to actual instruction PCs
+  ---
+  duration_ms: 1.3848
+  type: 'test'
+  ...
+# Subtest: WASI stdin/output, arguments and proc_exit execute at their real call instructions
+ok 56 - WASI stdin/output, arguments and proc_exit execute at their real call instructions
+  ---
+  duration_ms: 0.8308
+  type: 'test'
+  ...
+# Subtest: one WASI I/O instruction uses bounded iovecs, short writes and bounded chunks
+ok 57 - one WASI I/O instruction uses bounded iovecs, short writes and bounded chunks
+  ---
+  duration_ms: 1.6718
+  type: 'test'
+  ...
+# Subtest: real compiler artifact debug-handoff: exit, output and linear memory match native WebAssembly
+ok 58 - real compiler artifact debug-handoff: exit, output and linear memory match native WebAssembly
+  ---
+  duration_ms: 58.5951
+  type: 'test'
+  ...
+# 18742 real Wasm instructions; 1179648 final linear memory bytes
+# Subtest: real compiler artifact c-stdio: exit, output and linear memory match native WebAssembly
+ok 59 - real compiler artifact c-stdio: exit, output and linear memory match native WebAssembly
+  ---
+  duration_ms: 29.102
+  type: 'test'
+  ...
+# 12651 real Wasm instructions; 1179648 final linear memory bytes
+# Subtest: real compiler artifact stl: exit, output and linear memory match native WebAssembly
+ok 60 - real compiler artifact stl: exit, output and linear memory match native WebAssembly
+  ---
+  duration_ms: 455.1955
+  type: 'test'
+  ...
+# 530257 real Wasm instructions; 1179648 final linear memory bytes
+# Subtest: watch semantics match fresh native Wasm or explicitly report the unsupported subset
+    # Subtest: REV-002: integer bases and subsequent integer conversions agree with compiled expressions
+    ok 1 - REV-002: integer bases and subsequent integer conversions agree with compiled expressions
+      ---
+      duration_ms: 15.2707
+      type: 'test'
+      ...
+    # Subtest: REV-002: invalid octal tokens are explicitly unsupported, including nested and skipped operands
+    ok 2 - REV-002: invalid octal tokens are explicitly unsupported, including nested and skipped operands
+      ---
+      duration_ms: 4.0669
+      type: 'test'
+      ...
+    # Subtest: REV-003: two pointers never enter pointer-integer arithmetic and unknown provenance stays unsupported
+    ok 3 - REV-003: two pointers never enter pointer-integer arithmetic and unknown provenance stays unsupported
+      ---
+      duration_ms: 5.6821
+      type: 'test'
+      ...
+    # Subtest: REV-003: integer pointer offsets, dereference and null comparisons retain actual values
+    ok 4 - REV-003: integer pointer offsets, dereference and null comparisons retain actual values
+      ---
+      duration_ms: 11.9244
+      type: 'test'
+      ...
+    # Subtest: float32 unary signs preserve the operand width through arithmetic
+    ok 5 - float32 unary signs preserve the operand width through arithmetic
+      ---
+      duration_ms: 2.2969
+      type: 'test'
+      ...
+    # Subtest: real compiler separately rejects invalid octal constants and pointer addition
+    ok 6 - real compiler separately rejects invalid octal constants and pointer addition
+      ---
+      duration_ms: 862.2234
+      type: 'test'
+      ...
+    # Subtest: queries leave real program execution, event identity and native output unchanged
+    ok 7 - queries leave real program execution, event identity and native output unchanged
+      ---
+      duration_ms: 941.6441
+      type: 'test'
+      ...
+    1..7
+ok 61 - watch semantics match fresh native Wasm or explicitly report the unsupported subset
+  ---
+  duration_ms: 2834.6374
+  type: 'test'
+  ...
+# Subtest: real Node Worker binds breakpoints, queries real locals, steps a recursive call and exits
+ok 62 - real Node Worker binds breakpoints, queries real locals, steps a recursive call and exits
+  ---
+  duration_ms: 422.7712
+  type: 'test'
+  ...
+# Subtest: real Node Worker transfers batch stdin and UTF-8 stdout with authoritative resync
+ok 63 - real Node Worker transfers batch stdin and UTF-8 stdout with authoritative resync
+  ---
+  duration_ms: 321.577
+  type: 'test'
+  ...
+# Subtest: real C++ STL in Node Worker transfers Chinese, emoji and exact i64 output
+ok 64 - real C++ STL in Node Worker transfers Chinese, emoji and exact i64 output
+  ---
+  duration_ms: 1804.9324
+  type: 'test'
+  ...
+# Subtest: real infinite Wasm in Node Worker yields to Stop and permits a new real session
+ok 65 - real infinite Wasm in Node Worker yields to Stop and permits a new real session
+  ---
+  duration_ms: 442.5994
+  type: 'test'
+  ...
+# Subtest: in-memory real artifacts are copied, checked by hash and executed through Node Worker
+ok 66 - in-memory real artifacts are copied, checked by hash and executed through Node Worker
+  ---
+  duration_ms: 192.1523
+  type: 'test'
+  ...
+# Subtest: fault injection: Stop hard-kills never-ready Worker before any event
+ok 67 - fault injection: Stop hard-kills never-ready Worker before any event
+  ---
+  duration_ms: 84.0546
+  type: 'test'
+  ...
+# Subtest: fault injection: Stop hard-kills RPC-stalled Worker before any event
+ok 68 - fault injection: Stop hard-kills RPC-stalled Worker before any event
+  ---
+  duration_ms: 79.2712
+  type: 'test'
+  ...
+# Subtest: fault injection: wrong-key Stop cannot kill the current stalled Worker
+ok 69 - fault injection: wrong-key Stop cannot kill the current stalled Worker
+  ---
+  duration_ms: 79.6118
+  type: 'test'
+  ...
+1..69
+# tests 83
+# suites 0
+# pass 83
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11209.5862

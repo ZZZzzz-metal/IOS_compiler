@@ -1,0 +1,23 @@
+{
+  "id": "acceptance",
+  "command": "npm.cmd run test:acceptance",
+  "invokedVia": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "npmCli": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+    "args": [
+      "--prefix",
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "run",
+      "test:acceptance"
+    ]
+  },
+  "startedAt": "2026-10-27T23:33:08.732Z",
+  "finishedAt": "2026-10-27T23:33:20.046Z",
+  "durationMs": 11313.6758,
+  "exitCode": 0,
+  "signal": null,
+  "errorMessage": null,
+  "outputFile": "acceptance.txt",
+  "outputSHA256": "50d726389dadd948c3d1d217ec16f49e188595f5e60e91f3d868d5c8eeaf2191",
+  "evidenceDirectory": "acceptance"
+}

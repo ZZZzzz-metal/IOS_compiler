@@ -1,0 +1,9 @@
+{
+  "command": "node tests/ui-parallel-audit.mjs clipboard-run-02",
+  "workingDirectory": "C:/Users/20964/Documents/ChatGPT/C++算法编译器/ipad-debugger-05",
+  "observedExitCode": 1,
+  "resultFile": "results.json",
+  "meaning": "Correct-behavior assertions detected three failing scenarios of one clipboard-generation defect; not a passing acceptance test.",
+  "priorRunPreserved": "clipboard-run-01: no bytes edited by this follow-up",
+  "scope": "tests only; no product implementation edits"
+}

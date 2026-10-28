@@ -1,0 +1,2047 @@
+{
+  "testedRevision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "ipadTested": false,
+  "networkDisabled": false,
+  "observations": [
+    {
+      "step": "unprepared-F5-preserves-source-no-start",
+      "at": "2026-10-27T23:34:51.525Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 编译资源未校验\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 准备就绪后可以编译。\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 修改待保存…\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "idle",
+          "resourceReady": "false",
+          "saveState": "dirty",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "ctrl9-breakpoint8-set",
+      "at": "2026-10-27T23:34:52.206Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 可编译运行或启动调试。\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "idle",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "ctrl5-real-debug-entry7",
+      "at": "2026-10-27T23:34:53.176Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:7:1\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - text: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() {\"\n    - generic: int seed = 8;\n    - text: \"int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:7:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: seed\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "ctrl0-step-over-to8",
+      "at": "2026-10-27T23:34:59.666Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:8:1\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - text: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8;\"\n    - generic: int total = bump(seed);\n    - text: \"std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:8:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: seed\n      - emphasis: int\n      - generic: \"8\"\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "ctrl-minus-step-into-bump3",
+      "at": "2026-10-27T23:34:59.757Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:3:1\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - text: \"#include <cstdio> int bump(int n) {\"\n    - generic: int answer = n + 3;\n    - text: \"return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"bump · main.cpp:3:1\" [pressed]\n    - button \"main · main.cpp:8:1\"\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: \"n\"\n      - emphasis: int\n      - generic: \"8\"\n    - paragraph:\n      - code: answer\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "ctrl-shift-minus-step-out8",
+      "at": "2026-10-27T23:34:59.845Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:8:1\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - text: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8;\"\n    - generic: int total = bump(seed);\n    - text: \"std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:8:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: seed\n      - emphasis: int\n      - generic: \"8\"\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - generic: 不可读取：Storage has not been initialized during this declaration lifetime\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "ctrl0-stored-total11-at9",
+      "at": "2026-10-27T23:34:59.982Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:9:1\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - text: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed);\"\n    - generic: std::printf(\"person05-key=%d\\n\", total);\n    - text: \"return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:9:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: seed\n      - emphasis: int\n      - generic: \"8\"\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - generic: \"11\"\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "ctrl5-continue-output11",
+      "at": "2026-10-27T23:35:01.156Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 exit · 返回 0\" [level=2]:\n      - text: 程序输出\n      - generic: exit · 返回 0\n    - generic \"程序输出\": person05-key=11\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "ctrl6-new-compile-started",
+      "at": "2026-10-27T23:35:09.354Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 正在本机编译，源码仍可编辑…\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "compiling",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "ctrl6-real-run-output11-exit0",
+      "at": "2026-10-27T23:35:10.387Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 exit · 返回 0\" [level=2]:\n      - text: 程序输出\n      - generic: exit · 返回 0\n    - generic \"程序输出\": person05-key=11\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "ctrl-shift5-real-stop",
+      "at": "2026-10-27T23:35:11.496Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\" [selected]\n- option \"仅标准 F 键\"\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 stop\" [level=2]:\n      - text: 程序输出\n      - generic: stop\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "control-number",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "standard-scheme-disables-control5",
+      "at": "2026-10-27T23:36:17.561Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 stop\" [level=2]:\n      - text: 程序输出\n      - generic: stop\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "F9-removes-breakpoint8",
+      "at": "2026-10-27T23:36:17.714Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 stop\" [level=2]:\n      - text: 程序输出\n      - generic: stop\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "F9-sets-breakpoint8",
+      "at": "2026-10-27T23:36:17.758Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 stop\" [level=2]:\n      - text: 程序输出\n      - generic: stop\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "F5-real-entry7",
+      "at": "2026-10-27T23:36:18.802Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:7:1\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - text: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() {\"\n    - generic: int seed = 8;\n    - text: \"int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:7:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: seed\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "stdin-F10-does-not-step-from8",
+      "at": "2026-10-27T23:36:18.889Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:8:1\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - text: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8;\"\n    - generic: int total = bump(seed);\n    - text: \"std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\": \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\" [active]:\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:8:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: seed\n      - emphasis: int\n      - generic: \"8\"\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "F11-enters-bump3",
+      "at": "2026-10-27T23:36:18.958Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:3:1\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - text: \"#include <cstdio> int bump(int n) {\"\n    - generic: int answer = n + 3;\n    - text: \"return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"bump · main.cpp:3:1\" [pressed]\n    - button \"main · main.cpp:8:1\"\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: \"n\"\n      - emphasis: int\n      - generic: \"8\"\n    - paragraph:\n      - code: answer\n      - emphasis: int\n      - generic: 不可读取：Variable declaration has not executed at this stop\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "shift-F11-out-to8",
+      "at": "2026-10-27T23:36:19.015Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:8:1\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - text: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8;\"\n    - generic: int total = bump(seed);\n    - text: \"std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:8:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: seed\n      - emphasis: int\n      - generic: \"8\"\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - generic: 不可读取：Storage has not been initialized during this declaration lifetime\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "F10-stores-total11",
+      "at": "2026-10-27T23:36:29.764Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\":\n      - text: 继续\n    - button \"进入\":\n      - text: 进入\n    - button \"跳过\":\n      - text: 跳过\n    - button \"跳出\":\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 已暂停 · main.cpp:9:1\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - text: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed);\"\n    - generic: std::printf(\"person05-key=%d\\n\", total);\n    - text: \"return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - button \"main · main.cpp:9:1\" [pressed]\n    - button \"main · 未提供源码位置\"\n    - button \"_start · 未提供源码位置\"\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - paragraph:\n      - code: seed\n      - emphasis: int\n      - generic: \"8\"\n    - paragraph:\n      - code: total\n      - emphasis: int\n      - generic: \"11\"\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\"\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "paused",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "F5-continue-output11",
+      "at": "2026-10-27T23:36:29.827Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 exit · 返回 0\" [level=2]:\n      - text: 程序输出\n      - generic: exit · 返回 0\n    - generic \"程序输出\": person05-key=11\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "control-F5-new-run-start",
+      "at": "2026-10-27T23:36:29.891Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\" [disabled]:\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\":\n      - text: 停止\n  - status: 正在本机编译，源码仍可编辑…\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "compiling",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "control-F5-run-output11-exit0",
+      "at": "2026-10-27T23:36:30.937Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 exit · 返回 0\" [level=2]:\n      - text: 程序输出\n      - generic: exit · 返回 0\n    - generic \"程序输出\": person05-key=11\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "shift-F5-real-stop",
+      "at": "2026-10-27T23:36:31.906Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本机资源已校验 · 完整离线状态待集成验收\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\" [active]: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出 stop\" [level=2]:\n      - text: 程序输出\n      - generic: stop\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "terminated",
+          "resourceReady": "true",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "true",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    },
+    {
+      "step": "standard-scheme-and-source-persist-after-reload",
+      "at": "2026-10-27T23:36:32.021Z",
+      "url": "http://127.0.0.1:4225/ui/probe.html",
+      "dom": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 编译资源未校验\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\" [disabled]:\n    - text: 编译运行\n  - button \"编译调试\" [disabled]:\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 准备就绪后可以编译。\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\"\n- option \"无 F 键：Control＋数字行\"\n- option \"仅标准 F 键\" [selected]\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\" [disabled]\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n    - generic: \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - textbox \"源代码\": \"#include <cstdio> int bump(int n) { int answer = n + 3; return answer; } int main() { int seed = 8; int total = bump(seed); std::printf(\\\"person05-key=%d\\\\n\\\", total); return 0; } // person05 independent shortcuts 2026-10-28\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 草稿已保存 · 版本 1\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n    - heading \"程序输出\" [level=2]:\n      - text: 程序输出\n    - generic \"程序输出\": 尚无输出\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+      "fields": {
+        "bodyData": {
+          "executionState": "idle",
+          "resourceReady": "false",
+          "saveState": "saved",
+          "sourceView": "draft"
+        },
+        "gutter": [
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "1"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "2"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "3"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "4"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "5"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "6"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "7"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "8"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "9"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "10"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "11"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "12"
+          },
+          {
+            "bp": "false",
+            "disabled": false,
+            "line": "13"
+          }
+        ],
+        "shortcutScheme": "standard",
+        "source": "#include <cstdio>\nint bump(int n) {\n    int answer = n + 3;\n    return answer;\n}\nint main() {\n    int seed = 8;\n    int total = bump(seed);\n    std::printf(\"person05-key=%d\\n\", total);\n    return 0;\n}\n// person05 independent shortcuts 2026-10-28\n",
+        "sourceReadOnly": false,
+        "stdin": ""
+      }
+    }
+  ]
+}

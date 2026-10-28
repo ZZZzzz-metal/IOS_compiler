@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-28T04:40:15.020Z",
+  "testedRevision": "309cb45191a62fde2b13eeab9746a8d2502ef658",
+  "sourceHash": "sha256:8f4ea16786be3da29608a1034506eb34c2685b8d6d268e9b057942fa3a176161",
+  "files": [
+    {
+      "file": "source.cpp",
+      "byteLength": 2380,
+      "sha256": "a781aa556e582cbeecd61aa561a9dc388ee8640ac7c82d3782572d893880015f",
+      "identicalToBaseline": true
+    },
+    {
+      "file": "artifact.wasm",
+      "byteLength": 38373,
+      "sha256": "67b3504d64da47a6b0feb495aa6338f89c3f1056d197016f758295bb11ef95e4",
+      "identicalToBaseline": true
+    }
+  ],
+  "observations": {
+    "passed": 25,
+    "failed": 0,
+    "boundaryOnly": 1
+  },
+  "commandsChecked": 5,
+  "counts": {
+    "contracts": {
+      "tests": 10,
+      "pass": 10,
+      "fail": 0,
+      "skipped": 0
+    },
+    "integration": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skipped": 0
+    },
+    "debugger": {
+      "tests": 83,
+      "pass": 83,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "allPassed": true,
+  "metadataCorrection": {
+    "original": "rerun-executed.mjs",
+    "corrected": "rerun.mjs",
+    "reason": "The executed wrapper read build.sourceHash instead of build.snapshot.sourceHash, so comparison.json omitted this metadata field. This verification explicitly validates both snapshot/build sourceHash and the known expected hash. Original outputs remain unchanged; source.cpp and Wasm bytes were already compared correctly during execution."
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "testedRevision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "observations": 24,
+  "source": "keyboard-source.cpp",
+  "result": "Two seven-action shortcut schemes and recorded focus/unprepared/persistence controls passed in actual desktop IAB",
+  "steps": [
+    {
+      "step": "unprepared-F5-preserves-source-no-start",
+      "at": "2026-10-27T23:34:51.525Z",
+      "state": "idle",
+      "scheme": "control-number"
+    },
+    {
+      "step": "ctrl9-breakpoint8-set",
+      "at": "2026-10-27T23:34:52.206Z",
+      "state": "idle",
+      "scheme": "control-number"
+    },
+    {
+      "step": "ctrl5-real-debug-entry7",
+      "at": "2026-10-27T23:34:53.176Z",
+      "state": "paused",
+      "scheme": "control-number"
+    },
+    {
+      "step": "ctrl0-step-over-to8",
+      "at": "2026-10-27T23:34:59.666Z",
+      "state": "paused",
+      "scheme": "control-number"
+    },
+    {
+      "step": "ctrl-minus-step-into-bump3",
+      "at": "2026-10-27T23:34:59.757Z",
+      "state": "paused",
+      "scheme": "control-number"
+    },
+    {
+      "step": "ctrl-shift-minus-step-out8",
+      "at": "2026-10-27T23:34:59.845Z",
+      "state": "paused",
+      "scheme": "control-number"
+    },
+    {
+      "step": "ctrl0-stored-total11-at9",
+      "at": "2026-10-27T23:34:59.982Z",
+      "state": "paused",
+      "scheme": "control-number"
+    },
+    {
+      "step": "ctrl5-continue-output11",
+      "at": "2026-10-27T23:35:01.156Z",
+      "state": "terminated",
+      "scheme": "control-number"
+    },
+    {
+      "step": "ctrl6-new-compile-started",
+      "at": "2026-10-27T23:35:09.354Z",
+      "state": "compiling",
+      "scheme": "control-number"
+    },
+    {
+      "step": "ctrl6-real-run-output11-exit0",
+      "at": "2026-10-27T23:35:10.387Z",
+      "state": "terminated",
+      "scheme": "control-number"
+    },
+    {
+      "step": "ctrl-shift5-real-stop",
+      "at": "2026-10-27T23:35:11.496Z",
+      "state": "terminated",
+      "scheme": "control-number"
+    },
+    {
+      "step": "standard-scheme-disables-control5",
+      "at": "2026-10-27T23:36:17.561Z",
+      "state": "terminated",
+      "scheme": "standard"
+    },
+    {
+      "step": "F9-removes-breakpoint8",
+      "at": "2026-10-27T23:36:17.714Z",
+      "state": "terminated",
+      "scheme": "standard"
+    },
+    {
+      "step": "F9-sets-breakpoint8",
+      "at": "2026-10-27T23:36:17.758Z",
+      "state": "terminated",
+      "scheme": "standard"
+    },
+    {
+      "step": "F5-real-entry7",
+      "at": "2026-10-27T23:36:18.802Z",
+      "state": "paused",
+      "scheme": "standard"
+    },
+    {
+      "step": "stdin-F10-does-not-step-from8",
+      "at": "2026-10-27T23:36:18.889Z",
+      "state": "paused",
+      "scheme": "standard"
+    },
+    {
+      "step": "F11-enters-bump3",
+      "at": "2026-10-27T23:36:18.958Z",
+      "state": "paused",
+      "scheme": "standard"
+    },
+    {
+      "step": "shift-F11-out-to8",
+      "at": "2026-10-27T23:36:19.015Z",
+      "state": "paused",
+      "scheme": "standard"
+    },
+    {
+      "step": "F10-stores-total11",
+      "at": "2026-10-27T23:36:29.764Z",
+      "state": "paused",
+      "scheme": "standard"
+    },
+    {
+      "step": "F5-continue-output11",
+      "at": "2026-10-27T23:36:29.827Z",
+      "state": "terminated",
+      "scheme": "standard"
+    },
+    {
+      "step": "control-F5-new-run-start",
+      "at": "2026-10-27T23:36:29.891Z",
+      "state": "compiling",
+      "scheme": "standard"
+    },
+    {
+      "step": "control-F5-run-output11-exit0",
+      "at": "2026-10-27T23:36:30.937Z",
+      "state": "terminated",
+      "scheme": "standard"
+    },
+    {
+      "step": "shift-F5-real-stop",
+      "at": "2026-10-27T23:36:31.906Z",
+      "state": "terminated",
+      "scheme": "standard"
+    },
+    {
+      "step": "standard-scheme-and-source-persist-after-reload",
+      "at": "2026-10-27T23:36:32.021Z",
+      "state": "idle",
+      "scheme": "standard"
+    }
+  ],
+  "realCompilerAndDebugger": true,
+  "clipboardRaceTestedInBrowser": false,
+  "browserEngineVersionCollected": false,
+  "physicalKeyboardTested": false,
+  "ipadTested": false,
+  "networkDisabled": false,
+  "fullOfflineBundleTested": false
+}

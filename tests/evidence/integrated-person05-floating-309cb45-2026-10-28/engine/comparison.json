@@ -1,0 +1,263 @@
+{
+  "baselineRevision": "3248ad54faa5f0f3a8b6f6501829e95e4699f066",
+  "targetRevision": "309cb45191a62fde2b13eeab9746a8d2502ef658",
+  "before": {
+    "passed": 14,
+    "failed": 11,
+    "boundaryOnly": 1
+  },
+  "after": {
+    "passed": 25,
+    "failed": 0,
+    "boundaryOnly": 1
+  },
+  "files": [
+    {
+      "file": "source.cpp",
+      "byteLength": 2380,
+      "sha256": "a781aa556e582cbeecd61aa561a9dc388ee8640ac7c82d3782572d893880015f",
+      "identical": true
+    },
+    {
+      "file": "artifact.wasm",
+      "byteLength": 38373,
+      "sha256": "67b3504d64da47a6b0feb495aa6338f89c3f1056d197016f758295bb11ef95e4",
+      "identical": true
+    }
+  ],
+  "nativeStdoutIdentical": true,
+  "interpreterStdoutEqualsNative": true,
+  "previousFailures": [
+    {
+      "id": "mixed-float-int-addition",
+      "before": {
+        "name": "negative + exactInt",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "negative + exactInt",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "id": "mixed-int-float-addition",
+      "before": {
+        "name": "exactInt + negative",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "exactInt + negative",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "id": "mixed-float-int-subtraction",
+      "before": {
+        "name": "positive - exactInt",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "-1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "positive - exactInt",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "id": "mixed-float-int-equality",
+      "before": {
+        "name": "positive == exactInt",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "positive == exactInt",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "id": "mixed-float-int-less-than",
+      "before": {
+        "name": "positive < exactInt",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "positive < exactInt",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "id": "mixed-float-int-division",
+      "before": {
+        "name": "positive / exactInt == 1",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "positive / exactInt == 1",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "id": "mixed-float-wide-addition",
+      "before": {
+        "name": "negative + exactLong",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "negative + exactLong",
+        "type": "float",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "id": "nan-logical-not",
+      "before": {
+        "name": "!nanValue",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "!nanValue",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "id": "nan-logical-or",
+      "before": {
+        "name": "nanValue || 0",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "nanValue || 0",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "id": "nan-logical-and",
+      "before": {
+        "name": "nanValue && 1",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "nanValue && 1",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "id": "short-circuit-nan-rhs",
+      "before": {
+        "name": "nanValue || (1/zero)",
+        "type": "<expression>",
+        "truncated": false,
+        "availability": "error",
+        "reason": "Division by zero",
+        "namedCount": 0,
+        "indexedCount": 0
+      },
+      "after": {
+        "name": "nanValue || (1/zero)",
+        "type": "bool",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    }
+  ]
+}
