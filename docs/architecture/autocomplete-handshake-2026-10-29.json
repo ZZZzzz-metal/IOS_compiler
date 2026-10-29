@@ -30,7 +30,22 @@
       "state": "ACK",
       "delivery": "pending",
       "ack": "Owner verified human authorization; independent fixture/negative-case preparation accepted. Final fixed target/API/package pending.",
-      "progress": "Independent 28-case semantic oracle/29 sources and negative plan preparing; final implementation and package pending."
+      "progress": "Independent fixture preparation accepted; actual completion feature acceptance still pending final provider/UI/package.",
+      "preparation": {
+        "state": "ACCEPT-PREP",
+        "commit": "0b062df7a015463677213f46552e80927138325d",
+        "mergeCommit": "9b6f28981ed71ad9967ce44c9adcd64c9308e03e",
+        "cases": 33,
+        "sourceFiles": 34,
+        "rootFixtureChecks": {
+          "pass": 7,
+          "fail": 0
+        },
+        "rootSealsVerifiedGitFiles": [
+          66,
+          67
+        ]
+      }
     }
   ],
   "declaration": "Transport success does not mean ACK. ACK is reception only; no implementation or acceptance claimed.",
@@ -70,6 +85,18 @@
     {
       "date": "2026-10-29",
       "event": "Root found UI release missing await for asynchronous dispose. Owner04 acknowledged and reports nested-finally await plus planned delayed-dispose/rejection tests. Fixed UI delivery remains pending."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "GitHub PR2 verified merged by user; main ef5d3906e2bb9c877e710a7b2093a0ff5e6fdd2a has the same tree as 4f48884. Root preserved user merge history at 62725ae2ac876f14e2e8f404894dbc0874aac4d1. Completion delivery will use a new PR, user merges main."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Owner05 preparation 0b062df integrated at 9b6f289; root 7 fixture checks and committed-byte seals 66/67 passed. ACCEPT-PREP sent, feature ACCEPT remains pending."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Owner02 reports both draft P2 issues fixed with real Clang evidence; all 45 compiler and 10 contract tests plus baseline passed. Awaiting fixed DONE commit; no integration or independent fix closure claimed."
     }
   ],
   "api": {
