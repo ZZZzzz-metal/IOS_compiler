@@ -1,0 +1,58 @@
+{
+  "feature": "offline-code-completion",
+  "baseline": "4f48884493689eb97de62a7a0af597046e961939",
+  "states": [
+    "REQ",
+    "ACK",
+    "DONE",
+    "ACCEPT"
+  ],
+  "requests": [
+    {
+      "id": "CC-20261029-02",
+      "owner": 2,
+      "state": "ACK",
+      "delivery": "pending",
+      "ack": "Owner verified the real human authorization; clean worktree and fast-forward baseline checked. Offline Clang feasibility and API ACK pending."
+    },
+    {
+      "id": "CC-20261029-04",
+      "owner": 4,
+      "state": "ACK",
+      "delivery": "pending",
+      "ack": "Owner verified human authorization; accepted UI lead, injectable consumer and real provider dependency. API ACK pending."
+    },
+    {
+      "id": "CC-20261029-05",
+      "owner": 5,
+      "state": "ACK",
+      "delivery": "pending",
+      "ack": "Owner verified human authorization; independent fixture/negative-case preparation accepted. Final fixed target/API/package pending."
+    }
+  ],
+  "declaration": "Transport success does not mean ACK. ACK is reception only; no implementation or acceptance claimed.",
+  "events": [
+    {
+      "date": "2026-10-29",
+      "event": "All three owners explicitly ACKed before their prior turns hit usage limits; those turns did not deliver a completed feature."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Human requested continue/mobilize. Same request IDs retransmitted to owners 02/04/05 with proposal path; all three resumed active turns."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Both 02/04 explicitly accepted API; optional editing service v1 frozen. Owner02 reported first real Clang function/local-name completion; broader semantic/performance evidence and fixed implementation still pending."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Root added completion-only Worker scope rejection coverage; worker suite 23/23 passed, mandatory check and contract 10/10 passed. This is root integration preparation, not feature acceptance."
+    }
+  ],
+  "api": {
+    "state": "FROZEN",
+    "path": "contracts/completion.d.ts",
+    "owner02": "API-ACK CC-20261029-02; accepted without shared changes",
+    "owner04": "API-ACK CC-20261029-04; accepted without shared changes"
+  }
+}
