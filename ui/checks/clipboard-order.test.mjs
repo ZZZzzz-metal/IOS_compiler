@@ -14,6 +14,7 @@ import * as editor from '../src/editor.mjs';
 import {createDraft,parseImport,serializeDraft,validateDraft} from '../../storage/src/draft-store.mjs';
 import {createAutosave} from '../../storage/src/autosave.mjs';
 import {assertTrustedOfflineWorkers} from '../../app/offline/browser/trust.mjs';
+import {mountCompletionEditor} from '../src/completion-editor.mjs';
 
 // Run the complete actual main module, replacing only imports with the same
 // real implementations and controlled DOM/clipboard/store transports. No
@@ -24,7 +25,7 @@ const root=fileURLToPath(new URL('../../',import.meta.url));
 const source=process.env.UI_REVIEW_REF
   ? execFileSync('git',['show',process.env.UI_REVIEW_REF+':ui/src/main.mjs'],{cwd:root,encoding:'utf8'})
   : await readFile(new URL('../src/main.mjs',import.meta.url),'utf8');
-assert.equal((source.match(/^import[^\r\n]*;\r?$/gmu)??[]).length,9);
+assert.equal((source.match(/^import[^\r\n]*;\r?$/gmu)??[]).length,process.env.UI_REVIEW_REF?9:10);
 const executable=source.replace(/^import[^\r\n]*;\r?$/gmu,'');
 if(process.env.UI_REVIEW_REF){
   for(const path of ['ui/src/editor.mjs','ui/src/session-controller.mjs','storage/src/autosave.mjs','storage/src/draft-store.mjs']){
@@ -38,12 +39,14 @@ const tick=()=>new Promise(resolve=>setImmediate(resolve));
 async function until(predicate){for(let i=0;i<100;i++){if(predicate())return;await tick();}throw Error('Clipboard fixture did not start the expected read');}
 
 class Element{
-  constructor(id,document){Object.assign(this,{id,document,dataset:{},attributes:{},children:[],files:[],value:'',textContent:'',disabled:false,hidden:false,readOnly:false,scrollTop:0,scrollLeft:0,selectionStart:0,selectionEnd:0,open:false,returnValue:'',listeners:new Map()});}
+  constructor(id,document){Object.assign(this,{id,document,ownerDocument:document,dataset:{},attributes:{},children:[],files:[],value:'',textContent:'',className:'',style:{},disabled:false,hidden:false,readOnly:false,scrollTop:0,scrollLeft:0,selectionStart:0,selectionEnd:0,open:false,returnValue:'',listeners:new Map()});}
   replaceChildren(...children){this.children=children;this.textContent='';}
   append(...children){this.children.push(...children);}
   setAttribute(name,value){this.attributes[name]=String(value);}
+  getAttribute(name){return this.attributes[name]??null;}
   removeAttribute(name){delete this.attributes[name];}
   addEventListener(name,handler){this.listeners.set(name,handler);}
+  removeEventListener(name,handler){if(this.listeners.get(name)===handler)this.listeners.delete(name);}
   focus(){this.document.activeElement=this;}
   setSelectionRange(start,end){this.selectionStart=start;this.selectionEnd=end;}
   showModal(){assert.equal(this.open,false);this.open=true;}
@@ -52,11 +55,12 @@ class Element{
 }
 async function fixture(t){
   const nodes=new Map(),document={activeElement:null,hidden:false};
+  const window={localStorage:{getItem(){return null;},setItem(){}},addEventListener(){},removeEventListener(){}};
   const node=id=>{if(!nodes.has(id))nodes.set(id,new Element(id,document));return nodes.get(id);};
   const controls=['continue','stepInto','stepOver','stepOut'].map(command=>{const button=node('control-'+command);button.dataset.command=command;button.textContent=command;return button;});
-  Object.assign(document,{body:node('body'),getElementById:node,createElement:tag=>new Element(tag,document),
+  Object.assign(document,{body:node('body'),defaultView:window,getElementById:node,createElement:tag=>new Element(tag,document),
     querySelector:selector=>selector==='dialog[open]'?[...nodes.values()].find(item=>item.open)??null:node(selector),
-    querySelectorAll:selector=>selector==='[data-command]'?controls:[],addEventListener(){}});
+    querySelectorAll:selector=>selector==='[data-command]'?controls:[],addEventListener(){},removeEventListener(){}});
   const original=createDraft({id:'main',revision:1,userText:'int original = 1;\n',stdin:'1\n'});
   const records=new Map([['main',structuredClone(original)]]),writes=[],reads=[],copies=[],tasks=[];
   let recoveryGate=null;
@@ -69,13 +73,13 @@ async function fixture(t){
     }};
   const context=vm.createContext({URL,URLSearchParams,Uint8Array,TextEncoder,structuredClone,crypto:webcrypto,setTimeout,clearTimeout,
     location:{href:'https://clipboard-test.invalid/ui/probe.html',hash:''},history:{replaceState(){}},
-    window:{localStorage:{getItem(){return null;},setItem(){}},addEventListener(){}},document,
+    window,document,
     navigator:{clipboard:{readText(){const read=deferred();reads.push(read);return read.promise;},writeText(){const copy=deferred();copies.push(copy);return copy.promise;}}},
-    CompilerAdapter,createSnapshot,WorkerDebuggerAdapter,digest,SessionController,...editor,
+    CompilerAdapter,createSnapshot,WorkerDebuggerAdapter,digest,SessionController,...editor,mountCompletionEditor,
     createDraft,parseImport,serializeDraft,createAutosave,createDraftStore:()=>store,assertTrustedOfflineWorkers,
     requestAnimationFrame(){throw Error('Unexpected asynchronous rendering in clipboard test');},
     fetch(){throw Error('Unexpected network request in clipboard test');}});
-  await vm.runInContext('(async()=>{\n'+executable+'\n globalThis.subject={read:()=>({draft,currentTab,snapshotMode,recovering,autoSave})};})()',context,{filename:'ui/src/main.mjs:complete-module'});
+  await vm.runInContext('(async()=>{\n'+executable+'\n globalThis.subject={read:()=>({draft,currentTab,snapshotMode,recovering,autoSave,completionUI:typeof completionUI===\'undefined\'?null:completionUI})};})()',context,{filename:'ui/src/main.mjs:complete-module'});
   const state=()=>context.subject.read(),flush=()=>state().autoSave.flush();
   const track=promise=>{tasks.push(promise);return promise;};
   const app={node,reads,copies,records,writes,original,state,flush,
@@ -88,7 +92,7 @@ async function fixture(t){
     recover(){return track(node('recover-save').onclick());},
     blockRecovery(){recoveryGate=deferred();return recoveryGate;},
     message:()=>node('message').textContent};
-  t.after(async()=>{recoveryGate?.resolve();for(const read of reads)read.resolve('// cleanup');for(const copy of copies)copy.resolve();await Promise.allSettled(tasks);state().autoSave.dispose();});
+  t.after(async()=>{recoveryGate?.resolve();for(const read of reads)read.resolve('// cleanup');for(const copy of copies)copy.resolve();await Promise.allSettled(tasks);await state().completionUI?.dispose();state().autoSave.dispose();});
   return app;
 }
 

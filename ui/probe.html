@@ -99,9 +99,11 @@
       <div class="editor-shell"><div id="gutter" aria-label="行号与断点"></div><div class="editor-layer"><pre id="highlight" aria-hidden="true"></pre><textarea id="source" aria-label="源代码" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" wrap="off"></textarea></div></div>
       <div class="toolbar edit-tools">
         <button id="breakpoint" aria-label="在当前行切换断点" title="在当前行设置或移除断点">切换断点</button>
+        <button id="complete" disabled title="代码提示（Ctrl+J / Ctrl+Space）" aria-keyshortcuts="Control+j Control+Space">代码提示</button>
         <div class="indent-tools"><button id="indent" title="缩进（Tab）"><svg class="icon" aria-hidden="true"><use href="#icon-indent"/></svg>缩进</button><button id="outdent" title="取消缩进（Shift+Tab）"><svg class="icon" aria-hidden="true"><use href="#icon-outdent"/></svg>取消缩进</button></div>
         <div class="find-tools"><label class="find-field"><svg class="icon" aria-hidden="true"><use href="#icon-search"/></svg><input id="find" type="search" placeholder="查找源码" aria-label="查找源码"></label><button id="find-next">下一处</button></div>
       </div>
+      <p id="completion-status" class="completion-status" role="status" aria-live="polite">校验本地资源后启用代码提示。</p>
       <div class="save-strip"><span class="save-indicator" aria-hidden="true"></span><div id="draft-status" role="status">正在恢复草稿…</div></div>
       <div id="save-recovery" class="toolbar" hidden><button id="retry-save">重试保存</button><button id="recover-save">将当前编辑存为恢复副本</button><button id="download-current">导出当前未保存内容</button></div>
       <details class="problems"><summary>断点与编译诊断</summary><div id="breakpoints" class="list empty">尚未设置断点</div><div id="diagnostics" class="list empty">暂无编译诊断</div></details>
@@ -116,6 +118,7 @@
   </main>
 </div>
 <dialog id="clipboard-dialog"><form method="dialog"><h2 id="clipboard-title">手动复制或粘贴</h2><p>使用系统菜单或键盘完成复制粘贴。</p><textarea id="clipboard-text" rows="12" aria-label="手动剪贴板内容"></textarea><div class="toolbar"><button id="clipboard-apply" value="apply">将内容放入题站源码</button><button value="close">关闭</button></div></form></dialog>
+<div id="completion-popup" class="completion-popup" hidden></div>
 <script type="module" src="./src/main.mjs"></script>
 </body>
 </html>

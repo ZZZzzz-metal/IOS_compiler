@@ -81,6 +81,34 @@ kbd { padding: 2px 4px; border: 1px solid var(--line); border-bottom-width: 2px;
 .icon-library { position: absolute; width: 0; height: 0; overflow: hidden; }
 .icon, .brand-mark { display: block; flex: 0 0 auto; width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
 .brand-mark { width: 29px; height: 29px; color: var(--green); stroke-width: 1.7; }
+.code-pane > .completion-status { min-height: 32px; padding: 4px 14px 10px; color: var(--muted); font-size: 12px; line-height: 18px; }
+.completion-popup {
+  position: fixed;
+  z-index: 30;
+  width: 380px;
+  max-width: calc(100vw - 16px);
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 6px 24px rgb(31 50 38 / 20%);
+  font-size: 13px;
+}
+.completion-list { overflow: auto; overscroll-behavior: contain; padding: 4px; scrollbar-color: var(--line-strong) transparent; touch-action: pan-y; }
+.completion-option { display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 2px 9px; align-items: center; min-height: 44px; padding: 7px 10px; border-radius: 4px; cursor: pointer; touch-action: pan-y; }
+.completion-option:hover { background: var(--paper-soft); }
+.completion-option.is-selected { background: var(--green-soft); color: var(--green-dark); }
+.completion-kind { grid-row: span 2; align-self: start; padding-top: 1px; color: var(--muted); font-size: 11px; line-height: 18px; }
+.completion-label { overflow-wrap: anywhere; font: 600 13px/18px var(--code-font); }
+.completion-detail { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 12px/18px var(--code-font); }
+.completion-hint, .completion-popup > .completion-status { padding: 9px 14px; color: var(--muted); font-size: 12px; line-height: 18px; }
+.completion-hint { border-top: 1px solid var(--line); background: var(--paper-soft); }
+@media (pointer: coarse) {
+  .completion-option { min-height: 48px; padding-block: 8px; }
+  .completion-label { font-size: 14px; }
+}
 .app-shell {
   width: 100%;
   max-width: 1600px;
