@@ -7,6 +7,7 @@ import {highlight,indentSelection,breakpointView,resolveShortcut,shortcutLabels}
 import {createDraftStore,createDraft,serializeDraft,parseImport} from '../../storage/src/draft-store.mjs';
 import {createAutosave} from '../../storage/src/autosave.mjs';
 import {assertTrustedOfflineWorkers} from '../../app/offline/browser/trust.mjs';
+import {mountCompletionEditor} from './completion-editor.mjs';
 
 const $=id=>document.getElementById(id),uuid=()=>crypto.randomUUID();
 const example='#include <cstdio>\n#include <vector>\n#include <string>\n\nint add(int left, int right) {\n    int answer = left + right;\n    return answer;\n}\n\nint main() {\n    int n = 3;\n    std::scanf("%d", &n);\n    std::vector<int> values = {1, 2, 3};\n    std::string label = "sum";\n    int array[3] = {4, 5, 6};\n    int total = add(n, values[0]);\n    for (int i = 0; i < 3; ++i) {\n        total += array[i];\n    }\n    std::printf("%s=%d\\n", label.c_str(), total);\n    return 0;\n}\n';
@@ -16,6 +17,7 @@ let adapter=null,controller=null,compiler=null,compilation=null,restored=false,s
 let renderPending=false,renderedInspection='',watchKey='',watched=null,autoSave;
 let unqueuedEdits=false,recovering=false;
 let importSequence=0,draftGeneration=0,pasteSequence=0,manualPaste=null;
+let completionUI=null,completionSnapshotCache=null;
 let shortcutScheme=readShortcutScheme();
 const store=createDraftStore();
 const fault=error=>{ $('message').hidden=false;$('message').textContent=error?.message??String(error); };
@@ -28,6 +30,21 @@ function filesOf(value=draft){
   return {userPath,driverPath,translationUnit:driver?driverPath:userPath,files:[{path:userPath,role:'user',text:value.userText},...(driver?[{path:driverPath,role:'driver',text:value.driverText}]:[])]};
 }
 function makeSnapshot(){const files=filesOf();return createSnapshot(files.files,files.translationUnit);}
+function completionContext(){
+  const enabled=Boolean(restored&&!recovering&&ready&&prepared&&!preparing&&!compilation&&!snapshotMode&&document.body.dataset.panel!=='debug');
+  if(enabled&&(!completionSnapshotCache||completionSnapshotCache.target!==draft||completionSnapshotCache.version!==draftGeneration)){
+    try{completionSnapshotCache={target:draft,version:draftGeneration,snapshot:makeSnapshot()};}
+    catch{completionSnapshotCache=null;}
+  }
+  const sourcePath=pathFor(),snapshot=completionSnapshotCache?.target===draft&&completionSnapshotCache.version===draftGeneration?completionSnapshotCache.snapshot:null;
+  return {enabled:enabled&&Boolean(snapshot?.files.some(file=>file.path===sourcePath)),documentVersion:draftGeneration,sourcePath,...draft.language,snapshot};
+}
+async function completionProvider(candidate){
+  // Import only the real offline provider after the shared resources were verified.
+  const {CompletionAdapter}=await import('../../compiler/src/completion-adapter.mjs');
+  return ()=>new CompletionAdapter({lock:candidate.lock,
+    createWorker:()=>new Worker(new URL('../compiler/src/completion-worker.mjs',location.href),{type:'module'})});
+}
 function unchanged(snapshot){try{return snapshot?.sourceHash===makeSnapshot().sourceHash;}catch{return false;}}
 function pathFor(tab=currentTab){
   if(snapshotMode&&activeSnapshot)return activeSnapshot.files.find(f=>f.role===(tab==='user'?'user':'driver'))?.path;
@@ -40,6 +57,7 @@ function displayedText(){
 function scheduleRender(){if(renderPending)return;renderPending=true;requestAnimationFrame(()=>{renderPending=false;render();});}
 function scheduleSave(){
   draftGeneration++;
+  completionUI?.invalidate();
   draft.updatedAt=new Date().toISOString();
   try{if(!restored)throw Error('原草稿尚未成功读取。请导出当前编辑，或存为恢复副本，避免覆盖原稿。');autoSave.schedule(draft);}catch(error){unqueuedEdits=true;saveFailed=true;$('save-recovery').hidden=false;fault(error);}
 }
@@ -48,7 +66,7 @@ function edited(){
   if(currentTab==='user')draft.userText=$('source').value;else draft.driverText=$('source').value;
   scheduleSave();render();
 }
-function showText(){ $('source').value=displayedText();$('source').readOnly=snapshotMode;render(); }
+function showText(){ completionUI?.invalidate();$('source').value=displayedText();$('source').readOnly=snapshotMode;render(); }
 function selectedPosition(s){return s.frames.find(f=>f.frameId===s.session?.frameId)?.position??s.session?.position;}
 function displayedBreakpoints(s){
   return breakpointView({snapshotMode,requested,bindings:s.breakpoints,sourceUnchanged:unchanged(activeSnapshot),
@@ -171,12 +189,12 @@ function render(){
   const exit=s.session?.termination;
   $('exit').textContent=exit?`${exit.reason}${exit.exitCode===undefined?'':` · 返回 ${exit.exitCode}`}`:'';
   $('output').textContent=(s.outputTail.map(part=>part.stream==='stderr'?`[错误输出] ${part.text}`:part.text).join('')||'尚无输出')+(s.outputTruncated?'\n[输出已截断，仅显示保留内容]':'');
-  renderEditor(s);renderBreakpoints(s);renderInspection(s);renderShortcutLabels();
+  renderEditor(s);renderBreakpoints(s);renderInspection(s);renderShortcutLabels();completionUI?.refresh();
 }
 function supports(id){return ['implemented-unverified','verified'].includes(prepared?.capabilities.capabilities.find(c=>c.id===id)?.status);}
 function canCompile(){
   const s=view(),active=s.session&&!['terminated','failed'].includes(s.session.state);
-  return Boolean(restored&&!recovering&&ready&&prepared&&!preparing&&!compilation&&!active);
+  return Boolean(restored&&!recovering&&ready&&prepared&&!preparing&&!compilation&&!active&&!completionUI?.failed);
 }
 function canInvokeShortcut(action){
   if(!restored||recovering||preparing)return false;
@@ -210,7 +228,7 @@ function renderShortcutLabels(){
   const hint=$('shortcut-hint');if(hint)hint.textContent=shortcutScheme==='control-number'?'Ctrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入':'F5 开始 / 继续 · F10 跳过 · F11 进入';
 }
 function handleShortcut(event){
-  if(event.defaultPrevented||event.isComposing||event.keyCode===229)return;
+  if(event.defaultPrevented||event.isComposing||event.keyCode===229||completionUI?.composing)return;
   const focused=document.activeElement;
   if(document.querySelector('dialog[open]'))return;
   const inert=Boolean(focused?.closest?.('[inert]'));
@@ -231,6 +249,7 @@ async function prepare(){
   $('message').hidden=true;$('resources').textContent='正在读取并校验本机编译与调试资源…';
   render();
   try{
+    if(completionUI)await completionUI.setProviderFactory(null);
     const response=await fetch('./.local/candidate.json',{cache:'no-store'});if(!response.ok)throw Error('请先运行四号原型准备步骤。');
     const candidate=await response.json();
     // Only the complete, byte-verified release may serve these execution Workers.
@@ -242,6 +261,7 @@ async function prepare(){
       const bytes=new Uint8Array(await response.arrayBuffer());
       if(bytes.length!==resource.byteLength||await digest(bytes)!==resource.sha256)throw Error(`本地资源校验失败：${resource.relativePath}`);
     }
+    if(completionUI)await completionUI.setProviderFactory(await completionProvider(candidate));
     prepared=candidate;ready=true;$('resources').textContent=offline?.offline?'本版本离线资源已校验 · iPad 真机待验证':'本机资源已校验 · 完整离线状态待集成验收';$('status').textContent='可编译运行或启动调试。';
   }catch(error){ready=false;prepared=null;$('resources').textContent='资源未就绪';$('status').textContent='资源校验失败，请重试。';fault(error);}finally{preparing=false;render();}
 }
@@ -251,8 +271,11 @@ async function compile(mode){
   const candidate=prepared;
   $('message').hidden=true;diagnostics=[];
   const snapshot=makeSnapshot(),requestId=uuid(),task={requestId,cancelled:false};
-  compilation=task;diagnosticSnapshot=snapshot;activeSnapshot=null;snapshotMode=false;
+  compilation=task;compiler=null;diagnosticSnapshot=snapshot;activeSnapshot=null;snapshotMode=false;render();
   try{
+    // Set the compile lock before awaiting cancellation. Release even an idle warm Wasm Worker.
+    if(completionUI)await completionUI.release();
+    if(task.cancelled)return;
     controller?.dispose();adapter?.dispose();controller=null;adapter=null;compiler=null;
     adapter=new WorkerDebuggerAdapter({profile:candidate.profile,resources:candidate.resources,baseURL:new URL('../',location.href).href});
     controller=new SessionController({adapter,onChange:scheduleRender});
@@ -276,7 +299,7 @@ async function compile(mode){
   }catch(error){$('status').textContent='编译或启动失败，可修正后重试。';fault(error);}finally{if(compilation===task)compilation=null;render();}
 }
 async function stop(){
-  if(compilation&&!view().session){compilation.cancelled=true;render();await compiler.cancel(compilation.requestId);return;}
+  if(compilation&&(!view().session||['terminated','failed'].includes(view().session.state))){compilation.cancelled=true;render();await compiler?.cancel(compilation.requestId);return;}
   if(view().actions.stop)await controller.control('stop');
 }
 function toggleBreakpoint(line){
@@ -325,7 +348,7 @@ $('prepare').onclick=safe(prepare);$('run').onclick=safe(()=>invokeShortcut('run
 $('resync').onclick=safe(()=>controller.resync());
 for(const button of document.querySelectorAll('[data-command]'))button.onclick=safe(()=>invokeShortcut(button.dataset.command));
 $('source').oninput=edited;$('source').onscroll=syncScroll;
-$('source').onkeydown=event=>{if(event.key==='Tab'&&!event.isComposing&&!snapshotMode){event.preventDefault();indent(event.shiftKey);}};
+$('source').onkeydown=event=>{if(!event.defaultPrevented&&event.key==='Tab'&&!event.isComposing&&event.keyCode!==229&&!completionUI?.composing&&!snapshotMode){event.preventDefault();indent(event.shiftKey);}};
 $('stdin').oninput=()=>{draft.stdin=$('stdin').value;scheduleSave();};
 $('language').onchange=()=>{draft.language={language:$('language').value,standard:$('language').value==='c'?'c11':'c++17'};requested=[];scheduleSave();showText();};
 $('user-tab').onclick=()=>{currentTab='user';showText();};$('driver-tab').onclick=()=>{currentTab='driver';showText();};
@@ -349,6 +372,7 @@ $('clipboard-dialog').addEventListener('close',()=>{
 });
 $('import').onclick=()=>$('file').click();$('file').onchange=safe(async()=>{
   const file=$('file').files[0];if(!file||recovering)return;
+  completionUI?.invalidate();
   const request=++importSequence,generation=draftGeneration,target=draft;
   const isCurrent=()=>request===importSequence;
   const matchesDraft=()=>!recovering&&draft===target&&draftGeneration===generation;
@@ -373,7 +397,7 @@ $('retry-save').onclick=safe(async()=>{
   autoSave.schedule(draft);unqueuedEdits=false;await autoSave.retry();
 });
 $('recover-save').onclick=safe(async()=>{
-  if(recovering)return;recovering=true;draftGeneration++;render();document.querySelector('main').setAttribute('inert','');document.querySelector('.execution').setAttribute('inert','');
+  if(recovering)return;recovering=true;draftGeneration++;completionUI?.invalidate();render();document.querySelector('main').setAttribute('inert','');document.querySelector('.execution').setAttribute('inert','');
   try{
     const recovered=createDraft({...draft,id:'recovery-'+uuid(),revision:0});await store.save(recovered,null);
     const recoveryAutosave=createAutosave({store,onStatus:saveStatus,delayMs:350});
@@ -384,7 +408,7 @@ $('recover-save').onclick=safe(async()=>{
   }finally{recovering=false;document.querySelector('main').removeAttribute('inert');document.querySelector('.execution').removeAttribute('inert');render();}
 });
 $('evaluate').onclick=safe(async()=>{const token=inspectionKey(view()),reply=await controller.evaluate($('expression').value);if(token!==inspectionKey(view())||!reply)return;$('watch').replaceChildren();$('watch').className='list';if(reply.kind==='evaluate'){$('watch').append(createVariable(reply.result,view()));watched=reply.result;}else fault(reply.message);});
-for(const [id,panel] of [['show-code','code'],['show-panels','debug']])$(id).onclick=()=>{document.body.dataset.panel=panel;$('show-code').setAttribute('aria-pressed',String(panel==='code'));$('show-panels').setAttribute('aria-pressed',String(panel==='debug'));};
+for(const [id,panel] of [['show-code','code'],['show-panels','debug']])$(id).onclick=()=>{document.body.dataset.panel=panel;completionUI?.invalidate();completionUI?.refresh();$('show-code').setAttribute('aria-pressed',String(panel==='code'));$('show-panels').setAttribute('aria-pressed',String(panel==='debug'));};
 $('shortcut-scheme').value=shortcutScheme;
 $('shortcut-scheme').onchange=()=>{
   shortcutScheme=$('shortcut-scheme').value==='standard'?'standard':'control-number';
@@ -393,10 +417,12 @@ $('shortcut-scheme').onchange=()=>{
   renderShortcutLabels();
 };
 document.addEventListener('keydown',handleShortcut);
-document.addEventListener('visibilitychange',()=>{if(document.hidden){autoSave.flush().catch(()=>{});adapter?.background();}});
-window.addEventListener('pagehide',()=>{autoSave.flush().catch(()=>{});adapter?.dispose();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){autoSave.flush().catch(()=>{});adapter?.background();completionUI?.release().catch(fault);}});
+window.addEventListener('pagehide',()=>{autoSave.flush().catch(()=>{});adapter?.dispose();completionUI?.dispose().catch(()=>{});});
 window.addEventListener('beforeunload',event=>{if(autoSave.status.dirty||unqueuedEdits||recovering){event.preventDefault();event.returnValue='';}});
 const draftId=new URLSearchParams(location.hash.slice(1)).get('draft')??'main';draft.id=draftId;
 try{const saved=await autoSave.restore(draftId);if(saved)draft=saved;restored=true;}catch(error){fault(error);}
 document.querySelector('main').removeAttribute('inert');document.querySelector('.execution').removeAttribute('inert');
 $('language').value=language();$('stdin').value=draft.stdin;showText();
+completionUI=mountCompletionEditor({source:$('source'),container:$('completion-popup'),button:$('complete'),
+  status:$('completion-status'),getContext:completionContext,onEdited:edited});

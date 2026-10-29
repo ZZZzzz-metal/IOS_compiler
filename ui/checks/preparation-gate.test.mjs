@@ -83,6 +83,7 @@ function fixture({prepared=candidate('previous'),ready=true,restored=true,recove
         if('recovering'in values)recovering=values.recovering;
         if('compilation'in values)compilation=values.compilation;
         if('controller'in values)controller=values.controller;
+        if('completionUI'in values)completionUI=values.completionUI;
       }
     };
   `,context,{filename:`main.mjs${ref?`@${ref}`:''}:controlled-prelude`});
@@ -90,6 +91,28 @@ function fixture({prepared=candidate('previous'),ready=true,restored=true,recove
   subject.set({prepared,ready,restored,recovering});subject.render();
   return {subject,element,calls,context};
 }
+
+test('completion release: compile owns its gate before cancellation settles and waits before constructing Wasm adapters',async()=>{
+  const h=fixture(),release=deferred();let releases=0;
+  h.subject.set({completionUI:{refresh(){},invalidate(){},release(){releases++;return release.promise;}}});
+  const done=h.subject.compile('run');
+  assert.equal(releases,1);assert.ok(h.subject.read().compilation);
+  assert.equal(h.calls.compiler.length,0);assert.equal(h.calls.debugger.length,0);
+  assert.equal(h.element('run').disabled,true);
+  await h.subject.compile('run');assert.equal(releases,1,'a second start cannot bypass the release lock');
+  release.resolve();await flush();assert.equal(h.calls.compile.length,1);
+  succeedCompile(h);await done;
+});
+
+test('completion release: stop during the cancellation wait prevents constructing a new compiler',async()=>{
+  const h=fixture(),release=deferred();
+  h.subject.set({completionUI:{refresh(){},invalidate(){},release:()=>release.promise}});
+  const done=h.subject.compile('run');
+  await h.subject.stop();assert.equal(h.subject.read().compilation.cancelled,true);
+  release.resolve();await done;
+  assert.equal(h.calls.compiler.length,0);assert.equal(h.calls.debugger.length,0);
+  assert.equal(h.subject.read().compilation,null);
+});
 
 function assertPreparationLocked(h,message){
   for(const id of ['run','debug','prepare'])assert.equal(h.element(id).disabled,true,`${message}: ${id} must stay disabled`);
