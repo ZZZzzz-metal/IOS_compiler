@@ -13,21 +13,24 @@
       "owner": 2,
       "state": "ACK",
       "delivery": "pending",
-      "ack": "Owner verified the real human authorization; clean worktree and fast-forward baseline checked. Offline Clang feasibility and API ACK pending."
+      "ack": "Owner verified the real human authorization; clean worktree and fast-forward baseline checked. Offline Clang feasibility and API ACK pending.",
+      "progress": "Five runtime drafts exist; owner reports real Clang semantic cases and cancellation tests in progress. No fixed delivery yet."
     },
     {
       "id": "CC-20261029-04",
       "owner": 4,
       "state": "ACK",
       "delivery": "pending",
-      "ack": "Owner verified human authorization; accepted UI lead, injectable consumer and real provider dependency. API ACK pending."
+      "ack": "Owner verified human authorization; accepted UI lead, injectable consumer and real provider dependency. API ACK pending.",
+      "progress": "Controller, popup geometry and undo-preserving source mapping in parallel; real provider integration pending fixed owner02."
     },
     {
       "id": "CC-20261029-05",
       "owner": 5,
       "state": "ACK",
       "delivery": "pending",
-      "ack": "Owner verified human authorization; independent fixture/negative-case preparation accepted. Final fixed target/API/package pending."
+      "ack": "Owner verified human authorization; independent fixture/negative-case preparation accepted. Final fixed target/API/package pending.",
+      "progress": "Independent 28-case semantic oracle/29 sources and negative plan preparing; final implementation and package pending."
     }
   ],
   "declaration": "Transport success does not mean ACK. ACK is reception only; no implementation or acceptance claimed.",
@@ -47,12 +50,34 @@
     {
       "date": "2026-10-29",
       "event": "Root added completion-only Worker scope rejection coverage; worker suite 23/23 passed, mandatory check and contract 10/10 passed. This is root integration preparation, not feature acceptance."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "One frozen-API notice to owner05 was not executed because approval review hit usage limits. Human explicitly requested continue; the same pending notice retried successfully. All three owners now ACK frozen API or progress."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Root relayed owner05 availability question to owner02 and idle-warm-worker release boundary to 02/04. Owner02 reports real Hidden/Inaccessible output filters, unknown kinds and unavailable/deprecated attribute limits; fixed evidence still pending."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Draft review reported character-literal suppression and possible legal Pattern identifier filtering to owner02; independent negative cases relayed to owner05. Not released defects or fixed deliveries."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Owner02 reported real const-string append candidate limitation and retained the failed assertion. Full availability/const semantics remain unclaimed; owner05 asked to independently confirm on final target."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Root found UI release missing await for asynchronous dispose. Owner04 acknowledged and reports nested-finally await plus planned delayed-dispose/rejection tests. Fixed UI delivery remains pending."
     }
   ],
   "api": {
     "state": "FROZEN",
     "path": "contracts/completion.d.ts",
     "owner02": "API-ACK CC-20261029-02; accepted without shared changes",
-    "owner04": "API-ACK CC-20261029-04; accepted without shared changes"
+    "owner04": "API-ACK CC-20261029-04; accepted without shared changes",
+    "commit": "38ff3075a4b47c3f72ae2f6552a04e58da07d6c0",
+    "owner05": "API-ACK CC-20261029-05; preserved fixtures and fast-forwarded frozen commit"
   }
 }
