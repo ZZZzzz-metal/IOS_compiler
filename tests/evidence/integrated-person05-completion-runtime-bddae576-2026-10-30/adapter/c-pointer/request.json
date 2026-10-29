@@ -1,0 +1,24 @@
+{
+  "language": "c",
+  "standard": "c11",
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-c-pointer",
+  "documentVersion": 23,
+  "snapshot": {
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-c-pointer-snapshot",
+    "sourceHash": "sha256:db4e0d42fc81d9f3e3e1c8da7b5e3940b3c4732e60660fe5083cd761be0c367a",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.c",
+    "files": [
+      {
+        "path": "main.c",
+        "role": "user",
+        "text": "struct Parcel { int weight; int destination; };\nvoid probe(struct Parcel* parcel) { parcel-> }\n",
+        "contentHash": "sha256:4b32013b874fc81ca19ad3dcc46d7035683dc5d26907f4824e32a823bbd63bcd"
+      }
+    ]
+  },
+  "sourcePath": "main.c",
+  "offset": 92,
+  "trigger": "->"
+}

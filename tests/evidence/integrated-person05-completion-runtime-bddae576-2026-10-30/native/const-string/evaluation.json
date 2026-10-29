@@ -1,0 +1,24 @@
+{
+  "caseId": "const-string",
+  "path": "native",
+  "startedAt": "2026-10-29T16:30:34.544Z",
+  "elapsedMs": 200.86209999999983,
+  "verdict": "boundary-failed",
+  "support": "boundary",
+  "itemCount": 82,
+  "isIncomplete": false,
+  "errors": [
+    {
+      "category": "availability",
+      "code": "ineligible-confirmable",
+      "detail": "append"
+    }
+  ],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:4:10",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:4:10"
+    ],
+    "passed": true
+  }
+}

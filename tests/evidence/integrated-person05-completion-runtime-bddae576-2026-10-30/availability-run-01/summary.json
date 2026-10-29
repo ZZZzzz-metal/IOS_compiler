@@ -1,0 +1,136 @@
+{
+  "kind": "supplemental-availability-boundary",
+  "requestId": "CC-20261029-05",
+  "expectedCommit": "bddae57653bede9a38a3510006d761e2a9d19a04",
+  "originalFixtureCountUnchanged": 33,
+  "supplementalLogicalCases": 1,
+  "completionRoutes": {
+    "adapter": {
+      "verdict": "boundary-failed",
+      "support": "boundary",
+      "itemCount": 3,
+      "isIncomplete": false,
+      "errors": [
+        {
+          "category": "availability",
+          "code": "ineligible-confirmable",
+          "detail": "personBlocked"
+        }
+      ]
+    },
+    "native": {
+      "verdict": "boundary-failed",
+      "support": "boundary",
+      "itemCount": 3,
+      "isIncomplete": false,
+      "errors": [
+        {
+          "category": "availability",
+          "code": "ineligible-confirmable",
+          "detail": "personBlocked"
+        }
+      ]
+    }
+  },
+  "boundaryFailed": true,
+  "observations": {
+    "personAllowed": {
+      "rawLines": [
+        "COMPLETION: personAllowed : [#int#]personAllowed()"
+      ],
+      "emittedByClang": true,
+      "explicitAvailabilityTags": [
+        null
+      ],
+      "nativeConfirmable": true,
+      "publicConfirmable": true
+    },
+    "personBlocked": {
+      "rawLines": [
+        "COMPLETION: personBlocked : [#int#]personBlocked()"
+      ],
+      "emittedByClang": true,
+      "explicitAvailabilityTags": [
+        null
+      ],
+      "nativeConfirmable": true,
+      "publicConfirmable": true
+    },
+    "personDeprecated": {
+      "rawLines": [
+        "COMPLETION: personDeprecated : [#int#]personDeprecated()"
+      ],
+      "emittedByClang": true,
+      "explicitAvailabilityTags": [
+        null
+      ],
+      "nativeConfirmable": true,
+      "publicConfirmable": true
+    }
+  },
+  "controls": {
+    "unavailableCallStatus": "failed",
+    "deprecatedCallStatus": "compiled",
+    "deprecatedSmokeExitCode": 0
+  },
+  "checkPass": 9,
+  "checkFail": 2,
+  "targetUnchanged": true,
+  "fatalError": null,
+  "workers": [
+    {
+      "label": "public-completion",
+      "exit": {
+        "sequence": 14,
+        "at": "2026-10-29T16:42:00.099Z",
+        "elapsedMs": 196.13170000000002,
+        "kind": "worker-exit",
+        "label": "public-completion",
+        "code": 1,
+        "threadId": -1
+      },
+      "threadIdAfter": -1
+    },
+    {
+      "label": "native-completion-evidence",
+      "exit": {
+        "sequence": 19,
+        "at": "2026-10-29T16:42:00.308Z",
+        "elapsedMs": 405.39610000000005,
+        "kind": "worker-exit",
+        "label": "native-completion-evidence",
+        "code": 1,
+        "threadId": -1
+      },
+      "threadIdAfter": -1
+    },
+    {
+      "label": "blocked-call",
+      "exit": {
+        "sequence": 41,
+        "at": "2026-10-29T16:42:00.550Z",
+        "elapsedMs": 647.6835,
+        "kind": "worker-exit",
+        "label": "blocked-call",
+        "code": 1,
+        "threadId": -1
+      },
+      "threadIdAfter": -1
+    },
+    {
+      "label": "deprecated-call",
+      "exit": {
+        "sequence": 62,
+        "at": "2026-10-29T16:42:00.841Z",
+        "elapsedMs": 938.3409,
+        "kind": "worker-exit",
+        "label": "deprecated-call",
+        "code": 0,
+        "threadId": -1
+      },
+      "threadIdAfter": -1
+    }
+  ],
+  "scope": "Supplemental case outside the original 33. Frozen CompletionItem has no availability/deprecation metadata. Deprecated is callable; confirmable unavailable candidates remain a failed boundary. CompilerProbe failed status has no invented native exitCode. No browser or iPad acceptance.",
+  "passed": false
+}

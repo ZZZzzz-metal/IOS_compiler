@@ -1,0 +1,18 @@
+{
+  "caseId": "pointer",
+  "path": "native",
+  "startedAt": "2026-10-29T16:30:33.603Z",
+  "elapsedMs": 19.66989999999987,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:2:40",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:2:40"
+    ],
+    "passed": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "caseId": "pattern-variable",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:33.166Z",
+  "elapsedMs": 14.903099999999995,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

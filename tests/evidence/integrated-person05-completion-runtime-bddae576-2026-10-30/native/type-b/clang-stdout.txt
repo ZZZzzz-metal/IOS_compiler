@@ -1,0 +1,6 @@
+COMPLETION: common : [#int#]common
+COMPLETION: Compass : Compass::
+COMPLETION: north : [#int#]north
+COMPLETION: operator= : [#Compass &#]operator=(<#const Compass &#>)
+COMPLETION: operator= : [#Compass &#]operator=(<#Compass &&#>)
+COMPLETION: ~Compass : [#void#]~Compass()

@@ -1,0 +1,6 @@
+COMPLETION: Coordinates : Coordinates::
+COMPLETION: east : [#int#]east
+COMPLETION: operator= : [#Coordinates &#]operator=(<#const Coordinates &#>)
+COMPLETION: operator= : [#Coordinates &#]operator=(<#Coordinates &&#>)
+COMPLETION: west : [#int#]west
+COMPLETION: ~Coordinates : [#void#]~Coordinates()

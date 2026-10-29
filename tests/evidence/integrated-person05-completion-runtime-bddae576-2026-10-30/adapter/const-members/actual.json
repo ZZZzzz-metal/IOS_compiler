@@ -1,0 +1,40 @@
+{
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-const-members",
+  "documentVersion": 21,
+  "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-const-members-snapshot",
+  "sourceHash": "sha256:d34da25dbaacac720808b1b0487dd8ebec5323342d8a007b56271eee92d7cfc7",
+  "sourcePath": "main.cpp",
+  "offset": 116,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:65cf9180d15152de1677516080ce6dc0704ed034cae7a4a7fac3d3d1bafcd67b",
+      "label": "read",
+      "kind": "unknown",
+      "detail": "int read() const",
+      "insertText": "read",
+      "replaceRange": {
+        "startOffset": 116,
+        "endOffset": 116
+      },
+      "filterText": "read"
+    },
+    {
+      "id": "sha256:9ce75580379c09e6a36b1ce7ba13a7d35020474bfe4b9850e08de52f0566990f",
+      "label": "Reading",
+      "kind": "unknown",
+      "detail": "Reading::",
+      "insertText": "Reading",
+      "replaceRange": {
+        "startOffset": 116,
+        "endOffset": 116
+      },
+      "filterText": "Reading"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

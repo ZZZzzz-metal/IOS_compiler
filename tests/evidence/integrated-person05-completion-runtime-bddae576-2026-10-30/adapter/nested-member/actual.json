@@ -1,0 +1,76 @@
+{
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-nested-member",
+  "documentVersion": 12,
+  "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-nested-member-snapshot",
+  "sourceHash": "sha256:c2e393aeac56f993be704639343606814c268e99879f2ae3210f00dda848968e",
+  "sourcePath": "main.cpp",
+  "offset": 139,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:fd17144d51c521089883cb48f7d1e3deda043ee3b1e581f602688759e80dd91f",
+      "label": "actualLeaf",
+      "kind": "unknown",
+      "detail": "int actualLeaf",
+      "insertText": "actualLeaf",
+      "replaceRange": {
+        "startOffset": 139,
+        "endOffset": 139
+      },
+      "filterText": "actualLeaf"
+    },
+    {
+      "id": "sha256:62db0c17a7227573ce2b280c6313071fd97e685e673ad18a64cfdd15d76f985d",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Payload & operator=(const Payload &)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 139,
+        "endOffset": 139
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:12714256e75595b5d5e27e80c3859fa8a44f12f1eccd6b0a42c1d4c5d7b78ab8",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Payload & operator=(Payload &&)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 139,
+        "endOffset": 139
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:0d0540b1be88568f7b14aea0081d4434cd0077e21389fc0eed2a48e7b1c2d58f",
+      "label": "Payload",
+      "kind": "unknown",
+      "detail": "Payload::",
+      "insertText": "Payload",
+      "replaceRange": {
+        "startOffset": 139,
+        "endOffset": 139
+      },
+      "filterText": "Payload"
+    },
+    {
+      "id": "sha256:36a2fec4b39ee5384c8b2dfe8e607a5345ecc36f94410cdc0dabd9d33913be61",
+      "label": "~Payload",
+      "kind": "unknown",
+      "detail": "void ~Payload()",
+      "insertText": "~Payload",
+      "replaceRange": {
+        "startOffset": 139,
+        "endOffset": 139
+      },
+      "filterText": "~Payload"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-char-case",
+  "documentVersion": 26,
+  "snapshot": {
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-char-case-snapshot",
+    "sourceHash": "sha256:5e0a5b7bca80c9033c058a7b2de43a47cd90ecfba8bd92699da4535b88f767ee",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "struct Signal { int amplitude; };\nvoid probe(char code) {\n    Signal obj;\n    switch (code) { case'a': obj. }\n}\n",
+        "contentHash": "sha256:eba18bf0c53b62c47339adec91dc17292e96b2f2aef0b7ac0670b5f6d667e9d4"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 107,
+  "trigger": "."
+}

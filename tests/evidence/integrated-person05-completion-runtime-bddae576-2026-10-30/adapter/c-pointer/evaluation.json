@@ -1,0 +1,12 @@
+{
+  "caseId": "c-pointer",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:33.080Z",
+  "elapsedMs": 16.48569999999995,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

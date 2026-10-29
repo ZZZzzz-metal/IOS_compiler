@@ -1,0 +1,151 @@
+{
+  "result": {
+    "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-pointer",
+    "documentVersion": 5,
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-pointer-snapshot",
+    "sourceHash": "sha256:d0619d9d3a12a1440b96c1ddf419e6ed1238b1863a14b377f32bb26c661ed291",
+    "sourcePath": "main.cpp",
+    "offset": 85,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:ef22a19689b04dee051f38920c9c5e549b21b17d16f946d18b90513f5af61f1c",
+        "label": "elevation",
+        "kind": "unknown",
+        "detail": "int elevation",
+        "insertText": "elevation",
+        "replaceRange": {
+          "startOffset": 85,
+          "endOffset": 85
+        },
+        "filterText": "elevation"
+      },
+      {
+        "id": "sha256:528d5d863e63b1fcea683f2a65dcc26112865aede673d8e7961596ec64d2dea1",
+        "label": "Height",
+        "kind": "unknown",
+        "detail": "Height::",
+        "insertText": "Height",
+        "replaceRange": {
+          "startOffset": 85,
+          "endOffset": 85
+        },
+        "filterText": "Height"
+      },
+      {
+        "id": "sha256:b25cf3a01fdafa1d04a9511ea555ed447f446b130fb4d4b1ac80f482319323e8",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Height & operator=(const Height &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 85,
+          "endOffset": 85
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:2c8a6237fae90ece1ee590c2c48bfb30f88b192b3e06e15a56397f3be1ed2eb3",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Height & operator=(Height &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 85,
+          "endOffset": 85
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:d00af93cb90455e67bc36f1ec326b5056797f1fa25b96f13a253df728dcf26a0",
+        "label": "summit",
+        "kind": "unknown",
+        "detail": "int summit",
+        "insertText": "summit",
+        "replaceRange": {
+          "startOffset": 85,
+          "endOffset": 85
+        },
+        "filterText": "summit"
+      },
+      {
+        "id": "sha256:7e04f9422415334bb15aaefee7ac92aa0227d66fd4be0e6fb294a5e8b46d7f09",
+        "label": "~Height",
+        "kind": "unknown",
+        "detail": "void ~Height()",
+        "insertText": "~Height",
+        "replaceRange": {
+          "startOffset": 85,
+          "endOffset": 85
+        },
+        "filterText": "~Height"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "native": {
+    "argv": [
+      "clang",
+      "-cc1",
+      "-fsyntax-only",
+      "-triple",
+      "wasm32-unknown-wasi",
+      "-main-file-name",
+      "main.cpp",
+      "-disable-free",
+      "-isysroot",
+      "/",
+      "-internal-isystem",
+      "/include/c++/v1",
+      "-internal-isystem",
+      "/lib/clang/8.0.1/include",
+      "-internal-isystem",
+      "/include",
+      "-I",
+      "/project",
+      "-ferror-limit",
+      "20",
+      "-fmessage-length",
+      "0",
+      "-std=c++17",
+      "-x",
+      "c++",
+      "-code-completion-at=/project/main.cpp:2:40",
+      "/project/main.cpp"
+    ],
+    "exitCode": 0,
+    "stdout": "COMPLETION: elevation : [#int#]elevation\nCOMPLETION: Height : Height::\nCOMPLETION: operator= : [#Height &#]operator=(<#const Height &#>)\nCOMPLETION: operator= : [#Height &#]operator=(<#Height &&#>)\nCOMPLETION: summit : [#int#]summit\nCOMPLETION: ~Height : [#void#]~Height()\n",
+    "stderr": "",
+    "memoryBytes": 7012352,
+    "position": {
+      "line": 2,
+      "byteColumn": 40
+    }
+  },
+  "metrics": {
+    "totalMs": 13.349699999999757,
+    "filesystemLinearMemoryBytes": 9437184,
+    "compilerLinearMemoryBytes": 7012352
+  },
+  "resourceReads": [
+    {
+      "path": "vendor/wasm-clang/memfs",
+      "byteLength": 345442,
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+    },
+    {
+      "path": "vendor/wasm-clang/sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    {
+      "path": "vendor/wasm-clang/clang",
+      "byteLength": 31214472,
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    }
+  ]
+}

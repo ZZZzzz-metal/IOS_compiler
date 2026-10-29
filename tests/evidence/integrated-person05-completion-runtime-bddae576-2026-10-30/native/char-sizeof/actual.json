@@ -1,0 +1,139 @@
+{
+  "result": {
+    "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-char-sizeof",
+    "documentVersion": 27,
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-char-sizeof-snapshot",
+    "sourceHash": "sha256:fb9464e55a4cd6c8463e28a4b3bd65a3540e83bae9d296ee49d097f084bba37a",
+    "sourcePath": "main.cpp",
+    "offset": 84,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:5cdd09bb584a7b8ffe150812067a05523a216482c9db04b4e10bb51cd51059de",
+        "label": "amplitude",
+        "kind": "unknown",
+        "detail": "int amplitude",
+        "insertText": "amplitude",
+        "replaceRange": {
+          "startOffset": 84,
+          "endOffset": 84
+        },
+        "filterText": "amplitude"
+      },
+      {
+        "id": "sha256:9fcdef53a5bec3737d79c940e18843f5d51471b8c3e424a4684c1ff14680d868",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Signal & operator=(const Signal &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 84,
+          "endOffset": 84
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:37b7a2a646f654251a27f42f989a8f51ee65a89736cd81ea52a2d7ff15b1cd5d",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Signal & operator=(Signal &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 84,
+          "endOffset": 84
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:b944df8ab66bf2d2e48743b02c144dc573c08dc82face090fba74871ee751beb",
+        "label": "Signal",
+        "kind": "unknown",
+        "detail": "Signal::",
+        "insertText": "Signal",
+        "replaceRange": {
+          "startOffset": 84,
+          "endOffset": 84
+        },
+        "filterText": "Signal"
+      },
+      {
+        "id": "sha256:94139afa1d0f708f60c6aed0b8389088f9d3f3a4c2ba3e5aff366e8b6b116571",
+        "label": "~Signal",
+        "kind": "unknown",
+        "detail": "void ~Signal()",
+        "insertText": "~Signal",
+        "replaceRange": {
+          "startOffset": 84,
+          "endOffset": 84
+        },
+        "filterText": "~Signal"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "native": {
+    "argv": [
+      "clang",
+      "-cc1",
+      "-fsyntax-only",
+      "-triple",
+      "wasm32-unknown-wasi",
+      "-main-file-name",
+      "main.cpp",
+      "-disable-free",
+      "-isysroot",
+      "/",
+      "-internal-isystem",
+      "/include/c++/v1",
+      "-internal-isystem",
+      "/lib/clang/8.0.1/include",
+      "-internal-isystem",
+      "/include",
+      "-I",
+      "/project",
+      "-ferror-limit",
+      "20",
+      "-fmessage-length",
+      "0",
+      "-std=c++17",
+      "-x",
+      "c++",
+      "-code-completion-at=/project/main.cpp:4:20",
+      "/project/main.cpp"
+    ],
+    "exitCode": 0,
+    "stdout": "COMPLETION: amplitude : [#int#]amplitude\nCOMPLETION: operator= : [#Signal &#]operator=(<#const Signal &#>)\nCOMPLETION: operator= : [#Signal &#]operator=(<#Signal &&#>)\nCOMPLETION: Signal : Signal::\nCOMPLETION: ~Signal : [#void#]~Signal()\n",
+    "stderr": "",
+    "memoryBytes": 7012352,
+    "position": {
+      "line": 4,
+      "byteColumn": 20
+    }
+  },
+  "metrics": {
+    "totalMs": 16.654199999999946,
+    "filesystemLinearMemoryBytes": 9437184,
+    "compilerLinearMemoryBytes": 7012352
+  },
+  "resourceReads": [
+    {
+      "path": "vendor/wasm-clang/memfs",
+      "byteLength": 345442,
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+    },
+    {
+      "path": "vendor/wasm-clang/sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    {
+      "path": "vendor/wasm-clang/clang",
+      "byteLength": 31214472,
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    }
+  ]
+}

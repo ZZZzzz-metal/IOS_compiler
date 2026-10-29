@@ -49,6 +49,8 @@ export async function loadCompletionFixtures() {
     assert(Array.isArray(entry.files) && entry.files.length > 0);
     assert(['.', '->', '::', 'identifier', 'none'].includes(entry.expect?.trigger));
     assert(['required', 'boundary'].includes(entry.expect.support));
+    if (entry.expect.allowedStatuses !== undefined) assert(Array.isArray(entry.expect.allowedStatuses) && entry.expect.allowedStatuses.length > 0 &&
+      entry.expect.allowedStatuses.every(value => ['succeeded', 'failed', 'unsupported'].includes(value)));
     for (const key of ['contains', 'excludes', 'visibleExcludes', 'inaccessibleOrAbsent']) {
       const values = entry.expect[key] ?? [];
       assert(Array.isArray(values) && values.every(v => typeof v === 'string' && v.length > 0), `${entry.id}: ${key}`);

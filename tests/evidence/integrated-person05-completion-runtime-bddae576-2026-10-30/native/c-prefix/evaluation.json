@@ -1,0 +1,18 @@
+{
+  "caseId": "c-prefix",
+  "path": "native",
+  "startedAt": "2026-10-29T16:30:34.399Z",
+  "elapsedMs": 24.98050000000012,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.c:1:63",
+    "actual": [
+      "-code-completion-at=/project/main.c:1:63"
+    ],
+    "passed": true
+  }
+}

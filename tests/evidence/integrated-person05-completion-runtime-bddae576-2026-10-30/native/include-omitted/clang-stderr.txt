@@ -1,0 +1,4 @@
+/project/main.cpp:2:16: error: unknown type name 'RequestData'
+void probe() { RequestData request; request.<U+0000> }
+               ^
+1 error generated.

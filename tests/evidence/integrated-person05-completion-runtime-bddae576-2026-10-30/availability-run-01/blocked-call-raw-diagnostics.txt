@@ -1,0 +1,7 @@
+/project/main.cpp:4:21: error: call to unavailable function 'personBlocked': person05-unavailable
+int main() { return personBlocked() - 2; }
+                    ^~~~~~~~~~~~~
+/project/main.cpp:2:58: note: candidate function has been explicitly made unavailable
+__attribute__((unavailable("person05-unavailable"))) int personBlocked() { return 2; }
+                                                         ^
+1 error generated.

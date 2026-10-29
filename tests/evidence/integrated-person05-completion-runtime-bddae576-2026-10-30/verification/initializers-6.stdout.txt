@@ -1,0 +1,11 @@
+
+> ipad-offline-debugger@0.4.5 test:initializer
+> node tests/initializer-lifetime.mjs
+
+ok 1 - initializer-cycle/direct/all-stages
+ok 2 - initializer-cycle/worker/all-stages
+ok 3 - initializer-same-line/direct/all-stages
+ok 4 - initializer-same-line/worker/all-stages
+ok 5 - initializer-cycle/direct/no-first-cycle-queries
+ok 6 - initializer-cycle/worker/no-first-cycle-queries
+{"passed":6,"failed":0}
