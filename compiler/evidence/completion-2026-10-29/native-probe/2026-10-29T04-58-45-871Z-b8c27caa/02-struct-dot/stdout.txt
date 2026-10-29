@@ -1,0 +1,7 @@
+COMPLETION: count : [#int#]count
+COMPLETION: length : [#double#]length
+COMPLETION: operator= : [#Pair &#]operator=(<#const Pair &#>)
+COMPLETION: operator= : [#Pair &#]operator=(<#Pair &&#>)
+COMPLETION: Pair : Pair::
+COMPLETION: reset : [#void#]reset(<#int value#>)
+COMPLETION: ~Pair : [#void#]~Pair()

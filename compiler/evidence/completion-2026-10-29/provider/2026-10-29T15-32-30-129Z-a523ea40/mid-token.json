@@ -1,0 +1,135 @@
+{
+  "request": {
+    "requestId": "74389eec-f96f-4091-bff9-bbde1f77d94b",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "fb576205-59b4-4d88-a36d-07ae12276dbb",
+      "sourceHash": "sha256:8e5c362a3aebcac39e1e043aec45f0a08405805458b3010506a7a9b744f4d914",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int alphaLocal; void f(){alphaOld;}",
+          "contentHash": "sha256:aea6aa708fb754db234bd6f04268a5612f4a41f94e1cd272efab28445541dfb3"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 27
+  },
+  "reply": {
+    "requestId": "74389eec-f96f-4091-bff9-bbde1f77d94b",
+    "documentVersion": 1,
+    "snapshotId": "fb576205-59b4-4d88-a36d-07ae12276dbb",
+    "sourceHash": "sha256:8e5c362a3aebcac39e1e043aec45f0a08405805458b3010506a7a9b744f4d914",
+    "sourcePath": "main.cpp",
+    "offset": 27,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:8feb0f921dc5bb915b3fc4a484b2d733357d6a501f3728bf0f713f5ba6738297",
+        "label": "alphaLocal",
+        "kind": "unknown",
+        "detail": "int alphaLocal",
+        "insertText": "alphaLocal",
+        "replaceRange": {
+          "startOffset": 25,
+          "endOffset": 33
+        },
+        "filterText": "alphaLocal"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 14.322599999999966,
+  "native": {
+    "result": {
+      "requestId": "74389eec-f96f-4091-bff9-bbde1f77d94b",
+      "documentVersion": 1,
+      "snapshotId": "fb576205-59b4-4d88-a36d-07ae12276dbb",
+      "sourceHash": "sha256:8e5c362a3aebcac39e1e043aec45f0a08405805458b3010506a7a9b744f4d914",
+      "sourcePath": "main.cpp",
+      "offset": 27,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:8feb0f921dc5bb915b3fc4a484b2d733357d6a501f3728bf0f713f5ba6738297",
+          "label": "alphaLocal",
+          "kind": "unknown",
+          "detail": "int alphaLocal",
+          "insertText": "alphaLocal",
+          "replaceRange": {
+            "startOffset": 25,
+            "endOffset": 33
+          },
+          "filterText": "alphaLocal"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:28",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: Pattern : alignas(<#expression#>)\nCOMPLETION: Pattern : [#size_t#]alignof(<#type#>)\nCOMPLETION: alphaLocal : [#int#]alphaLocal\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 28
+      }
+    },
+    "metrics": {
+      "totalMs": 12.750900000000001,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [
+      "alphaLocal"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

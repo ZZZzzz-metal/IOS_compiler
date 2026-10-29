@@ -1,0 +1,74 @@
+{
+  "id": "08-vector-prefix",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "targetPath": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "markedText": "#include <vector>\nint main() { std::vector<int> items; items.si@; }\n"
+    }
+  ],
+  "observations": [
+    "size",
+    "size_type"
+  ],
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 63,
+    "line": 2,
+    "utf16Column": 46,
+    "utf8ByteColumn": 46,
+    "linePrefix": "int main() { std::vector<int> items; items.si",
+    "prefixAtCursor": "si",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "snapshot": {
+    "snapshotId": "native-probe-08-vector-prefix",
+    "sourceHash": "sha256:29d8326032a0ff324afcdc048119d7f3a2a207e3079cecdace9b3f4107a8ccb0",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "#include <vector>\nint main() { std::vector<int> items; items.si; }\n",
+        "contentHash": "sha256:d869ff3ea39c0b548910713bece3e8992387e324b0530368dd31d9b5a80742b8"
+      }
+    ]
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:2:46",
+    "/project/main.cpp"
+  ]
+}

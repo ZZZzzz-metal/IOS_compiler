@@ -1,0 +1,102 @@
+{
+  "id": "19-c11-function-local",
+  "invokedAt": "2026-10-29T04:59:33.640Z",
+  "language": "c",
+  "standard": "c11",
+  "translationUnit": "main.c",
+  "cursor": {
+    "sourcePath": "main.c",
+    "compilerPath": "/project/main.c",
+    "utf16Offset": 65,
+    "line": 2,
+    "utf16Column": 40,
+    "utf8ByteColumn": 40,
+    "linePrefix": "int main(void) { int alphaLocal = 1; al",
+    "prefixAtCursor": "al",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.c",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c11",
+    "-x",
+    "c",
+    "-code-completion-at=/project/main.c:2:40",
+    "/project/main.c"
+  ],
+  "sourceHash": "sha256:e229be6a8f2fdaba8584c39ff3d5f71f5d4c85d1d363cbb45acc600009aaa98f",
+  "resources": [
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "expectedSha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "verified": true
+    },
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "expectedSha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "verified": true
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "expectedSha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "verified": true
+    }
+  ],
+  "flags": [],
+  "exitCode": 0,
+  "hostError": null,
+  "filesystemSetupMs": 6.2065000000000055,
+  "completionMs": 7.812400000000025,
+  "totalCaseMs": 14.040500000000065,
+  "memoryBytes": {
+    "clangAfterExecution": 7012352,
+    "memfsAfterExecution": 9437184
+  },
+  "stdoutByteLength": 103,
+  "stderrByteLength": 0,
+  "stdoutSha256": "sha256:cc2bea13be7035c18ae156d120ac4091019206008afe81e0608879f442dc2aec",
+  "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completionCount": 2,
+  "candidateObservations": [
+    {
+      "name": "alphaFunction",
+      "lines": [
+        "COMPLETION: alphaFunction : [#int#]alphaFunction(<#int n#>)"
+      ]
+    },
+    {
+      "name": "alphaLocal",
+      "lines": [
+        "COMPLETION: alphaLocal : [#int#]alphaLocal"
+      ]
+    }
+  ],
+  "inaccessibleLines": [],
+  "stdout": "COMPLETION: alphaFunction : [#int#]alphaFunction(<#int n#>)\nCOMPLETION: alphaLocal : [#int#]alphaLocal\n",
+  "stderr": ""
+}

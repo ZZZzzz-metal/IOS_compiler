@@ -1,0 +1,2 @@
+COMPLETION: sample : [#int#]sample
+COMPLETION: sample (Hidden) : [#double#]sample

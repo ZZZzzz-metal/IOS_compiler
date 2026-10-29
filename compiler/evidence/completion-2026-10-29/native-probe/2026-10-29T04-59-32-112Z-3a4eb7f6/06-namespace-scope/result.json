@@ -1,0 +1,110 @@
+{
+  "id": "06-namespace-scope",
+  "invokedAt": "2026-10-29T04:59:32.497Z",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 84,
+    "line": 2,
+    "utf16Column": 20,
+    "utf8ByteColumn": 20,
+    "linePrefix": "int main() { algo::",
+    "prefixAtCursor": "",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:2:20",
+    "/project/main.cpp"
+  ],
+  "sourceHash": "sha256:3755067f5a5a4d748b163879c5ece4b995fef2afae8e1d2f3f1b76f74bd4fdb0",
+  "resources": [
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "expectedSha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "verified": true
+    },
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "expectedSha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "verified": true
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "expectedSha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "verified": true
+    }
+  ],
+  "flags": [],
+  "exitCode": 0,
+  "hostError": null,
+  "filesystemSetupMs": 6.967399999999998,
+  "completionMs": 9.829400000000021,
+  "totalCaseMs": 16.831099999999992,
+  "memoryBytes": {
+    "clangAfterExecution": 7012352,
+    "memfsAfterExecution": 9437184
+  },
+  "stdoutByteLength": 105,
+  "stderrByteLength": 0,
+  "stdoutSha256": "sha256:53b8ca54839c348cc64a71c5ce14ac209caca39ec2e190c190964d316babf9a0",
+  "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completionCount": 3,
+  "candidateObservations": [
+    {
+      "name": "count",
+      "lines": [
+        "COMPLETION: count : [#int#]count"
+      ]
+    },
+    {
+      "name": "compute",
+      "lines": [
+        "COMPLETION: compute : [#int#]compute(<#int#>)"
+      ]
+    },
+    {
+      "name": "Thing",
+      "lines": [
+        "COMPLETION: Thing : Thing"
+      ]
+    }
+  ],
+  "inaccessibleLines": [],
+  "stdout": "COMPLETION: compute : [#int#]compute(<#int#>)\nCOMPLETION: count : [#int#]count\nCOMPLETION: Thing : Thing\n",
+  "stderr": ""
+}

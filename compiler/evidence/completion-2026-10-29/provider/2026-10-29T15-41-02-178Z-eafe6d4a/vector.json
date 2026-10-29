@@ -1,0 +1,159 @@
+{
+  "request": {
+    "requestId": "1d15589d-d26a-42d3-ade1-ff6dc344e121",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "773b2b01-f887-4117-9cbf-307101a370e4",
+      "sourceHash": "sha256:dfedeea3faa7c7a9b8ccfa82ea4f97f124086678bbc21b217a2a6c638ea29d1d",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <vector>\nvoid f(){std::vector<int> v; v.pu;}",
+          "contentHash": "sha256:61609568317948104da1eef8ac5d0daeea27622c8b0b89789312f3f3a0ecf32f"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 51
+  },
+  "reply": {
+    "requestId": "1d15589d-d26a-42d3-ade1-ff6dc344e121",
+    "documentVersion": 1,
+    "snapshotId": "773b2b01-f887-4117-9cbf-307101a370e4",
+    "sourceHash": "sha256:dfedeea3faa7c7a9b8ccfa82ea4f97f124086678bbc21b217a2a6c638ea29d1d",
+    "sourcePath": "main.cpp",
+    "offset": 51,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:a52b49112e815b18500917c5a56713b71e5570de63e57c806036138e06c1e3ec",
+        "label": "push_back",
+        "kind": "unknown",
+        "detail": "void push_back(const_reference __x)",
+        "insertText": "push_back",
+        "replaceRange": {
+          "startOffset": 49,
+          "endOffset": 51
+        },
+        "filterText": "push_back"
+      },
+      {
+        "id": "sha256:a15b01f6478510a819b5218b5670ed098076a647173b804249ab68284017fc9f",
+        "label": "push_back",
+        "kind": "unknown",
+        "detail": "void push_back(value_type &&__x)",
+        "insertText": "push_back",
+        "replaceRange": {
+          "startOffset": 49,
+          "endOffset": 51
+        },
+        "filterText": "push_back"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 134.78289999999993,
+  "native": {
+    "result": {
+      "requestId": "1d15589d-d26a-42d3-ade1-ff6dc344e121",
+      "documentVersion": 1,
+      "snapshotId": "773b2b01-f887-4117-9cbf-307101a370e4",
+      "sourceHash": "sha256:dfedeea3faa7c7a9b8ccfa82ea4f97f124086678bbc21b217a2a6c638ea29d1d",
+      "sourcePath": "main.cpp",
+      "offset": 51,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:a52b49112e815b18500917c5a56713b71e5570de63e57c806036138e06c1e3ec",
+          "label": "push_back",
+          "kind": "unknown",
+          "detail": "void push_back(const_reference __x)",
+          "insertText": "push_back",
+          "replaceRange": {
+            "startOffset": 49,
+            "endOffset": 51
+          },
+          "filterText": "push_back"
+        },
+        {
+          "id": "sha256:a15b01f6478510a819b5218b5670ed098076a647173b804249ab68284017fc9f",
+          "label": "push_back",
+          "kind": "unknown",
+          "detail": "void push_back(value_type &&__x)",
+          "insertText": "push_back",
+          "replaceRange": {
+            "startOffset": 49,
+            "endOffset": 51
+          },
+          "filterText": "push_back"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:2:34",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: push_back : [#void#]push_back(<#const_reference __x#>)\nCOMPLETION: push_back : [#void#]push_back(<#value_type &&__x#>)\n",
+      "stderr": "",
+      "memoryBytes": 15007744,
+      "position": {
+        "line": 2,
+        "byteColumn": 34
+      }
+    },
+    "metrics": {
+      "totalMs": 276.9022,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 15007744
+    }
+  },
+  "checks": {
+    "expected": [
+      "push_back"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

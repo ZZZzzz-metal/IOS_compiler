@@ -1,0 +1,101 @@
+{
+  "id": "29-constructor-arguments",
+  "invokedAt": "2026-10-29T04:59:33.818Z",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 116,
+    "line": 2,
+    "utf16Column": 27,
+    "utf8ByteColumn": 27,
+    "linePrefix": "int main() { Widget value(",
+    "prefixAtCursor": "",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:2:27",
+    "/project/main.cpp"
+  ],
+  "sourceHash": "sha256:41993252a1c6480f1f86a145973150664c86f5a7a8ef5937256e503b346d9063",
+  "resources": [
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "expectedSha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "verified": true
+    },
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "expectedSha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "verified": true
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "expectedSha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "verified": true
+    }
+  ],
+  "flags": [],
+  "exitCode": 0,
+  "hostError": null,
+  "filesystemSetupMs": 5.748600000000124,
+  "completionMs": 8.111899999999878,
+  "totalCaseMs": 13.884400000000142,
+  "memoryBytes": {
+    "clangAfterExecution": 7077888,
+    "memfsAfterExecution": 9437184
+  },
+  "stdoutByteLength": 1909,
+  "stderrByteLength": 0,
+  "stdoutSha256": "sha256:efb7024bf1d875e83fe62416da124147875a2653c77493c01abe4e66b8950664",
+  "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completionCount": 51,
+  "candidateObservations": [
+    {
+      "name": "Widget",
+      "lines": [
+        "COMPLETION: Widget : Widget",
+        "COMPLETION: Widget : Widget()",
+        "COMPLETION: Widget : Widget(<#int count#>{#, <#const char *name = \"x\"#>#})",
+        "COMPLETION: Widget : Widget(<#const Widget &#>)"
+      ]
+    }
+  ],
+  "inaccessibleLines": [],
+  "stdout": "OPENING_PAREN_LOC: /project/main.cpp:2:26\nOVERLOAD: Widget()\nOVERLOAD: Widget(<#int count#>)\nOVERLOAD: Widget(<#const Widget &#>)\nCOMPLETION: __func__\nCOMPLETION: __FUNCTION__\nCOMPLETION: __PRETTY_FUNCTION__\nCOMPLETION: _Nonnull\nCOMPLETION: _Null_unspecified\nCOMPLETION: _Nullable\nCOMPLETION: Pattern : [#size_t#]alignof(<#type#>)\nCOMPLETION: auto\nCOMPLETION: bool\nCOMPLETION: char\nCOMPLETION: char16_t\nCOMPLETION: char32_t\nCOMPLETION: class\nCOMPLETION: const\nCOMPLETION: Pattern : const_cast<<#type#>>(<#expression#>)\nCOMPLETION: Pattern : decltype(<#expression#>)\nCOMPLETION: Pattern : [#void#]delete <#expression#>\nCOMPLETION: Pattern : [#void#]delete [] <#expression#>\nCOMPLETION: double\nCOMPLETION: Pattern : dynamic_cast<<#type#>>(<#expression#>)\nCOMPLETION: enum\nCOMPLETION: Pattern : [#bool#]false\nCOMPLETION: float\nCOMPLETION: int\nCOMPLETION: long\nCOMPLETION: main : [#int#]main()\nCOMPLETION: Pattern : new <#type#>(<#expressions#>)\nCOMPLETION: Pattern : new <#type#>[<#size#>](<#expressions#>)\nCOMPLETION: Pattern : [#bool#]noexcept(<#expression#>)\nCOMPLETION: Pattern : [#std::nullptr_t#]nullptr\nCOMPLETION: operator\nCOMPLETION: Pattern : reinterpret_cast<<#type#>>(<#expression#>)\nCOMPLETION: short\nCOMPLETION: signed\nCOMPLETION: Pattern : [#size_t#]sizeof(<#expression-or-type#>)\nCOMPLETION: Pattern : [#size_t#]sizeof...(<#parameter-pack#>)\nCOMPLETION: Pattern : static_cast<<#type#>>(<#expression#>)\nCOMPLETION: struct\nCOMPLETION: Pattern : [#bool#]true\nCOMPLETION: Pattern : [#std::type_info#]typeid(<#expression-or-type#>)\nCOMPLETION: Pattern : typename <#qualifier#>::<#name#>\nCOMPLETION: union\nCOMPLETION: unsigned\nCOMPLETION: value : [#Widget#]value\nCOMPLETION: void\nCOMPLETION: volatile\nCOMPLETION: wchar_t\nCOMPLETION: Widget : Widget\nCOMPLETION: Widget : Widget()\nCOMPLETION: Widget : Widget(<#int count#>{#, <#const char *name = \"x\"#>#})\nCOMPLETION: Widget : Widget(<#const Widget &#>)\n",
+  "stderr": ""
+}

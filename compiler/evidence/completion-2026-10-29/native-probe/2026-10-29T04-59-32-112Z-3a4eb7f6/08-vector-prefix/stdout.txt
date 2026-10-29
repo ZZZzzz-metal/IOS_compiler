@@ -1,0 +1,1 @@
+COMPLETION: size : [#size_type#]size()[# const#]

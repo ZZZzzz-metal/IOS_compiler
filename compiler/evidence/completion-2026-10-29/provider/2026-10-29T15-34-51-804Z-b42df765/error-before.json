@@ -1,0 +1,159 @@
+{
+  "request": {
+    "requestId": "15b82f88-d721-413b-8478-914db00d0244",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "fb92dd68-27db-4b41-9c9a-16f864498f29",
+      "sourceHash": "sha256:dee7a732117edac9a1154a0423a0cd215dbe754233a408ca0797b388388420d8",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "void f(){UnknownType x; int alpha; al",
+          "contentHash": "sha256:e98853ebc15a5ddc985e952a317145aaa1e9d8bfc2d35ecc9d3ec6a0556caaa8"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 37
+  },
+  "reply": {
+    "requestId": "15b82f88-d721-413b-8478-914db00d0244",
+    "documentVersion": 1,
+    "snapshotId": "fb92dd68-27db-4b41-9c9a-16f864498f29",
+    "sourceHash": "sha256:dee7a732117edac9a1154a0423a0cd215dbe754233a408ca0797b388388420d8",
+    "sourcePath": "main.cpp",
+    "offset": 37,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:c31acb99ba881fe9f6eb1fd7645d55a430a612215e0c62d96d2f5e5c328b269f",
+        "label": "alpha",
+        "kind": "unknown",
+        "detail": "int alpha",
+        "insertText": "alpha",
+        "replaceRange": {
+          "startOffset": 35,
+          "endOffset": 37
+        },
+        "filterText": "alpha"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "unknown type name 'UnknownType'",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 1,
+            "column": 10
+          }
+        }
+      }
+    ],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 14.20029999999997,
+  "native": {
+    "result": {
+      "requestId": "15b82f88-d721-413b-8478-914db00d0244",
+      "documentVersion": 1,
+      "snapshotId": "fb92dd68-27db-4b41-9c9a-16f864498f29",
+      "sourceHash": "sha256:dee7a732117edac9a1154a0423a0cd215dbe754233a408ca0797b388388420d8",
+      "sourcePath": "main.cpp",
+      "offset": 37,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:c31acb99ba881fe9f6eb1fd7645d55a430a612215e0c62d96d2f5e5c328b269f",
+          "label": "alpha",
+          "kind": "unknown",
+          "detail": "int alpha",
+          "insertText": "alpha",
+          "replaceRange": {
+            "startOffset": 35,
+            "endOffset": 37
+          },
+          "filterText": "alpha"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [
+        {
+          "severity": "error",
+          "message": "unknown type name 'UnknownType'",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 1,
+              "column": 10
+            }
+          }
+        }
+      ],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:38",
+        "/project/main.cpp"
+      ],
+      "exitCode": 1,
+      "stdout": "COMPLETION: Pattern : alignas(<#expression#>)\nCOMPLETION: Pattern : [#size_t#]alignof(<#type#>)\nCOMPLETION: alpha : [#int#]alpha\n",
+      "stderr": "/project/main.cpp:1:10: error: unknown type name 'UnknownType'\nvoid f(){UnknownType x; int alpha; al\n         ^\n1 error generated.\n",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 38
+      }
+    },
+    "metrics": {
+      "totalMs": 15.495400000000018,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [
+      "alpha"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "request": {
+    "requestId": "71de3711-8f96-4ada-8416-6eace3b48935",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "d961d59d-87a9-459a-8de8-2af0e0c0fb44",
+      "sourceHash": "sha256:381b631db1435a69491b52eefc0d00e7553b29d740c57591f039b8f6fb5e38bc",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Node{int value;}; void f(){Node* p; p->;}",
+          "contentHash": "sha256:16497e351a981cb682a6ecdf5be20850c1fe31e5b10f28f55268456ff2f1f7c3"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 46
+  },
+  "reply": {
+    "requestId": "71de3711-8f96-4ada-8416-6eace3b48935",
+    "documentVersion": 1,
+    "snapshotId": "d961d59d-87a9-459a-8de8-2af0e0c0fb44",
+    "sourceHash": "sha256:381b631db1435a69491b52eefc0d00e7553b29d740c57591f039b8f6fb5e38bc",
+    "sourcePath": "main.cpp",
+    "offset": 46,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:0b23abbf48d7a2aceed00d3244f4573d094f20c11d333dd07494c6aac783f984",
+        "label": "Node",
+        "kind": "unknown",
+        "detail": "Node::",
+        "insertText": "Node",
+        "replaceRange": {
+          "startOffset": 46,
+          "endOffset": 46
+        },
+        "filterText": "Node"
+      },
+      {
+        "id": "sha256:7871196b0669a08f7a0e2799af3a704a09fd354b41e567f94e5378b2561ba13a",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Node & operator=(const Node &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 46,
+          "endOffset": 46
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:27510b69074f8f49aae06d328e460660487ee944852bdf043507064c374ada6f",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Node & operator=(Node &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 46,
+          "endOffset": 46
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:55988d2a76984e19f28901cdb48184bfad02e069745fbbbc8741e33521eab5d8",
+        "label": "value",
+        "kind": "unknown",
+        "detail": "int value",
+        "insertText": "value",
+        "replaceRange": {
+          "startOffset": 46,
+          "endOffset": 46
+        },
+        "filterText": "value"
+      },
+      {
+        "id": "sha256:186a739c50aefa371e18f36baf23f6f30f082a080ee43242929c108fad142782",
+        "label": "~Node",
+        "kind": "unknown",
+        "detail": "void ~Node()",
+        "insertText": "~Node",
+        "replaceRange": {
+          "startOffset": 46,
+          "endOffset": 46
+        },
+        "filterText": "~Node"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 15.448399999999992,
+  "native": {
+    "result": {
+      "requestId": "71de3711-8f96-4ada-8416-6eace3b48935",
+      "documentVersion": 1,
+      "snapshotId": "d961d59d-87a9-459a-8de8-2af0e0c0fb44",
+      "sourceHash": "sha256:381b631db1435a69491b52eefc0d00e7553b29d740c57591f039b8f6fb5e38bc",
+      "sourcePath": "main.cpp",
+      "offset": 46,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:0b23abbf48d7a2aceed00d3244f4573d094f20c11d333dd07494c6aac783f984",
+          "label": "Node",
+          "kind": "unknown",
+          "detail": "Node::",
+          "insertText": "Node",
+          "replaceRange": {
+            "startOffset": 46,
+            "endOffset": 46
+          },
+          "filterText": "Node"
+        },
+        {
+          "id": "sha256:7871196b0669a08f7a0e2799af3a704a09fd354b41e567f94e5378b2561ba13a",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Node & operator=(const Node &)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 46,
+            "endOffset": 46
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:27510b69074f8f49aae06d328e460660487ee944852bdf043507064c374ada6f",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Node & operator=(Node &&)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 46,
+            "endOffset": 46
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:55988d2a76984e19f28901cdb48184bfad02e069745fbbbc8741e33521eab5d8",
+          "label": "value",
+          "kind": "unknown",
+          "detail": "int value",
+          "insertText": "value",
+          "replaceRange": {
+            "startOffset": 46,
+            "endOffset": 46
+          },
+          "filterText": "value"
+        },
+        {
+          "id": "sha256:186a739c50aefa371e18f36baf23f6f30f082a080ee43242929c108fad142782",
+          "label": "~Node",
+          "kind": "unknown",
+          "detail": "void ~Node()",
+          "insertText": "~Node",
+          "replaceRange": {
+            "startOffset": 46,
+            "endOffset": 46
+          },
+          "filterText": "~Node"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:47",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: Node : Node::\nCOMPLETION: operator= : [#Node &#]operator=(<#const Node &#>)\nCOMPLETION: operator= : [#Node &#]operator=(<#Node &&#>)\nCOMPLETION: value : [#int#]value\nCOMPLETION: ~Node : [#void#]~Node()\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 47
+      }
+    },
+    "metrics": {
+      "totalMs": 14.306299999999965,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [
+      "value"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}
