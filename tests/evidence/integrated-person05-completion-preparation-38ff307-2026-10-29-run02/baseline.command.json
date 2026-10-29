@@ -1,0 +1,17 @@
+{
+  "id": "baseline",
+  "executable": "git",
+  "args": [
+    "-c",
+    "safe.directory=C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+    "-C",
+    "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+    "rev-parse",
+    "HEAD"
+  ],
+  "startedAt": "2026-10-29T15:37:22.798Z",
+  "endedAt": "2026-10-29T15:37:22.895Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}
