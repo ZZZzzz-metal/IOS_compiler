@@ -1,0 +1,2083 @@
+{
+  "request": {
+    "requestId": "bee1bdaa-6e39-4205-b122-4379346a3c5c",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "43f4c29a-55fb-40b8-a166-d881e071c855",
+      "sourceHash": "sha256:ed723c00e7c57278fc03878dbde665ef97f37829bb2af1ae298c392cc374c085",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nvoid f(){const std::string s; s.;}",
+          "contentHash": "sha256:ecb74b8ab548e42738deaaf7f279cf02a26815aab36bc7a6f1f087f3ab241923"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 50
+  },
+  "reply": {
+    "requestId": "bee1bdaa-6e39-4205-b122-4379346a3c5c",
+    "documentVersion": 1,
+    "snapshotId": "43f4c29a-55fb-40b8-a166-d881e071c855",
+    "sourceHash": "sha256:ed723c00e7c57278fc03878dbde665ef97f37829bb2af1ae298c392cc374c085",
+    "sourcePath": "main.cpp",
+    "offset": 50,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:627e328135e4638236d04e744d12283f846aed20bbe4a50d983ef60442e2063d",
+        "label": "append",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type append(const _Tp &__t)",
+        "insertText": "append",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "append"
+      },
+      {
+        "id": "sha256:4bf8eb92d938d53d20d305b8b4bd6c1e0151a71606cf1a2674df39e25126f449",
+        "label": "append",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type append(const _Tp &__t, size_type __pos[, size_type __n = npos])",
+        "insertText": "append",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "append"
+      },
+      {
+        "id": "sha256:344b74d7f5cb906ff61c0c930c180d3a76c6f96af9d8515b72b260f7bdaf757c",
+        "label": "append",
+        "kind": "unknown",
+        "detail": "typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type append(_InputIterator __first, _InputIterator __last)",
+        "insertText": "append",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "append"
+      },
+      {
+        "id": "sha256:795b2363b097dc9d16e3c8ce9b3ea2618ef5edc00250192b9483e0bce0d6b46d",
+        "label": "append",
+        "kind": "unknown",
+        "detail": "typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type append(_ForwardIterator __first, _ForwardIterator __last)",
+        "insertText": "append",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "append"
+      },
+      {
+        "id": "sha256:32f0026c5f37bca1400cce83d1a118550f7387f436936300517078668b9d4d48",
+        "label": "assign",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type assign(const _Tp &__t)",
+        "insertText": "assign",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "assign"
+      },
+      {
+        "id": "sha256:fcda89f495824b54b4beab08d5707d2997bfc872dd2bc068c3d72b36d169350e",
+        "label": "assign",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type assign(const _Tp &__t, size_type __pos[, size_type __n = npos])",
+        "insertText": "assign",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "assign"
+      },
+      {
+        "id": "sha256:7cad986551e90acaae0febf27bc5755169155c6c761fd48308289c42436e0e3c",
+        "label": "assign",
+        "kind": "unknown",
+        "detail": "typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type assign(_InputIterator __first, _InputIterator __last)",
+        "insertText": "assign",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "assign"
+      },
+      {
+        "id": "sha256:d7a119939d1ee6db7ad5fb5ebc20a91023f4e902b669c38461257edf5e4cbbf9",
+        "label": "assign",
+        "kind": "unknown",
+        "detail": "typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type assign(_ForwardIterator __first, _ForwardIterator __last)",
+        "insertText": "assign",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "assign"
+      },
+      {
+        "id": "sha256:acdc08cb79a2a2089dbb85d656fc094d155e81db987fe393b9697979cecc6f9a",
+        "label": "at",
+        "kind": "unknown",
+        "detail": "const_reference at(size_type __n) const",
+        "insertText": "at",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "at"
+      },
+      {
+        "id": "sha256:c7c6301e634804b875bdd7d5a1089e2eb9497f6a0be2a8fd2899e83e367f9bd2",
+        "label": "back",
+        "kind": "unknown",
+        "detail": "const_reference back() const",
+        "insertText": "back",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "back"
+      },
+      {
+        "id": "sha256:91887c8995804338340879e44ac7796dae87356416d25f5f28e82f976dabc9a7",
+        "label": "basic_string",
+        "kind": "unknown",
+        "detail": "basic_string::",
+        "insertText": "basic_string",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "basic_string"
+      },
+      {
+        "id": "sha256:0ead431599e6d63e3aa3ac4a942336fc32d25715e47af1666ae2416ae704058e",
+        "label": "begin",
+        "kind": "unknown",
+        "detail": "const_iterator begin() const",
+        "insertText": "begin",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "begin"
+      },
+      {
+        "id": "sha256:1f6c8ae7462de5f7fb22d74a15ad3d7fa0b3216697b1025841127797856cc35d",
+        "label": "c_str",
+        "kind": "unknown",
+        "detail": "const value_type * c_str() const",
+        "insertText": "c_str",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "c_str"
+      },
+      {
+        "id": "sha256:4ccf95149320e6d0a1fb01e76e91cc81e14e509c54bed7c86efd7e1d8e5e4bdb",
+        "label": "capacity",
+        "kind": "unknown",
+        "detail": "size_type capacity() const",
+        "insertText": "capacity",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "capacity"
+      },
+      {
+        "id": "sha256:7051e54666a290abb927f3e3cb3969cf950b246e78b82d4dc6b545b3c6923b53",
+        "label": "cbegin",
+        "kind": "unknown",
+        "detail": "const_iterator cbegin() const",
+        "insertText": "cbegin",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "cbegin"
+      },
+      {
+        "id": "sha256:48e865f4208a68f0440f7429b94dea0a8a7a1dace37567ff3590820eb8289b54",
+        "label": "cend",
+        "kind": "unknown",
+        "detail": "const_iterator cend() const",
+        "insertText": "cend",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "cend"
+      },
+      {
+        "id": "sha256:78dd594a1c0684acdcb7d7b2e6e420658c6cef1373b6a06130921c6651b08852",
+        "label": "compare",
+        "kind": "unknown",
+        "detail": "int compare(const basic_string<char> &__str) const",
+        "insertText": "compare",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "compare"
+      },
+      {
+        "id": "sha256:7bdcfcf09ad71a46a071a13796d70b506f93e47cec4905512e462b7a292355ba",
+        "label": "compare",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type compare(const _Tp &__t) const",
+        "insertText": "compare",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "compare"
+      },
+      {
+        "id": "sha256:49211dd0100486201838c377fa4fe57017222028d2a67b8cad0411915bce598b",
+        "label": "compare",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type compare(size_type __pos1, size_type __n1, const _Tp &__t) const",
+        "insertText": "compare",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "compare"
+      },
+      {
+        "id": "sha256:521dfb334742001ec7165dfa860be35f334df85e47ec1a2f58c4441dd20fa6b5",
+        "label": "compare",
+        "kind": "unknown",
+        "detail": "int compare(size_type __pos1, size_type __n1, const basic_string<char> &__str) const",
+        "insertText": "compare",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "compare"
+      },
+      {
+        "id": "sha256:8331d9e49490c215e73a8c1bc2981bd644dc3cc89cf190cbde364af1da12f932",
+        "label": "compare",
+        "kind": "unknown",
+        "detail": "int compare(size_type __pos1, size_type __n1, const basic_string<char> &__str, size_type __pos2[, size_type __n2 = npos]) const",
+        "insertText": "compare",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "compare"
+      },
+      {
+        "id": "sha256:61eab7ab9791f05de5cbe2b3428ad28743f64a95d823e29a01ef46a2660902f6",
+        "label": "compare",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type compare(size_type __pos1, size_type __n1, const _Tp &__t, size_type __pos2[, size_type __n2 = npos]) const",
+        "insertText": "compare",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "compare"
+      },
+      {
+        "id": "sha256:25a476fcc5ca6e674cfdade4f25e06b8224fe5d9ce8c972211b326d3a7e70ee3",
+        "label": "compare",
+        "kind": "unknown",
+        "detail": "int compare(const value_type *__s) const",
+        "insertText": "compare",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "compare"
+      },
+      {
+        "id": "sha256:5d1d920915db613bcef660fe2b55637c2d2808f1437d88d79dc39de348d0eec8",
+        "label": "compare",
+        "kind": "unknown",
+        "detail": "int compare(size_type __pos1, size_type __n1, const value_type *__s) const",
+        "insertText": "compare",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "compare"
+      },
+      {
+        "id": "sha256:1095fd8f9f7f48369337349db531d0fea7733e9030a78ceea3335f5c28b25e8d",
+        "label": "compare",
+        "kind": "unknown",
+        "detail": "int compare(size_type __pos1, size_type __n1, const value_type *__s, size_type __n2) const",
+        "insertText": "compare",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "compare"
+      },
+      {
+        "id": "sha256:465c5586f68e8a58be7a7b23e85a85b21d2b398d78cbbe58a67930802e644d67",
+        "label": "copy",
+        "kind": "unknown",
+        "detail": "size_type copy(value_type *__s, size_type __n[, size_type __pos = 0]) const",
+        "insertText": "copy",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "copy"
+      },
+      {
+        "id": "sha256:417b31198cb6c5781a5679c60a4058b07c6068e257753260b2ca30af7b1c6408",
+        "label": "crbegin",
+        "kind": "unknown",
+        "detail": "const_reverse_iterator crbegin() const",
+        "insertText": "crbegin",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "crbegin"
+      },
+      {
+        "id": "sha256:b6e8b6a379a2d5f84be431401fb8be573f50442fdfc3f7d1daf379fcd4486963",
+        "label": "crend",
+        "kind": "unknown",
+        "detail": "const_reverse_iterator crend() const",
+        "insertText": "crend",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "crend"
+      },
+      {
+        "id": "sha256:e0b3d5687631be6c43d8abfc847cf3e52f3c9e3525f1214004a8a68ae4e95c91",
+        "label": "data",
+        "kind": "unknown",
+        "detail": "const value_type * data() const",
+        "insertText": "data",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "data"
+      },
+      {
+        "id": "sha256:3aadf493a3235b2cf54aedd6033f7e1943480bcb8e91950b981de861066b510c",
+        "label": "empty",
+        "kind": "unknown",
+        "detail": "bool empty() const",
+        "insertText": "empty",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "empty"
+      },
+      {
+        "id": "sha256:92691bece48c3e919c793bc9a1892b96cbbe43e2aa752217113aaac5a79f7ff2",
+        "label": "end",
+        "kind": "unknown",
+        "detail": "const_iterator end() const",
+        "insertText": "end",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "end"
+      },
+      {
+        "id": "sha256:fc873c9226340926721d5f3f86fcfd53a5f90acb3085c3861ed2d428463853cf",
+        "label": "find",
+        "kind": "unknown",
+        "detail": "size_type find(const basic_string<char> &__str[, size_type __pos = 0]) const",
+        "insertText": "find",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find"
+      },
+      {
+        "id": "sha256:1e0e9c019436518471ab086a6e6e729bebaa3620f48d7639d65f92be92678485",
+        "label": "find",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find(const _Tp &__t[, size_type __pos = 0]) const",
+        "insertText": "find",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find"
+      },
+      {
+        "id": "sha256:e85e058f07bd48daf1602937a0a18cf71fc31ab2ce3c0f65d9c1e58d0c4c486e",
+        "label": "find",
+        "kind": "unknown",
+        "detail": "size_type find(const value_type *__s, size_type __pos, size_type __n) const",
+        "insertText": "find",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find"
+      },
+      {
+        "id": "sha256:f86f906f0800f1a427e75f78ef8bda78cd90d313ffcf962d4daa985752b0ba6b",
+        "label": "find",
+        "kind": "unknown",
+        "detail": "size_type find(const value_type *__s[, size_type __pos = 0]) const",
+        "insertText": "find",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find"
+      },
+      {
+        "id": "sha256:f9b26d39b91e5e9688c050d5e9880545d6dea18522fd24f3ab2862509dad56ea",
+        "label": "find",
+        "kind": "unknown",
+        "detail": "size_type find(value_type __c[, size_type __pos = 0]) const",
+        "insertText": "find",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find"
+      },
+      {
+        "id": "sha256:13ccc7dfffa41f8d56a0f41182afb311eb6ed44a456c1175f5591ba5ec30e7db",
+        "label": "find_first_not_of",
+        "kind": "unknown",
+        "detail": "size_type find_first_not_of(const basic_string<char> &__str[, size_type __pos = 0]) const",
+        "insertText": "find_first_not_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_first_not_of"
+      },
+      {
+        "id": "sha256:8a221e45351b1678fe92b1cb813a0da4ecabfd846748344af728046a5c242622",
+        "label": "find_first_not_of",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_first_not_of(const _Tp &__t[, size_type __pos = 0]) const",
+        "insertText": "find_first_not_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_first_not_of"
+      },
+      {
+        "id": "sha256:5658d4100c5f48bbb1b9a2a16c71604912e903e08aceb8b85937424ea3590f6c",
+        "label": "find_first_not_of",
+        "kind": "unknown",
+        "detail": "size_type find_first_not_of(const value_type *__s, size_type __pos, size_type __n) const",
+        "insertText": "find_first_not_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_first_not_of"
+      },
+      {
+        "id": "sha256:a7cbd3e3c2460dd1c17b02ca5a82d9827714e807e7e364d6b5cd471026e8fef7",
+        "label": "find_first_not_of",
+        "kind": "unknown",
+        "detail": "size_type find_first_not_of(const value_type *__s[, size_type __pos = 0]) const",
+        "insertText": "find_first_not_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_first_not_of"
+      },
+      {
+        "id": "sha256:dbaa382658468aa50cede762bffd2c912fca477db0826971ca53dc8e4781f014",
+        "label": "find_first_not_of",
+        "kind": "unknown",
+        "detail": "size_type find_first_not_of(value_type __c[, size_type __pos = 0]) const",
+        "insertText": "find_first_not_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_first_not_of"
+      },
+      {
+        "id": "sha256:6e3745699ddc320da92824abe146fdfa72ef45c60eb6969be35517d65e54f085",
+        "label": "find_first_of",
+        "kind": "unknown",
+        "detail": "size_type find_first_of(const basic_string<char> &__str[, size_type __pos = 0]) const",
+        "insertText": "find_first_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_first_of"
+      },
+      {
+        "id": "sha256:8ae1406b58c02286fc28b50236b1e8ffad355406376a750000b077cf75102fd1",
+        "label": "find_first_of",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_first_of(const _Tp &__t[, size_type __pos = 0]) const",
+        "insertText": "find_first_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_first_of"
+      },
+      {
+        "id": "sha256:65f303d67199c825b8209060230e75062b9122ea7acbceb4cb383fc80170a558",
+        "label": "find_first_of",
+        "kind": "unknown",
+        "detail": "size_type find_first_of(const value_type *__s, size_type __pos, size_type __n) const",
+        "insertText": "find_first_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_first_of"
+      },
+      {
+        "id": "sha256:c4b775728058e14af371878747fc077dd55c7745f3c4adeb9c96e7e5175d69ab",
+        "label": "find_first_of",
+        "kind": "unknown",
+        "detail": "size_type find_first_of(const value_type *__s[, size_type __pos = 0]) const",
+        "insertText": "find_first_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_first_of"
+      },
+      {
+        "id": "sha256:8b660b913cfd229fd7cbf4cade4a8347838d0736f65ceb522bc43ea7cd61c37b",
+        "label": "find_first_of",
+        "kind": "unknown",
+        "detail": "size_type find_first_of(value_type __c[, size_type __pos = 0]) const",
+        "insertText": "find_first_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_first_of"
+      },
+      {
+        "id": "sha256:01a9338557b81e6d8f54c00f776d58c8506e2de365e0712a4c00d6eaac84811a",
+        "label": "find_last_not_of",
+        "kind": "unknown",
+        "detail": "size_type find_last_not_of(const basic_string<char> &__str[, size_type __pos = npos]) const",
+        "insertText": "find_last_not_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_last_not_of"
+      },
+      {
+        "id": "sha256:83ba1c59360654533b9d9187e4a381f49f027e774fa8d7daf95c50c5f759c1e4",
+        "label": "find_last_not_of",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_last_not_of(const _Tp &__t[, size_type __pos = npos]) const",
+        "insertText": "find_last_not_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_last_not_of"
+      },
+      {
+        "id": "sha256:1e4dc0ac6aee7bc45083abe473ef3d2f2b8b6c4973b173bdd9838a78d3a69633",
+        "label": "find_last_not_of",
+        "kind": "unknown",
+        "detail": "size_type find_last_not_of(const value_type *__s, size_type __pos, size_type __n) const",
+        "insertText": "find_last_not_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_last_not_of"
+      },
+      {
+        "id": "sha256:074ad96f5133765ea73fa0130f981da650007c538c90679a16eb35618acfd40d",
+        "label": "find_last_not_of",
+        "kind": "unknown",
+        "detail": "size_type find_last_not_of(const value_type *__s[, size_type __pos = npos]) const",
+        "insertText": "find_last_not_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_last_not_of"
+      },
+      {
+        "id": "sha256:d5f470b7f7d8cec7f843a041dddd17f30e92a6fb9caf9c0ad45235c6423cee4e",
+        "label": "find_last_not_of",
+        "kind": "unknown",
+        "detail": "size_type find_last_not_of(value_type __c[, size_type __pos = npos]) const",
+        "insertText": "find_last_not_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_last_not_of"
+      },
+      {
+        "id": "sha256:c54ade0dac384ac08f9435800313f10372930fcf8f67df3989de74b790e5b627",
+        "label": "find_last_of",
+        "kind": "unknown",
+        "detail": "size_type find_last_of(const basic_string<char> &__str[, size_type __pos = npos]) const",
+        "insertText": "find_last_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_last_of"
+      },
+      {
+        "id": "sha256:d6bd75ef2f9d0631d0a49f5537e799eebc934cf46e7baf49fcce9c0705fad77a",
+        "label": "find_last_of",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_last_of(const _Tp &__t[, size_type __pos = npos]) const",
+        "insertText": "find_last_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_last_of"
+      },
+      {
+        "id": "sha256:a9e7d1ac5c033d16576010bd33fd290f431d906f4a8da5be004daa3f2e1ac738",
+        "label": "find_last_of",
+        "kind": "unknown",
+        "detail": "size_type find_last_of(const value_type *__s, size_type __pos, size_type __n) const",
+        "insertText": "find_last_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_last_of"
+      },
+      {
+        "id": "sha256:be01a6d5d89d8a9dc759f943242a118f714f05e71dfdda431bc09da87fd1ea25",
+        "label": "find_last_of",
+        "kind": "unknown",
+        "detail": "size_type find_last_of(const value_type *__s[, size_type __pos = npos]) const",
+        "insertText": "find_last_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_last_of"
+      },
+      {
+        "id": "sha256:135dac322236fab2ff2a6ab34ad329be3c7a29e37934339608a04f4bf3d11e51",
+        "label": "find_last_of",
+        "kind": "unknown",
+        "detail": "size_type find_last_of(value_type __c[, size_type __pos = npos]) const",
+        "insertText": "find_last_of",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "find_last_of"
+      },
+      {
+        "id": "sha256:308c2ea8f16c65d24f506a646041a4d135ea4e9c8d124bbb8ce1f435a1258581",
+        "label": "front",
+        "kind": "unknown",
+        "detail": "const_reference front() const",
+        "insertText": "front",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "front"
+      },
+      {
+        "id": "sha256:86dbfa7b49cfec275fc4f210f50d11552fc4b46e39feb88a3410e5e2b416634a",
+        "label": "get_allocator",
+        "kind": "unknown",
+        "detail": "allocator_type get_allocator() const",
+        "insertText": "get_allocator",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "get_allocator"
+      },
+      {
+        "id": "sha256:8e99c1bc7479af5344bca421cc2066eb7648e6d7e7a2763de19dbfb390bb177b",
+        "label": "insert",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type insert(size_type __pos1, const _Tp &__t)",
+        "insertText": "insert",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "insert"
+      },
+      {
+        "id": "sha256:f9a2e773a45d5d58833552d0e0c4afb6d9651339831fe28ec3d011114d5f7cee",
+        "label": "insert",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type insert(size_type __pos1, const _Tp &__t, size_type __pos2[, size_type __n = npos])",
+        "insertText": "insert",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "insert"
+      },
+      {
+        "id": "sha256:f30815492797041b8480c88b4e916b64be576ddbb141b4f48680c6bf5eed56bc",
+        "label": "insert",
+        "kind": "unknown",
+        "detail": "typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, iterator>::type insert(const_iterator __pos, _InputIterator __first, _InputIterator __last)",
+        "insertText": "insert",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "insert"
+      },
+      {
+        "id": "sha256:0cd96d514784185c956adbc8fe3e42c01bfc4c2d6d5239378137627ed5d004ff",
+        "label": "insert",
+        "kind": "unknown",
+        "detail": "typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, iterator>::type insert(const_iterator __pos, _ForwardIterator __first, _ForwardIterator __last)",
+        "insertText": "insert",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "insert"
+      },
+      {
+        "id": "sha256:02c3649a6ce03391b6a096ab98c9e44e6e91a60d64704484815fded3436df289",
+        "label": "length",
+        "kind": "unknown",
+        "detail": "size_type length() const",
+        "insertText": "length",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "length"
+      },
+      {
+        "id": "sha256:eec2ef87cac309698da79f8eb5817c93614e2e00f401b87921f202efdb0803a0",
+        "label": "max_size",
+        "kind": "unknown",
+        "detail": "size_type max_size() const",
+        "insertText": "max_size",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "max_size"
+      },
+      {
+        "id": "sha256:34e41dce2bb0960779bb761929b481c9b45341eccff312bdb21087adde16767b",
+        "label": "npos",
+        "kind": "unknown",
+        "detail": "const size_type npos",
+        "insertText": "npos",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "npos"
+      },
+      {
+        "id": "sha256:acd18c641e7170becfd53a9b325fbdb883e57d2600b19081da1b555a7ec99799",
+        "label": "operator basic_string_view",
+        "kind": "unknown",
+        "detail": "operator basic_string_view() const",
+        "insertText": "operator basic_string_view",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "operator basic_string_view"
+      },
+      {
+        "id": "sha256:40cf6e89b0cb7b5e7b5376f9e4e3dd5860ba5eae4cb71e4cabeeddc7b0af2640",
+        "label": "operator+=",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type operator+=(const _Tp &__t)",
+        "insertText": "operator+=",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "operator+="
+      },
+      {
+        "id": "sha256:30ea6184b42f11609249ed90a1a81db4ebe5b4ac1865dc55ea18ba9e0d0715cd",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "basic_string<char> & operator=(const _Tp &__t)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:1ad0900f281f9cbb3f55b86f2fe2be90924c11bfcfbee992820ac2680929ec0d",
+        "label": "operator[]",
+        "kind": "unknown",
+        "detail": "const_reference operator[](size_type __pos) const",
+        "insertText": "operator[]",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "operator[]"
+      },
+      {
+        "id": "sha256:0f422d39b2dee275892d92f25f8f6f2c08f918c666a468c33c56cd327453ab92",
+        "label": "rbegin",
+        "kind": "unknown",
+        "detail": "const_reverse_iterator rbegin() const",
+        "insertText": "rbegin",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "rbegin"
+      },
+      {
+        "id": "sha256:7b99c7792185afa7876d863050b3be385e1953e675d74d289b1581a26b99cd9f",
+        "label": "rend",
+        "kind": "unknown",
+        "detail": "const_reverse_iterator rend() const",
+        "insertText": "rend",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "rend"
+      },
+      {
+        "id": "sha256:9198c9aa031b6390de494c35fe7f256838eba9ccae66b8a0fe6e67c1ac341e07",
+        "label": "replace",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type replace(size_type __pos1, size_type __n1, const _Tp &__t)",
+        "insertText": "replace",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "replace"
+      },
+      {
+        "id": "sha256:677bb614f19ad619b2697267a7c130411bd47a9bd4447c1c8d21039eab389b3d",
+        "label": "replace",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type replace(size_type __pos1, size_type __n1, const _Tp &__t, size_type __pos2[, size_type __n2 = npos])",
+        "insertText": "replace",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "replace"
+      },
+      {
+        "id": "sha256:8877959d496931166d688dfc82462c9dd0a4e5bf44fee81e956ddb06f73ba2da",
+        "label": "replace",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type replace(const_iterator __i1, const_iterator __i2, const _Tp &__t)",
+        "insertText": "replace",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "replace"
+      },
+      {
+        "id": "sha256:7f16bab78ea037468d54ae9fd1bb217718fd4d8665c87043579ab7950fb10503",
+        "label": "replace",
+        "kind": "unknown",
+        "detail": "typename enable_if<__is_input_iterator<_InputIterator>::value, basic_string<char> &>::type replace(const_iterator __i1, const_iterator __i2, _InputIterator __j1, _InputIterator __j2)",
+        "insertText": "replace",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "replace"
+      },
+      {
+        "id": "sha256:5f067de72662cbee7bdfe41b4699f0840ed40db99fdf14da7b794a38d81da61d",
+        "label": "rfind",
+        "kind": "unknown",
+        "detail": "size_type rfind(const basic_string<char> &__str[, size_type __pos = npos]) const",
+        "insertText": "rfind",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "rfind"
+      },
+      {
+        "id": "sha256:28b94cdd0a34478cb032d2798e24aeff66418e310eeea60ab58bdb8c822a7f5a",
+        "label": "rfind",
+        "kind": "unknown",
+        "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type rfind(const _Tp &__t[, size_type __pos = npos]) const",
+        "insertText": "rfind",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "rfind"
+      },
+      {
+        "id": "sha256:87722284ed98f9ff0c1b43e284ef23ed9b503f34c5a2fd918a0df796eb25137b",
+        "label": "rfind",
+        "kind": "unknown",
+        "detail": "size_type rfind(const value_type *__s, size_type __pos, size_type __n) const",
+        "insertText": "rfind",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "rfind"
+      },
+      {
+        "id": "sha256:a30929e853161fb162816ef4d9a92082bc98633e1ca1e88a55d911038f53fe73",
+        "label": "rfind",
+        "kind": "unknown",
+        "detail": "size_type rfind(const value_type *__s[, size_type __pos = npos]) const",
+        "insertText": "rfind",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "rfind"
+      },
+      {
+        "id": "sha256:909bbf90649adeb8aa823cd5a8c768b2ea485127edc7ab42d9cd20be0bdd6532",
+        "label": "rfind",
+        "kind": "unknown",
+        "detail": "size_type rfind(value_type __c[, size_type __pos = npos]) const",
+        "insertText": "rfind",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "rfind"
+      },
+      {
+        "id": "sha256:4c2fada9e87fbe6b67e0b532fbaca05aecdeddf44756055702452f11d0710331",
+        "label": "size",
+        "kind": "unknown",
+        "detail": "size_type size() const",
+        "insertText": "size",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "size"
+      },
+      {
+        "id": "sha256:353d706ace4e5990785e43b959b6f59cb0dffc5cdd7e06f6753da303e6a5c120",
+        "label": "substr",
+        "kind": "unknown",
+        "detail": "basic_string<char> substr([size_type __pos = 0[, size_type __n = npos]]) const",
+        "insertText": "substr",
+        "replaceRange": {
+          "startOffset": 50,
+          "endOffset": 50
+        },
+        "filterText": "substr"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 119.73120000000017,
+  "native": {
+    "result": {
+      "requestId": "bee1bdaa-6e39-4205-b122-4379346a3c5c",
+      "documentVersion": 1,
+      "snapshotId": "43f4c29a-55fb-40b8-a166-d881e071c855",
+      "sourceHash": "sha256:ed723c00e7c57278fc03878dbde665ef97f37829bb2af1ae298c392cc374c085",
+      "sourcePath": "main.cpp",
+      "offset": 50,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:627e328135e4638236d04e744d12283f846aed20bbe4a50d983ef60442e2063d",
+          "label": "append",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type append(const _Tp &__t)",
+          "insertText": "append",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "append"
+        },
+        {
+          "id": "sha256:4bf8eb92d938d53d20d305b8b4bd6c1e0151a71606cf1a2674df39e25126f449",
+          "label": "append",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type append(const _Tp &__t, size_type __pos[, size_type __n = npos])",
+          "insertText": "append",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "append"
+        },
+        {
+          "id": "sha256:344b74d7f5cb906ff61c0c930c180d3a76c6f96af9d8515b72b260f7bdaf757c",
+          "label": "append",
+          "kind": "unknown",
+          "detail": "typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type append(_InputIterator __first, _InputIterator __last)",
+          "insertText": "append",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "append"
+        },
+        {
+          "id": "sha256:795b2363b097dc9d16e3c8ce9b3ea2618ef5edc00250192b9483e0bce0d6b46d",
+          "label": "append",
+          "kind": "unknown",
+          "detail": "typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type append(_ForwardIterator __first, _ForwardIterator __last)",
+          "insertText": "append",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "append"
+        },
+        {
+          "id": "sha256:32f0026c5f37bca1400cce83d1a118550f7387f436936300517078668b9d4d48",
+          "label": "assign",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type assign(const _Tp &__t)",
+          "insertText": "assign",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "assign"
+        },
+        {
+          "id": "sha256:fcda89f495824b54b4beab08d5707d2997bfc872dd2bc068c3d72b36d169350e",
+          "label": "assign",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type assign(const _Tp &__t, size_type __pos[, size_type __n = npos])",
+          "insertText": "assign",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "assign"
+        },
+        {
+          "id": "sha256:7cad986551e90acaae0febf27bc5755169155c6c761fd48308289c42436e0e3c",
+          "label": "assign",
+          "kind": "unknown",
+          "detail": "typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type assign(_InputIterator __first, _InputIterator __last)",
+          "insertText": "assign",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "assign"
+        },
+        {
+          "id": "sha256:d7a119939d1ee6db7ad5fb5ebc20a91023f4e902b669c38461257edf5e4cbbf9",
+          "label": "assign",
+          "kind": "unknown",
+          "detail": "typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type assign(_ForwardIterator __first, _ForwardIterator __last)",
+          "insertText": "assign",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "assign"
+        },
+        {
+          "id": "sha256:acdc08cb79a2a2089dbb85d656fc094d155e81db987fe393b9697979cecc6f9a",
+          "label": "at",
+          "kind": "unknown",
+          "detail": "const_reference at(size_type __n) const",
+          "insertText": "at",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "at"
+        },
+        {
+          "id": "sha256:c7c6301e634804b875bdd7d5a1089e2eb9497f6a0be2a8fd2899e83e367f9bd2",
+          "label": "back",
+          "kind": "unknown",
+          "detail": "const_reference back() const",
+          "insertText": "back",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "back"
+        },
+        {
+          "id": "sha256:91887c8995804338340879e44ac7796dae87356416d25f5f28e82f976dabc9a7",
+          "label": "basic_string",
+          "kind": "unknown",
+          "detail": "basic_string::",
+          "insertText": "basic_string",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "basic_string"
+        },
+        {
+          "id": "sha256:0ead431599e6d63e3aa3ac4a942336fc32d25715e47af1666ae2416ae704058e",
+          "label": "begin",
+          "kind": "unknown",
+          "detail": "const_iterator begin() const",
+          "insertText": "begin",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "begin"
+        },
+        {
+          "id": "sha256:1f6c8ae7462de5f7fb22d74a15ad3d7fa0b3216697b1025841127797856cc35d",
+          "label": "c_str",
+          "kind": "unknown",
+          "detail": "const value_type * c_str() const",
+          "insertText": "c_str",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "c_str"
+        },
+        {
+          "id": "sha256:4ccf95149320e6d0a1fb01e76e91cc81e14e509c54bed7c86efd7e1d8e5e4bdb",
+          "label": "capacity",
+          "kind": "unknown",
+          "detail": "size_type capacity() const",
+          "insertText": "capacity",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "capacity"
+        },
+        {
+          "id": "sha256:7051e54666a290abb927f3e3cb3969cf950b246e78b82d4dc6b545b3c6923b53",
+          "label": "cbegin",
+          "kind": "unknown",
+          "detail": "const_iterator cbegin() const",
+          "insertText": "cbegin",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "cbegin"
+        },
+        {
+          "id": "sha256:48e865f4208a68f0440f7429b94dea0a8a7a1dace37567ff3590820eb8289b54",
+          "label": "cend",
+          "kind": "unknown",
+          "detail": "const_iterator cend() const",
+          "insertText": "cend",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "cend"
+        },
+        {
+          "id": "sha256:78dd594a1c0684acdcb7d7b2e6e420658c6cef1373b6a06130921c6651b08852",
+          "label": "compare",
+          "kind": "unknown",
+          "detail": "int compare(const basic_string<char> &__str) const",
+          "insertText": "compare",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "compare"
+        },
+        {
+          "id": "sha256:7bdcfcf09ad71a46a071a13796d70b506f93e47cec4905512e462b7a292355ba",
+          "label": "compare",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type compare(const _Tp &__t) const",
+          "insertText": "compare",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "compare"
+        },
+        {
+          "id": "sha256:49211dd0100486201838c377fa4fe57017222028d2a67b8cad0411915bce598b",
+          "label": "compare",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type compare(size_type __pos1, size_type __n1, const _Tp &__t) const",
+          "insertText": "compare",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "compare"
+        },
+        {
+          "id": "sha256:521dfb334742001ec7165dfa860be35f334df85e47ec1a2f58c4441dd20fa6b5",
+          "label": "compare",
+          "kind": "unknown",
+          "detail": "int compare(size_type __pos1, size_type __n1, const basic_string<char> &__str) const",
+          "insertText": "compare",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "compare"
+        },
+        {
+          "id": "sha256:8331d9e49490c215e73a8c1bc2981bd644dc3cc89cf190cbde364af1da12f932",
+          "label": "compare",
+          "kind": "unknown",
+          "detail": "int compare(size_type __pos1, size_type __n1, const basic_string<char> &__str, size_type __pos2[, size_type __n2 = npos]) const",
+          "insertText": "compare",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "compare"
+        },
+        {
+          "id": "sha256:61eab7ab9791f05de5cbe2b3428ad28743f64a95d823e29a01ef46a2660902f6",
+          "label": "compare",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type compare(size_type __pos1, size_type __n1, const _Tp &__t, size_type __pos2[, size_type __n2 = npos]) const",
+          "insertText": "compare",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "compare"
+        },
+        {
+          "id": "sha256:25a476fcc5ca6e674cfdade4f25e06b8224fe5d9ce8c972211b326d3a7e70ee3",
+          "label": "compare",
+          "kind": "unknown",
+          "detail": "int compare(const value_type *__s) const",
+          "insertText": "compare",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "compare"
+        },
+        {
+          "id": "sha256:5d1d920915db613bcef660fe2b55637c2d2808f1437d88d79dc39de348d0eec8",
+          "label": "compare",
+          "kind": "unknown",
+          "detail": "int compare(size_type __pos1, size_type __n1, const value_type *__s) const",
+          "insertText": "compare",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "compare"
+        },
+        {
+          "id": "sha256:1095fd8f9f7f48369337349db531d0fea7733e9030a78ceea3335f5c28b25e8d",
+          "label": "compare",
+          "kind": "unknown",
+          "detail": "int compare(size_type __pos1, size_type __n1, const value_type *__s, size_type __n2) const",
+          "insertText": "compare",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "compare"
+        },
+        {
+          "id": "sha256:465c5586f68e8a58be7a7b23e85a85b21d2b398d78cbbe58a67930802e644d67",
+          "label": "copy",
+          "kind": "unknown",
+          "detail": "size_type copy(value_type *__s, size_type __n[, size_type __pos = 0]) const",
+          "insertText": "copy",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "copy"
+        },
+        {
+          "id": "sha256:417b31198cb6c5781a5679c60a4058b07c6068e257753260b2ca30af7b1c6408",
+          "label": "crbegin",
+          "kind": "unknown",
+          "detail": "const_reverse_iterator crbegin() const",
+          "insertText": "crbegin",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "crbegin"
+        },
+        {
+          "id": "sha256:b6e8b6a379a2d5f84be431401fb8be573f50442fdfc3f7d1daf379fcd4486963",
+          "label": "crend",
+          "kind": "unknown",
+          "detail": "const_reverse_iterator crend() const",
+          "insertText": "crend",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "crend"
+        },
+        {
+          "id": "sha256:e0b3d5687631be6c43d8abfc847cf3e52f3c9e3525f1214004a8a68ae4e95c91",
+          "label": "data",
+          "kind": "unknown",
+          "detail": "const value_type * data() const",
+          "insertText": "data",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "data"
+        },
+        {
+          "id": "sha256:3aadf493a3235b2cf54aedd6033f7e1943480bcb8e91950b981de861066b510c",
+          "label": "empty",
+          "kind": "unknown",
+          "detail": "bool empty() const",
+          "insertText": "empty",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "empty"
+        },
+        {
+          "id": "sha256:92691bece48c3e919c793bc9a1892b96cbbe43e2aa752217113aaac5a79f7ff2",
+          "label": "end",
+          "kind": "unknown",
+          "detail": "const_iterator end() const",
+          "insertText": "end",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "end"
+        },
+        {
+          "id": "sha256:fc873c9226340926721d5f3f86fcfd53a5f90acb3085c3861ed2d428463853cf",
+          "label": "find",
+          "kind": "unknown",
+          "detail": "size_type find(const basic_string<char> &__str[, size_type __pos = 0]) const",
+          "insertText": "find",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find"
+        },
+        {
+          "id": "sha256:1e0e9c019436518471ab086a6e6e729bebaa3620f48d7639d65f92be92678485",
+          "label": "find",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find(const _Tp &__t[, size_type __pos = 0]) const",
+          "insertText": "find",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find"
+        },
+        {
+          "id": "sha256:e85e058f07bd48daf1602937a0a18cf71fc31ab2ce3c0f65d9c1e58d0c4c486e",
+          "label": "find",
+          "kind": "unknown",
+          "detail": "size_type find(const value_type *__s, size_type __pos, size_type __n) const",
+          "insertText": "find",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find"
+        },
+        {
+          "id": "sha256:f86f906f0800f1a427e75f78ef8bda78cd90d313ffcf962d4daa985752b0ba6b",
+          "label": "find",
+          "kind": "unknown",
+          "detail": "size_type find(const value_type *__s[, size_type __pos = 0]) const",
+          "insertText": "find",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find"
+        },
+        {
+          "id": "sha256:f9b26d39b91e5e9688c050d5e9880545d6dea18522fd24f3ab2862509dad56ea",
+          "label": "find",
+          "kind": "unknown",
+          "detail": "size_type find(value_type __c[, size_type __pos = 0]) const",
+          "insertText": "find",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find"
+        },
+        {
+          "id": "sha256:13ccc7dfffa41f8d56a0f41182afb311eb6ed44a456c1175f5591ba5ec30e7db",
+          "label": "find_first_not_of",
+          "kind": "unknown",
+          "detail": "size_type find_first_not_of(const basic_string<char> &__str[, size_type __pos = 0]) const",
+          "insertText": "find_first_not_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_first_not_of"
+        },
+        {
+          "id": "sha256:8a221e45351b1678fe92b1cb813a0da4ecabfd846748344af728046a5c242622",
+          "label": "find_first_not_of",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_first_not_of(const _Tp &__t[, size_type __pos = 0]) const",
+          "insertText": "find_first_not_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_first_not_of"
+        },
+        {
+          "id": "sha256:5658d4100c5f48bbb1b9a2a16c71604912e903e08aceb8b85937424ea3590f6c",
+          "label": "find_first_not_of",
+          "kind": "unknown",
+          "detail": "size_type find_first_not_of(const value_type *__s, size_type __pos, size_type __n) const",
+          "insertText": "find_first_not_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_first_not_of"
+        },
+        {
+          "id": "sha256:a7cbd3e3c2460dd1c17b02ca5a82d9827714e807e7e364d6b5cd471026e8fef7",
+          "label": "find_first_not_of",
+          "kind": "unknown",
+          "detail": "size_type find_first_not_of(const value_type *__s[, size_type __pos = 0]) const",
+          "insertText": "find_first_not_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_first_not_of"
+        },
+        {
+          "id": "sha256:dbaa382658468aa50cede762bffd2c912fca477db0826971ca53dc8e4781f014",
+          "label": "find_first_not_of",
+          "kind": "unknown",
+          "detail": "size_type find_first_not_of(value_type __c[, size_type __pos = 0]) const",
+          "insertText": "find_first_not_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_first_not_of"
+        },
+        {
+          "id": "sha256:6e3745699ddc320da92824abe146fdfa72ef45c60eb6969be35517d65e54f085",
+          "label": "find_first_of",
+          "kind": "unknown",
+          "detail": "size_type find_first_of(const basic_string<char> &__str[, size_type __pos = 0]) const",
+          "insertText": "find_first_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_first_of"
+        },
+        {
+          "id": "sha256:8ae1406b58c02286fc28b50236b1e8ffad355406376a750000b077cf75102fd1",
+          "label": "find_first_of",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_first_of(const _Tp &__t[, size_type __pos = 0]) const",
+          "insertText": "find_first_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_first_of"
+        },
+        {
+          "id": "sha256:65f303d67199c825b8209060230e75062b9122ea7acbceb4cb383fc80170a558",
+          "label": "find_first_of",
+          "kind": "unknown",
+          "detail": "size_type find_first_of(const value_type *__s, size_type __pos, size_type __n) const",
+          "insertText": "find_first_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_first_of"
+        },
+        {
+          "id": "sha256:c4b775728058e14af371878747fc077dd55c7745f3c4adeb9c96e7e5175d69ab",
+          "label": "find_first_of",
+          "kind": "unknown",
+          "detail": "size_type find_first_of(const value_type *__s[, size_type __pos = 0]) const",
+          "insertText": "find_first_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_first_of"
+        },
+        {
+          "id": "sha256:8b660b913cfd229fd7cbf4cade4a8347838d0736f65ceb522bc43ea7cd61c37b",
+          "label": "find_first_of",
+          "kind": "unknown",
+          "detail": "size_type find_first_of(value_type __c[, size_type __pos = 0]) const",
+          "insertText": "find_first_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_first_of"
+        },
+        {
+          "id": "sha256:01a9338557b81e6d8f54c00f776d58c8506e2de365e0712a4c00d6eaac84811a",
+          "label": "find_last_not_of",
+          "kind": "unknown",
+          "detail": "size_type find_last_not_of(const basic_string<char> &__str[, size_type __pos = npos]) const",
+          "insertText": "find_last_not_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_last_not_of"
+        },
+        {
+          "id": "sha256:83ba1c59360654533b9d9187e4a381f49f027e774fa8d7daf95c50c5f759c1e4",
+          "label": "find_last_not_of",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_last_not_of(const _Tp &__t[, size_type __pos = npos]) const",
+          "insertText": "find_last_not_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_last_not_of"
+        },
+        {
+          "id": "sha256:1e4dc0ac6aee7bc45083abe473ef3d2f2b8b6c4973b173bdd9838a78d3a69633",
+          "label": "find_last_not_of",
+          "kind": "unknown",
+          "detail": "size_type find_last_not_of(const value_type *__s, size_type __pos, size_type __n) const",
+          "insertText": "find_last_not_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_last_not_of"
+        },
+        {
+          "id": "sha256:074ad96f5133765ea73fa0130f981da650007c538c90679a16eb35618acfd40d",
+          "label": "find_last_not_of",
+          "kind": "unknown",
+          "detail": "size_type find_last_not_of(const value_type *__s[, size_type __pos = npos]) const",
+          "insertText": "find_last_not_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_last_not_of"
+        },
+        {
+          "id": "sha256:d5f470b7f7d8cec7f843a041dddd17f30e92a6fb9caf9c0ad45235c6423cee4e",
+          "label": "find_last_not_of",
+          "kind": "unknown",
+          "detail": "size_type find_last_not_of(value_type __c[, size_type __pos = npos]) const",
+          "insertText": "find_last_not_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_last_not_of"
+        },
+        {
+          "id": "sha256:c54ade0dac384ac08f9435800313f10372930fcf8f67df3989de74b790e5b627",
+          "label": "find_last_of",
+          "kind": "unknown",
+          "detail": "size_type find_last_of(const basic_string<char> &__str[, size_type __pos = npos]) const",
+          "insertText": "find_last_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_last_of"
+        },
+        {
+          "id": "sha256:d6bd75ef2f9d0631d0a49f5537e799eebc934cf46e7baf49fcce9c0705fad77a",
+          "label": "find_last_of",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_last_of(const _Tp &__t[, size_type __pos = npos]) const",
+          "insertText": "find_last_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_last_of"
+        },
+        {
+          "id": "sha256:a9e7d1ac5c033d16576010bd33fd290f431d906f4a8da5be004daa3f2e1ac738",
+          "label": "find_last_of",
+          "kind": "unknown",
+          "detail": "size_type find_last_of(const value_type *__s, size_type __pos, size_type __n) const",
+          "insertText": "find_last_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_last_of"
+        },
+        {
+          "id": "sha256:be01a6d5d89d8a9dc759f943242a118f714f05e71dfdda431bc09da87fd1ea25",
+          "label": "find_last_of",
+          "kind": "unknown",
+          "detail": "size_type find_last_of(const value_type *__s[, size_type __pos = npos]) const",
+          "insertText": "find_last_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_last_of"
+        },
+        {
+          "id": "sha256:135dac322236fab2ff2a6ab34ad329be3c7a29e37934339608a04f4bf3d11e51",
+          "label": "find_last_of",
+          "kind": "unknown",
+          "detail": "size_type find_last_of(value_type __c[, size_type __pos = npos]) const",
+          "insertText": "find_last_of",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "find_last_of"
+        },
+        {
+          "id": "sha256:308c2ea8f16c65d24f506a646041a4d135ea4e9c8d124bbb8ce1f435a1258581",
+          "label": "front",
+          "kind": "unknown",
+          "detail": "const_reference front() const",
+          "insertText": "front",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "front"
+        },
+        {
+          "id": "sha256:86dbfa7b49cfec275fc4f210f50d11552fc4b46e39feb88a3410e5e2b416634a",
+          "label": "get_allocator",
+          "kind": "unknown",
+          "detail": "allocator_type get_allocator() const",
+          "insertText": "get_allocator",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "get_allocator"
+        },
+        {
+          "id": "sha256:8e99c1bc7479af5344bca421cc2066eb7648e6d7e7a2763de19dbfb390bb177b",
+          "label": "insert",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type insert(size_type __pos1, const _Tp &__t)",
+          "insertText": "insert",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "insert"
+        },
+        {
+          "id": "sha256:f9a2e773a45d5d58833552d0e0c4afb6d9651339831fe28ec3d011114d5f7cee",
+          "label": "insert",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type insert(size_type __pos1, const _Tp &__t, size_type __pos2[, size_type __n = npos])",
+          "insertText": "insert",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "insert"
+        },
+        {
+          "id": "sha256:f30815492797041b8480c88b4e916b64be576ddbb141b4f48680c6bf5eed56bc",
+          "label": "insert",
+          "kind": "unknown",
+          "detail": "typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, iterator>::type insert(const_iterator __pos, _InputIterator __first, _InputIterator __last)",
+          "insertText": "insert",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "insert"
+        },
+        {
+          "id": "sha256:0cd96d514784185c956adbc8fe3e42c01bfc4c2d6d5239378137627ed5d004ff",
+          "label": "insert",
+          "kind": "unknown",
+          "detail": "typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, iterator>::type insert(const_iterator __pos, _ForwardIterator __first, _ForwardIterator __last)",
+          "insertText": "insert",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "insert"
+        },
+        {
+          "id": "sha256:02c3649a6ce03391b6a096ab98c9e44e6e91a60d64704484815fded3436df289",
+          "label": "length",
+          "kind": "unknown",
+          "detail": "size_type length() const",
+          "insertText": "length",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "length"
+        },
+        {
+          "id": "sha256:eec2ef87cac309698da79f8eb5817c93614e2e00f401b87921f202efdb0803a0",
+          "label": "max_size",
+          "kind": "unknown",
+          "detail": "size_type max_size() const",
+          "insertText": "max_size",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "max_size"
+        },
+        {
+          "id": "sha256:34e41dce2bb0960779bb761929b481c9b45341eccff312bdb21087adde16767b",
+          "label": "npos",
+          "kind": "unknown",
+          "detail": "const size_type npos",
+          "insertText": "npos",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "npos"
+        },
+        {
+          "id": "sha256:acd18c641e7170becfd53a9b325fbdb883e57d2600b19081da1b555a7ec99799",
+          "label": "operator basic_string_view",
+          "kind": "unknown",
+          "detail": "operator basic_string_view() const",
+          "insertText": "operator basic_string_view",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "operator basic_string_view"
+        },
+        {
+          "id": "sha256:40cf6e89b0cb7b5e7b5376f9e4e3dd5860ba5eae4cb71e4cabeeddc7b0af2640",
+          "label": "operator+=",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type operator+=(const _Tp &__t)",
+          "insertText": "operator+=",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "operator+="
+        },
+        {
+          "id": "sha256:30ea6184b42f11609249ed90a1a81db4ebe5b4ac1865dc55ea18ba9e0d0715cd",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "basic_string<char> & operator=(const _Tp &__t)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:1ad0900f281f9cbb3f55b86f2fe2be90924c11bfcfbee992820ac2680929ec0d",
+          "label": "operator[]",
+          "kind": "unknown",
+          "detail": "const_reference operator[](size_type __pos) const",
+          "insertText": "operator[]",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "operator[]"
+        },
+        {
+          "id": "sha256:0f422d39b2dee275892d92f25f8f6f2c08f918c666a468c33c56cd327453ab92",
+          "label": "rbegin",
+          "kind": "unknown",
+          "detail": "const_reverse_iterator rbegin() const",
+          "insertText": "rbegin",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "rbegin"
+        },
+        {
+          "id": "sha256:7b99c7792185afa7876d863050b3be385e1953e675d74d289b1581a26b99cd9f",
+          "label": "rend",
+          "kind": "unknown",
+          "detail": "const_reverse_iterator rend() const",
+          "insertText": "rend",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "rend"
+        },
+        {
+          "id": "sha256:9198c9aa031b6390de494c35fe7f256838eba9ccae66b8a0fe6e67c1ac341e07",
+          "label": "replace",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type replace(size_type __pos1, size_type __n1, const _Tp &__t)",
+          "insertText": "replace",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "replace"
+        },
+        {
+          "id": "sha256:677bb614f19ad619b2697267a7c130411bd47a9bd4447c1c8d21039eab389b3d",
+          "label": "replace",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type replace(size_type __pos1, size_type __n1, const _Tp &__t, size_type __pos2[, size_type __n2 = npos])",
+          "insertText": "replace",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "replace"
+        },
+        {
+          "id": "sha256:8877959d496931166d688dfc82462c9dd0a4e5bf44fee81e956ddb06f73ba2da",
+          "label": "replace",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type replace(const_iterator __i1, const_iterator __i2, const _Tp &__t)",
+          "insertText": "replace",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "replace"
+        },
+        {
+          "id": "sha256:7f16bab78ea037468d54ae9fd1bb217718fd4d8665c87043579ab7950fb10503",
+          "label": "replace",
+          "kind": "unknown",
+          "detail": "typename enable_if<__is_input_iterator<_InputIterator>::value, basic_string<char> &>::type replace(const_iterator __i1, const_iterator __i2, _InputIterator __j1, _InputIterator __j2)",
+          "insertText": "replace",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "replace"
+        },
+        {
+          "id": "sha256:5f067de72662cbee7bdfe41b4699f0840ed40db99fdf14da7b794a38d81da61d",
+          "label": "rfind",
+          "kind": "unknown",
+          "detail": "size_type rfind(const basic_string<char> &__str[, size_type __pos = npos]) const",
+          "insertText": "rfind",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "rfind"
+        },
+        {
+          "id": "sha256:28b94cdd0a34478cb032d2798e24aeff66418e310eeea60ab58bdb8c822a7f5a",
+          "label": "rfind",
+          "kind": "unknown",
+          "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type rfind(const _Tp &__t[, size_type __pos = npos]) const",
+          "insertText": "rfind",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "rfind"
+        },
+        {
+          "id": "sha256:87722284ed98f9ff0c1b43e284ef23ed9b503f34c5a2fd918a0df796eb25137b",
+          "label": "rfind",
+          "kind": "unknown",
+          "detail": "size_type rfind(const value_type *__s, size_type __pos, size_type __n) const",
+          "insertText": "rfind",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "rfind"
+        },
+        {
+          "id": "sha256:a30929e853161fb162816ef4d9a92082bc98633e1ca1e88a55d911038f53fe73",
+          "label": "rfind",
+          "kind": "unknown",
+          "detail": "size_type rfind(const value_type *__s[, size_type __pos = npos]) const",
+          "insertText": "rfind",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "rfind"
+        },
+        {
+          "id": "sha256:909bbf90649adeb8aa823cd5a8c768b2ea485127edc7ab42d9cd20be0bdd6532",
+          "label": "rfind",
+          "kind": "unknown",
+          "detail": "size_type rfind(value_type __c[, size_type __pos = npos]) const",
+          "insertText": "rfind",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "rfind"
+        },
+        {
+          "id": "sha256:4c2fada9e87fbe6b67e0b532fbaca05aecdeddf44756055702452f11d0710331",
+          "label": "size",
+          "kind": "unknown",
+          "detail": "size_type size() const",
+          "insertText": "size",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "size"
+        },
+        {
+          "id": "sha256:353d706ace4e5990785e43b959b6f59cb0dffc5cdd7e06f6753da303e6a5c120",
+          "label": "substr",
+          "kind": "unknown",
+          "detail": "basic_string<char> substr([size_type __pos = 0[, size_type __n = npos]]) const",
+          "insertText": "substr",
+          "replaceRange": {
+            "startOffset": 50,
+            "endOffset": 50
+          },
+          "filterText": "substr"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:2:33",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: append : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]append(<#const _Tp &__t#>)\nCOMPLETION: append : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]append(<#const _Tp &__t#>, <#size_type __pos#>{#, <#size_type __n = npos#>#})\nCOMPLETION: append : [#typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type#]append(<#_InputIterator __first#>, <#_InputIterator __last#>)\nCOMPLETION: append : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type#]append(<#_ForwardIterator __first#>, <#_ForwardIterator __last#>)\nCOMPLETION: assign : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]assign(<#const _Tp &__t#>)\nCOMPLETION: assign : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]assign(<#const _Tp &__t#>, <#size_type __pos#>{#, <#size_type __n = npos#>#})\nCOMPLETION: assign : [#typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type#]assign(<#_InputIterator __first#>, <#_InputIterator __last#>)\nCOMPLETION: assign : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type#]assign(<#_ForwardIterator __first#>, <#_ForwardIterator __last#>)\nCOMPLETION: at : [#const_reference#]at(<#size_type __n#>)[# const#]\nCOMPLETION: back : [#const_reference#]back()[# const#]\nCOMPLETION: basic_string : basic_string::\nCOMPLETION: begin : [#const_iterator#]begin()[# const#]\nCOMPLETION: c_str : [#const value_type *#]c_str()[# const#]\nCOMPLETION: capacity : [#size_type#]capacity()[# const#]\nCOMPLETION: cbegin : [#const_iterator#]cbegin()[# const#]\nCOMPLETION: cend : [#const_iterator#]cend()[# const#]\nCOMPLETION: compare : [#int#]compare(<#const basic_string<char> &__str#>)[# const#]\nCOMPLETION: compare : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type#]compare(<#const _Tp &__t#>)[# const#]\nCOMPLETION: compare : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const _Tp &__t#>)[# const#]\nCOMPLETION: compare : [#int#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const basic_string<char> &__str#>)[# const#]\nCOMPLETION: compare : [#int#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const basic_string<char> &__str#>, <#size_type __pos2#>{#, <#size_type __n2 = npos#>#})[# const#]\nCOMPLETION: compare : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const _Tp &__t#>, <#size_type __pos2#>{#, <#size_type __n2 = npos#>#})[# const#]\nCOMPLETION: compare : [#int#]compare(<#const value_type *__s#>)[# const#]\nCOMPLETION: compare : [#int#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const value_type *__s#>)[# const#]\nCOMPLETION: compare : [#int#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const value_type *__s#>, <#size_type __n2#>)[# const#]\nCOMPLETION: copy : [#size_type#]copy(<#value_type *__s#>, <#size_type __n#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: crbegin : [#const_reverse_iterator#]crbegin()[# const#]\nCOMPLETION: crend : [#const_reverse_iterator#]crend()[# const#]\nCOMPLETION: data : [#const value_type *#]data()[# const#]\nCOMPLETION: empty : [#bool#]empty()[# const#]\nCOMPLETION: end : [#const_iterator#]end()[# const#]\nCOMPLETION: find : [#size_type#]find(<#const basic_string<char> &__str#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]find(<#const _Tp &__t#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find : [#size_type#]find(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]\nCOMPLETION: find : [#size_type#]find(<#const value_type *__s#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find : [#size_type#]find(<#value_type __c#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find_first_not_of : [#size_type#]find_first_not_of(<#const basic_string<char> &__str#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find_first_not_of : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]find_first_not_of(<#const _Tp &__t#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find_first_not_of : [#size_type#]find_first_not_of(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]\nCOMPLETION: find_first_not_of : [#size_type#]find_first_not_of(<#const value_type *__s#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find_first_not_of : [#size_type#]find_first_not_of(<#value_type __c#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find_first_of : [#size_type#]find_first_of(<#const basic_string<char> &__str#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find_first_of : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]find_first_of(<#const _Tp &__t#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find_first_of : [#size_type#]find_first_of(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]\nCOMPLETION: find_first_of : [#size_type#]find_first_of(<#const value_type *__s#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find_first_of : [#size_type#]find_first_of(<#value_type __c#>{#, <#size_type __pos = 0#>#})[# const#]\nCOMPLETION: find_last_not_of : [#size_type#]find_last_not_of(<#const basic_string<char> &__str#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: find_last_not_of : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]find_last_not_of(<#const _Tp &__t#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: find_last_not_of : [#size_type#]find_last_not_of(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]\nCOMPLETION: find_last_not_of : [#size_type#]find_last_not_of(<#const value_type *__s#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: find_last_not_of : [#size_type#]find_last_not_of(<#value_type __c#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: find_last_of : [#size_type#]find_last_of(<#const basic_string<char> &__str#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: find_last_of : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]find_last_of(<#const _Tp &__t#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: find_last_of : [#size_type#]find_last_of(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]\nCOMPLETION: find_last_of : [#size_type#]find_last_of(<#const value_type *__s#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: find_last_of : [#size_type#]find_last_of(<#value_type __c#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: front : [#const_reference#]front()[# const#]\nCOMPLETION: get_allocator : [#allocator_type#]get_allocator()[# const#]\nCOMPLETION: insert : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]insert(<#size_type __pos1#>, <#const _Tp &__t#>)\nCOMPLETION: insert : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]insert(<#size_type __pos1#>, <#const _Tp &__t#>, <#size_type __pos2#>{#, <#size_type __n = npos#>#})\nCOMPLETION: insert : [#typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, iterator>::type#]insert(<#const_iterator __pos#>, <#_InputIterator __first#>, <#_InputIterator __last#>)\nCOMPLETION: insert : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, iterator>::type#]insert(<#const_iterator __pos#>, <#_ForwardIterator __first#>, <#_ForwardIterator __last#>)\nCOMPLETION: length : [#size_type#]length()[# const#]\nCOMPLETION: max_size : [#size_type#]max_size()[# const#]\nCOMPLETION: npos : [#const size_type#]npos\nCOMPLETION: operator basic_string_view : operator basic_string_view()[# const#]\nCOMPLETION: operator+= : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]operator+=(<#const _Tp &__t#>)\nCOMPLETION: operator= : [#basic_string<char> &#]operator=(<#const _Tp &__t#>)\nCOMPLETION: operator[] : [#const_reference#]operator[](<#size_type __pos#>)[# const#]\nCOMPLETION: rbegin : [#const_reverse_iterator#]rbegin()[# const#]\nCOMPLETION: rend : [#const_reverse_iterator#]rend()[# const#]\nCOMPLETION: replace : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]replace(<#size_type __pos1#>, <#size_type __n1#>, <#const _Tp &__t#>)\nCOMPLETION: replace : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]replace(<#size_type __pos1#>, <#size_type __n1#>, <#const _Tp &__t#>, <#size_type __pos2#>{#, <#size_type __n2 = npos#>#})\nCOMPLETION: replace : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]replace(<#const_iterator __i1#>, <#const_iterator __i2#>, <#const _Tp &__t#>)\nCOMPLETION: replace : [#typename enable_if<__is_input_iterator<_InputIterator>::value, basic_string<char> &>::type#]replace(<#const_iterator __i1#>, <#const_iterator __i2#>, <#_InputIterator __j1#>, <#_InputIterator __j2#>)\nCOMPLETION: rfind : [#size_type#]rfind(<#const basic_string<char> &__str#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: rfind : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]rfind(<#const _Tp &__t#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: rfind : [#size_type#]rfind(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]\nCOMPLETION: rfind : [#size_type#]rfind(<#const value_type *__s#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: rfind : [#size_type#]rfind(<#value_type __c#>{#, <#size_type __pos = npos#>#})[# const#]\nCOMPLETION: size : [#size_type#]size()[# const#]\nCOMPLETION: substr : [#basic_string<char>#]substr({#<#size_type __pos = 0#>{#, <#size_type __n = npos#>#}#})[# const#]\n",
+      "stderr": "",
+      "memoryBytes": 16515072,
+      "position": {
+        "line": 2,
+        "byteColumn": 33
+      }
+    },
+    "metrics": {
+      "totalMs": 119.46239999999989,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 16515072
+    }
+  },
+  "checks": {
+    "expected": [
+      "size",
+      "substr"
+    ],
+    "absent": [
+      "append",
+      "clear"
+    ],
+    "sourceUnchanged": true
+  }
+}

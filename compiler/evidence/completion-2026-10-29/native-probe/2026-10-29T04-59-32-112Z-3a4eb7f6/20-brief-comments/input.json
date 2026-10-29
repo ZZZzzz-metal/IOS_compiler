@@ -1,0 +1,77 @@
+{
+  "id": "20-brief-comments",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "targetPath": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "markedText": "/// Adds a number to the running total.\nint alphaFunction(int value);\nint main() { al@; }\n"
+    }
+  ],
+  "observations": [
+    "alphaFunction"
+  ],
+  "flags": [
+    "-code-completion-brief-comments"
+  ],
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 85,
+    "line": 3,
+    "utf16Column": 16,
+    "utf8ByteColumn": 16,
+    "linePrefix": "int main() { al",
+    "prefixAtCursor": "al",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "snapshot": {
+    "snapshotId": "native-probe-20-brief-comments",
+    "sourceHash": "sha256:0a7bfc78b845f7bf8d9aa52dfa26338882824bd469f30b57b61208556f7d8457",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "/// Adds a number to the running total.\nint alphaFunction(int value);\nint main() { al; }\n",
+        "contentHash": "sha256:2d5556fb4dbb79462dd487211f49025c32574746a6582ef9208bfd5560fab5d2"
+      }
+    ]
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-brief-comments",
+    "-code-completion-at=/project/main.cpp:3:16",
+    "/project/main.cpp"
+  ]
+}

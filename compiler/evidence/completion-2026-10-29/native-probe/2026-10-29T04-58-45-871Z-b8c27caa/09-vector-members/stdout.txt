@@ -1,0 +1,62 @@
+COMPLETION: assign : [#typename enable_if<__is_input_iterator<_InputIterator>::value && !__is_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, void>::type#]assign(<#_InputIterator __first#>, <#_InputIterator __last#>)
+COMPLETION: assign : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, void>::type#]assign(<#_ForwardIterator __first#>, <#_ForwardIterator __last#>)
+COMPLETION: assign : [#void#]assign(<#size_type __n#>, <#const_reference __u#>)
+COMPLETION: assign : [#void#]assign(<#initializer_list<value_type> __il#>)
+COMPLETION: at : [#reference#]at(<#size_type __n#>)
+COMPLETION: at : [#const_reference#]at(<#size_type __n#>)[# const#]
+COMPLETION: back : [#reference#]back()
+COMPLETION: back : [#const_reference#]back()[# const#]
+COMPLETION: begin : [#iterator#]begin()
+COMPLETION: begin : [#const_iterator#]begin()[# const#]
+COMPLETION: capacity : [#size_type#]capacity()[# const#]
+COMPLETION: capacity (Hidden,InBase,Inaccessible) : [#size_type#]__vector_base<int, allocator<int> >::capacity()[# const#]
+COMPLETION: cbegin : [#const_iterator#]cbegin()[# const#]
+COMPLETION: cend : [#const_iterator#]cend()[# const#]
+COMPLETION: clear : [#void#]clear()
+COMPLETION: clear (Hidden,InBase,Inaccessible) : [#void#]__vector_base<int, allocator<int> >::clear()
+COMPLETION: crbegin : [#const_reverse_iterator#]crbegin()[# const#]
+COMPLETION: crend : [#const_reverse_iterator#]crend()[# const#]
+COMPLETION: data : [#value_type *#]data()
+COMPLETION: data : [#const value_type *#]data()[# const#]
+COMPLETION: emplace : [#iterator#]emplace(<#const_iterator __position#>, <#_Args &&__args...#>)
+COMPLETION: emplace_back : [#reference#]emplace_back(<#_Args &&__args...#>)
+COMPLETION: empty : [#bool#]empty()[# const#]
+COMPLETION: end : [#iterator#]end()
+COMPLETION: end : [#const_iterator#]end()[# const#]
+COMPLETION: erase : [#iterator#]erase(<#const_iterator __position#>)
+COMPLETION: erase : [#iterator#]erase(<#const_iterator __first#>, <#const_iterator __last#>)
+COMPLETION: front : [#reference#]front()
+COMPLETION: front : [#const_reference#]front()[# const#]
+COMPLETION: get_allocator : [#allocator_type#]get_allocator()[# const#]
+COMPLETION: insert : [#iterator#]insert(<#const_iterator __position#>, <#const_reference __x#>)
+COMPLETION: insert : [#iterator#]insert(<#const_iterator __position#>, <#value_type &&__x#>)
+COMPLETION: insert : [#iterator#]insert(<#const_iterator __position#>, <#size_type __n#>, <#const_reference __x#>)
+COMPLETION: insert : [#typename enable_if<__is_input_iterator<_InputIterator>::value && !__is_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, iterator>::type#]insert(<#const_iterator __position#>, <#_InputIterator __first#>, <#_InputIterator __last#>)
+COMPLETION: insert : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, iterator>::type#]insert(<#const_iterator __position#>, <#_ForwardIterator __first#>, <#_ForwardIterator __last#>)
+COMPLETION: insert : [#iterator#]insert(<#const_iterator __position#>, <#initializer_list<value_type> __il#>)
+COMPLETION: max_size : [#size_type#]max_size()[# const#]
+COMPLETION: operator= : [#vector<int, allocator<int> > &#]operator=(<#const vector<int, allocator<int> > &__x#>)
+COMPLETION: operator= : [#vector<int, allocator<int> > &#]operator=(<#vector<int, allocator<int> > &&__x#>)
+COMPLETION: operator= : [#vector<int, allocator<int> > &#]operator=(<#initializer_list<value_type> __il#>)
+COMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__vector_base<int, allocator<int> > &#]__vector_base<int, allocator<int> >::operator=(<#const __vector_base<int, allocator<int> > &#>)
+COMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__vector_base_common<true> &#]__vector_base_common<true>::operator=(<#const __vector_base_common<true> &#>)
+COMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__vector_base_common<true> &#]__vector_base_common<true>::operator=(<#__vector_base_common<true> &&#>)
+COMPLETION: operator[] : [#reference#]operator[](<#size_type __n#>)
+COMPLETION: operator[] : [#const_reference#]operator[](<#size_type __n#>)[# const#]
+COMPLETION: pop_back : [#void#]pop_back()
+COMPLETION: push_back : [#void#]push_back(<#const_reference __x#>)
+COMPLETION: push_back : [#void#]push_back(<#value_type &&__x#>)
+COMPLETION: rbegin : [#reverse_iterator#]rbegin()
+COMPLETION: rbegin : [#const_reverse_iterator#]rbegin()[# const#]
+COMPLETION: rend : [#reverse_iterator#]rend()
+COMPLETION: rend : [#const_reverse_iterator#]rend()[# const#]
+COMPLETION: reserve : [#void#]reserve(<#size_type __n#>)
+COMPLETION: resize : [#void#]resize(<#size_type __sz#>)
+COMPLETION: resize : [#void#]resize(<#size_type __sz#>, <#const_reference __x#>)
+COMPLETION: shrink_to_fit : [#void#]shrink_to_fit()
+COMPLETION: size : [#size_type#]size()[# const#]
+COMPLETION: swap : [#void#]swap(<#vector<int, allocator<int> > &#>)
+COMPLETION: vector : vector::
+COMPLETION: ~__vector_base (InBase,Inaccessible) : [#void#][#__vector_base<int, allocator<int> >::#]~__vector_base()
+COMPLETION: ~__vector_base_common (InBase,Inaccessible) : [#void#][#__vector_base_common<true>::#]~__vector_base_common()
+COMPLETION: ~vector : [#void#]~vector()

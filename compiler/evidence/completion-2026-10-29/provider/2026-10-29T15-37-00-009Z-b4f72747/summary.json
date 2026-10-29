@@ -1,0 +1,528 @@
+{
+  "requestId": "CC-20261029-02",
+  "baseCommit": "38ff3075a4b47c3f72ae2f6552a04e58da07d6c0",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "resourceReads": [
+    "vendor/wasm-clang/memfs",
+    "vendor/wasm-clang/sysroot.tar",
+    "vendor/wasm-clang/clang"
+  ],
+  "loadedLld": false,
+  "sourceFiles": [
+    {
+      "path": "compiler/src/completion-adapter.mjs",
+      "sha256": "sha256:5f9362d73a87daba9235ff3a819d858b727c49e974a8ca95a84ea34174d57421",
+      "byteLength": 9057
+    },
+    {
+      "path": "compiler/src/completion-worker.mjs",
+      "sha256": "sha256:a3621e52c1811e0de3bc891e708be57225bcb48056c0676e832d203527ff80a0",
+      "byteLength": 2313
+    },
+    {
+      "path": "compiler/src/completion-engine.mjs",
+      "sha256": "sha256:2b8b4e531e9ec1eb54325d39aa513846e403ae34b648fffc9aeadca820f6670d",
+      "byteLength": 4621
+    },
+    {
+      "path": "compiler/src/completion-source.mjs",
+      "sha256": "sha256:1e8e61a9c35bc42176bc92a6efbc7a04884bbf1b0d0fca9b538feb5c14a9e3ce",
+      "byteLength": 5337
+    },
+    {
+      "path": "compiler/src/completion-output.mjs",
+      "sha256": "sha256:6321fd93e9fbfeccfebe29654f236c335aac4cc7d7d09c934d35f5e74d325a99",
+      "byteLength": 1956
+    }
+  ],
+  "observations": [
+    {
+      "name": "locals-functions",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 142.2598,
+      "nativeExit": 0
+    },
+    {
+      "name": "struct-dot",
+      "status": "succeeded",
+      "itemCount": 6,
+      "adapterMs": 17.953100000000006,
+      "nativeExit": 0
+    },
+    {
+      "name": "pointer-arrow",
+      "status": "succeeded",
+      "itemCount": 5,
+      "adapterMs": 15.498800000000017,
+      "nativeExit": 0
+    },
+    {
+      "name": "private-outside",
+      "status": "succeeded",
+      "itemCount": 5,
+      "adapterMs": 15.494399999999985,
+      "nativeExit": 0
+    },
+    {
+      "name": "private-inside",
+      "status": "succeeded",
+      "itemCount": 6,
+      "adapterMs": 15.379099999999994,
+      "nativeExit": 0
+    },
+    {
+      "name": "protected-outside",
+      "status": "succeeded",
+      "itemCount": 7,
+      "adapterMs": 15.348000000000013,
+      "nativeExit": 0
+    },
+    {
+      "name": "protected-inside",
+      "status": "succeeded",
+      "itemCount": 8,
+      "adapterMs": 15.440500000000043,
+      "nativeExit": 0
+    },
+    {
+      "name": "namespace",
+      "status": "succeeded",
+      "itemCount": 3,
+      "adapterMs": 14.21819999999991,
+      "nativeExit": 0
+    },
+    {
+      "name": "class-scope",
+      "status": "succeeded",
+      "itemCount": 6,
+      "adapterMs": 16.4615,
+      "nativeExit": 0
+    },
+    {
+      "name": "vector",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 155.98789999999985,
+      "nativeExit": 0
+    },
+    {
+      "name": "string",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 140.5999999999999,
+      "nativeExit": 0
+    },
+    {
+      "name": "shadowing",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 14.369200000000092,
+      "nativeExit": 0
+    },
+    {
+      "name": "shadowed-receiver",
+      "status": "succeeded",
+      "itemCount": 0,
+      "adapterMs": 13.645600000000059,
+      "nativeExit": 0
+    },
+    {
+      "name": "unfinished",
+      "status": "succeeded",
+      "itemCount": 5,
+      "adapterMs": 14.871099999999842,
+      "nativeExit": 0
+    },
+    {
+      "name": "error-before",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 14.264799999999923,
+      "nativeExit": 1
+    },
+    {
+      "name": "unicode",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 13.5628999999999,
+      "nativeExit": 0
+    },
+    {
+      "name": "driver-user",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 123.16639999999984,
+      "nativeExit": 0
+    },
+    {
+      "name": "c11",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 14.48980000000006,
+      "nativeExit": 0
+    },
+    {
+      "name": "overloads",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 14.215799999999945,
+      "nativeExit": 0
+    },
+    {
+      "name": "const-receiver",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 14.395800000000008,
+      "nativeExit": 0,
+      "constMutatePresent": false
+    },
+    {
+      "name": "const-vector",
+      "status": "succeeded",
+      "itemCount": 25,
+      "adapterMs": 112.98729999999978,
+      "nativeExit": 0
+    },
+    {
+      "name": "const-string-native-gap",
+      "status": "succeeded",
+      "itemCount": 82,
+      "adapterMs": 136.17390000000023,
+      "nativeExit": 0
+    },
+    {
+      "name": "case-character-literal",
+      "status": "succeeded",
+      "itemCount": 5,
+      "adapterMs": 14.307799999999588,
+      "nativeExit": 0
+    },
+    {
+      "name": "sizeof-character-literal",
+      "status": "succeeded",
+      "itemCount": 5,
+      "adapterMs": 14.081500000000233,
+      "nativeExit": 0
+    },
+    {
+      "name": "pattern-variable",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 13.774799999999686,
+      "nativeExit": 0
+    },
+    {
+      "name": "pattern-function",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 13.61239999999998,
+      "nativeExit": 0
+    },
+    {
+      "name": "comment",
+      "status": "succeeded",
+      "itemCount": 0,
+      "adapterMs": 3.592399999999998,
+      "nativeExit": null
+    },
+    {
+      "name": "string-literal",
+      "status": "succeeded",
+      "itemCount": 0,
+      "adapterMs": 0.052700000000186265,
+      "nativeExit": null
+    },
+    {
+      "name": "raw-literal",
+      "status": "succeeded",
+      "itemCount": 0,
+      "adapterMs": 0.08099999999967622,
+      "nativeExit": null
+    },
+    {
+      "name": "mid-token",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 138.96799999999985,
+      "nativeExit": 0
+    }
+  ],
+  "workersCreated": 4,
+  "allWorkersReleased": true,
+  "progress": [
+    {
+      "phase": "completion-resource",
+      "name": "memfs"
+    },
+    {
+      "phase": "completion-resource",
+      "name": "sysroot.tar"
+    },
+    {
+      "phase": "completion-resource",
+      "name": "clang"
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 18.00279999999998,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 16.79060000000004,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 14.709000000000003,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 14.729900000000043,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 14.771399999999971,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 14.722700000000032,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 14.750799999999913,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 13.585700000000088,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 15.804099999999949,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 155.2663,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 15007744
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 139.9946,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 16515072
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 13.667299999999841,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 13.03859999999986,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 14.074800000000096,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 13.743399999999838,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 12.88390000000004,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 122.4384,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 15007744
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 13.490500000000111,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 13.66319999999996,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 13.794300000000021,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 112.34010000000012,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 15007744
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 135.4756000000002,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 16515072
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 13.65269999999964,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 13.3742000000002,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 13.173999999999978,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 12.895700000000033,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    },
+    {
+      "phase": "completion-resource",
+      "name": "memfs"
+    },
+    {
+      "phase": "completion-resource",
+      "name": "sysroot.tar"
+    },
+    {
+      "phase": "completion-resource",
+      "name": "clang"
+    },
+    {
+      "phase": "completion-started"
+    },
+    {
+      "phase": "completion-finished",
+      "totalMs": 17.754699999999957,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  ],
+  "knownLimitations": [
+    "const-string-native-gap: native Clang8 emits append/assign/insert/replace member templates without unavailable markers on a const receiver; full const/template availability is unsupported.",
+    "CLI does not expose AST kind, priority, deprecated or unavailable attributes. kind=unknown."
+  ],
+  "scope": "Real production engine + Node Worker adapter, fixed Clang Wasm. No UI, browser, offline cold restart or iPad claim."
+}

@@ -1,0 +1,3 @@
+COMPLETION: Pattern : for(<#init-statement#>;<#condition#>;<#inc-expression#>){
+<#statements#>
+}

@@ -1,0 +1,160 @@
+{
+  "request": {
+    "requestId": "72c34fa6-b895-428c-b212-f7994b837252",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "4db546e8-96fb-4007-9ce3-2bf730f83868",
+      "sourceHash": "sha256:09ce21e9b6e1427be97c2b7cc9b6ec3e671dbac06f83b8ae791c28363c76f948",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int alphaFunction(int x); void f(){int alphaLocal=0; al;}",
+          "contentHash": "sha256:da4d0b2d881892925d06a1b4eb77e8c1673532679aeb9a88f5fd412f8effc649"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 55
+  },
+  "reply": {
+    "requestId": "72c34fa6-b895-428c-b212-f7994b837252",
+    "documentVersion": 1,
+    "snapshotId": "4db546e8-96fb-4007-9ce3-2bf730f83868",
+    "sourceHash": "sha256:09ce21e9b6e1427be97c2b7cc9b6ec3e671dbac06f83b8ae791c28363c76f948",
+    "sourcePath": "main.cpp",
+    "offset": 55,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:de0031fcbb7ec73fa107f5ef12984f8bf2d0c1427010d51919c4526f424c3983",
+        "label": "alphaFunction",
+        "kind": "unknown",
+        "detail": "int alphaFunction(int x)",
+        "insertText": "alphaFunction",
+        "replaceRange": {
+          "startOffset": 53,
+          "endOffset": 55
+        },
+        "filterText": "alphaFunction"
+      },
+      {
+        "id": "sha256:8feb0f921dc5bb915b3fc4a484b2d733357d6a501f3728bf0f713f5ba6738297",
+        "label": "alphaLocal",
+        "kind": "unknown",
+        "detail": "int alphaLocal",
+        "insertText": "alphaLocal",
+        "replaceRange": {
+          "startOffset": 53,
+          "endOffset": 55
+        },
+        "filterText": "alphaLocal"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 162.9015,
+  "native": {
+    "result": {
+      "requestId": "72c34fa6-b895-428c-b212-f7994b837252",
+      "documentVersion": 1,
+      "snapshotId": "4db546e8-96fb-4007-9ce3-2bf730f83868",
+      "sourceHash": "sha256:09ce21e9b6e1427be97c2b7cc9b6ec3e671dbac06f83b8ae791c28363c76f948",
+      "sourcePath": "main.cpp",
+      "offset": 55,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:de0031fcbb7ec73fa107f5ef12984f8bf2d0c1427010d51919c4526f424c3983",
+          "label": "alphaFunction",
+          "kind": "unknown",
+          "detail": "int alphaFunction(int x)",
+          "insertText": "alphaFunction",
+          "replaceRange": {
+            "startOffset": 53,
+            "endOffset": 55
+          },
+          "filterText": "alphaFunction"
+        },
+        {
+          "id": "sha256:8feb0f921dc5bb915b3fc4a484b2d733357d6a501f3728bf0f713f5ba6738297",
+          "label": "alphaLocal",
+          "kind": "unknown",
+          "detail": "int alphaLocal",
+          "insertText": "alphaLocal",
+          "replaceRange": {
+            "startOffset": 53,
+            "endOffset": 55
+          },
+          "filterText": "alphaLocal"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:56",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: Pattern : alignas(<#expression#>)\nCOMPLETION: Pattern : [#size_t#]alignof(<#type#>)\nCOMPLETION: alphaFunction : [#int#]alphaFunction(<#int x#>)\nCOMPLETION: alphaLocal : [#int#]alphaLocal\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 56
+      }
+    },
+    "metrics": {
+      "totalMs": 61.854600000000005,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [
+      "alphaLocal",
+      "alphaFunction"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}
