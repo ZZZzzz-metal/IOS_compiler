@@ -1,0 +1,207 @@
+[
+  {
+    "file": "contracts/completion.d.ts",
+    "byteLength": 2406,
+    "sha256": "f04734f4b1db5ef042f1f6299cab97664cfc080a5b5bb8f8d50ac3e997dac132"
+  },
+  {
+    "file": "docs/validation/completion-independent-plan-2026-10-29.md",
+    "byteLength": 9815,
+    "sha256": "23172e82fcdeb17d4ce1613737b306577eac2bfd1e328f2a719daf5f7fe164a6"
+  },
+  {
+    "file": "fixtures/completion-independent/README.md",
+    "byteLength": 2759,
+    "sha256": "8171c4e23b679a3943ada96000ecd22c124db74e6b409ec052fdf9a7a66969c0"
+  },
+  {
+    "file": "fixtures/completion-independent/access-control.cpp",
+    "byteLength": 180,
+    "sha256": "b91c306088c86f864917b27409ccc0a2fd30308b6a808fc9e4b7b586e37556ff"
+  },
+  {
+    "file": "fixtures/completion-independent/c-pointer.c",
+    "byteLength": 103,
+    "sha256": "aa9a05a5deb2a159840b08963d5d52d4d22391361aed4053a3d479d56f03fea9"
+  },
+  {
+    "file": "fixtures/completion-independent/c-prefix.c",
+    "byteLength": 73,
+    "sha256": "e7558a4307024994afe0ef093911fe645f454e60feccf009e5e17efec036609a"
+  },
+  {
+    "file": "fixtures/completion-independent/c-struct.c",
+    "byteLength": 107,
+    "sha256": "a632bfe1ae5cfbc4ed53d5e35f8b57f2355618c6b25562e19612133346d65d75"
+  },
+  {
+    "file": "fixtures/completion-independent/cases.json",
+    "byteLength": 10141,
+    "sha256": "2a5ab3820b82e0ff07389f2186e67b91a0c8f443c6d44b0c99bda6ae25eca664"
+  },
+  {
+    "file": "fixtures/completion-independent/char-case.cpp",
+    "byteLength": 120,
+    "sha256": "8e0ed52809b3ddcdfaa86a2608de8630f8619c7dc04808c6a84200729885f9b5"
+  },
+  {
+    "file": "fixtures/completion-independent/char-sizeof.cpp",
+    "byteLength": 95,
+    "sha256": "5384c0873f2e2d5c095f90cd3c638b9c7f818fd82fa96bce5822677df1b41cce"
+  },
+  {
+    "file": "fixtures/completion-independent/chinese-prefix.cpp",
+    "byteLength": 67,
+    "sha256": "2b642f8dcb01c57b75fc31b96fffbec99b08ad08164fc9edcd26003dc2021a62"
+  },
+  {
+    "file": "fixtures/completion-independent/comment.cpp",
+    "byteLength": 69,
+    "sha256": "74e69b8e0fd6a2f7b63c17257117a05fb39e25b2fd866cb12a252593518e6b61"
+  },
+  {
+    "file": "fixtures/completion-independent/const-members.cpp",
+    "byteLength": 127,
+    "sha256": "affa1479ae49c36c185431094475672c9a11b5895c88c5e7bbe1a6140c1676ab"
+  },
+  {
+    "file": "fixtures/completion-independent/const-string.cpp",
+    "byteLength": 81,
+    "sha256": "259ee74cf2e594a328c0f4e3814e8286ef3f6eef411816746a214bedd0c7f84b"
+  },
+  {
+    "file": "fixtures/completion-independent/decimal.cpp",
+    "byteLength": 45,
+    "sha256": "e03f86c51e6be914a5f5d62425d555969db141f44969f185f8f4425fd0e874c0"
+  },
+  {
+    "file": "fixtures/completion-independent/declaration-order.cpp",
+    "byteLength": 73,
+    "sha256": "de57a3671380897553585c901d081feae078746f857bfce14ca7738bd2e7831a"
+  },
+  {
+    "file": "fixtures/completion-independent/driver.cpp",
+    "byteLength": 97,
+    "sha256": "efd346a314958d960e54a60134b6e0220e77420ea8a6b6ec05aa395af378a6ef"
+  },
+  {
+    "file": "fixtures/completion-independent/enum.cpp",
+    "byteLength": 81,
+    "sha256": "7e8c3b13c137ef5025432608897d702678bfaa288db85131d34f8eac649f27c9"
+  },
+  {
+    "file": "fixtures/completion-independent/function-prefix.cpp",
+    "byteLength": 166,
+    "sha256": "425c3692b91146890e5dcb0039ecb022f5e635a5015c9c23268fcc55d29a847e"
+  },
+  {
+    "file": "fixtures/completion-independent/include-omitted.cpp",
+    "byteLength": 133,
+    "sha256": "ba687fef12c05dca1b6fb4b4ec1566a981ecb456e8b52c7cd587659e1f19b66a"
+  },
+  {
+    "file": "fixtures/completion-independent/local-prefix.cpp",
+    "byteLength": 106,
+    "sha256": "c13f2c733856a79454da60713c1e66d7aafb85574b9ba6e9ec6072d5317b9364"
+  },
+  {
+    "file": "fixtures/completion-independent/namespace.cpp",
+    "byteLength": 109,
+    "sha256": "d9ae81831d5bebebc1caa5fb1071c1a05fd0f27265cd50d624c80cd0993f0fc0"
+  },
+  {
+    "file": "fixtures/completion-independent/nested-member.cpp",
+    "byteLength": 150,
+    "sha256": "49553d0e8950c77abe9116dc79f33bd5ae7042443598579cece077f409530da7"
+  },
+  {
+    "file": "fixtures/completion-independent/nonbmp-member.cpp",
+    "byteLength": 109,
+    "sha256": "ff6c2b9ff16358d101e1feef89e4d158f755f4ab6c4ffa31c0999cadda3753f6"
+  },
+  {
+    "file": "fixtures/completion-independent/nonbmp-prefix.cpp",
+    "byteLength": 68,
+    "sha256": "c01870999aca1b0116f5988ee2c68f2eda0dc25c7ea3b3830f232736a5003185"
+  },
+  {
+    "file": "fixtures/completion-independent/pattern-function.cpp",
+    "byteLength": 70,
+    "sha256": "33f1912dcf8f0a64417e10a223fdd23eab7688ea0634896e0dee3466bcc98479"
+  },
+  {
+    "file": "fixtures/completion-independent/pattern-variable.cpp",
+    "byteLength": 54,
+    "sha256": "6b605f81e55c2aed13c908e84ebcaac284a3e8641caf5ae645e92de4e77da354"
+  },
+  {
+    "file": "fixtures/completion-independent/pointer.cpp",
+    "byteLength": 96,
+    "sha256": "0758cd2a1b95976fa6c757f8c02a4362398d5c2f923dda2a5bb21a72e08c634f"
+  },
+  {
+    "file": "fixtures/completion-independent/renamed-member.cpp",
+    "byteLength": 131,
+    "sha256": "b462eafd272434150ad213f9934363a2558bc57300378510e4711c100eab009e"
+  },
+  {
+    "file": "fixtures/completion-independent/shadow-inner.cpp",
+    "byteLength": 139,
+    "sha256": "dabf696e10e6457e66972d3d8990a23b2a60458609892703ce0edb9cd5642fca"
+  },
+  {
+    "file": "fixtures/completion-independent/shadow-restored.cpp",
+    "byteLength": 143,
+    "sha256": "6076aeeccd0733402c425b31171ee150cd10d2d259209b0c73baafd48611768a"
+  },
+  {
+    "file": "fixtures/completion-independent/string-literal.cpp",
+    "byteLength": 55,
+    "sha256": "728b78b31e30ba9dd072ded04919dd9cfbd9190e09e21d0e253d480094f5df8e"
+  },
+  {
+    "file": "fixtures/completion-independent/string.cpp",
+    "byteLength": 67,
+    "sha256": "1c3f7a27c869ec307ecd66f1dfe9e53e8bc9d01deb34accbfdaeee72196466ce"
+  },
+  {
+    "file": "fixtures/completion-independent/type-a.cpp",
+    "byteLength": 133,
+    "sha256": "ec2041faaf26f1b6ba26d556f1de83eca1f952b0c2a0475f8c30698d421f64d5"
+  },
+  {
+    "file": "fixtures/completion-independent/type-b.cpp",
+    "byteLength": 135,
+    "sha256": "69da1e462beaf13515b6ca21f9dc42016136e6bf522c249966e92606d01f0dd8"
+  },
+  {
+    "file": "fixtures/completion-independent/unfinished.cpp",
+    "byteLength": 97,
+    "sha256": "e467dd4ee9c0cd6c5444d6ea6a05bc9d04c6148976f8cc025024ecfde0ff92a5"
+  },
+  {
+    "file": "fixtures/completion-independent/user.inc",
+    "byteLength": 86,
+    "sha256": "c40a056e78af5d20ff0fc02e5d7a3a40aab7da69add8edcf7036509b76bd5c20"
+  },
+  {
+    "file": "fixtures/completion-independent/vector.cpp",
+    "byteLength": 76,
+    "sha256": "e30f53fead44f97d546bc2c47026f7d35e7e4d66b580f29fc0c739f292df5e24"
+  },
+  {
+    "file": "tests/completion-fixtures-checks.mjs",
+    "byteLength": 5182,
+    "sha256": "11e694edb1e83b21d98087a68ec67dce6201dc213b3676494d27e074777c2c9c"
+  },
+  {
+    "file": "tests/lib/completion-fixtures.mjs",
+    "byteLength": 5403,
+    "sha256": "49f67bab73c019d8f47ac6c4a08f5d92f8f87b4bd977975ce720356d96e34f99"
+  },
+  {
+    "file": "tests/prepare-completion-evidence.mjs",
+    "byteLength": 5126,
+    "sha256": "f42eb6d53afd693f6a03b0f64b2fece3cdbd8d4b322bc0ed5bf3e0b39dd0e0ec"
+  }
+]

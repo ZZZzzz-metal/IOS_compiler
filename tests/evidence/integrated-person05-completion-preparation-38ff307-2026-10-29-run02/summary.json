@@ -1,0 +1,139 @@
+{
+  "requestId": "CC-20261029-05",
+  "kind": "preparation-only",
+  "baselineCommit": "38ff3075a4b47c3f72ae2f6552a04e58da07d6c0",
+  "checksPassed": true,
+  "fixtureCases": 33,
+  "sourceFiles": 34,
+  "productAcceptance": "pending-fixed-provider-ui-integrated-package",
+  "actualProviderRequests": 0,
+  "actualBrowserObservations": 0,
+  "pending": [
+    "real Clang provider and raw responses",
+    "UI controlled concurrency and actual browser",
+    "new immutable integrated offline bundle",
+    "stopped-server fresh-source completion and existing compile/debug regression",
+    "physical iPad/Safari, keyboard/touch/IME and draft durability"
+  ],
+  "history": "Original failures and all old tags/packages/evidence remain unchanged. Previous final 179-file seal checked against Git.",
+  "commands": [
+    {
+      "id": "baseline",
+      "executable": "git",
+      "args": [
+        "-c",
+        "safe.directory=C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+        "-C",
+        "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+        "rev-parse",
+        "HEAD"
+      ],
+      "startedAt": "2026-10-29T15:37:22.798Z",
+      "endedAt": "2026-10-29T15:37:22.895Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "product-diff",
+      "executable": "git",
+      "args": [
+        "-c",
+        "safe.directory=C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+        "-C",
+        "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+        "diff",
+        "--exit-code",
+        "38ff3075a4b47c3f72ae2f6552a04e58da07d6c0",
+        "--",
+        "app",
+        "compiler",
+        "debugger",
+        "ui",
+        "storage",
+        "contracts",
+        "scripts",
+        "package.json",
+        "package-lock.json"
+      ],
+      "startedAt": "2026-10-29T15:37:22.896Z",
+      "endedAt": "2026-10-29T15:37:22.995Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "check",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "startedAt": "2026-10-29T15:37:22.996Z",
+      "endedAt": "2026-10-29T15:37:23.744Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "contracts",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "startedAt": "2026-10-29T15:37:23.745Z",
+      "endedAt": "2026-10-29T15:37:24.495Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "offline-root",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run test:offline"
+      ],
+      "startedAt": "2026-10-29T15:37:24.495Z",
+      "endedAt": "2026-10-29T15:37:25.354Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "fixture-infrastructure",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "tests/completion-fixtures-checks.mjs"
+      ],
+      "startedAt": "2026-10-29T15:37:25.355Z",
+      "endedAt": "2026-10-29T15:37:25.561Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "previous-seal",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-final-v045-40a079b-2026-10-28",
+        "--verify",
+        "--git"
+      ],
+      "startedAt": "2026-10-29T15:37:25.562Z",
+      "endedAt": "2026-10-29T15:37:26.347Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    }
+  ]
+}
