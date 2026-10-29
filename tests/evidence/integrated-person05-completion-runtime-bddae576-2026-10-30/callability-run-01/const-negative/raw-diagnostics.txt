@@ -1,0 +1,34 @@
+/project/main.cpp:4:10: error: no matching member function for call to 'append'
+    text.append("person05");
+    ~~~~~^~~~~~
+/include/c++/v1/string:1008:19: note: candidate function template not viable: 'this' argument has type 'const std::string' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const
+                  append(const _Tp& __t) { __self_view __sv = __t; return append(__sv.data(), __sv.size()); }
+                  ^
+/include/c++/v1/string:1020:19: note: candidate function not viable: 'this' argument has type 'const std::string' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const
+    basic_string& append(const value_type* __s);
+                  ^
+/include/c++/v1/string:999:19: note: candidate function not viable: 'this' argument has type 'const std::string' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const
+    basic_string& append(const basic_string& __str);
+                  ^
+/include/c++/v1/string:1058:19: note: candidate function not viable: 'this' argument has type 'const std::string' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const
+    basic_string& append(initializer_list<value_type> __il) {return append(__il.begin(), __il.size());}
+                  ^
+/include/c++/v1/string:1018:19: note: candidate function template not viable: requires at least 2 arguments, but 1 was provided
+                  append(const _Tp& __t, size_type __pos, size_type __n=npos);
+                  ^
+/include/c++/v1/string:1038:5: note: candidate function template not viable: requires 2 arguments, but 1 was provided
+    append(_InputIterator __first, _InputIterator __last) {
+    ^
+/include/c++/v1/string:1052:5: note: candidate function template not viable: requires 2 arguments, but 1 was provided
+    append(_ForwardIterator __first, _ForwardIterator __last) {
+    ^
+/include/c++/v1/string:1019:19: note: candidate function not viable: requires 2 arguments, but 1 was provided
+    basic_string& append(const value_type* __s, size_type __n);
+                  ^
+/include/c++/v1/string:1021:19: note: candidate function not viable: requires 2 arguments, but 1 was provided
+    basic_string& append(size_type __n, value_type __c);
+                  ^
+/include/c++/v1/string:1009:19: note: candidate function not viable: requires at least 2 arguments, but 1 was provided
+    basic_string& append(const basic_string& __str, size_type __pos, size_type __n=npos);
+                  ^
+1 error generated.

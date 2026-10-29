@@ -1,0 +1,22 @@
+{
+  "requestId": "person05-callability-const-negative-3488c5de-ae4c-42d2-bc04-a9edbe062430",
+  "snapshot": {
+    "snapshotId": "43615e54-e1f4-4328-b014-bf40749b1655",
+    "sourceHash": "sha256:1603fb333a407d0b3d3a2a1e56db563f669a86a83dd1242485d6e2157ec317e0",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "#include <string>\nint main() {\n    const std::string text;\n    text.append(\"person05\");\n    return 0;\n}\n",
+        "contentHash": "sha256:49b358f5587940ac61a5b882d15fde400f6d335015d4dfafdff77fbddc667e97"
+      }
+    ]
+  },
+  "language": "cpp",
+  "standard": "c++17",
+  "mode": "run",
+  "optimization": "O0"
+}

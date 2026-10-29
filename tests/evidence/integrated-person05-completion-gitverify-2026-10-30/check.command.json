@@ -1,0 +1,12 @@
+{
+  "id": "check",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd run check"
+  ],
+  "exitCode": 0,
+  "error": null
+}

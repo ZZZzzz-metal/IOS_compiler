@@ -1,0 +1,16 @@
+{
+  "id": "regressions-2",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd run test:regressions"
+  ],
+  "startedAt": "2026-10-29T16:35:00.077Z",
+  "endedAt": "2026-10-29T16:35:02.209Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "evidenceDirectory": "tests/evidence/integrated-person05-completion-runtime-bddae576-2026-10-30/verification/details/regressions-2"
+}

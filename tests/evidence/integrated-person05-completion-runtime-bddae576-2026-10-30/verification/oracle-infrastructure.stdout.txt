@@ -1,0 +1,24 @@
+✔ 33 independent cases retain pending status; no provider results are fabricated (0.5493ms)
+✔ ASCII, Chinese and non-BMP coordinates have independent literal oracles (0.6125ms)
+✔ coordinate oracle rejects raw editor text and surrogate splits (0.7331ms)
+✔ type swap and rename retain counterfactual declarations and different fingerprints (0.122ms)
+✔ scope and declaration order negatives are represented at the actual caret (0.0999ms)
+✔ include context is preserved; omission cannot silently reuse driver declarations (0.1279ms)
+✔ UI suppression, prefix filtering and semantic boundaries are distinct expectations (0.1167ms)
+✔ independent Node SHA snapshot serialization agrees with frozen snapshot protocol (4.1401ms)
+✔ exact insertion names work; matching a name only in detail never satisfies contains (0.4927ms)
+✔ const append and private candidates remain boundary failures, including unknown kind (0.2431ms)
+✔ non-success empty result cannot satisfy required candidates; explicit include omission may fail (0.1476ms)
+✔ truncation does not turn a missing required candidate into a pass (0.1154ms)
+✔ stale identity, resource identity, duplicate IDs and invalid range are rejected (0.9409ms)
+✔ raw native UTF8 position and translation unit are checked without treating exit1 as failure (0.186ms)
+✔ UI automatic suppression cases cannot silently be executed as invalid provider triggers (0.3648ms)
+✔ required function signatures keep return and parameter types without fixing whitespace (0.2265ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 153.2168

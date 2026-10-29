@@ -1,0 +1,94 @@
+{
+  "kind": "validation-tool-windows-argv-repair",
+  "originalStageCommit": "5d3734da79e31d6a743a42369c09a50692356693",
+  "originalFailure": "ENAMETOOLONG while spawning readonly Git hash-object for 452 paths",
+  "fix": "Bounded ordered batches for hash-object and rev-parse; all original comparisons preserved",
+  "originalRuntimeManifestUnchanged": true,
+  "originalRuntimeManifestSHA256": "a1b65a03456bfc4d9bfcacb3655299729c43a54f75f553c85a700cc3d5c6c708",
+  "productFailuresUnchanged": "const-string plus supplemental unavailable boundary remain failed",
+  "results": [
+    {
+      "id": "seal-1",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-runtime-bddae576-2026-10-30",
+        "--verify",
+        "--git"
+      ],
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "id": "seal-2",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-preparation-38ff307-2026-10-29",
+        "--verify",
+        "--git"
+      ],
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "id": "seal-3",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-preparation-38ff307-2026-10-29-run02",
+        "--verify",
+        "--git"
+      ],
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "id": "seal-4",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-final-v045-40a079b-2026-10-28",
+        "--verify",
+        "--git"
+      ],
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "id": "check",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "id": "contracts",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "id": "syntax",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--check",
+        "tests/seal-integrated-round.mjs"
+      ],
+      "exitCode": 0,
+      "error": null
+    }
+  ],
+  "allChecksPassed": true
+}

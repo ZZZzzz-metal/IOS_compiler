@@ -1,0 +1,40 @@
+{
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-local-prefix",
+  "documentVersion": 7,
+  "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-local-prefix-snapshot",
+  "sourceHash": "sha256:7216b0f14783e86bf53c338200aec9ec3fe06d7558d233116ffbe87f1b308fd9",
+  "sourcePath": "main.cpp",
+  "offset": 95,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:c29c03472257f3605fa40bf058490bb58b4bcf5b9cb39f055a7ddc807b372586",
+      "label": "dahlia",
+      "kind": "unknown",
+      "detail": "int dahlia",
+      "insertText": "dahlia",
+      "replaceRange": {
+        "startOffset": 92,
+        "endOffset": 95
+      },
+      "filterText": "dahlia"
+    },
+    {
+      "id": "sha256:79a710bbc1a07078793bc57c65500eabf263590cf7b547e9f381d48a45fcb34d",
+      "label": "dahliaCount",
+      "kind": "unknown",
+      "detail": "int dahliaCount",
+      "insertText": "dahliaCount",
+      "replaceRange": {
+        "startOffset": 92,
+        "endOffset": 95
+      },
+      "filterText": "dahliaCount"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

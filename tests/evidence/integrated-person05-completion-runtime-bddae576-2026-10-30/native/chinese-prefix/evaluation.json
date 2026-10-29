@@ -1,0 +1,18 @@
+{
+  "caseId": "chinese-prefix",
+  "path": "native",
+  "startedAt": "2026-10-29T16:30:34.178Z",
+  "elapsedMs": 20.41249999999991,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:1:57",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:1:57"
+    ],
+    "passed": true
+  }
+}

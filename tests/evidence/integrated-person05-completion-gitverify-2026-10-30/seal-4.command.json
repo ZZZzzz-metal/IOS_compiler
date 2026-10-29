@@ -1,0 +1,12 @@
+{
+  "id": "seal-4",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/seal-integrated-round.mjs",
+    "integrated-person05-final-v045-40a079b-2026-10-28",
+    "--verify",
+    "--git"
+  ],
+  "exitCode": 0,
+  "error": null
+}

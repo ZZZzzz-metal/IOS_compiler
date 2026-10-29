@@ -1,0 +1,5 @@
+COMPLETION: operator= : [#Outer &#]operator=(<#const Outer &#>)
+COMPLETION: operator= : [#Outer &#]operator=(<#Outer &&#>)
+COMPLETION: Outer : Outer::
+COMPLETION: outerOnly : [#int#]outerOnly
+COMPLETION: ~Outer : [#void#]~Outer()

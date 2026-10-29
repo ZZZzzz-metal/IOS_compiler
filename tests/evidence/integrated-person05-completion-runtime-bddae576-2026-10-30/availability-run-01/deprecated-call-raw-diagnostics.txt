@@ -1,0 +1,7 @@
+/project/main.cpp:4:21: warning: 'personDeprecated' is deprecated: person05-deprecated
+int main() { return personDeprecated() - 3; }
+                    ^
+/project/main.cpp:3:16: note: 'personDeprecated' has been explicitly marked deprecated here
+__attribute__((deprecated("person05-deprecated"))) int personDeprecated() { return 3; }
+               ^
+1 warning generated.

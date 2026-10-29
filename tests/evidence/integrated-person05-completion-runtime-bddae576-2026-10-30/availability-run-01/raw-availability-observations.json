@@ -1,0 +1,35 @@
+{
+  "personAllowed": {
+    "rawLines": [
+      "COMPLETION: personAllowed : [#int#]personAllowed()"
+    ],
+    "emittedByClang": true,
+    "explicitAvailabilityTags": [
+      null
+    ],
+    "nativeConfirmable": true,
+    "publicConfirmable": true
+  },
+  "personBlocked": {
+    "rawLines": [
+      "COMPLETION: personBlocked : [#int#]personBlocked()"
+    ],
+    "emittedByClang": true,
+    "explicitAvailabilityTags": [
+      null
+    ],
+    "nativeConfirmable": true,
+    "publicConfirmable": true
+  },
+  "personDeprecated": {
+    "rawLines": [
+      "COMPLETION: personDeprecated : [#int#]personDeprecated()"
+    ],
+    "emittedByClang": true,
+    "explicitAvailabilityTags": [
+      null
+    ],
+    "nativeConfirmable": true,
+    "publicConfirmable": true
+  }
+}
