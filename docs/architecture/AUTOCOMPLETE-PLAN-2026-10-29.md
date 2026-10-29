@@ -38,3 +38,9 @@ UI输入轻量防抖，单个活动补全，只保留最新请求；开始编译
 2号、4号已各自明确API-ACK，接受原字段且无必要修改；contracts/completion.d.ts编辑服务v1于2026-10-29冻结，不改变既有编译/调试协议。2号固定provider路径compiler/src/completion-adapter.mjs（导出CompletionAdapter类），独立Worker路径compiler/src/completion-worker.mjs；构造依赖和全部实际模块列表由2号交付进一步固定。2号已报告首条真实Clang原生补全返回函数签名与局部变量，尚非完整后端DONE。
 
 根前置已将新Worker纳入scope覆盖检查，并验证仅该foreign子scope、正确根scope叠加该foreign子scope均在握手前拒绝。worker专项23/23、mandatory check及既有契约10/10通过；尚未导入未交付provider或改候选资源清单，不构成补全端到端/离线验收。
+
+## 2026-10-30后端集成
+
+2号固定DONE afada754（实现96d328a）已合入761b652。根候选显式纳入全部五个运行模块，35项资源生成新组合integration-prototype-80135c59f01b26fc；新组合既有真实C++/C编译调试与停止重启流水线3/3、mandatory check及契约10/10通过，原始结果见app/integration/evidence/completion-backend-2026-10-29。2号固定原文45编译自测、30例production实际Worker与早期失败已保留；只读核对最终五模块字节与原始证据匹配，两项草稿P2确有真实修复输出。
+
+这仅是后端集成。4号四UI模块尚待固定DONE/真实浏览器，5号实际语义与完整新包尚待独立验收。const string部分函数模板及unavailable/deprecated属性可用性仍有原生Clang8信息缺口，kind统一unknown；不按名称黑名单伪修、不声明完整VS语言服务。旧v0.4.5/r3固定包和历史失败保持不变。

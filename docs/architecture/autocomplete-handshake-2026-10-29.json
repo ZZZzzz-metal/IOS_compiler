@@ -11,10 +11,21 @@
     {
       "id": "CC-20261029-02",
       "owner": 2,
-      "state": "ACK",
-      "delivery": "pending",
+      "state": "DONE",
+      "delivery": "afada754dc249e03dc33ea3f3d48836d20452a4c",
       "ack": "Owner verified the real human authorization; clean worktree and fast-forward baseline checked. Offline Clang feasibility and API ACK pending.",
-      "progress": "Five runtime drafts exist; owner reports real Clang semantic cases and cancellation tests in progress. No fixed delivery yet."
+      "progress": "Fixed backend delivered and merged; root pipeline/check/contracts passed. UI, complete offline package and independent acceptance pending.",
+      "integration": {
+        "state": "BACKEND-INTEGRATED",
+        "mergeCommit": "761b652549f57731b372c3f7c77f065da063d70c",
+        "compatibilityId": "integration-prototype-80135c59f01b26fc",
+        "resourceCount": 35,
+        "rootPipeline": {
+          "pass": 3,
+          "fail": 0
+        },
+        "independentFeatureAcceptance": "pending"
+      }
     },
     {
       "id": "CC-20261029-04",
@@ -97,6 +108,10 @@
     {
       "date": "2026-10-29",
       "event": "Owner02 reports both draft P2 issues fixed with real Clang evidence; all 45 compiler and 10 contract tests plus baseline passed. Awaiting fixed DONE commit; no integration or independent fix closure claimed."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Owner02 fixed DONE afada754 merged at 761b652. Root candidate now includes all five completion runtime modules, 35 resources, profile80135c59f01b26fc; real existing C/C++ compile/debug pipeline3, baseline and contract10 passed. Raw root evidence preserved in app/integration/evidence/completion-backend-2026-10-29. No full feature ACCEPT yet."
     }
   ],
   "api": {
