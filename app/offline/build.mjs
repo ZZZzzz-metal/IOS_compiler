@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {createHash, randomUUID} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {createIntegrationCandidate} from '../integration/candidate.mjs';
+import {ISOLATED_WORKER_PATHS} from './browser/trust.mjs';
 
 const root=fileURLToPath(new URL('../../',import.meta.url));
 const local=resolve(root,'app/offline/.local');
@@ -41,8 +42,9 @@ export async function buildOfflineSite({outputDirectory=resolve(local,'site')}={
   const add=async(path,source=path)=>payload.set(safePath(path),await readFile(resolve(root,source)));
   for(const resource of candidate.resources)await add(resource.relativePath);
   for(const path of ['ui/probe.html','ui/style.css','ui/src/main.mjs','ui/src/session-controller.mjs','ui/src/editor.mjs',
-    'storage/src/draft-store.mjs','storage/src/autosave.mjs','ui/README.md','ui/SHORTCUTS.md','storage/README.md',
-    'compiler/README.md','debugger/README.md','app/offline/browser/trust.mjs'])await add(path);
+    'ui/src/completion-controller.mjs','ui/src/completion-popup.mjs','ui/src/completion-edit.mjs','ui/src/completion-editor.mjs',
+    'storage/src/draft-store.mjs','storage/src/autosave.mjs','ui/README.md','ui/SHORTCUTS.md','ui/COMPLETION.md','storage/README.md',
+    'compiler/README.md','compiler/COMPLETION.md','debugger/README.md','app/offline/browser/trust.mjs'])await add(path);
   for(const name of ['index.html','launcher.mjs','style.css','icon.svg'])await add(name,`app/offline/browser/${name}`);
   await add('IPAD-USER-MANUAL.md','docs/architecture/IPAD-USER-MANUAL.md');
   const manual=payload.get('IPAD-USER-MANUAL.md').toString('utf8');
@@ -50,6 +52,8 @@ export async function buildOfflineSite({outputDirectory=resolve(local,'site')}={
   payload.set('ui/.local/candidate.json',json({profile:candidate.profile,resources:candidate.resources,lock:candidate.lock,capabilities,
     declaration:'Versioned offline Web experiment. Real iPad offline acceptance and distribution remain unverified.'}));
   payload.set('manifest.webmanifest',json({name:'算法工作台 · 离线实验',short_name:'算法工作台',lang:'zh-CN',start_url:'./index.html',scope:'./',display:'standalone',background_color:'#f5f4ef',theme_color:'#234d3c',icons:[{src:'./icon.svg',sizes:'any',type:'image/svg+xml',purpose:'any'}]}));
+  // Worker URLs are dynamic and cannot be discovered by the static import check.
+  for(const path of ISOLATED_WORKER_PATHS)if(!payload.has(path))throw Error('Unpackaged isolated worker: '+path);
   // Relative module imports must resolve inside this package. Node branches are unused in browsers.
   for(const [path,bytes] of payload){
     if(!path.endsWith('.mjs'))continue;
