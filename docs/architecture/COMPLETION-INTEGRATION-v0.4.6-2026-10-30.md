@@ -40,3 +40,5 @@
 5号最终固定UI/完整包独立DONE仍待；收到后按原字节合入并追加限定结论，再向2/4/5发送ACCEPT回执。能力保持implemented-unverified，正式profile未选择、产品offline-bundle为unprepared，iPad/G2/G3与完整分发许可未完成。旧包/标签/失败证据和草稿不替换。
 
 平板操作使用[完整手册](IPAD-USER-MANUAL.md)及离线[代码提示说明](../../ui/COMPLETION.md)。首次真机时1号一次给一个操作，等待用户反馈后再继续。GitHub交付推integration/模块分支和新固定标签、另建PR，main仍由用户手动合并；实际推送成功后再追加链接。
+
+2026-10-30已实际推送integration a6093b5及2/4/5当前固定分支，并建立[草稿PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)，已附到1号任务。main ef5d390保持不动，无强推或合并；maintainer_can_modify=false。5号最终UI/新包固定交接尚待，因此保持draft、不发最终功能ACCEPT或新标签。完整大二进制、ZIP和本地TLS不入Git。实际回执见app/offline/evidence/completion-publication-2026-10-30。
