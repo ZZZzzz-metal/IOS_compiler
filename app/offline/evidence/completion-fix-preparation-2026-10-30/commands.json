@@ -1,0 +1,28 @@
+[
+  {
+    "command": "node --test tests/completion-fix-oracle-checks.mjs",
+    "exitCode": 0,
+    "tests": 5,
+    "stdout": "oracle-infrastructure.stdout.txt",
+    "stderr": "oracle-infrastructure.stderr.txt"
+  },
+  {
+    "command": "node --test tests/completion-fixtures-checks.mjs tests/completion-oracle-checks.mjs tests/completion-fix-fixtures-checks.mjs",
+    "exitCode": 0,
+    "stdout": "remaining-infrastructure.stdout.txt",
+    "stderr": "remaining-infrastructure.stderr.txt",
+    "tests": 23
+  },
+  {
+    "command": "npm.cmd run check",
+    "exitCode": 0,
+    "stdout": "mandatory-check.stdout.txt",
+    "stderr": "mandatory-check.stderr.txt"
+  },
+  {
+    "command": "npm.cmd test",
+    "exitCode": 0,
+    "stdout": "mandatory-test.stdout.txt",
+    "stderr": "mandatory-test.stderr.txt"
+  }
+]

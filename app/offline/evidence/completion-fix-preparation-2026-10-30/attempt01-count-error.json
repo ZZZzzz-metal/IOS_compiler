@@ -1,0 +1,8 @@
+{
+  "type": "root harness test-count assertion",
+  "command": "node --test tests/completion-fix-oracle-checks.mjs",
+  "observedExitCode": 0,
+  "observedTestsPassed": 5,
+  "incorrectExpectedCount": 28,
+  "cause": "28 is the full four-file infrastructure set; the first root command selected only the new strict oracle file. No product test failed. Original stdout/stderr are preserved. Run only the other three files next, giving23 more unique checks."
+}

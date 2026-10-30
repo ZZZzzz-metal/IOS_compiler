@@ -1,0 +1,16 @@
+{
+  "independentPreparationCommit": "bef7bc973780e55d5eecdcdfc0e7da1c3d1c6fad",
+  "preparationMerge": "e5dce6488d313b8b9074869047aaeeaaf25efbf1",
+  "clarificationCommit": "2a0a81dc59dd7a805e7f88b63c5482f7ca90878a",
+  "clarificationMerge": "8eb50934204e446e1b5ba3fb6d8a03ce0c33a1be",
+  "allowedPreparationScopeFiles": 93,
+  "sealedFilesVerifiedWithGit": 84,
+  "queries": 11,
+  "fullCallControls": 24,
+  "rootUniqueInfrastructureChecks": 28,
+  "originalInputsAndOracleUnchanged": true,
+  "preparationAccepted": true,
+  "productFixAccepted": false,
+  "providerQueriesRunInPreparation": 0,
+  "executionRequirement": "Const negative calls must match expected const semantic diagnostics, not arbitrary compiler-exit. No original failure oracle is relaxed."
+}

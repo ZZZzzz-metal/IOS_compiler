@@ -219,6 +219,10 @@
     {
       "date": "2026-10-30",
       "event": "Human requires known failures fixed before iPad testing. Reopened both issues under new request IDs; owners02/05/04 explicitly ACKed. PR4 actually converted back to draft/open/unmerged. Prior fixed tags, bundles, evidence and limited ACCEPT remain history; no new fix success claimed."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Accepted only owner05 repair verification preparation bef7bc97 merged e5dce648 and clarification2a0a81dc:84 sealed Git files,11 queries/24 call controls. Root28 infrastructure checks (5+23 unique) and mandatory commands passed. Root initial selected-file count assertion preserved as harness error. No product fix or real provider acceptance claimed."
     }
   ],
   "api": {
@@ -250,9 +254,15 @@
       {
         "id": "CC-20261030-05",
         "owner": 5,
-        "state": "ACK",
+        "state": "ACCEPT-PREP",
         "scope": "independent original-oracle positive/negative verification after fixed delivery",
-        "delivery": "pending"
+        "delivery": "bef7bc973780e55d5eecdcdfc0e7da1c3d1c6fad",
+        "mergeCommit": "e5dce6488d313b8b9074869047aaeeaaf25efbf1",
+        "clarificationCommit": "2a0a81dc59dd7a805e7f88b63c5482f7ca90878a",
+        "queries": 11,
+        "fullCallControls": 24,
+        "sealedGitFilesVerified": 84,
+        "featureAcceptance": false
       },
       {
         "id": "CC-20261030-04",
