@@ -1,5 +1,7 @@
 # IOS_compiler · iPad 离线 C/C++ 编译调试工作台
 
+**当前：先修复已知问题，再进行真机验证。** 用户要求关闭const-string非法成员模板候选、unavailable仍可选择两项已确认问题。2号已接修复、5号负责独立复验；[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)已恢复草稿，暂缓合并和真机推进。进度见[本轮修复计划](docs/architecture/COMPLETION-FIX-PLAN-2026-10-30.md)。下方0.4.6为重开修复前的历史交付记录。
+
 2026-10-30当前版本0.4.6：真实离线成员、变量和函数提示已集成，5号最终UI/完整包交付cbc92b2已合入6ba18d2并在已测桌面范围签收。原33场景32通过、const-string一项边界失败；另有unavailable属性边界失败，两项均未修复。62资源新包及停服后全新源码补全、编译调试、撤销与草稿重开已有独立证据；真实iPad仍待验证。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)由你手动合并；精确身份、结果与限制见[本轮报告](docs/architecture/COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md)。旧包、标签和原始失败保留。
 
 2026-10-28最终追加：5号e4ce507已合入。固定40a079b/r3最终组合和完整包在已测桌面范围独立通过；常规258、另列离线22、监视25加1范围、剪贴板8场景25断言及69条真实浏览器观察通过。REV-001仅入口缺失/当前完成缓存trust损坏两类实际桌面恢复独立关闭；真实iPad、草稿强可靠性和G2/G3仍待。旧标签/包/失败保留，旧版最终结论见 [最终桌面验收追加](docs/architecture/FINAL-DESKTOP-ACCEPTANCE-v0.4.5-2026-10-28.md)。下方各轮发布时记录按当时时点保留。

@@ -22,13 +22,13 @@ if (requested && !Object.hasOwn(moduleDefinitions, requested)) {
   const profiles = await json('contracts/compatibility-profiles.json');
   console.log(JSON.stringify({
     project: 'iPad 离线 C/C++ 编译调试工具', location: fileURLToPath(root),
-    delivery: '真实离线代码提示、编译调试及新完整包已完成限定桌面独立验收；已知补全边界和真机待验保留', baseline: '0.4.6',
+    delivery: '两项已知补全问题重开修复；先修复并独立复验，再推进真机验证', baseline: '0.4.6-known-issues-reopened',
     protocolVersion: capabilities.protocolVersion, selectedRoute: profiles.selectedCompatibilityId,
     offlineReady: false, deviceValidation: '待验证',
     verifiedCapabilities: capabilities.capabilities.filter(item => item.status === 'verified').length,
     implementedUnverifiedCapabilities: capabilities.capabilities.filter(item => item.status === 'implemented-unverified').length,
     modules: moduleDefinitions,
     commands: { workbench: 'npm start', prepareOffline: 'npm run prepare:offline', offlineEntry: 'npm run start:offline', offlineChecks: 'npm run test:offline', status: 'npm run status', demo: 'npm run demo:integration', tests: 'npm run test:integration', ui: 'npm run test:ui', acceptance: 'npm run test:acceptance', regressions: 'npm run test:regressions', initializer: 'npm run test:initializer' },
-    next: 'GitHub PR #4由用户手动合并；真实iPad按手册逐步执行P01–P11。const-string及unavailable候选边界未修，G2/G3仍待。',
+    next: '2号修复const-string非法成员模板候选及unavailable可选择问题，5号独立复验，1号集成新包；PR #4保持草稿，真机验证暂缓。',
   }, null, 2));
 }

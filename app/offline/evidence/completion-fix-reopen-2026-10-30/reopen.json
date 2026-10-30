@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-30",
+  "previousIntegration": "52ef97907dd506d8bf1d38381abd5e3d335be907",
+  "humanDirection": "Fix known completion failures before device testing",
+  "originalFailures": [
+    "const-string non-const member-template candidates on const receiver",
+    "unavailable declaration remains selectable"
+  ],
+  "ownersAcknowledged": [
+    2,
+    5,
+    4
+  ],
+  "newRequestIds": [
+    "CC-20261030-02",
+    "CC-20261030-05",
+    "CC-20261030-04"
+  ],
+  "prDraftConfirmed": true,
+  "deviceValidationOnHold": true,
+  "fixDelivered": false,
+  "fixedAccepted": false,
+  "previousTagsBundlesAndEvidenceUnchanged": true,
+  "note": "Previous limited desktop acceptance remains a historical scope record. New repair cycle requires original failure expectations to pass and independent verification before device testing."
+}

@@ -215,6 +215,10 @@
     {
       "date": "2026-10-30",
       "event": "Published fixed tag integration-v0.4.6 at b4781949 and owner05 cbc92b26. PR4 confirmed open/ready/unmerged with main ef5d390 and maintainer modification false. Actual ACCEPT notices sent to02/04/05 and all three explicitly ACK-ACCEPTed; handshake closed within documented desktop scope. Following documentation receipts do not move the tag or alter the bundle."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Human requires known failures fixed before iPad testing. Reopened both issues under new request IDs; owners02/05/04 explicitly ACKed. PR4 actually converted back to draft/open/unmerged. Prior fixed tags, bundles, evidence and limited ACCEPT remain history; no new fix success claimed."
     }
   ],
   "api": {
@@ -224,5 +228,46 @@
     "owner04": "API-ACK CC-20261029-04; accepted without shared changes",
     "commit": "38ff3075a4b47c3f72ae2f6552a04e58da07d6c0",
     "owner05": "API-ACK CC-20261029-05; preserved fixtures and fast-forwarded frozen commit"
+  },
+  "repairCycle": {
+    "date": "2026-10-30",
+    "reason": "Human requires known issues fixed before device validation",
+    "state": "ACK",
+    "deviceValidationOnHold": true,
+    "pr": {
+      "number": 4,
+      "draft": true,
+      "merged": false
+    },
+    "requests": [
+      {
+        "id": "CC-20261030-02",
+        "owner": 2,
+        "state": "ACK",
+        "scope": "semantic repair of const member-template and unavailable candidates",
+        "delivery": "pending"
+      },
+      {
+        "id": "CC-20261030-05",
+        "owner": 5,
+        "state": "ACK",
+        "scope": "independent original-oracle positive/negative verification after fixed delivery",
+        "delivery": "pending"
+      },
+      {
+        "id": "CC-20261030-04",
+        "owner": 4,
+        "state": "ACK",
+        "scope": "UI frozen; wait for specific integration/API delta",
+        "delivery": "not required unless API/UI delta"
+      }
+    ],
+    "acceptanceConditions": [
+      "Original const-string failure actually passes without name blacklists or oracle changes",
+      "Original unavailable failure actually passes while valid deprecated and ordinary candidates remain",
+      "Independent fixed-target verification, affected regressions and new immutable full-package desktop workflow pass before device validation"
+    ],
+    "successfulDone": false,
+    "accepted": false
   }
 }

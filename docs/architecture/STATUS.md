@@ -1,5 +1,9 @@
 # 集成状态表
 
+## 当前：两项已知补全问题必须修复后再真机验证
+
+用户要求先修好已知问题。const-string非法模板成员候选、unavailable符号可选择两项重新进入必须关闭的缺陷；2号ACK修复、5号ACK独立复验、4号ACK保持UI冻结。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)已实际恢复draft/open/unmerged，暂缓合并与真机推进。新轮无成功DONE/ACCEPT，旧v0.4.6和LIMITED-DESKTOP ACCEPT按历史保留。详见[修复计划](COMPLETION-FIX-PLAN-2026-10-30.md)。以下为此前发布时记录。
+
 ## 2026-10-30当前增量：离线代码补全
 
 发布回执：固定标签integration-v0.4.6（b4781949）和5号cbc92b26已推送，[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)已结束草稿、open且未合并；2/4/5均实际回复ACK-ACCEPT，握手闭环。根mandatory check/test通过。下一步由用户手动审核合并PR，并在真机开始时按手册P01–P11一次一步反馈；两项补全边界及iPad/G2/G3待验保持。发布后的文档回执不改变固定标签或包。
