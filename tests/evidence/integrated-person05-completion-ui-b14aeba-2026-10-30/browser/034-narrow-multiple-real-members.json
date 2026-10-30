@@ -1,0 +1,87 @@
+{
+  "id": 34,
+  "name": "narrow-multiple-real-members",
+  "at": "2026-10-30T01:39:34.211Z",
+  "expectation": "10 actual candidates, scrollable rows preserve footer",
+  "state": "Browser tab: 3, Title: \"算法工作台 · 四号验证原型\", URL: \"http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\n~\t\t170 text 10 个提示 · ↑↓选择，Tab 或 Enter 插入\n~\t\t171 text 草稿已保存 · 版本 18\n+\t172 container completion-popup\n+\t\t173 list Description: 代码提示, ID: completion-list-1\n+\t\t\t174 (selected) Help: PersonRows::, Value: 符号 PersonRows PersonRows::, ID: completion-option-1-159-0\n+\t\t\t175 Help: PersonRows & operator=(const PersonRows &), Value: 符号 operator= PersonRows & operator=(const PersonRows &), ID: completion-option-1-159-1\n+\t\t\t176 Help: PersonRows & operator=(PersonRows &&), Value: 符号 operator= PersonRows & operator=(PersonRows &&), ID: completion-option-1-159-2\n+\t\t\t177 Help: int rowFive, Value: 符号 rowFive int rowFive, ID: completion-option-1-159-3\n+\t\t\t178 Help: int rowFour, Value: 符号 rowFour int rowFour, ID: completion-option-1-159-4\n+\t\t\t179 Help: int rowOne, Value: 符号 rowOne int rowOne, ID: completion-option-1-159-5\n+\t\t\t180 Help: int rowSix, Value: 符号 rowSix int rowSix, ID: completion-option-1-159-6\n+\t\t\t181 Help: int rowThree, Value: 符号 rowThree int rowThree, ID: completion-option-1-159-7\n+\t\t\t182 Help: int rowTwo, Value: 符号 rowTwo int rowTwo, ID: completion-option-1-159-8\n+\t\t\t183 Help: void ~PersonRows(), Value: 符号 ~PersonRows void ~PersonRows(), ID: completion-option-1-159-9\n+\t\t184 text ↑↓ 选择 · Tab / Enter 插入 · Esc 关闭\nThe focused UI element is 154 text entry area (settable) Description: 源代码, ID: source, Value: struct PersonRows {int rowOne;int rowTwo;int rowThree;int rowFour;int rowFive;int rowSix;};\nvoid probe(){PersonRows value;value.",
+  "dom": {
+    "body": "算法工作台\n开发验证原型\n\n粘贴代码，带着输入运行，在暂停处排错。\n\n校验本地资源\n本版本离线资源已校验 · iPad 真机待验证\niPad 离线冷启动待验证\n原型说明与验证步骤\nC++17\nC11\n编译运行\n编译调试\n继续\n进入\n跳过\n跳出\n停止\n已结束\n键盘快捷键 无 F 键也能调试\n代码\n调试与输入输出\n粘贴代码\n复制题站源码\n导入\n仅题站源码\n完整草稿\n导出\n题站源码\n测试驱动\n查看调试快照\nmain.cpp\n源码已修改 · 请重新编译\n1\n2\nstruct PersonRows {int rowOne;int rowTwo;int rowThree;int rowFour;int rowFive;int rowSix;};\nvoid probe(){PersonRows value;value.\n\n切换断点\n代码提示\n缩进\n取消缩进\n下一处\n\n10 个提示 · ↑↓选择，Tab 或 Enter 插入\n\n草稿已保存 · 版本 18\n断点与编译诊断\n符号\nPersonRows\nPersonRows::\n符号\noperator=\nPersonRows & operator=(const PersonRows &)\n符号\noperator=\nPersonRows & operator=(PersonRows &&)\n符号\nrowFive\nint rowFive\n符号\nrowFour\nint rowFour\n符号\nrowOne\nint rowOne\n符号\nrowSix\nint rowSix\n符号\nrowThree\nint rowThree\n符号\nrowTwo\nint rowTwo\n符号\n~PersonRows\nvoid ~PersonRows()\n↑↓ 选择 · Tab / Enter 插入 · Esc 关闭",
+    "fields": [
+      {
+        "disabled": false,
+        "id": "language",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "cpp"
+      },
+      {
+        "disabled": false,
+        "id": "shortcut-scheme",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "control-number"
+      },
+      {
+        "disabled": false,
+        "id": "export-mode",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "user-source"
+      },
+      {
+        "disabled": false,
+        "id": "file",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "source",
+        "readOnly": false,
+        "selectionEnd": 128,
+        "selectionStart": 128,
+        "value": "struct PersonRows {int rowOne;int rowTwo;int rowThree;int rowFour;int rowFive;int rowSix;};\nvoid probe(){PersonRows value;value."
+      },
+      {
+        "disabled": false,
+        "id": "find",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "stdin",
+        "readOnly": false,
+        "selectionEnd": 2,
+        "selectionStart": 2,
+        "value": "3\n"
+      },
+      {
+        "disabled": false,
+        "id": "expression",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "clipboard-text",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      }
+    ],
+    "popup": "<div class=\"completion-list\" id=\"completion-list-1\" role=\"listbox\" aria-label=\"代码提示\" aria-busy=\"false\" style=\"max-height: 311.231px;\"><div class=\"completion-option is-selected\" id=\"completion-option-1-159-0\" role=\"option\" title=\"PersonRows::\" aria-selected=\"true\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">PersonRows</span><span class=\"completion-detail\">PersonRows::</span></div><div class=\"completion-option\" id=\"completion-option-1-159-1\" role=\"option\" title=\"PersonRows &amp; operator=(const PersonRows &amp;)\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">operator=</span><span class=\"completion-detail\">PersonRows &amp; operator=(const PersonRows &amp;)</span></div><div class=\"completion-option\" id=\"completion-option-1-159-2\" role=\"option\" title=\"PersonRows &amp; operator=(PersonRows &amp;&amp;)\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">operator=</span><span class=\"completion-detail\">PersonRows &amp; operator=(PersonRows &amp;&amp;)</span></div><div class=\"completion-option\" id=\"completion-option-1-159-3\" role=\"option\" title=\"int rowFive\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowFive</span><span class=\"completion-detail\">int rowFive</span></div><div class=\"completion-option\" id=\"completion-option-1-159-4\" role=\"option\" title=\"int rowFour\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowFour</span><span class=\"completion-detail\">int rowFour</span></div><div class=\"completion-option\" id=\"completion-option-1-159-5\" role=\"option\" title=\"int rowOne\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowOne</span><span class=\"completion-detail\">int rowOne</span></div><div class=\"completion-option\" id=\"completion-option-1-159-6\" role=\"option\" title=\"int rowSix\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowSix</span><span class=\"completion-detail\">int rowSix</span></div><div class=\"completion-option\" id=\"completion-option-1-159-7\" role=\"option\" title=\"int rowThree\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowThree</span><span class=\"completion-detail\">int rowThree</span></div><div class=\"completion-option\" id=\"completion-option-1-159-8\" role=\"option\" title=\"int rowTwo\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowTwo</span><span class=\"completion-detail\">int rowTwo</span></div><div class=\"completion-option\" id=\"completion-option-1-159-9\" role=\"option\" title=\"void ~PersonRows()\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">~PersonRows</span><span class=\"completion-detail\">void ~PersonRows()</span></div></div>",
+    "title": "算法工作台 · 四号验证原型",
+    "url": "http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html"
+  }
+}

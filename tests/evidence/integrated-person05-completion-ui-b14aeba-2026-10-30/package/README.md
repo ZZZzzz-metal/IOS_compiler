@@ -1,0 +1,13 @@
+# 5号v0.4.6完整包独立审计
+
+固定目标b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34。只读主仓完整ZIP，新解压到5号tests/.local/completion-v046-b14aeba-person05/site；不重建包、不覆盖旧目录。ZIP为19,330,126字节、71成员，SHA-256为7cb501a11ebde61b26d019a711aa822d3fc03b5e3d22be759a05860502fa78e5，70条内部成员清单全部通过。
+
+固定bundle为ipad-web-probe-cbe80b74ccc3d3cebece9e73，62资源、60,964,100字节；后端integration-prototype-80135c59f01b26fc。SW、descriptor及每个资源实际长度/hash均符合指定身份。54资源与固定Git字节完全相同，4个大工具链资源与锁定hash相同，3项生成内容符合固定输入；另1项手册原字节是CRLF，固定Git为LF，显式规范化后全文相同。不得把这项手册写作raw Git字节完全一致。
+
+初始严格字节断言对此手册差异exit1，原runner.mjs/failure.json保留；run02只对这项已知EOL变体作明确处理，继续完整校验包内不可变实际hash，最后exit0。report.json的sourceBindings已记录该第四类，原summary计数漏列第四类；verify-report.mjs另算54+1+4+3=62，audit-summary.json给出完整口径，未重写原运行输出。archive手册、运行手册保留一致的包内原字节；生成manual.html按包内实际手册字节核对，并绑定Git的同文内容。
+
+46条浏览器静态导入全部在包内。编译、补全、调试三个隔离Worker在实际构造点、trusted35组件清单及完整62资源中均存在；补全的memfs/clang/sysroot也在锁与包中。ui/COMPLETION.md、compiler/COMPLETION.md及快捷键文档均已打包。
+
+bddae57653bede9a38a3510006d761e2a9d19a04到b14aebab：compiler/debugger/app/integration、共享protocol/invariants实际实现和依赖无差异；35后端资源均按Git字节或固定vendor锁逐项比较。根package只改版本/格式，锁只改根版本，没有新增依赖或改变脚本、引擎、依赖图；capabilities只增加implemented-unverified的editor-code-completion及日期，旧条目和协议保持。因而支持复用既有固定后端的限定语义/生命周期证据；原const-string、unavailable/deprecated边界保持，不能由此宣称新UI或真机通过。
+
+本审计没有执行浏览器、系统断网、真实iPad或证书安装，未签收完整语言服务或分发许可。具体完整检查在report.json、audit-summary.json、zip-members.json和实际执行脚本副本。

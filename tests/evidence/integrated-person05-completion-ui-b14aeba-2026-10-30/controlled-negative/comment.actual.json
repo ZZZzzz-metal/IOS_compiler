@@ -1,0 +1,39 @@
+{
+  "id": "comment",
+  "target": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "fixturePath": "fixtures/completion-independent/comment.cpp",
+  "sourcePath": "main.cpp",
+  "marker": "/*<cc>*/",
+  "offsetUtf16": 58,
+  "line": 3,
+  "columnUtf16": 15,
+  "sourceHash": "sha256:b004c50f0d2777d32d6fe08a760e67b60c38b6d9d3a6c11d3c6395d8bd5d8ef8",
+  "delayMs": 300,
+  "requestedWaitMs": 450,
+  "elapsedMs": 459.3591,
+  "providerCallCount": 0,
+  "calls": [],
+  "actualState": {
+    "phase": "idle",
+    "items": [],
+    "selectedIndex": -1,
+    "token": 1,
+    "message": ""
+  },
+  "states": [
+    {
+      "phase": "idle",
+      "items": [],
+      "selectedIndex": -1,
+      "token": 1,
+      "message": ""
+    }
+  ],
+  "checks": {
+    "waitExceedsAutomaticDelay": true,
+    "providerCallsZero": true,
+    "phaseIdle": true,
+    "itemsEmpty": true
+  },
+  "passed": true
+}

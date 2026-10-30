@@ -1,0 +1,87 @@
+{
+  "id": 33,
+  "name": "narrow-ctrlspace-pattern",
+  "at": "2026-10-30T01:38:56.332Z",
+  "expectation": "390x844 CtrlSpace opens real Pattern signature and footer",
+  "state": "Browser tab: 3, Title: \"算法工作台 · 四号验证原型\", URL: \"http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 167\n~\t\t165 text 1 个提示 · ↑↓选择，Tab 或 Enter 插入\n~\t\t166 list Description: 代码提示, ID: completion-list-1\n+\t\t\t167 (selected) Help: int Pattern(int value), Value: 符号 Pattern int Pattern(int value), ID: completion-option-1-154-0\n+\t\t168 text ↑↓ 选择 · Tab / Enter 插入 · Esc 关闭\nThe focused UI element is 154 text entry area (settable) Description: 源代码, ID: source, Value: int Pattern(int value);\nint main(){ Pat",
+  "dom": {
+    "body": "算法工作台\n开发验证原型\n\n粘贴代码，带着输入运行，在暂停处排错。\n\n校验本地资源\n本版本离线资源已校验 · iPad 真机待验证\niPad 离线冷启动待验证\n原型说明与验证步骤\nC++17\nC11\n编译运行\n编译调试\n继续\n进入\n跳过\n跳出\n停止\n已结束\n键盘快捷键 无 F 键也能调试\n代码\n调试与输入输出\n粘贴代码\n复制题站源码\n导入\n仅题站源码\n完整草稿\n导出\n题站源码\n测试驱动\n查看调试快照\nmain.cpp\n源码已修改 · 请重新编译\n1\n2\nint Pattern(int value);\nint main(){ Pat\n\n切换断点\n代码提示\n缩进\n取消缩进\n下一处\n\n1 个提示 · ↑↓选择，Tab 或 Enter 插入\n\n草稿已保存 · 版本 17\n断点与编译诊断\n符号\nPattern\nint Pattern(int value)\n↑↓ 选择 · Tab / Enter 插入 · Esc 关闭",
+    "fields": [
+      {
+        "disabled": false,
+        "id": "language",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "cpp"
+      },
+      {
+        "disabled": false,
+        "id": "shortcut-scheme",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "control-number"
+      },
+      {
+        "disabled": false,
+        "id": "export-mode",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "user-source"
+      },
+      {
+        "disabled": false,
+        "id": "file",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "source",
+        "readOnly": false,
+        "selectionEnd": 39,
+        "selectionStart": 39,
+        "value": "int Pattern(int value);\nint main(){ Pat"
+      },
+      {
+        "disabled": false,
+        "id": "find",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "stdin",
+        "readOnly": false,
+        "selectionEnd": 2,
+        "selectionStart": 2,
+        "value": "3\n"
+      },
+      {
+        "disabled": false,
+        "id": "expression",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "clipboard-text",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      }
+    ],
+    "popup": "<div class=\"completion-list\" id=\"completion-list-1\" role=\"listbox\" aria-label=\"代码提示\" aria-busy=\"false\" style=\"max-height: 60px;\"><div class=\"completion-option is-selected\" id=\"completion-option-1-154-0\" role=\"option\" title=\"int Pattern(int value)\" aria-selected=\"true\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">Pattern</span><span class=\"completion-detail\">int Pattern(int value)</span></div></div>",
+    "title": "算法工作台 · 四号验证原型",
+    "url": "http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html"
+  }
+}
