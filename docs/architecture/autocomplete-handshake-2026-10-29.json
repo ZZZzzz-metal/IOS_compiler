@@ -11,10 +11,10 @@
     {
       "id": "CC-20261029-02",
       "owner": 2,
-      "state": "DONE",
+      "state": "ACCEPT",
       "delivery": "afada754dc249e03dc33ea3f3d48836d20452a4c",
       "ack": "Owner verified the real human authorization; clean worktree and fast-forward baseline checked. Offline Clang feasibility and API ACK pending.",
-      "progress": "Fixed backend delivered and merged; root pipeline/check/contracts passed. UI, complete offline package and independent acceptance pending.",
+      "progress": "Fixed delivery integrated and independently accepted in the documented desktop prototype scope; const-string/unavailable boundaries and iPad/G2/G3 remain open.",
       "integration": {
         "state": "BACKEND-INTEGRATED",
         "mergeCommit": "761b652549f57731b372c3f7c77f065da063d70c",
@@ -24,29 +24,49 @@
           "pass": 3,
           "fail": 0
         },
-        "independentFeatureAcceptance": "pending"
+        "independentFeatureAcceptance": "accepted-desktop-scope-with-known-boundaries"
+      },
+      "acceptance": {
+        "scope": "documented desktop prototype only",
+        "independentDelivery": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
+        "mergeCommit": "6ba18d2c9785f85a4b3c90b734a457b144d4c83d",
+        "fixedRuntimeSource": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+        "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+        "replyDelivery": "pending final publication notice",
+        "boundaryFailuresClosed": false,
+        "iPadVerified": false
       }
     },
     {
       "id": "CC-20261029-04",
       "owner": 4,
-      "state": "DONE",
+      "state": "ACCEPT",
       "delivery": "e2efc07724f359b9a5430dd21485bc6cf32d003b",
       "ack": "Owner verified human authorization; accepted UI lead, injectable consumer and real provider dependency. API ACK pending.",
-      "progress": "Owner fixed UI delivered and merged; owner automated213 and actual22 browser observations, final full offline package and independent UI acceptance pending.",
+      "progress": "Fixed delivery integrated and independently accepted in the documented desktop prototype scope; const-string/unavailable boundaries and iPad/G2/G3 remain open.",
       "integration": {
         "state": "UI-INTEGRATED",
         "mergeCommit": "537a27b9a43c57d320c110aff1fa44790b653875",
-        "independentFeatureAcceptance": "pending"
+        "independentFeatureAcceptance": "accepted-desktop-scope-with-known-boundaries"
+      },
+      "acceptance": {
+        "scope": "documented desktop prototype only",
+        "independentDelivery": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
+        "mergeCommit": "6ba18d2c9785f85a4b3c90b734a457b144d4c83d",
+        "fixedRuntimeSource": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+        "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+        "replyDelivery": "pending final publication notice",
+        "boundaryFailuresClosed": false,
+        "iPadVerified": false
       }
     },
     {
       "id": "CC-20261029-05",
       "owner": 5,
-      "state": "ACK",
-      "delivery": "pending",
+      "state": "ACCEPT",
+      "delivery": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
       "ack": "Owner verified human authorization; independent fixture/negative-case preparation accepted. Final fixed target/API/package pending.",
-      "progress": "Independent backend stage merged, original boundary failures preserved; final UI and complete offline package acceptance pending.",
+      "progress": "Fixed delivery integrated and independently accepted in the documented desktop prototype scope; const-string/unavailable boundaries and iPad/G2/G3 remain open.",
       "preparation": {
         "state": "ACCEPT-PREP",
         "commit": "0b062df7a015463677213f46552e80927138325d",
@@ -71,7 +91,40 @@
         "boundaryFailed": 1,
         "uiPending": 3,
         "extraAvailabilityBoundaryFailed": 1,
-        "finalAcceptance": "pending"
+        "finalAcceptance": "included in final desktop scope; original boundary failures retained"
+      },
+      "acceptance": {
+        "scope": "documented desktop prototype only",
+        "independentDelivery": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
+        "mergeCommit": "6ba18d2c9785f85a4b3c90b734a457b144d4c83d",
+        "fixedRuntimeSource": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+        "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+        "replyDelivery": "pending final publication notice",
+        "boundaryFailuresClosed": false,
+        "iPadVerified": false
+      },
+      "finalStage": {
+        "sealedFiles": 150,
+        "originalLogicalCases": 33,
+        "pass": 32,
+        "boundaryFailed": 1,
+        "uiPending": 0,
+        "extraAvailabilityBoundaryFailed": 1,
+        "actualBrowserObservations": 42,
+        "browserEvidenceConsistencyAssertions": 251,
+        "controlledRaces": {
+          "scenarios": 26,
+          "assertions": 105
+        },
+        "controlledEditing": {
+          "scenarios": 23,
+          "assertions": 339
+        },
+        "originalUiNegatives": {
+          "scenarios": 3,
+          "assertions": 12
+        },
+        "rootGitBytesVerified": true
       }
     }
   ],
@@ -148,6 +201,10 @@
     {
       "date": "2026-10-30",
       "event": "Explicit integration/module02/module04/module05 branch push succeeded; draft PR4 created and attached with maintainer modification disabled. Main remains ef5d390 and unmerged. Owner05 final fixed UI/package handoff pending, so no feature ACCEPT or new release tag."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Owner05 fixed DONE cbc92b26 integrated at6ba18d2. Root verified164 allowed-scope files,150 immutable evidence files/Git bytes, prior39/8/16 root files and both unchanged archives. Documented desktop prototype scope ACCEPT recorded for02/04/05; const-string/unavailable boundaries and iPad/G2/G3 remain open. Final publication notices follow actual remote success."
     }
   ],
   "api": {

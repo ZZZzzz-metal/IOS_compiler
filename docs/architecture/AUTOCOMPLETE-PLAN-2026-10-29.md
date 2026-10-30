@@ -54,3 +54,5 @@ UI输入轻量防抖，单个活动补全，只保留最新请求；开始编译
 2026-10-30独立后端阶段已接收：5号固定5d3734da及核验器修复4e29b392合入dc518c76。原33逻辑例29通过、const-string一项边界失败、3项UI待验；补充unavailable为额外一项逻辑边界失败。原oracle/exit1保留，不能写全通过。60条真实双路响应逐字段一致；生命周期7场景25检查与常规276、离线23、基础设施16均通过，仍是5号阶段范围。根合并后452/33封存文件Git原字节核验通过，4号20文件seal只读核验通过。最终UI/新包和功能ACCEPT继续待验。
 
 2026-10-30完整包实际结果追加：固定source b14aebab，新bundle ipad-web-probe-cbe80b74ccc3d3cebece9e73包含62资源60,964,100字节；完整ZIP19,330,126字节/71文件，首次准备18,118字节/6文件，全部成员/两控制面/手册SHA核验通过，14旧档不变。根实际4289停服冷开新源码补全、Tab单写/单次undo-redo、输出OFFLINE-CC=31/exit0、第6行localAnswer31及稿4重开恢复通过；严格同WiFiHTTPS电脑侧校验通过，平板互通未测。原始命令、转录观察及设施边界见app/offline/evidence/completion-package-2026-10-30，本轮详细报告COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md；5号最终UI/新包固定DONE仍待，尚未发送功能ACCEPT或推送新PR。
+
+2026-10-30最终追加：5号cbc92b26已合入6ba18d2，150文件封存及Git原字节核验通过；新完整包与实际桌面补全/撤销/编译调试/停服重开已独立完成。原33结转32通过、const-string一项边界失败，额外unavailable另失败；42条实际浏览器观察与受控26/105、23/339、3/12各自列明范围。1号作限定桌面ACCEPT，两个边界和真实iPad/G2/G3未关闭，能力仍implemented-unverified。包source b14aebab及cbe80b74资源不变，不为文档结论重建。最新结论及发布实际结果见COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md末尾与握手记录，PR #4由用户手动合并。

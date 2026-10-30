@@ -2,6 +2,8 @@
 
 ## 2026-10-30当前增量：离线代码补全
 
+最终追加：5号固定cbc92b26已合入6ba18d2，150个新封存文件及清单由1号再次核对SHA/大小/Git原字节一致。完整0.4.6包、实际桌面UI及停服冷开新代码流程在报告列明范围接受；原33逻辑例现为32通过、const-string一项边界失败，另有unavailable属性边界失败。两项未修，iPad/Safari、物理输入、完全断网、草稿强可靠性及G2/G3仍待，能力保持implemented-unverified。42条真实桌面观察、受控竞态26场景105断言、编辑23场景339断言及3个原UI负例分开记录，不相加冒充真机验收。固定包source仍为b14aebab、bundle cbe80b74，运行及包输入未改变；随包能力/手册中“待独立验收”是构建时快照，最新独立结果由[最终报告追加](COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md)和[5号报告](../validation/completion-ui-person05-b14aeba-2026-10-30.md)补充。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)仍由用户手动合并。下文为此前阶段状态，按记录时点保留。
+
 2号固定后端 afada754、4号固定界面 e2efc07 已分别合入761b652、537a27b。真实离线Clang候选接入成员/变量/函数弹窗，包含300ms自动、按钮、Ctrl+J/Ctrl+Space、键盘/触控选择与原生撤销；编译前等待补全Worker取消和释放。根35资源后端组合为integration-prototype-80135c59f01b26fc，既有真实流水线3/3；新合并界面/保存200、离线23、契约10全部通过，mandatory check/test通过。不同轮次和重复契约不累加。
 
 5号准备0b062df已合入；本轮真实语义/生命周期固定4e29b392已合入dc518c76：原33例29通过、const-string一项边界失败、3项UI待验，另有unavailable一项逻辑边界失败；276回归与生命周期7场景通过。完整新包与实际UI仍待其另验。Clang8的部分const字符串模板、unavailable/deprecated属性候选过滤存在已知边界，不宣称全量可调用性或完整VS语言服务。1号已生成0.4.6不可变62资源集合和完整平板手册，两份ZIP逐成员核验、14旧档不变，根桌面停服新源码补全/编译调试与电脑侧严格HTTPS通过；精确身份见[0.4.6报告](COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md)，5号最终UI/新包签收仍待；旧v0.4.5/r3、标签、失败证据和草稿保留。能力为implemented-unverified，真实iPad、G2/G3及分发许可仍待。用户已合并PR #2，main ef5d390的历史保留于62725ae，本轮已建立[草稿PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)，待5号最终固定交接合入后再结束草稿，main由用户手动合并。详见[补全计划](AUTOCOMPLETE-PLAN-2026-10-29.md)与[握手记录](autocomplete-handshake-2026-10-29.json)。
