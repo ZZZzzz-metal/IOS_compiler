@@ -1,0 +1,2637 @@
+{
+  "target": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+  "baseURL": "http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/",
+  "kind": "read-only-browser-evidence-consistency",
+  "rawObservationCount": 42,
+  "observationFiles": [
+    "001-fresh-fixed-launcher.json",
+    "002-prepared-62-resources.json",
+    "002-stopped-server-cold-launcher.json",
+    "003-unprepared-completion-gated.json",
+    "004-trusted-resource-ready.json",
+    "006-offline-workbench-trusted.json",
+    "007-fresh-alpha-dot-auto.json",
+    "008-alpha-keyboard-selection.json",
+    "009-tab-single-insertion.json",
+    "010-native-undo-one-step.json",
+    "011-native-redo-one-step.json",
+    "012-fresh-completed-program-before-compile.json",
+    "013-warm-completion-compile-run-exit17.json",
+    "014-offline-debug-entry.json",
+    "015-offline-debug-step-value.json",
+    "016-offline-breakpoint-expanded-member.json",
+    "017-readonly-debug-snapshot-gated.json",
+    "018-fresh-beta-type-change.json",
+    "019-mouse-single-insertion.json",
+    "020-middle-token-manual-prefix.json",
+    "021-enter-full-token-single-edit.json",
+    "022-comment-automatic-suppressed.json",
+    "023-string-literal-automatic-suppressed.json",
+    "024-decimal-automatic-suppressed.json",
+    "025-namespace-scope-real-candidates.json",
+    "026-escape-closes-candidates.json",
+    "027-arrow-real-member.json",
+    "028-language-change-dismisses-old-popup.json",
+    "029-c11-real-member.json",
+    "030-user-inc-translation-unit-real-member.json",
+    "031-file-change-dismisses-old-popup.json",
+    "032-pattern-real-function-signature.json",
+    "033-narrow-ctrlspace-pattern.json",
+    "034-narrow-multiple-real-members.json",
+    "035-focus-find-dismisses-old-candidates.json",
+    "036-find-shortcut-does-not-compile.json",
+    "037-before-import-old-popup.json",
+    "038-actual-import-invalidates-old-popup.json",
+    "039-manual-button-imported-token.json",
+    "040-imported-token-confirmed.json",
+    "041-imported-completion-offline-output23.json",
+    "042-stopped-server-cold-draft-restored.json"
+  ],
+  "checks": 251,
+  "passed": 251,
+  "failed": 0,
+  "notes": [
+    "42 raw captures are observations, not 42 individually passing tests. Number 002 is duplicated by a REPL counter capture; names and filenames identify records.",
+    "A retained popup HTML fragment is not proof of visibility. Positive candidate assertions additionally require the footer/signatures in actual rendered body; negative assertions inspect rendered body.",
+    "015 records exploration that had already exited 17; its expectation string is not met and is not evidence of a step-time alphaValue read. 016 provides the explicit breakpoint/member evidence.",
+    "Server listener zero and cache cold reopening prove the recorded desktop stopped-server experiment, not physical network disconnection, Safari/iPad, or storage durability.",
+    "This verifier checks captured visible results and exact sources. Actual input actions and worker lifecycle are supported by the separately recorded browser work and independent controlled lifecycle tests; it does not infer those solely from a final DOM snapshot."
+  ],
+  "inputs": [
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/001-fresh-fixed-launcher.json",
+      "byteLength": 1888,
+      "sha256": "b85ce77ea7cde38823a75921375987f2287f7f1c6b43d5a0f779624eab44774b"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/002-prepared-62-resources.json",
+      "byteLength": 1887,
+      "sha256": "9ac67b280550b198841b10a17eedbbb0dda0b676f1ded8a26a51e03f22d3bfa8"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/002-stopped-server-cold-launcher.json",
+      "byteLength": 1938,
+      "sha256": "f1cf2a0a54b95b90e47aa01e874ddbbb06d2d781bea82566076d514dea203830"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/003-unprepared-completion-gated.json",
+      "byteLength": 5252,
+      "sha256": "c797f9cb365b5ebef728da06e4a35037c3335245e83f4e33c02f63ed6a891a1e"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/004-trusted-resource-ready.json",
+      "byteLength": 6650,
+      "sha256": "e60360810d6c454b012fb2b38c240a8bd6b31c556fd14c4bfc06108a34b53a53"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/006-offline-workbench-trusted.json",
+      "byteLength": 6813,
+      "sha256": "41915257b5c1681e18c384f5079ffe6063e152c69c63f3ddf471976b40a481a8"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/007-fresh-alpha-dot-auto.json",
+      "byteLength": 7685,
+      "sha256": "97aef73dcb70ec515fb33fbcc0377727346ebc7a1727a716ca21c5a275f181ec"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/008-alpha-keyboard-selection.json",
+      "byteLength": 7544,
+      "sha256": "a07f79129cd92f9156eab96f27b7e6fd05aa8295f489585e6097c0385c5ea709"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/009-tab-single-insertion.json",
+      "byteLength": 6701,
+      "sha256": "45498ed4eb91239619af15dea930bbf6fb5a590de0f4293124cae2f8467d0a26"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/010-native-undo-one-step.json",
+      "byteLength": 6501,
+      "sha256": "fa14959fb1c45f9ef7914e7526bce44ec70bedf0b93e028f805c48f3c9473f91"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/011-native-redo-one-step.json",
+      "byteLength": 6511,
+      "sha256": "9e1a538895bf0bc4fb42d1d5084622b772bb5d7585f6405e0bcc9a50a18f4137"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/012-fresh-completed-program-before-compile.json",
+      "byteLength": 7088,
+      "sha256": "b9698bca6d384c01e88773d15147ab65f6e64e8a2d4728ee3288eb5c46ef0b04"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/013-warm-completion-compile-run-exit17.json",
+      "byteLength": 6180,
+      "sha256": "54441699f1c3648020cdded45e0eed93612ea0c8d6b2cfbf5223565ac60ff262"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/014-offline-debug-entry.json",
+      "byteLength": 6210,
+      "sha256": "556529a22c30ea093449f490eeff7e33eeb06152793ea30dbedb6fd092a7f153"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/015-offline-debug-step-value.json",
+      "byteLength": 7654,
+      "sha256": "68e61d14b13e1c70657b6ea62669ccc81096d198dfd1282a299b63b703d7929c"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/016-offline-breakpoint-expanded-member.json",
+      "byteLength": 7242,
+      "sha256": "4859b12d46f1a9e601f0b4aea21b181a04b2a5665f1d05c99e46737f5c2aa31c"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/017-readonly-debug-snapshot-gated.json",
+      "byteLength": 8215,
+      "sha256": "5cfe1403bdeed4a1718251770d52db516b98f302eb01575adbc9c15f5afd942b"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/018-fresh-beta-type-change.json",
+      "byteLength": 7668,
+      "sha256": "60e334e443216d26be6c966f23367a125462412e417ef58160d7506e1df2fc94"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/019-mouse-single-insertion.json",
+      "byteLength": 6261,
+      "sha256": "b4a35284da97a6ca9cf78f0b6ee6a9117220565535345a51c442d452ecca4d5d"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/020-middle-token-manual-prefix.json",
+      "byteLength": 5297,
+      "sha256": "f5dcebe173cc8dc93006059a23065d4a873b5b39c48bf3c0fc1c92e9e6db7bce"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/021-enter-full-token-single-edit.json",
+      "byteLength": 5063,
+      "sha256": "6e46f33e92c6bd446ba2a300662e449a01119eec2ad8fbd0d215f3179b2ad9da"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/022-comment-automatic-suppressed.json",
+      "byteLength": 4691,
+      "sha256": "b18b6abbf4ae89c8f72b6568fb69cfea2c7e98c6e3acaa890cd3db3d790ad2c5"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/023-string-literal-automatic-suppressed.json",
+      "byteLength": 4654,
+      "sha256": "bcddfa8bd6d48a863d49c890d47e07d8bfa1e1b88ec1a71d9e878cf7e85a0ad4"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/024-decimal-automatic-suppressed.json",
+      "byteLength": 4601,
+      "sha256": "3587d97d342cd54902de26a24a7e2fd568330e3ed88458b6247c8bfd0a5e16b4"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/025-namespace-scope-real-candidates.json",
+      "byteLength": 5295,
+      "sha256": "7e94c91f5fc111aa529b4f38d15565bee43d60129006581d45addb2c0aa6089d"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/026-escape-closes-candidates.json",
+      "byteLength": 4771,
+      "sha256": "a2f580a51885e52280aaed6a8c738f09abcf740769101bd484f5cd502dc952f9"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/027-arrow-real-member.json",
+      "byteLength": 7023,
+      "sha256": "239f93f2ac0f3310ff31bcd33a12cd055e113caa9f0644b4258a8b1d2a926eda"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/028-language-change-dismisses-old-popup.json",
+      "byteLength": 6179,
+      "sha256": "b5d499eb9b75c3568311831e08fcf9d4e3eeae81144794593e4dfca30e038d1c"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/029-c11-real-member.json",
+      "byteLength": 4725,
+      "sha256": "a7af30659cb4b1b83012b831936ddbcd81ad5b8723d83064ca209ceff61d7088"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/030-user-inc-translation-unit-real-member.json",
+      "byteLength": 6854,
+      "sha256": "c37e5c6798283b33c64435957a346d41bf5aeb2bfd230121c208177f4739aa61"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/031-file-change-dismisses-old-popup.json",
+      "byteLength": 7023,
+      "sha256": "fc58f1b2a338893bab63d6eec2be11b13c426513be50911d55afc4407e590de7"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/032-pattern-real-function-signature.json",
+      "byteLength": 4727,
+      "sha256": "5b5f39d9869dcf75c31b37209e982e7ffee96bd6978998124a2c8d1c3ca47161"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/033-narrow-ctrlspace-pattern.json",
+      "byteLength": 4267,
+      "sha256": "501e486767f4117cc2ffee5e84eb4786bb999ac05ead1b58218b1145dac9f139"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/034-narrow-multiple-real-members.json",
+      "byteLength": 8811,
+      "sha256": "17bc4a476458d605aba17e4c65d1d2d8f1495abfc1206445b08c2637331ad985"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/035-focus-find-dismisses-old-candidates.json",
+      "byteLength": 7184,
+      "sha256": "2ef34811c3b0315d4b9329c05834eed2f066a541930d4ce585606a78afebf281"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/036-find-shortcut-does-not-compile.json",
+      "byteLength": 11775,
+      "sha256": "cfd9902c6183ef65f6a1f3d4f2fefbfa996d9c940a648fb0f4d809f60e85cae6"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/037-before-import-old-popup.json",
+      "byteLength": 9136,
+      "sha256": "2bb395d14a8bc7d565de6b84de0c0cde695793a098bdf7ed0416e99f13fdfbf1"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/038-actual-import-invalidates-old-popup.json",
+      "byteLength": 7324,
+      "sha256": "7bfa598c69ae39209717f710e14832a4f3b814057660f1fb963ac3ac871b4fba"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/039-manual-button-imported-token.json",
+      "byteLength": 4680,
+      "sha256": "42e9d85596182d2e45dbac5a20700fb5f581d9660748044901d8fad6633131c5"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/040-imported-token-confirmed.json",
+      "byteLength": 5187,
+      "sha256": "6388f9fb2710526eb219c21f9f65536d23533e8b427c8cdc309ddf4a6a27907e"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/041-imported-completion-offline-output23.json",
+      "byteLength": 6281,
+      "sha256": "32a3081d118d0a78fa9ba43c779d022a1f5644a86f46d4d95112ad3d5b412fb6"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/042-stopped-server-cold-draft-restored.json",
+      "byteLength": 3977,
+      "sha256": "7e1109acb98e4d9bc33ee33e93931cf6935ed9d7fc461958dd790e1d25ba2df1"
+    },
+    {
+      "path": "fixtures/completion-independent/comment.cpp",
+      "byteLength": 69,
+      "sha256": "74e69b8e0fd6a2f7b63c17257117a05fb39e25b2fd866cb12a252593518e6b61"
+    },
+    {
+      "path": "fixtures/completion-independent/string-literal.cpp",
+      "byteLength": 55,
+      "sha256": "728b78b31e30ba9dd072ded04919dd9cfbd9190e09e21d0e253d480094f5df8e"
+    },
+    {
+      "path": "fixtures/completion-independent/decimal.cpp",
+      "byteLength": 45,
+      "sha256": "e03f86c51e6be914a5f5d62425d555969db141f44969f185f8f4425fd0e874c0"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/desktop-popup-geometry.json",
+      "byteLength": 792,
+      "sha256": "553457d94e4eb0d32bc61ecb9dd2b509651aa396e95dc81f1e567c16c7212a22"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/narrow-popup-geometry.json",
+      "byteLength": 875,
+      "sha256": "2b500fda83700445f2b71a8ff25cd5bbfeb44d88a2ada230bbb67c9778092d27"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/narrow-rows-geometry.json",
+      "byteLength": 2768,
+      "sha256": "b75102c3860e1decadef4cbe1e72aea85096fd12bffb82053ea7e72c745dbec1"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/imported-source.cpp",
+      "byteLength": 194,
+      "sha256": "3984631c7049c51d08cd22a4b162deb4b02fbdaac1afe0c31691b062a40df841"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/console-before-cold.json",
+      "byteLength": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/console-cold-reopened.json",
+      "byteLength": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/stopped-listener.json",
+      "byteLength": 91,
+      "sha256": "764506167f6e2515fb894e1422dd57d6eb9e3dab0391bbaa0ed4272135a6eb64"
+    },
+    {
+      "path": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/browser/final-listener.json",
+      "byteLength": 91,
+      "sha256": "e85a2370f8869721f1ab946904285e85783e67f930197028864c31f159d4f8f6"
+    },
+    {
+      "path": "tests/verify-completion-browser-evidence.mjs",
+      "byteLength": 18181,
+      "sha256": "5e37d0cc5250df603b8de998e2ab6b5390e5dc258b2d112f0417c6a4876c3124"
+    }
+  ],
+  "assertions": [
+    {
+      "label": "raw numbered observation file count",
+      "evidence": [],
+      "actual": 42,
+      "expected": 42,
+      "verdict": "passed"
+    },
+    {
+      "label": "two distinct 002 filenames retained (number is not an observation key)",
+      "evidence": [],
+      "actual": [
+        "002-prepared-62-resources.json",
+        "002-stopped-server-cold-launcher.json"
+      ],
+      "expected": [
+        "002-prepared-62-resources.json",
+        "002-stopped-server-cold-launcher.json"
+      ],
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-fixed-launcher: captured page belongs to fixed isolated release",
+      "evidence": [
+        "001-fresh-fixed-launcher.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-fixed-launcher: actual rendered body captured",
+      "evidence": [
+        "001-fresh-fixed-launcher.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "prepared-62-resources: captured page belongs to fixed isolated release",
+      "evidence": [
+        "002-prepared-62-resources.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "prepared-62-resources: actual rendered body captured",
+      "evidence": [
+        "002-prepared-62-resources.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "stopped-server-cold-launcher: captured page belongs to fixed isolated release",
+      "evidence": [
+        "002-stopped-server-cold-launcher.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "stopped-server-cold-launcher: actual rendered body captured",
+      "evidence": [
+        "002-stopped-server-cold-launcher.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "unprepared-completion-gated: captured page belongs to fixed isolated release",
+      "evidence": [
+        "003-unprepared-completion-gated.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "unprepared-completion-gated: actual rendered body captured",
+      "evidence": [
+        "003-unprepared-completion-gated.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "trusted-resource-ready: captured page belongs to fixed isolated release",
+      "evidence": [
+        "004-trusted-resource-ready.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "trusted-resource-ready: actual rendered body captured",
+      "evidence": [
+        "004-trusted-resource-ready.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "offline-workbench-trusted: captured page belongs to fixed isolated release",
+      "evidence": [
+        "006-offline-workbench-trusted.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "offline-workbench-trusted: actual rendered body captured",
+      "evidence": [
+        "006-offline-workbench-trusted.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-alpha-dot-auto: captured page belongs to fixed isolated release",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-alpha-dot-auto: actual rendered body captured",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "alpha-keyboard-selection: captured page belongs to fixed isolated release",
+      "evidence": [
+        "008-alpha-keyboard-selection.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "alpha-keyboard-selection: actual rendered body captured",
+      "evidence": [
+        "008-alpha-keyboard-selection.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "tab-single-insertion: captured page belongs to fixed isolated release",
+      "evidence": [
+        "009-tab-single-insertion.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "tab-single-insertion: actual rendered body captured",
+      "evidence": [
+        "009-tab-single-insertion.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "native-undo-one-step: captured page belongs to fixed isolated release",
+      "evidence": [
+        "010-native-undo-one-step.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "native-undo-one-step: actual rendered body captured",
+      "evidence": [
+        "010-native-undo-one-step.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "native-redo-one-step: captured page belongs to fixed isolated release",
+      "evidence": [
+        "011-native-redo-one-step.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "native-redo-one-step: actual rendered body captured",
+      "evidence": [
+        "011-native-redo-one-step.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-completed-program-before-compile: captured page belongs to fixed isolated release",
+      "evidence": [
+        "012-fresh-completed-program-before-compile.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-completed-program-before-compile: actual rendered body captured",
+      "evidence": [
+        "012-fresh-completed-program-before-compile.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "warm-completion-compile-run-exit17: captured page belongs to fixed isolated release",
+      "evidence": [
+        "013-warm-completion-compile-run-exit17.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "warm-completion-compile-run-exit17: actual rendered body captured",
+      "evidence": [
+        "013-warm-completion-compile-run-exit17.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "offline-debug-entry: captured page belongs to fixed isolated release",
+      "evidence": [
+        "014-offline-debug-entry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "offline-debug-entry: actual rendered body captured",
+      "evidence": [
+        "014-offline-debug-entry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "offline-debug-step-value: captured page belongs to fixed isolated release",
+      "evidence": [
+        "015-offline-debug-step-value.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "offline-debug-step-value: actual rendered body captured",
+      "evidence": [
+        "015-offline-debug-step-value.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "offline-breakpoint-expanded-member: captured page belongs to fixed isolated release",
+      "evidence": [
+        "016-offline-breakpoint-expanded-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "offline-breakpoint-expanded-member: actual rendered body captured",
+      "evidence": [
+        "016-offline-breakpoint-expanded-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "readonly-debug-snapshot-gated: captured page belongs to fixed isolated release",
+      "evidence": [
+        "017-readonly-debug-snapshot-gated.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "readonly-debug-snapshot-gated: actual rendered body captured",
+      "evidence": [
+        "017-readonly-debug-snapshot-gated.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-beta-type-change: captured page belongs to fixed isolated release",
+      "evidence": [
+        "018-fresh-beta-type-change.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-beta-type-change: actual rendered body captured",
+      "evidence": [
+        "018-fresh-beta-type-change.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "mouse-single-insertion: captured page belongs to fixed isolated release",
+      "evidence": [
+        "019-mouse-single-insertion.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "mouse-single-insertion: actual rendered body captured",
+      "evidence": [
+        "019-mouse-single-insertion.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "middle-token-manual-prefix: captured page belongs to fixed isolated release",
+      "evidence": [
+        "020-middle-token-manual-prefix.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "middle-token-manual-prefix: actual rendered body captured",
+      "evidence": [
+        "020-middle-token-manual-prefix.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "enter-full-token-single-edit: captured page belongs to fixed isolated release",
+      "evidence": [
+        "021-enter-full-token-single-edit.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "enter-full-token-single-edit: actual rendered body captured",
+      "evidence": [
+        "021-enter-full-token-single-edit.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "comment-automatic-suppressed: captured page belongs to fixed isolated release",
+      "evidence": [
+        "022-comment-automatic-suppressed.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "comment-automatic-suppressed: actual rendered body captured",
+      "evidence": [
+        "022-comment-automatic-suppressed.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "string-literal-automatic-suppressed: captured page belongs to fixed isolated release",
+      "evidence": [
+        "023-string-literal-automatic-suppressed.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "string-literal-automatic-suppressed: actual rendered body captured",
+      "evidence": [
+        "023-string-literal-automatic-suppressed.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "decimal-automatic-suppressed: captured page belongs to fixed isolated release",
+      "evidence": [
+        "024-decimal-automatic-suppressed.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "decimal-automatic-suppressed: actual rendered body captured",
+      "evidence": [
+        "024-decimal-automatic-suppressed.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "namespace-scope-real-candidates: captured page belongs to fixed isolated release",
+      "evidence": [
+        "025-namespace-scope-real-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "namespace-scope-real-candidates: actual rendered body captured",
+      "evidence": [
+        "025-namespace-scope-real-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "escape-closes-candidates: captured page belongs to fixed isolated release",
+      "evidence": [
+        "026-escape-closes-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "escape-closes-candidates: actual rendered body captured",
+      "evidence": [
+        "026-escape-closes-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "arrow-real-member: captured page belongs to fixed isolated release",
+      "evidence": [
+        "027-arrow-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "arrow-real-member: actual rendered body captured",
+      "evidence": [
+        "027-arrow-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "language-change-dismisses-old-popup: captured page belongs to fixed isolated release",
+      "evidence": [
+        "028-language-change-dismisses-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "language-change-dismisses-old-popup: actual rendered body captured",
+      "evidence": [
+        "028-language-change-dismisses-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "c11-real-member: captured page belongs to fixed isolated release",
+      "evidence": [
+        "029-c11-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "c11-real-member: actual rendered body captured",
+      "evidence": [
+        "029-c11-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "user-inc-translation-unit-real-member: captured page belongs to fixed isolated release",
+      "evidence": [
+        "030-user-inc-translation-unit-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "user-inc-translation-unit-real-member: actual rendered body captured",
+      "evidence": [
+        "030-user-inc-translation-unit-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "file-change-dismisses-old-popup: captured page belongs to fixed isolated release",
+      "evidence": [
+        "031-file-change-dismisses-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "file-change-dismisses-old-popup: actual rendered body captured",
+      "evidence": [
+        "031-file-change-dismisses-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "pattern-real-function-signature: captured page belongs to fixed isolated release",
+      "evidence": [
+        "032-pattern-real-function-signature.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "pattern-real-function-signature: actual rendered body captured",
+      "evidence": [
+        "032-pattern-real-function-signature.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-ctrlspace-pattern: captured page belongs to fixed isolated release",
+      "evidence": [
+        "033-narrow-ctrlspace-pattern.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-ctrlspace-pattern: actual rendered body captured",
+      "evidence": [
+        "033-narrow-ctrlspace-pattern.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: captured page belongs to fixed isolated release",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: actual rendered body captured",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "focus-find-dismisses-old-candidates: captured page belongs to fixed isolated release",
+      "evidence": [
+        "035-focus-find-dismisses-old-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "focus-find-dismisses-old-candidates: actual rendered body captured",
+      "evidence": [
+        "035-focus-find-dismisses-old-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "find-shortcut-does-not-compile: captured page belongs to fixed isolated release",
+      "evidence": [
+        "036-find-shortcut-does-not-compile.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "find-shortcut-does-not-compile: actual rendered body captured",
+      "evidence": [
+        "036-find-shortcut-does-not-compile.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "before-import-old-popup: captured page belongs to fixed isolated release",
+      "evidence": [
+        "037-before-import-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "before-import-old-popup: actual rendered body captured",
+      "evidence": [
+        "037-before-import-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "actual-import-invalidates-old-popup: captured page belongs to fixed isolated release",
+      "evidence": [
+        "038-actual-import-invalidates-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "actual-import-invalidates-old-popup: actual rendered body captured",
+      "evidence": [
+        "038-actual-import-invalidates-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "manual-button-imported-token: captured page belongs to fixed isolated release",
+      "evidence": [
+        "039-manual-button-imported-token.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "manual-button-imported-token: actual rendered body captured",
+      "evidence": [
+        "039-manual-button-imported-token.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "imported-token-confirmed: captured page belongs to fixed isolated release",
+      "evidence": [
+        "040-imported-token-confirmed.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "imported-token-confirmed: actual rendered body captured",
+      "evidence": [
+        "040-imported-token-confirmed.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "imported-completion-offline-output23: captured page belongs to fixed isolated release",
+      "evidence": [
+        "041-imported-completion-offline-output23.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "imported-completion-offline-output23: actual rendered body captured",
+      "evidence": [
+        "041-imported-completion-offline-output23.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "stopped-server-cold-draft-restored: captured page belongs to fixed isolated release",
+      "evidence": [
+        "042-stopped-server-cold-draft-restored.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "stopped-server-cold-draft-restored: actual rendered body captured",
+      "evidence": [
+        "042-stopped-server-cold-draft-restored.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh launcher records exact bundle and resource size",
+      "evidence": [
+        "001-fresh-fixed-launcher.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "prepared-62-resources: all 62 checked",
+      "evidence": [
+        "002-prepared-62-resources.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "stopped-server-cold-launcher: all 62 checked",
+      "evidence": [
+        "002-stopped-server-cold-launcher.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "unprepared-completion-gated: no visible candidate footer",
+      "evidence": [
+        "003-unprepared-completion-gated.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "unprepared-completion-gated: no visible analysis status",
+      "evidence": [
+        "003-unprepared-completion-gated.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "unprepared page states resource gate",
+      "evidence": [
+        "003-unprepared-completion-gated.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "trusted-resource-ready: local release trust shown",
+      "evidence": [
+        "004-trusted-resource-ready.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "offline-workbench-trusted: local release trust shown",
+      "evidence": [
+        "006-offline-workbench-trusted.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-alpha-dot-auto: footer visible in rendered body",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-alpha-dot-auto: candidate label alphaValue",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-alpha-dot-auto: rendered candidate/signature alphaValue",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-alpha-dot-auto: candidate label alphaCount",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-alpha-dot-auto: rendered candidate/signature alphaCount",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-alpha-dot-auto: candidate betaValue absent",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-beta-type-change: footer visible in rendered body",
+      "evidence": [
+        "018-fresh-beta-type-change.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-beta-type-change: candidate label betaValue",
+      "evidence": [
+        "018-fresh-beta-type-change.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-beta-type-change: rendered candidate/signature betaValue",
+      "evidence": [
+        "018-fresh-beta-type-change.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-beta-type-change: candidate alphaValue absent",
+      "evidence": [
+        "018-fresh-beta-type-change.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "fresh-beta-type-change: candidate alphaCount absent",
+      "evidence": [
+        "018-fresh-beta-type-change.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "counterfactual keeps both type declarations but changes receiver",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json",
+        "018-fresh-beta-type-change.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "Chinese and non-BMP text precede alpha caret",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "alpha member caret is at source end",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json"
+      ],
+      "actual": [
+        142,
+        142
+      ],
+      "expected": [
+        142,
+        142
+      ],
+      "verdict": "passed"
+    },
+    {
+      "label": "Down keyboard selection marks actual alphaValue option selected",
+      "evidence": [
+        "008-alpha-keyboard-selection.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "Tab inserts exactly one member and no legacy indent/newline",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json",
+        "009-tab-single-insertion.json"
+      ],
+      "actual": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonAlpha value; /* 中文😀 */ value.alphaValue",
+      "expected": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonAlpha value; /* 中文😀 */ value.alphaValue",
+      "verdict": "passed"
+    },
+    {
+      "label": "Tab caret follows exact insertion",
+      "evidence": [
+        "009-tab-single-insertion.json"
+      ],
+      "actual": [
+        152,
+        152
+      ],
+      "expected": [
+        152,
+        152
+      ],
+      "verdict": "passed"
+    },
+    {
+      "label": "one native undo restores exact source",
+      "evidence": [
+        "007-fresh-alpha-dot-auto.json",
+        "010-native-undo-one-step.json"
+      ],
+      "actual": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonAlpha value; /* 中文😀 */ value.",
+      "expected": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonAlpha value; /* 中文😀 */ value.",
+      "verdict": "passed"
+    },
+    {
+      "label": "one native redo restores exact completion",
+      "evidence": [
+        "009-tab-single-insertion.json",
+        "011-native-redo-one-step.json"
+      ],
+      "actual": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonAlpha value; /* 中文😀 */ value.alphaValue",
+      "expected": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonAlpha value; /* 中文😀 */ value.alphaValue",
+      "verdict": "passed"
+    },
+    {
+      "label": "warm completion to compile retains exact completed program",
+      "evidence": [
+        "012-fresh-completed-program-before-compile.json",
+        "013-warm-completion-compile-run-exit17.json"
+      ],
+      "actual": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonAlpha value; /* 中文😀 */ value.alphaValue=17;\nreturn value.alphaValue;\n}\n",
+      "expected": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonAlpha value; /* 中文😀 */ value.alphaValue=17;\nreturn value.alphaValue;\n}\n",
+      "verdict": "passed"
+    },
+    {
+      "label": "warm completion to compile actual exit 17 output section",
+      "evidence": [
+        "013-warm-completion-compile-run-exit17.json"
+      ],
+      "actual": "exit · 返回 17\n尚无输出",
+      "expected": "exit · 返回 17\n尚无输出",
+      "verdict": "passed"
+    },
+    {
+      "label": "actual debug entry pauses in user source with real stack",
+      "evidence": [
+        "014-offline-debug-entry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "exploratory second step actually ended and is not member-value evidence",
+      "evidence": [
+        "015-offline-debug-step-value.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "explicit return breakpoint pauses at main.cpp line 4",
+      "evidence": [
+        "016-offline-breakpoint-expanded-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "expanded member variable block reads alphaValue int 17",
+      "evidence": [
+        "016-offline-breakpoint-expanded-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "snapshot source is actually readonly",
+      "evidence": [
+        "017-readonly-debug-snapshot-gated.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "readonly-debug-snapshot-gated: no visible candidate footer",
+      "evidence": [
+        "017-readonly-debug-snapshot-gated.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "readonly-debug-snapshot-gated: no visible analysis status",
+      "evidence": [
+        "017-readonly-debug-snapshot-gated.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "mouse inserts betaValue exactly once",
+      "evidence": [
+        "018-fresh-beta-type-change.json",
+        "019-mouse-single-insertion.json"
+      ],
+      "actual": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonBeta value; value.betaValue",
+      "expected": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonBeta value; value.betaValue",
+      "verdict": "passed"
+    },
+    {
+      "label": "middle-token-manual-prefix: footer visible in rendered body",
+      "evidence": [
+        "020-middle-token-manual-prefix.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "middle-token-manual-prefix: candidate label alphaCount",
+      "evidence": [
+        "020-middle-token-manual-prefix.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "middle-token-manual-prefix: rendered candidate/signature alphaCount",
+      "evidence": [
+        "020-middle-token-manual-prefix.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "middle-token-manual-prefix: candidate label alphaValue",
+      "evidence": [
+        "020-middle-token-manual-prefix.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "middle-token-manual-prefix: rendered candidate/signature alphaValue",
+      "evidence": [
+        "020-middle-token-manual-prefix.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "manual caret splits al from OLD",
+      "evidence": [
+        "020-middle-token-manual-prefix.json"
+      ],
+      "actual": "OLD",
+      "expected": "OLD",
+      "verdict": "passed"
+    },
+    {
+      "label": "Enter replaces whole token once without newline/suffix",
+      "evidence": [
+        "020-middle-token-manual-prefix.json",
+        "021-enter-full-token-single-edit.json"
+      ],
+      "actual": "struct PersonAlpha { int alphaValue; int alphaCount; };\nint main(){ PersonAlpha value; value.alphaCount",
+      "expected": "struct PersonAlpha { int alphaValue; int alphaCount; };\nint main(){ PersonAlpha value; value.alphaCount",
+      "verdict": "passed"
+    },
+    {
+      "label": "comment: original marker appears exactly once",
+      "evidence": [
+        "fixtures/completion-independent/comment.cpp"
+      ],
+      "actual": 2,
+      "expected": 2,
+      "verdict": "passed"
+    },
+    {
+      "label": "comment: exact original fixture source",
+      "evidence": [
+        "022-comment-automatic-suppressed.json"
+      ],
+      "actual": "struct Item { int actual; };\nvoid probe() {\n    // object.\n}\n",
+      "expected": "struct Item { int actual; };\nvoid probe() {\n    // object.\n}\n",
+      "verdict": "passed"
+    },
+    {
+      "label": "comment: exact original fixture caret",
+      "evidence": [
+        "022-comment-automatic-suppressed.json"
+      ],
+      "actual": [
+        58,
+        58
+      ],
+      "expected": [
+        58,
+        58
+      ],
+      "verdict": "passed"
+    },
+    {
+      "label": "comment-automatic-suppressed: no visible candidate footer",
+      "evidence": [
+        "022-comment-automatic-suppressed.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "comment-automatic-suppressed: no visible analysis status",
+      "evidence": [
+        "022-comment-automatic-suppressed.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "string-literal: original marker appears exactly once",
+      "evidence": [
+        "fixtures/completion-independent/string-literal.cpp"
+      ],
+      "actual": 2,
+      "expected": 2,
+      "verdict": "passed"
+    },
+    {
+      "label": "string-literal: exact original fixture source",
+      "evidence": [
+        "023-string-literal-automatic-suppressed.json"
+      ],
+      "actual": "void probe() { const char* text = \"object.\"; }\n",
+      "expected": "void probe() { const char* text = \"object.\"; }\n",
+      "verdict": "passed"
+    },
+    {
+      "label": "string-literal: exact original fixture caret",
+      "evidence": [
+        "023-string-literal-automatic-suppressed.json"
+      ],
+      "actual": [
+        42,
+        42
+      ],
+      "expected": [
+        42,
+        42
+      ],
+      "verdict": "passed"
+    },
+    {
+      "label": "string-literal-automatic-suppressed: no visible candidate footer",
+      "evidence": [
+        "023-string-literal-automatic-suppressed.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "string-literal-automatic-suppressed: no visible analysis status",
+      "evidence": [
+        "023-string-literal-automatic-suppressed.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "decimal: original marker appears exactly once",
+      "evidence": [
+        "fixtures/completion-independent/decimal.cpp"
+      ],
+      "actual": 2,
+      "expected": 2,
+      "verdict": "passed"
+    },
+    {
+      "label": "decimal: exact original fixture source",
+      "evidence": [
+        "024-decimal-automatic-suppressed.json"
+      ],
+      "actual": "void probe() { double number = 1.; }\n",
+      "expected": "void probe() { double number = 1.; }\n",
+      "verdict": "passed"
+    },
+    {
+      "label": "decimal: exact original fixture caret",
+      "evidence": [
+        "024-decimal-automatic-suppressed.json"
+      ],
+      "actual": [
+        33,
+        33
+      ],
+      "expected": [
+        33,
+        33
+      ],
+      "verdict": "passed"
+    },
+    {
+      "label": "decimal-automatic-suppressed: no visible candidate footer",
+      "evidence": [
+        "024-decimal-automatic-suppressed.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "decimal-automatic-suppressed: no visible analysis status",
+      "evidence": [
+        "024-decimal-automatic-suppressed.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "namespace-scope-real-candidates: footer visible in rendered body",
+      "evidence": [
+        "025-namespace-scope-real-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "namespace-scope-real-candidates: candidate label scopedValue",
+      "evidence": [
+        "025-namespace-scope-real-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "namespace-scope-real-candidates: rendered candidate/signature scopedValue",
+      "evidence": [
+        "025-namespace-scope-real-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "namespace-scope-real-candidates: candidate label scopedOther",
+      "evidence": [
+        "025-namespace-scope-real-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "namespace-scope-real-candidates: rendered candidate/signature scopedOther",
+      "evidence": [
+        "025-namespace-scope-real-candidates.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "escape-closes-candidates: no visible candidate footer",
+      "evidence": [
+        "026-escape-closes-candidates.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "escape-closes-candidates: no visible analysis status",
+      "evidence": [
+        "026-escape-closes-candidates.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "Escape retains source exactly",
+      "evidence": [
+        "025-namespace-scope-real-candidates.json",
+        "026-escape-closes-candidates.json"
+      ],
+      "actual": "namespace PersonScope { int scopedValue; int scopedOther; }\nint main(){PersonScope::",
+      "expected": "namespace PersonScope { int scopedValue; int scopedOther; }\nint main(){PersonScope::",
+      "verdict": "passed"
+    },
+    {
+      "label": "arrow-real-member: footer visible in rendered body",
+      "evidence": [
+        "027-arrow-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "arrow-real-member: candidate label arrowOnly",
+      "evidence": [
+        "027-arrow-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "arrow-real-member: rendered candidate/signature arrowOnly",
+      "evidence": [
+        "027-arrow-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "actual arrow source is a pointer receiver",
+      "evidence": [
+        "027-arrow-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "language-change-dismisses-old-popup: no visible candidate footer",
+      "evidence": [
+        "028-language-change-dismisses-old-popup.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "language-change-dismisses-old-popup: no visible analysis status",
+      "evidence": [
+        "028-language-change-dismisses-old-popup.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "language switch is C11 in actual select",
+      "evidence": [
+        "028-language-change-dismisses-old-popup.json"
+      ],
+      "actual": "c",
+      "expected": "c",
+      "verdict": "passed"
+    },
+    {
+      "label": "language switch retains exact source",
+      "evidence": [
+        "027-arrow-real-member.json",
+        "028-language-change-dismisses-old-popup.json"
+      ],
+      "actual": "struct PersonArrow {int arrowOnly;};\nint main(){PersonArrow object;PersonArrow *pointer=&object;pointer->",
+      "expected": "struct PersonArrow {int arrowOnly;};\nint main(){PersonArrow object;PersonArrow *pointer=&object;pointer->",
+      "verdict": "passed"
+    },
+    {
+      "label": "c11-real-member: footer visible in rendered body",
+      "evidence": [
+        "029-c11-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "c11-real-member: candidate label cOnly",
+      "evidence": [
+        "029-c11-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "c11-real-member: rendered candidate/signature cOnly",
+      "evidence": [
+        "029-c11-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "C11 still selected during real member result",
+      "evidence": [
+        "029-c11-real-member.json"
+      ],
+      "actual": "c",
+      "expected": "c",
+      "verdict": "passed"
+    },
+    {
+      "label": "C11 file display is main.c",
+      "evidence": [
+        "029-c11-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "user-inc-translation-unit-real-member: footer visible in rendered body",
+      "evidence": [
+        "030-user-inc-translation-unit-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "user-inc-translation-unit-real-member: candidate label fromDriver",
+      "evidence": [
+        "030-user-inc-translation-unit-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "user-inc-translation-unit-real-member: rendered candidate/signature fromDriver",
+      "evidence": [
+        "030-user-inc-translation-unit-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "user.inc source has no declaration for fromDriver",
+      "evidence": [
+        "030-user-inc-translation-unit-real-member.json"
+      ],
+      "actual": "int answer(){return cross.",
+      "expected": "int answer(){return cross.",
+      "verdict": "passed"
+    },
+    {
+      "label": "actual selected user include path shown",
+      "evidence": [
+        "030-user-inc-translation-unit-real-member.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "actual driver declares receiver and includes user.inc",
+      "evidence": [
+        "031-file-change-dismisses-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "file-change-dismisses-old-popup: no visible candidate footer",
+      "evidence": [
+        "031-file-change-dismisses-old-popup.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "file-change-dismisses-old-popup: no visible analysis status",
+      "evidence": [
+        "031-file-change-dismisses-old-popup.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "pattern-real-function-signature: footer visible in rendered body",
+      "evidence": [
+        "032-pattern-real-function-signature.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "pattern-real-function-signature: candidate label Pattern",
+      "evidence": [
+        "032-pattern-real-function-signature.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "pattern-real-function-signature: rendered candidate/signature Pattern",
+      "evidence": [
+        "032-pattern-real-function-signature.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "pattern-real-function-signature: int Pattern(int value) signature rendered",
+      "evidence": [
+        "032-pattern-real-function-signature.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-ctrlspace-pattern: footer visible in rendered body",
+      "evidence": [
+        "033-narrow-ctrlspace-pattern.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-ctrlspace-pattern: candidate label Pattern",
+      "evidence": [
+        "033-narrow-ctrlspace-pattern.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-ctrlspace-pattern: rendered candidate/signature Pattern",
+      "evidence": [
+        "033-narrow-ctrlspace-pattern.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-ctrlspace-pattern: int Pattern(int value) signature rendered",
+      "evidence": [
+        "033-narrow-ctrlspace-pattern.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: footer visible in rendered body",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: candidate label rowOne",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: rendered candidate/signature rowOne",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: candidate label rowTwo",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: rendered candidate/signature rowTwo",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: candidate label rowThree",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: rendered candidate/signature rowThree",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: candidate label rowFour",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: rendered candidate/signature rowFour",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: candidate label rowFive",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: rendered candidate/signature rowFive",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: candidate label rowSix",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-multiple-real-members: rendered candidate/signature rowSix",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "ten real row options captured",
+      "evidence": [
+        "034-narrow-multiple-real-members.json"
+      ],
+      "actual": 10,
+      "expected": 10,
+      "verdict": "passed"
+    },
+    {
+      "label": "focus-find-dismisses-old-candidates: no visible candidate footer",
+      "evidence": [
+        "035-focus-find-dismisses-old-candidates.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "focus-find-dismisses-old-candidates: no visible analysis status",
+      "evidence": [
+        "035-focus-find-dismisses-old-candidates.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "moving focus does not mutate source",
+      "evidence": [
+        "034-narrow-multiple-real-members.json",
+        "035-focus-find-dismisses-old-candidates.json"
+      ],
+      "actual": "struct PersonRows {int rowOne;int rowTwo;int rowThree;int rowFour;int rowFive;int rowSix;};\nvoid probe(){PersonRows value;value.",
+      "expected": "struct PersonRows {int rowOne;int rowTwo;int rowThree;int rowFour;int rowFive;int rowSix;};\nvoid probe(){PersonRows value;value.",
+      "verdict": "passed"
+    },
+    {
+      "label": "find-shortcut-does-not-compile: no visible candidate footer",
+      "evidence": [
+        "036-find-shortcut-does-not-compile.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "find-shortcut-does-not-compile: no visible analysis status",
+      "evidence": [
+        "036-find-shortcut-does-not-compile.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "find shortcut does not alter source",
+      "evidence": [
+        "035-focus-find-dismisses-old-candidates.json",
+        "036-find-shortcut-does-not-compile.json"
+      ],
+      "actual": "struct PersonRows {int rowOne;int rowTwo;int rowThree;int rowFour;int rowFive;int rowSix;};\nvoid probe(){PersonRows value;value.",
+      "expected": "struct PersonRows {int rowOne;int rowTwo;int rowThree;int rowFour;int rowFive;int rowSix;};\nvoid probe(){PersonRows value;value.",
+      "verdict": "passed"
+    },
+    {
+      "label": "find shortcut leaves previous stopped output",
+      "evidence": [
+        "036-find-shortcut-does-not-compile.json"
+      ],
+      "actual": "stop\n尚无输出",
+      "expected": "stop\n尚无输出",
+      "verdict": "passed"
+    },
+    {
+      "label": "desktop-popup-geometry.json: popup is visible",
+      "evidence": [
+        "desktop-popup-geometry.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "desktop-popup-geometry.json: footer positive height",
+      "evidence": [
+        "desktop-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "desktop-popup-geometry.json: footer inside popup",
+      "evidence": [
+        "desktop-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "desktop-popup-geometry.json: entire popup inside source editor",
+      "evidence": [
+        "desktop-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "desktop-popup-geometry.json: entire popup inside viewport",
+      "evidence": [
+        "desktop-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "desktop-popup-geometry.json: footer follows list without clipping",
+      "evidence": [
+        "desktop-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "desktop-popup-geometry.json: list retains touch row",
+      "evidence": [
+        "desktop-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-popup-geometry.json: popup is visible",
+      "evidence": [
+        "narrow-popup-geometry.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-popup-geometry.json: footer positive height",
+      "evidence": [
+        "narrow-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-popup-geometry.json: footer inside popup",
+      "evidence": [
+        "narrow-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-popup-geometry.json: entire popup inside source editor",
+      "evidence": [
+        "narrow-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-popup-geometry.json: entire popup inside viewport",
+      "evidence": [
+        "narrow-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-popup-geometry.json: footer follows list without clipping",
+      "evidence": [
+        "narrow-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-popup-geometry.json: list retains touch row",
+      "evidence": [
+        "narrow-popup-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-rows-geometry.json: popup is visible",
+      "evidence": [
+        "narrow-rows-geometry.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-rows-geometry.json: footer positive height",
+      "evidence": [
+        "narrow-rows-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-rows-geometry.json: footer inside popup",
+      "evidence": [
+        "narrow-rows-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-rows-geometry.json: entire popup inside source editor",
+      "evidence": [
+        "narrow-rows-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-rows-geometry.json: entire popup inside viewport",
+      "evidence": [
+        "narrow-rows-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-rows-geometry.json: footer follows list without clipping",
+      "evidence": [
+        "narrow-rows-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow-rows-geometry.json: list retains touch row",
+      "evidence": [
+        "narrow-rows-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow rows: ten actual row rectangles",
+      "evidence": [
+        "narrow-rows-geometry.json"
+      ],
+      "actual": 10,
+      "expected": 10,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow rows: each touch row at least 44px",
+      "evidence": [
+        "narrow-rows-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "narrow rows: list clips overflowing rows while footer remains outside list",
+      "evidence": [
+        "narrow-rows-geometry.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "before-import-old-popup: footer visible in rendered body",
+      "evidence": [
+        "037-before-import-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "before-import-old-popup: candidate label rowOne",
+      "evidence": [
+        "037-before-import-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "before-import-old-popup: rendered candidate/signature rowOne",
+      "evidence": [
+        "037-before-import-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "actual import matches original file exactly",
+      "evidence": [
+        "038-actual-import-invalidates-old-popup.json"
+      ],
+      "actual": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedWRONG;\n}\n",
+      "expected": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedWRONG;\n}\n",
+      "verdict": "passed"
+    },
+    {
+      "label": "actual-import-invalidates-old-popup: no visible candidate footer",
+      "evidence": [
+        "038-actual-import-invalidates-old-popup.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "actual-import-invalidates-old-popup: no visible analysis status",
+      "evidence": [
+        "038-actual-import-invalidates-old-popup.json"
+      ],
+      "actual": false,
+      "expected": false,
+      "verdict": "passed"
+    },
+    {
+      "label": "import saved as version 19",
+      "evidence": [
+        "038-actual-import-invalidates-old-popup.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "manual-button-imported-token: footer visible in rendered body",
+      "evidence": [
+        "039-manual-button-imported-token.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "manual-button-imported-token: candidate label savedValue",
+      "evidence": [
+        "039-manual-button-imported-token.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "manual-button-imported-token: rendered candidate/signature savedValue",
+      "evidence": [
+        "039-manual-button-imported-token.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "manual button keeps imported source unchanged",
+      "evidence": [
+        "039-manual-button-imported-token.json"
+      ],
+      "actual": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedWRONG;\n}\n",
+      "expected": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedWRONG;\n}\n",
+      "verdict": "passed"
+    },
+    {
+      "label": "manual button caret is between saved and WRONG",
+      "evidence": [
+        "039-manual-button-imported-token.json"
+      ],
+      "actual": "WRONG",
+      "expected": "WRONG",
+      "verdict": "passed"
+    },
+    {
+      "label": "import completion changes complete token exactly once",
+      "evidence": [
+        "040-imported-token-confirmed.json"
+      ],
+      "actual": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedValue;\n}\n",
+      "expected": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedValue;\n}\n",
+      "verdict": "passed"
+    },
+    {
+      "label": "compiled imported source is exact confirmed source",
+      "evidence": [
+        "041-imported-completion-offline-output23.json"
+      ],
+      "actual": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedValue;\n}\n",
+      "expected": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedValue;\n}\n",
+      "verdict": "passed"
+    },
+    {
+      "label": "actual imported run output and exit 23",
+      "evidence": [
+        "041-imported-completion-offline-output23.json"
+      ],
+      "actual": "exit · 返回 23\nperson05-final=23\n",
+      "expected": "exit · 返回 23\nperson05-final=23\n",
+      "verdict": "passed"
+    },
+    {
+      "label": "cold reopening restores completed source exactly",
+      "evidence": [
+        "042-stopped-server-cold-draft-restored.json"
+      ],
+      "actual": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedValue;\n}\n",
+      "expected": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedValue;\n}\n",
+      "verdict": "passed"
+    },
+    {
+      "label": "cold reopening restores saved version 20",
+      "evidence": [
+        "042-stopped-server-cold-draft-restored.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "cold reopening requires local trust revalidation",
+      "evidence": [
+        "042-stopped-server-cold-draft-restored.json"
+      ],
+      "actual": true,
+      "expected": true,
+      "verdict": "passed"
+    },
+    {
+      "label": "console-before-cold.json: no recorded console messages",
+      "evidence": [
+        "console-before-cold.json"
+      ],
+      "actual": [],
+      "expected": [],
+      "verdict": "passed"
+    },
+    {
+      "label": "console-cold-reopened.json: no recorded console messages",
+      "evidence": [
+        "console-cold-reopened.json"
+      ],
+      "actual": [],
+      "expected": [],
+      "verdict": "passed"
+    },
+    {
+      "label": "stopped-listener.json: test origin port",
+      "evidence": [
+        "stopped-listener.json"
+      ],
+      "actual": 4255,
+      "expected": 4255,
+      "verdict": "passed"
+    },
+    {
+      "label": "stopped-listener.json: own server listener count",
+      "evidence": [
+        "stopped-listener.json"
+      ],
+      "actual": 0,
+      "expected": 0,
+      "verdict": "passed"
+    },
+    {
+      "label": "final-listener.json: test origin port",
+      "evidence": [
+        "final-listener.json"
+      ],
+      "actual": 4255,
+      "expected": 4255,
+      "verdict": "passed"
+    },
+    {
+      "label": "final-listener.json: own server listener count",
+      "evidence": [
+        "final-listener.json"
+      ],
+      "actual": 0,
+      "expected": 0,
+      "verdict": "passed"
+    }
+  ]
+}

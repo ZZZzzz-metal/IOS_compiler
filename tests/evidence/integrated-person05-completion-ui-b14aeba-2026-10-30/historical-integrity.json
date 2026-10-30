@@ -1,0 +1,77 @@
+{
+  "target": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "scope": "Five named old evidence rounds only. Every listed file SHA/size and raw committed blob, plus manifests, verified; no old file rewritten.",
+  "results": [
+    {
+      "name": "integrated-person05-completion-preparation-38ff307-2026-10-29",
+      "fileCount": 66,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-preparation-38ff307-2026-10-29",
+        "--verify",
+        "--git"
+      ],
+      "exitCode": 0,
+      "manifestSHA256": "b6bd3461cb26eea00e48e38cd6c463a2ba3bc7a1b2dac7808b42ea7d5a65709e",
+      "rawFilesAndManifestEqualGit": true
+    },
+    {
+      "name": "integrated-person05-completion-preparation-38ff307-2026-10-29-run02",
+      "fileCount": 67,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-preparation-38ff307-2026-10-29-run02",
+        "--verify",
+        "--git"
+      ],
+      "exitCode": 0,
+      "manifestSHA256": "fe95b8c97d711a7b44477fe91e2c20c38a4f504d362a3025174827a99e38059c",
+      "rawFilesAndManifestEqualGit": true
+    },
+    {
+      "name": "integrated-person05-completion-runtime-bddae576-2026-10-30",
+      "fileCount": 452,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-runtime-bddae576-2026-10-30",
+        "--verify",
+        "--git"
+      ],
+      "exitCode": 0,
+      "manifestSHA256": "a1b65a03456bfc4d9bfcacb3655299729c43a54f75f553c85a700cc3d5c6c708",
+      "rawFilesAndManifestEqualGit": true
+    },
+    {
+      "name": "integrated-person05-completion-gitverify-2026-10-30",
+      "fileCount": 33,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-gitverify-2026-10-30",
+        "--verify",
+        "--git"
+      ],
+      "exitCode": 0,
+      "manifestSHA256": "c4132ad3ee31efab336febee6ab7560f83821db5b6e2bb50bfb4afeff8f59f61",
+      "rawFilesAndManifestEqualGit": true
+    },
+    {
+      "name": "integrated-person05-final-v045-40a079b-2026-10-28",
+      "fileCount": 179,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-final-v045-40a079b-2026-10-28",
+        "--verify",
+        "--git"
+      ],
+      "exitCode": 0,
+      "manifestSHA256": "21195938f078537b8e100fab41d3f254ae9c7734fab766cbc2e2d0051e48ed41",
+      "rawFilesAndManifestEqualGit": true
+    }
+  ],
+  "totalFiles": 797
+}

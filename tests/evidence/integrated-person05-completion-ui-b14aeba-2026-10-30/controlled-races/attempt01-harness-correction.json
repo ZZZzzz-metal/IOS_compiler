@@ -1,0 +1,11 @@
+{
+  "attempt": "original controlled-races/results.json and events.json",
+  "command": "node tests/completion-ui-races-independent.mjs",
+  "exitCode": 1,
+  "preservedResult": {"scenarios": 26, "passed": 24, "failed": 2, "assertionsReached": 101},
+  "classification": "Test harness observation bug; not a product failure",
+  "cause": "editorHost spread ...dom evaluated dom.writes getter while building the host, capturing 0. The actual source.value assertions had already observed obj.print. The later h.writes assertion read the stale copied integer rather than the live test transport counter.",
+  "correction": "Expose get writes(){return dom.writes;} on editorHost. Product files were not changed. Fresh run02 preserves original failed result and all original assertions; Tab and Enter each now verify one transport command and one input notification.",
+  "rerun": {"command": "node tests/completion-ui-races-independent.mjs run02", "exitCode": 0, "scenarios": 26, "passed": 26, "failed": 0, "assertions": 105},
+  "scope": "Controlled event/geometry/provider/edit transport only. Native browser undo, real Worker release, physical IME, actual main execution and iPad behavior are outside this runner. Main integration checks are source assertions."
+}

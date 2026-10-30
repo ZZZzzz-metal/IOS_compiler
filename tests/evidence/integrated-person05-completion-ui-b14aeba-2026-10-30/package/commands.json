@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "workdir": "C:/Users/20964/Documents/ChatGPT/C++算法编译器/ipad-debugger-05",
+  "commands": [
+    {"id":"extract","command":"package/extract.ps1","exitCode":0,"result":"Original ZIP SHA/length/71 members verified. All ZIP paths checked for containment, duplicate/case overlap and linked entries before fresh extraction; no overwrite."},
+    {"id":"audit-run-01","command":"node --experimental-vm-modules tests/audit-completion-package-independent.mjs","exitCode":1,"source":"runner.mjs","evidence":"failure.json","classification":"Strict manual raw-Git binding differs solely by 368 CRLF newlines; same text after LF normalization. The raw difference remains recorded and is not a new compiler/UI semantic defect."},
+    {"id":"audit-run-02","command":"COMPLETION_PACKAGE_AUDIT_RUN=run-02 node --experimental-vm-modules tests/audit-completion-package-independent.mjs","exitCode":0,"source":"runner-run-02.mjs","evidence":"report.json","result":"71 archive members,62 resources,46 browser static edges,3 isolated Workers and fixed backend dependency/API/lock checks passed; one explicit manual EOL category retained."},
+    {"id":"verify-complete-counts","command":"node package/verify-report.mjs","exitCode":0,"evidence":"audit-summary.json","purpose":"Independently count all62 source binding categories and re-read actual packaged bytes; the original report's complete binding list remains unchanged."}
+  ],
+  "notPerformed": ["Rebuild package", "Modify product/main worktree", "Real browser completion UI acceptance", "iPad acceptance", "Certificate installation or trust", "Git mutation or external communication"]
+}

@@ -1,0 +1,87 @@
+{
+  "id": 16,
+  "name": "offline-breakpoint-expanded-member",
+  "at": "2026-10-30T01:33:57.397Z",
+  "expectation": "return line breakpoint at4 and expanded actual alphaValue17",
+  "state": "Browser tab: 3, Title: \"算法工作台 · 四号验证原型\", URL: \"http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 118-126, 128, 130-132, 134-138\n+\t\t134 text 已暂停 · main.cpp:4:1\n+\t\t\t135 text main.cpp\n+\t\t\t136 text 编辑中的草稿\n+\t\t\t\t137 button 1, Help: 第 1 行：切换断点\n+\t\t\t\t138 button 2, Help: 第 2 行：切换断点\n+\t\t\t\t139 button 3, Help: 第 3 行：切换断点\n+\t\t\t\t140 button 4, Help: 第 4 行：切换断点\n+\t\t\t\t141 button 5, Help: 第 5 行：切换断点\n+\t\t\t\t142 button 6, Help: 第 6 行：切换断点\n+\t\t\t\t\t143 text 尚无输出\n+\t\t\t\t\t144 checkbox main · main.cpp:4:1, Value: 1\n+\t\t\t\t\t145 checkbox main · 未提供源码位置, Value: 0\n+\t\t\t\t\t146 checkbox _start · 未提供源码位置, Value: 0\n+\t\t\t\t\t147 text value\n+\t\t\t\t\t148 text PersonAlpha\n+\t\t\t\t\t149 text {PersonAlpha}\n+\t\t\t\t\t150 button (disabled) 展开\n+\t\t\t\t151 text 选择暂停栈帧后查询\nThe focused UI element is 150 button (disabled) 展开",
+  "dom": {
+    "body": "算法工作台\n开发验证原型\n\n粘贴代码，带着输入运行，在暂停处排错。\n\n校验本地资源\n本版本离线资源已校验 · iPad 真机待验证\niPad 离线冷启动待验证\nClang 8.0.1 / wasm32\n原型说明与验证步骤\nC++17\nC11\n编译运行\n编译调试\n继续\n进入\n跳过\n跳出\n停止\n已暂停 · main.cpp:4:1\nCtrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n键盘快捷键 无 F 键也能调试\n代码\n粘贴代码\n复制题站源码\n导入\n仅题站源码\n完整草稿\n导出\n题站源码\n测试驱动\n查看调试快照\nmain.cpp\n编辑中的草稿\n1\n2\n3\n4\n5\n6\nstruct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonAlpha value; /* 中文😀 */ value.alphaValue=17;\nreturn value.alphaValue;\n}\n\n\n切换断点\n代码提示\n缩进\n取消缩进\n下一处\n\n输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。\n\n草稿已保存 · 版本 3\n断点与编译诊断\n样例输入\n运行前一次性提供\n程序输出\n尚无输出\n调用栈\nmain · main.cpp:4:1main · 未提供源码位置_start · 未提供源码位置\n局部变量\n\nvalue\nPersonAlpha\n{PersonAlpha}\n\nalphaValue\nint\n17\n\nalphaCount\nint\n不可读取：Storage has not been initialized during this declaration lifetime\n\n基础监视\n查看\n\n支持范围以适配器为准；函数调用、赋值和自增不可用。\n\n选择暂停栈帧后查询",
+    "fields": [
+      {
+        "disabled": false,
+        "id": "language",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "cpp"
+      },
+      {
+        "disabled": false,
+        "id": "shortcut-scheme",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "control-number"
+      },
+      {
+        "disabled": false,
+        "id": "export-mode",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "user-source"
+      },
+      {
+        "disabled": false,
+        "id": "file",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "source",
+        "readOnly": false,
+        "selectionEnd": 184,
+        "selectionStart": 184,
+        "value": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonAlpha value; /* 中文😀 */ value.alphaValue=17;\nreturn value.alphaValue;\n}\n"
+      },
+      {
+        "disabled": false,
+        "id": "find",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "stdin",
+        "readOnly": false,
+        "selectionEnd": 2,
+        "selectionStart": 2,
+        "value": "3\n"
+      },
+      {
+        "disabled": false,
+        "id": "expression",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "clipboard-text",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      }
+    ],
+    "popup": "<div class=\"completion-list\" id=\"completion-list-1\" role=\"listbox\" aria-label=\"代码提示\" aria-busy=\"false\" style=\"max-height: 183.333px;\"><div class=\"completion-option is-selected\" id=\"completion-option-1-23-0\" role=\"option\" title=\"PersonAlpha::\" aria-selected=\"true\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">PersonAlpha</span><span class=\"completion-detail\">PersonAlpha::</span></div><div class=\"completion-option\" id=\"completion-option-1-23-1\" role=\"option\" title=\"int alphaCount\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">alphaCount</span><span class=\"completion-detail\">int alphaCount</span></div><div class=\"completion-option\" id=\"completion-option-1-23-2\" role=\"option\" title=\"int alphaValue\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">alphaValue</span><span class=\"completion-detail\">int alphaValue</span></div><div class=\"completion-option\" id=\"completion-option-1-23-3\" role=\"option\" title=\"PersonAlpha &amp; operator=(const PersonAlpha &amp;)\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">operator=</span><span class=\"completion-detail\">PersonAlpha &amp; operator=(const PersonAlpha &amp;)</span></div><div class=\"completion-option\" id=\"completion-option-1-23-4\" role=\"option\" title=\"PersonAlpha &amp; operator=(PersonAlpha &amp;&amp;)\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">operator=</span><span class=\"completion-detail\">PersonAlpha &amp; operator=(PersonAlpha &amp;&amp;)</span></div><div class=\"completion-option\" id=\"completion-option-1-23-5\" role=\"option\" title=\"void ~PersonAlpha()\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">~PersonAlpha</span><span class=\"completion-detail\">void ~PersonAlpha()</span></div></div>",
+    "title": "算法工作台 · 四号验证原型",
+    "url": "http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html"
+  }
+}

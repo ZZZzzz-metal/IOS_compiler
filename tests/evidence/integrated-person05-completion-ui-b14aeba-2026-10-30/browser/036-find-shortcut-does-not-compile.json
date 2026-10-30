@@ -1,0 +1,87 @@
+{
+  "id": 36,
+  "name": "find-shortcut-does-not-compile",
+  "at": "2026-10-30T01:40:15.486Z",
+  "expectation": "Ctrl6 in find cannot start compile or alter source",
+  "state": "Browser tab: 3, Title: \"算法工作台 · 四号验证原型\", URL: \"http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html\".\n1 AXWebArea 算法工作台 · 四号验证原型, URL: 127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html\n\t2 container\n\t\t3 heading 算法工作台, Value: 1\n\t\t\t4 text 算法工作台\n\t\t5 text 开发验证原型 粘贴代码，带着输入运行，在暂停处排错。\n\t\t6 button 校验本地资源, ID: prepare\n\t\t106 text 本版本离线资源已校验 · iPad 真机待验证\n\t8 text iPad 离线冷启动待验证\n\t166 text Clang 8.0.1 / wasm32\n\t10 link Description: 原型说明与验证步骤, Value: 127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/README.md\n\t11 container 运行与调试\n\t\t12 pop up button (collapsed, settable) Description: 语言, Value: C++17, ID: language, Secondary Actions: Expand\n\t\t\t13 menu\n\t\t\t\t14 (selected) C++17\n\t\t\t\t15 C11\n\t\t16 button 编译运行, Help: 编译运行（Ctrl+F5 / Ctrl+6）, ID: run\n\t\t17 button 编译调试, Help: 编译调试（F5 / Ctrl+5）, ID: debug\n\t\t18 container 调试控制\n\t\t\t19 button (disabled) 继续, Help: 继续（F5 / Ctrl+5）\n\t\t\t20 button (disabled) 进入, Help: 进入（F11 / Ctrl+-）\n\t\t\t21 button (disabled) 跳过, Help: 跳过（F10 / Ctrl+0）\n\t\t\t22 button (disabled) 跳出, Help: 跳出（Shift+F11 / Ctrl+Shift+-）\n\t\t\t23 button (disabled) 停止, Help: 停止（Shift+F5 / Ctrl+Shift+5）, ID: stop\n\t\t165 text 已结束\n\t25 button (collapsed) 键盘快捷键 无 F 键也能调试, Secondary Actions: Expand\n\t\t26 text 键盘快捷键 \n\t\t27 text 无 F 键也能调试\n\t167 container\n\t\t168 container 源码编辑\n\t\t\t169 heading 代码, Value: 2\n\t\t\t\t170 text 代码\n\t\t\t171 button 粘贴代码, ID: paste\n\t\t\t172 button 复制题站源码, ID: copy\n\t\t\t173 button 导入, ID: import\n\t\t\t174 pop up button (collapsed, settable) Description: 导出内容, Value: 仅题站源码, ID: export-mode, Secondary Actions: Expand\n\t\t\t\t175 menu\n\t\t\t\t\t176 (selected) 仅题站源码\n\t\t\t\t\t177 完整草稿\n\t\t\t178 button 导出, ID: export\n\t\t\t179 checkbox 题站源码, Value: 1, ID: user-tab\n\t\t\t180 checkbox 测试驱动, Value: 0, ID: driver-tab\n\t\t\t181 checkbox 查看调试快照, Value: 0, ID: snapshot-toggle\n\t\t\t182 text main.cpp\n\t\t\t183 text 源码已修改 · 请重新编译\n\t\t\t184 container Description: 行号与断点, ID: gutter\n\t\t\t\t185 button 1, Help: 第 1 行：切换断点\n\t\t\t\t186 button 2, Help: 第 2 行：切换断点\n\t\t\t187 text entry area (settable) Description: 源代码, ID: source, Value: struct PersonRows {int rowOne;int rowTwo;int rowThree;int rowFour;int rowFive;int rowSix;};\nvoid probe(){PersonRows value;value.\n\t\t\t188 button Description: 在当前行切换断点, Help: 当前行断点（F9 / Ctrl+9）, ID: breakpoint\n\t\t\t189 button 代码提示, Help: 代码提示（Ctrl+J / Ctrl+Space）, ID: complete\n\t\t\t190 button 缩进, Help: 缩进（Tab）, ID: indent\n\t\t\t191 button 取消缩进, Help: 取消缩进（Shift+Tab）, ID: outdent\n\t\t\t192 search text field (settable) Description: 查找源码, Value: focus-person05, ID: find\n\t\t\t193 button 下一处, ID: find-next\n\t\t\t194 text 输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。\n\t\t\t195 text 草稿已保存 · 版本 18\n\t\t\t196 button (collapsed) 断点与编译诊断, Secondary Actions: Expand\n\t\t\t\t197 text 断点与编译诊断\n\t\t198 container 输入输出与调试面板\n\t\t\t199 container\n\t\t\t\t200 heading 样例输入 运行前一次性提供, Value: 2\n\t\t\t\t\t201 text 样例输入\n\t\t\t\t\t202 text 运行前一次性提供\n\t\t\t\t203 text entry area (settable) Description: 标准输入, ID: stdin, Value: 3\n\n\t\t\t204 container\n\t\t\t\t205 heading 程序输出 stop, Value: 2\n\t\t\t\t\t206 text 程序输出\n\t\t\t\t\t207 text stop\n\t\t\t\t208 container Description: 程序输出, ID: output\n\t\t\t\t\t209 text 尚无输出\n\t\t\t210 container\n\t\t\t\t211 heading 调用栈, Value: 2\n\t\t\t\t\t212 text 调用栈\n\t\t\t\t213 text 调试暂停后显示真实调用栈\n\t\t\t214 container\n\t\t\t\t215 heading 局部变量, Value: 2\n\t\t\t\t\t216 text 局部变量\n\t\t\t\t217 text 调试暂停后读取变量\n\t\t\t218 container\n\t\t\t\t219 heading 基础监视, Value: 2\n\t\t\t\t\t220 text 基础监视\n\t\t\t\t221 text field (settable) Description: 监视表达式, ID: expression\n\t\t\t\t222 button (disabled) 查看, ID: evaluate\n\t\t\t\t223 text 支持范围以适配器为准；函数调用、赋值和自增不可用。\n\t\t\t\t224 text 选择暂停栈帧后查询\n\nThe focused UI element is 192 search text field (settable) Description: 查找源码, Value: focus-person05, ID: find",
+  "dom": {
+    "body": "算法工作台\n开发验证原型\n\n粘贴代码，带着输入运行，在暂停处排错。\n\n校验本地资源\n本版本离线资源已校验 · iPad 真机待验证\niPad 离线冷启动待验证\nClang 8.0.1 / wasm32\n原型说明与验证步骤\nC++17\nC11\n编译运行\n编译调试\n继续\n进入\n跳过\n跳出\n停止\n已结束\nCtrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n键盘快捷键 无 F 键也能调试\n代码\n粘贴代码\n复制题站源码\n导入\n仅题站源码\n完整草稿\n导出\n题站源码\n测试驱动\n查看调试快照\nmain.cpp\n源码已修改 · 请重新编译\n1\n2\nstruct PersonRows {int rowOne;int rowTwo;int rowThree;int rowFour;int rowFive;int rowSix;};\nvoid probe(){PersonRows value;value.\n\n切换断点\n代码提示\n缩进\n取消缩进\n下一处\n\n输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。\n\n草稿已保存 · 版本 18\n断点与编译诊断\n样例输入\n运行前一次性提供\n程序输出\nstop\n尚无输出\n调用栈\n调试暂停后显示真实调用栈\n局部变量\n调试暂停后读取变量\n基础监视\n查看\n\n支持范围以适配器为准；函数调用、赋值和自增不可用。\n\n选择暂停栈帧后查询",
+    "fields": [
+      {
+        "disabled": false,
+        "id": "language",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "cpp"
+      },
+      {
+        "disabled": false,
+        "id": "shortcut-scheme",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "control-number"
+      },
+      {
+        "disabled": false,
+        "id": "export-mode",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "user-source"
+      },
+      {
+        "disabled": false,
+        "id": "file",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "source",
+        "readOnly": false,
+        "selectionEnd": 128,
+        "selectionStart": 128,
+        "value": "struct PersonRows {int rowOne;int rowTwo;int rowThree;int rowFour;int rowFive;int rowSix;};\nvoid probe(){PersonRows value;value."
+      },
+      {
+        "disabled": false,
+        "id": "find",
+        "readOnly": false,
+        "selectionEnd": 14,
+        "selectionStart": 14,
+        "value": "focus-person05"
+      },
+      {
+        "disabled": false,
+        "id": "stdin",
+        "readOnly": false,
+        "selectionEnd": 2,
+        "selectionStart": 2,
+        "value": "3\n"
+      },
+      {
+        "disabled": false,
+        "id": "expression",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "clipboard-text",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      }
+    ],
+    "popup": "<div class=\"completion-list\" id=\"completion-list-1\" role=\"listbox\" aria-label=\"代码提示\" aria-busy=\"false\" style=\"max-height: 311.231px;\"><div class=\"completion-option is-selected\" id=\"completion-option-1-159-0\" role=\"option\" title=\"PersonRows::\" aria-selected=\"true\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">PersonRows</span><span class=\"completion-detail\">PersonRows::</span></div><div class=\"completion-option\" id=\"completion-option-1-159-1\" role=\"option\" title=\"PersonRows &amp; operator=(const PersonRows &amp;)\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">operator=</span><span class=\"completion-detail\">PersonRows &amp; operator=(const PersonRows &amp;)</span></div><div class=\"completion-option\" id=\"completion-option-1-159-2\" role=\"option\" title=\"PersonRows &amp; operator=(PersonRows &amp;&amp;)\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">operator=</span><span class=\"completion-detail\">PersonRows &amp; operator=(PersonRows &amp;&amp;)</span></div><div class=\"completion-option\" id=\"completion-option-1-159-3\" role=\"option\" title=\"int rowFive\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowFive</span><span class=\"completion-detail\">int rowFive</span></div><div class=\"completion-option\" id=\"completion-option-1-159-4\" role=\"option\" title=\"int rowFour\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowFour</span><span class=\"completion-detail\">int rowFour</span></div><div class=\"completion-option\" id=\"completion-option-1-159-5\" role=\"option\" title=\"int rowOne\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowOne</span><span class=\"completion-detail\">int rowOne</span></div><div class=\"completion-option\" id=\"completion-option-1-159-6\" role=\"option\" title=\"int rowSix\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowSix</span><span class=\"completion-detail\">int rowSix</span></div><div class=\"completion-option\" id=\"completion-option-1-159-7\" role=\"option\" title=\"int rowThree\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowThree</span><span class=\"completion-detail\">int rowThree</span></div><div class=\"completion-option\" id=\"completion-option-1-159-8\" role=\"option\" title=\"int rowTwo\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">rowTwo</span><span class=\"completion-detail\">int rowTwo</span></div><div class=\"completion-option\" id=\"completion-option-1-159-9\" role=\"option\" title=\"void ~PersonRows()\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">~PersonRows</span><span class=\"completion-detail\">void ~PersonRows()</span></div></div>",
+    "title": "算法工作台 · 四号验证原型",
+    "url": "http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html"
+  }
+}
