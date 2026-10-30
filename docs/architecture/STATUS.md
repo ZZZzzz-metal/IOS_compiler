@@ -2,6 +2,8 @@
 
 ## 2026-10-30当前增量：离线代码补全
 
+发布回执：固定标签integration-v0.4.6（b4781949）和5号cbc92b26已推送，[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)已结束草稿、open且未合并；2/4/5均实际回复ACK-ACCEPT，握手闭环。根mandatory check/test通过。下一步由用户手动审核合并PR，并在真机开始时按手册P01–P11一次一步反馈；两项补全边界及iPad/G2/G3待验保持。发布后的文档回执不改变固定标签或包。
+
 最终追加：5号固定cbc92b26已合入6ba18d2，150个新封存文件及清单由1号再次核对SHA/大小/Git原字节一致。完整0.4.6包、实际桌面UI及停服冷开新代码流程在报告列明范围接受；原33逻辑例现为32通过、const-string一项边界失败，另有unavailable属性边界失败。两项未修，iPad/Safari、物理输入、完全断网、草稿强可靠性及G2/G3仍待，能力保持implemented-unverified。42条真实桌面观察、受控竞态26场景105断言、编辑23场景339断言及3个原UI负例分开记录，不相加冒充真机验收。固定包source仍为b14aebab、bundle cbe80b74，运行及包输入未改变；随包能力/手册中“待独立验收”是构建时快照，最新独立结果由[最终报告追加](COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md)和[5号报告](../validation/completion-ui-person05-b14aeba-2026-10-30.md)补充。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)仍由用户手动合并。下文为此前阶段状态，按记录时点保留。
 
 2号固定后端 afada754、4号固定界面 e2efc07 已分别合入761b652、537a27b。真实离线Clang候选接入成员/变量/函数弹窗，包含300ms自动、按钮、Ctrl+J/Ctrl+Space、键盘/触控选择与原生撤销；编译前等待补全Worker取消和释放。根35资源后端组合为integration-prototype-80135c59f01b26fc，既有真实流水线3/3；新合并界面/保存200、离线23、契约10全部通过，mandatory check/test通过。不同轮次和重复契约不累加。

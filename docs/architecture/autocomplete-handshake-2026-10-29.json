@@ -32,9 +32,11 @@
         "mergeCommit": "6ba18d2c9785f85a4b3c90b734a457b144d4c83d",
         "fixedRuntimeSource": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
         "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
-        "replyDelivery": "pending final publication notice",
+        "replyDelivery": "sent-and-acknowledged",
         "boundaryFailuresClosed": false,
-        "iPadVerified": false
+        "iPadVerified": false,
+        "ownerAcknowledged": true,
+        "ownerReplySnapshot": "ACK-ACCEPT 已回传，2号本轮握手完成。 签收仅限桌面实验原型；const-string、unavailable 两项边界未修，iPad 与 G2/G3 仍待验证。"
       }
     },
     {
@@ -55,9 +57,11 @@
         "mergeCommit": "6ba18d2c9785f85a4b3c90b734a457b144d4c83d",
         "fixedRuntimeSource": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
         "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
-        "replyDelivery": "pending final publication notice",
+        "replyDelivery": "sent-and-acknowledged",
         "boundaryFailuresClosed": false,
-        "iPadVerified": false
+        "iPadVerified": false,
+        "ownerAcknowledged": true,
+        "ownerReplySnapshot": "4号交付已获1号正式签收，最终确认已回复，协作流程闭环。 PR #4 已就绪，待你手动合并。验收范围为桌面实验原型；两项候选过滤限制及iPad真机验证仍保留。"
       }
     },
     {
@@ -99,9 +103,11 @@
         "mergeCommit": "6ba18d2c9785f85a4b3c90b734a457b144d4c83d",
         "fixedRuntimeSource": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
         "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
-        "replyDelivery": "pending final publication notice",
+        "replyDelivery": "sent-and-acknowledged",
         "boundaryFailuresClosed": false,
-        "iPadVerified": false
+        "iPadVerified": false,
+        "ownerAcknowledged": true,
+        "ownerReplySnapshot": "已向1号回复 ACK-ACCEPT，完成本轮交接闭环。 限定桌面范围已签收；两项补全边界未修，真机、草稿强可靠性及G2/G3仍待验证。"
       },
       "finalStage": {
         "sealedFiles": 150,
@@ -205,6 +211,10 @@
     {
       "date": "2026-10-30",
       "event": "Owner05 fixed DONE cbc92b26 integrated at6ba18d2. Root verified164 allowed-scope files,150 immutable evidence files/Git bytes, prior39/8/16 root files and both unchanged archives. Documented desktop prototype scope ACCEPT recorded for02/04/05; const-string/unavailable boundaries and iPad/G2/G3 remain open. Final publication notices follow actual remote success."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Published fixed tag integration-v0.4.6 at b4781949 and owner05 cbc92b26. PR4 confirmed open/ready/unmerged with main ef5d390 and maintainer modification false. Actual ACCEPT notices sent to02/04/05 and all three explicitly ACK-ACCEPTed; handshake closed within documented desktop scope. Following documentation receipts do not move the tag or alter the bundle."
     }
   ],
   "api": {

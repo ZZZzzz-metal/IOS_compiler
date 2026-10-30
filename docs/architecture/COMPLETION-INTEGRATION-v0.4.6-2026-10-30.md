@@ -54,3 +54,5 @@
 原33逻辑例现在32通过、const-string一项边界失败；额外unavailable另一项边界失败。旧后端目录29/1/3仍是当时记录，本轮另存补齐3项UI负例，不改旧结果，不把双路响应、受控断言和浏览器观察混加。没有新增确认产品缺陷。1号据固定交付、封存核对及原始证据，对2/4/5本轮交付作限定桌面实验原型ACCEPT；这不关闭两项已知补全边界。能力保持implemented-unverified，真实iPad/Safari、物理键盘/IME/触控、物理断网、完整UI/草稿强可靠性、安装升级/回收/后台/性能及G2/G3仍待。
 
 包内能力/手册的“待5号独立验收”保留为b14aebab构建时快照，最新结果以本追加及5号报告为准，不无谓重建新包。发布前根强制检查、固定新标签/远端推送及PR结束草稿的实际回执另存app/offline/evidence/completion-final-2026-10-30；未成功的动作不会预记完成。旧包、标签、失败及草稿保持不变，main仍由用户手动合并。
+
+最终发布实际完成：根mandatory check/test退出0，8个新根证据及清单已核对Git原字节；签收提交b4781949d216ba16bee563f401d1b35bb7670142已推送，并建立全新固定注释标签integration-v0.4.6；module/05-validation已推至cbc92b26。PR #4已由draft转为ready，实读open、draft=false、merged=false，main仍ef5d390，maintainer_can_modify=false。2/4/5均已实际回复ACK-ACCEPT，REQ→ACK→DONE→ACCEPT闭环；无需用户另行转告5号。本段与握手记录属于发布回执追加，不改变标签指向或运行包。实际发布、三位确认及本次强制检查原文另存app/offline/evidence/completion-final-publication-2026-10-30。
