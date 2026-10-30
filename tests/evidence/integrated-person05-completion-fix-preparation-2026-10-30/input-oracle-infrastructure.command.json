@@ -1,0 +1,16 @@
+{
+  "id": "input-oracle-infrastructure",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "--test",
+    "tests/completion-fixtures-checks.mjs",
+    "tests/completion-oracle-checks.mjs",
+    "tests/completion-fix-fixtures-checks.mjs",
+    "tests/completion-fix-oracle-checks.mjs"
+  ],
+  "startedAt": "2026-10-30T15:07:42.415Z",
+  "endedAt": "2026-10-30T15:07:42.804Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

@@ -1,0 +1,36 @@
+✔ eleven distinct repair queries remain preparation-only (1.7968ms)
+✔ one exact marker and independent coordinates bind each archived query (0.6584ms)
+✔ fresh nonce changes names and source hashes without changing test meaning (0.7013ms)
+✔ required and forbidden spellings do not contradict; same-name overloads use signatures (0.3079ms)
+✔ signature constraints distinguish int/double and const/nonconst overloads (0.2944ms)
+✔ complete independent call controls include positives, negatives and deprecated warnings (0.3054ms)
+✔ nonce rejects accidental missing or non-hex names (0.8133ms)
+✔ legal same-name overload is retained; adding illegal overload fails only the strict extension (2.2974ms)
+✔ unknown detail cannot evade the closed signature set (0.204ms)
+✔ blanket removal and non-success cannot satisfy legitimate required overloads (0.8115ms)
+✔ ordinary allowed overloads may be explicitly listed for mutable objects (0.1814ms)
+✔ different generated names and preserved contract identity receive the same strict checks (0.5263ms)
+✔ 33 independent cases retain pending status; no provider results are fabricated (0.5651ms)
+✔ ASCII, Chinese and non-BMP coordinates have independent literal oracles (0.4769ms)
+✔ coordinate oracle rejects raw editor text and surrogate splits (0.7724ms)
+✔ type swap and rename retain counterfactual declarations and different fingerprints (0.1363ms)
+✔ scope and declaration order negatives are represented at the actual caret (0.1178ms)
+✔ include context is preserved; omission cannot silently reuse driver declarations (0.142ms)
+✔ UI suppression, prefix filtering and semantic boundaries are distinct expectations (0.1333ms)
+✔ independent Node SHA snapshot serialization agrees with frozen snapshot protocol (4.9482ms)
+✔ exact insertion names work; matching a name only in detail never satisfies contains (0.555ms)
+✔ const append and private candidates remain boundary failures, including unknown kind (0.2511ms)
+✔ non-success empty result cannot satisfy required candidates; explicit include omission may fail (0.1686ms)
+✔ truncation does not turn a missing required candidate into a pass (0.1243ms)
+✔ stale identity, resource identity, duplicate IDs and invalid range are rejected (2.0762ms)
+✔ raw native UTF8 position and translation unit are checked without treating exit1 as failure (0.3604ms)
+✔ UI automatic suppression cases cannot silently be executed as invalid provider triggers (0.5967ms)
+✔ required function signatures keep return and parameter types without fixing whitespace (0.4143ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 285.0338

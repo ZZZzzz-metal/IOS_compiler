@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "preparation-only-fix-alias-const",
+  "documentVersion": 1,
+  "snapshot": {
+    "snapshotId": "preparation-only-fix-alias-const-snapshot",
+    "sourceHash": "sha256:2ccd5fb69e5e90b584da0922d2194ac0ba4a258fb587de868800f2430935809b",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "#include <string>\nusing TextAlias_253c01a445d5 = std::string;\nvoid probe_253c01a445d5() {\n  const TextAlias_253c01a445d5 object_253c01a445d5;\n  object_253c01a445d5.\n}\n",
+        "contentHash": "sha256:3795f6193a1d6005fc1185362c820a06a68a0b06a92e24c0b7da2323a376ccc1"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 164,
+  "trigger": "."
+}

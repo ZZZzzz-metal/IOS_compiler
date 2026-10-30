@@ -1,0 +1,69 @@
+{
+  "requestId": "CC-20261030-05",
+  "stage": "DONE-PREP",
+  "baseline": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
+  "passed": true,
+  "nonce": "253c01a445d5",
+  "generatedCompletionCases": 11,
+  "generatedCallControls": 24,
+  "actualProviderRequests": 0,
+  "actualNativeQueries": 0,
+  "actualCompilerProbeCalls": 0,
+  "actualBrowserObservations": 0,
+  "featureVerdict": "pending-fixed-repair-target",
+  "originalInputsAndTrackedHistoryUnchanged": true,
+  "pending": [
+    "Both original failures must pass original oracle on a fixed repair target",
+    "Extended randomized queries and real callability controls",
+    "Final integrated resources/package identity",
+    "Physical iPad offline/UI/draft reliability and G2/G3"
+  ],
+  "commands": [
+    {
+      "id": "mandatory-check",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "startedAt": "2026-10-30T15:07:37.586Z",
+      "endedAt": "2026-10-30T15:07:41.237Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "mandatory-test",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "startedAt": "2026-10-30T15:07:41.241Z",
+      "endedAt": "2026-10-30T15:07:42.410Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "input-oracle-infrastructure",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "tests/completion-fixtures-checks.mjs",
+        "tests/completion-oracle-checks.mjs",
+        "tests/completion-fix-fixtures-checks.mjs",
+        "tests/completion-fix-oracle-checks.mjs"
+      ],
+      "startedAt": "2026-10-30T15:07:42.415Z",
+      "endedAt": "2026-10-30T15:07:42.804Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    }
+  ]
+}

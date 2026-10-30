@@ -1,0 +1,91 @@
+{
+  "id": "fix-overload-const",
+  "status": "pending-provider",
+  "language": {
+    "language": "cpp",
+    "standard": "c++17"
+  },
+  "translationUnit": "main.cpp",
+  "sourcePath": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "struct Record_253c01a445d5 {\n  int choose_253c01a445d5() const { return 0; }\n  int choose_253c01a445d5(int argument_253c01a445d5) { (void)argument_253c01a445d5; return 0; }\n};\nvoid probe_253c01a445d5() {\n  const Record_253c01a445d5 object_253c01a445d5;\n  object_253c01a445d5.\n}\n",
+      "contentHash": "sha256:0e6bd9b470edccaa83031d174d70825e649c5b1837d0547df02eec8b4f19aa11"
+    }
+  ],
+  "markedFiles": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "struct Record_253c01a445d5 {\n  int choose_253c01a445d5() const { return 0; }\n  int choose_253c01a445d5(int argument_253c01a445d5) { (void)argument_253c01a445d5; return 0; }\n};\nvoid probe_253c01a445d5() {\n  const Record_253c01a445d5 object_253c01a445d5;\n  object_253c01a445d5./*<cc>*/\n}\n"
+    }
+  ],
+  "coordinates": {
+    "offsetUtf16": 275,
+    "line": 7,
+    "columnUtf16": 23,
+    "columnUtf8": 23
+  },
+  "fixtureHash": "sha256:1a575372bceaad929245b222038e45cfc876ac9b9e246fb60f9ba1e1aa21425e",
+  "expect": {
+    "support": "required",
+    "contains": [
+      "choose_253c01a445d5"
+    ],
+    "excludes": [],
+    "trigger": "."
+  },
+  "pairId": "fix-overload-cv",
+  "baselineId": null,
+  "signatures": {
+    "required": [
+      {
+        "name": "choose_253c01a445d5",
+        "pattern": "\\bchoose_253c01a445d5\\s*\\(\\s*\\s*\\)\\s*const\\s*$"
+      }
+    ],
+    "forbidden": [
+      {
+        "name": "choose_253c01a445d5",
+        "pattern": "\\bchoose_253c01a445d5\\s*\\(\\s*int\\b[^)]*\\s*\\)\\s*$"
+      }
+    ],
+    "closedNames": [
+      "choose_253c01a445d5"
+    ]
+  },
+  "controls": [
+    {
+      "id": "const-overload-positive",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_253c01a445d5 {\n  int choose_253c01a445d5() const { return 0; }\n  int choose_253c01a445d5(int argument_253c01a445d5) { (void)argument_253c01a445d5; return 0; }\n};\nint main() {\n  const Record_253c01a445d5 object_253c01a445d5;\n  return object_253c01a445d5.choose_253c01a445d5();\n}\n"
+        }
+      ],
+      "expect": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      }
+    },
+    {
+      "id": "mutable-overload-negative",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_253c01a445d5 {\n  int choose_253c01a445d5() const { return 0; }\n  int choose_253c01a445d5(int argument_253c01a445d5) { (void)argument_253c01a445d5; return 0; }\n};\nint main() {\n  const Record_253c01a445d5 object_253c01a445d5;\n  return object_253c01a445d5.choose_253c01a445d5(1);\n}\n"
+        }
+      ],
+      "expect": {
+        "status": "failed",
+        "reason": "compiler-exit"
+      }
+    }
+  ]
+}
