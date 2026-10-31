@@ -1,0 +1,15 @@
+{
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "deleted",
+    "errorMember": "lateChoice_a8ee505af129_call"
+  },
+  "semantic": {
+    "kind": "deleted",
+    "member": "lateChoice_a8ee505af129_call",
+    "sourcePath": "main.cpp",
+    "line": 5,
+    "errorPattern": "deleted"
+  }
+}

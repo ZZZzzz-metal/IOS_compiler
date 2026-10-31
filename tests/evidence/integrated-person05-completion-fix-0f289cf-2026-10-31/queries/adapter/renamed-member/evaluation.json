@@ -1,0 +1,13 @@
+{
+  "id": "renamed-member",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 18.728800000000092,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

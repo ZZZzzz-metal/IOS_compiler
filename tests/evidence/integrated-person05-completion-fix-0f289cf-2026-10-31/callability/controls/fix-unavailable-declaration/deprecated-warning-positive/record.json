@@ -1,0 +1,38 @@
+{
+  "fixtureId": "fix-unavailable-declaration",
+  "controlId": "deprecated-warning-positive",
+  "controlSet": "original-11-controls",
+  "startedAt": "2026-10-31T02:16:52.899Z",
+  "passed": true,
+  "sourceHash": "sha256:c1421ae1d8b6aafac1b996cec526484c84d6dd8fb5f727b9e4a240c00d1e1180",
+  "actualStatus": "compiled",
+  "reason": null,
+  "elapsedMs": 688.7718999999997,
+  "expected": {
+    "status": "compiled",
+    "smokeExitCode": 0,
+    "warningPattern": "person05-deprecated"
+  },
+  "semantic": null,
+  "diagnosticGroups": [],
+  "errors": [],
+  "binaryEvidence": {
+    "executable": {
+      "file": "controls/fix-unavailable-declaration/deprecated-warning-positive/main.wasm",
+      "byteLength": 13510,
+      "sha256": "sha256:36d5fde00e9c93e64b907ed13be2da3f5011592834455482ef19c37ac89876c6"
+    },
+    "object": {
+      "file": "controls/fix-unavailable-declaration/deprecated-warning-positive/main.o",
+      "byteLength": 492,
+      "sha256": "sha256:3b242f7397fc0dc8fb94901f2cb79c36bf1bcb834754f3b7d6dfc32d0a8fc4e0"
+    }
+  },
+  "actualCompilerIdentity": {
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "workersReleased": true
+}

@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-unavailable-declaration",
+  "documentVersion": 39,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-unavailable-declaration-snapshot",
+    "sourceHash": "sha256:a8b91ae906f6e4bfc539849832627761f896a4cfabd85e24a4656fe95040b920",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_declaration_a8ee505af129\n}\n",
+        "contentHash": "sha256:3d3dc32b74854d6bd41035a3b6ecf2237c751021dbe7305b4c845f462ddc11ba"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 500,
+  "trigger": "identifier"
+}

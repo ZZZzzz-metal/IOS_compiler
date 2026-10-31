@@ -1,0 +1,17 @@
+{
+  "requestId": "CC-20261030-05",
+  "argv": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\run-completion-fix-stage.mjs",
+    "C:/Users/20964/Documents/ChatGPT/C++算法编译器/ipad-debugger-02",
+    "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "integrated-person05-completion-fix-0f289cf-2026-10-31"
+  ],
+  "node": "v24.19.0",
+  "targetPath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+  "expectedCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+  "nonce": "a8ee505af129",
+  "stage": "independent-repair-branch-semantics",
+  "startedAt": "2026-10-31T02:16:33.928Z",
+  "scope": "No new application manifest/profile/package/browser/iPad acceptance; full compile uses original compiler identity."
+}

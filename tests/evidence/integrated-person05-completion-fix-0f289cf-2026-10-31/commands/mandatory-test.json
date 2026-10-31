@@ -1,0 +1,17 @@
+{
+  "id": "mandatory-test",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd test"
+  ],
+  "environmentOverrides": {},
+  "startedAt": "2026-10-31T02:17:17.224Z",
+  "endedAt": "2026-10-31T02:17:18.207Z",
+  "elapsedMs": 983.3547000000035,
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

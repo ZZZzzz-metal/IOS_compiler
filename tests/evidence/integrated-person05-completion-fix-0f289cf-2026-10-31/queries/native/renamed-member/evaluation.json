@@ -1,0 +1,19 @@
+{
+  "id": "renamed-member",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 24.726000000000113,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:3:37",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:3:37"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

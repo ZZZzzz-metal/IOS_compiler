@@ -1,0 +1,28 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-enum",
+  "documentVersion": 25,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-enum-snapshot",
+  "sourceHash": "sha256:def76d2b12a4489896894c6779d242b70aec4a6ae09e8415804d03892bea430f",
+  "sourcePath": "main.cpp",
+  "offset": 70,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:c3d9eaa4fa80cddb5d9d946de0e1b48f3812f1ff3a80a447f42d1a7026e1c3e5",
+      "label": "orchard",
+      "kind": "unknown",
+      "detail": "Direction orchard",
+      "insertText": "orchard",
+      "replaceRange": {
+        "startOffset": 67,
+        "endOffset": 70
+      },
+      "filterText": "orchard"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

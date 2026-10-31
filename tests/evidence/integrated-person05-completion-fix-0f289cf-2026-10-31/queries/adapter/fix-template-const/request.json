@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-template-const",
+  "documentVersion": 34,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-template-const-snapshot",
+    "sourceHash": "sha256:e7a17bf32b0ea7081580a2d481247718ffced8a32c022c50ec7731588ba05677",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nvoid probe_a8ee505af129() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+        "contentHash": "sha256:23c02868e46698c8ec962d5ae845b376cd28cc1b7cc62ad4f2670bcb545ac8d8"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 630,
+  "trigger": "."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "attribute-availability-supplement",
+  "group": "original-extra",
+  "route": "adapter",
+  "elapsedMs": 16.177200000000084,
+  "verdict": "passed",
+  "support": "boundary",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

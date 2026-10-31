@@ -1,0 +1,13 @@
+{
+  "id": "declaration-order",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 17.399200000000064,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

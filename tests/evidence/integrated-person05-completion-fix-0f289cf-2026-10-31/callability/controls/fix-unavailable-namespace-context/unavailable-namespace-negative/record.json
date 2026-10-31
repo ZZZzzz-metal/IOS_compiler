@@ -1,0 +1,61 @@
+{
+  "fixtureId": "fix-unavailable-namespace-context",
+  "controlId": "unavailable-namespace-negative",
+  "controlSet": "original-11-controls",
+  "startedAt": "2026-10-31T02:16:58.127Z",
+  "passed": true,
+  "sourceHash": "sha256:b709f4263793278a69e58e8a286e6774cae014970e873cd3df59699f55fb9c14",
+  "actualStatus": "failed",
+  "reason": "compiler-exit",
+  "elapsedMs": 604.9307000000008,
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "person05-unavailable"
+  },
+  "semantic": {
+    "kind": "unavailable",
+    "member": "cross_a8ee505af129_read",
+    "sourcePath": "main.cpp",
+    "line": 9,
+    "errorPattern": "person05-unavailable"
+  },
+  "diagnosticGroups": [
+    {
+      "index": 0,
+      "error": {
+        "severity": "error",
+        "message": "'cross_a8ee505af129_read' is unavailable: person05-unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 9,
+            "column": 30
+          }
+        }
+      },
+      "notes": [
+        {
+          "severity": "note",
+          "message": "'cross_a8ee505af129_read' has been explicitly marked unavailable here",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 58
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "binaryEvidence": {},
+  "actualCompilerIdentity": {
+    "toolchainId": null,
+    "compilerResourceHash": null,
+    "linkerResourceHash": null,
+    "sysrootResourceHash": null
+  },
+  "workersReleased": true
+}

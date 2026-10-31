@@ -1,0 +1,43 @@
+{
+  "status": "failed",
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-unavailable-overload-unavailable-overload-negative",
+  "sourceHash": "sha256:f0a47118bdb4ea65e4d7d75363cf3ce2159706d76ab0589e882dc03db1cec1d3",
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "call to unavailable function 'mixed_a8ee505af129_select': person05-unavailable",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 6,
+          "column": 10
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "candidate function has been explicitly made unavailable",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 2,
+          "column": 58
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "candidate function",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 1,
+          "column": 5
+        }
+      }
+    }
+  ],
+  "reason": "compiler-exit",
+  "rawDiagnostics": "/project/main.cpp:6:10: error: call to unavailable function 'mixed_a8ee505af129_select': person05-unavailable\n  return mixed_a8ee505af129_select(1);\n         ^~~~~~~~~~~~~~~~~~~~~~~~~\n/project/main.cpp:2:58: note: candidate function has been explicitly made unavailable\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n                                                         ^\n/project/main.cpp:1:5: note: candidate function\nint mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n    ^\n1 error generated.\n",
+  "binaryEvidence": {}
+}

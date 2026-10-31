@@ -1,0 +1,683 @@
+[
+  {
+    "id": "type-a",
+    "event": {
+      "phase": "completion-resource",
+      "name": "memfs"
+    }
+  },
+  {
+    "id": "type-a",
+    "event": {
+      "phase": "completion-resource",
+      "name": "sysroot.tar"
+    }
+  },
+  {
+    "id": "type-a",
+    "event": {
+      "phase": "completion-resource",
+      "name": "clang"
+    }
+  },
+  {
+    "id": "type-a",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "type-a",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 62.9357,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "type-b",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "type-b",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 19.5471,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "renamed-member",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "renamed-member",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 16.03390000000013,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "access-control",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "access-control",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.287300000000187,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "pointer",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "pointer",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 17.375999999999976,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "namespace",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "namespace",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.954300000000103,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "local-prefix",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "local-prefix",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.626900000000205,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "function-prefix",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "function-prefix",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.799200000000155,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "shadow-inner",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "shadow-inner",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.215399999999818,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "shadow-restored",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "shadow-restored",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.216699999999946,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "declaration-order",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "declaration-order",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.688900000000103,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "nested-member",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "nested-member",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 16.15079999999989,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    }
+  },
+  {
+    "id": "vector",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "vector",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 258.80230000000006,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 15007744
+    }
+  },
+  {
+    "id": "string",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "string",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 169.97820000000002,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 16515072
+    }
+  },
+  {
+    "id": "chinese-prefix",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "chinese-prefix",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 16.55619999999999,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "nonbmp-prefix",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "nonbmp-prefix",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.708100000000059,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "nonbmp-member",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "nonbmp-member",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.828600000000051,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "included-source",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "included-source",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 17.463199999999688,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    }
+  },
+  {
+    "id": "include-omitted",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "include-omitted",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.627600000000257,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "unfinished",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "unfinished",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.60510000000022,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "const-members",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "const-members",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 17.155399999999645,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "c-struct",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "c-struct",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 12.608600000000024,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "c-pointer",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "c-pointer",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 12.497600000000148,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "c-prefix",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "c-prefix",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 16.12940000000026,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "enum",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "enum",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 12.543099999999868,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "char-case",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "char-case",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.395300000000134,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "char-sizeof",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "char-sizeof",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.839199999999892,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "pattern-variable",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "pattern-variable",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.154300000000148,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "pattern-function",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "pattern-function",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.518100000000231,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "const-string",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "const-string",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 160.17740000000003,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 16515072
+    }
+  },
+  {
+    "id": "attribute-availability-supplement",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "attribute-availability-supplement",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.558999999999742,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "fix-alias-const",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-alias-const",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 145.95569999999998,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 16515072
+    }
+  },
+  {
+    "id": "fix-alias-mutable",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-alias-mutable",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 138.5405999999998,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 16515072
+    }
+  },
+  {
+    "id": "fix-template-const",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-template-const",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 17.958700000000135,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    }
+  },
+  {
+    "id": "fix-template-mutable",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-template-mutable",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.00189999999975,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    }
+  },
+  {
+    "id": "fix-overload-const",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-overload-const",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.448999999999614,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "fix-overload-mutable",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-overload-mutable",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 16.852699999999913,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "fix-unavailable-definition",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-unavailable-definition",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.229799999999614,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "fix-unavailable-declaration",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-unavailable-declaration",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.673800000000028,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "fix-unavailable-header",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-unavailable-header",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 12.387499999999818,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "fix-unavailable-overload",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-unavailable-overload",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.484300000000076,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    }
+  },
+  {
+    "id": "fix-unavailable-namespace-context",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-unavailable-namespace-context",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.764299999999821,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "id": "fix-late-static-template",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-late-static-template",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 11.830399999999827,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    }
+  },
+  {
+    "id": "fix-late-deleted-overload",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "id": "fix-late-deleted-overload",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 18.6878999999999,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  }
+]

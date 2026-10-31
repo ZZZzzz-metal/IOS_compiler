@@ -1,0 +1,7 @@
+/project/main.cpp:7:10: warning: 'surface_header_a8ee505af129_deprecated' is deprecated: person05-deprecated
+  return surface_header_a8ee505af129_deprecated();
+         ^
+/project/api_a8ee505af129.inc:3:16: note: 'surface_header_a8ee505af129_deprecated' has been explicitly marked deprecated here
+__attribute__((deprecated("person05-deprecated"))) int surface_header_a8ee505af129_deprecated();
+               ^
+1 warning generated.

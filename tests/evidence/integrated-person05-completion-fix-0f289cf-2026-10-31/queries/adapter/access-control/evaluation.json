@@ -1,0 +1,13 @@
+{
+  "id": "access-control",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 17.835900000000038,
+  "verdict": "passed",
+  "support": "boundary",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

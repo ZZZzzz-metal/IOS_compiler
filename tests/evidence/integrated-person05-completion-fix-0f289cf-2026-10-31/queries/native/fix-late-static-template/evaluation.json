@@ -1,0 +1,18 @@
+{
+  "id": "fix-late-static-template",
+  "group": "late2",
+  "route": "native",
+  "elapsedMs": 19.462099999999737,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 2,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:7:27",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:7:27"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

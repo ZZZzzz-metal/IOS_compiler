@@ -1,0 +1,22 @@
+{
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-late-deleted-overload-deleted-int-negative",
+  "snapshot": {
+    "snapshotId": "921d9062-acf9-4e9b-9905-c4407f13f5d9",
+    "sourceHash": "sha256:77eb085e700e519e7e82f1542068e2b77b882fe9b133a796e4c994175accd512",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n\nint main() {\n  return lateChoice_a8ee505af129_call(1);\n}\n",
+        "contentHash": "sha256:037389ccec246b0c67e137f379e4fe8efbd7dd07d92c578aa2cdb23474cba93e"
+      }
+    ]
+  },
+  "language": "cpp",
+  "standard": "c++17",
+  "mode": "run",
+  "optimization": "O0"
+}

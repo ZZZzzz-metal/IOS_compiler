@@ -1,0 +1,18 @@
+{
+  "id": "fix-template-const",
+  "group": "randomized11",
+  "route": "native",
+  "elapsedMs": 27.779199999999946,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 3,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:9:23",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:9:23"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

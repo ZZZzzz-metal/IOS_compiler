@@ -1,0 +1,22 @@
+{
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-unavailable-definition-allowed-positive",
+  "snapshot": {
+    "snapshotId": "494b8659-3192-4343-9fec-af804fee6e95",
+    "sourceHash": "sha256:3da0c4060b11dd9b59d4cc02d99589327443c0c62cd932d0d7bb9c92f70a4fc2",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_a8ee505af129_allowed();\n}\n",
+        "contentHash": "sha256:1ef3835f7661fbbfddb67da737a3db81eb638fa3895b94f49367d470046cd876"
+      }
+    ]
+  },
+  "language": "cpp",
+  "standard": "c++17",
+  "mode": "run",
+  "optimization": "O0"
+}

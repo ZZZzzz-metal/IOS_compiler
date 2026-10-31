@@ -1,0 +1,19 @@
+{
+  "id": "attribute-availability-supplement",
+  "group": "original-extra",
+  "route": "native",
+  "elapsedMs": 21.107699999999568,
+  "verdict": "passed",
+  "support": "boundary",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:4:19",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:4:19"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

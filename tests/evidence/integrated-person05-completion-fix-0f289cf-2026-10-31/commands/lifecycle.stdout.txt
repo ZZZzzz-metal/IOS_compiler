@@ -1,0 +1,12 @@
+{
+  "evidence": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-completion-fix-0f289cf-2026-10-31\\lifecycle",
+  "passed": true,
+  "scenarios": "7/7",
+  "checks": {
+    "pass": 25,
+    "fail": 0
+  },
+  "actualCompleteCalls": 7,
+  "workers": 6,
+  "targetUnchanged": true
+}

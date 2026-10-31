@@ -1,0 +1,59 @@
+{
+  "fixtureId": "fix-template-const",
+  "controlId": "ingest-template-negative",
+  "controlSet": "original-11-controls",
+  "startedAt": "2026-10-31T02:16:46.212Z",
+  "passed": true,
+  "sourceHash": "sha256:eb00eda330da988b33d423f0ffcdc8718ee6bc59090f0a1b3ede4d8d860d575d",
+  "actualStatus": "failed",
+  "reason": "compiler-exit",
+  "elapsedMs": 588.3101999999999,
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit"
+  },
+  "semantic": {
+    "kind": "const",
+    "member": "ingest_a8ee505af129",
+    "sourcePath": "main.cpp",
+    "line": 9
+  },
+  "diagnosticGroups": [
+    {
+      "index": 0,
+      "error": {
+        "severity": "error",
+        "message": "no matching member function for call to 'ingest_a8ee505af129'",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 9,
+            "column": 23
+          }
+        }
+      },
+      "notes": [
+        {
+          "severity": "note",
+          "message": "candidate function template not viable: 'this' argument has type 'const Box_a8ee505af129<int>', but method is not marked const",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 5,
+              "column": 47
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "binaryEvidence": {},
+  "actualCompilerIdentity": {
+    "toolchainId": null,
+    "compilerResourceHash": null,
+    "linkerResourceHash": null,
+    "sysrootResourceHash": null
+  },
+  "workersReleased": true
+}

@@ -1,0 +1,6 @@
+COMPLETION: choose_a8ee505af129 : [#int#]choose_a8ee505af129()[# const#]
+COMPLETION: choose_a8ee505af129 : [#int#]choose_a8ee505af129(<#int argument_a8ee505af129#>)
+COMPLETION: operator= : [#Record_a8ee505af129 &#]operator=(<#const Record_a8ee505af129 &#>)
+COMPLETION: operator= : [#Record_a8ee505af129 &#]operator=(<#Record_a8ee505af129 &&#>)
+COMPLETION: Record_a8ee505af129 : Record_a8ee505af129::
+COMPLETION: ~Record_a8ee505af129 : [#void#]~Record_a8ee505af129()

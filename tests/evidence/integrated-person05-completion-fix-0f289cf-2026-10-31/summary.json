@@ -1,0 +1,228 @@
+{
+  "requestId": "CC-20261030-05",
+  "expectedCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+  "targetPath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+  "nonce": "a8ee505af129",
+  "passed": true,
+  "fatal": null,
+  "targetUnchanged": true,
+  "originalUnchanged": true,
+  "commands": [
+    {
+      "id": "identity",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/completion-fix-integrity-independent.mjs",
+        "--target-root",
+        "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "--target-commit",
+        "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+        "--evidence-dir",
+        "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/identity"
+      ],
+      "environmentOverrides": {},
+      "startedAt": "2026-10-31T02:16:34.056Z",
+      "endedAt": "2026-10-31T02:16:35.336Z",
+      "elapsedMs": 1279.0095000000001,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "queries",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/run-completion-fix-independent.mjs",
+        "--target-root",
+        "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "--target-commit",
+        "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+        "--evidence-dir",
+        "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/queries",
+        "--identity-summary",
+        "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/identity/summary.json",
+        "--nonce",
+        "a8ee505af129"
+      ],
+      "environmentOverrides": {},
+      "startedAt": "2026-10-31T02:16:35.341Z",
+      "endedAt": "2026-10-31T02:16:41.291Z",
+      "elapsedMs": 5950.4375,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "callability",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/run-completion-fix-callability.mjs",
+        "--target-root",
+        "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "--target-commit",
+        "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+        "--evidence-dir",
+        "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/callability",
+        "--nonce",
+        "a8ee505af129"
+      ],
+      "environmentOverrides": {},
+      "startedAt": "2026-10-31T02:16:41.297Z",
+      "endedAt": "2026-10-31T02:17:01.121Z",
+      "elapsedMs": 19824.3365,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "lifecycle",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/completion-fix-lifecycle-independent.mjs",
+        "--target-root",
+        "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "--target-commit",
+        "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+        "--evidence-dir",
+        "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/lifecycle",
+        "--identity-summary",
+        "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/identity/summary.json"
+      ],
+      "environmentOverrides": {},
+      "startedAt": "2026-10-31T02:17:01.130Z",
+      "endedAt": "2026-10-31T02:17:03.298Z",
+      "elapsedMs": 2168.9182,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "main21",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/run-validation.mjs"
+      ],
+      "environmentOverrides": {
+        "VALIDATION_COMPILER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "VALIDATION_DEBUGGER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "VALIDATION_EVIDENCE_DIR": "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/regression"
+      },
+      "startedAt": "2026-10-31T02:17:03.304Z",
+      "endedAt": "2026-10-31T02:17:11.499Z",
+      "elapsedMs": 8194.584899999998,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "shadow-minimal",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/reproduce.mjs",
+        "shadow"
+      ],
+      "environmentOverrides": {
+        "VALIDATION_COMPILER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "VALIDATION_DEBUGGER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "VALIDATION_EVIDENCE_DIR": "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/regression"
+      },
+      "startedAt": "2026-10-31T02:17:11.503Z",
+      "endedAt": "2026-10-31T02:17:12.183Z",
+      "elapsedMs": 679.2485000000015,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "loop-minimal",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/reproduce.mjs",
+        "loop-header"
+      ],
+      "environmentOverrides": {
+        "VALIDATION_COMPILER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "VALIDATION_DEBUGGER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "VALIDATION_EVIDENCE_DIR": "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/regression"
+      },
+      "startedAt": "2026-10-31T02:17:12.189Z",
+      "endedAt": "2026-10-31T02:17:12.968Z",
+      "elapsedMs": 779.2695999999996,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "initializer6",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/initializer-lifetime.mjs"
+      ],
+      "environmentOverrides": {
+        "VALIDATION_COMPILER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "VALIDATION_DEBUGGER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+        "VALIDATION_EVIDENCE_DIR": "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/regression"
+      },
+      "startedAt": "2026-10-31T02:17:12.973Z",
+      "endedAt": "2026-10-31T02:17:15.333Z",
+      "elapsedMs": 2360.1249000000025,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "mandatory-check",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "environmentOverrides": {},
+      "startedAt": "2026-10-31T02:17:15.338Z",
+      "endedAt": "2026-10-31T02:17:17.219Z",
+      "elapsedMs": 1880.8308000000034,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "mandatory-test",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "environmentOverrides": {},
+      "startedAt": "2026-10-31T02:17:17.224Z",
+      "endedAt": "2026-10-31T02:17:18.207Z",
+      "elapsedMs": 983.3547000000035,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "oracle-infrastructure",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "--test",
+        "tests/completion-fixtures-checks.mjs",
+        "tests/completion-oracle-checks.mjs",
+        "tests/completion-fix-fixtures-checks.mjs",
+        "tests/completion-fix-oracle-checks.mjs",
+        "tests/completion-fix-callability-oracle-checks.mjs"
+      ],
+      "environmentOverrides": {},
+      "startedAt": "2026-10-31T02:17:18.213Z",
+      "endedAt": "2026-10-31T02:17:18.633Z",
+      "elapsedMs": 419.97359999999753,
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    }
+  ],
+  "productScope": "Fixed compiler-branch repair semantics; final integration/profile/package/UI/iPad remain separate."
+}

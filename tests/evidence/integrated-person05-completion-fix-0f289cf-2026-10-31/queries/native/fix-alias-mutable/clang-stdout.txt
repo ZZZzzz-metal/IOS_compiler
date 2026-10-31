@@ -1,0 +1,147 @@
+COMPLETION: append : [#basic_string<char> &#]append(<#const basic_string<char> &__str#>)
+COMPLETION: append : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]append(<#const _Tp &__t#>)
+COMPLETION: append : [#basic_string<char> &#]append(<#const basic_string<char> &__str#>, <#size_type __pos#>{#, <#size_type __n = npos#>#})
+COMPLETION: append : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]append(<#const _Tp &__t#>, <#size_type __pos#>{#, <#size_type __n = npos#>#})
+COMPLETION: append : [#basic_string<char> &#]append(<#const value_type *__s#>, <#size_type __n#>)
+COMPLETION: append : [#basic_string<char> &#]append(<#const value_type *__s#>)
+COMPLETION: append : [#basic_string<char> &#]append(<#size_type __n#>, <#value_type __c#>)
+COMPLETION: append : [#typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type#]append(<#_InputIterator __first#>, <#_InputIterator __last#>)
+COMPLETION: append : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type#]append(<#_ForwardIterator __first#>, <#_ForwardIterator __last#>)
+COMPLETION: append : [#basic_string<char> &#]append(<#initializer_list<value_type> __il#>)
+COMPLETION: assign : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]assign(<#const _Tp &__t#>)
+COMPLETION: assign : [#basic_string<char> &#]assign(<#const basic_string<char> &__str#>)
+COMPLETION: assign : [#basic_string<char> &#]assign(<#basic_string<char> &&__str#>)
+COMPLETION: assign : [#basic_string<char> &#]assign(<#const basic_string<char> &__str#>, <#size_type __pos#>{#, <#size_type __n = npos#>#})
+COMPLETION: assign : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]assign(<#const _Tp &__t#>, <#size_type __pos#>{#, <#size_type __n = npos#>#})
+COMPLETION: assign : [#basic_string<char> &#]assign(<#const value_type *__s#>, <#size_type __n#>)
+COMPLETION: assign : [#basic_string<char> &#]assign(<#const value_type *__s#>)
+COMPLETION: assign : [#basic_string<char> &#]assign(<#size_type __n#>, <#value_type __c#>)
+COMPLETION: assign : [#typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type#]assign(<#_InputIterator __first#>, <#_InputIterator __last#>)
+COMPLETION: assign : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type#]assign(<#_ForwardIterator __first#>, <#_ForwardIterator __last#>)
+COMPLETION: assign : [#basic_string<char> &#]assign(<#initializer_list<value_type> __il#>)
+COMPLETION: at : [#const_reference#]at(<#size_type __n#>)[# const#]
+COMPLETION: at : [#reference#]at(<#size_type __n#>)
+COMPLETION: back : [#reference#]back()
+COMPLETION: back : [#const_reference#]back()[# const#]
+COMPLETION: basic_string : basic_string::
+COMPLETION: begin : [#iterator#]begin()
+COMPLETION: begin : [#const_iterator#]begin()[# const#]
+COMPLETION: c_str : [#const value_type *#]c_str()[# const#]
+COMPLETION: capacity : [#size_type#]capacity()[# const#]
+COMPLETION: cbegin : [#const_iterator#]cbegin()[# const#]
+COMPLETION: cend : [#const_iterator#]cend()[# const#]
+COMPLETION: clear : [#void#]clear()
+COMPLETION: compare : [#int#]compare(<#const basic_string<char> &__str#>)[# const#]
+COMPLETION: compare : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type#]compare(<#const _Tp &__t#>)[# const#]
+COMPLETION: compare : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const _Tp &__t#>)[# const#]
+COMPLETION: compare : [#int#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const basic_string<char> &__str#>)[# const#]
+COMPLETION: compare : [#int#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const basic_string<char> &__str#>, <#size_type __pos2#>{#, <#size_type __n2 = npos#>#})[# const#]
+COMPLETION: compare : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const _Tp &__t#>, <#size_type __pos2#>{#, <#size_type __n2 = npos#>#})[# const#]
+COMPLETION: compare : [#int#]compare(<#const value_type *__s#>)[# const#]
+COMPLETION: compare : [#int#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const value_type *__s#>)[# const#]
+COMPLETION: compare : [#int#]compare(<#size_type __pos1#>, <#size_type __n1#>, <#const value_type *__s#>, <#size_type __n2#>)[# const#]
+COMPLETION: copy : [#size_type#]copy(<#value_type *__s#>, <#size_type __n#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: crbegin : [#const_reverse_iterator#]crbegin()[# const#]
+COMPLETION: crend : [#const_reverse_iterator#]crend()[# const#]
+COMPLETION: data : [#const value_type *#]data()[# const#]
+COMPLETION: data : [#value_type *#]data()
+COMPLETION: empty : [#bool#]empty()[# const#]
+COMPLETION: end : [#iterator#]end()
+COMPLETION: end : [#const_iterator#]end()[# const#]
+COMPLETION: erase : [#basic_string<char> &#]erase({#<#size_type __pos = 0#>{#, <#size_type __n = npos#>#}#})
+COMPLETION: erase : [#iterator#]erase(<#const_iterator __pos#>)
+COMPLETION: erase : [#iterator#]erase(<#const_iterator __first#>, <#const_iterator __last#>)
+COMPLETION: find : [#size_type#]find(<#const basic_string<char> &__str#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]find(<#const _Tp &__t#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find : [#size_type#]find(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]
+COMPLETION: find : [#size_type#]find(<#const value_type *__s#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find : [#size_type#]find(<#value_type __c#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find_first_not_of : [#size_type#]find_first_not_of(<#const basic_string<char> &__str#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find_first_not_of : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]find_first_not_of(<#const _Tp &__t#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find_first_not_of : [#size_type#]find_first_not_of(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]
+COMPLETION: find_first_not_of : [#size_type#]find_first_not_of(<#const value_type *__s#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find_first_not_of : [#size_type#]find_first_not_of(<#value_type __c#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find_first_of : [#size_type#]find_first_of(<#const basic_string<char> &__str#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find_first_of : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]find_first_of(<#const _Tp &__t#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find_first_of : [#size_type#]find_first_of(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]
+COMPLETION: find_first_of : [#size_type#]find_first_of(<#const value_type *__s#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find_first_of : [#size_type#]find_first_of(<#value_type __c#>{#, <#size_type __pos = 0#>#})[# const#]
+COMPLETION: find_last_not_of : [#size_type#]find_last_not_of(<#const basic_string<char> &__str#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: find_last_not_of : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]find_last_not_of(<#const _Tp &__t#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: find_last_not_of : [#size_type#]find_last_not_of(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]
+COMPLETION: find_last_not_of : [#size_type#]find_last_not_of(<#const value_type *__s#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: find_last_not_of : [#size_type#]find_last_not_of(<#value_type __c#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: find_last_of : [#size_type#]find_last_of(<#const basic_string<char> &__str#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: find_last_of : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]find_last_of(<#const _Tp &__t#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: find_last_of : [#size_type#]find_last_of(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]
+COMPLETION: find_last_of : [#size_type#]find_last_of(<#const value_type *__s#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: find_last_of : [#size_type#]find_last_of(<#value_type __c#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: front : [#reference#]front()
+COMPLETION: front : [#const_reference#]front()[# const#]
+COMPLETION: get_allocator : [#allocator_type#]get_allocator()[# const#]
+COMPLETION: insert : [#basic_string<char> &#]insert(<#size_type __pos1#>, <#const basic_string<char> &__str#>)
+COMPLETION: insert : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]insert(<#size_type __pos1#>, <#const _Tp &__t#>)
+COMPLETION: insert : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]insert(<#size_type __pos1#>, <#const _Tp &__t#>, <#size_type __pos2#>{#, <#size_type __n = npos#>#})
+COMPLETION: insert : [#basic_string<char> &#]insert(<#size_type __pos1#>, <#const basic_string<char> &__str#>, <#size_type __pos2#>{#, <#size_type __n = npos#>#})
+COMPLETION: insert : [#basic_string<char> &#]insert(<#size_type __pos#>, <#const value_type *__s#>, <#size_type __n#>)
+COMPLETION: insert : [#basic_string<char> &#]insert(<#size_type __pos#>, <#const value_type *__s#>)
+COMPLETION: insert : [#basic_string<char> &#]insert(<#size_type __pos#>, <#size_type __n#>, <#value_type __c#>)
+COMPLETION: insert : [#iterator#]insert(<#const_iterator __pos#>, <#value_type __c#>)
+COMPLETION: insert : [#iterator#]insert(<#const_iterator __pos#>, <#size_type __n#>, <#value_type __c#>)
+COMPLETION: insert : [#typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, iterator>::type#]insert(<#const_iterator __pos#>, <#_InputIterator __first#>, <#_InputIterator __last#>)
+COMPLETION: insert : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, iterator>::type#]insert(<#const_iterator __pos#>, <#_ForwardIterator __first#>, <#_ForwardIterator __last#>)
+COMPLETION: insert : [#iterator#]insert(<#const_iterator __pos#>, <#initializer_list<value_type> __il#>)
+COMPLETION: length : [#size_type#]length()[# const#]
+COMPLETION: max_size : [#size_type#]max_size()[# const#]
+COMPLETION: npos : [#const size_type#]npos
+COMPLETION: operator basic_string_view : operator basic_string_view()[# const#]
+COMPLETION: operator+= : [#basic_string<char> &#]operator+=(<#const basic_string<char> &__str#>)
+COMPLETION: operator+= : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]operator+=(<#const _Tp &__t#>)
+COMPLETION: operator+= : [#basic_string<char> &#]operator+=(<#const value_type *__s#>)
+COMPLETION: operator+= : [#basic_string<char> &#]operator+=(<#value_type __c#>)
+COMPLETION: operator+= : [#basic_string<char> &#]operator+=(<#initializer_list<value_type> __il#>)
+COMPLETION: operator= : [#basic_string<char> &#]operator=(<#const basic_string<char> &__str#>)
+COMPLETION: operator= : [#basic_string<char> &#]operator=(<#const _Tp &__t#>)
+COMPLETION: operator= : [#basic_string<char> &#]operator=(<#basic_string<char> &&__str#>)
+COMPLETION: operator= : [#basic_string<char> &#]operator=(<#initializer_list<value_type> __il#>)
+COMPLETION: operator= : [#basic_string<char> &#]operator=(<#const value_type *__s#>)
+COMPLETION: operator= : [#basic_string<char> &#]operator=(<#value_type __c#>)
+COMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__basic_string_common<true> &#]__basic_string_common<true>::operator=(<#const __basic_string_common<true> &#>)
+COMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__basic_string_common<true> &#]__basic_string_common<true>::operator=(<#__basic_string_common<true> &&#>)
+COMPLETION: operator[] : [#const_reference#]operator[](<#size_type __pos#>)[# const#]
+COMPLETION: operator[] : [#reference#]operator[](<#size_type __pos#>)
+COMPLETION: pop_back : [#void#]pop_back()
+COMPLETION: push_back : [#void#]push_back(<#value_type __c#>)
+COMPLETION: rbegin : [#reverse_iterator#]rbegin()
+COMPLETION: rbegin : [#const_reverse_iterator#]rbegin()[# const#]
+COMPLETION: rend : [#reverse_iterator#]rend()
+COMPLETION: rend : [#const_reverse_iterator#]rend()[# const#]
+COMPLETION: replace : [#basic_string<char> &#]replace(<#size_type __pos1#>, <#size_type __n1#>, <#const basic_string<char> &__str#>)
+COMPLETION: replace : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]replace(<#size_type __pos1#>, <#size_type __n1#>, <#const _Tp &__t#>)
+COMPLETION: replace : [#basic_string<char> &#]replace(<#size_type __pos1#>, <#size_type __n1#>, <#const basic_string<char> &__str#>, <#size_type __pos2#>{#, <#size_type __n2 = npos#>#})
+COMPLETION: replace : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]replace(<#size_type __pos1#>, <#size_type __n1#>, <#const _Tp &__t#>, <#size_type __pos2#>{#, <#size_type __n2 = npos#>#})
+COMPLETION: replace : [#basic_string<char> &#]replace(<#size_type __pos#>, <#size_type __n1#>, <#const value_type *__s#>, <#size_type __n2#>)
+COMPLETION: replace : [#basic_string<char> &#]replace(<#size_type __pos#>, <#size_type __n1#>, <#const value_type *__s#>)
+COMPLETION: replace : [#basic_string<char> &#]replace(<#size_type __pos#>, <#size_type __n1#>, <#size_type __n2#>, <#value_type __c#>)
+COMPLETION: replace : [#basic_string<char> &#]replace(<#const_iterator __i1#>, <#const_iterator __i2#>, <#const basic_string<char> &__str#>)
+COMPLETION: replace : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]replace(<#const_iterator __i1#>, <#const_iterator __i2#>, <#const _Tp &__t#>)
+COMPLETION: replace : [#basic_string<char> &#]replace(<#const_iterator __i1#>, <#const_iterator __i2#>, <#const value_type *__s#>, <#size_type __n#>)
+COMPLETION: replace : [#basic_string<char> &#]replace(<#const_iterator __i1#>, <#const_iterator __i2#>, <#const value_type *__s#>)
+COMPLETION: replace : [#basic_string<char> &#]replace(<#const_iterator __i1#>, <#const_iterator __i2#>, <#size_type __n#>, <#value_type __c#>)
+COMPLETION: replace : [#typename enable_if<__is_input_iterator<_InputIterator>::value, basic_string<char> &>::type#]replace(<#const_iterator __i1#>, <#const_iterator __i2#>, <#_InputIterator __j1#>, <#_InputIterator __j2#>)
+COMPLETION: replace : [#basic_string<char> &#]replace(<#const_iterator __i1#>, <#const_iterator __i2#>, <#initializer_list<value_type> __il#>)
+COMPLETION: reserve : [#void#]reserve(<#size_type __res_arg#>)
+COMPLETION: reserve : [#void#]reserve()
+COMPLETION: resize : [#void#]resize(<#size_type __n#>, <#value_type __c#>)
+COMPLETION: resize : [#void#]resize(<#size_type __n#>)
+COMPLETION: rfind : [#size_type#]rfind(<#const basic_string<char> &__str#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: rfind : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type#]rfind(<#const _Tp &__t#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: rfind : [#size_type#]rfind(<#const value_type *__s#>, <#size_type __pos#>, <#size_type __n#>)[# const#]
+COMPLETION: rfind : [#size_type#]rfind(<#const value_type *__s#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: rfind : [#size_type#]rfind(<#value_type __c#>{#, <#size_type __pos = npos#>#})[# const#]
+COMPLETION: shrink_to_fit : [#void#]shrink_to_fit()
+COMPLETION: size : [#size_type#]size()[# const#]
+COMPLETION: substr : [#basic_string<char>#]substr({#<#size_type __pos = 0#>{#, <#size_type __n = npos#>#}#})[# const#]
+COMPLETION: swap : [#void#]swap(<#basic_string<char> &__str#>)
+COMPLETION: ~__basic_string_common (InBase,Inaccessible) : [#void#][#__basic_string_common<true>::#]~__basic_string_common()
+COMPLETION: ~basic_string : [#void#]~basic_string()

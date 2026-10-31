@@ -1,0 +1,13 @@
+{
+  "id": "include-omitted",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 17.942599999999857,
+  "verdict": "passed",
+  "support": "boundary",
+  "itemCount": 0,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

@@ -1,0 +1,19 @@
+{
+  "id": "string",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 241.30300000000034,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 144,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:2:39",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:2:39"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

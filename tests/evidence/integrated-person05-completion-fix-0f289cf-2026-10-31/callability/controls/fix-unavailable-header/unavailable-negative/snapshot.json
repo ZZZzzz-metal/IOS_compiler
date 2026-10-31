@@ -1,0 +1,21 @@
+{
+  "snapshotId": "617cca10-9078-49fb-8535-639b31d6c528",
+  "sourceHash": "sha256:3ff5cc733151430ab634e397169e0a109da4a0e0f1192fa9cb6d788bab841e8d",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "api_a8ee505af129.inc",
+      "role": "user",
+      "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n",
+      "contentHash": "sha256:34bce099fd4d0915efc087dd2dca6ada9ef91dcd81da78ea496508f9689bb1f5"
+    },
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_header_a8ee505af129_blocked();\n}\n",
+      "contentHash": "sha256:2f68af4e8ad3c8a8000cf235fe0c411c7fc0fd1f84f34cee16a9ed249d9835be"
+    }
+  ]
+}

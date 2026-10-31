@@ -1,0 +1,2 @@
+COMPLETION: lateChoice_a8ee505af129_call : [#int#]lateChoice_a8ee505af129_call(<#double lateArgument_a8ee505af129#>)
+COMPLETION: lateChoice_a8ee505af129_call (Inaccessible) : [#int#]lateChoice_a8ee505af129_call(<#int lateArgument_a8ee505af129#>)

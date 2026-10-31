@@ -1,0 +1,40 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-late-static-template",
+  "documentVersion": 43,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-late-static-template-snapshot",
+  "sourceHash": "sha256:784e8bc87b7fe57bc8e155106fbc6ccd5eba56fddff40f2db21300f3ad97886a",
+  "sourcePath": "main.cpp",
+  "offset": 374,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:11f6d4892b1ac11cacf4c0b3fcd4bc4f0d18b1c978d4317bb01bfbad7a9cb714",
+      "label": "LateBox_a8ee505af129",
+      "kind": "unknown",
+      "detail": "LateBox_a8ee505af129::",
+      "insertText": "LateBox_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 374,
+        "endOffset": 374
+      },
+      "filterText": "LateBox_a8ee505af129"
+    },
+    {
+      "id": "sha256:9b80fecae5e7a8a3b917fdcd3eeb290f85db34022a643e2a28a79f5f2aefec72",
+      "label": "lateStaticRead_a8ee505af129",
+      "kind": "unknown",
+      "detail": "int lateStaticRead_a8ee505af129(LateValueType_a8ee505af129 lateArgument_a8ee505af129)",
+      "insertText": "lateStaticRead_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 374,
+        "endOffset": 374
+      },
+      "filterText": "lateStaticRead_a8ee505af129"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

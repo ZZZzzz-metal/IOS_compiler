@@ -1,0 +1,30 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-unavailable-header",
+  "documentVersion": 40,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-unavailable-header-snapshot",
+    "sourceHash": "sha256:0125ec9b0e546271748fe4d684b8b2c38a1f23fe4cbc357ca5226422d69d0cb3",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "api_a8ee505af129.inc",
+        "role": "user",
+        "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n",
+        "contentHash": "sha256:34bce099fd4d0915efc087dd2dca6ada9ef91dcd81da78ea496508f9689bb1f5"
+      },
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_header_a8ee505af129\n}\n",
+        "contentHash": "sha256:bc93c9bcd208a189e8bcc5caa3451f0b42719a5b9646e6967377a267c9b5e14f"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 261,
+  "trigger": "identifier"
+}

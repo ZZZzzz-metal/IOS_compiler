@@ -1,0 +1,37 @@
+{
+  "fixtureId": "fix-late-deleted-overload",
+  "controlId": "available-double-positive",
+  "controlSet": "late-controls",
+  "startedAt": "2026-10-31T02:16:59.378Z",
+  "passed": true,
+  "sourceHash": "sha256:b9b66c83a2c078de0cb1fb34f988c27ed06f54296a56813bb5aa28b99e4a5b85",
+  "actualStatus": "compiled",
+  "reason": null,
+  "elapsedMs": 708.6097999999984,
+  "expected": {
+    "status": "compiled",
+    "smokeExitCode": 0
+  },
+  "semantic": null,
+  "diagnosticGroups": [],
+  "errors": [],
+  "binaryEvidence": {
+    "executable": {
+      "file": "controls/fix-late-deleted-overload/available-double-positive/main.wasm",
+      "byteLength": 13323,
+      "sha256": "sha256:203a79a1cb92ac121beb98a32bf69c840f689373e0ebd05670e396097d98a87b"
+    },
+    "object": {
+      "file": "controls/fix-late-deleted-overload/available-double-positive/main.o",
+      "byteLength": 405,
+      "sha256": "sha256:5637d7d0889795b6e2f051ba242a011f798cab9106ededd1279a58426da096b1"
+    }
+  },
+  "actualCompilerIdentity": {
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "workersReleased": true
+}

@@ -1,0 +1,24 @@
+{
+  "language": "c",
+  "standard": "c11",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-c-struct",
+  "documentVersion": 22,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-c-struct-snapshot",
+    "sourceHash": "sha256:a582417b92d0235e50363e3bfc125c36204e31323af2a470eeac3e1fd0c7e456",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.c",
+    "files": [
+      {
+        "path": "main.c",
+        "role": "user",
+        "text": "struct Parcel { int weight; int destination; };\nvoid probe(void) { struct Parcel parcel; parcel. }\n",
+        "contentHash": "sha256:c210083d17ec76a67510eeb05dc054d4ad2b7a1ef87afb9de9e11589cfe9ae5f"
+      }
+    ]
+  },
+  "sourcePath": "main.c",
+  "offset": 96,
+  "trigger": "."
+}

@@ -1,0 +1,434 @@
+[
+  {
+    "label": "fix-alias-const/read-positive",
+    "startedThreadId": 1,
+    "exit": {
+      "sequence": 12,
+      "at": "2026-10-31T02:16:43.038Z",
+      "elapsedMs": 1044.1005,
+      "kind": "worker-exit",
+      "label": "fix-alias-const/read-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  },
+  {
+    "label": "fix-alias-const/append-negative",
+    "startedThreadId": 2,
+    "exit": {
+      "sequence": 25,
+      "at": "2026-10-31T02:16:43.925Z",
+      "elapsedMs": 1931.6703000000002,
+      "kind": "worker-exit",
+      "label": "fix-alias-const/append-negative",
+      "code": 1,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  },
+  {
+    "label": "fix-alias-mutable/append-positive",
+    "startedThreadId": 3,
+    "exit": {
+      "sequence": 37,
+      "at": "2026-10-31T02:16:44.987Z",
+      "elapsedMs": 2993.0985,
+      "kind": "worker-exit",
+      "label": "fix-alias-mutable/append-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-template-const/read-template-positive",
+    "startedThreadId": 4,
+    "exit": {
+      "sequence": 49,
+      "at": "2026-10-31T02:16:45.636Z",
+      "elapsedMs": 3642.0735999999997,
+      "kind": "worker-exit",
+      "label": "fix-template-const/read-template-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-template-const/write-negative",
+    "startedThreadId": 5,
+    "exit": {
+      "sequence": 62,
+      "at": "2026-10-31T02:16:46.208Z",
+      "elapsedMs": 4214.0837,
+      "kind": "worker-exit",
+      "label": "fix-template-const/write-negative",
+      "code": 1,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  },
+  {
+    "label": "fix-template-const/ingest-template-negative",
+    "startedThreadId": 6,
+    "exit": {
+      "sequence": 75,
+      "at": "2026-10-31T02:16:46.796Z",
+      "elapsedMs": 4802.4167,
+      "kind": "worker-exit",
+      "label": "fix-template-const/ingest-template-negative",
+      "code": 1,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  },
+  {
+    "label": "fix-template-mutable/write-template-positive",
+    "startedThreadId": 7,
+    "exit": {
+      "sequence": 87,
+      "at": "2026-10-31T02:16:47.465Z",
+      "elapsedMs": 5470.8633,
+      "kind": "worker-exit",
+      "label": "fix-template-mutable/write-template-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-overload-const/const-overload-positive",
+    "startedThreadId": 8,
+    "exit": {
+      "sequence": 99,
+      "at": "2026-10-31T02:16:48.129Z",
+      "elapsedMs": 6135.1898,
+      "kind": "worker-exit",
+      "label": "fix-overload-const/const-overload-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-overload-const/mutable-overload-negative",
+    "startedThreadId": 9,
+    "exit": {
+      "sequence": 112,
+      "at": "2026-10-31T02:16:48.879Z",
+      "elapsedMs": 6885.0812000000005,
+      "kind": "worker-exit",
+      "label": "fix-overload-const/mutable-overload-negative",
+      "code": 1,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  },
+  {
+    "label": "fix-overload-mutable/both-overloads-positive",
+    "startedThreadId": 10,
+    "exit": {
+      "sequence": 124,
+      "at": "2026-10-31T02:16:49.704Z",
+      "elapsedMs": 7710.4478,
+      "kind": "worker-exit",
+      "label": "fix-overload-mutable/both-overloads-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-definition/allowed-positive",
+    "startedThreadId": 11,
+    "exit": {
+      "sequence": 136,
+      "at": "2026-10-31T02:16:50.383Z",
+      "elapsedMs": 8389.6864,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-definition/allowed-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-definition/unavailable-negative",
+    "startedThreadId": 12,
+    "exit": {
+      "sequence": 149,
+      "at": "2026-10-31T02:16:51.010Z",
+      "elapsedMs": 9015.8994,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-definition/unavailable-negative",
+      "code": 1,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-definition/deprecated-warning-positive",
+    "startedThreadId": 13,
+    "exit": {
+      "sequence": 161,
+      "at": "2026-10-31T02:16:51.647Z",
+      "elapsedMs": 9653.0918,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-definition/deprecated-warning-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-declaration/allowed-positive",
+    "startedThreadId": 14,
+    "exit": {
+      "sequence": 173,
+      "at": "2026-10-31T02:16:52.308Z",
+      "elapsedMs": 10314.5511,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-declaration/allowed-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-declaration/unavailable-negative",
+    "startedThreadId": 15,
+    "exit": {
+      "sequence": 186,
+      "at": "2026-10-31T02:16:52.895Z",
+      "elapsedMs": 10901.2038,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-declaration/unavailable-negative",
+      "code": 1,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-declaration/deprecated-warning-positive",
+    "startedThreadId": 16,
+    "exit": {
+      "sequence": 198,
+      "at": "2026-10-31T02:16:53.578Z",
+      "elapsedMs": 11583.8649,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-declaration/deprecated-warning-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-header/allowed-positive",
+    "startedThreadId": 17,
+    "exit": {
+      "sequence": 210,
+      "at": "2026-10-31T02:16:54.259Z",
+      "elapsedMs": 12265.6249,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-header/allowed-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-header/unavailable-negative",
+    "startedThreadId": 18,
+    "exit": {
+      "sequence": 223,
+      "at": "2026-10-31T02:16:54.845Z",
+      "elapsedMs": 12851.2861,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-header/unavailable-negative",
+      "code": 1,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-header/deprecated-warning-positive",
+    "startedThreadId": 19,
+    "exit": {
+      "sequence": 235,
+      "at": "2026-10-31T02:16:55.505Z",
+      "elapsedMs": 13511.4037,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-header/deprecated-warning-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-overload/available-overload-positive",
+    "startedThreadId": 20,
+    "exit": {
+      "sequence": 247,
+      "at": "2026-10-31T02:16:56.161Z",
+      "elapsedMs": 14167.185,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-overload/available-overload-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-overload/unavailable-overload-negative",
+    "startedThreadId": 21,
+    "exit": {
+      "sequence": 260,
+      "at": "2026-10-31T02:16:56.767Z",
+      "elapsedMs": 14773.644,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-overload/unavailable-overload-negative",
+      "code": 1,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-overload/deprecated-warning-positive",
+    "startedThreadId": 22,
+    "exit": {
+      "sequence": 272,
+      "at": "2026-10-31T02:16:57.447Z",
+      "elapsedMs": 15453.7614,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-overload/deprecated-warning-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-namespace-context/other-namespace-allowed-positive",
+    "startedThreadId": 23,
+    "exit": {
+      "sequence": 284,
+      "at": "2026-10-31T02:16:58.117Z",
+      "elapsedMs": 16123.595599999999,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-namespace-context/other-namespace-allowed-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-unavailable-namespace-context/unavailable-namespace-negative",
+    "startedThreadId": 24,
+    "exit": {
+      "sequence": 297,
+      "at": "2026-10-31T02:16:58.730Z",
+      "elapsedMs": 16736.112599999997,
+      "kind": "worker-exit",
+      "label": "fix-unavailable-namespace-context/unavailable-namespace-negative",
+      "code": 1,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  },
+  {
+    "label": "fix-late-static-template/static-template-positive",
+    "startedThreadId": 25,
+    "exit": {
+      "sequence": 309,
+      "at": "2026-10-31T02:16:59.370Z",
+      "elapsedMs": 17375.9322,
+      "kind": "worker-exit",
+      "label": "fix-late-static-template/static-template-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-late-deleted-overload/available-double-positive",
+    "startedThreadId": 26,
+    "exit": {
+      "sequence": 321,
+      "at": "2026-10-31T02:17:00.080Z",
+      "elapsedMs": 18086.803,
+      "kind": "worker-exit",
+      "label": "fix-late-deleted-overload/available-double-positive",
+      "code": 0,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 1,
+    "error": null
+  },
+  {
+    "label": "fix-late-deleted-overload/deleted-int-negative",
+    "startedThreadId": 27,
+    "exit": {
+      "sequence": 334,
+      "at": "2026-10-31T02:17:00.683Z",
+      "elapsedMs": 18689.1937,
+      "kind": "worker-exit",
+      "label": "fix-late-deleted-overload/deleted-int-negative",
+      "code": 1,
+      "threadIdAfter": -1
+    },
+    "threadIdAfter": -1,
+    "terminateCalls": 2,
+    "error": null
+  }
+]

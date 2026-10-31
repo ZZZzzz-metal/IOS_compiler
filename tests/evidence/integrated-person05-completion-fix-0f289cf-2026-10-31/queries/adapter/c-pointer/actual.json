@@ -1,0 +1,40 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-c-pointer",
+  "documentVersion": 23,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-c-pointer-snapshot",
+  "sourceHash": "sha256:db4e0d42fc81d9f3e3e1c8da7b5e3940b3c4732e60660fe5083cd761be0c367a",
+  "sourcePath": "main.c",
+  "offset": 92,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:5b6d4b05d022536fe823aca99bacd72aa20154c209e140dcf7a76ee351e3169a",
+      "label": "destination",
+      "kind": "unknown",
+      "detail": "int destination",
+      "insertText": "destination",
+      "replaceRange": {
+        "startOffset": 92,
+        "endOffset": 92
+      },
+      "filterText": "destination"
+    },
+    {
+      "id": "sha256:b8bdd8227272e35df16056df51e21fdc595254a593314e785bdffd57cfc33438",
+      "label": "weight",
+      "kind": "unknown",
+      "detail": "int weight",
+      "insertText": "weight",
+      "replaceRange": {
+        "startOffset": 92,
+        "endOffset": 92
+      },
+      "filterText": "weight"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

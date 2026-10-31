@@ -1,0 +1,18 @@
+{
+  "id": "fix-unavailable-declaration",
+  "group": "randomized11",
+  "route": "native",
+  "elapsedMs": 26.627300000000105,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 2,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:9:35",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:9:35"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}
