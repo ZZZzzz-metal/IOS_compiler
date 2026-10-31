@@ -1,0 +1,225 @@
+{
+  "evidence": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-02/compiler/evidence/completion-fix-2026-10-30/provider-2026-10-30T15-14-47-780Z-db4f90bb/",
+  "cases": 31,
+  "workersCreated": 4,
+  "observations": [
+    {
+      "name": "locals-functions",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 243.34949999999998,
+      "nativeExit": 0
+    },
+    {
+      "name": "struct-dot",
+      "status": "succeeded",
+      "itemCount": 6,
+      "adapterMs": 19.853700000000003,
+      "nativeExit": 0
+    },
+    {
+      "name": "pointer-arrow",
+      "status": "succeeded",
+      "itemCount": 5,
+      "adapterMs": 17.941599999999994,
+      "nativeExit": 0
+    },
+    {
+      "name": "private-outside",
+      "status": "succeeded",
+      "itemCount": 5,
+      "adapterMs": 16.865400000000022,
+      "nativeExit": 0
+    },
+    {
+      "name": "private-inside",
+      "status": "succeeded",
+      "itemCount": 6,
+      "adapterMs": 16.158000000000015,
+      "nativeExit": 0
+    },
+    {
+      "name": "protected-outside",
+      "status": "succeeded",
+      "itemCount": 7,
+      "adapterMs": 16.197599999999966,
+      "nativeExit": 0
+    },
+    {
+      "name": "protected-inside",
+      "status": "succeeded",
+      "itemCount": 8,
+      "adapterMs": 15.867500000000064,
+      "nativeExit": 0
+    },
+    {
+      "name": "namespace",
+      "status": "succeeded",
+      "itemCount": 3,
+      "adapterMs": 16.309600000000046,
+      "nativeExit": 0
+    },
+    {
+      "name": "class-scope",
+      "status": "succeeded",
+      "itemCount": 6,
+      "adapterMs": 15.361899999999991,
+      "nativeExit": 0
+    },
+    {
+      "name": "vector",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 147.28639999999996,
+      "nativeExit": 0
+    },
+    {
+      "name": "string",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 149.61889999999994,
+      "nativeExit": 0
+    },
+    {
+      "name": "shadowing",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 15.161699999999882,
+      "nativeExit": 0
+    },
+    {
+      "name": "shadowed-receiver",
+      "status": "succeeded",
+      "itemCount": 0,
+      "adapterMs": 15.77839999999992,
+      "nativeExit": 0
+    },
+    {
+      "name": "unfinished",
+      "status": "succeeded",
+      "itemCount": 5,
+      "adapterMs": 15.395800000000008,
+      "nativeExit": 0
+    },
+    {
+      "name": "error-before",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 17.39429999999993,
+      "nativeExit": 1
+    },
+    {
+      "name": "unicode",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 15.364100000000008,
+      "nativeExit": 0
+    },
+    {
+      "name": "driver-user",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 122.17129999999997,
+      "nativeExit": 0
+    },
+    {
+      "name": "c11",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 16.547700000000077,
+      "nativeExit": 0
+    },
+    {
+      "name": "overloads",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 14.908799999999928,
+      "nativeExit": 0
+    },
+    {
+      "name": "const-receiver",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 13.916799999999967,
+      "nativeExit": 0,
+      "constMutatePresent": false
+    },
+    {
+      "name": "const-vector",
+      "status": "succeeded",
+      "itemCount": 19,
+      "adapterMs": 120.76299999999992,
+      "nativeExit": 0
+    },
+    {
+      "name": "const-string-fixed",
+      "status": "succeeded",
+      "itemCount": 64,
+      "adapterMs": 139.24879999999985,
+      "nativeExit": 0
+    },
+    {
+      "name": "unavailable-fixed",
+      "status": "succeeded",
+      "itemCount": 2,
+      "adapterMs": 14.823799999999665,
+      "nativeExit": 0
+    },
+    {
+      "name": "case-character-literal",
+      "status": "succeeded",
+      "itemCount": 5,
+      "adapterMs": 14.595000000000255,
+      "nativeExit": 0
+    },
+    {
+      "name": "sizeof-character-literal",
+      "status": "succeeded",
+      "itemCount": 5,
+      "adapterMs": 13.97569999999996,
+      "nativeExit": 0
+    },
+    {
+      "name": "pattern-variable",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 14.926899999999932,
+      "nativeExit": 0
+    },
+    {
+      "name": "pattern-function",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 14.895700000000033,
+      "nativeExit": 0
+    },
+    {
+      "name": "comment",
+      "status": "succeeded",
+      "itemCount": 0,
+      "adapterMs": 4.174800000000232,
+      "nativeExit": null
+    },
+    {
+      "name": "string-literal",
+      "status": "succeeded",
+      "itemCount": 0,
+      "adapterMs": 0.03960000000006403,
+      "nativeExit": null
+    },
+    {
+      "name": "raw-literal",
+      "status": "succeeded",
+      "itemCount": 0,
+      "adapterMs": 0.06730000000015934,
+      "nativeExit": null
+    },
+    {
+      "name": "mid-token",
+      "status": "succeeded",
+      "itemCount": 1,
+      "adapterMs": 213.32449999999972,
+      "nativeExit": 0
+    }
+  ]
+}

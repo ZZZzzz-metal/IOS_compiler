@@ -1,0 +1,1032 @@
+{
+  "scope": "Owner02 self-test, not owner05 independent acceptance",
+  "frozen": "bef7bc973780e55d5eecdcdfc0e7da1c3d1c6fad",
+  "inputs": [
+    {
+      "path": "tests/lib/completion-fix-fixtures.mjs",
+      "sha256": "sha256:b5711d16667b4110a14f778432d463509a8a516a0f39a1c8024a6aa9a6e93858",
+      "byteLength": 10319
+    },
+    {
+      "path": "tests/lib/completion-fix-oracle.mjs",
+      "sha256": "sha256:ad47cb7437b62b6309a45509b7ad84bfd9ce55b35f6a336c4cc77c71d58eb1e0",
+      "byteLength": 2097
+    },
+    {
+      "path": "tests/lib/completion-fixtures.mjs",
+      "sha256": "sha256:282c77eedbf858b06a77613cc8cc2569c40173230d4e7a3fad36098b8079435d",
+      "byteLength": 5660
+    },
+    {
+      "path": "tests/lib/completion-oracle.mjs",
+      "sha256": "sha256:3c0928bf06c7ee4808c969adebd69532c419f18112431d0500d89c2e94d2cf28",
+      "byteLength": 6511
+    }
+  ],
+  "nonce": "4d403cbfe02a5ce3",
+  "fixtures": [
+    {
+      "id": "fix-alias-const",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_4d403cbfe02a5ce3 = std::string;\nvoid probe_4d403cbfe02a5ce3() {\n  const TextAlias_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.\n}\n",
+          "contentHash": "sha256:b816e4a29d55916d47cc92f29e11642179506dae4ebcc077a78ae90a14a20566"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_4d403cbfe02a5ce3 = std::string;\nvoid probe_4d403cbfe02a5ce3() {\n  const TextAlias_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 184,
+        "line": 5,
+        "columnUtf16": 27,
+        "columnUtf8": 27
+      },
+      "fixtureHash": "sha256:eb9d5e1355d3bab1e30da9c2f18a7a1c67c0df2edd1e6acc18c370238bb4bf71",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "size",
+          "c_str"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": [
+          "append"
+        ]
+      },
+      "pairId": "fix-alias-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "read-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include <string>\nusing TextAlias_4d403cbfe02a5ce3 = std::string;\nint main() {\n  const TextAlias_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  return static_cast<int>(object_4d403cbfe02a5ce3.size());\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "append-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include <string>\nusing TextAlias_4d403cbfe02a5ce3 = std::string;\nint main() {\n  const TextAlias_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.append(\"x\");\n  return 0;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fix-alias-mutable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_4d403cbfe02a5ce3 = std::string;\nvoid probe_4d403cbfe02a5ce3() {\n  TextAlias_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.\n}\n",
+          "contentHash": "sha256:99ca6992c45677f19d44a1a05df9eedbf0898fda11b504084c311804709405a7"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_4d403cbfe02a5ce3 = std::string;\nvoid probe_4d403cbfe02a5ce3() {\n  TextAlias_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 178,
+        "line": 5,
+        "columnUtf16": 27,
+        "columnUtf8": 27
+      },
+      "fixtureHash": "sha256:67a746a7448792f5dad0e66dea48a5e39b028df6fa6920db9a1c26d6826b0ac7",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "size",
+          "c_str",
+          "append"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": []
+      },
+      "pairId": "fix-alias-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "append-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include <string>\nusing TextAlias_4d403cbfe02a5ce3 = std::string;\nint main() {\n  TextAlias_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.append(\"x\");\n  return object_4d403cbfe02a5ce3.size() == 1 ? 0 : 1;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "fix-template-const",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_4d403cbfe02a5ce3> struct Box_4d403cbfe02a5ce3 {\n  int read_4d403cbfe02a5ce3() const { return 0; }\n  void write_4d403cbfe02a5ce3(Type_4d403cbfe02a5ce3 argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n  template<class OtherType_4d403cbfe02a5ce3> int inspect_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) const { (void)argument_4d403cbfe02a5ce3; return 0; }\n  template<class OtherType_4d403cbfe02a5ce3> void ingest_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n};\nvoid probe_4d403cbfe02a5ce3() {\n  const Box_4d403cbfe02a5ce3<int> object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.\n}\n",
+          "contentHash": "sha256:3045ad3bdd79570bac3ee1932a5861776a73c632a7276e2b77799b72fdc73037"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_4d403cbfe02a5ce3> struct Box_4d403cbfe02a5ce3 {\n  int read_4d403cbfe02a5ce3() const { return 0; }\n  void write_4d403cbfe02a5ce3(Type_4d403cbfe02a5ce3 argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n  template<class OtherType_4d403cbfe02a5ce3> int inspect_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) const { (void)argument_4d403cbfe02a5ce3; return 0; }\n  template<class OtherType_4d403cbfe02a5ce3> void ingest_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n};\nvoid probe_4d403cbfe02a5ce3() {\n  const Box_4d403cbfe02a5ce3<int> object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 714,
+        "line": 9,
+        "columnUtf16": 27,
+        "columnUtf8": 27
+      },
+      "fixtureHash": "sha256:2272c4a892857f3c1e7a92423ac2f98e2100567d603e4a8a4dadf48d0d01f213",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "read_4d403cbfe02a5ce3",
+          "inspect_4d403cbfe02a5ce3"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": [
+          "write_4d403cbfe02a5ce3",
+          "ingest_4d403cbfe02a5ce3"
+        ]
+      },
+      "pairId": "fix-template-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "read-template-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_4d403cbfe02a5ce3> struct Box_4d403cbfe02a5ce3 {\n  int read_4d403cbfe02a5ce3() const { return 0; }\n  void write_4d403cbfe02a5ce3(Type_4d403cbfe02a5ce3 argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n  template<class OtherType_4d403cbfe02a5ce3> int inspect_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) const { (void)argument_4d403cbfe02a5ce3; return 0; }\n  template<class OtherType_4d403cbfe02a5ce3> void ingest_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n};\nint main() {\n  const Box_4d403cbfe02a5ce3<int> object_4d403cbfe02a5ce3;\n  return object_4d403cbfe02a5ce3.read_4d403cbfe02a5ce3() + object_4d403cbfe02a5ce3.inspect_4d403cbfe02a5ce3(0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "write-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_4d403cbfe02a5ce3> struct Box_4d403cbfe02a5ce3 {\n  int read_4d403cbfe02a5ce3() const { return 0; }\n  void write_4d403cbfe02a5ce3(Type_4d403cbfe02a5ce3 argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n  template<class OtherType_4d403cbfe02a5ce3> int inspect_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) const { (void)argument_4d403cbfe02a5ce3; return 0; }\n  template<class OtherType_4d403cbfe02a5ce3> void ingest_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n};\nint main() {\n  const Box_4d403cbfe02a5ce3<int> object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.write_4d403cbfe02a5ce3(1);\n  return 0;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        },
+        {
+          "id": "ingest-template-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_4d403cbfe02a5ce3> struct Box_4d403cbfe02a5ce3 {\n  int read_4d403cbfe02a5ce3() const { return 0; }\n  void write_4d403cbfe02a5ce3(Type_4d403cbfe02a5ce3 argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n  template<class OtherType_4d403cbfe02a5ce3> int inspect_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) const { (void)argument_4d403cbfe02a5ce3; return 0; }\n  template<class OtherType_4d403cbfe02a5ce3> void ingest_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n};\nint main() {\n  const Box_4d403cbfe02a5ce3<int> object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.ingest_4d403cbfe02a5ce3(1);\n  return 0;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fix-template-mutable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_4d403cbfe02a5ce3> struct Box_4d403cbfe02a5ce3 {\n  int read_4d403cbfe02a5ce3() const { return 0; }\n  void write_4d403cbfe02a5ce3(Type_4d403cbfe02a5ce3 argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n  template<class OtherType_4d403cbfe02a5ce3> int inspect_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) const { (void)argument_4d403cbfe02a5ce3; return 0; }\n  template<class OtherType_4d403cbfe02a5ce3> void ingest_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n};\nvoid probe_4d403cbfe02a5ce3() {\n  Box_4d403cbfe02a5ce3<int> object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.\n}\n",
+          "contentHash": "sha256:f1721babf6e334d62049c550f5239eac6023fddae529d0084613946956a7927a"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_4d403cbfe02a5ce3> struct Box_4d403cbfe02a5ce3 {\n  int read_4d403cbfe02a5ce3() const { return 0; }\n  void write_4d403cbfe02a5ce3(Type_4d403cbfe02a5ce3 argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n  template<class OtherType_4d403cbfe02a5ce3> int inspect_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) const { (void)argument_4d403cbfe02a5ce3; return 0; }\n  template<class OtherType_4d403cbfe02a5ce3> void ingest_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n};\nvoid probe_4d403cbfe02a5ce3() {\n  Box_4d403cbfe02a5ce3<int> object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 708,
+        "line": 9,
+        "columnUtf16": 27,
+        "columnUtf8": 27
+      },
+      "fixtureHash": "sha256:8e7d1d290e42a70043046745d6d28da8ae6bbb62389c20ddcbe30dc77277dcb7",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "read_4d403cbfe02a5ce3",
+          "write_4d403cbfe02a5ce3",
+          "inspect_4d403cbfe02a5ce3",
+          "ingest_4d403cbfe02a5ce3"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": []
+      },
+      "pairId": "fix-template-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "write-template-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_4d403cbfe02a5ce3> struct Box_4d403cbfe02a5ce3 {\n  int read_4d403cbfe02a5ce3() const { return 0; }\n  void write_4d403cbfe02a5ce3(Type_4d403cbfe02a5ce3 argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n  template<class OtherType_4d403cbfe02a5ce3> int inspect_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) const { (void)argument_4d403cbfe02a5ce3; return 0; }\n  template<class OtherType_4d403cbfe02a5ce3> void ingest_4d403cbfe02a5ce3(const OtherType_4d403cbfe02a5ce3& argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; }\n};\nint main() {\n  Box_4d403cbfe02a5ce3<int> object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.write_4d403cbfe02a5ce3(1);\n  object_4d403cbfe02a5ce3.ingest_4d403cbfe02a5ce3(1);\n  return object_4d403cbfe02a5ce3.read_4d403cbfe02a5ce3() + object_4d403cbfe02a5ce3.inspect_4d403cbfe02a5ce3(0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "fix-overload-const",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_4d403cbfe02a5ce3 {\n  int choose_4d403cbfe02a5ce3() const { return 0; }\n  int choose_4d403cbfe02a5ce3(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n};\nvoid probe_4d403cbfe02a5ce3() {\n  const Record_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.\n}\n",
+          "contentHash": "sha256:cb6c918959d1e727a36d49926727c31d4596f77acf0386e3bcc2c73eabb459e3"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_4d403cbfe02a5ce3 {\n  int choose_4d403cbfe02a5ce3() const { return 0; }\n  int choose_4d403cbfe02a5ce3(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n};\nvoid probe_4d403cbfe02a5ce3() {\n  const Record_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 311,
+        "line": 7,
+        "columnUtf16": 27,
+        "columnUtf8": 27
+      },
+      "fixtureHash": "sha256:cfd196e5ff36dd174636fafed153145c02a3e2d159a4369af6442a5450276127",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "choose_4d403cbfe02a5ce3"
+        ],
+        "excludes": [],
+        "trigger": "."
+      },
+      "pairId": "fix-overload-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "choose_4d403cbfe02a5ce3",
+            "pattern": "\\bchoose_4d403cbfe02a5ce3\\s*\\(\\s*\\s*\\)\\s*const\\s*$"
+          }
+        ],
+        "forbidden": [
+          {
+            "name": "choose_4d403cbfe02a5ce3",
+            "pattern": "\\bchoose_4d403cbfe02a5ce3\\s*\\(\\s*int\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "closedNames": [
+          "choose_4d403cbfe02a5ce3"
+        ]
+      },
+      "controls": [
+        {
+          "id": "const-overload-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "struct Record_4d403cbfe02a5ce3 {\n  int choose_4d403cbfe02a5ce3() const { return 0; }\n  int choose_4d403cbfe02a5ce3(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n};\nint main() {\n  const Record_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  return object_4d403cbfe02a5ce3.choose_4d403cbfe02a5ce3();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "mutable-overload-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "struct Record_4d403cbfe02a5ce3 {\n  int choose_4d403cbfe02a5ce3() const { return 0; }\n  int choose_4d403cbfe02a5ce3(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n};\nint main() {\n  const Record_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  return object_4d403cbfe02a5ce3.choose_4d403cbfe02a5ce3(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fix-overload-mutable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_4d403cbfe02a5ce3 {\n  int choose_4d403cbfe02a5ce3() const { return 0; }\n  int choose_4d403cbfe02a5ce3(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n};\nvoid probe_4d403cbfe02a5ce3() {\n  Record_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.\n}\n",
+          "contentHash": "sha256:9fed3ffe52995443782dcadef66e5eb008ff8bf840ea95d37c43568f015af6e0"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_4d403cbfe02a5ce3 {\n  int choose_4d403cbfe02a5ce3() const { return 0; }\n  int choose_4d403cbfe02a5ce3(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n};\nvoid probe_4d403cbfe02a5ce3() {\n  Record_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 305,
+        "line": 7,
+        "columnUtf16": 27,
+        "columnUtf8": 27
+      },
+      "fixtureHash": "sha256:f9f10611f8ed047d93ed1cd344aa8faab70432893df29da11bb91e0d3a632b37",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "choose_4d403cbfe02a5ce3"
+        ],
+        "excludes": [],
+        "trigger": "."
+      },
+      "pairId": "fix-overload-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "choose_4d403cbfe02a5ce3",
+            "pattern": "\\bchoose_4d403cbfe02a5ce3\\s*\\(\\s*\\s*\\)\\s*const\\s*$"
+          },
+          {
+            "name": "choose_4d403cbfe02a5ce3",
+            "pattern": "\\bchoose_4d403cbfe02a5ce3\\s*\\(\\s*int\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "forbidden": [],
+        "closedNames": [
+          "choose_4d403cbfe02a5ce3"
+        ]
+      },
+      "controls": [
+        {
+          "id": "both-overloads-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "struct Record_4d403cbfe02a5ce3 {\n  int choose_4d403cbfe02a5ce3() const { return 0; }\n  int choose_4d403cbfe02a5ce3(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n};\nint main() {\n  Record_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  return object_4d403cbfe02a5ce3.choose_4d403cbfe02a5ce3() + object_4d403cbfe02a5ce3.choose_4d403cbfe02a5ce3(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "fix-unavailable-definition",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_definition_4d403cbfe02a5ce3_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_4d403cbfe02a5ce3_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nvoid probe_4d403cbfe02a5ce3() {\n  surface_definition_4d403cbfe02a5ce3\n}\n",
+          "contentHash": "sha256:c0cc228a256c6b09c053c1ea500250e1fb021f5be0432d8184fd88a96d3c5cef"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_definition_4d403cbfe02a5ce3_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_4d403cbfe02a5ce3_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nvoid probe_4d403cbfe02a5ce3() {\n  surface_definition_4d403cbfe02a5ce3/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 369,
+        "line": 6,
+        "columnUtf16": 38,
+        "columnUtf8": 38
+      },
+      "fixtureHash": "sha256:db9118c128c8577cdf009ffe061643a14eacb45c6adbf5d87c8f750a8b7ae575",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "surface_definition_4d403cbfe02a5ce3_allowed",
+          "surface_definition_4d403cbfe02a5ce3_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "surface_definition_4d403cbfe02a5ce3",
+        "inaccessibleOrAbsent": [
+          "surface_definition_4d403cbfe02a5ce3_blocked"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_definition_4d403cbfe02a5ce3_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_4d403cbfe02a5ce3_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_4d403cbfe02a5ce3_allowed();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_definition_4d403cbfe02a5ce3_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_4d403cbfe02a5ce3_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_4d403cbfe02a5ce3_blocked();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_definition_4d403cbfe02a5ce3_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_4d403cbfe02a5ce3_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_4d403cbfe02a5ce3_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fix-unavailable-declaration",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_declaration_4d403cbfe02a5ce3_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_4d403cbfe02a5ce3_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_4d403cbfe02a5ce3_deprecated();\nint surface_declaration_4d403cbfe02a5ce3_allowed() { return 0; }\nint surface_declaration_4d403cbfe02a5ce3_blocked() { return 0; }\nint surface_declaration_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nvoid probe_4d403cbfe02a5ce3() {\n  surface_declaration_4d403cbfe02a5ce3\n}\n",
+          "contentHash": "sha256:dbc4337550c7e8d9760d22fd54e351729c4d89070b7891d64fe70255e73c8d57"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_declaration_4d403cbfe02a5ce3_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_4d403cbfe02a5ce3_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_4d403cbfe02a5ce3_deprecated();\nint surface_declaration_4d403cbfe02a5ce3_allowed() { return 0; }\nint surface_declaration_4d403cbfe02a5ce3_blocked() { return 0; }\nint surface_declaration_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nvoid probe_4d403cbfe02a5ce3() {\n  surface_declaration_4d403cbfe02a5ce3/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 532,
+        "line": 9,
+        "columnUtf16": 39,
+        "columnUtf8": 39
+      },
+      "fixtureHash": "sha256:41a243afc40ccda46ca900b8f29653c0c1cfb15433cac7876ab416311408416c",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "surface_declaration_4d403cbfe02a5ce3_allowed",
+          "surface_declaration_4d403cbfe02a5ce3_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "surface_declaration_4d403cbfe02a5ce3",
+        "inaccessibleOrAbsent": [
+          "surface_declaration_4d403cbfe02a5ce3_blocked"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_declaration_4d403cbfe02a5ce3_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_4d403cbfe02a5ce3_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_4d403cbfe02a5ce3_deprecated();\nint surface_declaration_4d403cbfe02a5ce3_allowed() { return 0; }\nint surface_declaration_4d403cbfe02a5ce3_blocked() { return 0; }\nint surface_declaration_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_4d403cbfe02a5ce3_allowed();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_declaration_4d403cbfe02a5ce3_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_4d403cbfe02a5ce3_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_4d403cbfe02a5ce3_deprecated();\nint surface_declaration_4d403cbfe02a5ce3_allowed() { return 0; }\nint surface_declaration_4d403cbfe02a5ce3_blocked() { return 0; }\nint surface_declaration_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_4d403cbfe02a5ce3_blocked();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_declaration_4d403cbfe02a5ce3_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_4d403cbfe02a5ce3_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_4d403cbfe02a5ce3_deprecated();\nint surface_declaration_4d403cbfe02a5ce3_allowed() { return 0; }\nint surface_declaration_4d403cbfe02a5ce3_blocked() { return 0; }\nint surface_declaration_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_4d403cbfe02a5ce3_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fix-unavailable-header",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "api_4d403cbfe02a5ce3.inc",
+          "role": "user",
+          "text": "int surface_header_4d403cbfe02a5ce3_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_4d403cbfe02a5ce3_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_4d403cbfe02a5ce3_deprecated();\n",
+          "contentHash": "sha256:c001bdb3dcf0bc33f47f2f688bc10261ba2ff78591b24d8a882ed96069443248"
+        },
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include \"api_4d403cbfe02a5ce3.inc\"\nint surface_header_4d403cbfe02a5ce3_allowed() { return 0; }\nint surface_header_4d403cbfe02a5ce3_blocked() { return 0; }\nint surface_header_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nvoid probe_4d403cbfe02a5ce3() {\n  surface_header_4d403cbfe02a5ce3\n}\n",
+          "contentHash": "sha256:d27b3cd47b15546f7286fff373019af947795ba809441f8dfb7f2eb9dc99bc96"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "api_4d403cbfe02a5ce3.inc",
+          "role": "user",
+          "text": "int surface_header_4d403cbfe02a5ce3_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_4d403cbfe02a5ce3_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_4d403cbfe02a5ce3_deprecated();\n"
+        },
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include \"api_4d403cbfe02a5ce3.inc\"\nint surface_header_4d403cbfe02a5ce3_allowed() { return 0; }\nint surface_header_4d403cbfe02a5ce3_blocked() { return 0; }\nint surface_header_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nvoid probe_4d403cbfe02a5ce3() {\n  surface_header_4d403cbfe02a5ce3/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 285,
+        "line": 7,
+        "columnUtf16": 34,
+        "columnUtf8": 34
+      },
+      "fixtureHash": "sha256:a154201b5b61ced134285a492d8eac3291ee97fb3b51fb2fcfb4846ed0bfc20d",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "surface_header_4d403cbfe02a5ce3_allowed",
+          "surface_header_4d403cbfe02a5ce3_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "surface_header_4d403cbfe02a5ce3",
+        "inaccessibleOrAbsent": [
+          "surface_header_4d403cbfe02a5ce3_blocked"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "api_4d403cbfe02a5ce3.inc",
+              "role": "user",
+              "text": "int surface_header_4d403cbfe02a5ce3_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_4d403cbfe02a5ce3_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_4d403cbfe02a5ce3_deprecated();\n"
+            },
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include \"api_4d403cbfe02a5ce3.inc\"\nint surface_header_4d403cbfe02a5ce3_allowed() { return 0; }\nint surface_header_4d403cbfe02a5ce3_blocked() { return 0; }\nint surface_header_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return surface_header_4d403cbfe02a5ce3_allowed();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "api_4d403cbfe02a5ce3.inc",
+              "role": "user",
+              "text": "int surface_header_4d403cbfe02a5ce3_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_4d403cbfe02a5ce3_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_4d403cbfe02a5ce3_deprecated();\n"
+            },
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include \"api_4d403cbfe02a5ce3.inc\"\nint surface_header_4d403cbfe02a5ce3_allowed() { return 0; }\nint surface_header_4d403cbfe02a5ce3_blocked() { return 0; }\nint surface_header_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return surface_header_4d403cbfe02a5ce3_blocked();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "api_4d403cbfe02a5ce3.inc",
+              "role": "user",
+              "text": "int surface_header_4d403cbfe02a5ce3_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_4d403cbfe02a5ce3_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_4d403cbfe02a5ce3_deprecated();\n"
+            },
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include \"api_4d403cbfe02a5ce3.inc\"\nint surface_header_4d403cbfe02a5ce3_allowed() { return 0; }\nint surface_header_4d403cbfe02a5ce3_blocked() { return 0; }\nint surface_header_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return surface_header_4d403cbfe02a5ce3_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fix-unavailable-overload",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int mixed_4d403cbfe02a5ce3_select(double argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_4d403cbfe02a5ce3_select(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nvoid probe_4d403cbfe02a5ce3() {\n  mixed_4d403cbfe02a5ce3\n}\n",
+          "contentHash": "sha256:903385d623705f41a4e0da3dad46d0d5bd61892e625229f1d9a00771432b03a7"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int mixed_4d403cbfe02a5ce3_select(double argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_4d403cbfe02a5ce3_select(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nvoid probe_4d403cbfe02a5ce3() {\n  mixed_4d403cbfe02a5ce3/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 442,
+        "line": 6,
+        "columnUtf16": 25,
+        "columnUtf8": 25
+      },
+      "fixtureHash": "sha256:3b200ef12e76e04599fab5b79e85727947ba1bc44f60ff133958ff4b83e2a280",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "mixed_4d403cbfe02a5ce3_select",
+          "mixed_4d403cbfe02a5ce3_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "mixed_4d403cbfe02a5ce3"
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "mixed_4d403cbfe02a5ce3_select",
+            "pattern": "\\bmixed_4d403cbfe02a5ce3_select\\s*\\(\\s*double\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "forbidden": [
+          {
+            "name": "mixed_4d403cbfe02a5ce3_select",
+            "pattern": "\\bmixed_4d403cbfe02a5ce3_select\\s*\\(\\s*int\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "closedNames": [
+          "mixed_4d403cbfe02a5ce3_select"
+        ]
+      },
+      "controls": [
+        {
+          "id": "available-overload-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int mixed_4d403cbfe02a5ce3_select(double argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_4d403cbfe02a5ce3_select(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return mixed_4d403cbfe02a5ce3_select(1.0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-overload-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int mixed_4d403cbfe02a5ce3_select(double argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_4d403cbfe02a5ce3_select(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return mixed_4d403cbfe02a5ce3_select(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int mixed_4d403cbfe02a5ce3_select(double argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_4d403cbfe02a5ce3_select(int argument_4d403cbfe02a5ce3) { (void)argument_4d403cbfe02a5ce3; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_4d403cbfe02a5ce3_deprecated() { return 0; }\n\nint main() {\n  return mixed_4d403cbfe02a5ce3_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fix-unavailable-namespace-context",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "namespace AreaA_4d403cbfe02a5ce3 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_4d403cbfe02a5ce3_read() { return 0; }\n}\nnamespace AreaB_4d403cbfe02a5ce3 {\nint cross_4d403cbfe02a5ce3_read() { return 0; }\n}\n\nvoid probe_4d403cbfe02a5ce3() {\n  AreaB_4d403cbfe02a5ce3::cross_4d403cbfe02a5ce3\n}\n",
+          "contentHash": "sha256:38d41fd0345a07093c1f4b7294cc4017e3c63441565af73be59fd624bfbc1aac"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "namespace AreaA_4d403cbfe02a5ce3 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_4d403cbfe02a5ce3_read() { return 0; }\n}\nnamespace AreaB_4d403cbfe02a5ce3 {\nint cross_4d403cbfe02a5ce3_read() { return 0; }\n}\n\nvoid probe_4d403cbfe02a5ce3() {\n  AreaB_4d403cbfe02a5ce3::cross_4d403cbfe02a5ce3/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 304,
+        "line": 9,
+        "columnUtf16": 49,
+        "columnUtf8": 49
+      },
+      "fixtureHash": "sha256:20b1e6b2dc637c2a41b7a40899ff5349b99ecf37c950ee2c609f758439c523b9",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "cross_4d403cbfe02a5ce3_read"
+        ],
+        "excludes": [],
+        "trigger": "::",
+        "prefix": "cross_4d403cbfe02a5ce3"
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "other-namespace-allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "namespace AreaA_4d403cbfe02a5ce3 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_4d403cbfe02a5ce3_read() { return 0; }\n}\nnamespace AreaB_4d403cbfe02a5ce3 {\nint cross_4d403cbfe02a5ce3_read() { return 0; }\n}\n\nint main() {\n  return AreaB_4d403cbfe02a5ce3::cross_4d403cbfe02a5ce3_read();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-namespace-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "namespace AreaA_4d403cbfe02a5ce3 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_4d403cbfe02a5ce3_read() { return 0; }\n}\nnamespace AreaB_4d403cbfe02a5ce3 {\nint cross_4d403cbfe02a5ce3_read() { return 0; }\n}\n\nint main() {\n  return AreaA_4d403cbfe02a5ce3::cross_4d403cbfe02a5ce3_read();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        }
+      ]
+    }
+  ]
+}

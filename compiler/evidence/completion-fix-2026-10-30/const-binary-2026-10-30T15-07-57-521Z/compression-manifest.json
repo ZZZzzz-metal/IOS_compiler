@@ -1,0 +1,10 @@
+{
+  "originalFilename": "report.json",
+  "originalBytes": 49098286,
+  "originalSha256": "0fd26ef9e10b5b033d42673f0b536f2d27088a88796c43855973c430da0384e7",
+  "archiveFilename": "report.json.gz",
+  "archiveBytes": 3760139,
+  "archiveSha256": "507760edf884aa63e1eb42143d848c3618f57f7576b08319382c28766ae7638c",
+  "codec": "gzip",
+  "roundTripVerified": true
+}

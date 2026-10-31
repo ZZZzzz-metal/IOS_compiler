@@ -1,0 +1,337 @@
+{
+  "input": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "b849ae24-b8fd-49c7-a0eb-661b84af074f",
+    "mode": "debug",
+    "optimization": "O0",
+    "snapshot": {
+      "snapshotId": "7f447828-fc0c-44bf-bdad-84ff354930ba",
+      "sourceHash": "sha256:188763084ec09b1e78657822f68358dc9de8d8ca8fcc96f2446b2d9af52d4cbf",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int mixed_9c3158ded821871b_select(double argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_9c3158ded821871b_select(int argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_9c3158ded821871b_deprecated() { return 0; }\n\nint main() {\n  return mixed_9c3158ded821871b_deprecated();\n}\n",
+          "contentHash": "sha256:048a21f81d5609122737a2406dcc13876df7853167b29485f325b40b785e50e6"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "status": "compiled",
+    "smokeExitCode": 0,
+    "warningPattern": "person05-deprecated"
+  },
+  "actual": {
+    "status": "compiled",
+    "requestId": "b849ae24-b8fd-49c7-a0eb-661b84af074f",
+    "sourceHash": "sha256:188763084ec09b1e78657822f68358dc9de8d8ca8fcc96f2446b2d9af52d4cbf",
+    "snapshotId": "7f447828-fc0c-44bf-bdad-84ff354930ba",
+    "artifactId": "wasm-64dd91631721bb30358a607f63895c2005532d9b369625d507106f38e7c94fda",
+    "target": {
+      "targetTriple": "wasm32-unknown-wasi",
+      "abi": "wasi_unstable",
+      "addressBits": 32,
+      "endianness": "little",
+      "artifactFormat": "wasm-v1",
+      "debugInfoFormat": "dwarf-4-embedded",
+      "requiredFeatures": [
+        "mvp",
+        "mutable-globals"
+      ]
+    },
+    "language": {
+      "language": "cpp",
+      "standard": "c++17"
+    },
+    "mode": "debug",
+    "compilerArguments": [
+      "-cc1",
+      "-emit-obj",
+      "-triple",
+      "wasm32-unknown-wasi",
+      "-main-file-name",
+      "main.cpp",
+      "-disable-free",
+      "-isysroot",
+      "/",
+      "-internal-isystem",
+      "/include/c++/v1",
+      "-internal-isystem",
+      "/lib/clang/8.0.1/include",
+      "-internal-isystem",
+      "/include",
+      "-I",
+      "/project",
+      "-O0",
+      "-ferror-limit",
+      "20",
+      "-fmessage-length",
+      "0",
+      "-debug-info-kind=standalone",
+      "-dwarf-version=4",
+      "-debugger-tuning=lldb",
+      "-fdebug-compilation-dir",
+      "/project",
+      "-std=c++17",
+      "-x",
+      "c++",
+      "-o",
+      "build/main.o",
+      "/project/main.cpp"
+    ],
+    "linkerArguments": [
+      "--no-threads",
+      "--export-dynamic",
+      "-z",
+      "stack-size=1048576",
+      "--max-memory=268435456",
+      "-Llib/wasm32-wasi",
+      "lib/wasm32-wasi/crt1.o",
+      "build/main.o",
+      "-lc++",
+      "-lc++abi",
+      "-lc",
+      "-lm",
+      "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+      "-o",
+      "build/main.wasm"
+    ],
+    "sourceMappings": [],
+    "executableRef": {
+      "id": "wasm-64dd91631721bb30358a607f63895c2005532d9b369625d507106f38e7c94fda",
+      "relativePath": "compiler-builds/wasm-64dd91631721bb30358a607f63895c2005532d9b369625d507106f38e7c94fda/main.wasm",
+      "sha256": "sha256:64dd91631721bb30358a607f63895c2005532d9b369625d507106f38e7c94fda",
+      "byteLength": 14302,
+      "mediaType": "application/wasm",
+      "version": "binji-wasm-clang-648c4a89997a"
+    },
+    "diagnostics": [
+      {
+        "severity": "warning",
+        "message": "'mixed_9c3158ded821871b_deprecated' is deprecated: person05-deprecated",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 6,
+            "column": 10
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "'mixed_9c3158ded821871b_deprecated' has been explicitly marked deprecated here",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 3,
+            "column": 16
+          }
+        }
+      }
+    ],
+    "rawDiagnostics": "/project/main.cpp:6:10: warning: 'mixed_9c3158ded821871b_deprecated' is deprecated: person05-deprecated\n  return mixed_9c3158ded821871b_deprecated();\n         ^\n/project/main.cpp:3:16: note: 'mixed_9c3158ded821871b_deprecated' has been explicitly marked deprecated here\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_9c3158ded821871b_deprecated() { return 0; }\n               ^\n1 warning generated.\n",
+    "wasm": {
+      "format": "wasm-v1",
+      "sections": [
+        {
+          "id": 1,
+          "byteLength": 35,
+          "payloadOffset": 10
+        },
+        {
+          "id": 2,
+          "byteLength": 242,
+          "payloadOffset": 48
+        },
+        {
+          "id": 3,
+          "byteLength": 25,
+          "payloadOffset": 292
+        },
+        {
+          "id": 4,
+          "byteLength": 5,
+          "payloadOffset": 319
+        },
+        {
+          "id": 5,
+          "byteLength": 5,
+          "payloadOffset": 326
+        },
+        {
+          "id": 6,
+          "byteLength": 23,
+          "payloadOffset": 333
+        },
+        {
+          "id": 7,
+          "byteLength": 186,
+          "payloadOffset": 359
+        },
+        {
+          "id": 10,
+          "byteLength": 11896,
+          "payloadOffset": 548
+        },
+        {
+          "id": 11,
+          "byteLength": 516,
+          "payloadOffset": 12447
+        },
+        {
+          "id": 0,
+          "name": ".debug_info",
+          "byteLength": 183,
+          "payloadOffset": 12978,
+          "dwarfVersion": 4
+        },
+        {
+          "id": 0,
+          "name": ".debug_macinfo",
+          "byteLength": 16,
+          "payloadOffset": 13166
+        },
+        {
+          "id": 0,
+          "name": ".debug_ranges",
+          "byteLength": 54,
+          "payloadOffset": 13183
+        },
+        {
+          "id": 0,
+          "name": ".debug_abbrev",
+          "byteLength": 130,
+          "payloadOffset": 13240
+        },
+        {
+          "id": 0,
+          "name": ".debug_line",
+          "byteLength": 118,
+          "payloadOffset": 13370
+        },
+        {
+          "id": 0,
+          "name": ".debug_str",
+          "byteLength": 274,
+          "payloadOffset": 13490
+        },
+        {
+          "id": 0,
+          "name": "name",
+          "byteLength": 546,
+          "payloadOffset": 13761
+        }
+      ],
+      "dwarfSections": [
+        {
+          "id": 0,
+          "name": ".debug_info",
+          "byteLength": 183,
+          "payloadOffset": 12978,
+          "dwarfVersion": 4
+        },
+        {
+          "id": 0,
+          "name": ".debug_macinfo",
+          "byteLength": 16,
+          "payloadOffset": 13166
+        },
+        {
+          "id": 0,
+          "name": ".debug_ranges",
+          "byteLength": 54,
+          "payloadOffset": 13183
+        },
+        {
+          "id": 0,
+          "name": ".debug_abbrev",
+          "byteLength": 130,
+          "payloadOffset": 13240
+        },
+        {
+          "id": 0,
+          "name": ".debug_line",
+          "byteLength": 118,
+          "payloadOffset": 13370
+        },
+        {
+          "id": 0,
+          "name": ".debug_str",
+          "byteLength": 274,
+          "payloadOffset": 13490
+        }
+      ],
+      "imports": [
+        {
+          "module": "wasi_unstable",
+          "name": "fd_prestat_get",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "fd_prestat_dir_name",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "environ_sizes_get",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "environ_get",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "args_sizes_get",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "args_get",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "proc_exit",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "fd_fdstat_get",
+          "kind": "function"
+        }
+      ]
+    },
+    "metrics": {
+      "loadMs": 175.72140000000002,
+      "compileMs": 11.878899999999703,
+      "linkMs": 7.526899999999841,
+      "totalMs": 30.567999999999756,
+      "observedLinearMemoryBytes": {
+        "compilerAfterExecution": 7340032,
+        "linkerAfterExecution": 9371648,
+        "filesystem": 9437184
+      },
+      "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+    },
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+    "objectSha256": "sha256:3380ab612cecdfa29dbc134ec489b2489cf64dcd8409cb636d02877da9c52e68",
+    "objectByteLength": 1581
+  },
+  "smoke": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "memoryBytes": 1179648
+  }
+}

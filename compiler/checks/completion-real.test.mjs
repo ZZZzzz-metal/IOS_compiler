@@ -65,12 +65,13 @@ test('real libc++ const ordinary methods and vector overloads follow native elig
   }
 });
 
-test('known Clang8 availability gap is preserved as evidence: const string member templates', async () => {
+test('derived Clang excludes const string mutating member templates and retains mutable overloads', async () => {
   const native = await completeWithClang(input('#include <string>\nvoid f(){const std::string s;s.ap@;}'), toolchain);
-  assert.ok(native.result.items.some(i => i.label === 'append'));
-  assert.match(native.native.stdout, /COMPLETION: append :/u);
-  assert.ok(!native.native.stdout.includes('Inaccessible'));
-  // This documents an unsupported native limitation, not a const correctness pass.
+  assert.equal(native.result.status, 'succeeded');
+  assert.ok(!native.result.items.some(i => i.label === 'append'));
+  assert.doesNotMatch(native.native.stdout, /COMPLETION: append :/u);
+  assert.equal((await complete('#include <string>\nvoid f(){std::string s;s.ap@;}')).items.filter(i => i.label === 'append').length, 10);
+  // The original exit-1 oracle/native stdout remain in the 2026-10-29 evidence.
 });
 
 test('real character literals after case/sizeof and declarations named Pattern are retained', async () => {

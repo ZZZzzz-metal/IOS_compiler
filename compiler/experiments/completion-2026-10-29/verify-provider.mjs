@@ -8,7 +8,7 @@ import { loadCompletionToolchain, completeWithClang } from '../../src/completion
 import { createSnapshot, hashBytes } from '../../src/source.mjs';
 const root = new URL('../../../', import.meta.url);
 const lock = JSON.parse(await readFile(new URL('compiler/resources/toolchain.lock.json', root), 'utf8'));
-const dir = new URL(`compiler/evidence/completion-2026-10-29/provider/${new Date().toISOString().replace(/[:.]/gu, '-')}-${crypto.randomUUID().slice(0, 8)}/`, root);
+const dir = new URL(`compiler/evidence/completion-fix-2026-10-30/provider-${new Date().toISOString().replace(/[:.]/gu, '-')}-${crypto.randomUUID().slice(0, 8)}/`, root);
 await mkdir(dir, { recursive: true });
 const json = (path, value) => writeFile(new URL(path, dir), JSON.stringify(value, null, 2) + '\n');
 const resourceReads = [], toolchain = await loadCompletionToolchain(lock, path => { resourceReads.push(path); return readFile(new URL(`compiler/resources/${path}`, root)); });
@@ -39,9 +39,8 @@ const cases = [
   ['overloads', 'int alpha(int); double alpha(double); void f(){al@;}', ['alpha']],
   ['const-receiver', 'struct Node{void mutate(); int view()const;}; void f(){const Node n{}; n.@;}', ['view'], ['mutate']],
   ['const-vector', '#include <vector>\nvoid f(){const std::vector<int> v; v.@;}', ['size', 'begin'], ['push_back', 'clear']],
-  // Native Clang8 emits non-const function templates here without availability.
-  // Record this unsupported boundary; do not invent a spelling-based filter.
-  ['const-string-native-gap', '#include <string>\nvoid f(){const std::string s; s.@;}', ['size', 'substr', 'append'], ['clear']],
+  ['const-string-fixed', '#include <string>\nvoid f(){const std::string s; s.@;}', ['size', 'substr', 'compare', 'find'], ['clear', 'append', 'assign', 'insert', 'replace']],
+  ['unavailable-fixed', 'int personAllowed();__attribute__((unavailable)) int personBlocked();__attribute__((deprecated)) int personDeprecated();void f(){person@;}', ['personAllowed', 'personDeprecated'], ['personBlocked']],
   ['case-character-literal', 'struct N{int value;};void f(){N n;switch(1){case\'a\': n.@;}}', ['value']],
   ['sizeof-character-literal', 'struct N{int value;};void f(){N n;sizeof\'a\'; n.@;}', ['value']],
   ['pattern-variable', 'int Pattern;void f(){Pat@;}', ['Pattern']],
@@ -89,10 +88,10 @@ try {
   assert.ok(afterCancel.items.some(item => item.label === 'alpha'));
   await json('after-cancel.json', afterCancel);
 } finally { await adapter.dispose(); }
-await json('summary.json', { requestId: 'CC-20261029-02', baseCommit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
+await json('summary.json', { requestId: 'CC-20261030-02', baseCommit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(), identity: toolchain.identity,
   node: process.version, platform: process.platform, resourceReads, loadedLld: resourceReads.some(path => path.endsWith('/lld')),
-  sourceFiles: await Promise.all(['adapter', 'worker', 'engine', 'source', 'output'].map(async name => { const path = `compiler/src/completion-${name}.mjs`; const bytes = await readFile(new URL(path, root)); return { path, sha256: hashBytes(bytes), byteLength: bytes.length }; })),
+  sourceFiles: await Promise.all(['adapter', 'worker', 'engine', 'source', 'output', 'semantics'].map(async name => { const path = `compiler/src/completion-${name}.mjs`; const bytes = await readFile(new URL(path, root)); return { path, sha256: hashBytes(bytes), byteLength: bytes.length }; })),
   observations, workersCreated: workers.length, allWorkersReleased: workers.every(w => w.threadId === -1), progress,
-  knownLimitations: ['const-string-native-gap: native Clang8 emits append/assign/insert/replace member templates without unavailable markers on a const receiver; full const/template availability is unsupported.', 'CLI does not expose AST kind, priority, deprecated or unavailable attributes. kind=unknown.'],
+  knownLimitations: ['CLI does not expose AST kind or priority. kind=unknown. Full language service is not established by these cases.'],
   scope: 'Real production engine + Node Worker adapter, fixed Clang Wasm. No UI, browser, offline cold restart or iPad claim.' });
 console.log(JSON.stringify({ evidence: dir.href, cases: observations.length, workersCreated: workers.length, observations }, null, 2));

@@ -1,0 +1,165 @@
+{
+  "request": {
+    "requestId": "7d726d5e-144b-4216-b4f3-6fda8df62c85",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "a8345c33-4854-40c1-9a8e-93c5e8855c6c",
+      "sourceHash": "sha256:015af581f66f645a56adcfc5f333d0919e0fd3543b080714a71be964df6ff650",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "driver.cpp",
+      "files": [
+        {
+          "path": "driver.cpp",
+          "role": "driver",
+          "text": "#include <vector>\n#include \"user.inc\"\nint main(){return f();}",
+          "contentHash": "sha256:5273b482bfd98754a21b0007a758d901b2d6cfa94ff7dc1af4147b4c6d66f51b"
+        },
+        {
+          "path": "user.inc",
+          "role": "user",
+          "text": "int f(){std::vector<int> v; v.pu; return 0;}",
+          "contentHash": "sha256:598fa9babe8e096b708a8ed0fff4ad2461f4abb2caea4f50e7834960f064c992"
+        }
+      ]
+    },
+    "sourcePath": "user.inc",
+    "offset": 32
+  },
+  "reply": {
+    "requestId": "7d726d5e-144b-4216-b4f3-6fda8df62c85",
+    "documentVersion": 1,
+    "snapshotId": "a8345c33-4854-40c1-9a8e-93c5e8855c6c",
+    "sourceHash": "sha256:015af581f66f645a56adcfc5f333d0919e0fd3543b080714a71be964df6ff650",
+    "sourcePath": "user.inc",
+    "offset": 32,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:a52b49112e815b18500917c5a56713b71e5570de63e57c806036138e06c1e3ec",
+        "label": "push_back",
+        "kind": "unknown",
+        "detail": "void push_back(const_reference __x)",
+        "insertText": "push_back",
+        "replaceRange": {
+          "startOffset": 30,
+          "endOffset": 32
+        },
+        "filterText": "push_back"
+      },
+      {
+        "id": "sha256:a15b01f6478510a819b5218b5670ed098076a647173b804249ab68284017fc9f",
+        "label": "push_back",
+        "kind": "unknown",
+        "detail": "void push_back(value_type &&__x)",
+        "insertText": "push_back",
+        "replaceRange": {
+          "startOffset": 30,
+          "endOffset": 32
+        },
+        "filterText": "push_back"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+    "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 122.17129999999997,
+  "native": {
+    "result": {
+      "requestId": "7d726d5e-144b-4216-b4f3-6fda8df62c85",
+      "documentVersion": 1,
+      "snapshotId": "a8345c33-4854-40c1-9a8e-93c5e8855c6c",
+      "sourceHash": "sha256:015af581f66f645a56adcfc5f333d0919e0fd3543b080714a71be964df6ff650",
+      "sourcePath": "user.inc",
+      "offset": 32,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:a52b49112e815b18500917c5a56713b71e5570de63e57c806036138e06c1e3ec",
+          "label": "push_back",
+          "kind": "unknown",
+          "detail": "void push_back(const_reference __x)",
+          "insertText": "push_back",
+          "replaceRange": {
+            "startOffset": 30,
+            "endOffset": 32
+          },
+          "filterText": "push_back"
+        },
+        {
+          "id": "sha256:a15b01f6478510a819b5218b5670ed098076a647173b804249ab68284017fc9f",
+          "label": "push_back",
+          "kind": "unknown",
+          "detail": "void push_back(value_type &&__x)",
+          "insertText": "push_back",
+          "replaceRange": {
+            "startOffset": 30,
+            "endOffset": 32
+          },
+          "filterText": "push_back"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+      "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "driver.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/user.inc:1:33",
+        "/project/driver.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: push_back : [#void#]push_back(<#const_reference __x#>)\nCOMPLETION: push_back : [#void#]push_back(<#value_type &&__x#>)\n",
+      "stderr": "",
+      "memoryBytes": 15007744,
+      "position": {
+        "line": 1,
+        "byteColumn": 33
+      }
+    },
+    "metrics": {
+      "totalMs": 125.04629999999997,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 15007744
+    }
+  },
+  "checks": {
+    "expected": [
+      "push_back"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

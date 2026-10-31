@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { EventEmitter } from 'node:events';
 import { readFile } from 'node:fs/promises';
 import { CompletionAdapter } from '../src/completion-adapter.mjs';
+import { completionResourceIdentity } from '../src/completion-semantics.mjs';
 import { createSnapshot } from '../src/source.mjs';
 import { completionContext, completionIdentity } from '../src/completion-source.mjs';
 const lock = JSON.parse(await readFile(new URL('../resources/toolchain.lock.json', import.meta.url), 'utf8'));
@@ -11,8 +12,7 @@ const input = () => ({ requestId: crypto.randomUUID(), documentVersion: 1, langu
   snapshot: createSnapshot([{ path: 'main.cpp', role: 'user', text: 'int main(){ int alpha; al; }' }], 'main.cpp'), sourcePath: 'main.cpp', offset: 24 });
 function result(request) {
   return { ...completionIdentity(request), status: 'succeeded', isIncomplete: false, diagnostics: [],
-    toolchainId: lock.toolchainId, compilerResourceHash: `sha256:${lock.files.find(f => f.filename === 'clang').sha256}`,
-    sysrootResourceHash: `sha256:${lock.files.find(f => f.filename === 'sysroot.tar').sha256}`,
+    ...completionResourceIdentity(lock),
     items: [{ id: 'alpha-int', label: 'alpha', insertText: 'alpha', detail: 'int alpha', kind: 'unknown',
       replaceRange: completionContext(request.snapshot.files[0].text, request.offset).replaceRange }] };
 }
@@ -28,6 +28,8 @@ test('completion rejects foreign identities/resources, unsafe ranges, duplicate 
     r => { r.requestId = 'foreign'; }, r => { r.documentVersion++; }, r => { r.sourceHash = 'wrong'; },
     r => { r.snapshotId = 'wrong'; }, r => { r.sourcePath = 'other.cpp'; }, r => { r.offset++; },
     r => { r.compilerResourceHash = 'wrong'; }, r => { r.sysrootResourceHash = 'wrong'; }, r => { r.toolchainId = 'wrong'; },
+    r => { r.compilerResourceHash = `sha256:${lock.files.find(f => f.filename === 'clang').sha256}`; },
+    r => { r.toolchainId = lock.toolchainId; },
     r => { r.items[0].replaceRange.endOffset = 10000; }, r => { r.items[0].replaceRange.startOffset = 0; },
     r => { r.items.push(structuredClone(r.items[0])); }, r => { r.items[0].insertText = 'alpha(<#x#>)'; },
     r => { r.status = 'failed'; }, r => { r.items[0].kind = 'invented'; },

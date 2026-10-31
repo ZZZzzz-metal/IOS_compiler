@@ -1,0 +1,43 @@
+{
+  "observed": [
+    "availability",
+    "const-user",
+    "mutable-user",
+    "const-string",
+    "mutable-string",
+    "mixed-overloads",
+    "member-availability",
+    "static-member-availability",
+    "template-member-availability",
+    "template-global-availability",
+    "namespace-alias-availability",
+    "using-availability",
+    "inherited-availability",
+    "field-availability",
+    "enum-availability",
+    "redecl-earlier",
+    "redecl-later",
+    "platform-unrelated",
+    "declaration-alias"
+  ],
+  "availabilityChecked": [
+    "availability",
+    "mixed-overloads",
+    "member-availability",
+    "static-member-availability",
+    "template-member-availability",
+    "template-global-availability",
+    "namespace-alias-availability",
+    "using-availability",
+    "inherited-availability",
+    "field-availability",
+    "enum-availability",
+    "redecl-earlier",
+    "redecl-later",
+    "platform-unrelated",
+    "declaration-alias"
+  ],
+  "availabilityChecksPassed": true,
+  "constTemplateIssueFixed": true,
+  "note": "Combined experimental memory-only transform. All 19 cases assert real native eligibility or availability markers. Production integration and independent verification still pending."
+}

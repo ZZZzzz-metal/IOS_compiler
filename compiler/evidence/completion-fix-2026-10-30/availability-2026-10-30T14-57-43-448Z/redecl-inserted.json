@@ -1,0 +1,33 @@
+{
+  "source": "__attribute__((unavailable(\"blocked\"))) int personSame(); int personSame(); void f(){personSame;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-ast-dump",
+    "/project/main.cpp"
+  ],
+  "exitCode": 1,
+  "stdout": "TranslationUnitDecl 0x652d00 <<invalid sloc>> <invalid sloc>\n|-TypedefDecl 0x6531b8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'\n| `-BuiltinType 0x652fe0 '__int128'\n|-TypedefDecl 0x653200 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'\n| `-BuiltinType 0x652ff0 'unsigned __int128'\n|-TypedefDecl 0x653438 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'\n| `-RecordType 0x653290 '__NSConstantString_tag'\n|   `-CXXRecord 0x653230 '__NSConstantString_tag'\n|-TypedefDecl 0x653480 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'void *'\n| `-PointerType 0x653160 'void *'\n|   `-BuiltinType 0x652d40 'void'\n|-FunctionDecl 0x653570 </project/main.cpp:1:1, col:56> col:45 used personSame 'int ()'\n| `-UnavailableAttr 0x6535e0 <col:16, col:37> \"blocked\" IR_None\n|-FunctionDecl 0x653678 prev 0x653570 <col:59, col:74> col:63 used personSame 'int ()'\n| `-UnavailableAttr 0x653708 <col:16> Inherited \"blocked\" IR_None\n`-FunctionDecl 0x653768 <col:77, col:97> col:82 f 'void ()'\n  `-CompoundStmt 0x6537f0 <col:85, col:97>\n    `-DeclRefExpr 0x6537d8 <col:86> 'int ()' lvalue Function 0x653678 'personSame' 'int ()'\n",
+  "stderr": "/project/main.cpp:1:86: error: 'personSame' is unavailable: blocked\n__attribute__((unavailable(\"blocked\"))) int personSame(); int personSame(); void f(){personSame;}\n                                                                                     ^\n/project/main.cpp:1:63: note: 'personSame' has been explicitly marked unavailable here\n__attribute__((unavailable(\"blocked\"))) int personSame(); int personSame(); void f(){personSame;}\n                                                              ^\n/project/main.cpp:1:86: warning: expression result unused\n__attribute__((unavailable(\"blocked\"))) int personSame(); int personSame(); void f(){personSame;}\n                                                                                     ^~~~~~~~~~\n1 warning and 1 error generated.\n",
+  "memoryBytes": 7012352
+}

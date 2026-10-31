@@ -1,0 +1,33 @@
+{
+  "insertion": 18774355,
+  "inserted": [
+    32,
+    2,
+    40,
+    2,
+    16,
+    65,
+    255,
+    0,
+    113,
+    65,
+    25,
+    70,
+    4,
+    64,
+    32,
+    2,
+    40,
+    2,
+    24,
+    33,
+    2,
+    11
+  ],
+  "targetFunction": 40648,
+  "oldBodySize": 1400,
+  "newBodySize": 1422,
+  "oldCodeLength": 25177807,
+  "newCodeLength": 25177829,
+  "availabilityOffset": 18106914
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "in-memory experiment; original vendor and lock unchanged",
+  "inputSha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "outputSha256": "b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "inputByteLength": 31214472,
+  "outputByteLength": 31214494,
+  "availability": {
+    "patchOffset": 18106914,
+    "original": "410347",
+    "replacement": "41014d",
+    "meaning": "Availability > Deprecated receives existing Inaccessible marker; ordinary and deprecated remain selectable."
+  },
+  "constTemplate": {
+    "insertion": 18774355,
+    "inserted": "200228021041ff00714119460440200228021821020b",
+    "targetFunction": 40648,
+    "oldBodySize": 1400,
+    "newBodySize": 1422
+  }
+}

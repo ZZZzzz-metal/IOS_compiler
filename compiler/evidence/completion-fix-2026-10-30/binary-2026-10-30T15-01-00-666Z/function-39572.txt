@@ -1,0 +1,209 @@
+{"index":39572,"type":{"params":[127,127],"results":[]},"locals":[{"count":5,"type":127}]}
+11438fd global.get 0
+11438ff i32.const -64
+1143901 i32.add 
+1143902 local.tee 2
+1143904 global.set 0
+1143906 local.get 2
+1143908 i32.const 56
+114390a i32.add 
+114390b i32.const 0
+114390d i32.store 2 0
+1143910 local.get 2
+1143912 i64.const 0
+1143914 i64.store 3 48
+1143917 local.get 2
+1143919 i64.const 4294967296
+114391f i64.store 2 36
+1143922 local.get 2
+1143924 i64.const 0
+1143926 i64.store 2 28
+1143929 local.get 2
+114392b i32.const 4186800
+1143930 i32.store 2 24
+1143933 local.get 1
+1143935 i32.load16_u 1 0
+1143938 local.set 4
+114393a local.get 2
+114393c local.get 2
+114393e i32.const 48
+1143940 i32.add 
+1143941 i32.store 2 44
+1143944 block -64
+1143946 local.get 4
+1143948 i32.const 3
+114394a i32.shl 
+114394b local.tee 4
+114394d i32.eqz 
+114394e br_if 0
+1143950 local.get 1
+1143952 i32.const 24
+1143954 i32.add 
+1143955 local.set 1
+1143957 local.get 2
+1143959 i32.const 19
+114395b i32.add 
+114395c local.set 5
+114395e loop -64
+1143960 block -64
+1143962 block -64
+1143964 block -64
+1143966 block -64
+1143968 local.get 1
+114396a i32.const -4
+114396c i32.add 
+114396d i32.load 2 0
+1143970 i32.const -2
+1143972 i32.add 
+1143973 local.tee 3
+1143975 i32.const 4
+1143977 i32.le_u 
+1143978 if -64
+114397a block -64
+114397c local.get 3
+114397e i32.const 1
+1143980 i32.sub 
+1143981 br_table 3 0 0 4 2
+1143988 end 
+1143989 local.get 2
+114398b i32.const 24
+114398d i32.add 
+114398e i32.const 5830020
+1143993 call 35
+1143995 local.get 1
+1143997 i32.load 2 0
+114399a call 35
+114399c i32.const 5830023
+11439a1 call 35
+11439a3 drop 
+11439a4 br 4
+11439a6 end 
+11439a7 local.get 2
+11439a9 i32.const 24
+11439ab i32.add 
+11439ac local.get 1
+11439ae i32.load 2 0
+11439b1 call 35
+11439b3 drop 
+11439b4 br 3
+11439b6 end 
+11439b7 local.get 2
+11439b9 i32.const 24
+11439bb i32.add 
+11439bc i32.const 5830008
+11439c1 call 35
+11439c3 local.get 2
+11439c5 i32.const 8
+11439c7 i32.add 
+11439c8 local.get 1
+11439ca i32.load 2 0
+11439cd call 39572
+11439d1 local.get 2
+11439d3 i32.load 2 8
+11439d6 local.get 2
+11439d8 i32.const 8
+11439da i32.add 
+11439db local.get 5
+11439dd i32.load8_u 0 0
+11439e0 local.tee 3
+11439e2 i32.const 24
+11439e4 i32.shl 
+11439e5 i32.const 24
+11439e7 i32.shr_s 
+11439e8 i32.const 0
+11439ea i32.lt_s 
+11439eb local.tee 6
+11439ed select 
+11439ee local.get 2
+11439f0 i32.load 2 12
+11439f3 local.get 3
+11439f5 local.get 6
+11439f7 select 
+11439f8 call 20743
+11439fc i32.const 5830011
+1143a01 call 35
+1143a03 drop 
+1143a04 local.get 5
+1143a06 i32.load8_s 0 0
+1143a09 i32.const -1
+1143a0b i32.gt_s 
+1143a0c br_if 2
+1143a0e local.get 2
+1143a10 i32.load 2 8
+1143a13 call 53655
+1143a17 br 2
+1143a19 end 
+1143a1a local.get 2
+1143a1c i32.const 24
+1143a1e i32.add 
+1143a1f i32.const 5830014
+1143a24 call 35
+1143a26 local.get 1
+1143a28 i32.load 2 0
+1143a2b call 35
+1143a2d i32.const 5830017
+1143a32 call 35
+1143a34 drop 
+1143a35 br 1
+1143a37 end 
+1143a38 local.get 2
+1143a3a i32.const 24
+1143a3c i32.add 
+1143a3d i32.const 5830014
+1143a42 call 35
+1143a44 local.get 1
+1143a46 i32.load 2 0
+1143a49 call 35
+1143a4b i32.const 5830017
+1143a50 call 35
+1143a52 drop 
+1143a53 end 
+1143a54 local.get 1
+1143a56 i32.const 8
+1143a58 i32.add 
+1143a59 local.set 1
+1143a5b local.get 4
+1143a5d i32.const -8
+1143a5f i32.add 
+1143a60 local.tee 4
+1143a62 br_if 0
+1143a64 end 
+1143a65 local.get 2
+1143a67 i32.const 36
+1143a69 i32.add 
+1143a6a i32.load 2 0
+1143a6d local.get 2
+1143a6f i32.load 2 28
+1143a72 i32.eq 
+1143a73 br_if 0
+1143a75 local.get 2
+1143a77 i32.const 24
+1143a79 i32.add 
+1143a7a call 20748
+1143a7e end 
+1143a7f local.get 0
+1143a81 local.get 2
+1143a83 i32.const 44
+1143a85 i32.add 
+1143a86 i32.load 2 0
+1143a89 call 53680
+1143a8d drop 
+1143a8e local.get 2
+1143a90 i32.const 24
+1143a92 i32.add 
+1143a93 call 20780
+1143a97 drop 
+1143a98 local.get 2
+1143a9a i32.load8_s 0 59
+1143a9d i32.const -1
+1143a9f i32.le_s 
+1143aa0 if -64
+1143aa2 local.get 2
+1143aa4 i32.load 2 48
+1143aa7 call 53655
+1143aab end 
+1143aac local.get 2
+1143aae i32.const -64
+1143ab0 i32.sub 
+1143ab1 global.set 0
+1143ab3 end 

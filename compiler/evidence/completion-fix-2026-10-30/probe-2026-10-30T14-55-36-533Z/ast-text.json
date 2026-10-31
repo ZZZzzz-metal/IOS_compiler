@@ -1,0 +1,33 @@
+{
+  "source": "__attribute__((unavailable)) int blocked();__attribute__((deprecated)) int old();struct N{template<class T>void mutate(T);template<class T>int view(T)const;};void f(){const N n{};n.mu;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-ast-dump",
+    "/project/main.cpp"
+  ],
+  "exitCode": 1,
+  "stdout": "TranslationUnitDecl 0x652d00 <<invalid sloc>> <invalid sloc>\n|-TypedefDecl 0x6531b8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'\n| `-BuiltinType 0x652fe0 '__int128'\n|-TypedefDecl 0x653200 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'\n| `-BuiltinType 0x652ff0 'unsigned __int128'\n|-TypedefDecl 0x653438 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'\n| `-RecordType 0x653290 '__NSConstantString_tag'\n|   `-CXXRecord 0x653230 '__NSConstantString_tag'\n|-TypedefDecl 0x653480 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'void *'\n| `-PointerType 0x653160 'void *'\n|   `-BuiltinType 0x652d40 'void'\n|-FunctionDecl 0x6534f0 </project/main.cpp:1:1, col:42> col:34 blocked 'int ()'\n| `-UnavailableAttr 0x653560 <col:16> \"\" IR_None\n|-FunctionDecl 0x6535f0 <col:44, col:80> col:76 old 'int ()'\n| `-DeprecatedAttr 0x653660 <col:59> \"\" \"\"\n|-CXXRecordDecl 0x6536a0 <col:82, col:157> col:89 referenced struct N definition\n| |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init\n| | |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr\n| | |-CopyConstructor simple trivial has_const_param implicit_has_const_param\n| | |-MoveConstructor exists simple trivial\n| | |-CopyAssignment trivial has_const_param implicit_has_const_param\n| | |-MoveAssignment exists simple trivial\n| | `-Destructor simple irrelevant trivial\n| |-CXXRecordDecl 0x653768 <col:82, col:89> col:89 implicit struct N\n| |-FunctionTemplateDecl 0x653988 <col:91, col:121> col:113 mutate\n| | |-TemplateTypeParmDecl 0x6537c0 <col:100, col:106> col:106 referenced class depth 0 index 0 T\n| | `-CXXMethodDecl 0x653918 <col:108, col:121> col:113 mutate 'void (T)'\n| |   `-ParmVarDecl 0x653850 <col:120> col:121 'T'\n| |-FunctionTemplateDecl 0x653b68 <col:123, col:151> col:144 view\n| | |-TemplateTypeParmDecl 0x6539c0 <col:132, col:138> col:138 referenced class depth 0 index 0 T\n| | `-CXXMethodDecl 0x653af8 <col:140, col:151> col:144 view 'int (T) const'\n| |   `-ParmVarDecl 0x653a30 <col:149> col:150 'T'\n| |-CXXConstructorDecl 0x6adf80 <col:89> col:89 implicit constexpr N 'void ()' inline default trivial noexcept-unevaluated 0x6adf80\n| |-CXXConstructorDecl 0x6ae038 <col:89> col:89 implicit constexpr N 'void (const N &)' inline default trivial noexcept-unevaluated 0x6ae038\n| | `-ParmVarDecl 0x6ae0f0 <col:89> col:89 'const N &'\n| |-CXXMethodDecl 0x6ae148 <col:89> col:89 implicit constexpr operator= 'N &(const N &)' inline default trivial noexcept-unevaluated 0x6ae148\n| | `-ParmVarDecl 0x6ae200 <col:89> col:89 'const N &'\n| |-CXXConstructorDecl 0x6ae258 <col:89> col:89 implicit constexpr N 'void (N &&)' inline default trivial noexcept-unevaluated 0x6ae258\n| | `-ParmVarDecl 0x6ae310 <col:89> col:89 'N &&'\n| |-CXXMethodDecl 0x6ae350 <col:89> col:89 implicit constexpr operator= 'N &(N &&)' inline default trivial noexcept-unevaluated 0x6ae350\n| | `-ParmVarDecl 0x6ae400 <col:89> col:89 'N &&'\n| `-CXXDestructorDecl 0x6ae440 <col:89> col:89 implicit ~N 'void ()' inline default trivial noexcept-unevaluated 0x6ae440\n`-FunctionDecl 0x653be8 <col:159, col:185> col:164 f 'void ()'\n  `-CompoundStmt 0x6ae7c4 <col:167, col:185>\n    `-DeclStmt 0x6adf30 <col:168, col:179>\n      `-VarDecl 0x653c68 <col:168, col:178> col:176 used n 'const N' listinit\n        `-InitListExpr 0x653cc8 <col:177, col:178> 'const N'\n",
+  "stderr": "/project/main.cpp:1:182: error: no member named 'mu' in 'N'\n__attribute__((unavailable)) int blocked();__attribute__((deprecated)) int old();struct N{template<class T>void mutate(T);template<class T>int view(T)const;};void f(){const N n{};n.mu;}\n                                                                                                                                                                                   ~ ^\n1 error generated.\n",
+  "memoryBytes": 7077888
+}

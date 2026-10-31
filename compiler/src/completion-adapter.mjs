@@ -1,4 +1,5 @@
 import { validateCompletionLock } from './completion-engine.mjs';
+import { completionResourceIdentity } from './completion-semantics.mjs';
 import { validateCompletionRequest, completionContext, completionIdentity, emptyCompletion, isUtf16Boundary } from './completion-source.mjs';
 
 const kinds = new Set(['variable', 'function', 'field', 'method', 'class', 'struct', 'namespace', 'keyword', 'enum', 'enumMember', 'type', 'unknown']);
@@ -8,9 +9,7 @@ function validateReply(result, request, lock) {
   if (!['succeeded', 'failed', 'cancelled', 'unsupported'].includes(result.status) ||
       !Array.isArray(result.items) || result.items.length > 200 || typeof result.isIncomplete !== 'boolean' || !Array.isArray(result.diagnostics)) throw new Error('Malformed completion result');
   if (result.status !== 'succeeded' && result.items.length) throw new Error('Only succeeded completions may carry items');
-  const expected = { toolchainId: lock.toolchainId,
-    compilerResourceHash: `sha256:${lock.files.find(file => file.filename === 'clang').sha256}`,
-    sysrootResourceHash: `sha256:${lock.files.find(file => file.filename === 'sysroot.tar').sha256}` };
+  const expected = completionResourceIdentity(lock);
   for (const [key, value] of Object.entries(expected)) if ((result.items.length || result[key] !== undefined) && result[key] !== value) throw new Error(`Completion resource mismatch: ${key}`);
   const file = request.snapshot.files.find(file => file.path === request.sourcePath), ids = new Set();
   const range = completionContext(file.text, request.offset).replaceRange;
