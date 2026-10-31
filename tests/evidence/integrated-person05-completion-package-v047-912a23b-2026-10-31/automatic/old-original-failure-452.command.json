@@ -1,0 +1,15 @@
+{
+  "id": "old-original-failure-452",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/seal-integrated-round.mjs",
+    "integrated-person05-completion-runtime-bddae576-2026-10-30",
+    "--verify",
+    "--git"
+  ],
+  "startedAt": "2026-10-31T07:25:52.689Z",
+  "endedAt": "2026-10-31T07:25:56.684Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

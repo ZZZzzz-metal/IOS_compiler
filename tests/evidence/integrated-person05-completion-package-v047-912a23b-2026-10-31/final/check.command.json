@@ -1,0 +1,9 @@
+{
+  "id": "check",
+  "command": "npm.cmd run check",
+  "startedAt": "2026-10-31T12:46:30.091Z",
+  "endedAt": "2026-10-31T12:46:34.294Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

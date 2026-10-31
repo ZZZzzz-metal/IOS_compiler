@@ -1,0 +1,57 @@
+{
+  "testedRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "passed": true,
+  "commands": [
+    {
+      "id": "check",
+      "command": "npm.cmd run check",
+      "startedAt": "2026-10-31T12:46:30.091Z",
+      "endedAt": "2026-10-31T12:46:34.294Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "test",
+      "command": "npm.cmd test",
+      "startedAt": "2026-10-31T12:46:34.297Z",
+      "endedAt": "2026-10-31T12:46:35.288Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tests/audit-completion-v047-package.mjs",
+      "byteLength": 20683,
+      "sha256": "312ccb8fc99361bb76e5706736dfeedd168a24477b507ce955ff6bbbea6de603"
+    },
+    {
+      "path": "tests/lib/inspect-v047-zip.py",
+      "byteLength": 2157,
+      "sha256": "8d055367b41bb113e544af820e863618c8cf75b38aa8d7b63a9fd9f4e71da935"
+    },
+    {
+      "path": "tests/completion-v047-browser-host.mjs",
+      "byteLength": 3251,
+      "sha256": "1aac37c25d820c144df673686852fe322c73b2014c160ef5bd849dea17bebeaa"
+    },
+    {
+      "path": "tests/run-completion-v047-checks.mjs",
+      "byteLength": 7895,
+      "sha256": "8cf38788da4410303add71136e31b5529a2d106bced75f396bd402ab82c6b49a"
+    },
+    {
+      "path": "tests/verify-completion-v047-browser.mjs",
+      "byteLength": 12063,
+      "sha256": "448326400d2b5fae7bbcbdd7cfe6ced3f7b3a31a56b60faf4d5a072ca43d62e8"
+    },
+    {
+      "path": "tests/finalize-completion-v047-evidence.mjs",
+      "byteLength": 2500,
+      "sha256": "b960a582b51e8dc800b50e2a33c9731435c97c750d20ba20f776e02fc9b06f29"
+    }
+  ],
+  "physicalIpadTested": false
+}

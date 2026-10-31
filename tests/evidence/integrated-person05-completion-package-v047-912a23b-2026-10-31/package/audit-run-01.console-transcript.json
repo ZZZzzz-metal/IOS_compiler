@@ -1,0 +1,14 @@
+{
+  "kind": "captured-tool-console-chunks",
+  "chunks": [
+    {
+      "stream": "stderr",
+      "text": "(node:55728) ExperimentalWarning: VM Modules is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "stream": "stdout",
+      "text": "{\"passed\":true,\"archiveMembers\":74,\"descriptorResources\":65,\"sourceBindingCounts\":{\"fixed-git\":58,\"locked-vendor\":4,\"generated\":3},\"browserStaticEdges\":50,\"workers\":3,\"setupMembers\":6,\"reuse\":true,\"siteRoot\":\"C:\\\\Users\\\\20964\\\\Documents\\\\ChatGPT\\\\C++算法编译器\\\\ipad-debugger-05\\\\tests\\\\.local\\\\completion-v047-912a23b-person05\\\\site\"}\n"
+    }
+  ],
+  "exitCode": 0
+}

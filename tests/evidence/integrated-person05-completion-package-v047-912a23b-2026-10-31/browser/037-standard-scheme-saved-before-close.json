@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-31T12:43:09.320Z",
+  "url": "http://127.0.0.1:4265/releases/ipad-web-probe-4b6a8377cadd31e675701549/ui/probe.html",
+  "snapshot": "- banner:\n  - heading \"算法工作台\" [level=1]\n  - generic: 开发验证原型\n  - paragraph: 粘贴代码，带着输入运行，在暂停处排错。\n  - button \"校验本地资源\":\n    - text: 校验本地资源\n  - status: 本版本离线资源已校验 · iPad 真机待验证\n- generic: iPad 离线冷启动待验证\n- generic: Clang 8.0.1 / wasm32\n- link \"原型说明与验证步骤\":\n  - /url: ./README.md\n- navigation \"运行与调试\":\n  - combobox \"语言\":\n    - option \"C++17\" [selected]\n    - option \"C11\"\n  - button \"编译运行\":\n    - text: 编译运行\n  - button \"编译调试\":\n    - text: 编译调试\n  - group \"调试控制\":\n    - button \"继续\" [disabled]:\n      - text: 继续\n    - button \"进入\" [disabled]:\n      - text: 进入\n    - button \"跳过\" [disabled]:\n      - text: 跳过\n    - button \"跳出\" [disabled]:\n      - text: 跳出\n    - button \"停止\" [disabled]:\n      - text: 停止\n  - status: 已结束\n  - generic: F5 开始 / 继续 · F10 跳过 · F11 进入\n- generic \"键盘快捷键 无 F 键也能调试\" [active]\n- generic: 键盘方案\n- combobox \"键盘方案\":\n  - option \"无 F 键：Control＋数字行\"\n  - option \"仅标准 F 键\" [selected]\n- status: 已记住此浏览器的选择。\n- table \"VS2022 常用调试操作对照\":\n  - caption: VS2022 常用调试操作对照\n  - rowgroup:\n    - row \"操作 标准 F 键 无 F 键方案\":\n      - columnheader \"操作\"\n      - columnheader \"标准 F 键\"\n      - columnheader \"无 F 键方案\"\n  - rowgroup:\n    - row \"开始 / 继续 F5 Ctrl+5\":\n      - rowheader \"开始 / 继续\"\n      - cell \"F5\"\n      - cell \"Ctrl+5\"\n    - row \"编译运行 Ctrl+F5 Ctrl+6\":\n      - rowheader \"编译运行\"\n      - cell \"Ctrl+F5\"\n      - cell \"Ctrl+6\"\n    - row \"停止 / 取消编译 Shift+F5 Ctrl+Shift+5\":\n      - rowheader \"停止 / 取消编译\"\n      - cell \"Shift+F5\"\n      - cell \"Ctrl+Shift+5\"\n    - row \"当前行断点 F9 Ctrl+9\":\n      - rowheader \"当前行断点\"\n      - cell \"F9\"\n      - cell \"Ctrl+9\"\n    - row \"单步跳过 F10 Ctrl+0\":\n      - rowheader \"单步跳过\"\n      - cell \"F10\"\n      - cell \"Ctrl+0\"\n    - row \"单步进入 F11 Ctrl+-\":\n      - rowheader \"单步进入\"\n      - cell \"F11\"\n      - cell \"Ctrl+-\"\n    - row \"单步跳出 Shift+F11 Ctrl+Shift+-\":\n      - rowheader \"单步跳出\"\n      - cell \"Shift+F11\"\n      - cell \"Ctrl+Shift+-\"\n- paragraph: Ctrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n- paragraph:\n  - text: 仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。\n  - link \"中文速查与实机检查\":\n    - /url: ./SHORTCUTS.md\n- main:\n  - region \"源码编辑\":\n    - heading \"代码\" [level=2]\n    - button \"粘贴代码\":\n      - text: 粘贴代码\n    - button \"复制题站源码\":\n      - text: 复制题站源码\n    - button \"导入\":\n      - text: 导入\n    - combobox \"导出内容\":\n      - option \"仅题站源码\" [selected]\n      - option \"完整草稿\"\n    - button \"导出\":\n      - text: 导出\n    - button \"题站源码\" [pressed]\n    - button \"测试驱动\"\n    - button \"查看调试快照\"\n    - generic: main.cpp\n    - generic: 编辑中的草稿\n    - generic \"行号与断点\":\n      - button \"1\"\n      - button \"2\"\n      - button \"3\"\n      - button \"4\"\n      - button \"5\"\n      - button \"6\"\n      - button \"7\"\n      - button \"8\"\n      - button \"9\"\n      - button \"10\"\n      - button \"11\"\n      - button \"12\"\n      - button \"13\"\n      - button \"14\"\n      - button \"15\"\n      - button \"16\"\n      - button \"17\"\n      - button \"18\"\n      - button \"19\"\n      - button \"20\"\n      - button \"21\"\n    - generic: \"#include <cstdio> #include <string> template<class T> struct FieldBox { template<class U> int v047Inspect(U) const { return 29; } template<class U> void v047Mutate(U) {} template<class U> static int v047Relay(U value) { return value; } }; int pkgOrdinary() { return 3; } __attribute__((deprecated(\\\"v047-deprecated\\\"))) int pkgDeprecated() { return 4; } __attribute__((unavailable(\\\"v047-unavailable\\\"))) int pkgBlocked() { return 9; } int pkgChoice(double) { return 5; } int pkgChoice(int) = delete; int main() { const std::string frozen = \\\"cold\\\"; const FieldBox<int> box{}; int stable = box.v047Inspect(0); int outcome = stable + pkgOrdinary() + pkgDeprecated() + pkgChoice(1.0); std::printf(\\\"person05-v047=%d\\\\n\\\", outcome); return outcome; }\"\n    - textbox \"源代码\": \"#include <cstdio> #include <string> template<class T> struct FieldBox { template<class U> int v047Inspect(U) const { return 29; } template<class U> void v047Mutate(U) {} template<class U> static int v047Relay(U value) { return value; } }; int pkgOrdinary() { return 3; } __attribute__((deprecated(\\\"v047-deprecated\\\"))) int pkgDeprecated() { return 4; } __attribute__((unavailable(\\\"v047-unavailable\\\"))) int pkgBlocked() { return 9; } int pkgChoice(double) { return 5; } int pkgChoice(int) = delete; int main() { const std::string frozen = \\\"cold\\\"; const FieldBox<int> box{}; int stable = box.v047Inspect(0); int outcome = stable + pkgOrdinary() + pkgDeprecated() + pkgChoice(1.0); std::printf(\\\"person05-v047=%d\\\\n\\\", outcome); return outcome; }\"\n    - button \"在当前行切换断点\": 切换断点\n    - button \"代码提示\"\n    - button \"缩进\":\n      - text: 缩进\n    - button \"取消缩进\":\n      - text: 取消缩进\n    - searchbox \"查找源码\"\n    - button \"下一处\"\n    - status: 输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。\n    - status: 草稿已保存 · 版本 11\n    - generic \"断点与编译诊断\"\n  - complementary \"输入输出与调试面板\":\n    - heading \"样例输入 运行前一次性提供\" [level=2]:\n      - text: 样例输入\n      - generic: 运行前一次性提供\n    - textbox \"标准输入\":\n      - /placeholder: 在这里粘贴输入样例\n      - text: \"3\"\n    - heading \"程序输出 exit · 返回 41\" [level=2]:\n      - text: 程序输出\n      - generic: exit · 返回 41\n    - generic \"程序输出\": person05-v047=41\n    - heading \"调用栈\" [level=2]:\n      - text: 调用栈\n    - generic: 调试暂停后显示真实调用栈\n    - heading \"局部变量\" [level=2]:\n      - text: 局部变量\n    - generic: 调试暂停后读取变量\n    - heading \"基础监视\" [level=2]:\n      - text: 基础监视\n    - textbox \"监视表达式\":\n      - /placeholder: 如 values[0] 或 total\n    - button \"查看\" [disabled]\n    - paragraph: 支持范围以适配器为准；函数调用、赋值和自增不可用。\n    - generic: 选择暂停栈帧后查询",
+  "dom": {
+    "activeId": "",
+    "fields": [
+      {
+        "id": "source",
+        "readOnly": false,
+        "selectionEnd": 749,
+        "selectionStart": 749,
+        "value": "#include <cstdio>\n#include <string>\ntemplate<class T> struct FieldBox {\n template<class U> int v047Inspect(U) const { return 29; }\n template<class U> void v047Mutate(U) {}\n template<class U> static int v047Relay(U value) { return value; }\n};\nint pkgOrdinary() { return 3; }\n__attribute__((deprecated(\"v047-deprecated\"))) int pkgDeprecated() { return 4; }\n__attribute__((unavailable(\"v047-unavailable\"))) int pkgBlocked() { return 9; }\nint pkgChoice(double) { return 5; }\nint pkgChoice(int) = delete;\nint main() {\n const std::string frozen = \"cold\";\n const FieldBox<int> box{};\n int stable = box.v047Inspect(0);\n int outcome = stable + pkgOrdinary() + pkgDeprecated() + pkgChoice(1.0);\n std::printf(\"person05-v047=%d\\n\", outcome);\n return outcome;\n}\n"
+      },
+      {
+        "id": "stdin",
+        "readOnly": false,
+        "selectionEnd": 2,
+        "selectionStart": 2,
+        "value": "3\n"
+      },
+      {
+        "id": "clipboard-text",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      }
+    ],
+    "selects": [
+      {
+        "id": "language",
+        "value": "cpp"
+      },
+      {
+        "id": "shortcut-scheme",
+        "value": "standard"
+      },
+      {
+        "id": "export-mode",
+        "value": "user-source"
+      }
+    ],
+    "statuses": [
+      "本版本离线资源已校验 · iPad 真机待验证",
+      "已结束",
+      "已记住此浏览器的选择。",
+      "输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。",
+      "草稿已保存 · 版本 11"
+    ],
+    "text": "算法工作台\n开发验证原型\n\n粘贴代码，带着输入运行，在暂停处排错。\n\n校验本地资源\n本版本离线资源已校验 · iPad 真机待验证\niPad 离线冷启动待验证\nClang 8.0.1 / wasm32\n原型说明与验证步骤\nC++17\nC11\n编译运行\n编译调试\n继续\n进入\n跳过\n跳出\n停止\n已结束\nF5 开始 / 继续 · F10 跳过 · F11 进入\n键盘快捷键 无 F 键也能调试\n键盘方案\n无 F 键：Control＋数字行\n仅标准 F 键\n已记住此浏览器的选择。\nVS2022 常用调试操作对照\n操作\t标准 F 键\t无 F 键方案\n开始 / 继续\tF5\tCtrl+5\n编译运行\tCtrl+F5\tCtrl+6\n停止 / 取消编译\tShift+F5\tCtrl+Shift+5\n当前行断点\tF9\tCtrl+9\n单步跳过\tF10\tCtrl+0\n单步进入\tF11\tCtrl+-\n单步跳出\tShift+F11\tCtrl+Shift+-\n\nCtrl 是键盘左下角的 Control，减号是数字 0 右侧的键。无需 Fn，也不用 Command 或 Option。断点快捷键需要先点进源码；其他输入框、弹窗和中文组合输入期间不触发调试操作。\n\n仅按钮可用时执行相同操作。此工具的 F10 只在暂停时跳过；重启与运行至光标尚未提供。iPad / Safari 可能截获组合键，Fn 是否输出 F 键也需实机确认；没有响应时可使用按钮。中文速查与实机检查\n\n代码\n粘贴代码\n复制题站源码\n导入\n仅题站源码\n完整草稿\n导出\n题站源码\n测试驱动\n查看调试快照\nmain.cpp\n编辑中的草稿\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n#include <cstdio>\n#include <string>\ntemplate<class T> struct FieldBox {\n template<class U> int v047Inspect(U) const { return 29; }\n template<class U> void v047Mutate(U) {}\n template<class U> static int v047Relay(U value) { return value; }\n};\nint pkgOrdinary() { return 3; }\n__attribute__((deprecated(\"v047-deprecated\"))) int pkgDeprecated() { return 4; }\n__attribute__((unavailable(\"v047-unavailable\"))) int pkgBlocked() { return 9; }\nint pkgChoice(double) { return 5; }\nint pkgChoice(int) = delete;\nint main() {\n const std::string frozen = \"cold\";\n const FieldBox<int> box{};\n int stable = box.v047Inspect(0);\n int outcome = stable + pkgOrdinary() + pkgDeprecated() + pkgChoice(1.0);\n std::printf(\"person05-v047=%d\\n\", outcome);\n return outcome;\n}\n\n\n切换断点\n代码提示\n缩进\n取消缩进\n下一处\n\n输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。\n\n草稿已保存 · 版本 11\n断点与编译诊断\n样例输入\n运行前一次性提供\n程序输出\nexit · 返回 41\nperson05-v047=41\n\n调用栈\n调试暂停后显示真实调用栈\n局部变量\n调试暂停后读取变量\n基础监视\n查看\n\n支持范围以适配器为准；函数调用、赋值和自增不可用。\n\n选择暂停栈帧后查询"
+  }
+}

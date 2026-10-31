@@ -1,0 +1,15 @@
+{
+  "id": "old-ui-150",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/seal-integrated-round.mjs",
+    "integrated-person05-completion-ui-b14aeba-2026-10-30",
+    "--verify",
+    "--git"
+  ],
+  "startedAt": "2026-10-31T07:25:51.176Z",
+  "endedAt": "2026-10-31T07:25:52.685Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

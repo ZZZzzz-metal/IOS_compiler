@@ -1,0 +1,8 @@
+{
+  "source": "Unmodified exec_command result for corrected read-only audit; no browser/product rerun",
+  "chunk_id": "5314a2",
+  "wall_time_seconds": 0.9102337,
+  "exit_code": 0,
+  "original_token_count": 78,
+  "output": "{\n  \"passed\": true,\n  \"mode\": \"final-record-audit\",\n  \"checkCount\": 22,\n  \"browserObservationCount\": 43,\n  \"output\": \"C:\\\\Users\\\\20964\\\\Documents\\\\ChatGPT\\\\C++算法编译器\\\\ipad-debugger-05\\\\tests\\\\evidence\\\\integrated-person05-completion-package-v047-912a23b-2026-10-31\\\\browser-verification-run02.json\"\n}\n"
+}

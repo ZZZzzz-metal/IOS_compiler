@@ -1,0 +1,183 @@
+{
+  "requestId": "CC-20261030-05 PACKAGE-FINAL",
+  "target": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "passed": true,
+  "startedAt": "2026-10-31T07:25:31.540Z",
+  "endedAt": "2026-10-31T07:25:59.671Z",
+  "commands": [
+    {
+      "id": "mandatory-check",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "startedAt": "2026-10-31T07:25:31.542Z",
+      "endedAt": "2026-10-31T07:25:33.667Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "mandatory-test",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "startedAt": "2026-10-31T07:25:33.673Z",
+      "endedAt": "2026-10-31T07:25:34.692Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "ui-storage",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run test:ui"
+      ],
+      "startedAt": "2026-10-31T07:25:34.696Z",
+      "endedAt": "2026-10-31T07:25:39.500Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "offline-controlled",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run test:offline"
+      ],
+      "startedAt": "2026-10-31T07:25:39.505Z",
+      "endedAt": "2026-10-31T07:25:40.889Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "ui-original-three-negatives",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-completion-package-v047-912a23b-2026-10-31\\automatic\\controlled-negative-runner.mjs"
+      ],
+      "startedAt": "2026-10-31T07:25:40.898Z",
+      "endedAt": "2026-10-31T07:25:43.002Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "old-repair-831",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-fix-0f289cf-2026-10-31",
+        "--verify",
+        "--git"
+      ],
+      "startedAt": "2026-10-31T07:25:43.008Z",
+      "endedAt": "2026-10-31T07:25:50.148Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "old-preparation-84",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-fix-preparation-2026-10-30",
+        "--verify",
+        "--git"
+      ],
+      "startedAt": "2026-10-31T07:25:50.153Z",
+      "endedAt": "2026-10-31T07:25:51.173Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "old-ui-150",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-ui-b14aeba-2026-10-30",
+        "--verify",
+        "--git"
+      ],
+      "startedAt": "2026-10-31T07:25:51.176Z",
+      "endedAt": "2026-10-31T07:25:52.685Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "old-original-failure-452",
+      "executable": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "tests/seal-integrated-round.mjs",
+        "integrated-person05-completion-runtime-bddae576-2026-10-30",
+        "--verify",
+        "--git"
+      ],
+      "startedAt": "2026-10-31T07:25:52.689Z",
+      "endedAt": "2026-10-31T07:25:56.684Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    }
+  ],
+  "controlledNegative": {
+    "scenarios": 3,
+    "assertions": 12,
+    "passed": 3,
+    "providerCalls": 0
+  },
+  "oldSeals": [
+    {
+      "id": "old-repair-831",
+      "round": "integrated-person05-completion-fix-0f289cf-2026-10-31",
+      "files": 831
+    },
+    {
+      "id": "old-preparation-84",
+      "round": "integrated-person05-completion-fix-preparation-2026-10-30",
+      "files": 84
+    },
+    {
+      "id": "old-ui-150",
+      "round": "integrated-person05-completion-ui-b14aeba-2026-10-30",
+      "files": 150
+    },
+    {
+      "id": "old-original-failure-452",
+      "round": "integrated-person05-completion-runtime-bddae576-2026-10-30",
+      "files": 452
+    }
+  ],
+  "unchangedUiStorageInputCount": 11,
+  "actualBrowserObservations": 0,
+  "physicalIpadTested": false,
+  "scope": "Contract, existing UI/storage suite including real compile/debug integration checks, controlled-consumer/offline-Worker checks and old sealed-byte verification. No package/browser/iPad acceptance.",
+  "metadataCorrection": {
+    "supersedesMetadataOnly": "summary.json",
+    "originalRawCommandsAndOutputsUnchanged": true,
+    "reason": "Existing UI/storage suite includes real-pipeline.test.mjs and stale-breakpoints-real.test.mjs with real compilation/debugging; its compiler-call total was not instrumented. The original three controlled negatives alone have providerCalls=0. No repair 88-query/27-call/lifecycle/main suite was repeated."
+  },
+  "standaloneRepairProviderQueries": 0,
+  "standaloneRepairCompilerCalls": 0,
+  "uiSuiteExistingRealCompileDebugIntegrationIncluded": true,
+  "uiSuiteCompilerCallCount": null,
+  "finalRunnerSHA256": "8cf38788da4410303add71136e31b5529a2d106bced75f396bd402ab82c6b49a"
+}

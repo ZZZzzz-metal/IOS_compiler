@@ -1,0 +1,32 @@
+{
+  "originalPath": "tests/completion-ui-negative-independent.mjs",
+  "originalTarget": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "target": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "sourceSHA256": "1633a9b524f83b42699e7208490a0bc0d0c397cb219088e8d99d85d1aae3ccbc",
+  "adaptedSHA256": "4e44bd33c3bfa2bd5f25f1041bc37753a23f3a8873f15d5a6ebedda31a5623b2",
+  "substitutions": [
+    {
+      "from": "const root=fileURLToPath(new URL('../',import.meta.url));",
+      "to": "const root=\"C:\\\\Users\\\\20964\\\\Documents\\\\ChatGPT\\\\C++算法编译器\\\\ipad-debugger-05\\\\\";"
+    },
+    {
+      "from": "const target='b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34';",
+      "to": "const target='912a23bf14cd6e48a0adb7ec119f4ce86bc58f93';"
+    },
+    {
+      "from": "const output=resolve(root,'tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30/controlled-negative');",
+      "to": "const output=\"C:\\\\Users\\\\20964\\\\Documents\\\\ChatGPT\\\\C++算法编译器\\\\ipad-debugger-05\\\\tests\\\\evidence\\\\integrated-person05-completion-package-v047-912a23b-2026-10-31\\\\automatic\\\\negative\\\\\";"
+    },
+    {
+      "from": "from '../ui/src/completion-controller.mjs'",
+      "to": "from \"file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/ui/src/completion-controller.mjs\""
+    }
+  ],
+  "unchanged": [
+    "Original 3 fixtures and expectations",
+    "Four assertions per fixture",
+    "300ms controller delay and 450ms observation",
+    "Provider never invoked",
+    "No browser/Worker/iPad claim"
+  ]
+}
