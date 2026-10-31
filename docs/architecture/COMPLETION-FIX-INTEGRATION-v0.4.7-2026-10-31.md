@@ -40,3 +40,18 @@ const-string及extra的源码、offset、sourceHash与原oracle不变，本轮�
 4号DOC-DONE b33b52e8616fef0171f49ab2f22f7c5cbb8306d9只改ui/COMPLETION.md，根已合入，UI运行字节不变。版本/手册与能力说明更新到0.4.7，能力状态继续implemented-unverified；手册补去过时的监视待验状态，明确iPad仍须实测。完整包纳入新语义模块、配方和逻辑补丁，在线与离线.patch均作为文本阅读。
 
 下一步生成全新的0.4.7不可变包，单独做停服冷开、全新代码补全/撤销/编译调试/草稿恢复。最终新包未验前PR #4保持草稿，真机继续暂缓。旧v0.4.6标签、包、缓存、失败及LIMITED-DESKTOP ACCEPT仅作历史保留；main仍由用户手动合并。
+
+## 新0.4.7包已生成，实际浏览器另验
+
+固定包源码912a23bf14cd6e48a0adb7ec119f4ce86bc58f93；bundle为ipad-web-probe-4b6a8377cadd31e675701549，65资源60,976,781字节，后端36资源身份不变。SW SHA为6900d0dd90e0ef6cdff3d891316251cc3e2c70924d3d26c870e8bc51e3271ac5，descriptor SHA为e9791ceb17df941d32f31e4dfc7216c75b5aba877f4492a404a8bb4e38c2870d。
+
+| 归档 | 字节 / 成员 | SHA-256 |
+|---|---|---|
+| ipad-offline-debugger-v0.4.7.zip | 19,337,572 / 74 | 6cc808248baaca8e1107de49d71458fd2140f8c83cd3bbb8810598351abc330d |
+| ipad-first-setup-v0.4.7.zip | 18,056 / 6 | 0958fef87a5871c8c9a4edfc23f10a9b929888f2898da370dfbfdd981351d18f |
+
+归档工具实际生成后又以verify-existing只读核验。65资源全部长度/hash及控制面通过；58份固定Git原字节、4份锁定大型资源、3份生成内容，手册在两ZIP/运行包/固定Git原字节完全一致。并行只读审阅额外核对51条静态相对导入封闭、三个Worker、独立canonical后端manifest重算及单根证书配置。16份旧ZIP逐项保持不变；原Zip、标签和缓存未覆盖。研究证据链接仍属Git材料，不随运行包附带。
+
+根mandatory check/test及离线23通过；在实际Wi-Fi接口以显式CA和正常主机名检查逐项取得65份HTTPS资源并核hash，入口/SW/descriptor/补丁媒体类型及私钥路径404通过，未改系统证书信任或防火墙。最初沙盒EACCES、获准直接检查发现旧进程已停ECONNREFUSED，均不冒称产品失败或成功；新建本项目静态服务后实际通过。证书当前有效，但真机开始时重新核对地址和有效期。
+
+已向5号发送固定包PACKAGE-FINAL并得到明确ACK；其使用独立localhost服务验停服冷开、新源码两项修复可见行为、确认/原生撤销、编译调试值及草稿/方案恢复。当前未收到PACKAGE-DONE，不提前写成通过。根字节与HTTPS证据在app/offline/evidence/completion-fix-package-2026-10-31；平板操作见[0.4.7准备单](IPAD-UPDATE-v0.4.7.md)和[完整手册](IPAD-USER-MANUAL.md)。

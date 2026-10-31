@@ -231,6 +231,10 @@
     {
       "date": "2026-10-31",
       "event": "Owner05 fixed semantics DONE2978d950 merged e00566b;831 sealed files/Git bytes verified by root. Original44 logical/88 real dual responses and27 full-call controls passed without original-oracle changes. Owner04 documentation-only b33b52e8 merged cfe85ff. New0.4.7 full package and actual stopped-server workflow remain pending; PR4 stays draft."
+    },
+    {
+      "date": "2026-10-31",
+      "event": "New fixed0.4.7 bundle4b6a8377/65resources60976781B and74/6-member ZIPs created and fully byte verified;16 old archives unchanged. Root strict CA/hostname HTTPS verified all65 resources. Owner05 explicitly ACKed final fixed912a23bf package for isolated stopped-server browser workflow. PR4 remains draft; iPad/G2/G3 pending."
     }
   ],
   "api": {
@@ -299,8 +303,17 @@
     ],
     "successfulDone": false,
     "accepted": false,
-    "stage": "new-full-package-preparation",
+    "stage": "independent-full-package-verification",
     "owner02Done": true,
-    "owner05SemanticsDone": true
+    "owner05SemanticsDone": true,
+    "package": {
+      "sourceBaseRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+      "bundleId": "ipad-web-probe-4b6a8377cadd31e675701549",
+      "resourceCount": 65,
+      "totalBytes": 60976781,
+      "rootByteAndHTTPSChecks": "passed",
+      "owner05": "ACK PACKAGE-FINAL; actual desktop verification in progress",
+      "deviceValidation": "pending"
+    }
   }
 }

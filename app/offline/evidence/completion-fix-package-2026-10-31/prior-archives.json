@@ -1,0 +1,82 @@
+[
+  {
+    "file": "ipad-first-setup-v0.4.1.zip",
+    "byteLength": 16738,
+    "sha256": "87875f8a73f1bd856b8cef6606b1e8af645dd5ee1332358f413f725817b72c79"
+  },
+  {
+    "file": "ipad-first-setup-v0.4.2.zip",
+    "byteLength": 17886,
+    "sha256": "f65df163e1ffc532b12dc8da11343f6578c66115a39b2949ab916c39b5f05977"
+  },
+  {
+    "file": "ipad-first-setup-v0.4.3.zip",
+    "byteLength": 18098,
+    "sha256": "af2aafab13ca94cc4c9b8ec2462dd2dc74530d7bd1c22ef3830de093dc575d81"
+  },
+  {
+    "file": "ipad-first-setup-v0.4.4.zip",
+    "byteLength": 18611,
+    "sha256": "41db45be8507c700302fc5ebf5bf33d6d5c97594ff87b88e812360ae81cd5709"
+  },
+  {
+    "file": "ipad-first-setup-v0.4.5-r2.zip",
+    "byteLength": 19203,
+    "sha256": "087ac3f26a1ca7f190133150c792a1133c43fee0f54683def824c3b87baadc7a"
+  },
+  {
+    "file": "ipad-first-setup-v0.4.5-r3.zip",
+    "byteLength": 19139,
+    "sha256": "3d9b89e7aa7332df00d47e090a644433458d31f87089daa6494b1f732eebec3e"
+  },
+  {
+    "file": "ipad-first-setup-v0.4.5.zip",
+    "byteLength": 18522,
+    "sha256": "a29cc8fd8915e284f9c77a681f36b7504526aba7e952ea61a678898568d7ad4f"
+  },
+  {
+    "file": "ipad-first-setup-v0.4.6.zip",
+    "byteLength": 18118,
+    "sha256": "939742a873f1e8c65dfcbf0d2cfc4f8097cf8d54666851be35bd883103afb3ce"
+  },
+  {
+    "file": "ipad-offline-debugger-v0.4.1.zip",
+    "byteLength": 19273324,
+    "sha256": "fb82747c9845798d56fcae0e787e03fda4bf39c66204f397ca2f509ea786c83f"
+  },
+  {
+    "file": "ipad-offline-debugger-v0.4.2.zip",
+    "byteLength": 19275366,
+    "sha256": "4155d304c59849c1cfd01aa7c3cbcd4a04a427f1bb883123d909bfed32499ede"
+  },
+  {
+    "file": "ipad-offline-debugger-v0.4.3.zip",
+    "byteLength": 19281996,
+    "sha256": "05f549212f3b84734c9b753312e96469f3d1703ca691a304940acd03a6c3a49e"
+  },
+  {
+    "file": "ipad-offline-debugger-v0.4.4.zip",
+    "byteLength": 19283669,
+    "sha256": "124e04793eeb01cc424c320b289bf5d1cbdc81d6710702966f4eabc6762de5de"
+  },
+  {
+    "file": "ipad-offline-debugger-v0.4.5-r2.zip",
+    "byteLength": 19293360,
+    "sha256": "06a8019c3233ab05ef0af45ea959d77dd2e1dc7e70be7cfd81eeab22940cf2d4"
+  },
+  {
+    "file": "ipad-offline-debugger-v0.4.5-r3.zip",
+    "byteLength": 19294031,
+    "sha256": "f1877f4e031f5a46bdafab71ea5ae611a8dd74c58c7256c9ed367e92cb00c068"
+  },
+  {
+    "file": "ipad-offline-debugger-v0.4.5.zip",
+    "byteLength": 19292110,
+    "sha256": "aebdbd56183939742dff98e0b869eed42fadf70c4c94ae49456b92b3343a3692"
+  },
+  {
+    "file": "ipad-offline-debugger-v0.4.6.zip",
+    "byteLength": 19330126,
+    "sha256": "7cb501a11ebde61b26d019a711aa822d3fc03b5e3d22be759a05860502fa78e5"
+  }
+]

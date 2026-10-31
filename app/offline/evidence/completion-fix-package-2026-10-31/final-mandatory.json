@@ -1,0 +1,27 @@
+[
+  {
+    "name": "final-mandatory-check",
+    "command": [
+      "npm.cmd",
+      "run",
+      "check"
+    ],
+    "startedAt": "2026-10-31T07:26:03.547471+00:00",
+    "endedAt": "2026-10-31T07:26:06.601344+00:00",
+    "exitCode": 0,
+    "stdoutSha256": "256671f5c365c4e211aa054f407bd9a6991e0c431156e8cb049cf3bb9083d1cc",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "final-mandatory-test",
+    "command": [
+      "npm.cmd",
+      "test"
+    ],
+    "startedAt": "2026-10-31T07:26:06.602348+00:00",
+    "endedAt": "2026-10-31T07:26:07.667840+00:00",
+    "exitCode": 0,
+    "stdoutSha256": "643b3281ea0327e3074745ba539ffb2cee9d1f72a7116f107d7f7bd12f0a8651",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

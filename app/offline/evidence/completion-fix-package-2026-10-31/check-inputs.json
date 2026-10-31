@@ -1,0 +1,37 @@
+[
+  {
+    "path": "app/offline/build.mjs",
+    "byteLength": 9500,
+    "sha256": "743ad1644a8623767344efc5ece68b0fd283e2bb1425a7f2d3d8f6dc56670058"
+  },
+  {
+    "path": "app/offline/serve.mjs",
+    "byteLength": 2749,
+    "sha256": "f0379e353a60a1d6cc78f332f286552b15eded80b70d034ed897a2e336c22852"
+  },
+  {
+    "path": "contracts/capabilities.json",
+    "byteLength": 22382,
+    "sha256": "db97595427d33ba715394062b24fd02f4625932f006a87bdd4ae5489dc31e281"
+  },
+  {
+    "path": "docs/architecture/IPAD-USER-MANUAL.md",
+    "byteLength": 30285,
+    "sha256": "a429e4e4caec15cd3033ca529bc3ee363aca7e73fb06f3a7d2e7822400b9f722"
+  },
+  {
+    "path": "package.json",
+    "byteLength": 1905,
+    "sha256": "3a6402169478268e574eaf6d4842f2fcc55986aae563a36c08aca0991d584467"
+  },
+  {
+    "path": "package-lock.json",
+    "byteLength": 271,
+    "sha256": "8a94f430b29886bdbf29d007711e0b7d9476acaf7b16de44a53784e3f7e60079"
+  },
+  {
+    "path": "ui/COMPLETION.md",
+    "byteLength": 3310,
+    "sha256": "8a6c07f0a43acb550e078dd786d100a28c6736bd31ad765f1b4e1a1f3799e99b"
+  }
+]
