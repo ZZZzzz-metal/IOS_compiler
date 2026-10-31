@@ -1,0 +1,33 @@
+{
+  "source": "struct __attribute__((unavailable(\"blocked\"))) Base {int personChild();}; struct Child:Base{}; void f(){Child c;c.personChild;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-ast-dump",
+    "/project/main.cpp"
+  ],
+  "exitCode": 1,
+  "stdout": "TranslationUnitDecl 0x652d00 <<invalid sloc>> <invalid sloc>\n|-TypedefDecl 0x6531b8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'\n| `-BuiltinType 0x652fe0 '__int128'\n|-TypedefDecl 0x653200 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'\n| `-BuiltinType 0x652ff0 'unsigned __int128'\n|-TypedefDecl 0x653438 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'\n| `-RecordType 0x653290 '__NSConstantString_tag'\n|   `-CXXRecord 0x653230 '__NSConstantString_tag'\n|-TypedefDecl 0x653480 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'void *'\n| `-PointerType 0x653160 'void *'\n|   `-BuiltinType 0x652d40 'void'\n|-CXXRecordDecl 0x653528 </project/main.cpp:1:1, col:72> col:48 referenced struct Base definition\n| |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init\n| | |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr\n| | |-CopyConstructor simple trivial has_const_param implicit_has_const_param\n| | |-MoveConstructor exists simple trivial\n| | |-CopyAssignment trivial has_const_param needs_implicit implicit_has_const_param\n| | |-MoveAssignment exists simple trivial needs_implicit\n| | `-Destructor simple irrelevant trivial\n| |-UnavailableAttr 0x6535e8 <col:23, col:44> \"blocked\" IR_None\n| |-CXXRecordDecl 0x653628 <col:1, col:48> col:48 implicit struct Base\n| |-CXXMethodDecl 0x6536e0 <col:54, col:70> col:58 used personChild 'int ()'\n| |-CXXConstructorDecl 0x653ab0 <col:48> col:48 implicit used constexpr Base 'void () noexcept' inline default trivial\n| | `-CompoundStmt 0x6af278 <col:48>\n| |-CXXDestructorDecl 0x653b50 <col:48> col:48 implicit ~Base 'void ()' inline default trivial noexcept-unevaluated 0x653b50\n| |-CXXConstructorDecl 0x653c28 <col:48> col:48 implicit constexpr Base 'void (const Base &)' inline default trivial noexcept-unevaluated 0x653c28\n| | `-ParmVarDecl 0x6aef00 <col:48> col:48 'const Base &'\n| `-CXXConstructorDecl 0x6aef58 <col:48> col:48 implicit constexpr Base 'void (Base &&)' inline default trivial noexcept-unevaluated 0x6aef58\n|   `-ParmVarDecl 0x6af010 <col:48> col:48 'Base &&'\n|-CXXRecordDecl 0x653760 <col:75, col:93> col:82 referenced struct Child definition\n| |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable trivial literal has_constexpr_non_copy_move_ctor can_const_default_init\n| | |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr\n| | |-CopyConstructor simple trivial has_const_param implicit_has_const_param\n| | |-MoveConstructor exists simple trivial\n| | |-CopyAssignment trivial has_const_param needs_implicit implicit_has_const_param\n| | |-MoveAssignment exists simple trivial needs_implicit\n| | `-Destructor simple irrelevant trivial needs_implicit\n| |-public 'Base'\n| |-CXXRecordDecl 0x653868 <col:75, col:82> col:82 implicit struct Child\n| |-CXXConstructorDecl 0x653a00 <col:82> col:82 implicit used constexpr Child 'void () noexcept' inline default trivial\n| | |-CXXCtorInitializer 'Base'\n| | | `-CXXConstructExpr 0x6af284 <col:82> 'Base' 'void () noexcept'\n| | `-CompoundStmt 0x6af2d0 <col:82>\n| |-CXXConstructorDecl 0x6af050 <col:82> col:82 implicit constexpr Child 'void (const Child &)' inline default trivial noexcept-unevaluated 0x6af050\n| | `-ParmVarDecl 0x6af110 <col:82> col:82 'const Child &'\n| `-CXXConstructorDecl 0x6af168 <col:82> col:82 implicit constexpr Child 'void (Child &&)' inline default trivial noexcept-unevaluated 0x6af168\n|   `-ParmVarDecl 0x6af220 <col:82> col:82 'Child &&'\n`-FunctionDecl 0x653908 <col:96, col:127> col:101 f 'void ()'\n  `-CompoundStmt 0x6af38c <col:104, col:127>\n    |-DeclStmt 0x6af2f8 <col:105, col:112>\n    | `-VarDecl 0x6539b8 <col:105, col:111> col:111 used c 'Child' callinit\n    |   `-CXXConstructExpr 0x6af2dc <col:111> 'Child' 'void () noexcept'\n    `-CXXMemberCallExpr 0x6af374 <col:113, col:116> 'int'\n      `-MemberExpr 0x6af328 <col:113, col:115> '<bound member function type>' .personChild 0x6536e0\n        `-ImplicitCastExpr 0x6af360 <col:113> 'Base' lvalue <UncheckedDerivedToBase (Base)>\n          `-DeclRefExpr 0x6af310 <col:113> 'Child' lvalue Var 0x6539b8 'c' 'Child'\n",
+  "stderr": "/project/main.cpp:1:88: error: 'Base' is unavailable: blocked\nstruct __attribute__((unavailable(\"blocked\"))) Base {int personChild();}; struct Child:Base{}; void f(){Child c;c.personChild;}\n                                                                                       ^\n/project/main.cpp:1:48: note: 'Base' has been explicitly marked unavailable here\nstruct __attribute__((unavailable(\"blocked\"))) Base {int personChild();}; struct Child:Base{}; void f(){Child c;c.personChild;}\n                                               ^\n/project/main.cpp:1:115: error: reference to non-static member function must be called; did you mean to call it with no arguments?\nstruct __attribute__((unavailable(\"blocked\"))) Base {int personChild();}; struct Child:Base{}; void f(){Child c;c.personChild;}\n                                                                                                                ~~^~~~~~~~~~~\n                                                                                                                             ()\n2 errors generated.\n",
+  "memoryBytes": 7208960
+}

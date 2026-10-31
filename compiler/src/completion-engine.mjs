@@ -3,6 +3,7 @@ import { ToolFileSystem } from './wasm-host.mjs';
 import { parseClangDiagnostics } from './diagnostics.mjs';
 import { validateCompletionRequest, completionPosition, completionContext, emptyCompletion } from './completion-source.mjs';
 import { parseCompletionOutput } from './completion-output.mjs';
+import { completionResourceIdentity, deriveCompletionCompiler } from './completion-semantics.mjs';
 
 const encoder = new TextEncoder();
 export const COMPLETION_RESOURCES = Object.freeze(['memfs', 'sysroot.tar', 'clang']);
@@ -14,6 +15,7 @@ export function validateCompletionLock(lock) {
     if (matches.length !== 1 || !/^[a-f0-9]{64}$/u.test(matches[0].sha256) ||
         !Number.isSafeInteger(matches[0].byteLength) || matches[0].byteLength < 1) throw new Error(`Invalid completion resource lock: ${name}`);
   }
+  completionResourceIdentity(lock);
 }
 
 // Cache these verified Modules, never an already-executed Clang instance. LLD is
@@ -28,9 +30,11 @@ export async function loadCompletionToolchain(lock, readResource, onProgress = (
     bytes[name] = value;
     onProgress({ phase: 'completion-resource', name });
   }
+  const identity = completionResourceIdentity(lock);
+  bytes.clang = await deriveCompletionCompiler(bytes.clang);
   const modules = {};
   for (const name of ['memfs', 'clang']) modules[name] = await WebAssembly.compile(bytes[name]);
-  return { lock, modules, sysroot: bytes['sysroot.tar'], loadMs: performance.now() - started };
+  return { lock, identity, modules, sysroot: bytes['sysroot.tar'], loadMs: performance.now() - started };
 }
 
 // Must run inside a terminable Worker. Clang execution is synchronous Wasm.
@@ -57,9 +61,7 @@ export async function completeWithClang(request, toolchain) {
   // nonzero exit, report failure instead of pretending native lookup succeeded.
   const succeeded = native.exitCode === 0 || parsed.items.length > 0;
   const result = { ...emptyCompletion(request, succeeded ? 'succeeded' : 'failed', succeeded ? undefined : 'clang-completion-exit', diagnostics),
-    ...(succeeded ? parsed : {}), toolchainId: toolchain.lock.toolchainId,
-    compilerResourceHash: `sha256:${toolchain.lock.files.find(file => file.filename === 'clang').sha256}`,
-    sysrootResourceHash: `sha256:${toolchain.lock.files.find(file => file.filename === 'sysroot.tar').sha256}` };
+    ...(succeeded ? parsed : {}), ...toolchain.identity };
   return { result, native: { argv, ...native, position }, metrics: { totalMs: performance.now() - started,
     filesystemLinearMemoryBytes: fs.exports.memory.buffer.byteLength, compilerLinearMemoryBytes: native.memoryBytes } };
 }

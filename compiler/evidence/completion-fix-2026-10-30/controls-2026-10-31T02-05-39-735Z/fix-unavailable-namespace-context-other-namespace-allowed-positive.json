@@ -1,0 +1,313 @@
+{
+  "input": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "fb08f18f-6efc-47f6-ad38-62bd50050cb2",
+    "mode": "debug",
+    "optimization": "O0",
+    "snapshot": {
+      "snapshotId": "d711271e-f1ca-4b78-a8d3-16d75f05f0b7",
+      "sourceHash": "sha256:593156c6fe7f8e88a964c6c508fd3aa2d0d62502654f6e8ba2a43c01761fc357",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "namespace AreaA_9c3158ded821871b {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_9c3158ded821871b_read() { return 0; }\n}\nnamespace AreaB_9c3158ded821871b {\nint cross_9c3158ded821871b_read() { return 0; }\n}\n\nint main() {\n  return AreaB_9c3158ded821871b::cross_9c3158ded821871b_read();\n}\n",
+          "contentHash": "sha256:6570ff4def256c8ec6fdc0112d8bb8bcf0d3deda60f0354e8a7e1760cd40e2d3"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "status": "compiled",
+    "smokeExitCode": 0
+  },
+  "actual": {
+    "status": "compiled",
+    "requestId": "fb08f18f-6efc-47f6-ad38-62bd50050cb2",
+    "sourceHash": "sha256:593156c6fe7f8e88a964c6c508fd3aa2d0d62502654f6e8ba2a43c01761fc357",
+    "snapshotId": "d711271e-f1ca-4b78-a8d3-16d75f05f0b7",
+    "artifactId": "wasm-b17b29db131d69d0b4225fe787284bfc29389a6252fb7186c3e345bc390c4ee9",
+    "target": {
+      "targetTriple": "wasm32-unknown-wasi",
+      "abi": "wasi_unstable",
+      "addressBits": 32,
+      "endianness": "little",
+      "artifactFormat": "wasm-v1",
+      "debugInfoFormat": "dwarf-4-embedded",
+      "requiredFeatures": [
+        "mvp",
+        "mutable-globals"
+      ]
+    },
+    "language": {
+      "language": "cpp",
+      "standard": "c++17"
+    },
+    "mode": "debug",
+    "compilerArguments": [
+      "-cc1",
+      "-emit-obj",
+      "-triple",
+      "wasm32-unknown-wasi",
+      "-main-file-name",
+      "main.cpp",
+      "-disable-free",
+      "-isysroot",
+      "/",
+      "-internal-isystem",
+      "/include/c++/v1",
+      "-internal-isystem",
+      "/lib/clang/8.0.1/include",
+      "-internal-isystem",
+      "/include",
+      "-I",
+      "/project",
+      "-O0",
+      "-ferror-limit",
+      "20",
+      "-fmessage-length",
+      "0",
+      "-debug-info-kind=standalone",
+      "-dwarf-version=4",
+      "-debugger-tuning=lldb",
+      "-fdebug-compilation-dir",
+      "/project",
+      "-std=c++17",
+      "-x",
+      "c++",
+      "-o",
+      "build/main.o",
+      "/project/main.cpp"
+    ],
+    "linkerArguments": [
+      "--no-threads",
+      "--export-dynamic",
+      "-z",
+      "stack-size=1048576",
+      "--max-memory=268435456",
+      "-Llib/wasm32-wasi",
+      "lib/wasm32-wasi/crt1.o",
+      "build/main.o",
+      "-lc++",
+      "-lc++abi",
+      "-lc",
+      "-lm",
+      "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+      "-o",
+      "build/main.wasm"
+    ],
+    "sourceMappings": [],
+    "executableRef": {
+      "id": "wasm-b17b29db131d69d0b4225fe787284bfc29389a6252fb7186c3e345bc390c4ee9",
+      "relativePath": "compiler-builds/wasm-b17b29db131d69d0b4225fe787284bfc29389a6252fb7186c3e345bc390c4ee9/main.wasm",
+      "sha256": "sha256:b17b29db131d69d0b4225fe787284bfc29389a6252fb7186c3e345bc390c4ee9",
+      "byteLength": 14117,
+      "mediaType": "application/wasm",
+      "version": "binji-wasm-clang-648c4a89997a"
+    },
+    "diagnostics": [],
+    "rawDiagnostics": "",
+    "wasm": {
+      "format": "wasm-v1",
+      "sections": [
+        {
+          "id": 1,
+          "byteLength": 30,
+          "payloadOffset": 10
+        },
+        {
+          "id": 2,
+          "byteLength": 242,
+          "payloadOffset": 43
+        },
+        {
+          "id": 3,
+          "byteLength": 24,
+          "payloadOffset": 287
+        },
+        {
+          "id": 4,
+          "byteLength": 5,
+          "payloadOffset": 313
+        },
+        {
+          "id": 5,
+          "byteLength": 5,
+          "payloadOffset": 320
+        },
+        {
+          "id": 6,
+          "byteLength": 23,
+          "payloadOffset": 327
+        },
+        {
+          "id": 7,
+          "byteLength": 193,
+          "payloadOffset": 353
+        },
+        {
+          "id": 10,
+          "byteLength": 11832,
+          "payloadOffset": 549
+        },
+        {
+          "id": 11,
+          "byteLength": 516,
+          "payloadOffset": 12384
+        },
+        {
+          "id": 0,
+          "name": ".debug_info",
+          "byteLength": 135,
+          "payloadOffset": 12915,
+          "dwarfVersion": 4
+        },
+        {
+          "id": 0,
+          "name": ".debug_macinfo",
+          "byteLength": 16,
+          "payloadOffset": 13055
+        },
+        {
+          "id": 0,
+          "name": ".debug_ranges",
+          "byteLength": 46,
+          "payloadOffset": 13072
+        },
+        {
+          "id": 0,
+          "name": ".debug_abbrev",
+          "byteLength": 98,
+          "payloadOffset": 13120
+        },
+        {
+          "id": 0,
+          "name": ".debug_line",
+          "byteLength": 101,
+          "payloadOffset": 13218
+        },
+        {
+          "id": 0,
+          "name": ".debug_str",
+          "byteLength": 260,
+          "payloadOffset": 13321
+        },
+        {
+          "id": 0,
+          "name": "name",
+          "byteLength": 544,
+          "payloadOffset": 13578
+        }
+      ],
+      "dwarfSections": [
+        {
+          "id": 0,
+          "name": ".debug_info",
+          "byteLength": 135,
+          "payloadOffset": 12915,
+          "dwarfVersion": 4
+        },
+        {
+          "id": 0,
+          "name": ".debug_macinfo",
+          "byteLength": 16,
+          "payloadOffset": 13055
+        },
+        {
+          "id": 0,
+          "name": ".debug_ranges",
+          "byteLength": 46,
+          "payloadOffset": 13072
+        },
+        {
+          "id": 0,
+          "name": ".debug_abbrev",
+          "byteLength": 98,
+          "payloadOffset": 13120
+        },
+        {
+          "id": 0,
+          "name": ".debug_line",
+          "byteLength": 101,
+          "payloadOffset": 13218
+        },
+        {
+          "id": 0,
+          "name": ".debug_str",
+          "byteLength": 260,
+          "payloadOffset": 13321
+        }
+      ],
+      "imports": [
+        {
+          "module": "wasi_unstable",
+          "name": "fd_prestat_get",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "fd_prestat_dir_name",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "environ_sizes_get",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "environ_get",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "args_sizes_get",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "args_get",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "proc_exit",
+          "kind": "function"
+        },
+        {
+          "module": "wasi_unstable",
+          "name": "fd_fdstat_get",
+          "kind": "function"
+        }
+      ]
+    },
+    "metrics": {
+      "loadMs": 175.72140000000002,
+      "compileMs": 10.488399999999729,
+      "linkMs": 8.905900000000202,
+      "totalMs": 28.999500000000353,
+      "observedLinearMemoryBytes": {
+        "compilerAfterExecution": 7274496,
+        "linkerAfterExecution": 9371648,
+        "filesystem": 9437184
+      },
+      "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+    },
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+    "objectSha256": "sha256:b85064d78509b5027fbd772bf3098ec0e12d282f7810410d839f813328b6cc37",
+    "objectByteLength": 1349
+  },
+  "smoke": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "memoryBytes": 1179648
+  }
+}

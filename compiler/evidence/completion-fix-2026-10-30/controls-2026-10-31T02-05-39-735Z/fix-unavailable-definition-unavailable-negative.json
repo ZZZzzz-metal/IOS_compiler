@@ -1,0 +1,60 @@
+{
+  "input": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "611a4448-4ea6-4f5b-ac0b-993e8b8dbc69",
+    "mode": "debug",
+    "optimization": "O0",
+    "snapshot": {
+      "snapshotId": "b4638c00-5e09-4ec3-bf29-13e01e9146d0",
+      "sourceHash": "sha256:4a503db71946e779c5f6210d97cb4582c94bff2325111d54bc157a7ebf958bb7",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_definition_9c3158ded821871b_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_9c3158ded821871b_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_9c3158ded821871b_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_9c3158ded821871b_blocked();\n}\n",
+          "contentHash": "sha256:baf3905ece1793f2b7236f80f46f7f104bafb6677c36683703fd254df5f9cebf"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "person05-unavailable"
+  },
+  "actual": {
+    "status": "failed",
+    "requestId": "611a4448-4ea6-4f5b-ac0b-993e8b8dbc69",
+    "sourceHash": "sha256:4a503db71946e779c5f6210d97cb4582c94bff2325111d54bc157a7ebf958bb7",
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "call to unavailable function 'surface_definition_9c3158ded821871b_blocked': person05-unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 6,
+            "column": 10
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "candidate function has been explicitly made unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 58
+          }
+        }
+      }
+    ],
+    "reason": "compiler-exit",
+    "rawDiagnostics": "/project/main.cpp:6:10: error: call to unavailable function 'surface_definition_9c3158ded821871b_blocked': person05-unavailable\n  return surface_definition_9c3158ded821871b_blocked();\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/project/main.cpp:2:58: note: candidate function has been explicitly made unavailable\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_9c3158ded821871b_blocked() { return 0; }\n                                                         ^\n1 error generated.\n"
+  }
+}

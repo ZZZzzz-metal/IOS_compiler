@@ -1,0 +1,60 @@
+{
+  "input": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "9df513de-7bbd-480f-94ab-5ff518c4b918",
+    "mode": "debug",
+    "optimization": "O0",
+    "snapshot": {
+      "snapshotId": "eb4d488f-91ff-4cd8-b0a9-57131da23fd2",
+      "sourceHash": "sha256:d3b8645977bb039f77a9a93361df30eb5ed6b61d8f00cbe57aed35c8c224ab5b",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "namespace AreaA_9c3158ded821871b {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_9c3158ded821871b_read() { return 0; }\n}\nnamespace AreaB_9c3158ded821871b {\nint cross_9c3158ded821871b_read() { return 0; }\n}\n\nint main() {\n  return AreaA_9c3158ded821871b::cross_9c3158ded821871b_read();\n}\n",
+          "contentHash": "sha256:e822ad282eed920e409fe625ed940af85fff375589b60d64eadcacbdce0bf9eb"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "person05-unavailable"
+  },
+  "actual": {
+    "status": "failed",
+    "requestId": "9df513de-7bbd-480f-94ab-5ff518c4b918",
+    "sourceHash": "sha256:d3b8645977bb039f77a9a93361df30eb5ed6b61d8f00cbe57aed35c8c224ab5b",
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "'cross_9c3158ded821871b_read' is unavailable: person05-unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 9,
+            "column": 34
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "'cross_9c3158ded821871b_read' has been explicitly marked unavailable here",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 58
+          }
+        }
+      }
+    ],
+    "reason": "compiler-exit",
+    "rawDiagnostics": "/project/main.cpp:9:34: error: 'cross_9c3158ded821871b_read' is unavailable: person05-unavailable\n  return AreaA_9c3158ded821871b::cross_9c3158ded821871b_read();\n                                 ^\n/project/main.cpp:2:58: note: 'cross_9c3158ded821871b_read' has been explicitly marked unavailable here\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_9c3158ded821871b_read() { return 0; }\n                                                         ^\n1 error generated.\n"
+  }
+}

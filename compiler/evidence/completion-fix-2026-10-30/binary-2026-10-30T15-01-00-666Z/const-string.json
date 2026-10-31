@@ -1,0 +1,30 @@
+{
+  "source": "#include <string>\nvoid f(){const std::string s;s.ap;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:2:34",
+    "/project/main.cpp"
+  ],
+  "exitCode": 0,
+  "stdout": "COMPLETION: append : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]append(<#const _Tp &__t#>)\nCOMPLETION: append : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]append(<#const _Tp &__t#>, <#size_type __pos#>{#, <#size_type __n = npos#>#})\nCOMPLETION: append : [#typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type#]append(<#_InputIterator __first#>, <#_InputIterator __last#>)\nCOMPLETION: append : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type#]append(<#_ForwardIterator __first#>, <#_ForwardIterator __last#>)\n",
+  "stderr": "",
+  "memoryBytes": 16515072
+}

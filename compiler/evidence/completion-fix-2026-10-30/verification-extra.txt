@@ -1,0 +1,19 @@
+✔ completion compiler derivation preserves pinned original and has exact independent SHA and valid section framing (141.9822ms)
+✔ derivation rejects truncated and same-length corrupted source compiler (39.1212ms)
+✔ isolated faulty recipes reject instruction/header guard and incorrect derived SHA (119.9276ms)
+✔ completion resource identity binds the exact source compiler ID, SHA and length (0.5597ms)
+✔ real const receiver drops instance template mutation and retains static template and const template (82.628ms)
+✔ real same-name const and nonconst member template overloads are filtered individually (32.7723ms)
+✔ real unavailable and deleted free overloads do not hide same-name legal overloads (26.6491ms)
+✔ real deprecated free and member templates stay selectable while unavailable templates are removed (30.2166ms)
+✔ real inherited and redeclared availability survives qualified and using lookup (49.1344ms)
+✔ real aliased const objects and pointer receivers retain legal template overloads (309.5599ms)
+✔ real driver translation unit applies semantics at user.inc UTF16 cursor and keeps native source mapping (156.1726ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1308.4482

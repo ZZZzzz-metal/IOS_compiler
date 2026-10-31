@@ -1,0 +1,166 @@
+{
+  "request": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "02112e94-2554-41bd-aae4-69e61311f0f4",
+    "documentVersion": 1,
+    "snapshot": {
+      "snapshotId": "02112e94-2554-41bd-aae4-69e61311f0f4-snapshot",
+      "sourceHash": "sha256:a54cef204a07cc20e0cf4bd780478dfb7703819f79cc0dc0db15be17d9cbd199",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_9c3158ded821871b {\n  int choose_9c3158ded821871b() const { return 0; }\n  int choose_9c3158ded821871b(int argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n};\nvoid probe_9c3158ded821871b() {\n  Record_9c3158ded821871b object_9c3158ded821871b;\n  object_9c3158ded821871b.\n}\n",
+          "contentHash": "sha256:15deb44b2638e9f525dc954bf3e206b2de938d0ab06e6cd81d3d39654832442f"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 305,
+    "trigger": "."
+  },
+  "actual": {
+    "result": {
+      "requestId": "02112e94-2554-41bd-aae4-69e61311f0f4",
+      "documentVersion": 1,
+      "snapshotId": "02112e94-2554-41bd-aae4-69e61311f0f4-snapshot",
+      "sourceHash": "sha256:a54cef204a07cc20e0cf4bd780478dfb7703819f79cc0dc0db15be17d9cbd199",
+      "sourcePath": "main.cpp",
+      "offset": 305,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:f5e69fab7c48f5c466b69f6b0ad2f44d368639a75a4d6205a4747bdd8b8c7bec",
+          "label": "choose_9c3158ded821871b",
+          "kind": "unknown",
+          "detail": "int choose_9c3158ded821871b() const",
+          "insertText": "choose_9c3158ded821871b",
+          "replaceRange": {
+            "startOffset": 305,
+            "endOffset": 305
+          },
+          "filterText": "choose_9c3158ded821871b"
+        },
+        {
+          "id": "sha256:07d4081b8a770d30d9128993fb82ac0dec80d4ddddf3af4d4470d0e367c07c23",
+          "label": "choose_9c3158ded821871b",
+          "kind": "unknown",
+          "detail": "int choose_9c3158ded821871b(int argument_9c3158ded821871b)",
+          "insertText": "choose_9c3158ded821871b",
+          "replaceRange": {
+            "startOffset": 305,
+            "endOffset": 305
+          },
+          "filterText": "choose_9c3158ded821871b"
+        },
+        {
+          "id": "sha256:870c73137d690a718aade8d8fe9afe9e00eeb23e1c99a5f3e5afe745d4922ea8",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Record_9c3158ded821871b & operator=(const Record_9c3158ded821871b &)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 305,
+            "endOffset": 305
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:7809a217bb8871697684f8ebd6ab423cfb1e9c7f2de4c155cd841b86229f7680",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Record_9c3158ded821871b & operator=(Record_9c3158ded821871b &&)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 305,
+            "endOffset": 305
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:9f8fec5c7d20e44195ea9c0390f04da04c496de77959acb64a656ab72956ccfb",
+          "label": "Record_9c3158ded821871b",
+          "kind": "unknown",
+          "detail": "Record_9c3158ded821871b::",
+          "insertText": "Record_9c3158ded821871b",
+          "replaceRange": {
+            "startOffset": 305,
+            "endOffset": 305
+          },
+          "filterText": "Record_9c3158ded821871b"
+        },
+        {
+          "id": "sha256:b694da3171670980f5ed90421e81a2446e42eb1b1ccadc16c6eac11c6ad45064",
+          "label": "~Record_9c3158ded821871b",
+          "kind": "unknown",
+          "detail": "void ~Record_9c3158ded821871b()",
+          "insertText": "~Record_9c3158ded821871b",
+          "replaceRange": {
+            "startOffset": 305,
+            "endOffset": 305
+          },
+          "filterText": "~Record_9c3158ded821871b"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+      "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:7:27",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: choose_9c3158ded821871b : [#int#]choose_9c3158ded821871b()[# const#]\nCOMPLETION: choose_9c3158ded821871b : [#int#]choose_9c3158ded821871b(<#int argument_9c3158ded821871b#>)\nCOMPLETION: operator= : [#Record_9c3158ded821871b &#]operator=(<#const Record_9c3158ded821871b &#>)\nCOMPLETION: operator= : [#Record_9c3158ded821871b &#]operator=(<#Record_9c3158ded821871b &&#>)\nCOMPLETION: Record_9c3158ded821871b : Record_9c3158ded821871b::\nCOMPLETION: ~Record_9c3158ded821871b : [#void#]~Record_9c3158ded821871b()\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 7,
+        "byteColumn": 27
+      }
+    },
+    "metrics": {
+      "totalMs": 18.40639999999985,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "verdict": {
+    "verdict": "passed",
+    "originalVerdict": "passed",
+    "itemCount": 6,
+    "errors": []
+  }
+}

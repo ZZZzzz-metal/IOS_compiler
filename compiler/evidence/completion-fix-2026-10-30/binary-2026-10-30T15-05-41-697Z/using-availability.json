@@ -1,0 +1,30 @@
+{
+  "source": "namespace detail {int alphaAllowed();__attribute__((unavailable)) int alphaBlocked();__attribute__((deprecated)) int alphaOld();} using detail::alphaAllowed;using detail::alphaBlocked;using detail::alphaOld;void f(){al;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:1:219",
+    "/project/main.cpp"
+  ],
+  "exitCode": 0,
+  "stdout": "COMPLETION: Pattern : alignas(<#expression#>)\nCOMPLETION: Pattern : [#size_t#]alignof(<#type#>)\nCOMPLETION: alphaAllowed : [#int#]alphaAllowed()\nCOMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked()\nCOMPLETION: alphaOld : [#int#]alphaOld()\n",
+  "stderr": "",
+  "memoryBytes": 7077888
+}

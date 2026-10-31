@@ -1,0 +1,118 @@
+{
+  "request": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "9d423072-7523-4e59-a324-7bd421f483a5",
+    "documentVersion": 1,
+    "snapshot": {
+      "snapshotId": "9d423072-7523-4e59-a324-7bd421f483a5-snapshot",
+      "sourceHash": "sha256:bda6570e3449b666fd6bf6fda2c9095897d8f0575cff6b96f3d23e9795729666",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_definition_9c3158ded821871b_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_9c3158ded821871b_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_9c3158ded821871b_deprecated() { return 0; }\n\nvoid probe_9c3158ded821871b() {\n  surface_definition_9c3158ded821871b\n}\n",
+          "contentHash": "sha256:403bc44151b202b13b9ebffedacd388ca6a898cfdeba72886010e7dc9d606da2"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 369,
+    "trigger": "identifier"
+  },
+  "actual": {
+    "result": {
+      "requestId": "9d423072-7523-4e59-a324-7bd421f483a5",
+      "documentVersion": 1,
+      "snapshotId": "9d423072-7523-4e59-a324-7bd421f483a5-snapshot",
+      "sourceHash": "sha256:bda6570e3449b666fd6bf6fda2c9095897d8f0575cff6b96f3d23e9795729666",
+      "sourcePath": "main.cpp",
+      "offset": 369,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:49a8a4f84f9b4315497e4c1fb647b18619afdaef188d54e7798e89c34601c50c",
+          "label": "surface_definition_9c3158ded821871b_allowed",
+          "kind": "unknown",
+          "detail": "int surface_definition_9c3158ded821871b_allowed()",
+          "insertText": "surface_definition_9c3158ded821871b_allowed",
+          "replaceRange": {
+            "startOffset": 334,
+            "endOffset": 369
+          },
+          "filterText": "surface_definition_9c3158ded821871b_allowed"
+        },
+        {
+          "id": "sha256:30f0152e58a185489dee4b8151dd6b372cb09bbd1d58ab0294afc05afa776215",
+          "label": "surface_definition_9c3158ded821871b_deprecated",
+          "kind": "unknown",
+          "detail": "int surface_definition_9c3158ded821871b_deprecated()",
+          "insertText": "surface_definition_9c3158ded821871b_deprecated",
+          "replaceRange": {
+            "startOffset": 334,
+            "endOffset": 369
+          },
+          "filterText": "surface_definition_9c3158ded821871b_deprecated"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+      "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:6:38",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: surface_definition_9c3158ded821871b_allowed : [#int#]surface_definition_9c3158ded821871b_allowed()\nCOMPLETION: surface_definition_9c3158ded821871b_blocked (Inaccessible) : [#int#]surface_definition_9c3158ded821871b_blocked()\nCOMPLETION: surface_definition_9c3158ded821871b_deprecated : [#int#]surface_definition_9c3158ded821871b_deprecated()\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 6,
+        "byteColumn": 38
+      }
+    },
+    "metrics": {
+      "totalMs": 19.139999999999873,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "verdict": {
+    "verdict": "passed",
+    "originalVerdict": "passed",
+    "itemCount": 2,
+    "errors": []
+  }
+}

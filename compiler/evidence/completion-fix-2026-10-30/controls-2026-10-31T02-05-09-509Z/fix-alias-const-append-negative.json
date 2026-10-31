@@ -1,0 +1,88 @@
+{
+  "input": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "ad17953e-8d39-42cd-a5c0-6208a828aa15",
+    "mode": "debug",
+    "optimization": "O0",
+    "snapshot": {
+      "snapshotId": "8256bea5-8e9e-4902-9d41-9015806c11a4",
+      "sourceHash": "sha256:ef8ab4740ca325ea5e450b7e7e3ee9f18fa1fea606ce310140c10043e2da61fb",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_4d403cbfe02a5ce3 = std::string;\nint main() {\n  const TextAlias_4d403cbfe02a5ce3 object_4d403cbfe02a5ce3;\n  object_4d403cbfe02a5ce3.append(\"x\");\n  return 0;\n}\n",
+          "contentHash": "sha256:28cd13c95ff56eb7d0f6fc85f729f313a8b1aa69a39acbc46c8fac5452256976"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "status": "failed",
+    "reason": "compiler-exit"
+  },
+  "actual": {
+    "status": "failed",
+    "requestId": "ad17953e-8d39-42cd-a5c0-6208a828aa15",
+    "sourceHash": "sha256:ef8ab4740ca325ea5e450b7e7e3ee9f18fa1fea606ce310140c10043e2da61fb",
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "no matching member function for call to 'append'",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 5,
+            "column": 27
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "candidate function template not viable: 'this' argument has type 'const TextAlias_4d403cbfe02a5ce3' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+      },
+      {
+        "severity": "note",
+        "message": "candidate function not viable: 'this' argument has type 'const TextAlias_4d403cbfe02a5ce3' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+      },
+      {
+        "severity": "note",
+        "message": "candidate function not viable: 'this' argument has type 'const TextAlias_4d403cbfe02a5ce3' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+      },
+      {
+        "severity": "note",
+        "message": "candidate function not viable: 'this' argument has type 'const TextAlias_4d403cbfe02a5ce3' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+      },
+      {
+        "severity": "note",
+        "message": "candidate function template not viable: requires at least 2 arguments, but 1 was provided"
+      },
+      {
+        "severity": "note",
+        "message": "candidate function template not viable: requires 2 arguments, but 1 was provided"
+      },
+      {
+        "severity": "note",
+        "message": "candidate function template not viable: requires 2 arguments, but 1 was provided"
+      },
+      {
+        "severity": "note",
+        "message": "candidate function not viable: requires 2 arguments, but 1 was provided"
+      },
+      {
+        "severity": "note",
+        "message": "candidate function not viable: requires 2 arguments, but 1 was provided"
+      },
+      {
+        "severity": "note",
+        "message": "candidate function not viable: requires at least 2 arguments, but 1 was provided"
+      }
+    ],
+    "reason": "compiler-exit",
+    "rawDiagnostics": "/project/main.cpp:5:27: error: no matching member function for call to 'append'\n  object_4d403cbfe02a5ce3.append(\"x\");\n  ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~\n/include/c++/v1/string:1008:19: note: candidate function template not viable: 'this' argument has type 'const TextAlias_4d403cbfe02a5ce3' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const\n                  append(const _Tp& __t) { __self_view __sv = __t; return append(__sv.data(), __sv.size()); }\n                  ^\n/include/c++/v1/string:1020:19: note: candidate function not viable: 'this' argument has type 'const TextAlias_4d403cbfe02a5ce3' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const\n    basic_string& append(const value_type* __s);\n                  ^\n/include/c++/v1/string:999:19: note: candidate function not viable: 'this' argument has type 'const TextAlias_4d403cbfe02a5ce3' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const\n    basic_string& append(const basic_string& __str);\n                  ^\n/include/c++/v1/string:1058:19: note: candidate function not viable: 'this' argument has type 'const TextAlias_4d403cbfe02a5ce3' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const\n    basic_string& append(initializer_list<value_type> __il) {return append(__il.begin(), __il.size());}\n                  ^\n/include/c++/v1/string:1018:19: note: candidate function template not viable: requires at least 2 arguments, but 1 was provided\n                  append(const _Tp& __t, size_type __pos, size_type __n=npos);\n                  ^\n/include/c++/v1/string:1038:5: note: candidate function template not viable: requires 2 arguments, but 1 was provided\n    append(_InputIterator __first, _InputIterator __last) {\n    ^\n/include/c++/v1/string:1052:5: note: candidate function template not viable: requires 2 arguments, but 1 was provided\n    append(_ForwardIterator __first, _ForwardIterator __last) {\n    ^\n/include/c++/v1/string:1019:19: note: candidate function not viable: requires 2 arguments, but 1 was provided\n    basic_string& append(const value_type* __s, size_type __n);\n                  ^\n/include/c++/v1/string:1021:19: note: candidate function not viable: requires 2 arguments, but 1 was provided\n    basic_string& append(size_type __n, value_type __c);\n                  ^\n/include/c++/v1/string:1009:19: note: candidate function not viable: requires at least 2 arguments, but 1 was provided\n    basic_string& append(const basic_string& __str, size_type __pos, size_type __n=npos);\n                  ^\n1 error generated.\n"
+  }
+}

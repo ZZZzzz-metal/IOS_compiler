@@ -1,5 +1,9 @@
 # 离线补全后端交接（CC-20261029-02）
 
+2026-10-30 修复追加（CC-20261030-02）：const 成员模板资格检查及 unavailable/deleted 候选过滤已接入 completion-only 派生编译器，原始失败见下方历史。新增受信模块 `compiler/src/completion-semantics.mjs` 必须随 Worker 一并纳入 candidate/离线资源；不更改冻结协议、原 vendor blob、资源锁或完整编译器。派生配方、精确指令与源码等价说明见 [修复配方](resources/completion-semantics-v1.md)。
+
+加载时先验证原长度/全 SHA、指令与长度头上下文，复制插入 22 字节并修正函数/代码段长度，再验证全部 section、Wasm 有效性及派生全 SHA，之后才编译 Module。结果与 adapter 验证使用 `binji-wasm-clang-648c4a89997a+completion-semantics.1`，`compilerResourceHash=sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901`（31,214,494 B）。sysroot 身份不变。普通/deprecated、合法静态与 const 模板、mutable 重载保留；过滤按 Clang 的声明和限定规则执行，不按候选名字。当前修复自测不能代替 5 号独立验收或 iPad 验证。
+
 2026-10-29，基于冻结契约提交 `38ff3075a4b47c3f72ae2f6552a04e58da07d6c0`。本模块提供真实 Clang 8 Wasm 前端补全；界面、可信 Worker URL、完整离线包与独立验收由 1/4/5 号接入。本轮没有浏览器或 iPad 补全验收。
 
 ```js
@@ -40,14 +44,14 @@ Worker 按可信 lock 逐项验证 `memfs`、`sysroot.tar`、`clang` 的长度�
 
 只过滤原生 `(Hidden)` / `(Inaccessible)`；合法 `(InBase)` 保留。CLI 没有 AST cursor kind、排序优先级或完整可用性信息，所以所有 item.kind 为 `unknown`，保留原生顺序与每条重载签名。insertText 只有真实名称，detail 展示原生 chunk 的可读签名，不插入 `<#...#>`、多行模式或自动参数模板。最多 200 项，截断时 isIncomplete=true；原生输出总量限 1 MiB，超限受控失败。
 
-**完整 const/模板/属性可调用性不支持。** 普通 const Node 不含 mutate，const vector 不含 push_back/clear；但固定 Clang8 对 const std::string 仍输出 append/assign/insert/replace 等部分非 const 成员函数模板，无 Inaccessible/availability 标记；unavailable/deprecated 属性也可无标记返回。最小反例：
+**以下为 2026-10-29 原始编译器的历史缺口，已由上述 2026-10-30 派生配方修复并保留原始证据。** 原固定 Clang8 对 const std::string 输出 append/assign/insert/replace 等非 const 成员函数模板；unavailable/deprecated 也无区分标记。最小反例：
 
 ```cpp
 #include <string>
 void f() { const std::string s; s.ap/*光标*/; }
 ```
 
-初次“必须无 append”的实际测试失败和原始 stdout 保留；后续测试专门断言这一已知缺口仍可重现，不将它算作 const 过滤通过。不按名字黑名单伪修，不承诺候选均可调用或 VS 完整语言服务。类型别名/函数模板、更复杂 receiver、宏补全、模板参数片段、全语言库覆盖不建立完整支持结论；CLI 模式和 OVERLOAD 提示不作为声明候选。1 号已接受按这个真实边界收口，并交 5 号独立确认反例。
+初次“必须无 append”的实际测试失败和原始 stdout 保留。旧轮曾按已知边界交付；2026-10-30 已重开并改为正确的无 append 修复回归预期，没有更改 5 号原始 oracle。完整 VS 语言服务、全部模板实例化与全语言库覆盖仍未建立支持结论；CLI 模式和 OVERLOAD 提示不作为声明候选。
 
 ## 复现与证据
 
