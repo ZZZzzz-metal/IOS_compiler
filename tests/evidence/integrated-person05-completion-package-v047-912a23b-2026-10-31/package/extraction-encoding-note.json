@@ -1,0 +1,9 @@
+{
+  "firstInventory": "zip-members.json",
+  "firstPythonStdoutEncoding": "host-default, decoded as UTF-8 by initial Node capture",
+  "effect": "Chinese names/absolute paths in the decoded JSON inventory were garbled. Actual extracted file bytes and names were unaffected.",
+  "retainedOriginalDecodedOutput": true,
+  "correctedInventory": "zip-members-run02.json",
+  "correction": "Re-inventory the unchanged ZIP using PYTHONIOENCODING=utf-8; bind actual extraction via realpath; no re-extraction and no overwriting.",
+  "archiveManifestEntriesVerified": 73
+}

@@ -1,0 +1,48 @@
+{
+  "sourceArchive": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\app\\offline\\.local\\packages\\ipad-first-setup-v0.4.7.zip",
+  "zipBytes": 18056,
+  "zipSHA256": "0958fef87a5871c8c9a4edfc23f10a9b929888f2898da370dfbfdd981351d18f",
+  "fileCount": 6,
+  "members": [
+    {
+      "name": "SHA256SUMS.json",
+      "byteLength": 775,
+      "sha256": "b37cf90a7b787cefdfbabf988a7f580b06e1431140517328cca6decc3dbc5718",
+      "crc32": 916901078
+    },
+    {
+      "name": "build.json",
+      "byteLength": 1008,
+      "sha256": "f824a2e60e50451c2eb7f94e1e9a064528b23a90578a3117e4f5d9c78f68f420",
+      "crc32": 1431244548
+    },
+    {
+      "name": "certificates/root-ca.cer",
+      "byteLength": 814,
+      "sha256": "87991d2b7d332034beddb95ed35ddabc906c0e0b2bd1dd174ec4a25b826e349f",
+      "crc32": 770998243
+    },
+    {
+      "name": "certificates/root-only.mobileconfig",
+      "byteLength": 2530,
+      "sha256": "f392da529a338e8ef398a8558cbc684afdcb2e2eb45fd588914caf38bbc4ce26",
+      "crc32": 3238587860
+    },
+    {
+      "name": "平板完整操作手册.md",
+      "byteLength": 30285,
+      "sha256": "a429e4e4caec15cd3033ca529bc3ee363aca7e73fb06f3a7d2e7822400b9f722",
+      "crc32": 1466250325
+    },
+    {
+      "name": "本次首次准备说明.md",
+      "byteLength": 815,
+      "sha256": "a67cd49455cf5b2d99acb22cdbdbcd1d330ef6ac333eae21e215cd370094b7ae",
+      "crc32": 3539874717
+    }
+  ],
+  "allPathsContained": true,
+  "duplicateOrLinkedEntries": false,
+  "extractedRoot": null,
+  "staticSiteRoot": null
+}

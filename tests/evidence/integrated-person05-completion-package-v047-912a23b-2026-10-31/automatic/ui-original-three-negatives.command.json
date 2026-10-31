@@ -1,0 +1,12 @@
+{
+  "id": "ui-original-three-negatives",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-completion-package-v047-912a23b-2026-10-31\\automatic\\controlled-negative-runner.mjs"
+  ],
+  "startedAt": "2026-10-31T07:25:40.898Z",
+  "endedAt": "2026-10-31T07:25:43.002Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

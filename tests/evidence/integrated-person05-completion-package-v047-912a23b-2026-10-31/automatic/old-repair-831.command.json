@@ -1,0 +1,15 @@
+{
+  "id": "old-repair-831",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/seal-integrated-round.mjs",
+    "integrated-person05-completion-fix-0f289cf-2026-10-31",
+    "--verify",
+    "--git"
+  ],
+  "startedAt": "2026-10-31T07:25:43.008Z",
+  "endedAt": "2026-10-31T07:25:50.148Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

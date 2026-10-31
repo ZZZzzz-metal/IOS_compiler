@@ -1,0 +1,277 @@
+{
+  "at": "2026-10-31T12:45:43.509Z",
+  "passed": true,
+  "mode": "final-record-audit",
+  "command": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "args": [
+      "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\verify-completion-v047-browser.mjs",
+      "--paused=035-continue-to18-requested.json",
+      "--saved=037-standard-scheme-saved-before-close.json",
+      "--cold=041-cold-standard-scheme-visible.json",
+      "--out=browser-verification-run02.json"
+    ],
+    "scriptSHA256": "448326400d2b5fae7bbcbdd7cfe6ced3f7b3a31a56b60faf4d5a072ca43d62e8"
+  },
+  "target": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "bundleId": "ipad-web-probe-4b6a8377cadd31e675701549",
+  "browserObservationCount": 43,
+  "checkCount": 22,
+  "checks": [
+    "numbered-observations-contiguous-and-fixed-local-release",
+    "prepared-and-stopped-server-cold-launcher-check-65",
+    "const-string64-preserves-size-cstr-excludes-append",
+    "const-append-prefix-no-match-is-real-negative",
+    "mutable-string-prefix-retains10-append-options",
+    "const-concrete-template-retains-const-and-static-excludes-mutable",
+    "mutable-template-positive-retains-three-members",
+    "availability-keeps-ordinary-deprecated-and-legal-overload-only",
+    "017-018-are-newline-exploration-not-completion-proof",
+    "019-ready-020-single-insertion-021-native-undo-022-redo",
+    "new-program-source-equal-at-complete-run-and-session-cold-recovery",
+    "real-offline-run-output41-and-exit41",
+    "recovered-cold-draft-revision11-cpp-and-resource-revalidation",
+    "real-debug-pause-value-stable29-outcome41",
+    "saved-keyboard-scheme-and-exact-draft-survive-cold-reopen",
+    "debug-continued-to-output41-and-exit41",
+    "second-cold-launcher65-loading-record-excluded-final-ready",
+    "final-ready-console.json-recorded-warn-error-empty",
+    "recovered-workbench-console.json-recorded-warn-error-empty",
+    "server-stopped-once-no-request-after-stop-all-later-dom-after-stop",
+    "server/after-stop.json-listener-zero",
+    "server/reconnected-listener-check.json-listener-zero"
+  ],
+  "source": {
+    "byteLength": 749,
+    "sha256": "cc0cdee2924e3fe27a5df4c6ca857f95d743d33eb37dfec77a8339bbba272447"
+  },
+  "milestones": {
+    "paused": "035-continue-to18-requested.json",
+    "saved": "037-standard-scheme-saved-before-close.json",
+    "cold": "041-cold-standard-scheme-visible.json"
+  },
+  "excludedAsProof": {
+    "017-018": "Enter while still pending inserted a newline; undo removed that newline. Actual completion transaction is019-022.",
+    "028": "Debug compilation had started; no paused value claimed from this observation.",
+    "023": "Partial typing after tool deadline, corrected by024 before compile.",
+    "040": "Initial asynchronous draft loading; exact recovery is041 and043."
+  },
+  "scope": "Read-only consistency audit of recorded DOM/snapshots and local server log; no product execution, system network disconnection or physical iPad verification.",
+  "observations": [
+    {
+      "name": "001-initial-unprepared.json",
+      "bytes": 3014,
+      "sha256": "d8bd0a3ab38c675235756e0b7c4c51b39c447b5b9b96e2741dcd213352572561"
+    },
+    {
+      "name": "002-prepare-clicked.json",
+      "bytes": 3096,
+      "sha256": "2776be103b88a199f75f32547de8519c8b1d28c0558ae4f8dd0a4fd44df268fb"
+    },
+    {
+      "name": "003-prepared-resource-result.json",
+      "bytes": 3051,
+      "sha256": "d3f49e2d64a278473ea89cbb75cb829fc8c9f3b44037c13f2a646d400b0d93ce"
+    },
+    {
+      "name": "004-stopped-server-cold-launcher.json",
+      "bytes": 3051,
+      "sha256": "02e6f79e0a862b06f79dfdc348b679e35f2d70ad774de153c5fac758d0e4ff26"
+    },
+    {
+      "name": "005-cold-workbench-before-trust.json",
+      "bytes": 5236,
+      "sha256": "3e2a5f12634896a3308134c2c9c5dec5252929acf76059fa910e549d10630417"
+    },
+    {
+      "name": "006-offline-resource-trust-clicked.json",
+      "bytes": 8105,
+      "sha256": "e4b1f70818d29664958019262c3d2cce75f2002937e5e4fe39d8f711fb727a3e"
+    },
+    {
+      "name": "007-offline-resources-ready.json",
+      "bytes": 8141,
+      "sha256": "839ea84b76924db4b445a67bc97b72e591678a1b6e943ffe320dc2c44949c1b0"
+    },
+    {
+      "name": "008-const-string-query-start.json",
+      "bytes": 5967,
+      "sha256": "923e58ae0c84eaec75b6254f32908c24d037bdf6f94420e15bd564cec8e13c5d"
+    },
+    {
+      "name": "009-const-string-members-ready.json",
+      "bytes": 27848,
+      "sha256": "07bf3dfab15aea75c844cfefca2d01d8c322e005b0ccce3626dba24512c06fae"
+    },
+    {
+      "name": "010-const-string-append-prefix-start.json",
+      "bytes": 5993,
+      "sha256": "2f4d0a81cbecf994259177c97abdcd6e825f22e264bf25a0a762bf85de40a3d6"
+    },
+    {
+      "name": "011-mutable-string-append-positive.json",
+      "bytes": 10662,
+      "sha256": "1c5509c75e367bc13892d109e0b1bd5f7892c0ebfe31f68273a40394867e21f8"
+    },
+    {
+      "name": "012-const-template-members.json",
+      "bytes": 7312,
+      "sha256": "e2d9345d88e4dd0343e6f8ffbd9efb5908fac783f1cc4249ba99d4a4b2edd378"
+    },
+    {
+      "name": "013-mutable-template-positive.json",
+      "bytes": 7467,
+      "sha256": "657a8069f2c3e7ec4ef2ffaba2b888b92315797bd4d8bd44ab91a8ecd7d3ee73"
+    },
+    {
+      "name": "014-availability-overloads.json",
+      "bytes": 7597,
+      "sha256": "08acbe2dfa4b3d6dc48b59446f80c6c39b9510df0d4ca29a27caf3fde2d89c6f"
+    },
+    {
+      "name": "015-final-program-single-completion.json",
+      "bytes": 8418,
+      "sha256": "21af7bbe7b202f70e072fe292a120526d0e1fb29b2fa3eb917af58d5f9b3acf5"
+    },
+    {
+      "name": "016-single-candidate-ready.json",
+      "bytes": 8445,
+      "sha256": "ebd4ddf7c82ea4545355cf85b5a568d2532b6a5aa0252acfff1666d2b2e63dd7"
+    },
+    {
+      "name": "017-completion-confirmed-once.json",
+      "bytes": 8608,
+      "sha256": "94ba45619f5b573c9ae671dfdb459f1b9c16ed743fa579214cda1f63f0f979d1"
+    },
+    {
+      "name": "018-native-undo-once.json",
+      "bytes": 8577,
+      "sha256": "3eb4ced02fba906611ae527532786f8ee696b3434fa193789a858d8903df05b1"
+    },
+    {
+      "name": "019-single-candidate-confirmed-ready.json",
+      "bytes": 9043,
+      "sha256": "fb7bfff4f2226db6e9c5eaae964ac7602a178bbb7dbf74d1397024abee51c87d"
+    },
+    {
+      "name": "020-actual-completion-confirmed.json",
+      "bytes": 8587,
+      "sha256": "ad3ffdee3e912aedc97b8f10d65aee7d34d5aac2883caeb3d364a442b8eb1f52"
+    },
+    {
+      "name": "021-actual-completion-native-undo.json",
+      "bytes": 8567,
+      "sha256": "2ddcf47e0a54de08c2df1d392c78e1cd64f0fa5c66c23b02c5eacc2d90b4df1b"
+    },
+    {
+      "name": "022-actual-completion-native-redo.json",
+      "bytes": 8587,
+      "sha256": "ea08d5de4dacc386f218e5fe24937b04a2706fba09a72adbbf776aa2c99af947"
+    },
+    {
+      "name": "023-typing-deadline-state.json",
+      "bytes": 8774,
+      "sha256": "cede6a7f978e1c2eaefe43b7bb44c44e267f2a2bc7169b68d8363a32bc3e9557"
+    },
+    {
+      "name": "024-final-program-complete.json",
+      "bytes": 9330,
+      "sha256": "c3e5892e8a75b5652b9e41c7ac07c86cd1347b10f2ed29cfab182f5139bf7106"
+    },
+    {
+      "name": "025-offline-compile-run-start.json",
+      "bytes": 9395,
+      "sha256": "864904b9249bce523a09bdf481b8ba2c4a814487b1b5d50c02b9e2c65311ba90"
+    },
+    {
+      "name": "026-offline-run-result.json",
+      "bytes": 9345,
+      "sha256": "a12fd4b2b44f0319d99db0488d57cd0da8517d56df3a2244bf6351fd0dec03ca"
+    },
+    {
+      "name": "027-breakpoint18-requested.json",
+      "bytes": 9345,
+      "sha256": "07ae2c98b50f41414c074e7d7847eb36f5d3509c88fcb75d6ae064aef5d5b79b"
+    },
+    {
+      "name": "028-offline-debug-start.json",
+      "bytes": 9405,
+      "sha256": "95b3d9aa93d27f9df689a3b862bbaff40e5858bcbb0bb773141e084cfb163de7"
+    },
+    {
+      "name": "029-tool-session-recovered-cold-draft.json",
+      "bytes": 9355,
+      "sha256": "01c958772e407b3a6bcab1042301ff3185b3d9ca723ac9128ee2f484c0cfcb47"
+    },
+    {
+      "name": "030-reconnected-resource-check.json",
+      "bytes": 9498,
+      "sha256": "16916436061e9f47463ec7bbd4b30127423501cc0b70656bc2f8ca831d96a5c7"
+    },
+    {
+      "name": "031-reconnected-resources-ready.json",
+      "bytes": 9308,
+      "sha256": "9f4b5d1328f348ed3dc8bc34779c3439c4f84fd230cf7822fbb859174fea0b9f"
+    },
+    {
+      "name": "032-recovered-offline-debug-start.json",
+      "bytes": 9368,
+      "sha256": "6c09eeb6cb45e0b4c546d8944b9fe9826064165ead4f2b256403c777b2452a3e"
+    },
+    {
+      "name": "033-recovered-debug-state.json",
+      "bytes": 10300,
+      "sha256": "5815ceb0846ac8426ee764866b382ba67c821b1d299b44c32ecdb32178130abe"
+    },
+    {
+      "name": "034-recovered-breakpoint18-set.json",
+      "bytes": 10300,
+      "sha256": "d236abcf2161a43a6ebe2456938778a0ff5579d1aa043e552864e8cab1c1fd48"
+    },
+    {
+      "name": "035-continue-to18-requested.json",
+      "bytes": 9887,
+      "sha256": "be0812eb3bad75f517079206a0b4c961ce226c4f19f82c3203953012cd571f41"
+    },
+    {
+      "name": "036-debug-exit41.json",
+      "bytes": 9308,
+      "sha256": "3011f28a614f209412cc9a1ae00f199330a9c106e7572584cbc03fc1ee0900b4"
+    },
+    {
+      "name": "037-standard-scheme-saved-before-close.json",
+      "bytes": 12124,
+      "sha256": "7bee9ab7a1a5580d3ec294a1c9595f2d3ce0f5c7680bc11040e6ba2e4b1706a6"
+    },
+    {
+      "name": "038-second-cold-launcher-after-scheme.json",
+      "bytes": 3230,
+      "sha256": "26b8bd65386af0950aabfb965ad3cea6649d0a7a8bf161bd18586ad4018f2dbf"
+    },
+    {
+      "name": "039-second-cold-launcher-verified.json",
+      "bytes": 3239,
+      "sha256": "675639309b02a65f5c95a0a597b3284bab470a3d5a1af41b3d5a87e7215c1801"
+    },
+    {
+      "name": "040-cold-draft-and-standard-scheme-restored.json",
+      "bytes": 5424,
+      "sha256": "5fca1cbe90a844f381506f4f619ec15eeae8113c3ef16dda676fb93d5381e9e1"
+    },
+    {
+      "name": "041-cold-standard-scheme-visible.json",
+      "bytes": 11962,
+      "sha256": "9e7b3563531837519f273604244b6e807e524b34121cd745a824c03c6ce4fea0"
+    },
+    {
+      "name": "042-final-cold-resource-check-start.json",
+      "bytes": 12332,
+      "sha256": "7ea55853b879f2f09dc86cc2ec99b4c42c165b1f207a55b06da0310eb1f63d3f"
+    },
+    {
+      "name": "043-final-cold-ready-and-recovered.json",
+      "bytes": 12142,
+      "sha256": "374e9076d963651abd833dd738482c3b102635588963ce6148f800e46c47cb53"
+    }
+  ]
+}

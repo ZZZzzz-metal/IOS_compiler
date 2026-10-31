@@ -1,0 +1,39 @@
+{
+  "id": "string-literal",
+  "target": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "fixturePath": "fixtures/completion-independent/string-literal.cpp",
+  "sourcePath": "main.cpp",
+  "marker": "/*<cc>*/",
+  "offsetUtf16": 42,
+  "line": 1,
+  "columnUtf16": 43,
+  "sourceHash": "sha256:7823ae7cf7bfa0672ca088b2d1ab008d2eed20d364e7d5aba89f54e180e8f199",
+  "delayMs": 300,
+  "requestedWaitMs": 450,
+  "elapsedMs": 460.7229,
+  "providerCallCount": 0,
+  "calls": [],
+  "actualState": {
+    "phase": "idle",
+    "items": [],
+    "selectedIndex": -1,
+    "token": 1,
+    "message": ""
+  },
+  "states": [
+    {
+      "phase": "idle",
+      "items": [],
+      "selectedIndex": -1,
+      "token": 1,
+      "message": ""
+    }
+  ],
+  "checks": {
+    "waitExceedsAutomaticDelay": true,
+    "providerCallsZero": true,
+    "phaseIdle": true,
+    "itemsEmpty": true
+  },
+  "passed": true
+}
