@@ -44,7 +44,8 @@ export async function buildOfflineSite({outputDirectory=resolve(local,'site')}={
   for(const path of ['ui/probe.html','ui/style.css','ui/src/main.mjs','ui/src/session-controller.mjs','ui/src/editor.mjs',
     'ui/src/completion-controller.mjs','ui/src/completion-popup.mjs','ui/src/completion-edit.mjs','ui/src/completion-editor.mjs',
     'storage/src/draft-store.mjs','storage/src/autosave.mjs','ui/README.md','ui/SHORTCUTS.md','ui/COMPLETION.md','storage/README.md',
-    'compiler/README.md','compiler/COMPLETION.md','debugger/README.md','app/offline/browser/trust.mjs'])await add(path);
+    'compiler/README.md','compiler/COMPLETION.md','compiler/resources/completion-semantics-v1.md',
+    'compiler/resources/completion-semantics-v1.cpp.patch','debugger/README.md','app/offline/browser/trust.mjs'])await add(path);
   for(const name of ['index.html','launcher.mjs','style.css','icon.svg'])await add(name,`app/offline/browser/${name}`);
   await add('IPAD-USER-MANUAL.md','docs/architecture/IPAD-USER-MANUAL.md');
   const manual=payload.get('IPAD-USER-MANUAL.md').toString('utf8');

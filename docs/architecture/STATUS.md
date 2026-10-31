@@ -2,6 +2,8 @@
 
 ## 当前：两项已知补全问题必须修复后再真机验证
 
+2026-10-31修复进展：2号固定0f289cf（实现6da3280）已合入，新补全派生身份与36资源profile c3e9a2fea60c51b3已接入。根prepare-ui、既有真实编译调试流水线3/3及mandatory check/test通过；5号正按固定交付独立复验，两条尚未独立关闭，新0.4.7完整包另验。PR #4继续草稿，真机暂缓。详见[修复集成记录](COMPLETION-FIX-INTEGRATION-v0.4.7-2026-10-31.md)。下方重开及旧发布记录按时点保留。
+
 用户要求先修好已知问题。const-string非法模板成员候选、unavailable符号可选择两项重新进入必须关闭的缺陷；2号ACK修复、5号ACK独立复验、4号ACK保持UI冻结。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)已实际恢复draft/open/unmerged，暂缓合并与真机推进。新轮无成功DONE/ACCEPT，旧v0.4.6和LIMITED-DESKTOP ACCEPT按历史保留。详见[修复计划](COMPLETION-FIX-PLAN-2026-10-30.md)。以下为此前发布时记录。
 
 ## 2026-10-30当前增量：离线代码补全

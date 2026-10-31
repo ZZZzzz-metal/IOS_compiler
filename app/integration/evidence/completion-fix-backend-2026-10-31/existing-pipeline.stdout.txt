@@ -1,0 +1,15 @@
+
+> ipad-offline-debugger@0.4.6 test:integration
+> node --test app/integration/checks/*.test.mjs
+
+✔ integrated C++17 build preserves breakpoints, all steps, live variables and recursive frames (2181.1374ms)
+✔ integrated C11 build consumes stdin and prints values read from real memory (808.6216ms)
+✔ stopping a compiled infinite loop permits a new source build and new Worker session (1144.9302ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4313.1074

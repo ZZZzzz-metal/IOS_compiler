@@ -10,7 +10,7 @@ export const COMPILER_MODULE_FILES = [
   'compiler/src/compiler-worker.mjs', 'compiler/src/toolchain-engine.mjs',
   'compiler/src/completion-adapter.mjs', 'compiler/src/completion-worker.mjs',
   'compiler/src/completion-engine.mjs', 'compiler/src/completion-source.mjs',
-  'compiler/src/completion-output.mjs',
+  'compiler/src/completion-output.mjs', 'compiler/src/completion-semantics.mjs',
   'compiler/src/wasm-host.mjs', 'compiler/src/wasm-inspect.mjs',
   'compiler/src/source.mjs', 'compiler/src/diagnostics.mjs',
   'compiler/resources/toolchain.lock.json', 'compiler/resources/LICENSES.md',
