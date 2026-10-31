@@ -1,0 +1,14 @@
+{
+  "number": 2,
+  "name": "stopped-server-cold-launcher",
+  "at": "2026-10-30T01:31:46.288Z",
+  "expectation": "service stopped listener0, tab closed and reopened, all62 cached resources checked",
+  "state": "Browser tab: 3, Title: \"算法工作台 · 离线准备\", URL: \"http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/index.html\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 0 AXWebArea 算法工作台 · 离线准备, URL: 127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/index.html",
+  "dom": {
+    "body": "iPad 真机待验证\n算法工作台\n\n首次联网保存资源，随后在本机编译和调试。\n\n离线准备\n\n版本 ipad-web-probe-cbe80b74ccc3d3cebece9e73 · 62 项 · 下载约 58.1 MiB（60,964,100 字节）\n\n准备期间保持页面打开。资源逐项校验，完成后才能打开离线工作台。重新准备前先关闭本版本的其他工作台窗口；原草稿与其他版本会保留。\n\n准备离线资源\n检查已存资源\n\n已检查 62 项资源，可以打开工作台。iPad 完全离线仍需按手册实测。\n\n打开工作台\n在平板上继续\n先完成上面的资源准备。\n在 Safari 分享菜单中添加到主屏幕。\n从主屏幕重新打开，联网再检查一次资源。\n按操作手册关闭网络与辅助电脑，关闭重开后编译一份新源码。\n\n查看平板操作手册\n\n添加到主屏幕和资源校验成功都不代表真机验收通过。浏览器可能回收网站存储，请定期导出草稿。\n\n申请保留网站存储\n\n存储保留由系统决定，不保证永久保存。\n\n本地验证原型 · 不上传源码 · 未完成正式产品安装与分发验收",
+    "fields": [],
+    "popup": null,
+    "title": "算法工作台 · 离线准备",
+    "url": "http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/index.html"
+  }
+}

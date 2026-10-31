@@ -1,0 +1,16 @@
+{
+  "id": "check",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd run check"
+  ],
+  "startedAt": "2026-10-29T16:34:27.746Z",
+  "endedAt": "2026-10-29T16:34:28.994Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "evidenceDirectory": "tests/evidence/integrated-person05-completion-runtime-bddae576-2026-10-30/verification/details/check"
+}

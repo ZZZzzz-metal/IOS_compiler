@@ -1,0 +1,6 @@
+{
+  "passed": false,
+  "errorCode": "ECONNREFUSED",
+  "noSecurityBypass": true,
+  "observation": "Previous same-WiFi static preparation service was stopped. Restarted same address/certificate hidden; following strict result recorded in https.json."
+}

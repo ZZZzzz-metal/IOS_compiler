@@ -1,0 +1,65 @@
+{
+  "baseline": "52ef979",
+  "files": [
+    {
+      "path": "compiler/src/completion-adapter.mjs",
+      "byteLength": 9564,
+      "sha256": "sha256:161ef46075a0258bb413117e98762e96c553bb3c5e3b2a240e53ab7cbb8c439b"
+    },
+    {
+      "path": "compiler/src/completion-engine.mjs",
+      "byteLength": 4643,
+      "sha256": "sha256:926afb12f565b53584b86c22ffdbc2fc137faad1fe6ce5e1b86d043210ee5370"
+    },
+    {
+      "path": "compiler/src/completion-worker.mjs",
+      "byteLength": 2313,
+      "sha256": "sha256:a3621e52c1811e0de3bc891e708be57225bcb48056c0676e832d203527ff80a0"
+    },
+    {
+      "path": "compiler/src/completion-source.mjs",
+      "byteLength": 5337,
+      "sha256": "sha256:1e8e61a9c35bc42176bc92a6efbc7a04884bbf1b0d0fca9b538feb5c14a9e3ce"
+    },
+    {
+      "path": "compiler/src/completion-output.mjs",
+      "byteLength": 1956,
+      "sha256": "sha256:6321fd93e9fbfeccfebe29654f236c335aac4cc7d7d09c934d35f5e74d325a99"
+    },
+    {
+      "path": "compiler/src/completion-semantics.mjs",
+      "byteLength": 3953,
+      "sha256": "sha256:1a448b6d17c498fe586b6f510b9ee70de495efbd4dd81299227377fecf1e9754"
+    },
+    {
+      "path": "compiler/src/toolchain-engine.mjs",
+      "byteLength": 7649,
+      "sha256": "sha256:03695bb52cbf7f4ab024ef773fca630eecb01c5452faa0f54fc055b574bbe3b5"
+    },
+    {
+      "path": "compiler/src/wasm-host.mjs",
+      "byteLength": 6856,
+      "sha256": "sha256:ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73"
+    },
+    {
+      "path": "compiler/src/wasm-inspect.mjs",
+      "byteLength": 1825,
+      "sha256": "sha256:dfd5ae8ea29df1b266775250e3f07e3181ef3a48bd49ae97cbcf6b929df63a21"
+    },
+    {
+      "path": "compiler/src/diagnostics.mjs",
+      "byteLength": 3218,
+      "sha256": "sha256:14399bd23b8eb131a20196d0ed926db1243ace34bda42a221bae687378bfbad3"
+    },
+    {
+      "path": "compiler/src/source.mjs",
+      "byteLength": 7201,
+      "sha256": "sha256:4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+    },
+    {
+      "path": "compiler/resources/toolchain.lock.json",
+      "byteLength": 6149,
+      "sha256": "sha256:a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d"
+    }
+  ]
+}

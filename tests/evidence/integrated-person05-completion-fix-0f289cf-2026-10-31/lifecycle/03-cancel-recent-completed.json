@@ -1,0 +1,16 @@
+{
+  "name": "03-cancel-recent-completed",
+  "passed": true,
+  "checks": [
+    {
+      "scenario": "03-cancel-recent-completed",
+      "name": "cancel of most recent completed ID releases idle warm Worker",
+      "passed": true
+    },
+    {
+      "scenario": "03-cancel-recent-completed",
+      "name": "warm release is after successful complete, with no new Worker",
+      "passed": true
+    }
+  ]
+}

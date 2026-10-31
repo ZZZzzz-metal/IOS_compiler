@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "preparation-only-fix-overload-const",
+  "documentVersion": 5,
+  "snapshot": {
+    "snapshotId": "preparation-only-fix-overload-const-snapshot",
+    "sourceHash": "sha256:6781388bd121ace7dde576e84a72ca13f08b17f511491fd827141b345be3608d",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "struct Record_253c01a445d5 {\n  int choose_253c01a445d5() const { return 0; }\n  int choose_253c01a445d5(int argument_253c01a445d5) { (void)argument_253c01a445d5; return 0; }\n};\nvoid probe_253c01a445d5() {\n  const Record_253c01a445d5 object_253c01a445d5;\n  object_253c01a445d5.\n}\n",
+        "contentHash": "sha256:0e6bd9b470edccaa83031d174d70825e649c5b1837d0547df02eec8b4f19aa11"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 275,
+  "trigger": "."
+}

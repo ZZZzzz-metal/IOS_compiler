@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-declaration-order",
+  "documentVersion": 11,
+  "snapshot": {
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-declaration-order-snapshot",
+    "sourceHash": "sha256:263e8d69aa056b16184804bcb826d64b1e0132f607d5f712e03f55a78930c3df",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "int beforeGlobal;\nvoid probe() {\n    befo\n    int beforeLater;\n}\n",
+        "contentHash": "sha256:1e008792cf93ac46afc119cfa5eb56f3de37ff4f0c349b3cbfeea7bb140295d6"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 41,
+  "trigger": "identifier"
+}

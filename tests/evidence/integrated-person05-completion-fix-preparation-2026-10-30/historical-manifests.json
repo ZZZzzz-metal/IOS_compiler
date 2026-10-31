@@ -1,0 +1,42 @@
+{
+  "kind": "manifest-fingerprints-and-tracked-diff-only",
+  "records": [
+    {
+      "round": "integrated-person05-completion-gitverify-2026-10-30",
+      "manifestByteLength": 4810,
+      "manifestSHA256": "c4132ad3ee31efab336febee6ab7560f83821db5b6e2bb50bfb4afeff8f59f61",
+      "entries": 33
+    },
+    {
+      "round": "integrated-person05-completion-preparation-38ff307-2026-10-29",
+      "manifestByteLength": 11144,
+      "manifestSHA256": "b6bd3461cb26eea00e48e38cd6c463a2ba3bc7a1b2dac7808b42ea7d5a65709e",
+      "entries": 66
+    },
+    {
+      "round": "integrated-person05-completion-preparation-38ff307-2026-10-29-run02",
+      "manifestByteLength": 11328,
+      "manifestSHA256": "fe95b8c97d711a7b44477fe91e2c20c38a4f504d362a3025174827a99e38059c",
+      "entries": 67
+    },
+    {
+      "round": "integrated-person05-completion-runtime-bddae576-2026-10-30",
+      "manifestByteLength": 75522,
+      "manifestSHA256": "a1b65a03456bfc4d9bfcacb3655299729c43a54f75f553c85a700cc3d5c6c708",
+      "entries": 452
+    },
+    {
+      "round": "integrated-person05-completion-ui-b14aeba-2026-10-30",
+      "manifestByteLength": 25376,
+      "manifestSHA256": "c7dae41bdff23eb6a5ab0d4d1c879a4580638af924e3845bf9a2a769e237ffa3",
+      "entries": 150
+    },
+    {
+      "round": "integrated-person05-final-v045-40a079b-2026-10-28",
+      "manifestByteLength": 31095,
+      "manifestSHA256": "21195938f078537b8e100fab41d3f254ae9c7734fab766cbc2e2d0051e48ed41",
+      "entries": 179
+    }
+  ],
+  "note": "No repeat semantic run or new full Git/blob seal verification is claimed. Prior seal-verification evidence remains unchanged."
+}

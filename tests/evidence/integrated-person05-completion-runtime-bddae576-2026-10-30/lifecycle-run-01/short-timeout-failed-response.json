@@ -1,0 +1,13 @@
+{
+  "requestId": "671e4aa8-0455-4631-b028-1810c2080993-7-short-timeout-failed",
+  "documentVersion": 7,
+  "snapshotId": "671e4aa8-0455-4631-b028-1810c2080993-7-short-timeout-failed-snapshot",
+  "sourceHash": "sha256:c510bf7960fb575a9d19990df05ba4bc7bfbbf8a7cc08d49eac4197490a3c66b",
+  "sourcePath": "main.cpp",
+  "offset": 122,
+  "status": "failed",
+  "items": [],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "reason": "completion-timeout"
+}

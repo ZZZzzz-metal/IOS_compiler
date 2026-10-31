@@ -1,0 +1,2 @@
+COMPLETION: alphaFunction : [#int#]alphaFunction(<#int n#>)
+COMPLETION: alphaLocal : [#int#]alphaLocal

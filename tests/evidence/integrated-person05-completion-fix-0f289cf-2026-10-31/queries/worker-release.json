@@ -1,0 +1,12 @@
+[
+  {
+    "initialThreadId": 1,
+    "exitCode": 1,
+    "finalThreadId": -1
+  },
+  {
+    "initialThreadId": 2,
+    "exitCode": 1,
+    "finalThreadId": -1
+  }
+]

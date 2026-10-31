@@ -1,0 +1,10 @@
+/project/main.cpp:6:10: error: call to unavailable function 'mixed_a8ee505af129_select': person05-unavailable
+  return mixed_a8ee505af129_select(1);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/project/main.cpp:2:58: note: candidate function has been explicitly made unavailable
+__attribute__((unavailable("person05-unavailable"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }
+                                                         ^
+/project/main.cpp:1:5: note: candidate function
+int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }
+    ^
+1 error generated.

@@ -1,0 +1,132 @@
+{
+  "ui/probe.html": {
+    "rawByteLength": 13763,
+    "rawSHA256": "9ded21770e4bf20371e27796716cae259082176497c491df76fcc1ac27dffdcc",
+    "gitLFSHA256": "f935fb654bfad9a667136f8d95b8140ed98be50f65ce219575b8eb48706488c8"
+  },
+  "ui/style.css": {
+    "rawByteLength": 27382,
+    "rawSHA256": "914b75ada9bed6194d7ca377982106b6dadc9249c13aa53e23716e3455cce35f",
+    "gitLFSHA256": "5b6b309d0aa2b813ff47753190a736d7ffde58115fcf75931309b3c10a7c21e4"
+  },
+  "ui/src/main.mjs": {
+    "rawByteLength": 35373,
+    "rawSHA256": "864aabe28cdf85b100a4758744f6a2770979592746c7375c1f8b838a052a63ca",
+    "gitLFSHA256": "864aabe28cdf85b100a4758744f6a2770979592746c7375c1f8b838a052a63ca"
+  },
+  "ui/src/editor.mjs": {
+    "rawByteLength": 5372,
+    "rawSHA256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418",
+    "gitLFSHA256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+  },
+  "ui/src/session-controller.mjs": {
+    "rawByteLength": 17167,
+    "rawSHA256": "ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84",
+    "gitLFSHA256": "ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84"
+  },
+  "ui/src/completion-controller.mjs": {
+    "rawByteLength": 15256,
+    "rawSHA256": "e815ec62c4d5b9899ef871e561ed151d98c2f9f2d2ce935ff738a3752244663b",
+    "gitLFSHA256": "e815ec62c4d5b9899ef871e561ed151d98c2f9f2d2ce935ff738a3752244663b"
+  },
+  "ui/src/completion-editor.mjs": {
+    "rawByteLength": 7535,
+    "rawSHA256": "6fec3d57898194071c55210122466927b8d126a6ea5c153a429aee2ce7f7f4b3",
+    "gitLFSHA256": "6fec3d57898194071c55210122466927b8d126a6ea5c153a429aee2ce7f7f4b3"
+  },
+  "ui/src/completion-edit.mjs": {
+    "rawByteLength": 4713,
+    "rawSHA256": "d4a4e861c77ae9c3169339e122c0dcb93815628669922be2fbdd4be26020054b",
+    "gitLFSHA256": "d4a4e861c77ae9c3169339e122c0dcb93815628669922be2fbdd4be26020054b"
+  },
+  "ui/src/completion-popup.mjs": {
+    "rawByteLength": 13394,
+    "rawSHA256": "c473b6148865603116d71eb5b9ffd1ee218eb99dca78c9d5f8aeb319d750ad01",
+    "gitLFSHA256": "c473b6148865603116d71eb5b9ffd1ee218eb99dca78c9d5f8aeb319d750ad01"
+  },
+  "ui/checks/completion-controller.test.mjs": {
+    "rawByteLength": 16676,
+    "rawSHA256": "f5cf92d5e48bedac73c03d0c349175a34a292476bed65db2afdd4b97d04639b7",
+    "gitLFSHA256": "f5cf92d5e48bedac73c03d0c349175a34a292476bed65db2afdd4b97d04639b7"
+  },
+  "ui/checks/completion-editor.test.mjs": {
+    "rawByteLength": 18231,
+    "rawSHA256": "1fa369ddfaa2f8a009b256ffce09b92c0c4f5128c4ae7c04f376c7ad7aeae0c5",
+    "gitLFSHA256": "1fa369ddfaa2f8a009b256ffce09b92c0c4f5128c4ae7c04f376c7ad7aeae0c5"
+  },
+  "ui/checks/completion-edit.test.mjs": {
+    "rawByteLength": 7691,
+    "rawSHA256": "94b6b49c8df0846b2c3914e78d642b34c650d0c3624f73d8822326fcbf4398a0",
+    "gitLFSHA256": "94b6b49c8df0846b2c3914e78d642b34c650d0c3624f73d8822326fcbf4398a0"
+  },
+  "ui/checks/completion-popup.test.mjs": {
+    "rawByteLength": 12605,
+    "rawSHA256": "3e7a82af00f1d4190117696e9728dea6831f4af3877cd9bc5b43fee4d23dc82a",
+    "gitLFSHA256": "3e7a82af00f1d4190117696e9728dea6831f4af3877cd9bc5b43fee4d23dc82a"
+  },
+  "ui/checks/helpers/completion-dom.mjs": {
+    "rawByteLength": 5378,
+    "rawSHA256": "0907d52adf377f115064f8bc83828d904af8eeff1b528e2b5befc96a1bba0514",
+    "gitLFSHA256": "0907d52adf377f115064f8bc83828d904af8eeff1b528e2b5befc96a1bba0514"
+  },
+  "ui/checks/clipboard-order.test.mjs": {
+    "rawByteLength": 17088,
+    "rawSHA256": "c402dd18390cd58f1bdc6859c71a5bd055562c2fb87fdb7589070abb07337705",
+    "gitLFSHA256": "c402dd18390cd58f1bdc6859c71a5bd055562c2fb87fdb7589070abb07337705"
+  },
+  "ui/checks/import-order.test.mjs": {
+    "rawByteLength": 16980,
+    "rawSHA256": "596ce02a34fbb15dd644269a59323f81a818f77dba07b90277d74a44db86e5c6",
+    "gitLFSHA256": "596ce02a34fbb15dd644269a59323f81a818f77dba07b90277d74a44db86e5c6"
+  },
+  "ui/checks/keyboard-dispatch.test.mjs": {
+    "rawByteLength": 28256,
+    "rawSHA256": "bb69ab666dad28ce521ae0a642ef198299e26554b60cfe4c5f2539d34888ac36",
+    "gitLFSHA256": "bb69ab666dad28ce521ae0a642ef198299e26554b60cfe4c5f2539d34888ac36"
+  },
+  "ui/checks/preparation-gate.test.mjs": {
+    "rawByteLength": 18806,
+    "rawSHA256": "c007b4eff635b426f4396062dde1778989d24a6c3ee6cf7cd5dff75ed997adbc",
+    "gitLFSHA256": "c007b4eff635b426f4396062dde1778989d24a6c3ee6cf7cd5dff75ed997adbc"
+  },
+  "storage/src/autosave.mjs": {
+    "rawByteLength": 2767,
+    "rawSHA256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff",
+    "gitLFSHA256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+  },
+  "storage/src/draft-store.mjs": {
+    "rawByteLength": 8047,
+    "rawSHA256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755",
+    "gitLFSHA256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+  },
+  "contracts/completion.d.ts": {
+    "rawByteLength": 2406,
+    "rawSHA256": "f04734f4b1db5ef042f1f6299cab97664cfc080a5b5bb8f8d50ac3e997dac132",
+    "gitLFSHA256": "f04734f4b1db5ef042f1f6299cab97664cfc080a5b5bb8f8d50ac3e997dac132"
+  },
+  "compiler/src/completion-adapter.mjs": {
+    "rawByteLength": 9691,
+    "rawSHA256": "46d3781df46c073ed2471b9156ab63fa7034c0e9564166202ec04169aeed14bd",
+    "gitLFSHA256": "46d3781df46c073ed2471b9156ab63fa7034c0e9564166202ec04169aeed14bd"
+  },
+  "compiler/src/completion-worker.mjs": {
+    "rawByteLength": 2313,
+    "rawSHA256": "a3621e52c1811e0de3bc891e708be57225bcb48056c0676e832d203527ff80a0",
+    "gitLFSHA256": "a3621e52c1811e0de3bc891e708be57225bcb48056c0676e832d203527ff80a0"
+  },
+  "compiler/src/completion-engine.mjs": {
+    "rawByteLength": 4621,
+    "rawSHA256": "2b8b4e531e9ec1eb54325d39aa513846e403ae34b648fffc9aeadca820f6670d",
+    "gitLFSHA256": "2b8b4e531e9ec1eb54325d39aa513846e403ae34b648fffc9aeadca820f6670d"
+  },
+  "compiler/src/completion-source.mjs": {
+    "rawByteLength": 5337,
+    "rawSHA256": "1e8e61a9c35bc42176bc92a6efbc7a04884bbf1b0d0fca9b538feb5c14a9e3ce",
+    "gitLFSHA256": "1e8e61a9c35bc42176bc92a6efbc7a04884bbf1b0d0fca9b538feb5c14a9e3ce"
+  },
+  "compiler/src/completion-output.mjs": {
+    "rawByteLength": 1956,
+    "rawSHA256": "6321fd93e9fbfeccfebe29654f236c335aac4cc7d7d09c934d35f5e74d325a99",
+    "gitLFSHA256": "6321fd93e9fbfeccfebe29654f236c335aac4cc7d7d09c934d35f5e74d325a99"
+  }
+}

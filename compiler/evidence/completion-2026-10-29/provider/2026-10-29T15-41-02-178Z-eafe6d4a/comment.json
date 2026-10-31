@@ -1,0 +1,60 @@
+{
+  "request": {
+    "requestId": "f9183ce1-a707-4866-9b6e-5264ee1f1a95",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "335b6d4f-7496-41fa-b376-e71ff8c6a378",
+      "sourceHash": "sha256:a77e097d7bc1eaf4aaf459c815a9e00b1ef6e8ec7fa6ada238a23bead7bf6da3",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int alpha; void f(){/* al */}",
+          "contentHash": "sha256:a4feaea8702d559c3ad4ffc6fb55ac6abe63fe9a9836e8ce569831f4b3bc461e"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 25
+  },
+  "reply": {
+    "requestId": "f9183ce1-a707-4866-9b6e-5264ee1f1a95",
+    "documentVersion": 1,
+    "snapshotId": "335b6d4f-7496-41fa-b376-e71ff8c6a378",
+    "sourceHash": "sha256:a77e097d7bc1eaf4aaf459c815a9e00b1ef6e8ec7fa6ada238a23bead7bf6da3",
+    "sourcePath": "main.cpp",
+    "offset": 25,
+    "status": "succeeded",
+    "items": [],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "reason": "suppressed-block-comment"
+  },
+  "adapterMs": 7.106800000000021,
+  "native": {
+    "result": {
+      "requestId": "f9183ce1-a707-4866-9b6e-5264ee1f1a95",
+      "documentVersion": 1,
+      "snapshotId": "335b6d4f-7496-41fa-b376-e71ff8c6a378",
+      "sourceHash": "sha256:a77e097d7bc1eaf4aaf459c815a9e00b1ef6e8ec7fa6ada238a23bead7bf6da3",
+      "sourcePath": "main.cpp",
+      "offset": 25,
+      "status": "succeeded",
+      "items": [],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "reason": "suppressed-block-comment"
+    },
+    "native": null
+  },
+  "checks": {
+    "expected": [],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "oracle-infrastructure",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "--test",
+    "tests/completion-fixtures-checks.mjs",
+    "tests/completion-oracle-checks.mjs",
+    "tests/completion-fix-fixtures-checks.mjs",
+    "tests/completion-fix-oracle-checks.mjs",
+    "tests/completion-fix-callability-oracle-checks.mjs"
+  ],
+  "environmentOverrides": {},
+  "startedAt": "2026-10-31T02:17:18.213Z",
+  "endedAt": "2026-10-31T02:17:18.633Z",
+  "elapsedMs": 419.97359999999753,
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

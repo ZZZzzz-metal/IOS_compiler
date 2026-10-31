@@ -1,0 +1,4 @@
+COMPLETION: Pattern : alignas(<#expression#>)
+COMPLETION: Pattern : [#size_t#]alignof(<#type#>)
+COMPLETION: alphaFunction : [#int#]alphaFunction(<#int x#>)
+COMPLETION: alphaLocal : [#int#]alphaLocal

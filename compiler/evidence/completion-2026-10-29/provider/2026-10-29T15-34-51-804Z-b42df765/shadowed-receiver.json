@@ -1,0 +1,109 @@
+{
+  "request": {
+    "requestId": "dad63e2d-e53f-4a6d-a15b-ee3726d31eeb",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "b85406c1-bf4c-4116-a0a7-24ec451ea49b",
+      "sourceHash": "sha256:7bf9835ea1bf4e721d14c58408989dc10b8414a95fdf09e8c0de75f3db0b4658",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Node{int value;}; void f(){Node n; {int n; n.;}}",
+          "contentHash": "sha256:ae2678e4c115aeb4abbcce4882f8a456fb6bc9e91402195a088d6c7f849111ac"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 52
+  },
+  "reply": {
+    "requestId": "dad63e2d-e53f-4a6d-a15b-ee3726d31eeb",
+    "documentVersion": 1,
+    "snapshotId": "b85406c1-bf4c-4116-a0a7-24ec451ea49b",
+    "sourceHash": "sha256:7bf9835ea1bf4e721d14c58408989dc10b8414a95fdf09e8c0de75f3db0b4658",
+    "sourcePath": "main.cpp",
+    "offset": 52,
+    "status": "succeeded",
+    "items": [],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 14.024699999999939,
+  "native": {
+    "result": {
+      "requestId": "dad63e2d-e53f-4a6d-a15b-ee3726d31eeb",
+      "documentVersion": 1,
+      "snapshotId": "b85406c1-bf4c-4116-a0a7-24ec451ea49b",
+      "sourceHash": "sha256:7bf9835ea1bf4e721d14c58408989dc10b8414a95fdf09e8c0de75f3db0b4658",
+      "sourcePath": "main.cpp",
+      "offset": 52,
+      "status": "succeeded",
+      "items": [],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:53",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 53
+      }
+    },
+    "metrics": {
+      "totalMs": 13.363000000000056,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [],
+    "absent": [
+      "value"
+    ],
+    "sourceUnchanged": true
+  }
+}

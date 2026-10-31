@@ -1,0 +1,91 @@
+{
+  "result": {
+    "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-pattern-function",
+    "documentVersion": 29,
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-pattern-function-snapshot",
+    "sourceHash": "sha256:0f4702fe2dadb030d21e22bb199b0b39aaa8562f9f7c9ea7a20dbecf62f0f030",
+    "sourcePath": "main.cpp",
+    "offset": 59,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:4e6d6fde99cad04b5704ed01d3f7183830a41ed6c219adc58b7163262150bbb3",
+        "label": "Pattern",
+        "kind": "unknown",
+        "detail": "int Pattern(int input)",
+        "insertText": "Pattern",
+        "replaceRange": {
+          "startOffset": 56,
+          "endOffset": 59
+        },
+        "filterText": "Pattern"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "native": {
+    "argv": [
+      "clang",
+      "-cc1",
+      "-fsyntax-only",
+      "-triple",
+      "wasm32-unknown-wasi",
+      "-main-file-name",
+      "main.cpp",
+      "-disable-free",
+      "-isysroot",
+      "/",
+      "-internal-isystem",
+      "/include/c++/v1",
+      "-internal-isystem",
+      "/lib/clang/8.0.1/include",
+      "-internal-isystem",
+      "/include",
+      "-I",
+      "/project",
+      "-ferror-limit",
+      "20",
+      "-fmessage-length",
+      "0",
+      "-std=c++17",
+      "-x",
+      "c++",
+      "-code-completion-at=/project/main.cpp:2:19",
+      "/project/main.cpp"
+    ],
+    "exitCode": 0,
+    "stdout": "COMPLETION: Pattern : [#int#]Pattern(<#int input#>)\n",
+    "stderr": "",
+    "memoryBytes": 7012352,
+    "position": {
+      "line": 2,
+      "byteColumn": 19
+    }
+  },
+  "metrics": {
+    "totalMs": 14.950200000000223,
+    "filesystemLinearMemoryBytes": 9437184,
+    "compilerLinearMemoryBytes": 7012352
+  },
+  "resourceReads": [
+    {
+      "path": "vendor/wasm-clang/memfs",
+      "byteLength": 345442,
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+    },
+    {
+      "path": "vendor/wasm-clang/sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    {
+      "path": "vendor/wasm-clang/clang",
+      "byteLength": 31214472,
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    }
+  ]
+}

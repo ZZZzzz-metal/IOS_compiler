@@ -1,0 +1,76 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-char-case",
+  "documentVersion": 26,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-char-case-snapshot",
+  "sourceHash": "sha256:5e0a5b7bca80c9033c058a7b2de43a47cd90ecfba8bd92699da4535b88f767ee",
+  "sourcePath": "main.cpp",
+  "offset": 107,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:5cdd09bb584a7b8ffe150812067a05523a216482c9db04b4e10bb51cd51059de",
+      "label": "amplitude",
+      "kind": "unknown",
+      "detail": "int amplitude",
+      "insertText": "amplitude",
+      "replaceRange": {
+        "startOffset": 107,
+        "endOffset": 107
+      },
+      "filterText": "amplitude"
+    },
+    {
+      "id": "sha256:9fcdef53a5bec3737d79c940e18843f5d51471b8c3e424a4684c1ff14680d868",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Signal & operator=(const Signal &)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 107,
+        "endOffset": 107
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:37b7a2a646f654251a27f42f989a8f51ee65a89736cd81ea52a2d7ff15b1cd5d",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Signal & operator=(Signal &&)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 107,
+        "endOffset": 107
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:b944df8ab66bf2d2e48743b02c144dc573c08dc82face090fba74871ee751beb",
+      "label": "Signal",
+      "kind": "unknown",
+      "detail": "Signal::",
+      "insertText": "Signal",
+      "replaceRange": {
+        "startOffset": 107,
+        "endOffset": 107
+      },
+      "filterText": "Signal"
+    },
+    {
+      "id": "sha256:94139afa1d0f708f60c6aed0b8389088f9d3f3a4c2ba3e5aff366e8b6b116571",
+      "label": "~Signal",
+      "kind": "unknown",
+      "detail": "void ~Signal()",
+      "insertText": "~Signal",
+      "replaceRange": {
+        "startOffset": 107,
+        "endOffset": 107
+      },
+      "filterText": "~Signal"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

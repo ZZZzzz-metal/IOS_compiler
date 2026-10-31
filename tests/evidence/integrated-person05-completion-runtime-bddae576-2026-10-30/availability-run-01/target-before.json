@@ -1,0 +1,131 @@
+{
+  "targetPath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+  "expectedCommit": "bddae57653bede9a38a3510006d761e2a9d19a04",
+  "fingerprints": [
+    {
+      "file": "compiler/resources/toolchain.lock.json",
+      "byteLength": 6149,
+      "sha256": "sha256:a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d"
+    },
+    {
+      "file": "compiler/src/compiler-adapter.mjs",
+      "byteLength": 5418,
+      "sha256": "sha256:0cf84c9c6a845ad9d893dfce47c84bbbf1561d6ac7784280374c833b39d41ab9"
+    },
+    {
+      "file": "compiler/src/compiler-probe.mjs",
+      "byteLength": 3912,
+      "sha256": "sha256:40327315c54e4307d8faf322ad64ed0da248e8849f9ed72ad7d691e52cafd648"
+    },
+    {
+      "file": "compiler/src/compiler-worker.mjs",
+      "byteLength": 2400,
+      "sha256": "sha256:b3011c7601b957f28e358216d8a4ecfe1a339b0201b4acd32245b9e7115c1416"
+    },
+    {
+      "file": "compiler/src/completion-adapter.mjs",
+      "byteLength": 9691,
+      "sha256": "sha256:46d3781df46c073ed2471b9156ab63fa7034c0e9564166202ec04169aeed14bd"
+    },
+    {
+      "file": "compiler/src/completion-engine.mjs",
+      "byteLength": 4621,
+      "sha256": "sha256:2b8b4e531e9ec1eb54325d39aa513846e403ae34b648fffc9aeadca820f6670d"
+    },
+    {
+      "file": "compiler/src/completion-output.mjs",
+      "byteLength": 1956,
+      "sha256": "sha256:6321fd93e9fbfeccfebe29654f236c335aac4cc7d7d09c934d35f5e74d325a99"
+    },
+    {
+      "file": "compiler/src/completion-source.mjs",
+      "byteLength": 5337,
+      "sha256": "sha256:1e8e61a9c35bc42176bc92a6efbc7a04884bbf1b0d0fca9b538feb5c14a9e3ce"
+    },
+    {
+      "file": "compiler/src/completion-worker.mjs",
+      "byteLength": 2313,
+      "sha256": "sha256:a3621e52c1811e0de3bc891e708be57225bcb48056c0676e832d203527ff80a0"
+    },
+    {
+      "file": "compiler/src/diagnostics.mjs",
+      "byteLength": 3218,
+      "sha256": "sha256:14399bd23b8eb131a20196d0ed926db1243ace34bda42a221bae687378bfbad3"
+    },
+    {
+      "file": "compiler/src/node-probe.mjs",
+      "byteLength": 295,
+      "sha256": "sha256:fc51bed8fa074151af0bc2b0343fe6a2502206e76b8376f89e470aaa919860f0"
+    },
+    {
+      "file": "compiler/src/service-worker-template.js",
+      "byteLength": 2763,
+      "sha256": "sha256:cd316c840d30b53f394977c031e9fea7b218e928972ad28c273ccaef5957ca4c"
+    },
+    {
+      "file": "compiler/src/source.mjs",
+      "byteLength": 7201,
+      "sha256": "sha256:4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+    },
+    {
+      "file": "compiler/src/toolchain-engine.mjs",
+      "byteLength": 7649,
+      "sha256": "sha256:03695bb52cbf7f4ab024ef773fca630eecb01c5452faa0f54fc055b574bbe3b5"
+    },
+    {
+      "file": "compiler/src/wasm-host.mjs",
+      "byteLength": 6856,
+      "sha256": "sha256:ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73"
+    },
+    {
+      "file": "compiler/src/wasm-inspect.mjs",
+      "byteLength": 1825,
+      "sha256": "sha256:dfd5ae8ea29df1b266775250e3f07e3181ef3a48bd49ae97cbcf6b929df63a21"
+    },
+    {
+      "file": "contracts/README.md",
+      "byteLength": 9096,
+      "sha256": "sha256:ee514cb661e6f2db70c98e9d61686d5cb8cdbb1507bd656579b313b133f82e43"
+    },
+    {
+      "file": "contracts/capabilities.json",
+      "byteLength": 21256,
+      "sha256": "sha256:4f727ff3669658907ed98fae841901a236ebe9bbb8497060a77d2b6c1599cd13"
+    },
+    {
+      "file": "contracts/checks/invariants.test.mjs",
+      "byteLength": 9490,
+      "sha256": "sha256:3ee5ce1553bf40db8cb2ca421107f6a00ba34dee3bd297c7aab3fcc3d6b9be23"
+    },
+    {
+      "file": "contracts/compatibility-profiles.json",
+      "byteLength": 307,
+      "sha256": "sha256:c350debe885bcee8f4c39f7b870184e14255ce64070d1d6a42fe913014a3cd47"
+    },
+    {
+      "file": "contracts/completion.d.ts",
+      "byteLength": 2406,
+      "sha256": "sha256:f04734f4b1db5ef042f1f6299cab97664cfc080a5b5bb8f8d50ac3e997dac132"
+    },
+    {
+      "file": "contracts/invariants.mjs",
+      "byteLength": 9208,
+      "sha256": "sha256:5d1e2a4ccb20cc551476fa7942ef85fd335c64ea3fe21b18dc5a9e9bcfd48e5c"
+    },
+    {
+      "file": "contracts/offline-bundle.json",
+      "byteLength": 265,
+      "sha256": "sha256:d1174a23123aeff163fcb182b147a5ebd284baea315fa720b4bd6bcf1d3910e0"
+    },
+    {
+      "file": "contracts/protocol.d.ts",
+      "byteLength": 8454,
+      "sha256": "sha256:1945c939cf27e40696f8e151631e15b69c97f7648a7a3b6fad134e52947457a2"
+    },
+    {
+      "file": "contracts/source-hash-vectors.json",
+      "byteLength": 2000,
+      "sha256": "sha256:62aa493ca075d7920e274f76360defc95ccc3916b8d50b433f79dc652cbd8360"
+    }
+  ]
+}

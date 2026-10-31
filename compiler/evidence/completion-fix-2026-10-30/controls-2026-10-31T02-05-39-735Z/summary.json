@@ -1,0 +1,298 @@
+{
+  "scope": "Owner02 self-test; owner05 fixed-target verification remains separate",
+  "inputs": [
+    {
+      "path": "tests/lib/completion-fix-fixtures.mjs",
+      "sha256": "sha256:b5711d16667b4110a14f778432d463509a8a516a0f39a1c8024a6aa9a6e93858",
+      "byteLength": 10319
+    },
+    {
+      "path": "tests/lib/completion-fix-oracle.mjs",
+      "sha256": "sha256:ad47cb7437b62b6309a45509b7ad84bfd9ce55b35f6a336c4cc77c71d58eb1e0",
+      "byteLength": 2097
+    },
+    {
+      "path": "tests/lib/completion-fixtures.mjs",
+      "sha256": "sha256:282c77eedbf858b06a77613cc8cc2569c40173230d4e7a3fad36098b8079435d",
+      "byteLength": 5660
+    },
+    {
+      "path": "tests/lib/completion-oracle.mjs",
+      "sha256": "sha256:3c0928bf06c7ee4808c969adebd69532c419f18112431d0500d89c2e94d2cf28",
+      "byteLength": 6511
+    }
+  ],
+  "frozen": "bef7bc973780e55d5eecdcdfc0e7da1c3d1c6fad",
+  "nonce": "9c3158ded821871b",
+  "queriesPassed": 11,
+  "controlsPassed": 24,
+  "observations": [
+    {
+      "id": "fix-alias-const",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 64,
+        "errors": []
+      }
+    },
+    {
+      "id": "fix-alias-mutable",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 144,
+        "errors": []
+      }
+    },
+    {
+      "id": "fix-template-const",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 3,
+        "errors": []
+      }
+    },
+    {
+      "id": "fix-template-mutable",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 8,
+        "errors": []
+      }
+    },
+    {
+      "id": "fix-overload-const",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 2,
+        "errors": []
+      }
+    },
+    {
+      "id": "fix-overload-mutable",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 6,
+        "errors": []
+      }
+    },
+    {
+      "id": "fix-unavailable-definition",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 2,
+        "errors": []
+      }
+    },
+    {
+      "id": "fix-unavailable-declaration",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 2,
+        "errors": []
+      }
+    },
+    {
+      "id": "fix-unavailable-header",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 2,
+        "errors": []
+      }
+    },
+    {
+      "id": "fix-unavailable-overload",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 2,
+        "errors": []
+      }
+    },
+    {
+      "id": "fix-unavailable-namespace-context",
+      "verdict": {
+        "verdict": "passed",
+        "originalVerdict": "passed",
+        "itemCount": 1,
+        "errors": []
+      }
+    }
+  ],
+  "controls": [
+    {
+      "fixture": "fix-alias-const",
+      "id": "read-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-alias-const",
+      "id": "append-negative",
+      "status": "failed",
+      "passed": true
+    },
+    {
+      "fixture": "fix-alias-mutable",
+      "id": "append-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-template-const",
+      "id": "read-template-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-template-const",
+      "id": "write-negative",
+      "status": "failed",
+      "passed": true
+    },
+    {
+      "fixture": "fix-template-const",
+      "id": "ingest-template-negative",
+      "status": "failed",
+      "passed": true
+    },
+    {
+      "fixture": "fix-template-mutable",
+      "id": "write-template-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-overload-const",
+      "id": "const-overload-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-overload-const",
+      "id": "mutable-overload-negative",
+      "status": "failed",
+      "passed": true
+    },
+    {
+      "fixture": "fix-overload-mutable",
+      "id": "both-overloads-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-definition",
+      "id": "allowed-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-definition",
+      "id": "unavailable-negative",
+      "status": "failed",
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-definition",
+      "id": "deprecated-warning-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-declaration",
+      "id": "allowed-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-declaration",
+      "id": "unavailable-negative",
+      "status": "failed",
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-declaration",
+      "id": "deprecated-warning-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-header",
+      "id": "allowed-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-header",
+      "id": "unavailable-negative",
+      "status": "failed",
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-header",
+      "id": "deprecated-warning-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-overload",
+      "id": "available-overload-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-overload",
+      "id": "unavailable-overload-negative",
+      "status": "failed",
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-overload",
+      "id": "deprecated-warning-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-namespace-context",
+      "id": "other-namespace-allowed-positive",
+      "status": "compiled",
+      "smokeExitCode": 0,
+      "passed": true
+    },
+    {
+      "fixture": "fix-unavailable-namespace-context",
+      "id": "unavailable-namespace-negative",
+      "status": "failed",
+      "passed": true
+    }
+  ],
+  "completionIdentity": {
+    "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+    "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "fullCompilerHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "originalUnchanged": true
+}

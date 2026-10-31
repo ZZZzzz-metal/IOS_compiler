@@ -1,0 +1,73 @@
+{
+  "id": "12-shadowed-variable",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "targetPath": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "markedText": "double sample = 0.5;\nint main() { int sample = 3; sam@; }\n"
+    }
+  ],
+  "observations": [
+    "sample"
+  ],
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 53,
+    "line": 2,
+    "utf16Column": 33,
+    "utf8ByteColumn": 33,
+    "linePrefix": "int main() { int sample = 3; sam",
+    "prefixAtCursor": "sam",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "snapshot": {
+    "snapshotId": "native-probe-12-shadowed-variable",
+    "sourceHash": "sha256:fcb906d62411b1981afef731bb5b82dc3c51e20dcff8836fe8425285a3675a35",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "double sample = 0.5;\nint main() { int sample = 3; sam; }\n",
+        "contentHash": "sha256:844427720e2fa5e8bdbecdad5603a921d17a997be9e498ce934df72d911839dd"
+      }
+    ]
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:2:33",
+    "/project/main.cpp"
+  ]
+}

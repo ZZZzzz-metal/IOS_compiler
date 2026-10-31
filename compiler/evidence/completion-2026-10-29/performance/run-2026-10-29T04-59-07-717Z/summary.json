@@ -1,0 +1,225 @@
+{
+  "experiment": "CC-20261029-02",
+  "recordedAtUtc": "2026-10-29T04:59:12.286Z",
+  "baseCommit": "4f48884493689eb97de62a7a0af597046e961939",
+  "environment": {
+    "node": "v24.19.0",
+    "v8": "13.6.233.17-node.51",
+    "platform": "win32",
+    "arch": "x64",
+    "release": "10.0.26200",
+    "cpu": "Intel(R) Core(TM) Ultra 9 275HX",
+    "logicalCpus": 24
+  },
+  "script": {
+    "path": "compiler/experiments/completion-2026-10-29/measure.mjs",
+    "byteLength": 17510,
+    "sha256": "a5045e629a7e54883de06f5125913aba97e5724ce06ee314503b3e29da8b9bb6"
+  },
+  "host": {
+    "path": "compiler/src/wasm-host.mjs",
+    "byteLength": 6856,
+    "sha256": "ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73"
+  },
+  "sourceCases": [
+    {
+      "id": "small-member",
+      "markedSource": "struct Item { int count; double weight; void reset(); };\nint main() { Item item; item./*CURSOR*/ }\n",
+      "expectedLabels": [
+        "count",
+        "weight",
+        "reset"
+      ],
+      "source": "struct Item { int count; double weight; void reset(); };\nint main() { Item item; item. }\n",
+      "line": 2,
+      "utf8Column": 30
+    },
+    {
+      "id": "vector-member",
+      "markedSource": "#include <vector>\n#include <string>\nint main() { std::vector<std::string> values; values./*CURSOR*/ }\n",
+      "expectedLabels": [
+        "push_back",
+        "size",
+        "clear"
+      ],
+      "source": "#include <vector>\n#include <string>\nint main() { std::vector<std::string> values; values. }\n",
+      "line": 3,
+      "utf8Column": 54
+    },
+    {
+      "id": "string-member",
+      "markedSource": "#include <vector>\n#include <string>\nint main() { std::string text; text./*CURSOR*/ }\n",
+      "expectedLabels": [
+        "append",
+        "size",
+        "substr"
+      ],
+      "source": "#include <vector>\n#include <string>\nint main() { std::string text; text. }\n",
+      "line": 3,
+      "utf8Column": 37
+    }
+  ],
+  "trials": 3,
+  "requests": 30,
+  "childProcesses": [
+    {
+      "trial": 1,
+      "childWallMs": 1382.5,
+      "stderr": ""
+    },
+    {
+      "trial": 2,
+      "childWallMs": 1450.056,
+      "stderr": ""
+    },
+    {
+      "trial": 3,
+      "childWallMs": 1370.321,
+      "stderr": ""
+    }
+  ],
+  "coldLoadMs": {
+    "count": 3,
+    "min": 73.237,
+    "median": 76.083,
+    "max": 82.768
+  },
+  "initialRequestMs": {
+    "count": 3,
+    "min": 62.665,
+    "median": 63.434,
+    "max": 73.819
+  },
+  "initialLoadPlusRequestMs": {
+    "count": 3,
+    "min": 136.671,
+    "median": 138.748,
+    "max": 156.587
+  },
+  "comparisons": [
+    {
+      "caseId": "small-member",
+      "requestCount": 12,
+      "exitCodes": [
+        0
+      ],
+      "distinctStdoutHashes": [
+        "65dc3a58b623273e75ad7aad3d8647b2fcbb3ce50f65838139c1884c1432962d"
+      ],
+      "distinctStderrHashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "expectedLabelsAlwaysFound": true,
+      "warmRequestMs": {
+        "count": 9,
+        "min": 14.75,
+        "median": 15.935,
+        "max": 19.332
+      },
+      "warmClangInstantiationMs": {
+        "count": 9,
+        "min": 4.719,
+        "median": 5.505,
+        "max": 6.435
+      },
+      "compilerAfterExecutionBytes": [
+        7012352
+      ],
+      "filesystemAfterExecutionBytes": [
+        9437184
+      ]
+    },
+    {
+      "caseId": "vector-member",
+      "requestCount": 9,
+      "exitCodes": [
+        0
+      ],
+      "distinctStdoutHashes": [
+        "f53dff8858bbf277acf7a72f65bf252e7f95bbd8c49d56feff4fbaeb61fb4e50"
+      ],
+      "distinctStderrHashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "expectedLabelsAlwaysFound": true,
+      "warmRequestMs": {
+        "count": 9,
+        "min": 139.721,
+        "median": 162.89,
+        "max": 351.217
+      },
+      "warmClangInstantiationMs": {
+        "count": 9,
+        "min": 4.839,
+        "median": 5.611,
+        "max": 6.197
+      },
+      "compilerAfterExecutionBytes": [
+        17563648
+      ],
+      "filesystemAfterExecutionBytes": [
+        9437184
+      ]
+    },
+    {
+      "caseId": "string-member",
+      "requestCount": 9,
+      "exitCodes": [
+        0
+      ],
+      "distinctStdoutHashes": [
+        "5e29884e0bcc5b157b50a950cf31d3afb03441cd57c71ad165981f53aae25fc6"
+      ],
+      "distinctStderrHashes": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "expectedLabelsAlwaysFound": true,
+      "warmRequestMs": {
+        "count": 9,
+        "min": 141.516,
+        "median": 148.883,
+        "max": 171.023
+      },
+      "warmClangInstantiationMs": {
+        "count": 9,
+        "min": 4.913,
+        "median": 5.542,
+        "max": 6.487
+      },
+      "compilerAfterExecutionBytes": [
+        17301504
+      ],
+      "filesystemAfterExecutionBytes": [
+        9437184
+      ]
+    }
+  ],
+  "loadedLld": false,
+  "allExpectedCompletionOutputPresent": true,
+  "allRepeatedOutputsIdentical": true,
+  "unsafeSameInstance": {
+    "exitCode": null,
+    "exception": {
+      "name": "RuntimeError",
+      "message": "null function or function signature mismatch"
+    },
+    "executionMs": 1.898,
+    "stdout": "",
+    "stderr": "",
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdoutMatchesFirst": false,
+    "stderrMatchesFirst": true,
+    "compilerAfterExecution": 7012352,
+    "filesystemAfterExecution": 9437184
+  },
+  "sameInstanceReuseSupported": false,
+  "methodology": [
+    "Three fresh Node processes, sequential; each reads and verifies ONLY memfs/sysroot.tar/clang, then compiles memfs and clang Modules once.",
+    "Each process runs one first small-member completion and three subsequent requests per case, always fresh memfs instance/FS and Clang Instance.",
+    "No lld bytes, shared.js, network, object generation, link, program run, browser UI or worker message scheduling are part of this experiment.",
+    "Fresh process does not imply cold OS file cache. V8 lazy compilation/tiering is included in execution times and can affect warm results.",
+    "Module-object reuse is measured; compiler Instance reuse is explicitly unsupported and probed separately with a timeout.",
+    "Stage-end visible Wasm linear memory byte lengths only; not peak memory, process RSS, committed physical memory, browser memory, or an iPad measurement."
+  ]
+}

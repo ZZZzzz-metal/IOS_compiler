@@ -1,0 +1,18 @@
+{
+  "caseId": "shadow-restored",
+  "path": "native",
+  "startedAt": "2026-10-29T16:30:33.705Z",
+  "elapsedMs": 19.874799999999595,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 5,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:6:12",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:6:12"
+    ],
+    "passed": true
+  }
+}

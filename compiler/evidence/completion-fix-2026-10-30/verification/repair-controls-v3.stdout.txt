@@ -1,0 +1,1 @@
+{"evidence":"file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-02/compiler/evidence/completion-fix-2026-10-30/controls-2026-10-31T02-05-39-735Z/","queriesPassed":11,"controlsPassed":24}

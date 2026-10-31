@@ -1,0 +1,151 @@
+{
+  "result": {
+    "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-access-control",
+    "documentVersion": 4,
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-access-control-snapshot",
+    "sourceHash": "sha256:2585112526d5f30ce296807b8785662c5e09e2feb96c845212fc58ed4a17fd00",
+    "sourcePath": "main.cpp",
+    "offset": 169,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:606492807ec42cc7c2667cceedac5dbf9c4f6bd1b9f9467de7323716ea4a5614",
+        "label": "inspect",
+        "kind": "unknown",
+        "detail": "int inspect() const",
+        "insertText": "inspect",
+        "replaceRange": {
+          "startOffset": 169,
+          "endOffset": 169
+        },
+        "filterText": "inspect"
+      },
+      {
+        "id": "sha256:cb0483ccb57f9eb70c0bfce5d3841fb4a9fa76ef9709eebeeed4757ff800c9ec",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Vault & operator=(const Vault &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 169,
+          "endOffset": 169
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:c3262067a7d2b439a70e7c38a96d02f30edf348451b5c58ed16c168d7747cb63",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Vault & operator=(Vault &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 169,
+          "endOffset": 169
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:d73cdf8fb5c884d8910b4c56006c646138e4de99e6ccf2234382056a4136e1fa",
+        "label": "Vault",
+        "kind": "unknown",
+        "detail": "Vault::",
+        "insertText": "Vault",
+        "replaceRange": {
+          "startOffset": 169,
+          "endOffset": 169
+        },
+        "filterText": "Vault"
+      },
+      {
+        "id": "sha256:4e9357007d654d0e36c4095dcc77ea5997e396b2513c1ba46f4855d9b67b3bba",
+        "label": "visible",
+        "kind": "unknown",
+        "detail": "int visible",
+        "insertText": "visible",
+        "replaceRange": {
+          "startOffset": 169,
+          "endOffset": 169
+        },
+        "filterText": "visible"
+      },
+      {
+        "id": "sha256:8b21333be5b3efbbcfa05e686bf0b9e63f4db120f0974aaf15d3016805e3f2ab",
+        "label": "~Vault",
+        "kind": "unknown",
+        "detail": "void ~Vault()",
+        "insertText": "~Vault",
+        "replaceRange": {
+          "startOffset": 169,
+          "endOffset": 169
+        },
+        "filterText": "~Vault"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+    "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "native": {
+    "argv": [
+      "clang",
+      "-cc1",
+      "-fsyntax-only",
+      "-triple",
+      "wasm32-unknown-wasi",
+      "-main-file-name",
+      "main.cpp",
+      "-disable-free",
+      "-isysroot",
+      "/",
+      "-internal-isystem",
+      "/include/c++/v1",
+      "-internal-isystem",
+      "/lib/clang/8.0.1/include",
+      "-internal-isystem",
+      "/include",
+      "-I",
+      "/project",
+      "-ferror-limit",
+      "20",
+      "-fmessage-length",
+      "0",
+      "-std=c++17",
+      "-x",
+      "c++",
+      "-code-completion-at=/project/main.cpp:10:37",
+      "/project/main.cpp"
+    ],
+    "exitCode": 0,
+    "stdout": "COMPLETION: guarded (Inaccessible) : [#int#]guarded\nCOMPLETION: inspect : [#int#]inspect()[# const#]\nCOMPLETION: operator= : [#Vault &#]operator=(<#const Vault &#>)\nCOMPLETION: operator= : [#Vault &#]operator=(<#Vault &&#>)\nCOMPLETION: secret (Inaccessible) : [#int#]secret\nCOMPLETION: Vault : Vault::\nCOMPLETION: visible : [#int#]visible\nCOMPLETION: ~Vault : [#void#]~Vault()\n",
+    "stderr": "",
+    "memoryBytes": 7012352,
+    "position": {
+      "line": 10,
+      "byteColumn": 37
+    }
+  },
+  "metrics": {
+    "totalMs": 20.802299999999832,
+    "filesystemLinearMemoryBytes": 9437184,
+    "compilerLinearMemoryBytes": 7012352
+  },
+  "resourceReads": [
+    {
+      "path": "vendor/wasm-clang/memfs",
+      "byteLength": 345442,
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+    },
+    {
+      "path": "vendor/wasm-clang/sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    {
+      "path": "vendor/wasm-clang/clang",
+      "byteLength": 31214472,
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    }
+  ]
+}

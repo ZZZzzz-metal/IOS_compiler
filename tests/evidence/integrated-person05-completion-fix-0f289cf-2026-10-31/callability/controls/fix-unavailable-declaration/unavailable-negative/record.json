@@ -1,0 +1,61 @@
+{
+  "fixtureId": "fix-unavailable-declaration",
+  "controlId": "unavailable-negative",
+  "controlSet": "original-11-controls",
+  "startedAt": "2026-10-31T02:16:52.318Z",
+  "passed": true,
+  "sourceHash": "sha256:f552dedcf9bba62e1f5f7ad8731ea2745f90adc578381a9e451f40d1e2ac038b",
+  "actualStatus": "failed",
+  "reason": "compiler-exit",
+  "elapsedMs": 578.9213,
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "person05-unavailable"
+  },
+  "semantic": {
+    "kind": "unavailable",
+    "member": "surface_declaration_a8ee505af129_blocked",
+    "sourcePath": "main.cpp",
+    "line": 9,
+    "errorPattern": "person05-unavailable"
+  },
+  "diagnosticGroups": [
+    {
+      "index": 0,
+      "error": {
+        "severity": "error",
+        "message": "call to unavailable function 'surface_declaration_a8ee505af129_blocked': person05-unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 9,
+            "column": 10
+          }
+        }
+      },
+      "notes": [
+        {
+          "severity": "note",
+          "message": "candidate function has been explicitly made unavailable",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 5,
+              "column": 5
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "binaryEvidence": {},
+  "actualCompilerIdentity": {
+    "toolchainId": null,
+    "compilerResourceHash": null,
+    "linkerResourceHash": null,
+    "sysrootResourceHash": null
+  },
+  "workersReleased": true
+}

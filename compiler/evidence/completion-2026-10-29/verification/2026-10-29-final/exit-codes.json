@@ -1,0 +1,8 @@
+{
+  "check": 0,
+  "contracts": 0,
+  "compiler": 0,
+  "node": "v24.19.0",
+  "base": "38ff3075a4b47c3f72ae2f6552a04e58da07d6c0",
+  "scope": "Desktop Node checks; no browser/iPad claim"
+}

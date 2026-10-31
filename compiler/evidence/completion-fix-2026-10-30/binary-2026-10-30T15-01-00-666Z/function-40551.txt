@@ -1,0 +1,12 @@
+{"index":40551,"type":{"params":[127,127,127,127,127,127],"results":[127]},"locals":[]}
+11ce8e8 local.get 0
+11ce8ea local.get 1
+11ce8ec i32.load 2 44
+11ce8ef local.get 1
+11ce8f1 i32.load 2 40
+11ce8f4 local.get 2
+11ce8f6 local.get 3
+11ce8f8 local.get 4
+11ce8fa local.get 5
+11ce8fc call 40552
+11ce900 end 

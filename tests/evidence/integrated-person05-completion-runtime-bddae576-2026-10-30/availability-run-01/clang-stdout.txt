@@ -1,0 +1,3 @@
+COMPLETION: personAllowed : [#int#]personAllowed()
+COMPLETION: personBlocked : [#int#]personBlocked()
+COMPLETION: personDeprecated : [#int#]personDeprecated()

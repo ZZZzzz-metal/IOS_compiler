@@ -1,0 +1,19 @@
+{
+  "id": "nonbmp-prefix",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 23.806099999999788,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:1:58",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:1:58"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

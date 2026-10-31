@@ -1,0 +1,7 @@
+/project/main.cpp:9:30: error: 'cross_a8ee505af129_read' is unavailable: person05-unavailable
+  return AreaA_a8ee505af129::cross_a8ee505af129_read();
+                             ^
+/project/main.cpp:2:58: note: 'cross_a8ee505af129_read' has been explicitly marked unavailable here
+__attribute__((unavailable("person05-unavailable"))) int cross_a8ee505af129_read() { return 0; }
+                                                         ^
+1 error generated.

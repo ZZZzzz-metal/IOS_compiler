@@ -1,0 +1,60 @@
+{
+  "input": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "95215854-8a79-42e0-a3f8-9273eff8051b",
+    "mode": "debug",
+    "optimization": "O0",
+    "snapshot": {
+      "snapshotId": "cb6798a1-fc33-47eb-9c9b-64f2714aedb1",
+      "sourceHash": "sha256:d4af980f7281e015d9a30eefd827979cf56c12b14801eb66413671c2ccf603ee",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_declaration_9c3158ded821871b_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_9c3158ded821871b_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_9c3158ded821871b_deprecated();\nint surface_declaration_9c3158ded821871b_allowed() { return 0; }\nint surface_declaration_9c3158ded821871b_blocked() { return 0; }\nint surface_declaration_9c3158ded821871b_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_9c3158ded821871b_blocked();\n}\n",
+          "contentHash": "sha256:3c073bb10a9aa0a56c5980d4140c4dad8a27f861a0617088c2797be342fdd5bd"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "person05-unavailable"
+  },
+  "actual": {
+    "status": "failed",
+    "requestId": "95215854-8a79-42e0-a3f8-9273eff8051b",
+    "sourceHash": "sha256:d4af980f7281e015d9a30eefd827979cf56c12b14801eb66413671c2ccf603ee",
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "call to unavailable function 'surface_declaration_9c3158ded821871b_blocked': person05-unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 9,
+            "column": 10
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "candidate function has been explicitly made unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 5,
+            "column": 5
+          }
+        }
+      }
+    ],
+    "reason": "compiler-exit",
+    "rawDiagnostics": "/project/main.cpp:9:10: error: call to unavailable function 'surface_declaration_9c3158ded821871b_blocked': person05-unavailable\n  return surface_declaration_9c3158ded821871b_blocked();\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/project/main.cpp:5:5: note: candidate function has been explicitly made unavailable\nint surface_declaration_9c3158ded821871b_blocked() { return 0; }\n    ^\n1 error generated.\n"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "requestId": "CC-20261029-05",
+  "fixedTarget": "bddae57653bede9a38a3510006d761e2a9d19a04",
+  "candidate": "integration-prototype-80135c59f01b26fc",
+  "verdict": "backend core tested; availability boundaries failed; UI/package/iPad acceptance pending",
+  "primaryCounts": {
+    "passed": 29,
+    "failed": 0,
+    "boundary-failed": 1,
+    "infrastructure-failed": 0,
+    "ui-pending": 3,
+    "pending": 0
+  },
+  "completedPrimaryResponses": 60,
+  "supplementalAvailabilityLogicalCases": 1,
+  "supplementalAvailabilityVerdict": "boundary-failed in both routes",
+  "lifecycle": {
+    "scenarios": 7,
+    "passed": 7,
+    "checks": 25,
+    "actualCompleteCalls": 7,
+    "realWorkersReleased": 6
+  },
+  "routineChecks": 276,
+  "controlledOfflineChecks": 23,
+  "oracleInfrastructureChecks": 16,
+  "callabilityControlsVerified": true,
+  "allTargetChecksUnchanged": true,
+  "precommit": [
+    {
+      "id": "check",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "startedAt": "2026-10-29T16:47:27.693Z",
+      "endedAt": "2026-10-29T16:47:28.939Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "id": "contracts",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "startedAt": "2026-10-29T16:47:28.942Z",
+      "endedAt": "2026-10-29T16:47:29.638Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    }
+  ],
+  "originalFailuresPreserved": true,
+  "pending": [
+    "UI and controlled editing concurrency",
+    "immutable new offline package and stopped-server fresh-source completion/compile/debug",
+    "physical iPad/Safari/keyboard/touch/IME/performance",
+    "draft durability and G2/G3"
+  ]
+}

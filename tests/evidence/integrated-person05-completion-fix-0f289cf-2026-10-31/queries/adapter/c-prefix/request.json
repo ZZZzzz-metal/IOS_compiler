@@ -1,0 +1,24 @@
+{
+  "language": "c",
+  "standard": "c11",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-c-prefix",
+  "documentVersion": 24,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-c-prefix-snapshot",
+    "sourceHash": "sha256:b9c757a352b942f12b48cc3b1f1a09207b6336a02db5b5b1b71bb0ba60c6115d",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.c",
+    "files": [
+      {
+        "path": "main.c",
+        "role": "user",
+        "text": "void probe(void) { int cedarCount = 4; int cedarTotal = 8; ced }\n",
+        "contentHash": "sha256:ed343704574d4841eae25184ce97e3afdb9f6ae543646829a2067bf7d834ab79"
+      }
+    ]
+  },
+  "sourcePath": "main.c",
+  "offset": 62,
+  "trigger": "identifier"
+}

@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-nonbmp-member",
+  "documentVersion": 17,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-nonbmp-member-snapshot",
+    "sourceHash": "sha256:dcf2cca218284d38589864db2addac4821710781774b8d419ca8a3f4cccedb01",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "/* 中😀 */ struct Coordinates { int east; int west; }; void probe() { Coordinates point; point. }\n",
+        "contentHash": "sha256:b1fff3a6ec75fb3ff0fd08dd5ba44d14b059e210d1a07cbcf96d476dc2bb9910"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 94,
+  "trigger": "."
+}

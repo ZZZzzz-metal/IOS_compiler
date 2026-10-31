@@ -1,0 +1,319 @@
+{
+  "feature": "offline-code-completion",
+  "baseline": "4f48884493689eb97de62a7a0af597046e961939",
+  "states": [
+    "REQ",
+    "ACK",
+    "DONE",
+    "ACCEPT"
+  ],
+  "requests": [
+    {
+      "id": "CC-20261029-02",
+      "owner": 2,
+      "state": "ACCEPT",
+      "delivery": "afada754dc249e03dc33ea3f3d48836d20452a4c",
+      "ack": "Owner verified the real human authorization; clean worktree and fast-forward baseline checked. Offline Clang feasibility and API ACK pending.",
+      "progress": "Fixed delivery integrated and independently accepted in the documented desktop prototype scope; const-string/unavailable boundaries and iPad/G2/G3 remain open.",
+      "integration": {
+        "state": "BACKEND-INTEGRATED",
+        "mergeCommit": "761b652549f57731b372c3f7c77f065da063d70c",
+        "compatibilityId": "integration-prototype-80135c59f01b26fc",
+        "resourceCount": 35,
+        "rootPipeline": {
+          "pass": 3,
+          "fail": 0
+        },
+        "independentFeatureAcceptance": "accepted-desktop-scope-with-known-boundaries"
+      },
+      "acceptance": {
+        "scope": "documented desktop prototype only",
+        "independentDelivery": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
+        "mergeCommit": "6ba18d2c9785f85a4b3c90b734a457b144d4c83d",
+        "fixedRuntimeSource": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+        "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+        "replyDelivery": "sent-and-acknowledged",
+        "boundaryFailuresClosed": false,
+        "iPadVerified": false,
+        "ownerAcknowledged": true,
+        "ownerReplySnapshot": "ACK-ACCEPT 已回传，2号本轮握手完成。 签收仅限桌面实验原型；const-string、unavailable 两项边界未修，iPad 与 G2/G3 仍待验证。"
+      }
+    },
+    {
+      "id": "CC-20261029-04",
+      "owner": 4,
+      "state": "ACCEPT",
+      "delivery": "e2efc07724f359b9a5430dd21485bc6cf32d003b",
+      "ack": "Owner verified human authorization; accepted UI lead, injectable consumer and real provider dependency. API ACK pending.",
+      "progress": "Fixed delivery integrated and independently accepted in the documented desktop prototype scope; const-string/unavailable boundaries and iPad/G2/G3 remain open.",
+      "integration": {
+        "state": "UI-INTEGRATED",
+        "mergeCommit": "537a27b9a43c57d320c110aff1fa44790b653875",
+        "independentFeatureAcceptance": "accepted-desktop-scope-with-known-boundaries"
+      },
+      "acceptance": {
+        "scope": "documented desktop prototype only",
+        "independentDelivery": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
+        "mergeCommit": "6ba18d2c9785f85a4b3c90b734a457b144d4c83d",
+        "fixedRuntimeSource": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+        "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+        "replyDelivery": "sent-and-acknowledged",
+        "boundaryFailuresClosed": false,
+        "iPadVerified": false,
+        "ownerAcknowledged": true,
+        "ownerReplySnapshot": "4号交付已获1号正式签收，最终确认已回复，协作流程闭环。 PR #4 已就绪，待你手动合并。验收范围为桌面实验原型；两项候选过滤限制及iPad真机验证仍保留。"
+      }
+    },
+    {
+      "id": "CC-20261029-05",
+      "owner": 5,
+      "state": "ACCEPT",
+      "delivery": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
+      "ack": "Owner verified human authorization; independent fixture/negative-case preparation accepted. Final fixed target/API/package pending.",
+      "progress": "Fixed delivery integrated and independently accepted in the documented desktop prototype scope; const-string/unavailable boundaries and iPad/G2/G3 remain open.",
+      "preparation": {
+        "state": "ACCEPT-PREP",
+        "commit": "0b062df7a015463677213f46552e80927138325d",
+        "mergeCommit": "9b6f28981ed71ad9967ce44c9adcd64c9308e03e",
+        "cases": 33,
+        "sourceFiles": 34,
+        "rootFixtureChecks": {
+          "pass": 7,
+          "fail": 0
+        },
+        "rootSealsVerifiedGitFiles": [
+          66,
+          67
+        ]
+      },
+      "backendStage": {
+        "state": "DONE-BACKEND-STAGE",
+        "commit": "4e29b3929d9335fc19ab6b13f0d03c6cc03baed3",
+        "mergeCommit": "dc518c76b1398e75b8bd2b766dcbd57340b0cccf",
+        "logicalCases": 33,
+        "pass": 29,
+        "boundaryFailed": 1,
+        "uiPending": 3,
+        "extraAvailabilityBoundaryFailed": 1,
+        "finalAcceptance": "included in final desktop scope; original boundary failures retained"
+      },
+      "acceptance": {
+        "scope": "documented desktop prototype only",
+        "independentDelivery": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
+        "mergeCommit": "6ba18d2c9785f85a4b3c90b734a457b144d4c83d",
+        "fixedRuntimeSource": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+        "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+        "replyDelivery": "sent-and-acknowledged",
+        "boundaryFailuresClosed": false,
+        "iPadVerified": false,
+        "ownerAcknowledged": true,
+        "ownerReplySnapshot": "已向1号回复 ACK-ACCEPT，完成本轮交接闭环。 限定桌面范围已签收；两项补全边界未修，真机、草稿强可靠性及G2/G3仍待验证。"
+      },
+      "finalStage": {
+        "sealedFiles": 150,
+        "originalLogicalCases": 33,
+        "pass": 32,
+        "boundaryFailed": 1,
+        "uiPending": 0,
+        "extraAvailabilityBoundaryFailed": 1,
+        "actualBrowserObservations": 42,
+        "browserEvidenceConsistencyAssertions": 251,
+        "controlledRaces": {
+          "scenarios": 26,
+          "assertions": 105
+        },
+        "controlledEditing": {
+          "scenarios": 23,
+          "assertions": 339
+        },
+        "originalUiNegatives": {
+          "scenarios": 3,
+          "assertions": 12
+        },
+        "rootGitBytesVerified": true
+      }
+    }
+  ],
+  "declaration": "Transport success does not mean ACK. ACK is reception only; no implementation or acceptance claimed.",
+  "events": [
+    {
+      "date": "2026-10-29",
+      "event": "All three owners explicitly ACKed before their prior turns hit usage limits; those turns did not deliver a completed feature."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Human requested continue/mobilize. Same request IDs retransmitted to owners 02/04/05 with proposal path; all three resumed active turns."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Both 02/04 explicitly accepted API; optional editing service v1 frozen. Owner02 reported first real Clang function/local-name completion; broader semantic/performance evidence and fixed implementation still pending."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Root added completion-only Worker scope rejection coverage; worker suite 23/23 passed, mandatory check and contract 10/10 passed. This is root integration preparation, not feature acceptance."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "One frozen-API notice to owner05 was not executed because approval review hit usage limits. Human explicitly requested continue; the same pending notice retried successfully. All three owners now ACK frozen API or progress."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Root relayed owner05 availability question to owner02 and idle-warm-worker release boundary to 02/04. Owner02 reports real Hidden/Inaccessible output filters, unknown kinds and unavailable/deprecated attribute limits; fixed evidence still pending."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Draft review reported character-literal suppression and possible legal Pattern identifier filtering to owner02; independent negative cases relayed to owner05. Not released defects or fixed deliveries."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Owner02 reported real const-string append candidate limitation and retained the failed assertion. Full availability/const semantics remain unclaimed; owner05 asked to independently confirm on final target."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Root found UI release missing await for asynchronous dispose. Owner04 acknowledged and reports nested-finally await plus planned delayed-dispose/rejection tests. Fixed UI delivery remains pending."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "GitHub PR2 verified merged by user; main ef5d3906e2bb9c877e710a7b2093a0ff5e6fdd2a has the same tree as 4f48884. Root preserved user merge history at 62725ae2ac876f14e2e8f404894dbc0874aac4d1. Completion delivery will use a new PR, user merges main."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Owner05 preparation 0b062df integrated at 9b6f289; root 7 fixture checks and committed-byte seals 66/67 passed. ACCEPT-PREP sent, feature ACCEPT remains pending."
+    },
+    {
+      "date": "2026-10-29",
+      "event": "Owner02 reports both draft P2 issues fixed with real Clang evidence; all 45 compiler and 10 contract tests plus baseline passed. Awaiting fixed DONE commit; no integration or independent fix closure claimed."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Owner02 fixed DONE afada754 merged at 761b652. Root candidate now includes all five completion runtime modules, 35 resources, profile80135c59f01b26fc; real existing C/C++ compile/debug pipeline3, baseline and contract10 passed. Raw root evidence preserved in app/integration/evidence/completion-backend-2026-10-29. No full feature ACCEPT yet."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Owner04 fixed DONE e2efc077 merged at 537a27b. Root adds all four UI runtime modules and both completion guides to full packaging; shared worker path inventory covers dynamic URLs. Manual P11 includes raw undo order, initial C++17/no-driver conditions, no-Esc fallback and CtrlSpace system conflict/CtrlJ alternative. New version0.4.6/capability remains implemented-unverified."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Root combined UI/storage200, offline23 and contracts10 passed; mandatory npm check/test passed. Full package and independent UI acceptance remain pending."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Merged owner05 fixed backend stage and batched readonly Git verifier; 452/33 sealed Git bytes and owner04 20 sealed UI files verified. Semantic boundary failures remain explicit."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Built fixed b14aebab full bundle cbe80b74ccc3d3cebece9e73:62 resources/60964100 bytes; two archives fully verified and14 prior ZIPs unchanged. Root actual stopped-server cold new-source completion/undo/compile/debug/draft flow and strict HTTPS passed; owner05 final UI acceptance pending."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Explicit integration/module02/module04/module05 branch push succeeded; draft PR4 created and attached with maintainer modification disabled. Main remains ef5d390 and unmerged. Owner05 final fixed UI/package handoff pending, so no feature ACCEPT or new release tag."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Owner05 fixed DONE cbc92b26 integrated at6ba18d2. Root verified164 allowed-scope files,150 immutable evidence files/Git bytes, prior39/8/16 root files and both unchanged archives. Documented desktop prototype scope ACCEPT recorded for02/04/05; const-string/unavailable boundaries and iPad/G2/G3 remain open. Final publication notices follow actual remote success."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Published fixed tag integration-v0.4.6 at b4781949 and owner05 cbc92b26. PR4 confirmed open/ready/unmerged with main ef5d390 and maintainer modification false. Actual ACCEPT notices sent to02/04/05 and all three explicitly ACK-ACCEPTed; handshake closed within documented desktop scope. Following documentation receipts do not move the tag or alter the bundle."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Human requires known failures fixed before iPad testing. Reopened both issues under new request IDs; owners02/05/04 explicitly ACKed. PR4 actually converted back to draft/open/unmerged. Prior fixed tags, bundles, evidence and limited ACCEPT remain history; no new fix success claimed."
+    },
+    {
+      "date": "2026-10-30",
+      "event": "Accepted only owner05 repair verification preparation bef7bc97 merged e5dce648 and clarification2a0a81dc:84 sealed Git files,11 queries/24 call controls. Root28 infrastructure checks (5+23 unique) and mandatory commands passed. Root initial selected-file count assertion preserved as harness error. No product fix or real provider acceptance claimed."
+    },
+    {
+      "date": "2026-10-31",
+      "event": "Integrated owner02 fixed0f289cf/implementation6da3280, added completion-semantics.mjs and offline recipe docs to packaging. New36-resource backend profile c3e9a2fea60c51b3. Root prepare-ui, existing real pipeline3 and mandatory check/test passed; owner05 authorized fixed-target independent semantics. Both defects still await independent closure and new package."
+    },
+    {
+      "date": "2026-10-31",
+      "event": "Owner05 fixed semantics DONE2978d950 merged e00566b;831 sealed files/Git bytes verified by root. Original44 logical/88 real dual responses and27 full-call controls passed without original-oracle changes. Owner04 documentation-only b33b52e8 merged cfe85ff. New0.4.7 full package and actual stopped-server workflow remain pending; PR4 stays draft."
+    },
+    {
+      "date": "2026-10-31",
+      "event": "New fixed0.4.7 bundle4b6a8377/65resources60976781B and74/6-member ZIPs created and fully byte verified;16 old archives unchanged. Root strict CA/hostname HTTPS verified all65 resources. Owner05 explicitly ACKed final fixed912a23bf package for isolated stopped-server browser workflow. PR4 remains draft; iPad/G2/G3 pending."
+    }
+  ],
+  "api": {
+    "state": "FROZEN",
+    "path": "contracts/completion.d.ts",
+    "owner02": "API-ACK CC-20261029-02; accepted without shared changes",
+    "owner04": "API-ACK CC-20261029-04; accepted without shared changes",
+    "commit": "38ff3075a4b47c3f72ae2f6552a04e58da07d6c0",
+    "owner05": "API-ACK CC-20261029-05; preserved fixtures and fast-forwarded frozen commit"
+  },
+  "repairCycle": {
+    "date": "2026-10-30",
+    "reason": "Human requires known issues fixed before device validation",
+    "state": "DONE-SEMANTICS",
+    "deviceValidationOnHold": true,
+    "pr": {
+      "number": 4,
+      "draft": true,
+      "merged": false
+    },
+    "requests": [
+      {
+        "id": "CC-20261030-02",
+        "owner": 2,
+        "state": "DONE",
+        "scope": "semantic repair of const member-template and unavailable candidates",
+        "delivery": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+        "implementationCommit": "6da3280b3fa9aa859188a26a6b12f578151401a4",
+        "integrationProfile": "integration-prototype-c3e9a2fea60c51b3",
+        "resourceCount": 36,
+        "independentAcceptance": "Passed original-oracle measured semantic scope at owner05 2978d950; new full-package acceptance pending."
+      },
+      {
+        "id": "CC-20261030-05",
+        "owner": 5,
+        "state": "DONE",
+        "scope": "independent original-oracle positive/negative verification after fixed delivery",
+        "delivery": "2978d9501c58fe7b6d7d7439b5f728a0b59ccbf6",
+        "mergeCommit": "e00566b27fb6ee2256f318811376d2e95e67cb3f",
+        "clarificationCommit": "2a0a81dc59dd7a805e7f88b63c5482f7ca90878a",
+        "queries": 11,
+        "fullCallControls": 27,
+        "sealedGitFilesVerified": 831,
+        "featureAcceptance": false,
+        "verificationTarget": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+        "progress": "Original const-string and extra unavailable defects independently closed in measured semantic scope; new package/browser/iPad pending.",
+        "logicalQueries": 44,
+        "realDualRouteResponses": 88
+      },
+      {
+        "id": "CC-20261030-04",
+        "owner": 4,
+        "state": "DOC-DONE",
+        "scope": "UI runtime frozen; repaired semantics usage guide only",
+        "delivery": "b33b52e8616fef0171f49ab2f22f7c5cbb8306d9",
+        "mergeCommit": "cfe85ff",
+        "changedFiles": [
+          "ui/COMPLETION.md"
+        ]
+      }
+    ],
+    "acceptanceConditions": [
+      "Original const-string failure actually passes without name blacklists or oracle changes",
+      "Original unavailable failure actually passes while valid deprecated and ordinary candidates remain",
+      "Independent fixed-target verification, affected regressions and new immutable full-package desktop workflow pass before device validation"
+    ],
+    "successfulDone": false,
+    "accepted": false,
+    "stage": "independent-full-package-verification",
+    "owner02Done": true,
+    "owner05SemanticsDone": true,
+    "package": {
+      "sourceBaseRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+      "bundleId": "ipad-web-probe-4b6a8377cadd31e675701549",
+      "resourceCount": 65,
+      "totalBytes": 60976781,
+      "rootByteAndHTTPSChecks": "passed",
+      "owner05": "ACK PACKAGE-FINAL; actual desktop verification in progress",
+      "deviceValidation": "pending"
+    }
+  }
+}

@@ -1,4 +1,7 @@
 // Shared by the development workbench and the versioned offline entry.
+export const ISOLATED_WORKER_PATHS=Object.freeze([
+  'compiler/src/compiler-worker.mjs','compiler/src/completion-worker.mjs','debugger/src/debugger-worker.mjs',
+]);
 export function verifyOfflineWorker(worker, {timeoutMs=120000,type='OFFLINE_VERIFY'}={}) {
   return new Promise((resolve,reject)=>{
     const channel=new MessageChannel(),requestId=crypto.randomUUID();
@@ -18,7 +21,7 @@ export function verifyOfflineWorker(worker, {timeoutMs=120000,type='OFFLINE_VERI
 export async function assertTrustedOfflineWorkers(candidate,baseURL){
   if(!navigator.serviceWorker)return {offline:false};
   const base=new URL(baseURL),expectedScript=new URL('sw.js',base).href;
-  const workerURLs=['compiler/src/compiler-worker.mjs','debugger/src/debugger-worker.mjs'].map(path=>new URL(path,base).href);
+  const workerURLs=ISOLATED_WORKER_PATHS.map(path=>new URL(path,base).href);
   const registrations=await navigator.serviceWorker.getRegistrations();
   const covering=registrations.filter(reg=>reg.active&&workerURLs.some(url=>url.startsWith(reg.scope)));
   if(!covering.length)return {offline:false};

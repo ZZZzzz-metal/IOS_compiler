@@ -1,0 +1,15 @@
+{
+  "snapshotId": "8c05f924-5242-4320-9079-2c75c05d40b0",
+  "sourceHash": "sha256:40137fa673b8ec4d8dd009079183856d7c971f017b5de81cc5af1296f104fbe7",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nint main() {\n  const Record_a8ee505af129 object_a8ee505af129;\n  return object_a8ee505af129.choose_a8ee505af129();\n}\n",
+      "contentHash": "sha256:fe2f40bcce8d276a32eb5fb2db6e56f72d58b624836417fb5a5335b32006debb"
+    }
+  ]
+}

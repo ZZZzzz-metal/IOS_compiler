@@ -1,0 +1,233 @@
+{
+  "request": {
+    "requestId": "6e6d56dd-7550-4239-96dd-cf63330a7a71",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "4edee01e-10f5-4769-a7c0-aea4fe1cd575",
+      "sourceHash": "sha256:2aed6d76ba9468f0d43e8b4277d07d77c3055a7346c26c2cfca768f94ff1ce4e",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "class Box{int hidden; public:int visible;}; void f(){Box b; b.;}",
+          "contentHash": "sha256:12ef228076649ee30ceddc77672dc32c0899d68e26ed5dcc962631b61974eec9"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 62
+  },
+  "reply": {
+    "requestId": "6e6d56dd-7550-4239-96dd-cf63330a7a71",
+    "documentVersion": 1,
+    "snapshotId": "4edee01e-10f5-4769-a7c0-aea4fe1cd575",
+    "sourceHash": "sha256:2aed6d76ba9468f0d43e8b4277d07d77c3055a7346c26c2cfca768f94ff1ce4e",
+    "sourcePath": "main.cpp",
+    "offset": 62,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:66fd3729b76b695315b2826d8f09fef6aea4119e73e06ce1e8346a578ccd415b",
+        "label": "Box",
+        "kind": "unknown",
+        "detail": "Box::",
+        "insertText": "Box",
+        "replaceRange": {
+          "startOffset": 62,
+          "endOffset": 62
+        },
+        "filterText": "Box"
+      },
+      {
+        "id": "sha256:0b937fe8458690b53c83aebbd834b639c69c9e0c8a0c43d5e9d428c4d3f25438",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Box & operator=(const Box &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 62,
+          "endOffset": 62
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:2918d1303ba4b332f010bcdaf509456ef63054076d672babfc4296d9609cfa71",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Box & operator=(Box &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 62,
+          "endOffset": 62
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:4e9357007d654d0e36c4095dcc77ea5997e396b2513c1ba46f4855d9b67b3bba",
+        "label": "visible",
+        "kind": "unknown",
+        "detail": "int visible",
+        "insertText": "visible",
+        "replaceRange": {
+          "startOffset": 62,
+          "endOffset": 62
+        },
+        "filterText": "visible"
+      },
+      {
+        "id": "sha256:d81ce0ace5a56f47183fc79f89f51269909dccfb866f8dc880f2f01b6fda4b98",
+        "label": "~Box",
+        "kind": "unknown",
+        "detail": "void ~Box()",
+        "insertText": "~Box",
+        "replaceRange": {
+          "startOffset": 62,
+          "endOffset": 62
+        },
+        "filterText": "~Box"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 15.193700000000035,
+  "native": {
+    "result": {
+      "requestId": "6e6d56dd-7550-4239-96dd-cf63330a7a71",
+      "documentVersion": 1,
+      "snapshotId": "4edee01e-10f5-4769-a7c0-aea4fe1cd575",
+      "sourceHash": "sha256:2aed6d76ba9468f0d43e8b4277d07d77c3055a7346c26c2cfca768f94ff1ce4e",
+      "sourcePath": "main.cpp",
+      "offset": 62,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:66fd3729b76b695315b2826d8f09fef6aea4119e73e06ce1e8346a578ccd415b",
+          "label": "Box",
+          "kind": "unknown",
+          "detail": "Box::",
+          "insertText": "Box",
+          "replaceRange": {
+            "startOffset": 62,
+            "endOffset": 62
+          },
+          "filterText": "Box"
+        },
+        {
+          "id": "sha256:0b937fe8458690b53c83aebbd834b639c69c9e0c8a0c43d5e9d428c4d3f25438",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Box & operator=(const Box &)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 62,
+            "endOffset": 62
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:2918d1303ba4b332f010bcdaf509456ef63054076d672babfc4296d9609cfa71",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Box & operator=(Box &&)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 62,
+            "endOffset": 62
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:4e9357007d654d0e36c4095dcc77ea5997e396b2513c1ba46f4855d9b67b3bba",
+          "label": "visible",
+          "kind": "unknown",
+          "detail": "int visible",
+          "insertText": "visible",
+          "replaceRange": {
+            "startOffset": 62,
+            "endOffset": 62
+          },
+          "filterText": "visible"
+        },
+        {
+          "id": "sha256:d81ce0ace5a56f47183fc79f89f51269909dccfb866f8dc880f2f01b6fda4b98",
+          "label": "~Box",
+          "kind": "unknown",
+          "detail": "void ~Box()",
+          "insertText": "~Box",
+          "replaceRange": {
+            "startOffset": 62,
+            "endOffset": 62
+          },
+          "filterText": "~Box"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:63",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: Box : Box::\nCOMPLETION: hidden (Inaccessible) : [#int#]hidden\nCOMPLETION: operator= : [#Box &#]operator=(<#const Box &#>)\nCOMPLETION: operator= : [#Box &#]operator=(<#Box &&#>)\nCOMPLETION: visible : [#int#]visible\nCOMPLETION: ~Box : [#void#]~Box()\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 63
+      }
+    },
+    "metrics": {
+      "totalMs": 13.96769999999998,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [
+      "visible"
+    ],
+    "absent": [
+      "hidden"
+    ],
+    "sourceUnchanged": true
+  }
+}

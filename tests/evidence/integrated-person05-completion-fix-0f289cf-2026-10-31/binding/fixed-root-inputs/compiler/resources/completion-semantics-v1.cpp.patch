@@ -1,0 +1,43 @@
+This is the readable logical source equivalent for llvmorg-8.0.1.
+It documents the semantics of the guarded Wasm transform; it is not a claim
+that the vendored binary was rebuilt from this exact source revision.
+
+diff --git a/clang/lib/Sema/CodeCompleteConsumer.cpp b/clang/lib/Sema/CodeCompleteConsumer.cpp
+--- a/clang/lib/Sema/CodeCompleteConsumer.cpp
++++ b/clang/lib/Sema/CodeCompleteConsumer.cpp
+@@ -558,8 +558,8 @@ void PrintingCodeCompleteConsumer::ProcessCodeCompleteResults(
+           Tags.push_back("Hidden");
+         if (Results[I].InBaseClass)
+           Tags.push_back("InBase");
+-        if (Results[I].Availability ==
+-            CXAvailabilityKind::CXAvailability_NotAccessible)
++        if (Results[I].Availability >=
++            CXAvailabilityKind::CXAvailability_NotAvailable)
+           Tags.push_back("Inaccessible");
+         if (!Tags.empty())
+           OS << " (" << llvm::join(Tags, ",") << ")";
+diff --git a/clang/lib/Sema/SemaCodeComplete.cpp b/clang/lib/Sema/SemaCodeComplete.cpp
+--- a/clang/lib/Sema/SemaCodeComplete.cpp
++++ b/clang/lib/Sema/SemaCodeComplete.cpp
+@@ -1026,8 +1026,11 @@ void ResultBuilder::AddResult(Result R, DeclContext *CurContext,
+ 
+   AdjustResultPriorityForDecl(R);
+ 
+-  if (HasObjectTypeQualifiers)
+-    if (const auto *Method = dyn_cast<CXXMethodDecl>(R.Declaration))
++  if (HasObjectTypeQualifiers) {
++    const NamedDecl *QualifierDecl = R.Declaration;
++    if (const auto *Template = dyn_cast<FunctionTemplateDecl>(QualifierDecl))
++      QualifierDecl = Template->getTemplatedDecl();
++    if (const auto *Method = dyn_cast<CXXMethodDecl>(QualifierDecl))
+       if (Method->isInstance()) {
+         Qualifiers MethodQuals = Method->getTypeQualifiers();
+         if (ObjectTypeQualifiers == MethodQuals)
+@@ -1038,6 +1041,7 @@ void ResultBuilder::AddResult(Result R, DeclContext *CurContext,
+           return;
+         }
+       }
++  }
+ 
+   // Insert this result into the set of results.
+   Results.push_back(R);

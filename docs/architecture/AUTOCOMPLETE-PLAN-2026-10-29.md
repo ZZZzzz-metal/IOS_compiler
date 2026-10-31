@@ -1,0 +1,58 @@
+# 离线代码补全：分工与握手
+
+2026-10-29。用户要求类似VS2022的对象成员自动弹出和函数/变量名候选；人类明确要求找相应负责人实现、完成后应答。当前为新功能请求，不属于已冻结v0.4.5或已通过桌面验收的r3。
+
+## 分工
+
+| 请求ID | 负责人 | 交付 |
+|---|---|---|
+| CC-20261029-02 | 2号 | 固定Clang Wasm真实离线语义补全、隔离Worker、适配器、实际原始请求/候选与取消/性能证据 |
+| CC-20261029-04 | 4号（交互牵头） | 对象成员/标识符弹窗、输入过滤、键盘与触控选择、版本/光标/IME/草稿门禁，消费实际provider |
+| CC-20261029-05 | 5号 | 独立语义、作用域、UI竞态、离线及既有编译调试回归；新固定目标和包后出独立结论 |
+| 1号 | 总架构 | 冻结小型共享契约、核对ACK/DONE、集成依赖与离线Worker信任/资源清单、新不可变包和最终回执 |
+
+3号无需为编辑时提示改调试器；若编译/资源共同接口受影响再协调。每位仅改所属目录与本人交接；根依赖/契约/资源组合由1号改。基线4f48884493689eb97de62a7a0af597046e961939，各工作区保留未提交修改后依祖先关系同步。
+
+## 握手约定
+
+REQ（1号发任务）→ACK（负责人已接收）→DONE（固定提交/真实检查/交接/边界）→ACCEPT（1号完成集成，5号固定目标独立通过后回执）。ACK不表示实现完成，发送成功也不表示ACK。使用同一请求ID识别重发，失败或依赖缺失明确反馈状态，不无声丢请求，也不重跑同一任务。消息反馈的人类授权可在1号聊天01a1693d-060e-7e00-ac16-8a18fbce8972原用户消息核验。
+
+## 实现原则和验收
+
+先复用固定Clang8的真实code-completion模式，不执行lld链接，不上传源码、不依赖远端服务。现有编译调用直接cc1，选项必须用实际Wasm验证。补全不产生BuildManifest或调试构建，不冒用CompileResult；共享草案见contracts/completion.d.ts，冻结前由2/4确认。
+
+对象.、可行的->和::，局部变量/函数、class/struct和标准容器最小样例，作用域/访问控制/遮蔽、未完成源码、UTF16/UTF8与BOM/CRLF、user.inc/driver.cpp必须明确验证范围。首版候选插入真实标识符、显示签名；不默认承诺VS完整语言服务或模板片段编辑。
+
+UI输入轻量防抖，单个活动补全，只保留最新请求；开始编译前取消补全，避免多实例Wasm争用。结果绑定requestId、documentVersion、snapshot/sourceHash、sourcePath和offset，输入/光标/语言/标签/导入/恢复/只读快照改变就失效。候选打开时↑↓选择、Tab/Enter确认、Esc取消，关闭时保留Tab缩进；IME组合期间不请求或确认。确认只替换绑定范围，成为一次正常编辑与保存，不回滚其他源码。
+
+新增模块/Worker由1号加入可信开发组合、完整离线缓存和Worker覆盖校验，生成新包，旧标签/包/证据不动。5号需对新固定组合实际停服后输入全新源码验证补全；iPad物理键盘/触控与性能仍由用户逐步真机确认。未交付实现不更新为已支持。
+
+## 2026-10-29动员回执
+
+2、4、5号均已发送实际ACK并核验人类授权。上一轮随后因账号额度限制中断，无DONE或ACCEPT。用户再次要求继续后，1号使用原请求ID续传，三位均已恢复活动；不新建重复任务。共享契约仍为PROPOSED，等待2/4的API-ACK后冻结。当前无可交付的代码补全实现，不改变v0.4.5结论。
+
+集成复核已定位：2号新增运行模块进入app/integration/candidate.mjs的COMPILER_MODULE_FILES；4号新增运行模块进入app/offline/build.mjs显式列表；真实补全Worker进入app/offline/browser/trust.mjs的覆盖范围检查，另验证仅该Worker被其它scope控制时拒绝。静态import检查不涵盖Worker URL，须显式检查新完整包的Worker资源。实际文件名待2/4固定交付后确认。
+
+## API冻结与根前置检查
+
+2号、4号已各自明确API-ACK，接受原字段且无必要修改；contracts/completion.d.ts编辑服务v1于2026-10-29冻结，不改变既有编译/调试协议。2号固定provider路径compiler/src/completion-adapter.mjs（导出CompletionAdapter类），独立Worker路径compiler/src/completion-worker.mjs；构造依赖和全部实际模块列表由2号交付进一步固定。2号已报告首条真实Clang原生补全返回函数签名与局部变量，尚非完整后端DONE。
+
+根前置已将新Worker纳入scope覆盖检查，并验证仅该foreign子scope、正确根scope叠加该foreign子scope均在握手前拒绝。worker专项23/23、mandatory check及既有契约10/10通过；尚未导入未交付provider或改候选资源清单，不构成补全端到端/离线验收。
+
+## 2026-10-30后端集成
+
+2号固定DONE afada754（实现96d328a）已合入761b652。根候选显式纳入全部五个运行模块，35项资源生成新组合integration-prototype-80135c59f01b26fc；新组合既有真实C++/C编译调试与停止重启流水线3/3、mandatory check及契约10/10通过，原始结果见app/integration/evidence/completion-backend-2026-10-29。2号固定原文45编译自测、30例production实际Worker与早期失败已保留；只读核对最终五模块字节与原始证据匹配，两项草稿P2确有真实修复输出。
+
+这仅是后端集成。4号四UI模块尚待固定DONE/真实浏览器，5号实际语义与完整新包尚待独立验收。const string部分函数模板及unavailable/deprecated属性可用性仍有原生Clang8信息缺口，kind统一unknown；不按名称黑名单伪修、不声明完整VS语言服务。旧v0.4.5/r3固定包和历史失败保持不变。
+
+## 2026-10-30界面集成与新包准备
+
+4号固定DONE e2efc077已合入537a27b，四个UI运行模块、独立补全说明和真实键盘/鼠标/撤销证据均保留；4号213项与22条实际浏览器观察仅为模块交付范围。根合并后实际执行界面/保存200、离线23、契约10全部通过；mandatory npm check/test通过，契约重复不加总。原始输出另存app/offline/evidence/completion-package-2026-10-30/root-checks。根打包显式包含新UI模块、两份补全说明与三个隔离Worker，静态导入闭包继续逐项核对。
+
+目标0.4.6，能力记录为implemented-unverified。平板手册新增演示代码、成员与标识符选择、立即撤销、Ctrl+J及Control+Space系统冲突、断网后改成员的反证操作和P11；真机时仍一次一操作、反馈后继续。5号真实语义阶段正在封存，最终UI/完整新包独立复验尚待，不预填成功或ACCEPT。已知const/属性可用性缺口保留，旧入口/标签/失败证据不动。
+
+2026-10-30独立后端阶段已接收：5号固定5d3734da及核验器修复4e29b392合入dc518c76。原33逻辑例29通过、const-string一项边界失败、3项UI待验；补充unavailable为额外一项逻辑边界失败。原oracle/exit1保留，不能写全通过。60条真实双路响应逐字段一致；生命周期7场景25检查与常规276、离线23、基础设施16均通过，仍是5号阶段范围。根合并后452/33封存文件Git原字节核验通过，4号20文件seal只读核验通过。最终UI/新包和功能ACCEPT继续待验。
+
+2026-10-30完整包实际结果追加：固定source b14aebab，新bundle ipad-web-probe-cbe80b74ccc3d3cebece9e73包含62资源60,964,100字节；完整ZIP19,330,126字节/71文件，首次准备18,118字节/6文件，全部成员/两控制面/手册SHA核验通过，14旧档不变。根实际4289停服冷开新源码补全、Tab单写/单次undo-redo、输出OFFLINE-CC=31/exit0、第6行localAnswer31及稿4重开恢复通过；严格同WiFiHTTPS电脑侧校验通过，平板互通未测。原始命令、转录观察及设施边界见app/offline/evidence/completion-package-2026-10-30，本轮详细报告COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md；5号最终UI/新包固定DONE仍待，尚未发送功能ACCEPT或推送新PR。
+
+2026-10-30最终追加：5号cbc92b26已合入6ba18d2，150文件封存及Git原字节核验通过；新完整包与实际桌面补全/撤销/编译调试/停服重开已独立完成。原33结转32通过、const-string一项边界失败，额外unavailable另失败；42条实际浏览器观察与受控26/105、23/339、3/12各自列明范围。1号作限定桌面ACCEPT，两个边界和真实iPad/G2/G3未关闭，能力仍implemented-unverified。包source b14aebab及cbe80b74资源不变，不为文档结论重建。最新结论及发布实际结果见COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md末尾与握手记录，PR #4由用户手动合并。

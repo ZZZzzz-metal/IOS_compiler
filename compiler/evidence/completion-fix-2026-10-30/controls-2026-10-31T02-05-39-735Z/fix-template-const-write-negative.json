@@ -1,0 +1,59 @@
+{
+  "input": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "7d508c57-4e93-4861-b3d6-f3981b396231",
+    "mode": "debug",
+    "optimization": "O0",
+    "snapshot": {
+      "snapshotId": "0f43d23c-0e08-49c0-bc21-81bf451a7547",
+      "sourceHash": "sha256:7b2a7bbbc0be17a190e1e0f9805f4470ebcfed798ce86fc492b8c01afc0770a8",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_9c3158ded821871b> struct Box_9c3158ded821871b {\n  int read_9c3158ded821871b() const { return 0; }\n  void write_9c3158ded821871b(Type_9c3158ded821871b argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; }\n  template<class OtherType_9c3158ded821871b> int inspect_9c3158ded821871b(const OtherType_9c3158ded821871b& argument_9c3158ded821871b) const { (void)argument_9c3158ded821871b; return 0; }\n  template<class OtherType_9c3158ded821871b> void ingest_9c3158ded821871b(const OtherType_9c3158ded821871b& argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; }\n};\nint main() {\n  const Box_9c3158ded821871b<int> object_9c3158ded821871b;\n  object_9c3158ded821871b.write_9c3158ded821871b(1);\n  return 0;\n}\n",
+          "contentHash": "sha256:bc30012473ef724f93779dcedfef04b8b0ca555561dcbb76c67b717f8b5259d5"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "status": "failed",
+    "reason": "compiler-exit"
+  },
+  "actual": {
+    "status": "failed",
+    "requestId": "7d508c57-4e93-4861-b3d6-f3981b396231",
+    "sourceHash": "sha256:7b2a7bbbc0be17a190e1e0f9805f4470ebcfed798ce86fc492b8c01afc0770a8",
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "'this' argument to member function 'write_9c3158ded821871b' has type 'const Box_9c3158ded821871b<int>', but function is not marked const",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 9,
+            "column": 3
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "'write_9c3158ded821871b' declared here",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 3,
+            "column": 8
+          }
+        }
+      }
+    ],
+    "reason": "compiler-exit",
+    "rawDiagnostics": "/project/main.cpp:9:3: error: 'this' argument to member function 'write_9c3158ded821871b' has type 'const Box_9c3158ded821871b<int>', but function is not marked const\n  object_9c3158ded821871b.write_9c3158ded821871b(1);\n  ^~~~~~~~~~~~~~~~~~~~~~~\n/project/main.cpp:3:8: note: 'write_9c3158ded821871b' declared here\n  void write_9c3158ded821871b(Type_9c3158ded821871b argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; }\n       ^\n1 error generated.\n"
+  }
+}

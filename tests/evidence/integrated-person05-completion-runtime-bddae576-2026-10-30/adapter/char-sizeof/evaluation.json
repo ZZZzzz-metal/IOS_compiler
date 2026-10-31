@@ -1,0 +1,12 @@
+{
+  "caseId": "char-sizeof",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:33.148Z",
+  "elapsedMs": 15.682399999999916,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 5,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

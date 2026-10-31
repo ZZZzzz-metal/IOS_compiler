@@ -1,0 +1,13 @@
+{
+  "id": "const-string",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 163.13619999999992,
+  "verdict": "passed",
+  "support": "boundary",
+  "itemCount": 64,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

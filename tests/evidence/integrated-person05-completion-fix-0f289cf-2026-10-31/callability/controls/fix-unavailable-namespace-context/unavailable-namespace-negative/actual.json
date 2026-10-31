@@ -1,0 +1,32 @@
+{
+  "status": "failed",
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-unavailable-namespace-context-unavailable-namespace-negative",
+  "sourceHash": "sha256:b709f4263793278a69e58e8a286e6774cae014970e873cd3df59699f55fb9c14",
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "'cross_a8ee505af129_read' is unavailable: person05-unavailable",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 9,
+          "column": 30
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "'cross_a8ee505af129_read' has been explicitly marked unavailable here",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 2,
+          "column": 58
+        }
+      }
+    }
+  ],
+  "reason": "compiler-exit",
+  "rawDiagnostics": "/project/main.cpp:9:30: error: 'cross_a8ee505af129_read' is unavailable: person05-unavailable\n  return AreaA_a8ee505af129::cross_a8ee505af129_read();\n                             ^\n/project/main.cpp:2:58: note: 'cross_a8ee505af129_read' has been explicitly marked unavailable here\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_a8ee505af129_read() { return 0; }\n                                                         ^\n1 error generated.\n",
+  "binaryEvidence": {}
+}

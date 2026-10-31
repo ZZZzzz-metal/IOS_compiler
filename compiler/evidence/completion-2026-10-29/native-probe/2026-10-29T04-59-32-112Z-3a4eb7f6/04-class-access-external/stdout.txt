@@ -1,0 +1,8 @@
+COMPLETION: hidden (Inaccessible) : [#void#]hidden()
+COMPLETION: operator= : [#Vault &#]operator=(<#const Vault &#>)
+COMPLETION: operator= : [#Vault &#]operator=(<#Vault &&#>)
+COMPLETION: secret (Inaccessible) : [#int#]secret
+COMPLETION: show : [#void#]show()
+COMPLETION: Vault : Vault::
+COMPLETION: visible : [#int#]visible
+COMPLETION: ~Vault : [#void#]~Vault()

@@ -1,0 +1,12 @@
+{
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit"
+  },
+  "semantic": {
+    "kind": "const",
+    "member": "append",
+    "sourcePath": "main.cpp",
+    "line": 5
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "request": {
+    "requestId": "a2a82651-3e55-41a0-932b-84bc5f5f1fd9",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "d1d2bd23-bdfe-4618-8678-dd834de24d72",
+      "sourceHash": "sha256:692b734cb92d959b0421e171aada1945a608cc785d4094b34c21c689c02c28e4",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Base{protected:int secret; public:int visible;}; struct Child:Base{}; void f(){Child b; b.;}",
+          "contentHash": "sha256:5a0f28a1c1e1cc57124e54d0ab31f881a3dd77fd5eb2473ea100c164ac8fe66a"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 97
+  },
+  "reply": {
+    "requestId": "a2a82651-3e55-41a0-932b-84bc5f5f1fd9",
+    "documentVersion": 1,
+    "snapshotId": "d1d2bd23-bdfe-4618-8678-dd834de24d72",
+    "sourceHash": "sha256:692b734cb92d959b0421e171aada1945a608cc785d4094b34c21c689c02c28e4",
+    "sourcePath": "main.cpp",
+    "offset": 97,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:e76bc222dea9d6e49aff0b62ff0be04e487b45689b4c04c1fde49b52c46ff317",
+        "label": "Base",
+        "kind": "unknown",
+        "detail": "Base::",
+        "insertText": "Base",
+        "replaceRange": {
+          "startOffset": 97,
+          "endOffset": 97
+        },
+        "filterText": "Base"
+      },
+      {
+        "id": "sha256:6852a36f727ea5849834154fb418cf4d9f37cc7c002a2ad74866f99fc7bc1e1e",
+        "label": "Child",
+        "kind": "unknown",
+        "detail": "Child::",
+        "insertText": "Child",
+        "replaceRange": {
+          "startOffset": 97,
+          "endOffset": 97
+        },
+        "filterText": "Child"
+      },
+      {
+        "id": "sha256:047be041b1a3ffd0d36c2c3d076d549d42a59afe4b9d8ffc3931cc4361022270",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Child & operator=(const Child &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 97,
+          "endOffset": 97
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:4c7f90db74e44afb9389659fee5e0cfce37c73ec61a885a5f493f8cdbd20146a",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Child & operator=(Child &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 97,
+          "endOffset": 97
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:b59f9bf1a19f88981660145b4ff2971f148e57ebded441b558c1cda548038b96",
+        "label": "visible",
+        "kind": "unknown",
+        "detail": "int Base:: visible",
+        "insertText": "visible",
+        "replaceRange": {
+          "startOffset": 97,
+          "endOffset": 97
+        },
+        "filterText": "visible"
+      },
+      {
+        "id": "sha256:bfdf253b9f45f12870c5d38272e2272b06725f2a42212f7e6526831e1bd80752",
+        "label": "~Base",
+        "kind": "unknown",
+        "detail": "void Base:: ~Base()",
+        "insertText": "~Base",
+        "replaceRange": {
+          "startOffset": 97,
+          "endOffset": 97
+        },
+        "filterText": "~Base"
+      },
+      {
+        "id": "sha256:54439eb7e5a1853a8787f8e7765ccd898a1648bfe5f454037b8ea029ca42d0a2",
+        "label": "~Child",
+        "kind": "unknown",
+        "detail": "void ~Child()",
+        "insertText": "~Child",
+        "replaceRange": {
+          "startOffset": 97,
+          "endOffset": 97
+        },
+        "filterText": "~Child"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 13.004000000000019,
+  "native": {
+    "result": {
+      "requestId": "a2a82651-3e55-41a0-932b-84bc5f5f1fd9",
+      "documentVersion": 1,
+      "snapshotId": "d1d2bd23-bdfe-4618-8678-dd834de24d72",
+      "sourceHash": "sha256:692b734cb92d959b0421e171aada1945a608cc785d4094b34c21c689c02c28e4",
+      "sourcePath": "main.cpp",
+      "offset": 97,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:e76bc222dea9d6e49aff0b62ff0be04e487b45689b4c04c1fde49b52c46ff317",
+          "label": "Base",
+          "kind": "unknown",
+          "detail": "Base::",
+          "insertText": "Base",
+          "replaceRange": {
+            "startOffset": 97,
+            "endOffset": 97
+          },
+          "filterText": "Base"
+        },
+        {
+          "id": "sha256:6852a36f727ea5849834154fb418cf4d9f37cc7c002a2ad74866f99fc7bc1e1e",
+          "label": "Child",
+          "kind": "unknown",
+          "detail": "Child::",
+          "insertText": "Child",
+          "replaceRange": {
+            "startOffset": 97,
+            "endOffset": 97
+          },
+          "filterText": "Child"
+        },
+        {
+          "id": "sha256:047be041b1a3ffd0d36c2c3d076d549d42a59afe4b9d8ffc3931cc4361022270",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Child & operator=(const Child &)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 97,
+            "endOffset": 97
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:4c7f90db74e44afb9389659fee5e0cfce37c73ec61a885a5f493f8cdbd20146a",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Child & operator=(Child &&)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 97,
+            "endOffset": 97
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:b59f9bf1a19f88981660145b4ff2971f148e57ebded441b558c1cda548038b96",
+          "label": "visible",
+          "kind": "unknown",
+          "detail": "int Base:: visible",
+          "insertText": "visible",
+          "replaceRange": {
+            "startOffset": 97,
+            "endOffset": 97
+          },
+          "filterText": "visible"
+        },
+        {
+          "id": "sha256:bfdf253b9f45f12870c5d38272e2272b06725f2a42212f7e6526831e1bd80752",
+          "label": "~Base",
+          "kind": "unknown",
+          "detail": "void Base:: ~Base()",
+          "insertText": "~Base",
+          "replaceRange": {
+            "startOffset": 97,
+            "endOffset": 97
+          },
+          "filterText": "~Base"
+        },
+        {
+          "id": "sha256:54439eb7e5a1853a8787f8e7765ccd898a1648bfe5f454037b8ea029ca42d0a2",
+          "label": "~Child",
+          "kind": "unknown",
+          "detail": "void ~Child()",
+          "insertText": "~Child",
+          "replaceRange": {
+            "startOffset": 97,
+            "endOffset": 97
+          },
+          "filterText": "~Child"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:98",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: Base (InBase) : Base::\nCOMPLETION: Child : Child::\nCOMPLETION: operator= : [#Child &#]operator=(<#const Child &#>)\nCOMPLETION: operator= : [#Child &#]operator=(<#Child &&#>)\nCOMPLETION: operator= (Hidden,InBase) : [#Base &#]Base::operator=(<#const Base &#>)\nCOMPLETION: operator= (Hidden,InBase) : [#Base &#]Base::operator=(<#Base &&#>)\nCOMPLETION: secret (InBase,Inaccessible) : [#int#][#Base::#]secret\nCOMPLETION: visible (InBase) : [#int#][#Base::#]visible\nCOMPLETION: ~Base (InBase) : [#void#][#Base::#]~Base()\nCOMPLETION: ~Child : [#void#]~Child()\n",
+      "stderr": "",
+      "memoryBytes": 7077888,
+      "position": {
+        "line": 1,
+        "byteColumn": 98
+      }
+    },
+    "metrics": {
+      "totalMs": 15.343799999999987,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    }
+  },
+  "checks": {
+    "expected": [
+      "visible"
+    ],
+    "absent": [
+      "secret"
+    ],
+    "sourceUnchanged": true
+  }
+}

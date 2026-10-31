@@ -1,0 +1,73 @@
+{
+  "kind": "synthetic-worker-reply-not-real-provider",
+  "request": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "person05-integrity-d7d0174e-f5b8-4c59-8f59-86c5d98e673a",
+    "documentVersion": 1,
+    "snapshot": {
+      "snapshotId": "person05-integrity-d7d0174e-f5b8-4c59-8f59-86c5d98e673a-snapshot",
+      "sourceHash": "sha256:290b8076619d654096174c05adb64d4c3609228d836fc90f0db64fb01084abdd",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Safe { int member; }; void probe() { Safe value; value. }\n",
+          "contentHash": "sha256:e20380f926287bdf63cb6262fb78aea6d9c5293c3e98168e386ffa66ad2c9517"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 62,
+    "trigger": "."
+  },
+  "emitted": {
+    "requestId": "person05-integrity-d7d0174e-f5b8-4c59-8f59-86c5d98e673a",
+    "documentVersion": 1,
+    "snapshotId": "person05-integrity-d7d0174e-f5b8-4c59-8f59-86c5d98e673a-snapshot",
+    "sourceHash": "sha256:290b8076619d654096174c05adb64d4c3609228d836fc90f0db64fb01084abdd",
+    "sourcePath": "main.cpp",
+    "offset": 62,
+    "status": "succeeded",
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+    "items": [
+      {
+        "id": "controlled-member",
+        "label": "member",
+        "insertText": "member",
+        "detail": "int member",
+        "kind": "field",
+        "replaceRange": {
+          "startOffset": 62,
+          "endOffset": 62
+        }
+      }
+    ]
+  },
+  "actual": {
+    "requestId": "person05-integrity-d7d0174e-f5b8-4c59-8f59-86c5d98e673a",
+    "documentVersion": 1,
+    "snapshotId": "person05-integrity-d7d0174e-f5b8-4c59-8f59-86c5d98e673a-snapshot",
+    "sourceHash": "sha256:290b8076619d654096174c05adb64d4c3609228d836fc90f0db64fb01084abdd",
+    "sourcePath": "main.cpp",
+    "offset": 62,
+    "status": "failed",
+    "items": [],
+    "isIncomplete": false,
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "Completion resource mismatch: toolchainId"
+      }
+    ],
+    "reason": "worker-error"
+  },
+  "terminateCalls": 1
+}

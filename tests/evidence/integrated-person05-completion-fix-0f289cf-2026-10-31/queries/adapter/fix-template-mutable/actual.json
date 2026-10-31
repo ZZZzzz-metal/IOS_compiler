@@ -1,0 +1,112 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-template-mutable",
+  "documentVersion": 35,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-template-mutable-snapshot",
+  "sourceHash": "sha256:d8cdde36678c697c19f9b7c67b6c2cc3abb92966c1766d962a568f54c171d614",
+  "sourcePath": "main.cpp",
+  "offset": 624,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:fca717a8db0eb151b3b1cb4e0b858bcd8ed8c14fb3fc3c0c9e942f8d3f381628",
+      "label": "Box_a8ee505af129",
+      "kind": "unknown",
+      "detail": "Box_a8ee505af129::",
+      "insertText": "Box_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 624,
+        "endOffset": 624
+      },
+      "filterText": "Box_a8ee505af129"
+    },
+    {
+      "id": "sha256:9a677606733a6d4991ce250b082da6df1d94da26d3a2614168d23d795298d148",
+      "label": "ingest_a8ee505af129",
+      "kind": "unknown",
+      "detail": "void ingest_a8ee505af129(const OtherType_a8ee505af129 &argument_a8ee505af129)",
+      "insertText": "ingest_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 624,
+        "endOffset": 624
+      },
+      "filterText": "ingest_a8ee505af129"
+    },
+    {
+      "id": "sha256:4310839a876a5b07d2fe672b43673127f446a0bc41d12495319f834a74e83fb1",
+      "label": "inspect_a8ee505af129",
+      "kind": "unknown",
+      "detail": "int inspect_a8ee505af129(const OtherType_a8ee505af129 &argument_a8ee505af129) const",
+      "insertText": "inspect_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 624,
+        "endOffset": 624
+      },
+      "filterText": "inspect_a8ee505af129"
+    },
+    {
+      "id": "sha256:8b78439f1ddffae434e24b1d6e52830bb9d63de4649ca3db332deaff607b0271",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Box_a8ee505af129<int> & operator=(const Box_a8ee505af129<int> &)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 624,
+        "endOffset": 624
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:eb5b9e7d26c34cc6d40ed838d70a155715c99d26980c3bb7a71271c3bcc5bdeb",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Box_a8ee505af129<int> & operator=(Box_a8ee505af129<int> &&)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 624,
+        "endOffset": 624
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:0fa7221329cc1034935572d8849aafc2518d770805aafeb68c5f6216757c1371",
+      "label": "read_a8ee505af129",
+      "kind": "unknown",
+      "detail": "int read_a8ee505af129() const",
+      "insertText": "read_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 624,
+        "endOffset": 624
+      },
+      "filterText": "read_a8ee505af129"
+    },
+    {
+      "id": "sha256:a3292cd340f888e5e83820a597f3cc3273c9ac76497c4e997245da96ad0fa959",
+      "label": "write_a8ee505af129",
+      "kind": "unknown",
+      "detail": "void write_a8ee505af129(int argument_a8ee505af129)",
+      "insertText": "write_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 624,
+        "endOffset": 624
+      },
+      "filterText": "write_a8ee505af129"
+    },
+    {
+      "id": "sha256:81c258f238959c02e9a4c554cd2a6a288889524de6e2ed20578576dfdf12f268",
+      "label": "~Box_a8ee505af129",
+      "kind": "unknown",
+      "detail": "void ~Box_a8ee505af129()",
+      "insertText": "~Box_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 624,
+        "endOffset": 624
+      },
+      "filterText": "~Box_a8ee505af129"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

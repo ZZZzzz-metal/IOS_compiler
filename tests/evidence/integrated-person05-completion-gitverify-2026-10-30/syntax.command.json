@@ -1,0 +1,10 @@
+{
+  "id": "syntax",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "--check",
+    "tests/seal-integrated-round.mjs"
+  ],
+  "exitCode": 0,
+  "error": null
+}

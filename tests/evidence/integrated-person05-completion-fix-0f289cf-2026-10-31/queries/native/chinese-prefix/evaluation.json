@@ -1,0 +1,19 @@
+{
+  "id": "chinese-prefix",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 28.823099999999613,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:1:57",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:1:57"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

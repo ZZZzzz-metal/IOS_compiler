@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-attribute-availability-supplement",
+  "documentVersion": 31,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-attribute-availability-supplement-snapshot",
+    "sourceHash": "sha256:584275ddc1a37f9aaf75a0901658317b6bba802547a1ab32f438d800cc05dff9",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "int personAllowed() { return 1; }\n__attribute__((unavailable(\"person05-unavailable\"))) int personBlocked() { return 2; }\n__attribute__((deprecated(\"person05-deprecated\"))) int personDeprecated() { return 3; }\nvoid probe() { per }\n",
+        "contentHash": "sha256:c8484d6a09ecd3c337a8c534abcc34307c94e9fb343c550ee53666522bf65f10"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 227,
+  "trigger": "identifier"
+}

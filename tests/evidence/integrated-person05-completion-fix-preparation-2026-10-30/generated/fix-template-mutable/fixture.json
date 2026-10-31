@@ -1,0 +1,68 @@
+{
+  "id": "fix-template-mutable",
+  "status": "pending-provider",
+  "language": {
+    "language": "cpp",
+    "standard": "c++17"
+  },
+  "translationUnit": "main.cpp",
+  "sourcePath": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "template<class Type_253c01a445d5> struct Box_253c01a445d5 {\n  int read_253c01a445d5() const { return 0; }\n  void write_253c01a445d5(Type_253c01a445d5 argument_253c01a445d5) { (void)argument_253c01a445d5; }\n  template<class OtherType_253c01a445d5> int inspect_253c01a445d5(const OtherType_253c01a445d5& argument_253c01a445d5) const { (void)argument_253c01a445d5; return 0; }\n  template<class OtherType_253c01a445d5> void ingest_253c01a445d5(const OtherType_253c01a445d5& argument_253c01a445d5) { (void)argument_253c01a445d5; }\n};\nvoid probe_253c01a445d5() {\n  Box_253c01a445d5<int> object_253c01a445d5;\n  object_253c01a445d5.\n}\n",
+      "contentHash": "sha256:4ba6e15d451e10f8cce86a51634870ed8d5aaac9e713380204f9b1d9d474289f"
+    }
+  ],
+  "markedFiles": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "template<class Type_253c01a445d5> struct Box_253c01a445d5 {\n  int read_253c01a445d5() const { return 0; }\n  void write_253c01a445d5(Type_253c01a445d5 argument_253c01a445d5) { (void)argument_253c01a445d5; }\n  template<class OtherType_253c01a445d5> int inspect_253c01a445d5(const OtherType_253c01a445d5& argument_253c01a445d5) const { (void)argument_253c01a445d5; return 0; }\n  template<class OtherType_253c01a445d5> void ingest_253c01a445d5(const OtherType_253c01a445d5& argument_253c01a445d5) { (void)argument_253c01a445d5; }\n};\nvoid probe_253c01a445d5() {\n  Box_253c01a445d5<int> object_253c01a445d5;\n  object_253c01a445d5./*<cc>*/\n}\n"
+    }
+  ],
+  "coordinates": {
+    "offsetUtf16": 624,
+    "line": 9,
+    "columnUtf16": 23,
+    "columnUtf8": 23
+  },
+  "fixtureHash": "sha256:53e9a19674fba225bc6525d0c2a98e3b45caf6ffe8081f679eabd98c4220f92b",
+  "expect": {
+    "support": "required",
+    "contains": [
+      "read_253c01a445d5",
+      "write_253c01a445d5",
+      "inspect_253c01a445d5",
+      "ingest_253c01a445d5"
+    ],
+    "excludes": [],
+    "trigger": ".",
+    "inaccessibleOrAbsent": []
+  },
+  "pairId": "fix-template-cv",
+  "baselineId": null,
+  "signatures": {
+    "required": [],
+    "forbidden": [],
+    "closedNames": []
+  },
+  "controls": [
+    {
+      "id": "write-template-positive",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_253c01a445d5> struct Box_253c01a445d5 {\n  int read_253c01a445d5() const { return 0; }\n  void write_253c01a445d5(Type_253c01a445d5 argument_253c01a445d5) { (void)argument_253c01a445d5; }\n  template<class OtherType_253c01a445d5> int inspect_253c01a445d5(const OtherType_253c01a445d5& argument_253c01a445d5) const { (void)argument_253c01a445d5; return 0; }\n  template<class OtherType_253c01a445d5> void ingest_253c01a445d5(const OtherType_253c01a445d5& argument_253c01a445d5) { (void)argument_253c01a445d5; }\n};\nint main() {\n  Box_253c01a445d5<int> object_253c01a445d5;\n  object_253c01a445d5.write_253c01a445d5(1);\n  object_253c01a445d5.ingest_253c01a445d5(1);\n  return object_253c01a445d5.read_253c01a445d5() + object_253c01a445d5.inspect_253c01a445d5(0);\n}\n"
+        }
+      ],
+      "expect": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      }
+    }
+  ]
+}

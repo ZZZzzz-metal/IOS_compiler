@@ -1,0 +1,18 @@
+{
+  "caseId": "namespace",
+  "path": "native",
+  "startedAt": "2026-10-29T16:30:33.623Z",
+  "elapsedMs": 21.345400000000154,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:2:27",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:2:27"
+    ],
+    "passed": true
+  }
+}

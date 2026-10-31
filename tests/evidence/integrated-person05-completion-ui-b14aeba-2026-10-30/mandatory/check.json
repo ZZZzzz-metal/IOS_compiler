@@ -1,0 +1,10 @@
+{
+  "command": "npm.cmd run check",
+  "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+  "target": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "begin": "2026-10-30T08:26:04.411Z",
+  "end": "2026-10-30T08:26:11.262Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

@@ -1,0 +1,28 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-include-omitted",
+  "documentVersion": 19,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-include-omitted-snapshot",
+  "sourceHash": "sha256:4a3cc321774b0261e1e8ef45e45a51e8d1ebbb8247427644afef945d1a788e9a",
+  "sourcePath": "main.cpp",
+  "offset": 122,
+  "status": "failed",
+  "items": [],
+  "isIncomplete": false,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unknown type name 'RequestData'",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 2,
+          "column": 16
+        }
+      }
+    }
+  ],
+  "reason": "clang-completion-exit",
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

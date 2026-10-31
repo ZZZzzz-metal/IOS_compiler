@@ -1,0 +1,19 @@
+{
+  "id": "shadow-inner",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 26.42119999999977,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 5,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:5:28",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:5:28"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

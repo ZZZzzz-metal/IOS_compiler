@@ -1,0 +1,19 @@
+{
+  "id": "local-prefix",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 26.623399999999947,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:5:8",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:5:8"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

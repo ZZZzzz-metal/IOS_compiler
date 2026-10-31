@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-unavailable-overload",
+  "documentVersion": 41,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-unavailable-overload-snapshot",
+    "sourceHash": "sha256:4fec3136c35f8b9d3730a026eac9680ab89e34dbb1d16800bde76b81171c51c3",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  mixed_a8ee505af129\n}\n",
+        "contentHash": "sha256:fcc60e9a268305c64f38002395d355b7a9c4a07f4c95d9256e7894988c939100"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 406,
+  "trigger": "identifier"
+}

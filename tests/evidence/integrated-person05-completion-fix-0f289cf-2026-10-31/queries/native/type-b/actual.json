@@ -1,0 +1,151 @@
+{
+  "result": {
+    "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-type-b",
+    "documentVersion": 2,
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-type-b-snapshot",
+    "sourceHash": "sha256:25a181d0f14cff40bb0a79fd0848026b55a5c367349eb09d3a0c9c377e1a1c4b",
+    "sourcePath": "main.cpp",
+    "offset": 124,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:003870699edf11dc9e70b0fdd15fed785a24912a72a583d937d89e239ce82e8d",
+        "label": "common",
+        "kind": "unknown",
+        "detail": "int common",
+        "insertText": "common",
+        "replaceRange": {
+          "startOffset": 124,
+          "endOffset": 124
+        },
+        "filterText": "common"
+      },
+      {
+        "id": "sha256:ddfc5fdffd7e62ac412a089a4e23136c01f60ea106db95348ce65389aa5fc45d",
+        "label": "Compass",
+        "kind": "unknown",
+        "detail": "Compass::",
+        "insertText": "Compass",
+        "replaceRange": {
+          "startOffset": 124,
+          "endOffset": 124
+        },
+        "filterText": "Compass"
+      },
+      {
+        "id": "sha256:940d0c298f387f44e236f45d58992c028b3f31ce77688e436739597009c09b47",
+        "label": "north",
+        "kind": "unknown",
+        "detail": "int north",
+        "insertText": "north",
+        "replaceRange": {
+          "startOffset": 124,
+          "endOffset": 124
+        },
+        "filterText": "north"
+      },
+      {
+        "id": "sha256:656c29370687b6e93b3cdfe045906e180e27db74aaa3a2792986351992800388",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Compass & operator=(const Compass &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 124,
+          "endOffset": 124
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:3d3e3d07a286502e402c21cd052e5d469737e9159c7fffdcfc5920919ee9b00e",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Compass & operator=(Compass &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 124,
+          "endOffset": 124
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:bef188f96376749aeaa3791f33a77b2b5ee59c8331c900714eb749821904577a",
+        "label": "~Compass",
+        "kind": "unknown",
+        "detail": "void ~Compass()",
+        "insertText": "~Compass",
+        "replaceRange": {
+          "startOffset": 124,
+          "endOffset": 124
+        },
+        "filterText": "~Compass"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+    "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "native": {
+    "argv": [
+      "clang",
+      "-cc1",
+      "-fsyntax-only",
+      "-triple",
+      "wasm32-unknown-wasi",
+      "-main-file-name",
+      "main.cpp",
+      "-disable-free",
+      "-isysroot",
+      "/",
+      "-internal-isystem",
+      "/include/c++/v1",
+      "-internal-isystem",
+      "/lib/clang/8.0.1/include",
+      "-internal-isystem",
+      "/include",
+      "-I",
+      "/project",
+      "-ferror-limit",
+      "20",
+      "-fmessage-length",
+      "0",
+      "-std=c++17",
+      "-x",
+      "c++",
+      "-code-completion-at=/project/main.cpp:3:39",
+      "/project/main.cpp"
+    ],
+    "exitCode": 0,
+    "stdout": "COMPLETION: common : [#int#]common\nCOMPLETION: Compass : Compass::\nCOMPLETION: north : [#int#]north\nCOMPLETION: operator= : [#Compass &#]operator=(<#const Compass &#>)\nCOMPLETION: operator= : [#Compass &#]operator=(<#Compass &&#>)\nCOMPLETION: ~Compass : [#void#]~Compass()\n",
+    "stderr": "",
+    "memoryBytes": 7012352,
+    "position": {
+      "line": 3,
+      "byteColumn": 39
+    }
+  },
+  "metrics": {
+    "totalMs": 18.441499999999905,
+    "filesystemLinearMemoryBytes": 9437184,
+    "compilerLinearMemoryBytes": 7012352
+  },
+  "resourceReads": [
+    {
+      "path": "vendor/wasm-clang/memfs",
+      "byteLength": 345442,
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+    },
+    {
+      "path": "vendor/wasm-clang/sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    {
+      "path": "vendor/wasm-clang/clang",
+      "byteLength": 31214472,
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    }
+  ]
+}

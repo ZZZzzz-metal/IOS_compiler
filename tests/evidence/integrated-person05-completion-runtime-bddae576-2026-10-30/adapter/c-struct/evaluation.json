@@ -1,0 +1,12 @@
+{
+  "caseId": "c-struct",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:33.063Z",
+  "elapsedMs": 15.724299999999857,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

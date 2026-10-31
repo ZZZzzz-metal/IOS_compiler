@@ -1,0 +1,22 @@
+{
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-late-static-template-static-template-positive",
+  "snapshot": {
+    "snapshotId": "b8ad2c70-d38e-462e-b312-8237782cc7c0",
+    "sourceHash": "sha256:1555fc4f5b25b9e6a3fedf6166ee1e8078b29e4e228b8c813211cef93220ae0e",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "template<class LateType_a8ee505af129> struct LateBox_a8ee505af129 {\n  template<class LateValueType_a8ee505af129> static int lateStaticRead_a8ee505af129(LateValueType_a8ee505af129 lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\n};\n\nint main() {\n  const LateBox_a8ee505af129<int> lateObject_a8ee505af129;\n  return lateObject_a8ee505af129.lateStaticRead_a8ee505af129(1);\n}\n",
+        "contentHash": "sha256:160af13b7a4b0e902fcb66b175b23c3a7c5b3f47c844049d1587cf99c1636318"
+      }
+    ]
+  },
+  "language": "cpp",
+  "standard": "c++17",
+  "mode": "run",
+  "optimization": "O0"
+}

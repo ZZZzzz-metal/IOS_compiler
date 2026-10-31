@@ -1,0 +1,18 @@
+{
+  "id": "fix-unavailable-header",
+  "group": "randomized11",
+  "route": "native",
+  "elapsedMs": 21.530900000000656,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 2,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:7:30",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:7:30"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

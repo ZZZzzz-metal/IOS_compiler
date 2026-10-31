@@ -11,7 +11,7 @@ const cert=process.env.OFFLINE_TLS_CERT,key=process.env.OFFLINE_TLS_KEY;
 if(!Number.isInteger(port)||port<1||port>65535)throw Error('Invalid OFFLINE_PORT');
 if(Boolean(cert)!==Boolean(key))throw Error('Provide both OFFLINE_TLS_CERT and OFFLINE_TLS_KEY');
 if(!['127.0.0.1','localhost','::1'].includes(host)&&!cert)throw Error('iPad/LAN service requires trusted HTTPS. Plain LAN HTTP cannot install the offline worker.');
-const types={'.mjs':'text/javascript','.js':'text/javascript','.css':'text/css; charset=utf-8','.html':'text/html; charset=utf-8','.json':'application/json','.webmanifest':'application/manifest+json','.svg':'image/svg+xml','.md':'text/plain; charset=utf-8','.wasm':'application/wasm'};
+const types={'.mjs':'text/javascript','.js':'text/javascript','.css':'text/css; charset=utf-8','.html':'text/html; charset=utf-8','.json':'application/json','.webmanifest':'application/manifest+json','.svg':'image/svg+xml','.md':'text/plain; charset=utf-8','.patch':'text/plain; charset=utf-8','.wasm':'application/wasm'};
 const handler=async(req,res)=>{
   try{
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405,{'Allow':'GET, HEAD'}).end();return;}

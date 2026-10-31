@@ -1,0 +1,19 @@
+{
+  "id": "const-string",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 204.0648999999994,
+  "verdict": "passed",
+  "support": "boundary",
+  "itemCount": 64,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:4:10",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:4:10"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fix-template-mutable",
+  "group": "randomized11",
+  "route": "adapter",
+  "elapsedMs": 17.184200000000146,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 8,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

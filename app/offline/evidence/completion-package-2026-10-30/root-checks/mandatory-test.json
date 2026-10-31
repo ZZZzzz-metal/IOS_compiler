@@ -1,0 +1,6 @@
+{
+  "command": "npm.cmd test",
+  "exitCode": 0,
+  "stdoutSha256": "8fc5039f5b0e6625e3ae882be35a20c6431a5cebf5c983d01afe080c887208ee",
+  "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

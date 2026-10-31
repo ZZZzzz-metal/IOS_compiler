@@ -1,0 +1,18 @@
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /const|qualifier/iu. Input:
+
+"no matching member function for call to 'append'"
+
+    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-02/compiler/experiments/completion-fix-2026-10-30/verify-repair-controls.mjs:70:16 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: "no matching member function for call to 'append'",
+  expected: /const|qualifier/iu,
+  operator: 'match',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

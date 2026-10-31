@@ -1,0 +1,13 @@
+{
+  "id": "shadow-inner",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 16.40190000000007,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 5,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

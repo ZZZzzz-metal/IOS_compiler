@@ -1,0 +1,7 @@
+{
+  "expected": "-code-completion-at=/project/main.cpp:4:19",
+  "actual": [
+    "-code-completion-at=/project/main.cpp:4:19"
+  ],
+  "passed": true
+}

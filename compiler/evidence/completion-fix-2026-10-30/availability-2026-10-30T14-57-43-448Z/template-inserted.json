@@ -1,0 +1,33 @@
+{
+  "source": "template<class T> __attribute__((unavailable(\"blocked\"))) int personSame(T);void f(){personSame;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-ast-dump",
+    "/project/main.cpp"
+  ],
+  "exitCode": 1,
+  "stdout": "TranslationUnitDecl 0x652d00 <<invalid sloc>> <invalid sloc>\n|-TypedefDecl 0x6531b8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'\n| `-BuiltinType 0x652fe0 '__int128'\n|-TypedefDecl 0x653200 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'\n| `-BuiltinType 0x652ff0 'unsigned __int128'\n|-TypedefDecl 0x653438 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'\n| `-RecordType 0x653290 '__NSConstantString_tag'\n|   `-CXXRecord 0x653230 '__NSConstantString_tag'\n|-TypedefDecl 0x653480 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'void *'\n| `-PointerType 0x653160 'void *'\n|   `-BuiltinType 0x652d40 'void'\n|-FunctionTemplateDecl 0x6536c8 </project/main.cpp:1:1, col:75> col:63 personSame\n| |-TemplateTypeParmDecl 0x6534b0 <col:10, col:16> col:16 referenced class depth 0 index 0 T\n| `-FunctionDecl 0x653658 <col:19, col:75> col:63 personSame 'int (T)'\n|   |-ParmVarDecl 0x6535b8 <col:74> col:75 'T'\n|   `-UnavailableAttr 0x653700 <col:34, col:55> \"blocked\" IR_None\n`-FunctionDecl 0x6537a8 <col:77, col:97> col:82 f 'void ()'\n  `-CompoundStmt 0x653848 <col:85, col:97>\n",
+  "stderr": "/project/main.cpp:1:86: error: reference to overloaded function could not be resolved; did you mean to call it?\ntemplate<class T> __attribute__((unavailable(\"blocked\"))) int personSame(T);void f(){personSame;}\n                                                                                     ^~~~~~~~~~\n/project/main.cpp:1:63: note: possible target for call\ntemplate<class T> __attribute__((unavailable(\"blocked\"))) int personSame(T);void f(){personSame;}\n                                                              ^\n1 error generated.\n",
+  "memoryBytes": 7012352
+}

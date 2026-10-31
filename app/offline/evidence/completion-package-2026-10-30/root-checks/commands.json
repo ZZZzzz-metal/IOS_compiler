@@ -1,0 +1,62 @@
+{
+  "recordedAt": "2026-10-29T16:52:19.503055+00:00",
+  "baseRevision": "537a27b9a43c57d320c110aff1fa44790b653875",
+  "uncommittedRootConfiguration": true,
+  "commands": [
+    {
+      "name": "baseline",
+      "command": [
+        "node",
+        "scripts/check-baseline.mjs"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "eef855bc2d5b5c06bc4f9cfbbb4fe193165abde80146a64fb79da55a84880b1d",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "contracts",
+      "command": [
+        "node",
+        "--test",
+        "contracts/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "031c7179d1015d95552330369b5e659c182b63bfaa62646810e29cedfc42c00f",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "ui-storage",
+      "command": [
+        "node",
+        "--test",
+        "ui/checks/*.test.mjs",
+        "storage/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "d1b1f18024f1384252d83de1c7b0948de42fdb6ae6e03e5c97ef5adc29d23d73",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "offline",
+      "command": [
+        "node",
+        "--test",
+        "app/offline/checks/*.test.mjs"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "ef4dcd5f5439c635598f7473edd5bde10c826e652643fd66c0e9b98f2b2b1577",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "prepare-ui",
+      "command": [
+        "node",
+        "ui/scripts/prepare-probe.mjs"
+      ],
+      "exitCode": 0,
+      "stdoutSha256": "ed8e744b13809e03911eed2b263d624760f1a10f16a7bba1a5fc0f08dc2daf71",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Combined UI/storage, Worker trust, contracts and baseline checks. No iPad or full package browser assertion."
+}

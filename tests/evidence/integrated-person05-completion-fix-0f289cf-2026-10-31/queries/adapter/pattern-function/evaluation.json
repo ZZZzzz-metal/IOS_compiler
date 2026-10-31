@@ -1,0 +1,13 @@
+{
+  "id": "pattern-function",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 15.860400000000027,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

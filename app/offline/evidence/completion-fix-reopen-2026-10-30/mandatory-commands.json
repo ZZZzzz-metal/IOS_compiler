@@ -1,0 +1,10 @@
+[
+  {
+    "command": "npm.cmd run check",
+    "exitCode": 0
+  },
+  {
+    "command": "npm.cmd test",
+    "exitCode": 0
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "delivery": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+  "implementation": "6da3280b3fa9aa859188a26a6b12f578151401a4",
+  "compilerScopeFiles": 373,
+  "handoffOnlySuccessor": true,
+  "sealedFilesAndManifestGitBytesVerified": 355,
+  "runtimeFingerprintsVerified": 12,
+  "losslessGzipMappingsVerified": 18,
+  "originalUncompressedMappedBytes": 274414861,
+  "newFilesBytes": 22345204,
+  "largestNewFileBytes": 3760139,
+  "privateCredentialsKeysOrIPv4Found": false,
+  "originalVendorLockAndFullCompileUnchanged": true,
+  "newRuntimeModule": "compiler/src/completion-semantics.mjs",
+  "reviewMethod": "Readonly fixed-commit scope, SHA/Git bytes and independent binary derivation review; no production test rerun by reviewer",
+  "existingRealPipelinePassed": 3,
+  "ownerIndependentSemantics": "pending",
+  "newFullPackage": "pending"
+}

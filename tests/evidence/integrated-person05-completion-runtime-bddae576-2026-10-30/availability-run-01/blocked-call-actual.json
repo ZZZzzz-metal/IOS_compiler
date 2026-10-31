@@ -1,0 +1,32 @@
+{
+  "status": "failed",
+  "requestId": "03095237-0491-449b-943e-37fdd6ea117f-blocked-call",
+  "sourceHash": "sha256:22d053182549d2f7151e362c7c14d7fc2f8bfad799249eef026eb38338f488fc",
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "call to unavailable function 'personBlocked': person05-unavailable",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 4,
+          "column": 21
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "candidate function has been explicitly made unavailable",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 2,
+          "column": 58
+        }
+      }
+    }
+  ],
+  "reason": "compiler-exit",
+  "rawDiagnostics": "/project/main.cpp:4:21: error: call to unavailable function 'personBlocked': person05-unavailable\nint main() { return personBlocked() - 2; }\n                    ^~~~~~~~~~~~~\n/project/main.cpp:2:58: note: candidate function has been explicitly made unavailable\n__attribute__((unavailable(\"person05-unavailable\"))) int personBlocked() { return 2; }\n                                                         ^\n1 error generated.\n",
+  "binaryEvidence": {}
+}

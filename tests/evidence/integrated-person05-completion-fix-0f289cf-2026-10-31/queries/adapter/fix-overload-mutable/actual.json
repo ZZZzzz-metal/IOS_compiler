@@ -1,0 +1,88 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-overload-mutable",
+  "documentVersion": 37,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-overload-mutable-snapshot",
+  "sourceHash": "sha256:58f7fbda86b5a1b9d5670f29b43fda457f73f043dfed144846a8d7c80327ba82",
+  "sourcePath": "main.cpp",
+  "offset": 269,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:d5ef5f3af00d2f7dce3217ce09d49abe153f849c83b265797b6cb4b38df7183d",
+      "label": "choose_a8ee505af129",
+      "kind": "unknown",
+      "detail": "int choose_a8ee505af129() const",
+      "insertText": "choose_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 269,
+        "endOffset": 269
+      },
+      "filterText": "choose_a8ee505af129"
+    },
+    {
+      "id": "sha256:3e86a7df9486bf0f11f2f98d155349ed65bf16abafa5b7a6c51a6f3937811001",
+      "label": "choose_a8ee505af129",
+      "kind": "unknown",
+      "detail": "int choose_a8ee505af129(int argument_a8ee505af129)",
+      "insertText": "choose_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 269,
+        "endOffset": 269
+      },
+      "filterText": "choose_a8ee505af129"
+    },
+    {
+      "id": "sha256:20f446e7fecf1a19bd88bed183957c42db8bef5ef7ecc6a705388f73d5e793fd",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Record_a8ee505af129 & operator=(const Record_a8ee505af129 &)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 269,
+        "endOffset": 269
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:1e76ccbd226123fa89188d17a604a380b1cc1825f08830950711bb75acf389f5",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Record_a8ee505af129 & operator=(Record_a8ee505af129 &&)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 269,
+        "endOffset": 269
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:f761f696bf666e57ee99e63a7915ed4a94a343729ecae40dbb6a33daee7054db",
+      "label": "Record_a8ee505af129",
+      "kind": "unknown",
+      "detail": "Record_a8ee505af129::",
+      "insertText": "Record_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 269,
+        "endOffset": 269
+      },
+      "filterText": "Record_a8ee505af129"
+    },
+    {
+      "id": "sha256:f169cc17148928df4a6fb3b098420aeeb5f9316d1c79179b6a71f51d0bec0583",
+      "label": "~Record_a8ee505af129",
+      "kind": "unknown",
+      "detail": "void ~Record_a8ee505af129()",
+      "insertText": "~Record_a8ee505af129",
+      "replaceRange": {
+        "startOffset": 269,
+        "endOffset": 269
+      },
+      "filterText": "~Record_a8ee505af129"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

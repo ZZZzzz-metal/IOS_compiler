@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-pattern-function",
+  "documentVersion": 29,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-pattern-function-snapshot",
+    "sourceHash": "sha256:0f4702fe2dadb030d21e22bb199b0b39aaa8562f9f7c9ea7a20dbecf62f0f030",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "int Pattern(int input) { return input; }\nvoid probe() { Pat }\n",
+        "contentHash": "sha256:07ce898780422c1811533ff792b75893fdbb4a53488b0690eaafe2fc3ef8b160"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 59,
+  "trigger": "identifier"
+}

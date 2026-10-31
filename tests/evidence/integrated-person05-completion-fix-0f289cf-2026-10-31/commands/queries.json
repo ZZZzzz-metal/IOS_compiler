@@ -1,0 +1,24 @@
+{
+  "id": "queries",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/run-completion-fix-independent.mjs",
+    "--target-root",
+    "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+    "--target-commit",
+    "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "--evidence-dir",
+    "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/queries",
+    "--identity-summary",
+    "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/identity/summary.json",
+    "--nonce",
+    "a8ee505af129"
+  ],
+  "environmentOverrides": {},
+  "startedAt": "2026-10-31T02:16:35.341Z",
+  "endedAt": "2026-10-31T02:16:41.291Z",
+  "elapsedMs": 5950.4375,
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

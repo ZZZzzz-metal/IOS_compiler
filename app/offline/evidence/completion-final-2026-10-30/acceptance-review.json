@@ -1,0 +1,30 @@
+{
+  "independentCommit": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
+  "mergeCommit": "6ba18d2c9785f85a4b3c90b734a457b144d4c83d",
+  "newSeal": {
+    "directory": "tests/evidence/integrated-person05-completion-ui-b14aeba-2026-10-30",
+    "files": 150,
+    "command": "node tests/seal-integrated-round.mjs integrated-person05-completion-ui-b14aeba-2026-10-30 --verify --git",
+    "observedExitCode": 0,
+    "committedBytesIdentical": true
+  },
+  "secondReadonlyReview": {
+    "ownerScopeFiles": 164,
+    "totalBytes": 1349840,
+    "largestBytes": 81900,
+    "scopeValid": true,
+    "screenshotsVisuallyReviewed": 5,
+    "newCredentialsOrPrivateKeysOrRealLanAddressesFound": false
+  },
+  "originalLogicalCases": {
+    "total": 33,
+    "pass": 32,
+    "constStringBoundaryFailed": 1,
+    "uiPending": 0,
+    "extraUnavailableBoundaryFailed": 1
+  },
+  "desktopScopeAccepted": true,
+  "iPadVerified": false,
+  "knownBoundaryFailuresClosed": false,
+  "note": "New seal verification receipt is a transcription of the completed root tool result, not a new semantic test run. Browser observations and controlled tests retain separate counts in owner05 report."
+}

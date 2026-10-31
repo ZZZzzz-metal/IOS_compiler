@@ -1,0 +1,6 @@
+COMPLETION: advance : [#void#]advance()
+COMPLETION: Node : Node::
+COMPLETION: operator= : [#Node &#]operator=(<#const Node &#>)
+COMPLETION: operator= : [#Node &#]operator=(<#Node &&#>)
+COMPLETION: value : [#int#]value
+COMPLETION: ~Node : [#void#]~Node()

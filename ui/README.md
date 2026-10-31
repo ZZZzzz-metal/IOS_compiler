@@ -4,6 +4,8 @@
 
 ## 启动
 
+2026-10-30新增编辑时语义提示，依赖1号固定公共目标bddae576及2号真实CompletionAdapter。使用与边界见 [代码提示](COMPLETION.md)，本轮自身检查不替代最终完整离线包或iPad验收。
+
 在当前仓库工作区运行，使用 Node.js 22+：
 
 ```powershell

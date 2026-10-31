@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-enum",
+  "documentVersion": 25,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-enum-snapshot",
+    "sourceHash": "sha256:def76d2b12a4489896894c6779d242b70aec4a6ae09e8415804d03892bea430f",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "enum class Direction { orchard, river };\nvoid probe() { Direction::orc }\n",
+        "contentHash": "sha256:de49d63ad1a480c06e6caa4e49b36dc4655e41f197e4f957626e025f245f8cb1"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 70,
+  "trigger": "::"
+}

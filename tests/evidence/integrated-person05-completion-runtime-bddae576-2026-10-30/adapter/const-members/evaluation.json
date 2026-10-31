@@ -1,0 +1,12 @@
+{
+  "caseId": "const-members",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:33.047Z",
+  "elapsedMs": 14.502199999999903,
+  "verdict": "passed",
+  "support": "boundary",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

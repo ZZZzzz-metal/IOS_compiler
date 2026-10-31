@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit"
+  },
+  "semantic": {
+    "kind": "const",
+    "member": "choose_a8ee505af129",
+    "sourcePath": "main.cpp",
+    "line": 7
+  },
+  "diagnosticGroups": [
+    {
+      "index": 0,
+      "error": {
+        "severity": "error",
+        "message": "no matching member function for call to 'choose_a8ee505af129'",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 30
+          }
+        }
+      },
+      "notes": [
+        {
+          "severity": "note",
+          "message": "candidate function not viable: 'this' argument has type 'const Record_a8ee505af129', but method is not marked const",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 3,
+              "column": 7
+            }
+          }
+        },
+        {
+          "severity": "note",
+          "message": "candidate function not viable: requires 0 arguments, but 1 was provided",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 7
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

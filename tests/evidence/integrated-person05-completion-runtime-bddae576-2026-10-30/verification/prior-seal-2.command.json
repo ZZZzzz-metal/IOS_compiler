@@ -1,0 +1,16 @@
+{
+  "id": "prior-seal-2",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/seal-integrated-round.mjs",
+    "integrated-person05-completion-preparation-38ff307-2026-10-29-run02",
+    "--verify",
+    "--git"
+  ],
+  "startedAt": "2026-10-29T16:35:06.229Z",
+  "endedAt": "2026-10-29T16:35:06.739Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "evidenceDirectory": "tests/evidence/integrated-person05-completion-runtime-bddae576-2026-10-30/verification/details/prior-seal-2"
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "file": "mandatory-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "5d1480cbe16180dcb10a909325cf43882e6413aed4078916cfcd63a6613b8575"
+  },
+  {
+    "file": "mandatory-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-test.stdout.txt",
+    "byteLength": 1124,
+    "sha256": "8ed15cfb314b0277901e6847e4c6294718bcd2ef10277fad090490b1216ee32a"
+  },
+  {
+    "file": "push.stderr.txt",
+    "byteLength": 278,
+    "sha256": "1361cf61c74f2be7879b59213ba826d2bd3254b4bb1948add04ab2bc8b33285a"
+  },
+  {
+    "file": "push.stdout.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "receipt.json",
+    "byteLength": 1153,
+    "sha256": "4c5a18fd48a5d1e311c131e65d6787bdf7c01fd96a21e334f5b295fabdd0542f"
+  }
+]

@@ -1,0 +1,784 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-alias-const",
+  "documentVersion": 32,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-alias-const-snapshot",
+  "sourceHash": "sha256:2c9b740f57f92494a7a28325849fbe22391dabd0b6ae2465a8ace8e4b1774961",
+  "sourcePath": "main.cpp",
+  "offset": 164,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:acdc08cb79a2a2089dbb85d656fc094d155e81db987fe393b9697979cecc6f9a",
+      "label": "at",
+      "kind": "unknown",
+      "detail": "const_reference at(size_type __n) const",
+      "insertText": "at",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "at"
+    },
+    {
+      "id": "sha256:c7c6301e634804b875bdd7d5a1089e2eb9497f6a0be2a8fd2899e83e367f9bd2",
+      "label": "back",
+      "kind": "unknown",
+      "detail": "const_reference back() const",
+      "insertText": "back",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "back"
+    },
+    {
+      "id": "sha256:91887c8995804338340879e44ac7796dae87356416d25f5f28e82f976dabc9a7",
+      "label": "basic_string",
+      "kind": "unknown",
+      "detail": "basic_string::",
+      "insertText": "basic_string",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "basic_string"
+    },
+    {
+      "id": "sha256:0ead431599e6d63e3aa3ac4a942336fc32d25715e47af1666ae2416ae704058e",
+      "label": "begin",
+      "kind": "unknown",
+      "detail": "const_iterator begin() const",
+      "insertText": "begin",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "begin"
+    },
+    {
+      "id": "sha256:1f6c8ae7462de5f7fb22d74a15ad3d7fa0b3216697b1025841127797856cc35d",
+      "label": "c_str",
+      "kind": "unknown",
+      "detail": "const value_type * c_str() const",
+      "insertText": "c_str",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "c_str"
+    },
+    {
+      "id": "sha256:4ccf95149320e6d0a1fb01e76e91cc81e14e509c54bed7c86efd7e1d8e5e4bdb",
+      "label": "capacity",
+      "kind": "unknown",
+      "detail": "size_type capacity() const",
+      "insertText": "capacity",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "capacity"
+    },
+    {
+      "id": "sha256:7051e54666a290abb927f3e3cb3969cf950b246e78b82d4dc6b545b3c6923b53",
+      "label": "cbegin",
+      "kind": "unknown",
+      "detail": "const_iterator cbegin() const",
+      "insertText": "cbegin",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "cbegin"
+    },
+    {
+      "id": "sha256:48e865f4208a68f0440f7429b94dea0a8a7a1dace37567ff3590820eb8289b54",
+      "label": "cend",
+      "kind": "unknown",
+      "detail": "const_iterator cend() const",
+      "insertText": "cend",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "cend"
+    },
+    {
+      "id": "sha256:78dd594a1c0684acdcb7d7b2e6e420658c6cef1373b6a06130921c6651b08852",
+      "label": "compare",
+      "kind": "unknown",
+      "detail": "int compare(const basic_string<char> &__str) const",
+      "insertText": "compare",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "compare"
+    },
+    {
+      "id": "sha256:7bdcfcf09ad71a46a071a13796d70b506f93e47cec4905512e462b7a292355ba",
+      "label": "compare",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type compare(const _Tp &__t) const",
+      "insertText": "compare",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "compare"
+    },
+    {
+      "id": "sha256:49211dd0100486201838c377fa4fe57017222028d2a67b8cad0411915bce598b",
+      "label": "compare",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type compare(size_type __pos1, size_type __n1, const _Tp &__t) const",
+      "insertText": "compare",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "compare"
+    },
+    {
+      "id": "sha256:521dfb334742001ec7165dfa860be35f334df85e47ec1a2f58c4441dd20fa6b5",
+      "label": "compare",
+      "kind": "unknown",
+      "detail": "int compare(size_type __pos1, size_type __n1, const basic_string<char> &__str) const",
+      "insertText": "compare",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "compare"
+    },
+    {
+      "id": "sha256:8331d9e49490c215e73a8c1bc2981bd644dc3cc89cf190cbde364af1da12f932",
+      "label": "compare",
+      "kind": "unknown",
+      "detail": "int compare(size_type __pos1, size_type __n1, const basic_string<char> &__str, size_type __pos2[, size_type __n2 = npos]) const",
+      "insertText": "compare",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "compare"
+    },
+    {
+      "id": "sha256:61eab7ab9791f05de5cbe2b3428ad28743f64a95d823e29a01ef46a2660902f6",
+      "label": "compare",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, int>::type compare(size_type __pos1, size_type __n1, const _Tp &__t, size_type __pos2[, size_type __n2 = npos]) const",
+      "insertText": "compare",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "compare"
+    },
+    {
+      "id": "sha256:25a476fcc5ca6e674cfdade4f25e06b8224fe5d9ce8c972211b326d3a7e70ee3",
+      "label": "compare",
+      "kind": "unknown",
+      "detail": "int compare(const value_type *__s) const",
+      "insertText": "compare",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "compare"
+    },
+    {
+      "id": "sha256:5d1d920915db613bcef660fe2b55637c2d2808f1437d88d79dc39de348d0eec8",
+      "label": "compare",
+      "kind": "unknown",
+      "detail": "int compare(size_type __pos1, size_type __n1, const value_type *__s) const",
+      "insertText": "compare",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "compare"
+    },
+    {
+      "id": "sha256:1095fd8f9f7f48369337349db531d0fea7733e9030a78ceea3335f5c28b25e8d",
+      "label": "compare",
+      "kind": "unknown",
+      "detail": "int compare(size_type __pos1, size_type __n1, const value_type *__s, size_type __n2) const",
+      "insertText": "compare",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "compare"
+    },
+    {
+      "id": "sha256:465c5586f68e8a58be7a7b23e85a85b21d2b398d78cbbe58a67930802e644d67",
+      "label": "copy",
+      "kind": "unknown",
+      "detail": "size_type copy(value_type *__s, size_type __n[, size_type __pos = 0]) const",
+      "insertText": "copy",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "copy"
+    },
+    {
+      "id": "sha256:417b31198cb6c5781a5679c60a4058b07c6068e257753260b2ca30af7b1c6408",
+      "label": "crbegin",
+      "kind": "unknown",
+      "detail": "const_reverse_iterator crbegin() const",
+      "insertText": "crbegin",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "crbegin"
+    },
+    {
+      "id": "sha256:b6e8b6a379a2d5f84be431401fb8be573f50442fdfc3f7d1daf379fcd4486963",
+      "label": "crend",
+      "kind": "unknown",
+      "detail": "const_reverse_iterator crend() const",
+      "insertText": "crend",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "crend"
+    },
+    {
+      "id": "sha256:e0b3d5687631be6c43d8abfc847cf3e52f3c9e3525f1214004a8a68ae4e95c91",
+      "label": "data",
+      "kind": "unknown",
+      "detail": "const value_type * data() const",
+      "insertText": "data",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "data"
+    },
+    {
+      "id": "sha256:3aadf493a3235b2cf54aedd6033f7e1943480bcb8e91950b981de861066b510c",
+      "label": "empty",
+      "kind": "unknown",
+      "detail": "bool empty() const",
+      "insertText": "empty",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "empty"
+    },
+    {
+      "id": "sha256:92691bece48c3e919c793bc9a1892b96cbbe43e2aa752217113aaac5a79f7ff2",
+      "label": "end",
+      "kind": "unknown",
+      "detail": "const_iterator end() const",
+      "insertText": "end",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "end"
+    },
+    {
+      "id": "sha256:fc873c9226340926721d5f3f86fcfd53a5f90acb3085c3861ed2d428463853cf",
+      "label": "find",
+      "kind": "unknown",
+      "detail": "size_type find(const basic_string<char> &__str[, size_type __pos = 0]) const",
+      "insertText": "find",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find"
+    },
+    {
+      "id": "sha256:1e0e9c019436518471ab086a6e6e729bebaa3620f48d7639d65f92be92678485",
+      "label": "find",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find(const _Tp &__t[, size_type __pos = 0]) const",
+      "insertText": "find",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find"
+    },
+    {
+      "id": "sha256:e85e058f07bd48daf1602937a0a18cf71fc31ab2ce3c0f65d9c1e58d0c4c486e",
+      "label": "find",
+      "kind": "unknown",
+      "detail": "size_type find(const value_type *__s, size_type __pos, size_type __n) const",
+      "insertText": "find",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find"
+    },
+    {
+      "id": "sha256:f86f906f0800f1a427e75f78ef8bda78cd90d313ffcf962d4daa985752b0ba6b",
+      "label": "find",
+      "kind": "unknown",
+      "detail": "size_type find(const value_type *__s[, size_type __pos = 0]) const",
+      "insertText": "find",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find"
+    },
+    {
+      "id": "sha256:f9b26d39b91e5e9688c050d5e9880545d6dea18522fd24f3ab2862509dad56ea",
+      "label": "find",
+      "kind": "unknown",
+      "detail": "size_type find(value_type __c[, size_type __pos = 0]) const",
+      "insertText": "find",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find"
+    },
+    {
+      "id": "sha256:13ccc7dfffa41f8d56a0f41182afb311eb6ed44a456c1175f5591ba5ec30e7db",
+      "label": "find_first_not_of",
+      "kind": "unknown",
+      "detail": "size_type find_first_not_of(const basic_string<char> &__str[, size_type __pos = 0]) const",
+      "insertText": "find_first_not_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_first_not_of"
+    },
+    {
+      "id": "sha256:8a221e45351b1678fe92b1cb813a0da4ecabfd846748344af728046a5c242622",
+      "label": "find_first_not_of",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_first_not_of(const _Tp &__t[, size_type __pos = 0]) const",
+      "insertText": "find_first_not_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_first_not_of"
+    },
+    {
+      "id": "sha256:5658d4100c5f48bbb1b9a2a16c71604912e903e08aceb8b85937424ea3590f6c",
+      "label": "find_first_not_of",
+      "kind": "unknown",
+      "detail": "size_type find_first_not_of(const value_type *__s, size_type __pos, size_type __n) const",
+      "insertText": "find_first_not_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_first_not_of"
+    },
+    {
+      "id": "sha256:a7cbd3e3c2460dd1c17b02ca5a82d9827714e807e7e364d6b5cd471026e8fef7",
+      "label": "find_first_not_of",
+      "kind": "unknown",
+      "detail": "size_type find_first_not_of(const value_type *__s[, size_type __pos = 0]) const",
+      "insertText": "find_first_not_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_first_not_of"
+    },
+    {
+      "id": "sha256:dbaa382658468aa50cede762bffd2c912fca477db0826971ca53dc8e4781f014",
+      "label": "find_first_not_of",
+      "kind": "unknown",
+      "detail": "size_type find_first_not_of(value_type __c[, size_type __pos = 0]) const",
+      "insertText": "find_first_not_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_first_not_of"
+    },
+    {
+      "id": "sha256:6e3745699ddc320da92824abe146fdfa72ef45c60eb6969be35517d65e54f085",
+      "label": "find_first_of",
+      "kind": "unknown",
+      "detail": "size_type find_first_of(const basic_string<char> &__str[, size_type __pos = 0]) const",
+      "insertText": "find_first_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_first_of"
+    },
+    {
+      "id": "sha256:8ae1406b58c02286fc28b50236b1e8ffad355406376a750000b077cf75102fd1",
+      "label": "find_first_of",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_first_of(const _Tp &__t[, size_type __pos = 0]) const",
+      "insertText": "find_first_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_first_of"
+    },
+    {
+      "id": "sha256:65f303d67199c825b8209060230e75062b9122ea7acbceb4cb383fc80170a558",
+      "label": "find_first_of",
+      "kind": "unknown",
+      "detail": "size_type find_first_of(const value_type *__s, size_type __pos, size_type __n) const",
+      "insertText": "find_first_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_first_of"
+    },
+    {
+      "id": "sha256:c4b775728058e14af371878747fc077dd55c7745f3c4adeb9c96e7e5175d69ab",
+      "label": "find_first_of",
+      "kind": "unknown",
+      "detail": "size_type find_first_of(const value_type *__s[, size_type __pos = 0]) const",
+      "insertText": "find_first_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_first_of"
+    },
+    {
+      "id": "sha256:8b660b913cfd229fd7cbf4cade4a8347838d0736f65ceb522bc43ea7cd61c37b",
+      "label": "find_first_of",
+      "kind": "unknown",
+      "detail": "size_type find_first_of(value_type __c[, size_type __pos = 0]) const",
+      "insertText": "find_first_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_first_of"
+    },
+    {
+      "id": "sha256:01a9338557b81e6d8f54c00f776d58c8506e2de365e0712a4c00d6eaac84811a",
+      "label": "find_last_not_of",
+      "kind": "unknown",
+      "detail": "size_type find_last_not_of(const basic_string<char> &__str[, size_type __pos = npos]) const",
+      "insertText": "find_last_not_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_last_not_of"
+    },
+    {
+      "id": "sha256:83ba1c59360654533b9d9187e4a381f49f027e774fa8d7daf95c50c5f759c1e4",
+      "label": "find_last_not_of",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_last_not_of(const _Tp &__t[, size_type __pos = npos]) const",
+      "insertText": "find_last_not_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_last_not_of"
+    },
+    {
+      "id": "sha256:1e4dc0ac6aee7bc45083abe473ef3d2f2b8b6c4973b173bdd9838a78d3a69633",
+      "label": "find_last_not_of",
+      "kind": "unknown",
+      "detail": "size_type find_last_not_of(const value_type *__s, size_type __pos, size_type __n) const",
+      "insertText": "find_last_not_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_last_not_of"
+    },
+    {
+      "id": "sha256:074ad96f5133765ea73fa0130f981da650007c538c90679a16eb35618acfd40d",
+      "label": "find_last_not_of",
+      "kind": "unknown",
+      "detail": "size_type find_last_not_of(const value_type *__s[, size_type __pos = npos]) const",
+      "insertText": "find_last_not_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_last_not_of"
+    },
+    {
+      "id": "sha256:d5f470b7f7d8cec7f843a041dddd17f30e92a6fb9caf9c0ad45235c6423cee4e",
+      "label": "find_last_not_of",
+      "kind": "unknown",
+      "detail": "size_type find_last_not_of(value_type __c[, size_type __pos = npos]) const",
+      "insertText": "find_last_not_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_last_not_of"
+    },
+    {
+      "id": "sha256:c54ade0dac384ac08f9435800313f10372930fcf8f67df3989de74b790e5b627",
+      "label": "find_last_of",
+      "kind": "unknown",
+      "detail": "size_type find_last_of(const basic_string<char> &__str[, size_type __pos = npos]) const",
+      "insertText": "find_last_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_last_of"
+    },
+    {
+      "id": "sha256:d6bd75ef2f9d0631d0a49f5537e799eebc934cf46e7baf49fcce9c0705fad77a",
+      "label": "find_last_of",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type find_last_of(const _Tp &__t[, size_type __pos = npos]) const",
+      "insertText": "find_last_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_last_of"
+    },
+    {
+      "id": "sha256:a9e7d1ac5c033d16576010bd33fd290f431d906f4a8da5be004daa3f2e1ac738",
+      "label": "find_last_of",
+      "kind": "unknown",
+      "detail": "size_type find_last_of(const value_type *__s, size_type __pos, size_type __n) const",
+      "insertText": "find_last_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_last_of"
+    },
+    {
+      "id": "sha256:be01a6d5d89d8a9dc759f943242a118f714f05e71dfdda431bc09da87fd1ea25",
+      "label": "find_last_of",
+      "kind": "unknown",
+      "detail": "size_type find_last_of(const value_type *__s[, size_type __pos = npos]) const",
+      "insertText": "find_last_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_last_of"
+    },
+    {
+      "id": "sha256:135dac322236fab2ff2a6ab34ad329be3c7a29e37934339608a04f4bf3d11e51",
+      "label": "find_last_of",
+      "kind": "unknown",
+      "detail": "size_type find_last_of(value_type __c[, size_type __pos = npos]) const",
+      "insertText": "find_last_of",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "find_last_of"
+    },
+    {
+      "id": "sha256:308c2ea8f16c65d24f506a646041a4d135ea4e9c8d124bbb8ce1f435a1258581",
+      "label": "front",
+      "kind": "unknown",
+      "detail": "const_reference front() const",
+      "insertText": "front",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "front"
+    },
+    {
+      "id": "sha256:86dbfa7b49cfec275fc4f210f50d11552fc4b46e39feb88a3410e5e2b416634a",
+      "label": "get_allocator",
+      "kind": "unknown",
+      "detail": "allocator_type get_allocator() const",
+      "insertText": "get_allocator",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "get_allocator"
+    },
+    {
+      "id": "sha256:02c3649a6ce03391b6a096ab98c9e44e6e91a60d64704484815fded3436df289",
+      "label": "length",
+      "kind": "unknown",
+      "detail": "size_type length() const",
+      "insertText": "length",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "length"
+    },
+    {
+      "id": "sha256:eec2ef87cac309698da79f8eb5817c93614e2e00f401b87921f202efdb0803a0",
+      "label": "max_size",
+      "kind": "unknown",
+      "detail": "size_type max_size() const",
+      "insertText": "max_size",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "max_size"
+    },
+    {
+      "id": "sha256:34e41dce2bb0960779bb761929b481c9b45341eccff312bdb21087adde16767b",
+      "label": "npos",
+      "kind": "unknown",
+      "detail": "const size_type npos",
+      "insertText": "npos",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "npos"
+    },
+    {
+      "id": "sha256:acd18c641e7170becfd53a9b325fbdb883e57d2600b19081da1b555a7ec99799",
+      "label": "operator basic_string_view",
+      "kind": "unknown",
+      "detail": "operator basic_string_view() const",
+      "insertText": "operator basic_string_view",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "operator basic_string_view"
+    },
+    {
+      "id": "sha256:1ad0900f281f9cbb3f55b86f2fe2be90924c11bfcfbee992820ac2680929ec0d",
+      "label": "operator[]",
+      "kind": "unknown",
+      "detail": "const_reference operator[](size_type __pos) const",
+      "insertText": "operator[]",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "operator[]"
+    },
+    {
+      "id": "sha256:0f422d39b2dee275892d92f25f8f6f2c08f918c666a468c33c56cd327453ab92",
+      "label": "rbegin",
+      "kind": "unknown",
+      "detail": "const_reverse_iterator rbegin() const",
+      "insertText": "rbegin",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "rbegin"
+    },
+    {
+      "id": "sha256:7b99c7792185afa7876d863050b3be385e1953e675d74d289b1581a26b99cd9f",
+      "label": "rend",
+      "kind": "unknown",
+      "detail": "const_reverse_iterator rend() const",
+      "insertText": "rend",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "rend"
+    },
+    {
+      "id": "sha256:5f067de72662cbee7bdfe41b4699f0840ed40db99fdf14da7b794a38d81da61d",
+      "label": "rfind",
+      "kind": "unknown",
+      "detail": "size_type rfind(const basic_string<char> &__str[, size_type __pos = npos]) const",
+      "insertText": "rfind",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "rfind"
+    },
+    {
+      "id": "sha256:28b94cdd0a34478cb032d2798e24aeff66418e310eeea60ab58bdb8c822a7f5a",
+      "label": "rfind",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, size_type>::type rfind(const _Tp &__t[, size_type __pos = npos]) const",
+      "insertText": "rfind",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "rfind"
+    },
+    {
+      "id": "sha256:87722284ed98f9ff0c1b43e284ef23ed9b503f34c5a2fd918a0df796eb25137b",
+      "label": "rfind",
+      "kind": "unknown",
+      "detail": "size_type rfind(const value_type *__s, size_type __pos, size_type __n) const",
+      "insertText": "rfind",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "rfind"
+    },
+    {
+      "id": "sha256:a30929e853161fb162816ef4d9a92082bc98633e1ca1e88a55d911038f53fe73",
+      "label": "rfind",
+      "kind": "unknown",
+      "detail": "size_type rfind(const value_type *__s[, size_type __pos = npos]) const",
+      "insertText": "rfind",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "rfind"
+    },
+    {
+      "id": "sha256:909bbf90649adeb8aa823cd5a8c768b2ea485127edc7ab42d9cd20be0bdd6532",
+      "label": "rfind",
+      "kind": "unknown",
+      "detail": "size_type rfind(value_type __c[, size_type __pos = npos]) const",
+      "insertText": "rfind",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "rfind"
+    },
+    {
+      "id": "sha256:4c2fada9e87fbe6b67e0b532fbaca05aecdeddf44756055702452f11d0710331",
+      "label": "size",
+      "kind": "unknown",
+      "detail": "size_type size() const",
+      "insertText": "size",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "size"
+    },
+    {
+      "id": "sha256:353d706ace4e5990785e43b959b6f59cb0dffc5cdd7e06f6753da303e6a5c120",
+      "label": "substr",
+      "kind": "unknown",
+      "detail": "basic_string<char> substr([size_type __pos = 0[, size_type __n = npos]]) const",
+      "insertText": "substr",
+      "replaceRange": {
+        "startOffset": 164,
+        "endOffset": 164
+      },
+      "filterText": "substr"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

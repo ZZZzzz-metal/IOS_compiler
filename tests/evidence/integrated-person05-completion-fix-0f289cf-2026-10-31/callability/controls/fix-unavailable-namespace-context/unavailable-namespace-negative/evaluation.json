@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "person05-unavailable"
+  },
+  "semantic": {
+    "kind": "unavailable",
+    "member": "cross_a8ee505af129_read",
+    "sourcePath": "main.cpp",
+    "line": 9,
+    "errorPattern": "person05-unavailable"
+  },
+  "diagnosticGroups": [
+    {
+      "index": 0,
+      "error": {
+        "severity": "error",
+        "message": "'cross_a8ee505af129_read' is unavailable: person05-unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 9,
+            "column": 30
+          }
+        }
+      },
+      "notes": [
+        {
+          "severity": "note",
+          "message": "'cross_a8ee505af129_read' has been explicitly marked unavailable here",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 58
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

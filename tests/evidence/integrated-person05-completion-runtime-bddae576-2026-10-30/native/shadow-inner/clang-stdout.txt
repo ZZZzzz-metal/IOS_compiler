@@ -1,0 +1,5 @@
+COMPLETION: Inner : Inner::
+COMPLETION: innerOnly : [#int#]innerOnly
+COMPLETION: operator= : [#Inner &#]operator=(<#const Inner &#>)
+COMPLETION: operator= : [#Inner &#]operator=(<#Inner &&#>)
+COMPLETION: ~Inner : [#void#]~Inner()

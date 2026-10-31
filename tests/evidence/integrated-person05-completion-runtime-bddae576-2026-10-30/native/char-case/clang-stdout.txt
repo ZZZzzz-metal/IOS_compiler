@@ -1,0 +1,5 @@
+COMPLETION: amplitude : [#int#]amplitude
+COMPLETION: operator= : [#Signal &#]operator=(<#const Signal &#>)
+COMPLETION: operator= : [#Signal &#]operator=(<#Signal &&#>)
+COMPLETION: Signal : Signal::
+COMPLETION: ~Signal : [#void#]~Signal()

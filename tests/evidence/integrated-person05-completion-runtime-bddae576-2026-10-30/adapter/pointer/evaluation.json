@@ -1,0 +1,12 @@
+{
+  "caseId": "pointer",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:32.374Z",
+  "elapsedMs": 17.387100000000146,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

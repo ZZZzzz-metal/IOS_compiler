@@ -1,0 +1,75 @@
+{
+  "id": "06-namespace-scope",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "targetPath": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "markedText": "namespace algo { int count; int compute(int); struct Thing {}; }\nint main() { algo::@; }\n"
+    }
+  ],
+  "observations": [
+    "count",
+    "compute",
+    "Thing"
+  ],
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 84,
+    "line": 2,
+    "utf16Column": 20,
+    "utf8ByteColumn": 20,
+    "linePrefix": "int main() { algo::",
+    "prefixAtCursor": "",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "snapshot": {
+    "snapshotId": "native-probe-06-namespace-scope",
+    "sourceHash": "sha256:3755067f5a5a4d748b163879c5ece4b995fef2afae8e1d2f3f1b76f74bd4fdb0",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "namespace algo { int count; int compute(int); struct Thing {}; }\nint main() { algo::; }\n",
+        "contentHash": "sha256:fcd7f2a12f563b403633f35d9047446090974028b047aab28ee43c8c9f999390"
+      }
+    ]
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:2:20",
+    "/project/main.cpp"
+  ]
+}

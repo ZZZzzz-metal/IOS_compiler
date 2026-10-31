@@ -1,0 +1,37 @@
+{
+  "fixtureId": "fix-unavailable-namespace-context",
+  "controlId": "other-namespace-allowed-positive",
+  "controlSet": "original-11-controls",
+  "startedAt": "2026-10-31T02:16:57.456Z",
+  "passed": true,
+  "sourceHash": "sha256:1b418d7eea48ed3db818c316d4d98c48487931759700bd6fe4dee7cc459e691e",
+  "actualStatus": "compiled",
+  "reason": null,
+  "elapsedMs": 668.2509999999984,
+  "expected": {
+    "status": "compiled",
+    "smokeExitCode": 0
+  },
+  "semantic": null,
+  "diagnosticGroups": [],
+  "errors": [],
+  "binaryEvidence": {
+    "executable": {
+      "file": "controls/fix-unavailable-namespace-context/other-namespace-allowed-positive/main.wasm",
+      "byteLength": 13415,
+      "sha256": "sha256:4b992ed6003b07c0725411485512049d4363533e3da62d31cbbde1afcd077a38"
+    },
+    "object": {
+      "file": "controls/fix-unavailable-namespace-context/other-namespace-allowed-positive/main.o",
+      "byteLength": 437,
+      "sha256": "sha256:21911a7af423e38214106752358ecb95bb34ac1be920d03f21aa79656e79b3a8"
+    }
+  },
+  "actualCompilerIdentity": {
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "workersReleased": true
+}

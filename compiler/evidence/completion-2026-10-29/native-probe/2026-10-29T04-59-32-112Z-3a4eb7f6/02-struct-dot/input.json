@@ -1,0 +1,75 @@
+{
+  "id": "02-struct-dot",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "targetPath": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "markedText": "struct Pair { int count; double length; void reset(int value); };\nint main() { Pair pair; pair.@; }\n"
+    }
+  ],
+  "observations": [
+    "count",
+    "length",
+    "reset"
+  ],
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 95,
+    "line": 2,
+    "utf16Column": 30,
+    "utf8ByteColumn": 30,
+    "linePrefix": "int main() { Pair pair; pair.",
+    "prefixAtCursor": "",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "snapshot": {
+    "snapshotId": "native-probe-02-struct-dot",
+    "sourceHash": "sha256:5d8950e7ebe4386786f45ea8069350c7f281f59228d53c5cc0d9836d946b76e7",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "struct Pair { int count; double length; void reset(int value); };\nint main() { Pair pair; pair.; }\n",
+        "contentHash": "sha256:169b547c39e69cf2842dfbc36b54230399cfc623de42f77163bdbbf19a3f232a"
+      }
+    ]
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:2:30",
+    "/project/main.cpp"
+  ]
+}

@@ -6,3 +6,5 @@ coverage/
 artifacts/
 .local/
 *.bundle
+__pycache__/
+*.pyc
