@@ -1,0 +1,2 @@
+COMPLETION: 数量乙 : [#int#]数量乙
+COMPLETION: 数量甲 : [#int#]数量甲

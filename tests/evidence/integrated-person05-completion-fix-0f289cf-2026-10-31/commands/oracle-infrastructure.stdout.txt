@@ -1,0 +1,39 @@
+✔ four const negatives accept the relevant error plus const candidate note (2.6868ms)
+✔ arbitrary compiler-exit and unrelated errors or notes cannot satisfy const negatives (0.4565ms)
+✔ deleted and unavailable require declared semantic reason at the expected call (0.4794ms)
+✔ eleven distinct repair queries remain preparation-only (0.909ms)
+✔ one exact marker and independent coordinates bind each archived query (1.2615ms)
+✔ fresh nonce changes names and source hashes without changing test meaning (0.9483ms)
+✔ required and forbidden spellings do not contradict; same-name overloads use signatures (0.2896ms)
+✔ signature constraints distinguish int/double and const/nonconst overloads (0.2919ms)
+✔ complete independent call controls include positives, negatives and deprecated warnings (0.4178ms)
+✔ nonce rejects accidental missing or non-hex names (0.8641ms)
+✔ legal same-name overload is retained; adding illegal overload fails only the strict extension (1.926ms)
+✔ unknown detail cannot evade the closed signature set (0.2029ms)
+✔ blanket removal and non-success cannot satisfy legitimate required overloads (0.803ms)
+✔ ordinary allowed overloads may be explicitly listed for mutable objects (0.1965ms)
+✔ different generated names and preserved contract identity receive the same strict checks (0.4711ms)
+✔ 33 independent cases retain pending status; no provider results are fabricated (0.5705ms)
+✔ ASCII, Chinese and non-BMP coordinates have independent literal oracles (0.4793ms)
+✔ coordinate oracle rejects raw editor text and surrogate splits (0.771ms)
+✔ type swap and rename retain counterfactual declarations and different fingerprints (0.156ms)
+✔ scope and declaration order negatives are represented at the actual caret (0.1416ms)
+✔ include context is preserved; omission cannot silently reuse driver declarations (0.2561ms)
+✔ UI suppression, prefix filtering and semantic boundaries are distinct expectations (0.2401ms)
+✔ independent Node SHA snapshot serialization agrees with frozen snapshot protocol (4.8041ms)
+✔ exact insertion names work; matching a name only in detail never satisfies contains (0.601ms)
+✔ const append and private candidates remain boundary failures, including unknown kind (0.3079ms)
+✔ non-success empty result cannot satisfy required candidates; explicit include omission may fail (0.1586ms)
+✔ truncation does not turn a missing required candidate into a pass (0.1398ms)
+✔ stale identity, resource identity, duplicate IDs and invalid range are rejected (1.0435ms)
+✔ raw native UTF8 position and translation unit are checked without treating exit1 as failure (0.2061ms)
+✔ UI automatic suppression cases cannot silently be executed as invalid provider triggers (0.5644ms)
+✔ required function signatures keep return and parameter types without fixing whitespace (0.3742ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 314.2198

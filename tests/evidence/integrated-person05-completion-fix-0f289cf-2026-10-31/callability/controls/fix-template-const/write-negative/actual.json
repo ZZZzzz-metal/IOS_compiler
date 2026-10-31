@@ -1,0 +1,32 @@
+{
+  "status": "failed",
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-template-const-write-negative",
+  "sourceHash": "sha256:8aaa499722a65708372d30a769c98cdde34ac2e2ec2d9d2dad75d604c8eeed11",
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "'this' argument to member function 'write_a8ee505af129' has type 'const Box_a8ee505af129<int>', but function is not marked const",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 9,
+          "column": 3
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "'write_a8ee505af129' declared here",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 3,
+          "column": 8
+        }
+      }
+    }
+  ],
+  "reason": "compiler-exit",
+  "rawDiagnostics": "/project/main.cpp:9:3: error: 'this' argument to member function 'write_a8ee505af129' has type 'const Box_a8ee505af129<int>', but function is not marked const\n  object_a8ee505af129.write_a8ee505af129(1);\n  ^~~~~~~~~~~~~~~~~~~\n/project/main.cpp:3:8: note: 'write_a8ee505af129' declared here\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n       ^\n1 error generated.\n",
+  "binaryEvidence": {}
+}

@@ -1,0 +1,18 @@
+{
+  "id": "fix-unavailable-overload",
+  "group": "randomized11",
+  "route": "native",
+  "elapsedMs": 20.625199999999495,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 2,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:6:21",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:6:21"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

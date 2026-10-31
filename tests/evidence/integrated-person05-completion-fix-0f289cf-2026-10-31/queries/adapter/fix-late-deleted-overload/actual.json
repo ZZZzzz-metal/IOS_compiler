@@ -1,0 +1,28 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-late-deleted-overload",
+  "documentVersion": 44,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-late-deleted-overload-snapshot",
+  "sourceHash": "sha256:64ce63cd65b5307f69b35c53af5fae4488a28cacbaa5bb4f876e037828550cba",
+  "sourcePath": "main.cpp",
+  "offset": 246,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:0c98f2252283e21bf7aa790f944016c200f867d74e43eda4673f0ddc12728664",
+      "label": "lateChoice_a8ee505af129_call",
+      "kind": "unknown",
+      "detail": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129)",
+      "insertText": "lateChoice_a8ee505af129_call",
+      "replaceRange": {
+        "startOffset": 223,
+        "endOffset": 246
+      },
+      "filterText": "lateChoice_a8ee505af129_call"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

@@ -1,0 +1,15 @@
+{
+  "snapshotId": "fed0f073-fcae-46ea-a0b4-fa7b02246dca",
+  "sourceHash": "sha256:b9b66c83a2c078de0cb1fb34f988c27ed06f54296a56813bb5aa28b99e4a5b85",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n\nint main() {\n  return lateChoice_a8ee505af129_call(1.0);\n}\n",
+      "contentHash": "sha256:5ba7d9bfccb6fd53c89cfc4cc1a8e19b08e8b64f4ed8cc154d28e11d3667336d"
+    }
+  ]
+}

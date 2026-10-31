@@ -1,0 +1,32 @@
+{
+  "status": "failed",
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-unavailable-header-unavailable-negative",
+  "sourceHash": "sha256:3ff5cc733151430ab634e397169e0a109da4a0e0f1192fa9cb6d788bab841e8d",
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "call to unavailable function 'surface_header_a8ee505af129_blocked': person05-unavailable",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 7,
+          "column": 10
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "candidate function has been explicitly made unavailable",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 3,
+          "column": 5
+        }
+      }
+    }
+  ],
+  "reason": "compiler-exit",
+  "rawDiagnostics": "/project/main.cpp:7:10: error: call to unavailable function 'surface_header_a8ee505af129_blocked': person05-unavailable\n  return surface_header_a8ee505af129_blocked();\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/project/main.cpp:3:5: note: candidate function has been explicitly made unavailable\nint surface_header_a8ee505af129_blocked() { return 0; }\n    ^\n1 error generated.\n",
+  "binaryEvidence": {}
+}

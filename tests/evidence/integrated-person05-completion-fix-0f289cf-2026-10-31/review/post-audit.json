@@ -1,0 +1,356 @@
+{
+  "passed": true,
+  "kind": "raw-evidence-replay-only",
+  "originals": [
+    {
+      "id": "const-string",
+      "sourceHash": "sha256:e02280d128ef0a382ad528c05052f24565c086726c8bfe1ed12d502d7b39366c",
+      "originalSourceUnchanged": true,
+      "adapterVerdict": "passed",
+      "nativeVerdict": "passed",
+      "nativeExitCode": 0,
+      "rawAvailabilityLines": [],
+      "finalRelevantNames": [
+        "c_str",
+        "size"
+      ]
+    },
+    {
+      "id": "attribute-availability-supplement",
+      "sourceHash": "sha256:584275ddc1a37f9aaf75a0901658317b6bba802547a1ab32f438d800cc05dff9",
+      "originalSourceUnchanged": true,
+      "adapterVerdict": "passed",
+      "nativeVerdict": "passed",
+      "nativeExitCode": 0,
+      "rawAvailabilityLines": [
+        "COMPLETION: personAllowed : [#int#]personAllowed()",
+        "COMPLETION: personBlocked (Inaccessible) : [#int#]personBlocked()",
+        "COMPLETION: personDeprecated : [#int#]personDeprecated()"
+      ],
+      "finalRelevantNames": [
+        "personAllowed",
+        "personDeprecated"
+      ]
+    }
+  ],
+  "auditedCalls": [
+    {
+      "id": "fix-alias-const/read-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:0dae0fd2b19ca153bf43ba6617a46b7e52685e262fcc8edeecc56641fc69e2a7",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-alias-const/append-negative",
+      "status": "failed",
+      "sourceHash": "sha256:483994251fd7ebd2ce2ac733cdab9efaf10ccffe369d897f67124d2b477ae57a",
+      "semantic": {
+        "kind": "const",
+        "member": "append",
+        "sourcePath": "main.cpp",
+        "line": 5
+      },
+      "expectedWarning": null,
+      "diagnosticGroupCount": 1
+    },
+    {
+      "id": "fix-alias-mutable/append-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:76395e024678ae049f2e493e83ba8730df1cd3bfad90816183daa96694bf9eb3",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-template-const/read-template-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:9b720def474232d33d5c671e0243a76257b0034471551b24328d1f98141bd15b",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-template-const/write-negative",
+      "status": "failed",
+      "sourceHash": "sha256:8aaa499722a65708372d30a769c98cdde34ac2e2ec2d9d2dad75d604c8eeed11",
+      "semantic": {
+        "kind": "const",
+        "member": "write_a8ee505af129",
+        "sourcePath": "main.cpp",
+        "line": 9
+      },
+      "expectedWarning": null,
+      "diagnosticGroupCount": 1
+    },
+    {
+      "id": "fix-template-const/ingest-template-negative",
+      "status": "failed",
+      "sourceHash": "sha256:eb00eda330da988b33d423f0ffcdc8718ee6bc59090f0a1b3ede4d8d860d575d",
+      "semantic": {
+        "kind": "const",
+        "member": "ingest_a8ee505af129",
+        "sourcePath": "main.cpp",
+        "line": 9
+      },
+      "expectedWarning": null,
+      "diagnosticGroupCount": 1
+    },
+    {
+      "id": "fix-template-mutable/write-template-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:23a540f5a3b23fce39742e5f3a711bdfaf3c169056266be0125b3da9a9ee1bc5",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-overload-const/const-overload-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:40137fa673b8ec4d8dd009079183856d7c971f017b5de81cc5af1296f104fbe7",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-overload-const/mutable-overload-negative",
+      "status": "failed",
+      "sourceHash": "sha256:a6bc8d61446f246f08a5a54826b5c1f22e8ca6d965d78741f1a552accdd6228f",
+      "semantic": {
+        "kind": "const",
+        "member": "choose_a8ee505af129",
+        "sourcePath": "main.cpp",
+        "line": 7
+      },
+      "expectedWarning": null,
+      "diagnosticGroupCount": 1
+    },
+    {
+      "id": "fix-overload-mutable/both-overloads-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:ff3952d91428c80a3859ac980a5247dc2a7dcfd1e2c6eedb74e66d2df54b2dfb",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-unavailable-definition/allowed-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:3da0c4060b11dd9b59d4cc02d99589327443c0c62cd932d0d7bb9c92f70a4fc2",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-unavailable-definition/unavailable-negative",
+      "status": "failed",
+      "sourceHash": "sha256:a0a3e0361ee90f792ff6de1629788f2dc8f422487c477427f4b3686f302759d1",
+      "semantic": {
+        "kind": "unavailable",
+        "member": "surface_definition_a8ee505af129_blocked",
+        "sourcePath": "main.cpp",
+        "line": 6,
+        "errorPattern": "person05-unavailable"
+      },
+      "expectedWarning": null,
+      "diagnosticGroupCount": 1
+    },
+    {
+      "id": "fix-unavailable-definition/deprecated-warning-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:d2e43477c0e6a4633a9034f32350b788c9c45d640b0fed9eb0a818eb2f22ba19",
+      "semantic": null,
+      "expectedWarning": "person05-deprecated",
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-unavailable-declaration/allowed-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:4d2c69145bff4bb032b0cb409c4abf1a5463b7347249e605e6db31454cf15eff",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-unavailable-declaration/unavailable-negative",
+      "status": "failed",
+      "sourceHash": "sha256:f552dedcf9bba62e1f5f7ad8731ea2745f90adc578381a9e451f40d1e2ac038b",
+      "semantic": {
+        "kind": "unavailable",
+        "member": "surface_declaration_a8ee505af129_blocked",
+        "sourcePath": "main.cpp",
+        "line": 9,
+        "errorPattern": "person05-unavailable"
+      },
+      "expectedWarning": null,
+      "diagnosticGroupCount": 1
+    },
+    {
+      "id": "fix-unavailable-declaration/deprecated-warning-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:c1421ae1d8b6aafac1b996cec526484c84d6dd8fb5f727b9e4a240c00d1e1180",
+      "semantic": null,
+      "expectedWarning": "person05-deprecated",
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-unavailable-header/allowed-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:e89f40fcb4c6e89c408d0ec15a38ba2df26799b73f24d289909090e09be7d432",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-unavailable-header/unavailable-negative",
+      "status": "failed",
+      "sourceHash": "sha256:3ff5cc733151430ab634e397169e0a109da4a0e0f1192fa9cb6d788bab841e8d",
+      "semantic": {
+        "kind": "unavailable",
+        "member": "surface_header_a8ee505af129_blocked",
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "errorPattern": "person05-unavailable"
+      },
+      "expectedWarning": null,
+      "diagnosticGroupCount": 1
+    },
+    {
+      "id": "fix-unavailable-header/deprecated-warning-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:57a60703b7d4e1eed5c2022f6567b82f5aea47ed3d12b9709a432f7b3f325388",
+      "semantic": null,
+      "expectedWarning": "person05-deprecated",
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-unavailable-overload/available-overload-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:6fb6822d3cba37c3ad4f893da25a792226b03b6c14c251527ada6acaeeacb415",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-unavailable-overload/unavailable-overload-negative",
+      "status": "failed",
+      "sourceHash": "sha256:f0a47118bdb4ea65e4d7d75363cf3ce2159706d76ab0589e882dc03db1cec1d3",
+      "semantic": {
+        "kind": "unavailable",
+        "member": "mixed_a8ee505af129_select",
+        "sourcePath": "main.cpp",
+        "line": 6,
+        "errorPattern": "person05-unavailable"
+      },
+      "expectedWarning": null,
+      "diagnosticGroupCount": 1
+    },
+    {
+      "id": "fix-unavailable-overload/deprecated-warning-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:2c70c77c1a44a5ab289a781a65072b2cd8bcbf9bb5f262a41193a1b13c1ff0bb",
+      "semantic": null,
+      "expectedWarning": "person05-deprecated",
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-unavailable-namespace-context/other-namespace-allowed-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:1b418d7eea48ed3db818c316d4d98c48487931759700bd6fe4dee7cc459e691e",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-unavailable-namespace-context/unavailable-namespace-negative",
+      "status": "failed",
+      "sourceHash": "sha256:b709f4263793278a69e58e8a286e6774cae014970e873cd3df59699f55fb9c14",
+      "semantic": {
+        "kind": "unavailable",
+        "member": "cross_a8ee505af129_read",
+        "sourcePath": "main.cpp",
+        "line": 9,
+        "errorPattern": "person05-unavailable"
+      },
+      "expectedWarning": null,
+      "diagnosticGroupCount": 1
+    },
+    {
+      "id": "fix-late-static-template/static-template-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:1555fc4f5b25b9e6a3fedf6166ee1e8078b29e4e228b8c813211cef93220ae0e",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-late-deleted-overload/available-double-positive",
+      "status": "compiled",
+      "sourceHash": "sha256:b9b66c83a2c078de0cb1fb34f988c27ed06f54296a56813bb5aa28b99e4a5b85",
+      "semantic": null,
+      "expectedWarning": null,
+      "diagnosticGroupCount": 0
+    },
+    {
+      "id": "fix-late-deleted-overload/deleted-int-negative",
+      "status": "failed",
+      "sourceHash": "sha256:77eb085e700e519e7e82f1542068e2b77b882fe9b133a796e4c994175accd512",
+      "semantic": {
+        "kind": "deleted",
+        "member": "lateChoice_a8ee505af129_call",
+        "sourcePath": "main.cpp",
+        "line": 5,
+        "errorPattern": "deleted"
+      },
+      "expectedWarning": null,
+      "diagnosticGroupCount": 1
+    }
+  ],
+  "uniqueCallControls": 27,
+  "actualCallStartEvents": 27,
+  "eventCounts": {
+    "compile-started": 27,
+    "compile-evaluated": 27,
+    "worker-created": 27,
+    "worker-exit": 27
+  },
+  "constSemanticFailures": 4,
+  "unavailableSemanticFailures": 5,
+  "deletedSemanticFailures": 1,
+  "shadowValues": [
+    {
+      "name": "shadow",
+      "type": "int",
+      "truncated": false,
+      "availability": "available",
+      "displayValue": "17",
+      "namedCount": 0,
+      "indexedCount": 0
+    },
+    {
+      "name": "shadow",
+      "type": "int",
+      "truncated": false,
+      "availability": "available",
+      "displayValue": "5",
+      "namedCount": 0,
+      "indexedCount": 0
+    }
+  ],
+  "mainCounts": {
+    "passed": 21,
+    "failed": 0
+  },
+  "initializerCounts": {
+    "passed": 6,
+    "failed": 0
+  },
+  "originalInputsAndTrackedHistoryUnchanged": true,
+  "currentExecutableMatchesActualRunArchive": true,
+  "notes": [
+    "No new Clang/provider/CompilerProbe execution in this audit.",
+    "Late unexecuted runner hardening is kept separately; actual executed runner restored byte-for-byte.",
+    "Canonical source/contents and event counts independently verified over all 27 raw controls."
+  ]
+}

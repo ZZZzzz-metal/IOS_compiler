@@ -1,0 +1,3 @@
+COMPLETION: Box_a8ee505af129 : Box_a8ee505af129::
+COMPLETION: inspect_a8ee505af129 : [#int#]inspect_a8ee505af129(<#const OtherType_a8ee505af129 &argument_a8ee505af129#>)[# const#]
+COMPLETION: read_a8ee505af129 : [#int#]read_a8ee505af129()[# const#]

@@ -1,0 +1,2414 @@
+{
+  "nonce": "a8ee505af129",
+  "groups": {
+    "original33Backend": 30,
+    "originalExtra": 1,
+    "randomized11": 11,
+    "late2": 2,
+    "inheritedUi": 3
+  },
+  "fixtures": [
+    {
+      "id": "type-a",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Pixel { int scarlet; int common; };\nstruct Compass { int north; int common; };\nvoid inspect() { Pixel value; value. }\n",
+          "contentHash": "sha256:9e413dbbef26a71d8d0f2fe3cc129db423af7defcda0e0484a0697a69f500820"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 122,
+        "line": 3,
+        "columnUtf16": 37,
+        "columnUtf8": 37
+      },
+      "fixtureHash": "sha256:e0b2c431bd9e5c0f0b34a097a32b38aad5d140fff72efd7ebab68f7458ca2db5",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "scarlet",
+          "common"
+        ],
+        "excludes": [
+          "north"
+        ]
+      },
+      "pairId": "semantic-type",
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "type-b",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Pixel { int scarlet; int common; };\nstruct Compass { int north; int common; };\nvoid inspect() { Compass value; value. }\n",
+          "contentHash": "sha256:951a386f380b7cf79bfaa5a0c3658fd382faa5684109df512ed892d9de94c409"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 124,
+        "line": 3,
+        "columnUtf16": 39,
+        "columnUtf8": 39
+      },
+      "fixtureHash": "sha256:aa5783837a7a7de6b3216f9dc0d06f18fb3b94464021469be7a025252d3f699e",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "north",
+          "common"
+        ],
+        "excludes": [
+          "scarlet"
+        ]
+      },
+      "pairId": "semantic-type",
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "renamed-member",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Pixel { int coral; int common; };\nstruct Compass { int north; int common; };\nvoid inspect() { Pixel value; value. }\n",
+          "contentHash": "sha256:df46652b3668b6be6bf757ab98717d9f90416f191bd79ae472f136433e203c65"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 120,
+        "line": 3,
+        "columnUtf16": 37,
+        "columnUtf8": 37
+      },
+      "fixtureHash": "sha256:6a98b62fc86f58101450e8aa9a4ceae409e63819c301d1d1ce2aad3d2084402e",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "coral",
+          "common"
+        ],
+        "excludes": [
+          "scarlet",
+          "north"
+        ]
+      },
+      "pairId": "semantic-rename",
+      "baselineId": "type-a",
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "access-control",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "class Vault {\npublic:\n    int visible;\n    int inspect() const { return 7; }\nprotected:\n    int guarded;\nprivate:\n    int secret;\n};\nvoid probe() { Vault object; object. }\n",
+          "contentHash": "sha256:0a37c7a5d99d3b7881c3697a030959eadebd477fd29bc6f114d8c6c78e3b7f10"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 169,
+        "line": 10,
+        "columnUtf16": 37,
+        "columnUtf8": 37
+      },
+      "fixtureHash": "sha256:770ccd6b0e861909cde007bb5b2b55de64124d03b8f8f712f8b5a79fcf78cee6",
+      "expect": {
+        "trigger": ".",
+        "support": "boundary",
+        "contains": [
+          "visible",
+          "inspect"
+        ],
+        "inaccessibleOrAbsent": [
+          "guarded",
+          "secret"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "检查不可访问候选不会作为可确认项；原生Clang可能带不可访问标志，须根据冻结契约判断过滤或禁用。",
+      "group": "original33-backend"
+    },
+    {
+      "id": "pointer",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Height { int summit; int elevation; };\nvoid probe(Height* pointer) { pointer-> }\n",
+          "contentHash": "sha256:2888a333e7a73b7b5bb651d23511d35bcd871865caca3783a5fa913999432103"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 85,
+        "line": 2,
+        "columnUtf16": 40,
+        "columnUtf8": 40
+      },
+      "fixtureHash": "sha256:89193e93fb7e5783141be8551f1e51532a9f8884a63abdd421ea781d39b40e9b",
+      "expect": {
+        "trigger": "->",
+        "support": "required",
+        "contains": [
+          "summit",
+          "elevation"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "namespace",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "namespace records { int ledger; int load(int value) { return value; } }\nvoid probe() { records::lo }\n",
+          "contentHash": "sha256:b99b2663d1f20191cac6f5684a6fd941f475009dce709ea43600d2536a9413ff"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 98,
+        "line": 2,
+        "columnUtf16": 27,
+        "columnUtf8": 27
+      },
+      "fixtureHash": "sha256:d8210e239a7754f13367ae5d822b29c029a3f2e57f1c8ebd01eba9c813aab1a0",
+      "expect": {
+        "trigger": "::",
+        "prefix": "lo",
+        "support": "required",
+        "contains": [
+          "load"
+        ],
+        "excludes": [],
+        "visibleExcludes": [
+          "ledger"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "local-prefix",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "void probe() {\n    int dahlia = 1;\n    int dahliaCount = 2;\n    int unrelatedValue = 3;\n    dah\n}\n",
+          "contentHash": "sha256:07a8ed630c9c9bee1272e754e9db46e12db61d116d534e276a34ed59a055855d"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 95,
+        "line": 5,
+        "columnUtf16": 8,
+        "columnUtf8": 8
+      },
+      "fixtureHash": "sha256:0df5d7f93e186e7db92f790913affceedd96aa934e8ddccb2f2c374b9a244f49",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "dah",
+        "support": "required",
+        "contains": [
+          "dahlia",
+          "dahliaCount"
+        ],
+        "excludes": [],
+        "visibleExcludes": [
+          "unrelatedValue"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "function-prefix",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int sigmaSolve(int input) { return input + 1; }\nint sigmaScan(double input) { return int(input); }\nint unrelatedFunction() { return 9; }\nvoid probe() { sig }\n",
+          "contentHash": "sha256:ebe492b23f94cbb23e4e2c4be161f2842fa1a2df8f3b16623ba43b7956764499"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 155,
+        "line": 4,
+        "columnUtf16": 19,
+        "columnUtf8": 19
+      },
+      "fixtureHash": "sha256:51a3c68ffce1cdeca3e19a0adea43a9755a9e9613a1393b2fe80f017c4672ba8",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "sig",
+        "support": "required",
+        "contains": [
+          "sigmaSolve",
+          "sigmaScan"
+        ],
+        "signaturePatterns": {
+          "sigmaSolve": "^int\\s+sigmaSolve\\s*\\(\\s*int\\b",
+          "sigmaScan": "^int\\s+sigmaScan\\s*\\(\\s*double\\b"
+        },
+        "excludes": [],
+        "visibleExcludes": [
+          "unrelatedFunction"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "shadow-inner",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Outer { int outerOnly; };\nstruct Inner { int innerOnly; };\nvoid probe() {\n    Outer object;\n    { Inner object; object. }\n}\n",
+          "contentHash": "sha256:d0190406962e3ca8d202a0635af5c228ded4dcad7f0bc6652e50ef8e4bb8a780"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 126,
+        "line": 5,
+        "columnUtf16": 28,
+        "columnUtf8": 28
+      },
+      "fixtureHash": "sha256:3d760f010541bbde79dddfe5e6a54d866edd003455ce4a23edf25deef840d195",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "innerOnly"
+        ],
+        "excludes": [
+          "outerOnly"
+        ]
+      },
+      "pairId": "scope-shadow",
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "shadow-restored",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Outer { int outerOnly; };\nstruct Inner { int innerOnly; };\nvoid probe() {\n    Outer object;\n    { Inner object; }\n    object.\n}\n",
+          "contentHash": "sha256:c2ea713824233c1224891090b49f912555a812efb535ecbd1f04bf95f74385a2"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 132,
+        "line": 6,
+        "columnUtf16": 12,
+        "columnUtf8": 12
+      },
+      "fixtureHash": "sha256:8d6d7684b1801a7ef6af556af76460e5e365aa0a17b9c9faa4b315f71f1eb63b",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "outerOnly"
+        ],
+        "excludes": [
+          "innerOnly"
+        ]
+      },
+      "pairId": "scope-shadow",
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "declaration-order",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int beforeGlobal;\nvoid probe() {\n    befo\n    int beforeLater;\n}\n",
+          "contentHash": "sha256:1e008792cf93ac46afc119cfa5eb56f3de37ff4f0c349b3cbfeea7bb140295d6"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 41,
+        "line": 3,
+        "columnUtf16": 9,
+        "columnUtf8": 9
+      },
+      "fixtureHash": "sha256:f83c91ecbc1b46474fa0747ad9bf946c80423de9c42cbdd087910caf6699f76a",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "befo",
+        "support": "required",
+        "contains": [
+          "beforeGlobal"
+        ],
+        "excludes": [
+          "beforeLater"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "nested-member",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Payload { int actualLeaf; };\nstruct Envelope { Payload payload; int envelopeOnly; };\nvoid probe() { Envelope object; object.payload. }\n",
+          "contentHash": "sha256:968988af980a5d688bb3ff64fdeeed5b4338e875c94a59b410493af0dd77fb0a"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 139,
+        "line": 3,
+        "columnUtf16": 48,
+        "columnUtf8": 48
+      },
+      "fixtureHash": "sha256:84b6868d51b3c65d166236621a6a75cce1a6849e1223155c8d9d32d0454b4e25",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "actualLeaf"
+        ],
+        "excludes": [
+          "envelopeOnly",
+          "payload"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "vector",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <vector>\nvoid probe() { std::vector<int> values; values. }\n",
+          "contentHash": "sha256:8ab73cf358152f40ebb5e264f2dc6bc92993aac635c796b2589f4d400bc7bb32"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 65,
+        "line": 2,
+        "columnUtf16": 48,
+        "columnUtf8": 48
+      },
+      "fixtureHash": "sha256:29a01b1bd549596ef42b9813a52a654576903466bc0ed56ce7705bac52bedf7a",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "size",
+          "push_back"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "string",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nvoid probe() { std::string text; text. }\n",
+          "contentHash": "sha256:7a1c2ea5ae48c4bcbe6f47fbefd118dcd38f849c24bb8a22e38643b3cfcf0845"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 56,
+        "line": 2,
+        "columnUtf16": 39,
+        "columnUtf8": 39
+      },
+      "fixtureHash": "sha256:5649b714c5e6bab91f9c7b10c635bdbe067556a74ef3e9906d4f8dc35802295a",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "size",
+          "append",
+          "c_str"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "chinese-prefix",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "void probe() { int 数量甲 = 1; int 数量乙 = 2; 数 }\n",
+          "contentHash": "sha256:69db2777a6500caf14f4a19adf79f8cf0fea102695a42287f66433328837ae6a"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 42,
+        "line": 1,
+        "columnUtf16": 43,
+        "columnUtf8": 57
+      },
+      "fixtureHash": "sha256:4802fa670a223ec1e9c57af65faf2133160a173057ff0b38b8695ee2d75ea2b7",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "数",
+        "support": "required",
+        "contains": [
+          "数量甲",
+          "数量乙"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "nonbmp-prefix",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "/* 😀中文 */ void probe() { int 知识数量 = 4; 知 }\n",
+          "contentHash": "sha256:81ca443eda9a5452c461a7170588ca862ddbd8f6c222a1f30ddffe1db8429bd4"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 41,
+        "line": 1,
+        "columnUtf16": 42,
+        "columnUtf8": 58
+      },
+      "fixtureHash": "sha256:975780e7cd893eb77abaff34e5a74a8e0ea3f707e3b06c17983e03b7e79f4e3a",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "知",
+        "support": "required",
+        "contains": [
+          "知识数量"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "nonbmp-member",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "/* 中😀 */ struct Coordinates { int east; int west; }; void probe() { Coordinates point; point. }\n",
+          "contentHash": "sha256:b1fff3a6ec75fb3ff0fd08dd5ba44d14b059e210d1a07cbcf96d476dc2bb9910"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 94,
+        "line": 1,
+        "columnUtf16": 95,
+        "columnUtf8": 99
+      },
+      "fixtureHash": "sha256:1df3336db8f875c80b0e4f6963dfb56e00280626832c371724348990ab5d3393",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "east",
+          "west"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "included-source",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "driver.cpp",
+      "sourcePath": "user.inc",
+      "files": [
+        {
+          "path": "driver.cpp",
+          "role": "driver",
+          "text": "struct RequestData { int fromDriver; int serial; };\n#include \"user.inc\"\nint main() { return 0; }\n",
+          "contentHash": "sha256:efd346a314958d960e54a60134b6e0220e77420ea8a6b6ec05aa395af378a6ef"
+        },
+        {
+          "path": "user.inc",
+          "role": "user",
+          "text": "class Solution {\npublic:\n    int solve() { RequestData request; request. }\n};\n",
+          "contentHash": "sha256:8938c945d72b6ccc9515023f91950c272673cb37c9e985c79afd8ab87d729b40"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 72,
+        "line": 3,
+        "columnUtf16": 48,
+        "columnUtf8": 48
+      },
+      "fixtureHash": "sha256:9bfb6ed573b27767e6371f8d4c241d3fd688be2fab9ee8b07ebd627d5098f7d6",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "fromDriver",
+          "serial"
+        ],
+        "excludes": []
+      },
+      "pairId": "include-context",
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "include-omitted",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "// Counterfactual: no declaration from driver.cpp is visible in this project.\nvoid probe() { RequestData request; request. }\n",
+          "contentHash": "sha256:514946a725ab58ac66b2e0ae9adbce5144b012712241e0c636c56269630692f9"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 122,
+        "line": 2,
+        "columnUtf16": 45,
+        "columnUtf8": 45
+      },
+      "fixtureHash": "sha256:d72496514e679a5f23a02d2962733e43f3144c4098eef6b6ab47598e0f2a0119",
+      "expect": {
+        "trigger": ".",
+        "support": "boundary",
+        "allowedStatuses": [
+          "succeeded",
+          "failed",
+          "unsupported"
+        ],
+        "contains": [],
+        "excludes": [
+          "fromDriver",
+          "serial"
+        ]
+      },
+      "pairId": "include-context",
+      "baselineId": null,
+      "notes": "省略driver声明的反事实；failed/unsupported或无此成员均可，不要求语法错误输入成功。",
+      "group": "original33-backend"
+    },
+    {
+      "id": "unfinished",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Device { int antenna; int battery; };\nint main() {\n    Device device;\n    device.\n",
+          "contentHash": "sha256:59454622ffa122b9919a629f7c022cc758eb7e4c98b48208f6bacde12d547697"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 88,
+        "line": 4,
+        "columnUtf16": 12,
+        "columnUtf8": 12
+      },
+      "fixtureHash": "sha256:c5da8399e932bc7299ae9974da8fe7d054fc0af608184cb72cdecd363e099ae4",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "antenna",
+          "battery"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "const-members",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Reading {\n    int read() const { return 2; }\n    void mutate() { }\n};\nvoid probe(const Reading& item) { item. }\n",
+          "contentHash": "sha256:c2d4cd6b365c9fea99c9d6b0ced57a6656423347010647c4b151d8c6eb755481"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 116,
+        "line": 5,
+        "columnUtf16": 40,
+        "columnUtf8": 40
+      },
+      "fixtureHash": "sha256:a7f8fb61b1f094f69f6ef1b88ed97e40d3f8dee07b73e3ccad8c481c760e22b6",
+      "expect": {
+        "trigger": ".",
+        "support": "boundary",
+        "contains": [
+          "read"
+        ],
+        "inaccessibleOrAbsent": [
+          "mutate"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "单列const可调用性边界；须先核对Clang原生可用性，不把显示全部声明误称完整访问控制。",
+      "group": "original33-backend"
+    },
+    {
+      "id": "c-struct",
+      "status": "pending-provider",
+      "language": {
+        "language": "c",
+        "standard": "c11"
+      },
+      "translationUnit": "main.c",
+      "sourcePath": "main.c",
+      "files": [
+        {
+          "path": "main.c",
+          "role": "user",
+          "text": "struct Parcel { int weight; int destination; };\nvoid probe(void) { struct Parcel parcel; parcel. }\n",
+          "contentHash": "sha256:c210083d17ec76a67510eeb05dc054d4ad2b7a1ef87afb9de9e11589cfe9ae5f"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 96,
+        "line": 2,
+        "columnUtf16": 49,
+        "columnUtf8": 49
+      },
+      "fixtureHash": "sha256:78ff6bb1ba8a8afb3e407dcdb775e0a66bb83010140063e8d4c3fd4b60a38364",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "weight",
+          "destination"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "c-pointer",
+      "status": "pending-provider",
+      "language": {
+        "language": "c",
+        "standard": "c11"
+      },
+      "translationUnit": "main.c",
+      "sourcePath": "main.c",
+      "files": [
+        {
+          "path": "main.c",
+          "role": "user",
+          "text": "struct Parcel { int weight; int destination; };\nvoid probe(struct Parcel* parcel) { parcel-> }\n",
+          "contentHash": "sha256:4b32013b874fc81ca19ad3dcc46d7035683dc5d26907f4824e32a823bbd63bcd"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 92,
+        "line": 2,
+        "columnUtf16": 45,
+        "columnUtf8": 45
+      },
+      "fixtureHash": "sha256:cac72f7ef673710171da752846c706786ee5c4deb22d70ce06cef860a839bce5",
+      "expect": {
+        "trigger": "->",
+        "support": "required",
+        "contains": [
+          "weight",
+          "destination"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "c-prefix",
+      "status": "pending-provider",
+      "language": {
+        "language": "c",
+        "standard": "c11"
+      },
+      "translationUnit": "main.c",
+      "sourcePath": "main.c",
+      "files": [
+        {
+          "path": "main.c",
+          "role": "user",
+          "text": "void probe(void) { int cedarCount = 4; int cedarTotal = 8; ced }\n",
+          "contentHash": "sha256:ed343704574d4841eae25184ce97e3afdb9f6ae543646829a2067bf7d834ab79"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 62,
+        "line": 1,
+        "columnUtf16": 63,
+        "columnUtf8": 63
+      },
+      "fixtureHash": "sha256:e3d9914c3522aac1782f05d8bd95c890e6799171965c94dc93b6a2b898e9b76a",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "ced",
+        "support": "required",
+        "contains": [
+          "cedarCount",
+          "cedarTotal"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "enum",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "enum class Direction { orchard, river };\nvoid probe() { Direction::orc }\n",
+          "contentHash": "sha256:de49d63ad1a480c06e6caa4e49b36dc4655e41f197e4f957626e025f245f8cb1"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 70,
+        "line": 2,
+        "columnUtf16": 30,
+        "columnUtf8": 30
+      },
+      "fixtureHash": "sha256:3c7ecbb6833a27f8e7a39eeb30724e72929c0ee159f3db0b89bca99cc6e4a013",
+      "expect": {
+        "trigger": "::",
+        "prefix": "orc",
+        "support": "required",
+        "contains": [
+          "orchard"
+        ],
+        "excludes": [],
+        "visibleExcludes": [
+          "river"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "group": "original33-backend"
+    },
+    {
+      "id": "char-case",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Signal { int amplitude; };\nvoid probe(char code) {\n    Signal obj;\n    switch (code) { case'a': obj. }\n}\n",
+          "contentHash": "sha256:eba18bf0c53b62c47339adec91dc17292e96b2f2aef0b7ac0670b5f6d667e9d4"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 107,
+        "line": 4,
+        "columnUtf16": 34,
+        "columnUtf8": 34
+      },
+      "fixtureHash": "sha256:f237fa2e5afd02430bdb000cd15af6fc588b36fe9cbac6dbbdaf7f672873bedd",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "amplitude"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "合法case'a'后成员补全，防止字符字面量/数字分隔符启发式误抑制；草稿审查建议，待真实provider/UI执行。",
+      "group": "original33-backend"
+    },
+    {
+      "id": "char-sizeof",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Signal { int amplitude; };\nvoid probe() {\n    Signal obj;\n    sizeof'a'; obj.\n}\n",
+          "contentHash": "sha256:af35deb787a777982c64ce8d00af23fc7c8906331f62a3b68cfd6ee142d20099"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 84,
+        "line": 4,
+        "columnUtf16": 20,
+        "columnUtf8": 20
+      },
+      "fixtureHash": "sha256:3b6b1ade4ccc66c16f982e676b78397df18c5eb43b6cd8e4ec990ab9c4ff17d9",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "amplitude"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "合法sizeof'a'后成员补全，不以合成词法复现代替真实结果。",
+      "group": "original33-backend"
+    },
+    {
+      "id": "pattern-variable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "void probe() {\n    int Pattern = 7;\n    Pat\n}\n",
+          "contentHash": "sha256:8b4f8a64f93e17b4b66d406014d7c95b570907d10f208214302bff96df746dc1"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 43,
+        "line": 3,
+        "columnUtf16": 8,
+        "columnUtf8": 8
+      },
+      "fixtureHash": "sha256:027df3de000b153bbef2bbef010e60528c9469733b19083a29c74ab1dae0bd60",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "Pat",
+        "support": "required",
+        "contains": [
+          "Pattern"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "真实标识符Pattern与CLI内建Pattern伪项区分，不能仅因名字相同丢弃。",
+      "group": "original33-backend"
+    },
+    {
+      "id": "pattern-function",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int Pattern(int input) { return input; }\nvoid probe() { Pat }\n",
+          "contentHash": "sha256:07ce898780422c1811533ff792b75893fdbb4a53488b0690eaafe2fc3ef8b160"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 59,
+        "line": 2,
+        "columnUtf16": 19,
+        "columnUtf8": 19
+      },
+      "fixtureHash": "sha256:d9fb7d47078998f8ab9db38650e605cf2636a98e9785e2f2b2f04a820cbbf4e7",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "Pat",
+        "support": "required",
+        "contains": [
+          "Pattern"
+        ],
+        "signaturePatterns": {
+          "Pattern": "^int\\s+Pattern\\s*\\(\\s*int\\b"
+        },
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "同名函数独立翻译单元，保留真实签名及纯文本插入。",
+      "group": "original33-backend"
+    },
+    {
+      "id": "const-string",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nvoid probe() {\n    const std::string text;\n    text.\n}\n",
+          "contentHash": "sha256:5fde7931bd0632973259dfe99197987a9b729e429a1e9674f6cfe4db82fe3d07"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 70,
+        "line": 4,
+        "columnUtf16": 10,
+        "columnUtf8": 10
+      },
+      "fixtureHash": "sha256:1c596bc147b36459d4ac36ea974740760aba352c1dabcc46b10f651c6103f630",
+      "expect": {
+        "trigger": ".",
+        "support": "boundary",
+        "contains": [
+          "size",
+          "c_str"
+        ],
+        "inaccessibleOrAbsent": [
+          "append"
+        ]
+      },
+      "pairId": "const-library",
+      "baselineId": "string",
+      "notes": "const std::string不能调用append；按1号转来的2号真实失败增加独立反例，最终固定目标另验，不通过名称黑名单或放松合法性断言过关。",
+      "group": "original33-backend"
+    },
+    {
+      "id": "attribute-availability-supplement",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int personAllowed() { return 1; }\n__attribute__((unavailable(\"person05-unavailable\"))) int personBlocked() { return 2; }\n__attribute__((deprecated(\"person05-deprecated\"))) int personDeprecated() { return 3; }\nvoid probe() { per }\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 227,
+        "line": 4,
+        "columnUtf16": 19,
+        "columnUtf8": 19
+      },
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "per",
+        "support": "boundary",
+        "contains": [
+          "personAllowed",
+          "personDeprecated"
+        ],
+        "excludes": [],
+        "inaccessibleOrAbsent": [
+          "personBlocked"
+        ]
+      },
+      "group": "original-extra"
+    },
+    {
+      "id": "fix-alias-const",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nvoid probe_a8ee505af129() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:0a5d9bfd2bbff7fc5394012e1d5413b0bac7e1352a139cc591bc9af96630faf4"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nvoid probe_a8ee505af129() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 164,
+        "line": 5,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:3c87b6fc0449f7b2a2a1cd73003031b9c0bac4c8a5693e43b25628ad100758a1",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "size",
+          "c_str"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": [
+          "append"
+        ]
+      },
+      "pairId": "fix-alias-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "read-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nint main() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  return static_cast<int>(object_a8ee505af129.size());\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "append-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nint main() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.append(\"x\");\n  return 0;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-alias-mutable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nvoid probe_a8ee505af129() {\n  TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:786b7e822448d41187c30670852c13fa435ab7aec63aa1beeb83a418ceb81076"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nvoid probe_a8ee505af129() {\n  TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 158,
+        "line": 5,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:d0b957f2ecb887828eca5c0f2e4ddc61946eda49e3e91012ce7cf1f98380b4a8",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "size",
+          "c_str",
+          "append"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": []
+      },
+      "pairId": "fix-alias-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "append-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nint main() {\n  TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.append(\"x\");\n  return object_a8ee505af129.size() == 1 ? 0 : 1;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-template-const",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nvoid probe_a8ee505af129() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:23c02868e46698c8ec962d5ae845b376cd28cc1b7cc62ad4f2670bcb545ac8d8"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nvoid probe_a8ee505af129() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 630,
+        "line": 9,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:be7c3331bda1d1404d33a54b11400bcdc94f1b39ee2fc78f30800c155f42a142",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "read_a8ee505af129",
+          "inspect_a8ee505af129"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": [
+          "write_a8ee505af129",
+          "ingest_a8ee505af129"
+        ]
+      },
+      "pairId": "fix-template-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "read-template-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nint main() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  return object_a8ee505af129.read_a8ee505af129() + object_a8ee505af129.inspect_a8ee505af129(0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "write-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nint main() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.write_a8ee505af129(1);\n  return 0;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        },
+        {
+          "id": "ingest-template-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nint main() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.ingest_a8ee505af129(1);\n  return 0;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-template-mutable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nvoid probe_a8ee505af129() {\n  Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:e29c6f03ccbd6e5b472fee951413c44e2728f5b429b27daa9aaee68bb487cadd"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nvoid probe_a8ee505af129() {\n  Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 624,
+        "line": 9,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:a2a3d2b26f9cdfbe549ffc70b511cb423db99bc4f85620358e1802341e636af5",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "read_a8ee505af129",
+          "write_a8ee505af129",
+          "inspect_a8ee505af129",
+          "ingest_a8ee505af129"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": []
+      },
+      "pairId": "fix-template-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "write-template-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nint main() {\n  Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.write_a8ee505af129(1);\n  object_a8ee505af129.ingest_a8ee505af129(1);\n  return object_a8ee505af129.read_a8ee505af129() + object_a8ee505af129.inspect_a8ee505af129(0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-overload-const",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nvoid probe_a8ee505af129() {\n  const Record_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:52bf6f33acfec94b8992207434e28736c6b14f88e1f45bd4688e00e6cfe33974"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nvoid probe_a8ee505af129() {\n  const Record_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 275,
+        "line": 7,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:3c554320905e26f67e788201e44804078b4a8aed2863f1e042f7337718631632",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "choose_a8ee505af129"
+        ],
+        "excludes": [],
+        "trigger": "."
+      },
+      "pairId": "fix-overload-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "choose_a8ee505af129",
+            "pattern": "\\bchoose_a8ee505af129\\s*\\(\\s*\\s*\\)\\s*const\\s*$"
+          }
+        ],
+        "forbidden": [
+          {
+            "name": "choose_a8ee505af129",
+            "pattern": "\\bchoose_a8ee505af129\\s*\\(\\s*int\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "closedNames": [
+          "choose_a8ee505af129"
+        ]
+      },
+      "controls": [
+        {
+          "id": "const-overload-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nint main() {\n  const Record_a8ee505af129 object_a8ee505af129;\n  return object_a8ee505af129.choose_a8ee505af129();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "mutable-overload-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nint main() {\n  const Record_a8ee505af129 object_a8ee505af129;\n  return object_a8ee505af129.choose_a8ee505af129(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-overload-mutable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nvoid probe_a8ee505af129() {\n  Record_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:d1bfc3bf37a02e17031fca770e904a9f5daff8d284e14082853a0a09f42fbcb7"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nvoid probe_a8ee505af129() {\n  Record_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 269,
+        "line": 7,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:91268d91e555ddf71bed85a96c3125b9d43317d8d69a87b71eb27d79b4d60bb7",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "choose_a8ee505af129"
+        ],
+        "excludes": [],
+        "trigger": "."
+      },
+      "pairId": "fix-overload-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "choose_a8ee505af129",
+            "pattern": "\\bchoose_a8ee505af129\\s*\\(\\s*\\s*\\)\\s*const\\s*$"
+          },
+          {
+            "name": "choose_a8ee505af129",
+            "pattern": "\\bchoose_a8ee505af129\\s*\\(\\s*int\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "forbidden": [],
+        "closedNames": [
+          "choose_a8ee505af129"
+        ]
+      },
+      "controls": [
+        {
+          "id": "both-overloads-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nint main() {\n  Record_a8ee505af129 object_a8ee505af129;\n  return object_a8ee505af129.choose_a8ee505af129() + object_a8ee505af129.choose_a8ee505af129(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-unavailable-definition",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_definition_a8ee505af129\n}\n",
+          "contentHash": "sha256:a3a720342d968de038500760b860dab6696b28b36369420a72dc2201e7eaf94d"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_definition_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 349,
+        "line": 6,
+        "columnUtf16": 34,
+        "columnUtf8": 34
+      },
+      "fixtureHash": "sha256:2eb520219a6d2fafd4125e2d852bb418e89731d61389a5c9ed43a2fb9bdfffc8",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "surface_definition_a8ee505af129_allowed",
+          "surface_definition_a8ee505af129_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "surface_definition_a8ee505af129",
+        "inaccessibleOrAbsent": [
+          "surface_definition_a8ee505af129_blocked"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_a8ee505af129_allowed();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_a8ee505af129_blocked();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_a8ee505af129_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-unavailable-declaration",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_declaration_a8ee505af129\n}\n",
+          "contentHash": "sha256:3d3dc32b74854d6bd41035a3b6ecf2237c751021dbe7305b4c845f462ddc11ba"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_declaration_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 500,
+        "line": 9,
+        "columnUtf16": 35,
+        "columnUtf8": 35
+      },
+      "fixtureHash": "sha256:f471488630666ff28bf0c2e38aee719e9a797cba9cb59a3c0775d4797e29ab9d",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "surface_declaration_a8ee505af129_allowed",
+          "surface_declaration_a8ee505af129_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "surface_declaration_a8ee505af129",
+        "inaccessibleOrAbsent": [
+          "surface_declaration_a8ee505af129_blocked"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_a8ee505af129_allowed();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_a8ee505af129_blocked();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_a8ee505af129_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-unavailable-header",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "api_a8ee505af129.inc",
+          "role": "user",
+          "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n",
+          "contentHash": "sha256:34bce099fd4d0915efc087dd2dca6ada9ef91dcd81da78ea496508f9689bb1f5"
+        },
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_header_a8ee505af129\n}\n",
+          "contentHash": "sha256:bc93c9bcd208a189e8bcc5caa3451f0b42719a5b9646e6967377a267c9b5e14f"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "api_a8ee505af129.inc",
+          "role": "user",
+          "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n"
+        },
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_header_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 261,
+        "line": 7,
+        "columnUtf16": 30,
+        "columnUtf8": 30
+      },
+      "fixtureHash": "sha256:41306fab8d8420274a40bf958c32f2b67a30ecf454ca45f80f674701ca343fa6",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "surface_header_a8ee505af129_allowed",
+          "surface_header_a8ee505af129_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "surface_header_a8ee505af129",
+        "inaccessibleOrAbsent": [
+          "surface_header_a8ee505af129_blocked"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "api_a8ee505af129.inc",
+              "role": "user",
+              "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n"
+            },
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_header_a8ee505af129_allowed();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "api_a8ee505af129.inc",
+              "role": "user",
+              "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n"
+            },
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_header_a8ee505af129_blocked();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "api_a8ee505af129.inc",
+              "role": "user",
+              "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n"
+            },
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_header_a8ee505af129_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-unavailable-overload",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  mixed_a8ee505af129\n}\n",
+          "contentHash": "sha256:fcc60e9a268305c64f38002395d355b7a9c4a07f4c95d9256e7894988c939100"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  mixed_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 406,
+        "line": 6,
+        "columnUtf16": 21,
+        "columnUtf8": 21
+      },
+      "fixtureHash": "sha256:856f684d94718e571b4f98735a5abe151c157953ca943a2e6d1b42c9ae9b79d1",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "mixed_a8ee505af129_select",
+          "mixed_a8ee505af129_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "mixed_a8ee505af129"
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "mixed_a8ee505af129_select",
+            "pattern": "\\bmixed_a8ee505af129_select\\s*\\(\\s*double\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "forbidden": [
+          {
+            "name": "mixed_a8ee505af129_select",
+            "pattern": "\\bmixed_a8ee505af129_select\\s*\\(\\s*int\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "closedNames": [
+          "mixed_a8ee505af129_select"
+        ]
+      },
+      "controls": [
+        {
+          "id": "available-overload-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return mixed_a8ee505af129_select(1.0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-overload-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return mixed_a8ee505af129_select(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return mixed_a8ee505af129_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-unavailable-namespace-context",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "namespace AreaA_a8ee505af129 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_a8ee505af129_read() { return 0; }\n}\nnamespace AreaB_a8ee505af129 {\nint cross_a8ee505af129_read() { return 0; }\n}\n\nvoid probe_a8ee505af129() {\n  AreaB_a8ee505af129::cross_a8ee505af129\n}\n",
+          "contentHash": "sha256:90a0f02e0418a30a047433daf8decf889f213d35dec83431fd260c06ded60a64"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "namespace AreaA_a8ee505af129 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_a8ee505af129_read() { return 0; }\n}\nnamespace AreaB_a8ee505af129 {\nint cross_a8ee505af129_read() { return 0; }\n}\n\nvoid probe_a8ee505af129() {\n  AreaB_a8ee505af129::cross_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 276,
+        "line": 9,
+        "columnUtf16": 41,
+        "columnUtf8": 41
+      },
+      "fixtureHash": "sha256:043beeaccf3cdf3e83b185e8ec09278d9b88a2ac7b806cbca72eba822d3b398a",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "cross_a8ee505af129_read"
+        ],
+        "excludes": [],
+        "trigger": "::",
+        "prefix": "cross_a8ee505af129"
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "other-namespace-allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "namespace AreaA_a8ee505af129 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_a8ee505af129_read() { return 0; }\n}\nnamespace AreaB_a8ee505af129 {\nint cross_a8ee505af129_read() { return 0; }\n}\n\nint main() {\n  return AreaB_a8ee505af129::cross_a8ee505af129_read();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-namespace-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "namespace AreaA_a8ee505af129 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_a8ee505af129_read() { return 0; }\n}\nnamespace AreaB_a8ee505af129 {\nint cross_a8ee505af129_read() { return 0; }\n}\n\nint main() {\n  return AreaA_a8ee505af129::cross_a8ee505af129_read();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        }
+      ],
+      "group": "randomized11"
+    },
+    {
+      "id": "fix-late-static-template",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class LateType_a8ee505af129> struct LateBox_a8ee505af129 {\n  template<class LateValueType_a8ee505af129> static int lateStaticRead_a8ee505af129(LateValueType_a8ee505af129 lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\n};\n\nvoid lateProbe_a8ee505af129() {\n  const LateBox_a8ee505af129<int> lateObject_a8ee505af129;\n  lateObject_a8ee505af129.\n}\n",
+          "contentHash": "sha256:be14ae45069c1a6bc4a03064a778e4f8f9ed6190c25497070cbb656c3c2ce4ce"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class LateType_a8ee505af129> struct LateBox_a8ee505af129 {\n  template<class LateValueType_a8ee505af129> static int lateStaticRead_a8ee505af129(LateValueType_a8ee505af129 lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\n};\n\nvoid lateProbe_a8ee505af129() {\n  const LateBox_a8ee505af129<int> lateObject_a8ee505af129;\n  lateObject_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 374,
+        "line": 7,
+        "columnUtf16": 27,
+        "columnUtf8": 27
+      },
+      "fixtureHash": "sha256:396007a30da48457a12da3ab288f4b85e8e65ace91e1de362be3e8b31a4965ce",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "lateStaticRead_a8ee505af129"
+        ],
+        "excludes": [],
+        "trigger": "."
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "static-template-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class LateType_a8ee505af129> struct LateBox_a8ee505af129 {\n  template<class LateValueType_a8ee505af129> static int lateStaticRead_a8ee505af129(LateValueType_a8ee505af129 lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\n};\n\nint main() {\n  const LateBox_a8ee505af129<int> lateObject_a8ee505af129;\n  return lateObject_a8ee505af129.lateStaticRead_a8ee505af129(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ],
+      "group": "late2"
+    },
+    {
+      "id": "fix-late-deleted-overload",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n\nvoid lateProbe_a8ee505af129() {\n  lateChoice_a8ee505af129\n}\n",
+          "contentHash": "sha256:3aa5ffc4bb52dc91d430d58c7626b54aafbd273df4c2ea87be38ce006a728fde"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n\nvoid lateProbe_a8ee505af129() {\n  lateChoice_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 246,
+        "line": 5,
+        "columnUtf16": 26,
+        "columnUtf8": 26
+      },
+      "fixtureHash": "sha256:f821497571025578d11343fb8b34e423ea20efb4afd80c4b45479b525d64eb24",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "lateChoice_a8ee505af129_call"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "lateChoice_a8ee505af129"
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "lateChoice_a8ee505af129_call",
+            "pattern": "\\blateChoice_a8ee505af129_call\\s*\\(\\s*double\\b[^)]*\\)\\s*$"
+          }
+        ],
+        "forbidden": [
+          {
+            "name": "lateChoice_a8ee505af129_call",
+            "pattern": "\\blateChoice_a8ee505af129_call\\s*\\(\\s*int\\b[^)]*\\)\\s*$"
+          }
+        ],
+        "closedNames": [
+          "lateChoice_a8ee505af129_call"
+        ]
+      },
+      "controls": [
+        {
+          "id": "available-double-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n\nint main() {\n  return lateChoice_a8ee505af129_call(1.0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "deleted-int-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n\nint main() {\n  return lateChoice_a8ee505af129_call(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "deleted",
+            "errorMember": "lateChoice_a8ee505af129_call"
+          }
+        }
+      ],
+      "group": "late2"
+    }
+  ]
+}

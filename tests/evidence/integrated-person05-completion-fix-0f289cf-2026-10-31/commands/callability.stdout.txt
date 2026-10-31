@@ -1,0 +1,13 @@
+{
+  "expectedCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+  "nonce": "a8ee505af129",
+  "evidencePath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-completion-fix-0f289cf-2026-10-31\\callability",
+  "passed": true,
+  "targetUnchanged": true,
+  "counts": {
+    "passed": 27,
+    "failed": 0,
+    "infrastructureErrors": 0
+  },
+  "actualCompilerProbeCalls": 27
+}

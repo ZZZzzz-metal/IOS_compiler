@@ -1,0 +1,15 @@
+{
+  "snapshotId": "9a4437d6-ec0e-42f2-97c4-6fb3d04007a9",
+  "sourceHash": "sha256:c1421ae1d8b6aafac1b996cec526484c84d6dd8fb5f727b9e4a240c00d1e1180",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_a8ee505af129_deprecated();\n}\n",
+      "contentHash": "sha256:323ce3a50f1fbac2396d4071d3a27c6aef65c013e399e34390dbf82dc9dc0893"
+    }
+  ]
+}

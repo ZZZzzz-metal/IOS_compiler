@@ -1,0 +1,13 @@
+{
+  "id": "pointer",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 20.383399999999938,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

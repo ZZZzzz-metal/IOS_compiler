@@ -1,0 +1,19 @@
+{
+  "id": "pointer",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 26.637900000000172,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:2:40",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:2:40"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

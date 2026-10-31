@@ -1,0 +1,10 @@
+/project/main.cpp:5:10: error: call to deleted function 'lateChoice_a8ee505af129_call'
+  return lateChoice_a8ee505af129_call(1);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/project/main.cpp:2:5: note: candidate function has been explicitly deleted
+int lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;
+    ^
+/project/main.cpp:1:5: note: candidate function
+int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }
+    ^
+1 error generated.

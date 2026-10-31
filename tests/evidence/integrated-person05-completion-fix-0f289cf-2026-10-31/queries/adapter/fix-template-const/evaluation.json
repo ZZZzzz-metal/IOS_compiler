@@ -1,0 +1,12 @@
+{
+  "id": "fix-template-const",
+  "group": "randomized11",
+  "route": "adapter",
+  "elapsedMs": 20.753000000000156,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 3,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

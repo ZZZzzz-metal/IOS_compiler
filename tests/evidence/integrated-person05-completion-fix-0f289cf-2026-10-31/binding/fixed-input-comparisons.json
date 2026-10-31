@@ -1,0 +1,688 @@
+[
+  {
+    "file": "compiler/resources/completion-semantics-v1.cpp.patch",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 1970,
+      "sha256": "sha256:51c2fd087e01863b9ed6e09aaa8886721a4d1aefa5967ebbb7538677d5df48af"
+    },
+    "semantics": {
+      "byteLength": 1970,
+      "sha256": "sha256:51c2fd087e01863b9ed6e09aaa8886721a4d1aefa5967ebbb7538677d5df48af"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/resources/completion-semantics-v1.md",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 5327,
+      "sha256": "sha256:52c92f9ea09e13ed813605bf5765a71e602b47d94945cf4c7e6cfd59921644fb"
+    },
+    "semantics": {
+      "byteLength": 5327,
+      "sha256": "sha256:52c92f9ea09e13ed813605bf5765a71e602b47d94945cf4c7e6cfd59921644fb"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/resources/toolchain.lock.json",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 6149,
+      "sha256": "sha256:a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d"
+    },
+    "semantics": {
+      "byteLength": 6149,
+      "sha256": "sha256:a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/compiler-adapter.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 5418,
+      "sha256": "sha256:0cf84c9c6a845ad9d893dfce47c84bbbf1561d6ac7784280374c833b39d41ab9"
+    },
+    "semantics": {
+      "byteLength": 5418,
+      "sha256": "sha256:0cf84c9c6a845ad9d893dfce47c84bbbf1561d6ac7784280374c833b39d41ab9"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/compiler-probe.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 3912,
+      "sha256": "sha256:40327315c54e4307d8faf322ad64ed0da248e8849f9ed72ad7d691e52cafd648"
+    },
+    "semantics": {
+      "byteLength": 3912,
+      "sha256": "sha256:40327315c54e4307d8faf322ad64ed0da248e8849f9ed72ad7d691e52cafd648"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/compiler-worker.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 2400,
+      "sha256": "sha256:b3011c7601b957f28e358216d8a4ecfe1a339b0201b4acd32245b9e7115c1416"
+    },
+    "semantics": {
+      "byteLength": 2400,
+      "sha256": "sha256:b3011c7601b957f28e358216d8a4ecfe1a339b0201b4acd32245b9e7115c1416"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/completion-adapter.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 9564,
+      "sha256": "sha256:161ef46075a0258bb413117e98762e96c553bb3c5e3b2a240e53ab7cbb8c439b"
+    },
+    "semantics": {
+      "byteLength": 9564,
+      "sha256": "sha256:161ef46075a0258bb413117e98762e96c553bb3c5e3b2a240e53ab7cbb8c439b"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/completion-engine.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 4643,
+      "sha256": "sha256:926afb12f565b53584b86c22ffdbc2fc137faad1fe6ce5e1b86d043210ee5370"
+    },
+    "semantics": {
+      "byteLength": 4643,
+      "sha256": "sha256:926afb12f565b53584b86c22ffdbc2fc137faad1fe6ce5e1b86d043210ee5370"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/completion-output.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 1956,
+      "sha256": "sha256:6321fd93e9fbfeccfebe29654f236c335aac4cc7d7d09c934d35f5e74d325a99"
+    },
+    "semantics": {
+      "byteLength": 1956,
+      "sha256": "sha256:6321fd93e9fbfeccfebe29654f236c335aac4cc7d7d09c934d35f5e74d325a99"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/completion-semantics.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 3953,
+      "sha256": "sha256:1a448b6d17c498fe586b6f510b9ee70de495efbd4dd81299227377fecf1e9754"
+    },
+    "semantics": {
+      "byteLength": 3953,
+      "sha256": "sha256:1a448b6d17c498fe586b6f510b9ee70de495efbd4dd81299227377fecf1e9754"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/completion-source.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 5337,
+      "sha256": "sha256:1e8e61a9c35bc42176bc92a6efbc7a04884bbf1b0d0fca9b538feb5c14a9e3ce"
+    },
+    "semantics": {
+      "byteLength": 5337,
+      "sha256": "sha256:1e8e61a9c35bc42176bc92a6efbc7a04884bbf1b0d0fca9b538feb5c14a9e3ce"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/completion-worker.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 2313,
+      "sha256": "sha256:a3621e52c1811e0de3bc891e708be57225bcb48056c0676e832d203527ff80a0"
+    },
+    "semantics": {
+      "byteLength": 2313,
+      "sha256": "sha256:a3621e52c1811e0de3bc891e708be57225bcb48056c0676e832d203527ff80a0"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/diagnostics.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 3218,
+      "sha256": "sha256:14399bd23b8eb131a20196d0ed926db1243ace34bda42a221bae687378bfbad3"
+    },
+    "semantics": {
+      "byteLength": 3218,
+      "sha256": "sha256:14399bd23b8eb131a20196d0ed926db1243ace34bda42a221bae687378bfbad3"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/node-probe.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 295,
+      "sha256": "sha256:fc51bed8fa074151af0bc2b0343fe6a2502206e76b8376f89e470aaa919860f0"
+    },
+    "semantics": {
+      "byteLength": 295,
+      "sha256": "sha256:fc51bed8fa074151af0bc2b0343fe6a2502206e76b8376f89e470aaa919860f0"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/service-worker-template.js",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 2763,
+      "sha256": "sha256:cd316c840d30b53f394977c031e9fea7b218e928972ad28c273ccaef5957ca4c"
+    },
+    "semantics": {
+      "byteLength": 2763,
+      "sha256": "sha256:cd316c840d30b53f394977c031e9fea7b218e928972ad28c273ccaef5957ca4c"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/source.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 7201,
+      "sha256": "sha256:4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+    },
+    "semantics": {
+      "byteLength": 7201,
+      "sha256": "sha256:4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/toolchain-engine.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 7649,
+      "sha256": "sha256:03695bb52cbf7f4ab024ef773fca630eecb01c5452faa0f54fc055b574bbe3b5"
+    },
+    "semantics": {
+      "byteLength": 7649,
+      "sha256": "sha256:03695bb52cbf7f4ab024ef773fca630eecb01c5452faa0f54fc055b574bbe3b5"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/wasm-host.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 6856,
+      "sha256": "sha256:ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73"
+    },
+    "semantics": {
+      "byteLength": 6856,
+      "sha256": "sha256:ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73"
+    },
+    "equal": true
+  },
+  {
+    "file": "compiler/src/wasm-inspect.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 1825,
+      "sha256": "sha256:dfd5ae8ea29df1b266775250e3f07e3181ef3a48bd49ae97cbcf6b929df63a21"
+    },
+    "semantics": {
+      "byteLength": 1825,
+      "sha256": "sha256:dfd5ae8ea29df1b266775250e3f07e3181ef3a48bd49ae97cbcf6b929df63a21"
+    },
+    "equal": true
+  },
+  {
+    "file": "contracts/README.md",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 9096,
+      "sha256": "sha256:ee514cb661e6f2db70c98e9d61686d5cb8cdbb1507bd656579b313b133f82e43"
+    },
+    "semantics": {
+      "byteLength": 9096,
+      "sha256": "sha256:ee514cb661e6f2db70c98e9d61686d5cb8cdbb1507bd656579b313b133f82e43"
+    },
+    "equal": true
+  },
+  {
+    "file": "contracts/capabilities.json",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 22165,
+      "sha256": "sha256:8c46a2a25149c7da61ccbaca28405f3d5d55b25ddacaff0abe81ed14523e4261"
+    },
+    "semantics": {
+      "byteLength": 22165,
+      "sha256": "sha256:8c46a2a25149c7da61ccbaca28405f3d5d55b25ddacaff0abe81ed14523e4261"
+    },
+    "equal": true
+  },
+  {
+    "file": "contracts/checks/invariants.test.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 9490,
+      "sha256": "sha256:3ee5ce1553bf40db8cb2ca421107f6a00ba34dee3bd297c7aab3fcc3d6b9be23"
+    },
+    "semantics": {
+      "byteLength": 9490,
+      "sha256": "sha256:3ee5ce1553bf40db8cb2ca421107f6a00ba34dee3bd297c7aab3fcc3d6b9be23"
+    },
+    "equal": true
+  },
+  {
+    "file": "contracts/compatibility-profiles.json",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 307,
+      "sha256": "sha256:c350debe885bcee8f4c39f7b870184e14255ce64070d1d6a42fe913014a3cd47"
+    },
+    "semantics": {
+      "byteLength": 307,
+      "sha256": "sha256:c350debe885bcee8f4c39f7b870184e14255ce64070d1d6a42fe913014a3cd47"
+    },
+    "equal": true
+  },
+  {
+    "file": "contracts/completion.d.ts",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 2406,
+      "sha256": "sha256:f04734f4b1db5ef042f1f6299cab97664cfc080a5b5bb8f8d50ac3e997dac132"
+    },
+    "semantics": {
+      "byteLength": 2406,
+      "sha256": "sha256:f04734f4b1db5ef042f1f6299cab97664cfc080a5b5bb8f8d50ac3e997dac132"
+    },
+    "equal": true
+  },
+  {
+    "file": "contracts/invariants.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 9208,
+      "sha256": "sha256:5d1e2a4ccb20cc551476fa7942ef85fd335c64ea3fe21b18dc5a9e9bcfd48e5c"
+    },
+    "semantics": {
+      "byteLength": 9208,
+      "sha256": "sha256:5d1e2a4ccb20cc551476fa7942ef85fd335c64ea3fe21b18dc5a9e9bcfd48e5c"
+    },
+    "equal": true
+  },
+  {
+    "file": "contracts/offline-bundle.json",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 265,
+      "sha256": "sha256:d1174a23123aeff163fcb182b147a5ebd284baea315fa720b4bd6bcf1d3910e0"
+    },
+    "semantics": {
+      "byteLength": 265,
+      "sha256": "sha256:d1174a23123aeff163fcb182b147a5ebd284baea315fa720b4bd6bcf1d3910e0"
+    },
+    "equal": true
+  },
+  {
+    "file": "contracts/protocol.d.ts",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 8454,
+      "sha256": "sha256:1945c939cf27e40696f8e151631e15b69c97f7648a7a3b6fad134e52947457a2"
+    },
+    "semantics": {
+      "byteLength": 8454,
+      "sha256": "sha256:1945c939cf27e40696f8e151631e15b69c97f7648a7a3b6fad134e52947457a2"
+    },
+    "equal": true
+  },
+  {
+    "file": "contracts/source-hash-vectors.json",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 2000,
+      "sha256": "sha256:62aa493ca075d7920e274f76360defc95ccc3916b8d50b433f79dc652cbd8360"
+    },
+    "semantics": {
+      "byteLength": 2000,
+      "sha256": "sha256:62aa493ca075d7920e274f76360defc95ccc3916b8d50b433f79dc652cbd8360"
+    },
+    "equal": true
+  },
+  {
+    "file": "debugger/src/debugger-adapter.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 21034,
+      "sha256": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "semantics": {
+      "byteLength": 21034,
+      "sha256": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "equal": true
+  },
+  {
+    "file": "debugger/src/debugger-worker.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 600,
+      "sha256": "sha256:4b867a736ada849efddffc1c074739eed039d5dd4f222ab8d99c24f2fe9e559d"
+    },
+    "semantics": {
+      "byteLength": 600,
+      "sha256": "sha256:4b867a736ada849efddffc1c074739eed039d5dd4f222ab8d99c24f2fe9e559d"
+    },
+    "equal": true
+  },
+  {
+    "file": "debugger/src/dwarf.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 25566,
+      "sha256": "sha256:a90c5783958fb814fa7dc8bd074166fe490d50ba2ecf6c9e82b79c5c3e58eb95"
+    },
+    "semantics": {
+      "byteLength": 25566,
+      "sha256": "sha256:a90c5783958fb814fa7dc8bd074166fe490d50ba2ecf6c9e82b79c5c3e58eb95"
+    },
+    "equal": true
+  },
+  {
+    "file": "debugger/src/integrity.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 7031,
+      "sha256": "sha256:6c705f346157d4ed07d1e7797474ad90cf653e7431b27bcf32ee4b282f3eeb07"
+    },
+    "semantics": {
+      "byteLength": 7031,
+      "sha256": "sha256:6c705f346157d4ed07d1e7797474ad90cf653e7431b27bcf32ee4b282f3eeb07"
+    },
+    "equal": true
+  },
+  {
+    "file": "debugger/src/node-worker.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 613,
+      "sha256": "sha256:75b6cf0050e0be2ed0d3c8ee52b50ea44cf6adefb3dc87faee7afb602678559e"
+    },
+    "semantics": {
+      "byteLength": 613,
+      "sha256": "sha256:75b6cf0050e0be2ed0d3c8ee52b50ea44cf6adefb3dc87faee7afb602678559e"
+    },
+    "equal": true
+  },
+  {
+    "file": "debugger/src/service-worker-template.js",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 1851,
+      "sha256": "sha256:2c70c353794c40271f0dfbfed867baf8fdbeae195d7453df1d4dd6f3403181d2"
+    },
+    "semantics": {
+      "byteLength": 1851,
+      "sha256": "sha256:2c70c353794c40271f0dfbfed867baf8fdbeae195d7453df1d4dd6f3403181d2"
+    },
+    "equal": true
+  },
+  {
+    "file": "debugger/src/variables.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 44150,
+      "sha256": "sha256:9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e"
+    },
+    "semantics": {
+      "byteLength": 44150,
+      "sha256": "sha256:9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e"
+    },
+    "equal": true
+  },
+  {
+    "file": "debugger/src/wasm-runtime.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 49143,
+      "sha256": "sha256:8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    },
+    "semantics": {
+      "byteLength": 49143,
+      "sha256": "sha256:8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    },
+    "equal": true
+  },
+  {
+    "file": "debugger/src/worker-adapter.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 8478,
+      "sha256": "sha256:1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6"
+    },
+    "semantics": {
+      "byteLength": 8478,
+      "sha256": "sha256:1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6"
+    },
+    "equal": true
+  },
+  {
+    "file": "debugger/src/worker-bridge.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 1673,
+      "sha256": "sha256:b1271d7c34651296ef9011c69493f6c0e0f62d97db71d8f3fe27c9561e54eda1"
+    },
+    "semantics": {
+      "byteLength": 1673,
+      "sha256": "sha256:b1271d7c34651296ef9011c69493f6c0e0f62d97db71d8f3fe27c9561e54eda1"
+    },
+    "equal": true
+  },
+  {
+    "file": "storage/src/autosave.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 2767,
+      "sha256": "sha256:9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+    },
+    "semantics": {
+      "byteLength": 2767,
+      "sha256": "sha256:9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff"
+    },
+    "equal": true
+  },
+  {
+    "file": "storage/src/draft-store.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 8047,
+      "sha256": "sha256:0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+    },
+    "semantics": {
+      "byteLength": 8047,
+      "sha256": "sha256:0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755"
+    },
+    "equal": true
+  },
+  {
+    "file": "ui/probe.html",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 13762,
+      "sha256": "sha256:f935fb654bfad9a667136f8d95b8140ed98be50f65ce219575b8eb48706488c8"
+    },
+    "semantics": {
+      "byteLength": 13762,
+      "sha256": "sha256:f935fb654bfad9a667136f8d95b8140ed98be50f65ce219575b8eb48706488c8"
+    },
+    "equal": true
+  },
+  {
+    "file": "ui/src/completion-controller.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 15256,
+      "sha256": "sha256:e815ec62c4d5b9899ef871e561ed151d98c2f9f2d2ce935ff738a3752244663b"
+    },
+    "semantics": {
+      "byteLength": 15256,
+      "sha256": "sha256:e815ec62c4d5b9899ef871e561ed151d98c2f9f2d2ce935ff738a3752244663b"
+    },
+    "equal": true
+  },
+  {
+    "file": "ui/src/completion-edit.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 4713,
+      "sha256": "sha256:d4a4e861c77ae9c3169339e122c0dcb93815628669922be2fbdd4be26020054b"
+    },
+    "semantics": {
+      "byteLength": 4713,
+      "sha256": "sha256:d4a4e861c77ae9c3169339e122c0dcb93815628669922be2fbdd4be26020054b"
+    },
+    "equal": true
+  },
+  {
+    "file": "ui/src/completion-editor.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 7535,
+      "sha256": "sha256:6fec3d57898194071c55210122466927b8d126a6ea5c153a429aee2ce7f7f4b3"
+    },
+    "semantics": {
+      "byteLength": 7535,
+      "sha256": "sha256:6fec3d57898194071c55210122466927b8d126a6ea5c153a429aee2ce7f7f4b3"
+    },
+    "equal": true
+  },
+  {
+    "file": "ui/src/completion-popup.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 13394,
+      "sha256": "sha256:c473b6148865603116d71eb5b9ffd1ee218eb99dca78c9d5f8aeb319d750ad01"
+    },
+    "semantics": {
+      "byteLength": 13394,
+      "sha256": "sha256:c473b6148865603116d71eb5b9ffd1ee218eb99dca78c9d5f8aeb319d750ad01"
+    },
+    "equal": true
+  },
+  {
+    "file": "ui/src/editor.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 5372,
+      "sha256": "sha256:b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+    },
+    "semantics": {
+      "byteLength": 5372,
+      "sha256": "sha256:b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418"
+    },
+    "equal": true
+  },
+  {
+    "file": "ui/src/main.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 35373,
+      "sha256": "sha256:864aabe28cdf85b100a4758744f6a2770979592746c7375c1f8b838a052a63ca"
+    },
+    "semantics": {
+      "byteLength": 35373,
+      "sha256": "sha256:864aabe28cdf85b100a4758744f6a2770979592746c7375c1f8b838a052a63ca"
+    },
+    "equal": true
+  },
+  {
+    "file": "ui/src/session-controller.mjs",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 17167,
+      "sha256": "sha256:ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84"
+    },
+    "semantics": {
+      "byteLength": 17167,
+      "sha256": "sha256:ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84"
+    },
+    "equal": true
+  },
+  {
+    "file": "ui/style.css",
+    "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+    "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "root": {
+      "byteLength": 27381,
+      "sha256": "sha256:5b6b309d0aa2b813ff47753190a736d7ffde58115fcf75931309b3c10a7c21e4"
+    },
+    "semantics": {
+      "byteLength": 27381,
+      "sha256": "sha256:5b6b309d0aa2b813ff47753190a736d7ffde58115fcf75931309b3c10a7c21e4"
+    },
+    "equal": true
+  }
+]

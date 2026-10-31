@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-function-prefix",
+  "documentVersion": 8,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-function-prefix-snapshot",
+    "sourceHash": "sha256:7821b9d772b51b6bd1756e1c5194fbec255b8ba1557f986c7fcc43231c44636b",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "int sigmaSolve(int input) { return input + 1; }\nint sigmaScan(double input) { return int(input); }\nint unrelatedFunction() { return 9; }\nvoid probe() { sig }\n",
+        "contentHash": "sha256:ebe492b23f94cbb23e4e2c4be161f2842fa1a2df8f3b16623ba43b7956764499"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 155,
+  "trigger": "identifier"
+}

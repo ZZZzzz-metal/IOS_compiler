@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "upstream": {
+    "repository": "https://github.com/binji/wasm-clang",
+    "commit": "648c4a89997a351eef75cdaec3ef5b89d4937dec",
+    "commitDate": "2023-12-07T18:35:20Z"
+  },
+  "vendorDirectory": "vendor/wasm-clang",
+  "files": [
+    {
+      "filename": "clang",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/clang",
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "byteLength": 31214472,
+      "roles": ["compiler"],
+      "license": {"status": "incomplete-component-provenance", "upstreamDeclaration": "Apache-2.0 WITH LLVM-exception; legacy NCSA text also supplied", "files": ["LICENSE.llvm"]}
+    },
+    {
+      "filename": "lld",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/lld",
+      "sha256": "36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+      "byteLength": 19490094,
+      "roles": ["linker"],
+      "license": {"status": "incomplete-component-provenance", "upstreamDeclaration": "Apache-2.0 WITH LLVM-exception; legacy NCSA text also supplied", "files": ["LICENSE.llvm"]}
+    },
+    {
+      "filename": "memfs",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/memfs",
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "byteLength": 345442,
+      "roles": ["filesystem-runtime"],
+      "license": {"status": "incomplete-component-provenance", "upstreamDeclaration": "Repository supplies Apache-2.0 and LLVM licenses; exact binary source mapping is absent", "files": ["LICENSE", "LICENSE.llvm"]}
+    },
+    {
+      "filename": "sysroot.tar",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/sysroot.tar",
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "byteLength": 9297920,
+      "roles": ["sysroot", "headers", "standard-library"],
+      "license": {"status": "incomplete-component-provenance", "upstreamDeclaration": "Mixed components; embedded libc++ headers declare MIT OR NCSA, CTRE includes Apache-2.0, other component origins remain unresolved", "files": ["LICENSE", "LICENSE.llvm"], "complete": false}
+    },
+    {
+      "filename": "shared.js",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/shared.js",
+      "sha256": "4de0be862bda1a7571c1f0632abe3c62c47a56e734cc6b703155805a4b160b1c",
+      "byteLength": 23973,
+      "roles": ["host-runtime", "reference-source"],
+      "license": {"status": "file-header-confirmed", "expression": "Apache-2.0", "files": ["LICENSE"]}
+    },
+    {
+      "filename": "worker.js",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/worker.js",
+      "sha256": "c0d4c3f3ef0e2047c0f109922f0a4ee9e0f2b12947a569a835da83b6bdcf995e",
+      "byteLength": 2758,
+      "roles": ["reference-source"],
+      "license": {"status": "file-header-confirmed", "expression": "Apache-2.0", "files": ["LICENSE"]}
+    },
+    {
+      "filename": "d8.js",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/d8.js",
+      "sha256": "a7ae2decd5330e2deadb6c258cfa11b4f0c5645807feb7f0114d319335e4a4b5",
+      "byteLength": 1722,
+      "roles": ["reference-source"],
+      "license": {"status": "file-header-confirmed", "expression": "Apache-2.0", "files": ["LICENSE"]}
+    },
+    {
+      "filename": "shared_web.js",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/shared_web.js",
+      "sha256": "90f2eb3c832b9d3af7f0ef7aa63c71554182efb73eba734810607e20d4cb5681",
+      "byteLength": 8110,
+      "roles": ["reference-source"],
+      "license": {"status": "file-header-confirmed", "expression": "Apache-2.0", "files": ["LICENSE"]}
+    },
+    {
+      "filename": "LICENSE",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "byteLength": 11358,
+      "roles": ["license"],
+      "license": {"status": "license-text", "expression": "Apache-2.0", "files": []}
+    },
+    {
+      "filename": "LICENSE.llvm",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/LICENSE.llvm",
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47",
+      "byteLength": 15140,
+      "roles": ["license"],
+      "license": {"status": "license-text", "contents": ["Apache-2.0 WITH LLVM-exception", "NCSA", "third-party-license-notice"], "files": []}
+    },
+    {
+      "filename": "README.md",
+      "url": "https://raw.githubusercontent.com/binji/wasm-clang/648c4a89997a351eef75cdaec3ef5b89d4937dec/README.md",
+      "sha256": "2ded8e20209ca550698c829ab65dfff3e4e26e90fc21240bae5f0c4f1cbd7a57",
+      "byteLength": 1446,
+      "roles": ["provenance-reference"],
+      "license": {"status": "repository-declaration", "expression": "Apache-2.0", "files": ["LICENSE"]}
+    }
+  ],
+  "provenance": {
+    "acquisition": "Pinned repository blobs downloaded and locally SHA-256 verified on 2026-10-24",
+    "sourceRebuildVerified": false,
+    "binarySourceRevisionsKnown": false,
+    "distributionLicenseReviewComplete": false,
+    "buildNotes": {
+      "url": "https://gist.github.com/binji/b7541f9740c21d7c6dac95cbc9ea6fca/c23ab21d67abad090e60533f1528eda34b99ef63",
+      "revision": "c23ab21d67abad090e60533f1528eda34b99ef63",
+      "limitations": "Sparse commands refer to wasi-sdk-5.0 and local paths; they do not identify all source revisions or reproduce these binary blobs."
+    },
+    "memfsSourceReference": {
+      "repository": "https://github.com/binji/llvm-project",
+      "inspectedCommit": "5dc09c94393510bc8d042a9f07382b53e845c0f2",
+      "path": "binji",
+      "isProvenBinarySourceRevision": false
+    }
+  }
+}

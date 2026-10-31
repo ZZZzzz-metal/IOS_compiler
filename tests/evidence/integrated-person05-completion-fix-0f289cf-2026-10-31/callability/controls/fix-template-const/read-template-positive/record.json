@@ -1,0 +1,37 @@
+{
+  "fixtureId": "fix-template-const",
+  "controlId": "read-template-positive",
+  "controlSet": "original-11-controls",
+  "startedAt": "2026-10-31T02:16:44.993Z",
+  "passed": true,
+  "sourceHash": "sha256:9b720def474232d33d5c671e0243a76257b0034471551b24328d1f98141bd15b",
+  "actualStatus": "compiled",
+  "reason": null,
+  "elapsedMs": 650.4339999999997,
+  "expected": {
+    "status": "compiled",
+    "smokeExitCode": 0
+  },
+  "semantic": null,
+  "diagnosticGroups": [],
+  "errors": [],
+  "binaryEvidence": {
+    "executable": {
+      "file": "controls/fix-template-const/read-template-positive/main.wasm",
+      "byteLength": 13563,
+      "sha256": "sha256:2f4a0ddfde77a6990a81cbbdb70125eef37a869b57080f258e7cc3763f4755c0"
+    },
+    "object": {
+      "file": "controls/fix-template-const/read-template-positive/main.o",
+      "byteLength": 693,
+      "sha256": "sha256:50f3b7e4ceb97d01124d8cb5decf3b36e8952ccb0c78ca949369b097919da86b"
+    }
+  },
+  "actualCompilerIdentity": {
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "workersReleased": true
+}

@@ -1,0 +1,6 @@
+COMPLETION: common : [#int#]common
+COMPLETION: operator= : [#Pixel &#]operator=(<#const Pixel &#>)
+COMPLETION: operator= : [#Pixel &#]operator=(<#Pixel &&#>)
+COMPLETION: Pixel : Pixel::
+COMPLETION: scarlet : [#int#]scarlet
+COMPLETION: ~Pixel : [#void#]~Pixel()

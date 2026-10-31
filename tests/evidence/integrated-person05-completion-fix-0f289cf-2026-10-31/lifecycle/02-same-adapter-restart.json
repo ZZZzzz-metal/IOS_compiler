@@ -1,0 +1,21 @@
+{
+  "name": "02-same-adapter-restart",
+  "passed": true,
+  "checks": [
+    {
+      "scenario": "02-same-adapter-restart",
+      "name": "same public adapter succeeds on a new valid request",
+      "passed": true
+    },
+    {
+      "scenario": "02-same-adapter-restart",
+      "name": "replacement Worker starts only after old Worker released",
+      "passed": true
+    },
+    {
+      "scenario": "02-same-adapter-restart",
+      "name": "successful Worker remains warm before explicit cancellation",
+      "passed": true
+    }
+  ]
+}

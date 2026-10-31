@@ -1,0 +1,12 @@
+{
+  "id": "fix-alias-mutable",
+  "group": "randomized11",
+  "route": "adapter",
+  "elapsedMs": 141.19540000000006,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 144,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

@@ -1,0 +1,40 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-attribute-availability-supplement",
+  "documentVersion": 31,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-attribute-availability-supplement-snapshot",
+  "sourceHash": "sha256:584275ddc1a37f9aaf75a0901658317b6bba802547a1ab32f438d800cc05dff9",
+  "sourcePath": "main.cpp",
+  "offset": 227,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:93bfb0ea9359207d9bc4763030d62dd3d74abcc1e0c1f71e7cd33f5d0d138f91",
+      "label": "personAllowed",
+      "kind": "unknown",
+      "detail": "int personAllowed()",
+      "insertText": "personAllowed",
+      "replaceRange": {
+        "startOffset": 224,
+        "endOffset": 227
+      },
+      "filterText": "personAllowed"
+    },
+    {
+      "id": "sha256:6f71da164117502add97ad01567a67d224538dd8b4a7381a2da789edad077d01",
+      "label": "personDeprecated",
+      "kind": "unknown",
+      "detail": "int personDeprecated()",
+      "insertText": "personDeprecated",
+      "replaceRange": {
+        "startOffset": 224,
+        "endOffset": 227
+      },
+      "filterText": "personDeprecated"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

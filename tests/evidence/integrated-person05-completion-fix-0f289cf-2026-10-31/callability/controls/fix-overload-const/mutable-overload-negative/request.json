@@ -1,0 +1,22 @@
+{
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-overload-const-mutable-overload-negative",
+  "snapshot": {
+    "snapshotId": "e06f0cbe-9be5-4060-a40c-24a0f22b8478",
+    "sourceHash": "sha256:a6bc8d61446f246f08a5a54826b5c1f22e8ca6d965d78741f1a552accdd6228f",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nint main() {\n  const Record_a8ee505af129 object_a8ee505af129;\n  return object_a8ee505af129.choose_a8ee505af129(1);\n}\n",
+        "contentHash": "sha256:a628653aaa0ecd26c19733c9a19191cbf420fd1a167eb81b5ec9a1a72d03580e"
+      }
+    ]
+  },
+  "language": "cpp",
+  "standard": "c++17",
+  "mode": "run",
+  "optimization": "O0"
+}

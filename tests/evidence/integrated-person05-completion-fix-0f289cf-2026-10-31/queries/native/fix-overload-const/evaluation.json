@@ -1,0 +1,18 @@
+{
+  "id": "fix-overload-const",
+  "group": "randomized11",
+  "route": "native",
+  "elapsedMs": 23.707900000000336,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 2,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:7:23",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:7:23"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "expected": {
+    "status": "compiled",
+    "smokeExitCode": 0,
+    "warningPattern": "person05-deprecated"
+  },
+  "semantic": null,
+  "diagnosticGroups": [],
+  "errors": []
+}

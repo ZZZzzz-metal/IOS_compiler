@@ -1,0 +1,43 @@
+{
+  "status": "failed",
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-late-deleted-overload-deleted-int-negative",
+  "sourceHash": "sha256:77eb085e700e519e7e82f1542068e2b77b882fe9b133a796e4c994175accd512",
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "call to deleted function 'lateChoice_a8ee505af129_call'",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 5,
+          "column": 10
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "candidate function has been explicitly deleted",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 2,
+          "column": 5
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "candidate function",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 1,
+          "column": 5
+        }
+      }
+    }
+  ],
+  "reason": "compiler-exit",
+  "rawDiagnostics": "/project/main.cpp:5:10: error: call to deleted function 'lateChoice_a8ee505af129_call'\n  return lateChoice_a8ee505af129_call(1);\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/project/main.cpp:2:5: note: candidate function has been explicitly deleted\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n    ^\n/project/main.cpp:1:5: note: candidate function\nint lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\n    ^\n1 error generated.\n",
+  "binaryEvidence": {}
+}
