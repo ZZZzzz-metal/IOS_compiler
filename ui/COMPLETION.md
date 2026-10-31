@@ -12,6 +12,10 @@ Ctrl+J 参考 Visual Studio 的 List Members，Ctrl+Space 参考 Complete Word�
 
 开始编译会停止新补全，等待活动请求结算并释放暖Worker；结束后按需重建。若取消或释放失败，不再启动编译，提示先保存或导出草稿后重开，避免两个未确认释放的Wasm实例争用内存。
 
-首版能力以 [编译提供方说明](../compiler/COMPLETION.md) 为准。种类统一显示“符号”，不猜测AST类型；Clang8没有标记的某些const模板成员不可用性仍无法可靠筛选。候选最多显示80项，使用前缀继续缩小范围。它不是完整VS语言服务。iPad触控滚动、软键盘、IME、性能和停服离线提示仍待最终固定包与真机验收。
+补全专用引擎已接入针对 const 对象出现非法成员函数模板候选、`unavailable` 候选仍可选择两项问题的修正：补上接收对象的 `const` / `volatile` 限定符检查，并按 Clang 原生 availability 过滤不可用候选；普通、`deprecated` 及合法重载继续保留。详细行为和已测范围见 [编译提供方说明](../compiler/COMPLETION.md) 与 [修复配方](../compiler/resources/completion-semantics-v1.md)。本轮独立关闭结论与新包验收以 [修复集成交接记录](../docs/architecture/COMPLETION-FIX-INTEGRATION-v0.4.7-2026-10-31.md) 为准。
 
-本轮已测范围和原始记录见 [四号补全证据](evidence/integrated-completion-2026-10-30/README.md)。受控DOM/提供方传输测试与真实Clang页面观察分开记录，不将模拟触控当作iPad通过。
+候选种类为 `unknown`，界面统一显示“符号”，不猜测AST类型；最多显示80项，使用前缀继续缩小范围。完整VS语言服务、全部模板与属性语义尚未建立支持结论。
+
+桌面新包与 iPad 验收分别以实际交接记录确认。iPad/Safari 的触控滚动、软键盘、物理输入与IME、性能及完全断网使用仍需真机验证。
+
+2026-10-30 四号已测范围和原始记录见 [四号补全证据](evidence/integrated-completion-2026-10-30/README.md)。受控DOM/提供方传输测试与真实Clang页面观察分开记录，不将模拟触控当作iPad通过。
