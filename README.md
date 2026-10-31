@@ -1,6 +1,6 @@
 # IOS_compiler · iPad 离线 C/C++ 编译调试工作台
 
-**当前：先修复已知问题，再进行真机验证。** 用户要求关闭const-string非法成员模板候选、unavailable仍可选择两项已确认问题。2号已接修复、5号负责独立复验；[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)已恢复草稿，暂缓合并和真机推进。进度见[本轮修复计划](docs/architecture/COMPLETION-FIX-PLAN-2026-10-30.md)。下方0.4.6为重开修复前的历史交付记录。
+**当前：两项已知补全缺陷已在限定语义范围独立修复验证，正在准备0.4.7新包。** 2号固定0f289cf修复const成员模板与unavailable候选，5号2978d950按原源码和原预期独立关闭两项：44逻辑例的88双路真实响应、27完整编译调用对照通过。4号b33b52e8已同步使用说明；新完整包的桌面停服冷开及iPad仍待验收，[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)继续草稿，由你手动合并。进度和准确范围见[0.4.7集成记录](docs/architecture/COMPLETION-FIX-INTEGRATION-v0.4.7-2026-10-31.md)。下方0.4.6为重开修复前的历史记录。
 
 2026-10-30当前版本0.4.6：真实离线成员、变量和函数提示已集成，5号最终UI/完整包交付cbc92b2已合入6ba18d2并在已测桌面范围签收。原33场景32通过、const-string一项边界失败；另有unavailable属性边界失败，两项均未修复。62资源新包及停服后全新源码补全、编译调试、撤销与草稿重开已有独立证据；真实iPad仍待验证。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)由你手动合并；精确身份、结果与限制见[本轮报告](docs/architecture/COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md)。旧包、标签和原始失败保留。
 

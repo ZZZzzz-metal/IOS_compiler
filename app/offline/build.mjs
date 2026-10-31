@@ -11,7 +11,7 @@ const root=fileURLToPath(new URL('../../',import.meta.url));
 const local=resolve(root,'app/offline/.local');
 const hash=bytes=>'sha256:'+createHash('sha256').update(bytes).digest('hex');
 const json=value=>Buffer.from(JSON.stringify(value,null,2)+'\n');
-const type=path=>({'.mjs':'text/javascript','.js':'text/javascript','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.webmanifest':'application/manifest+json','.svg':'image/svg+xml','.md':'text/plain; charset=utf-8','.wasm':'application/wasm'}[extname(path)]??'application/octet-stream');
+const type=path=>({'.mjs':'text/javascript','.js':'text/javascript','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.webmanifest':'application/manifest+json','.svg':'image/svg+xml','.md':'text/plain; charset=utf-8','.patch':'text/plain; charset=utf-8','.wasm':'application/wasm'}[extname(path)]??'application/octet-stream');
 const escapeHTML=text=>text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 function safePath(path){
   if(typeof path!=='string'||/[\\%:?#\x00-\x1f]/.test(path)||path.split('/').some(s=>!s||s==='.'||s==='..'))throw Error('Invalid bundle path: '+path);

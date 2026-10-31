@@ -227,6 +227,10 @@
     {
       "date": "2026-10-31",
       "event": "Integrated owner02 fixed0f289cf/implementation6da3280, added completion-semantics.mjs and offline recipe docs to packaging. New36-resource backend profile c3e9a2fea60c51b3. Root prepare-ui, existing real pipeline3 and mandatory check/test passed; owner05 authorized fixed-target independent semantics. Both defects still await independent closure and new package."
+    },
+    {
+      "date": "2026-10-31",
+      "event": "Owner05 fixed semantics DONE2978d950 merged e00566b;831 sealed files/Git bytes verified by root. Original44 logical/88 real dual responses and27 full-call controls passed without original-oracle changes. Owner04 documentation-only b33b52e8 merged cfe85ff. New0.4.7 full package and actual stopped-server workflow remain pending; PR4 stays draft."
     }
   ],
   "api": {
@@ -240,7 +244,7 @@
   "repairCycle": {
     "date": "2026-10-30",
     "reason": "Human requires known issues fixed before device validation",
-    "state": "ACK",
+    "state": "DONE-SEMANTICS",
     "deviceValidationOnHold": true,
     "pr": {
       "number": 4,
@@ -257,29 +261,35 @@
         "implementationCommit": "6da3280b3fa9aa859188a26a6b12f578151401a4",
         "integrationProfile": "integration-prototype-c3e9a2fea60c51b3",
         "resourceCount": 36,
-        "independentAcceptance": "pending"
+        "independentAcceptance": "Passed original-oracle measured semantic scope at owner05 2978d950; new full-package acceptance pending."
       },
       {
         "id": "CC-20261030-05",
         "owner": 5,
-        "state": "ACCEPT-PREP",
+        "state": "DONE",
         "scope": "independent original-oracle positive/negative verification after fixed delivery",
-        "delivery": "bef7bc973780e55d5eecdcdfc0e7da1c3d1c6fad",
-        "mergeCommit": "e5dce6488d313b8b9074869047aaeeaaf25efbf1",
+        "delivery": "2978d9501c58fe7b6d7d7439b5f728a0b59ccbf6",
+        "mergeCommit": "e00566b27fb6ee2256f318811376d2e95e67cb3f",
         "clarificationCommit": "2a0a81dc59dd7a805e7f88b63c5482f7ca90878a",
         "queries": 11,
-        "fullCallControls": 24,
-        "sealedGitFilesVerified": 84,
+        "fullCallControls": 27,
+        "sealedGitFilesVerified": 831,
         "featureAcceptance": false,
         "verificationTarget": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
-        "progress": "Independent repair semantics and derivation checks authorized on fixed owner delivery; new root manifest/full package validated separately."
+        "progress": "Original const-string and extra unavailable defects independently closed in measured semantic scope; new package/browser/iPad pending.",
+        "logicalQueries": 44,
+        "realDualRouteResponses": 88
       },
       {
         "id": "CC-20261030-04",
         "owner": 4,
-        "state": "ACK",
-        "scope": "UI frozen; wait for specific integration/API delta",
-        "delivery": "not required unless API/UI delta"
+        "state": "DOC-DONE",
+        "scope": "UI runtime frozen; repaired semantics usage guide only",
+        "delivery": "b33b52e8616fef0171f49ab2f22f7c5cbb8306d9",
+        "mergeCommit": "cfe85ff",
+        "changedFiles": [
+          "ui/COMPLETION.md"
+        ]
       }
     ],
     "acceptanceConditions": [
@@ -289,7 +299,8 @@
     ],
     "successfulDone": false,
     "accepted": false,
-    "stage": "independent-semantic-verification",
-    "owner02Done": true
+    "stage": "new-full-package-preparation",
+    "owner02Done": true,
+    "owner05SemanticsDone": true
   }
 }

@@ -1,6 +1,6 @@
 {
   "protocolVersion": "0.1.0-draft.1",
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-10-31",
   "declaration": "唯一能力声明来源。implemented-unverified 表示已有桌面原型和限定样例证据，尚未经5号及真实iPad产品验收；verified 必须附具体环境与证据。",
   "capabilities": [
     {
@@ -556,9 +556,12 @@
         "compiler/COMPLETION.md",
         "ui/COMPLETION.md",
         "ui/evidence/integrated-completion-2026-10-30/README.md",
-        "docs/architecture/AUTOCOMPLETE-PLAN-2026-10-29.md"
+        "docs/architecture/AUTOCOMPLETE-PLAN-2026-10-29.md",
+        "compiler/resources/completion-semantics-v1.md",
+        "docs/architecture/COMPLETION-FIX-INTEGRATION-v0.4.7-2026-10-31.md",
+        "docs/validation/completion-fix-person05-0f289cf-2026-10-31.md"
       ],
-      "implementationScope": "固定Clang8真实离线候选，300ms自动与按钮/Ctrl+J/Ctrl+Space；只插入名称、保留签名、原生撤销与取消释放。种类unknown，const字符串部分函数模板及unavailable/deprecated属性无法完整判断可调用性。新固定界面/完整离线包仍待5号独立与iPad验收，不声明完整VS语言服务。"
+      "implementationScope": "固定Clang8输入确定性派生补全引擎completion-semantics.1，按原生对象限定符和可用性过滤；已修正已测const成员模板和unavailable误候选，普通/deprecated及合法重载保留。300ms自动与按钮/Ctrl+J/Ctrl+Space，只插入名称、保留签名、原生撤销与取消释放，种类unknown。固定桌面复验结果见交接记录，真实iPad仍待，不声明完整VS语言服务。"
     }
   ]
 }
