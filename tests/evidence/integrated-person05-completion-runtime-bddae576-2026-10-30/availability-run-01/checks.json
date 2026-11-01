@@ -1,0 +1,54 @@
+[
+  {
+    "name": "both real routes returned eligible ordinary and deprecated declarations",
+    "passed": true
+  },
+  {
+    "name": "public and native candidate spellings agree",
+    "passed": true
+  },
+  {
+    "name": "native completion coordinates use independent UTF8 byte position",
+    "passed": true
+  },
+  {
+    "name": "adapter: unavailable function must not be confirmable",
+    "passed": false,
+    "error": {
+      "message": "{\"verdict\":\"boundary-failed\",\"support\":\"boundary\",\"itemCount\":3,\"isIncomplete\":false,\"errors\":[{\"category\":\"availability\",\"code\":\"ineligible-confirmable\",\"detail\":\"personBlocked\"}]}\n+ actual - expected\n\n+ 'boundary-failed'\n- 'passed'\n",
+      "stack": "AssertionError [ERR_ASSERTION]: {\"verdict\":\"boundary-failed\",\"support\":\"boundary\",\"itemCount\":3,\"isIncomplete\":false,\"errors\":[{\"category\":\"availability\",\"code\":\"ineligible-confirmable\",\"detail\":\"personBlocked\"}]}\n+ actual - expected\n\n+ 'boundary-failed'\n- 'passed'\n\n    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/completion-availability-independent.mjs:156:51\n    at check (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/completion-availability-independent.mjs:52:27)\n    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/completion-availability-independent.mjs:155:46\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+    }
+  },
+  {
+    "name": "native: unavailable function must not be confirmable",
+    "passed": false,
+    "error": {
+      "message": "{\"verdict\":\"boundary-failed\",\"support\":\"boundary\",\"itemCount\":3,\"isIncomplete\":false,\"errors\":[{\"category\":\"availability\",\"code\":\"ineligible-confirmable\",\"detail\":\"personBlocked\"}]}\n+ actual - expected\n\n+ 'boundary-failed'\n- 'passed'\n",
+      "stack": "AssertionError [ERR_ASSERTION]: {\"verdict\":\"boundary-failed\",\"support\":\"boundary\",\"itemCount\":3,\"isIncomplete\":false,\"errors\":[{\"category\":\"availability\",\"code\":\"ineligible-confirmable\",\"detail\":\"personBlocked\"}]}\n+ actual - expected\n\n+ 'boundary-failed'\n- 'passed'\n\n    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/completion-availability-independent.mjs:156:51\n    at check (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/completion-availability-independent.mjs:52:27)\n    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/completion-availability-independent.mjs:155:46\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+    }
+  },
+  {
+    "name": "blocked-call: request/source identities match actual public result",
+    "passed": true
+  },
+  {
+    "name": "calling unavailable function really fails with its declared diagnostic",
+    "passed": true
+  },
+  {
+    "name": "deprecated-call: request/source identities match actual public result",
+    "passed": true
+  },
+  {
+    "name": "deprecated function remains callable, compiles and actually exits zero",
+    "passed": true
+  },
+  {
+    "name": "all real Workers were released before the final record",
+    "passed": true
+  },
+  {
+    "name": "fixed target and runtime bytes unchanged",
+    "passed": true
+  }
+]

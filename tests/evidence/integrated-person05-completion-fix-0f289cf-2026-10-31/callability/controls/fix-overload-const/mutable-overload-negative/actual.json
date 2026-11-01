@@ -1,0 +1,43 @@
+{
+  "status": "failed",
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-overload-const-mutable-overload-negative",
+  "sourceHash": "sha256:a6bc8d61446f246f08a5a54826b5c1f22e8ca6d965d78741f1a552accdd6228f",
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "no matching member function for call to 'choose_a8ee505af129'",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 7,
+          "column": 30
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "candidate function not viable: 'this' argument has type 'const Record_a8ee505af129', but method is not marked const",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 3,
+          "column": 7
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "candidate function not viable: requires 0 arguments, but 1 was provided",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 2,
+          "column": 7
+        }
+      }
+    }
+  ],
+  "reason": "compiler-exit",
+  "rawDiagnostics": "/project/main.cpp:7:30: error: no matching member function for call to 'choose_a8ee505af129'\n  return object_a8ee505af129.choose_a8ee505af129(1);\n         ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~\n/project/main.cpp:3:7: note: candidate function not viable: 'this' argument has type 'const Record_a8ee505af129', but method is not marked const\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n      ^\n/project/main.cpp:2:7: note: candidate function not viable: requires 0 arguments, but 1 was provided\n  int choose_a8ee505af129() const { return 0; }\n      ^\n1 error generated.\n",
+  "binaryEvidence": {}
+}

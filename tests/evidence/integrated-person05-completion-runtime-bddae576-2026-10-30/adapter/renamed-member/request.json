@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-renamed-member",
+  "documentVersion": 3,
+  "snapshot": {
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-renamed-member-snapshot",
+    "sourceHash": "sha256:32a90717b17ce0273000ccc4984b1923365bac2d95b76c98e7e5121fd5ad5f13",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "struct Pixel { int coral; int common; };\nstruct Compass { int north; int common; };\nvoid inspect() { Pixel value; value. }\n",
+        "contentHash": "sha256:df46652b3668b6be6bf757ab98717d9f90416f191bd79ae472f136433e203c65"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 120,
+  "trigger": "."
+}

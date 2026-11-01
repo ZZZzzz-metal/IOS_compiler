@@ -1,0 +1,99 @@
+{
+  "id": "18-driver-includes-user-member",
+  "invokedAt": "2026-10-29T04:58:47.219Z",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "driver.cpp",
+  "cursor": {
+    "sourcePath": "user.inc",
+    "compilerPath": "/project/user.inc",
+    "utf16Offset": 73,
+    "line": 1,
+    "utf16Column": 74,
+    "utf8ByteColumn": 74,
+    "linePrefix": "class Solution { public: std::vector<int> values; int solve() { values.pu",
+    "prefixAtCursor": "pu",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "driver.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/user.inc:1:74",
+    "/project/driver.cpp"
+  ],
+  "sourceHash": "sha256:d0650bd601668eb487d287e356ba7d9ed292ca85e014a04745f03ff92281f670",
+  "resources": [
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "expectedSha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "verified": true
+    },
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "expectedSha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "verified": true
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "expectedSha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "verified": true
+    }
+  ],
+  "flags": [],
+  "exitCode": 0,
+  "hostError": null,
+  "filesystemSetupMs": 6.870300000000043,
+  "completionMs": 115.24330000000009,
+  "totalCaseMs": 122.1377,
+  "memoryBytes": {
+    "clangAfterExecution": 15007744,
+    "memfsAfterExecution": 9437184
+  },
+  "stdoutByteLength": 131,
+  "stderrByteLength": 0,
+  "stdoutSha256": "sha256:191fc58424b612e2d5059e806cfb95ba692db0e964060b58d5dd841e22c52822",
+  "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completionCount": 2,
+  "candidateObservations": [
+    {
+      "name": "push_back",
+      "lines": [
+        "COMPLETION: push_back : [#void#]push_back(<#const_reference __x#>)",
+        "COMPLETION: push_back : [#void#]push_back(<#value_type &&__x#>)"
+      ]
+    }
+  ],
+  "inaccessibleLines": [],
+  "stdout": "COMPLETION: push_back : [#void#]push_back(<#const_reference __x#>)\nCOMPLETION: push_back : [#void#]push_back(<#value_type &&__x#>)\n",
+  "stderr": ""
+}

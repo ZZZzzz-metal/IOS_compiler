@@ -1,0 +1,14 @@
+[
+  {
+    "command": "npm.cmd run check",
+    "exitCode": 0,
+    "stdout": "mandatory-check.stdout.txt",
+    "stderr": "mandatory-check.stderr.txt"
+  },
+  {
+    "command": "npm.cmd test",
+    "exitCode": 0,
+    "stdout": "mandatory-test.stdout.txt",
+    "stderr": "mandatory-test.stderr.txt"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "scope": "in-memory experiment; original vendor and lock unchanged",
+  "inputSha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "outputSha256": "544d28c1503adf93bf281a3b41a8ab238b2046e6a6794ca639d889305c14209f",
+  "byteLength": 31214472,
+  "patchOffset": 18106914,
+  "original": "410347",
+  "replacement": "41014d",
+  "meaning": "Availability > Deprecated receives existing Inaccessible marker; ordinary and deprecated remain selectable."
+}

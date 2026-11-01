@@ -1,0 +1,6 @@
+COMPLETION: elevation : [#int#]elevation
+COMPLETION: Height : Height::
+COMPLETION: operator= : [#Height &#]operator=(<#const Height &#>)
+COMPLETION: operator= : [#Height &#]operator=(<#Height &&#>)
+COMPLETION: summit : [#int#]summit
+COMPLETION: ~Height : [#void#]~Height()

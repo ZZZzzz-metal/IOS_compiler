@@ -1,0 +1,604 @@
+{
+  "kind": "independent-real-node-worker-lifecycle",
+  "requestId": "CC-20261029-05",
+  "expectedCommit": "bddae57653bede9a38a3510006d761e2a9d19a04",
+  "targetPath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+  "fixtureScope": "type-a and vector only; no const-boundary acceptance",
+  "actualCompleteCalls": 7,
+  "scenarioCount": 7,
+  "scenarioPass": 7,
+  "checkPass": 25,
+  "checkFail": 0,
+  "targetUnchanged": true,
+  "fatalError": null,
+  "workers": [
+    {
+      "id": "primary-worker-1",
+      "created": {
+        "sequence": 3,
+        "elapsedMs": 32.24470000000002,
+        "at": "2026-10-29T16:37:23.735Z",
+        "scenario": "01-active-double-cancel",
+        "kind": "worker-created",
+        "adapter": "primary",
+        "worker": "primary-worker-1",
+        "threadId": 1
+      },
+      "exit": {
+        "sequence": 16,
+        "elapsedMs": 151.72930000000002,
+        "at": "2026-10-29T16:37:23.855Z",
+        "scenario": "01-active-double-cancel",
+        "kind": "worker-exit",
+        "adapter": "primary",
+        "worker": "primary-worker-1",
+        "code": 1,
+        "threadId": -1
+      },
+      "threadIdAfter": -1,
+      "terminateCalls": [
+        {
+          "sequence": 14,
+          "elapsedMs": 145.91850000000005,
+          "at": "2026-10-29T16:37:23.849Z",
+          "scenario": "01-active-double-cancel",
+          "kind": "worker-terminate-called",
+          "adapter": "primary",
+          "worker": "primary-worker-1",
+          "origin": "adapter",
+          "threadId": 1
+        }
+      ],
+      "terminateSettled": {
+        "sequence": 17,
+        "elapsedMs": 152.66160000000008,
+        "at": "2026-10-29T16:37:23.856Z",
+        "scenario": "01-active-double-cancel",
+        "kind": "worker-terminate-settled",
+        "adapter": "primary",
+        "worker": "primary-worker-1",
+        "origin": "adapter",
+        "code": 1,
+        "threadId": -1
+      }
+    },
+    {
+      "id": "primary-worker-2",
+      "created": {
+        "sequence": 29,
+        "elapsedMs": 160.48640000000006,
+        "at": "2026-10-29T16:37:23.863Z",
+        "scenario": "02-same-adapter-restart",
+        "kind": "worker-created",
+        "adapter": "primary",
+        "worker": "primary-worker-2",
+        "threadId": 2
+      },
+      "exit": {
+        "sequence": 51,
+        "elapsedMs": 344.4658,
+        "at": "2026-10-29T16:37:24.047Z",
+        "scenario": "03-cancel-recent-completed",
+        "kind": "worker-exit",
+        "adapter": "primary",
+        "worker": "primary-worker-2",
+        "code": 1,
+        "threadId": -1
+      },
+      "threadIdAfter": -1,
+      "terminateCalls": [
+        {
+          "sequence": 50,
+          "elapsedMs": 337.9459,
+          "at": "2026-10-29T16:37:24.041Z",
+          "scenario": "03-cancel-recent-completed",
+          "kind": "worker-terminate-called",
+          "adapter": "primary",
+          "worker": "primary-worker-2",
+          "origin": "adapter",
+          "threadId": 2
+        }
+      ],
+      "terminateSettled": {
+        "sequence": 52,
+        "elapsedMs": 345.23510000000005,
+        "at": "2026-10-29T16:37:24.048Z",
+        "scenario": "03-cancel-recent-completed",
+        "kind": "worker-terminate-settled",
+        "adapter": "primary",
+        "worker": "primary-worker-2",
+        "origin": "adapter",
+        "code": 1,
+        "threadId": -1
+      }
+    },
+    {
+      "id": "primary-worker-3",
+      "created": {
+        "sequence": 59,
+        "elapsedMs": 350.54540000000003,
+        "at": "2026-10-29T16:37:24.053Z",
+        "scenario": "04-old-id-does-not-kill-new-active",
+        "kind": "worker-created",
+        "adapter": "primary",
+        "worker": "primary-worker-3",
+        "threadId": 3
+      },
+      "exit": {
+        "sequence": 83,
+        "elapsedMs": 536.4808,
+        "at": "2026-10-29T16:37:24.239Z",
+        "scenario": "05-dispose-idle-and-reject-new",
+        "kind": "worker-exit",
+        "adapter": "primary",
+        "worker": "primary-worker-3",
+        "code": 1,
+        "threadId": -1
+      },
+      "threadIdAfter": -1,
+      "terminateCalls": [
+        {
+          "sequence": 82,
+          "elapsedMs": 530.0015000000001,
+          "at": "2026-10-29T16:37:24.233Z",
+          "scenario": "05-dispose-idle-and-reject-new",
+          "kind": "worker-terminate-called",
+          "adapter": "primary",
+          "worker": "primary-worker-3",
+          "origin": "adapter",
+          "threadId": 3
+        }
+      ],
+      "terminateSettled": {
+        "sequence": 84,
+        "elapsedMs": 537.191,
+        "at": "2026-10-29T16:37:24.240Z",
+        "scenario": "05-dispose-idle-and-reject-new",
+        "kind": "worker-terminate-settled",
+        "adapter": "primary",
+        "worker": "primary-worker-3",
+        "origin": "adapter",
+        "code": 1,
+        "threadId": -1
+      }
+    },
+    {
+      "id": "supersede-worker-1",
+      "created": {
+        "sequence": 95,
+        "elapsedMs": 547.2218,
+        "at": "2026-10-29T16:37:24.250Z",
+        "scenario": "06-active-supersede",
+        "kind": "worker-created",
+        "adapter": "supersede",
+        "worker": "supersede-worker-1",
+        "threadId": 4
+      },
+      "exit": {
+        "sequence": 107,
+        "elapsedMs": 663.2434000000001,
+        "at": "2026-10-29T16:37:24.366Z",
+        "scenario": "06-active-supersede",
+        "kind": "worker-exit",
+        "adapter": "supersede",
+        "worker": "supersede-worker-1",
+        "code": 1,
+        "threadId": -1
+      },
+      "threadIdAfter": -1,
+      "terminateCalls": [
+        {
+          "sequence": 106,
+          "elapsedMs": 658.0101,
+          "at": "2026-10-29T16:37:24.361Z",
+          "scenario": "06-active-supersede",
+          "kind": "worker-terminate-called",
+          "adapter": "supersede",
+          "worker": "supersede-worker-1",
+          "origin": "adapter",
+          "threadId": 4
+        }
+      ],
+      "terminateSettled": {
+        "sequence": 108,
+        "elapsedMs": 663.9127000000001,
+        "at": "2026-10-29T16:37:24.367Z",
+        "scenario": "06-active-supersede",
+        "kind": "worker-terminate-settled",
+        "adapter": "supersede",
+        "worker": "supersede-worker-1",
+        "origin": "adapter",
+        "code": 1,
+        "threadId": -1
+      }
+    },
+    {
+      "id": "supersede-worker-2",
+      "created": {
+        "sequence": 112,
+        "elapsedMs": 667.519,
+        "at": "2026-10-29T16:37:24.370Z",
+        "scenario": "06-active-supersede",
+        "kind": "worker-created",
+        "adapter": "supersede",
+        "worker": "supersede-worker-2",
+        "threadId": 5
+      },
+      "exit": {
+        "sequence": 143,
+        "elapsedMs": 860.2914000000001,
+        "at": "2026-10-29T16:37:24.563Z",
+        "scenario": "harness-cleanup",
+        "kind": "worker-exit",
+        "adapter": "supersede",
+        "worker": "supersede-worker-2",
+        "code": 1,
+        "threadId": -1
+      },
+      "threadIdAfter": -1,
+      "terminateCalls": [
+        {
+          "sequence": 142,
+          "elapsedMs": 854.7986000000001,
+          "at": "2026-10-29T16:37:24.558Z",
+          "scenario": "harness-cleanup",
+          "kind": "worker-terminate-called",
+          "adapter": "supersede",
+          "worker": "supersede-worker-2",
+          "origin": "harness-cleanup-adapter",
+          "threadId": 5
+        }
+      ],
+      "terminateSettled": {
+        "sequence": 144,
+        "elapsedMs": 860.8349000000001,
+        "at": "2026-10-29T16:37:24.564Z",
+        "scenario": "harness-cleanup",
+        "kind": "worker-terminate-settled",
+        "adapter": "supersede",
+        "worker": "supersede-worker-2",
+        "origin": "harness-cleanup-adapter",
+        "code": 1,
+        "threadId": -1
+      }
+    },
+    {
+      "id": "timeout-worker-1",
+      "created": {
+        "sequence": 132,
+        "elapsedMs": 844.9175,
+        "at": "2026-10-29T16:37:24.548Z",
+        "scenario": "07-short-timeout-real-worker-release",
+        "kind": "worker-created",
+        "adapter": "timeout",
+        "worker": "timeout-worker-1",
+        "threadId": 6
+      },
+      "exit": {
+        "sequence": 135,
+        "elapsedMs": 849.8314,
+        "at": "2026-10-29T16:37:24.553Z",
+        "scenario": "07-short-timeout-real-worker-release",
+        "kind": "worker-exit",
+        "adapter": "timeout",
+        "worker": "timeout-worker-1",
+        "code": 0,
+        "threadId": -1
+      },
+      "threadIdAfter": -1,
+      "terminateCalls": [
+        {
+          "sequence": 134,
+          "elapsedMs": 845.8748,
+          "at": "2026-10-29T16:37:24.549Z",
+          "scenario": "07-short-timeout-real-worker-release",
+          "kind": "worker-terminate-called",
+          "adapter": "timeout",
+          "worker": "timeout-worker-1",
+          "origin": "adapter",
+          "threadId": 6
+        }
+      ],
+      "terminateSettled": {
+        "sequence": 136,
+        "elapsedMs": 850.4598000000001,
+        "at": "2026-10-29T16:37:24.553Z",
+        "scenario": "07-short-timeout-real-worker-release",
+        "kind": "worker-terminate-settled",
+        "adapter": "timeout",
+        "worker": "timeout-worker-1",
+        "origin": "adapter",
+        "code": 0,
+        "threadId": -1
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "01-active-double-cancel",
+      "passed": true,
+      "checks": [
+        {
+          "scenario": "01-active-double-cancel",
+          "name": "completion-started callback synchronously initiated both cancels",
+          "passed": true
+        },
+        {
+          "scenario": "01-active-double-cancel",
+          "name": "cancelled response preserves all identities and has no items",
+          "passed": true
+        },
+        {
+          "scenario": "01-active-double-cancel",
+          "name": "real Worker exited and terminate settled before complete",
+          "passed": true
+        },
+        {
+          "scenario": "01-active-double-cancel",
+          "name": "both cancel Promises settle after actual release and complete",
+          "passed": true
+        },
+        {
+          "scenario": "01-active-double-cancel",
+          "name": "double cancel made exactly one native terminate call",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "02-same-adapter-restart",
+      "passed": true,
+      "checks": [
+        {
+          "scenario": "02-same-adapter-restart",
+          "name": "same public adapter succeeds on a new valid request",
+          "passed": true
+        },
+        {
+          "scenario": "02-same-adapter-restart",
+          "name": "replacement Worker starts only after old Worker released",
+          "passed": true
+        },
+        {
+          "scenario": "02-same-adapter-restart",
+          "name": "successful Worker remains warm before explicit cancellation",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "03-cancel-recent-completed",
+      "passed": true,
+      "checks": [
+        {
+          "scenario": "03-cancel-recent-completed",
+          "name": "cancel of most recent completed ID releases idle warm Worker",
+          "passed": true
+        },
+        {
+          "scenario": "03-cancel-recent-completed",
+          "name": "warm release is after successful complete, with no new Worker",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "04-old-id-does-not-kill-new-active",
+      "passed": true,
+      "checks": [
+        {
+          "scenario": "04-old-id-does-not-kill-new-active",
+          "name": "old ID cancellation was initiated while new request had started",
+          "passed": true
+        },
+        {
+          "scenario": "04-old-id-does-not-kill-new-active",
+          "name": "new active completion still succeeds",
+          "passed": true
+        },
+        {
+          "scenario": "04-old-id-does-not-kill-new-active",
+          "name": "old ID did not terminate or replace the new warm Worker",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "05-dispose-idle-and-reject-new",
+      "passed": true,
+      "checks": [
+        {
+          "scenario": "05-dispose-idle-and-reject-new",
+          "name": "idle dispose releases actual last Worker before returning",
+          "passed": true
+        },
+        {
+          "scenario": "05-dispose-idle-and-reject-new",
+          "name": "new valid request after dispose fails with identity and no items",
+          "passed": true
+        },
+        {
+          "scenario": "05-dispose-idle-and-reject-new",
+          "name": "disposed adapter creates no new Worker",
+          "passed": true
+        },
+        {
+          "scenario": "05-dispose-idle-and-reject-new",
+          "name": "repeated idle dispose has no additional terminate side effect",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "06-active-supersede",
+      "passed": true,
+      "checks": [
+        {
+          "scenario": "06-active-supersede",
+          "name": "replacement started synchronously from real old request progress",
+          "passed": true
+        },
+        {
+          "scenario": "06-active-supersede",
+          "name": "old request returns cancelled with no stale candidates",
+          "passed": true
+        },
+        {
+          "scenario": "06-active-supersede",
+          "name": "new request succeeds on same public adapter",
+          "passed": true
+        },
+        {
+          "scenario": "06-active-supersede",
+          "name": "old Worker release and old complete precede new Worker creation",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "name": "07-short-timeout-real-worker-release",
+      "passed": true,
+      "checks": [
+        {
+          "scenario": "07-short-timeout-real-worker-release",
+          "name": "short timeout returns failed identity and no items",
+          "passed": true
+        },
+        {
+          "scenario": "07-short-timeout-real-worker-release",
+          "name": "real Worker was created then released before timeout result",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "scenario": "01-active-double-cancel",
+      "name": "completion-started callback synchronously initiated both cancels",
+      "passed": true
+    },
+    {
+      "scenario": "01-active-double-cancel",
+      "name": "cancelled response preserves all identities and has no items",
+      "passed": true
+    },
+    {
+      "scenario": "01-active-double-cancel",
+      "name": "real Worker exited and terminate settled before complete",
+      "passed": true
+    },
+    {
+      "scenario": "01-active-double-cancel",
+      "name": "both cancel Promises settle after actual release and complete",
+      "passed": true
+    },
+    {
+      "scenario": "01-active-double-cancel",
+      "name": "double cancel made exactly one native terminate call",
+      "passed": true
+    },
+    {
+      "scenario": "02-same-adapter-restart",
+      "name": "same public adapter succeeds on a new valid request",
+      "passed": true
+    },
+    {
+      "scenario": "02-same-adapter-restart",
+      "name": "replacement Worker starts only after old Worker released",
+      "passed": true
+    },
+    {
+      "scenario": "02-same-adapter-restart",
+      "name": "successful Worker remains warm before explicit cancellation",
+      "passed": true
+    },
+    {
+      "scenario": "03-cancel-recent-completed",
+      "name": "cancel of most recent completed ID releases idle warm Worker",
+      "passed": true
+    },
+    {
+      "scenario": "03-cancel-recent-completed",
+      "name": "warm release is after successful complete, with no new Worker",
+      "passed": true
+    },
+    {
+      "scenario": "04-old-id-does-not-kill-new-active",
+      "name": "old ID cancellation was initiated while new request had started",
+      "passed": true
+    },
+    {
+      "scenario": "04-old-id-does-not-kill-new-active",
+      "name": "new active completion still succeeds",
+      "passed": true
+    },
+    {
+      "scenario": "04-old-id-does-not-kill-new-active",
+      "name": "old ID did not terminate or replace the new warm Worker",
+      "passed": true
+    },
+    {
+      "scenario": "05-dispose-idle-and-reject-new",
+      "name": "idle dispose releases actual last Worker before returning",
+      "passed": true
+    },
+    {
+      "scenario": "05-dispose-idle-and-reject-new",
+      "name": "new valid request after dispose fails with identity and no items",
+      "passed": true
+    },
+    {
+      "scenario": "05-dispose-idle-and-reject-new",
+      "name": "disposed adapter creates no new Worker",
+      "passed": true
+    },
+    {
+      "scenario": "05-dispose-idle-and-reject-new",
+      "name": "repeated idle dispose has no additional terminate side effect",
+      "passed": true
+    },
+    {
+      "scenario": "06-active-supersede",
+      "name": "replacement started synchronously from real old request progress",
+      "passed": true
+    },
+    {
+      "scenario": "06-active-supersede",
+      "name": "old request returns cancelled with no stale candidates",
+      "passed": true
+    },
+    {
+      "scenario": "06-active-supersede",
+      "name": "new request succeeds on same public adapter",
+      "passed": true
+    },
+    {
+      "scenario": "06-active-supersede",
+      "name": "old Worker release and old complete precede new Worker creation",
+      "passed": true
+    },
+    {
+      "scenario": "07-short-timeout-real-worker-release",
+      "name": "short timeout returns failed identity and no items",
+      "passed": true
+    },
+    {
+      "scenario": "07-short-timeout-real-worker-release",
+      "name": "real Worker was created then released before timeout result",
+      "passed": true
+    },
+    {
+      "scenario": "harness-cleanup",
+      "name": "all created real Workers have emitted exit and have threadId -1",
+      "passed": true
+    },
+    {
+      "scenario": "harness-cleanup",
+      "name": "fixed product inputs and HEAD remain unchanged",
+      "passed": true
+    }
+  ],
+  "scope": "Public CompletionAdapter and real Node Workers. Cancellation is initiated at observed completion-started, not proof of a specific Wasm instruction being interrupted. No browser/UI/physical iPad or full compilation was exercised.",
+  "passed": true
+}

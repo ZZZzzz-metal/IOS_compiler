@@ -1,0 +1,6 @@
+COMPLETION: fromDriver : [#int#]fromDriver
+COMPLETION: operator= : [#RequestData &#]operator=(<#const RequestData &#>)
+COMPLETION: operator= : [#RequestData &#]operator=(<#RequestData &&#>)
+COMPLETION: RequestData : RequestData::
+COMPLETION: serial : [#int#]serial
+COMPLETION: ~RequestData : [#void#]~RequestData()

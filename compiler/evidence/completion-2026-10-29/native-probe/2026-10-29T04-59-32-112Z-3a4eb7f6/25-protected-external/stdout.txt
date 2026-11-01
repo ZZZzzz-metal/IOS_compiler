@@ -1,0 +1,11 @@
+COMPLETION: Base (InBase) : Base::
+COMPLETION: Derived : Derived::
+COMPLETION: operator= : [#Derived &#]operator=(<#const Derived &#>)
+COMPLETION: operator= : [#Derived &#]operator=(<#Derived &&#>)
+COMPLETION: operator= (Hidden,InBase) : [#Base &#]Base::operator=(<#const Base &#>)
+COMPLETION: operator= (Hidden,InBase) : [#Base &#]Base::operator=(<#Base &&#>)
+COMPLETION: protectedMethod (InBase,Inaccessible) : [#void#][#Base::#]protectedMethod()
+COMPLETION: protectedValue (InBase,Inaccessible) : [#int#][#Base::#]protectedValue
+COMPLETION: publicValue (InBase) : [#int#][#Base::#]publicValue
+COMPLETION: ~Base (InBase) : [#void#][#Base::#]~Base()
+COMPLETION: ~Derived : [#void#]~Derived()

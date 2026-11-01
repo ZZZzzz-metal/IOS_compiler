@@ -1,0 +1,12 @@
+{
+  "caseId": "declaration-order",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:32.483Z",
+  "elapsedMs": 17.463199999999915,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

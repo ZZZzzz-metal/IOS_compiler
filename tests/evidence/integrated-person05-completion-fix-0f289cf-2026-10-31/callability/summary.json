@@ -1,0 +1,1334 @@
+{
+  "requestId": "CC-20261030-05",
+  "kind": "independent-real-callability-controls",
+  "expectedCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+  "targetPath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+  "nonce": "a8ee505af129",
+  "passed": true,
+  "targetUnchanged": true,
+  "originalFixtureQueriesUnchanged": 11,
+  "originalControlCount": 24,
+  "lateFixtureQueries": 2,
+  "lateControlCount": 3,
+  "actualCompilerProbeCalls": 27,
+  "actualCompletionQueries": 0,
+  "actualBrowserObservations": 0,
+  "counts": {
+    "passed": 27,
+    "failed": 0,
+    "infrastructureErrors": 0
+  },
+  "fullCompilerResources": {
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "records": [
+    {
+      "fixtureId": "fix-alias-const",
+      "controlId": "read-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:41.994Z",
+      "passed": true,
+      "sourceHash": "sha256:0dae0fd2b19ca153bf43ba6617a46b7e52685e262fcc8edeecc56641fc69e2a7",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 1046.3730999999998,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-alias-const/read-positive/main.wasm",
+          "byteLength": 246890,
+          "sha256": "sha256:c2f2f421506a660a8a342e61223e455a18e9d3b9272ca8963b7e93549e7263ce"
+        },
+        "object": {
+          "file": "controls/fix-alias-const/read-positive/main.o",
+          "byteLength": 5011,
+          "sha256": "sha256:832d943ad23f25e6e9749fbe119d77f33d9bcfac5cedeacb7e9d26e383d44b49"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-alias-const",
+      "controlId": "append-negative",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:43.041Z",
+      "passed": true,
+      "sourceHash": "sha256:483994251fd7ebd2ce2ac733cdab9efaf10ccffe369d897f67124d2b477ae57a",
+      "actualStatus": "failed",
+      "reason": "compiler-exit",
+      "elapsedMs": 886.0110999999999,
+      "expected": {
+        "status": "failed",
+        "reason": "compiler-exit"
+      },
+      "semantic": {
+        "kind": "const",
+        "member": "append",
+        "sourcePath": "main.cpp",
+        "line": 5
+      },
+      "diagnosticGroups": [
+        {
+          "index": 0,
+          "error": {
+            "severity": "error",
+            "message": "no matching member function for call to 'append'",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 5,
+                "column": 23
+              }
+            }
+          },
+          "notes": [
+            {
+              "severity": "note",
+              "message": "candidate function template not viable: 'this' argument has type 'const TextAlias_a8ee505af129' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+            },
+            {
+              "severity": "note",
+              "message": "candidate function not viable: 'this' argument has type 'const TextAlias_a8ee505af129' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+            },
+            {
+              "severity": "note",
+              "message": "candidate function not viable: 'this' argument has type 'const TextAlias_a8ee505af129' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+            },
+            {
+              "severity": "note",
+              "message": "candidate function not viable: 'this' argument has type 'const TextAlias_a8ee505af129' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+            },
+            {
+              "severity": "note",
+              "message": "candidate function template not viable: requires at least 2 arguments, but 1 was provided"
+            },
+            {
+              "severity": "note",
+              "message": "candidate function template not viable: requires 2 arguments, but 1 was provided"
+            },
+            {
+              "severity": "note",
+              "message": "candidate function template not viable: requires 2 arguments, but 1 was provided"
+            },
+            {
+              "severity": "note",
+              "message": "candidate function not viable: requires 2 arguments, but 1 was provided"
+            },
+            {
+              "severity": "note",
+              "message": "candidate function not viable: requires 2 arguments, but 1 was provided"
+            },
+            {
+              "severity": "note",
+              "message": "candidate function not viable: requires at least 2 arguments, but 1 was provided"
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "binaryEvidence": {},
+      "actualCompilerIdentity": {
+        "toolchainId": null,
+        "compilerResourceHash": null,
+        "linkerResourceHash": null,
+        "sysrootResourceHash": null
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-alias-mutable",
+      "controlId": "append-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:43.929Z",
+      "passed": true,
+      "sourceHash": "sha256:76395e024678ae049f2e493e83ba8730df1cd3bfad90816183daa96694bf9eb3",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 1061.9818,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-alias-mutable/append-positive/main.wasm",
+          "byteLength": 246949,
+          "sha256": "sha256:cccadc8a8d4c888af14db701a1ea58a2974dfe8506fb7a62cf588c008d675c4f"
+        },
+        "object": {
+          "file": "controls/fix-alias-mutable/append-positive/main.o",
+          "byteLength": 5214,
+          "sha256": "sha256:b493ed624661e4a8f1d666213eeb1208529465b0b451e92c0abcf09901e58e90"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-template-const",
+      "controlId": "read-template-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:44.993Z",
+      "passed": true,
+      "sourceHash": "sha256:9b720def474232d33d5c671e0243a76257b0034471551b24328d1f98141bd15b",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 650.4339999999997,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-template-const/read-template-positive/main.wasm",
+          "byteLength": 13563,
+          "sha256": "sha256:2f4a0ddfde77a6990a81cbbdb70125eef37a869b57080f258e7cc3763f4755c0"
+        },
+        "object": {
+          "file": "controls/fix-template-const/read-template-positive/main.o",
+          "byteLength": 693,
+          "sha256": "sha256:50f3b7e4ceb97d01124d8cb5decf3b36e8952ccb0c78ca949369b097919da86b"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-template-const",
+      "controlId": "write-negative",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:45.645Z",
+      "passed": true,
+      "sourceHash": "sha256:8aaa499722a65708372d30a769c98cdde34ac2e2ec2d9d2dad75d604c8eeed11",
+      "actualStatus": "failed",
+      "reason": "compiler-exit",
+      "elapsedMs": 565.2313999999997,
+      "expected": {
+        "status": "failed",
+        "reason": "compiler-exit"
+      },
+      "semantic": {
+        "kind": "const",
+        "member": "write_a8ee505af129",
+        "sourcePath": "main.cpp",
+        "line": 9
+      },
+      "diagnosticGroups": [
+        {
+          "index": 0,
+          "error": {
+            "severity": "error",
+            "message": "'this' argument to member function 'write_a8ee505af129' has type 'const Box_a8ee505af129<int>', but function is not marked const",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 9,
+                "column": 3
+              }
+            }
+          },
+          "notes": [
+            {
+              "severity": "note",
+              "message": "'write_a8ee505af129' declared here",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 3,
+                  "column": 8
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "binaryEvidence": {},
+      "actualCompilerIdentity": {
+        "toolchainId": null,
+        "compilerResourceHash": null,
+        "linkerResourceHash": null,
+        "sysrootResourceHash": null
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-template-const",
+      "controlId": "ingest-template-negative",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:46.212Z",
+      "passed": true,
+      "sourceHash": "sha256:eb00eda330da988b33d423f0ffcdc8718ee6bc59090f0a1b3ede4d8d860d575d",
+      "actualStatus": "failed",
+      "reason": "compiler-exit",
+      "elapsedMs": 588.3101999999999,
+      "expected": {
+        "status": "failed",
+        "reason": "compiler-exit"
+      },
+      "semantic": {
+        "kind": "const",
+        "member": "ingest_a8ee505af129",
+        "sourcePath": "main.cpp",
+        "line": 9
+      },
+      "diagnosticGroups": [
+        {
+          "index": 0,
+          "error": {
+            "severity": "error",
+            "message": "no matching member function for call to 'ingest_a8ee505af129'",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 9,
+                "column": 23
+              }
+            }
+          },
+          "notes": [
+            {
+              "severity": "note",
+              "message": "candidate function template not viable: 'this' argument has type 'const Box_a8ee505af129<int>', but method is not marked const",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 5,
+                  "column": 47
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "binaryEvidence": {},
+      "actualCompilerIdentity": {
+        "toolchainId": null,
+        "compilerResourceHash": null,
+        "linkerResourceHash": null,
+        "sysrootResourceHash": null
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-template-mutable",
+      "controlId": "write-template-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:46.802Z",
+      "passed": true,
+      "sourceHash": "sha256:23a540f5a3b23fce39742e5f3a711bdfaf3c169056266be0125b3da9a9ee1bc5",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 668.9742999999999,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-template-mutable/write-template-positive/main.wasm",
+          "byteLength": 13903,
+          "sha256": "sha256:3214b8ba5cc210d2ee31ca110697866dd07c155c80ee7f94999b2a91bbdc5187"
+        },
+        "object": {
+          "file": "controls/fix-template-mutable/write-template-positive/main.o",
+          "byteLength": 1047,
+          "sha256": "sha256:23b92a735a0bd1c97b208070ac9b32fd6e74b6a083af2de799f02bbb3981fde4"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-overload-const",
+      "controlId": "const-overload-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:47.473Z",
+      "passed": true,
+      "sourceHash": "sha256:40137fa673b8ec4d8dd009079183856d7c971f017b5de81cc5af1296f104fbe7",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 664.8097000000007,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-overload-const/const-overload-positive/main.wasm",
+          "byteLength": 13345,
+          "sha256": "sha256:869eb77ea038ff69fdba950db6641a88ffa00f86b338a1b0c6c1f811f93a733b"
+        },
+        "object": {
+          "file": "controls/fix-overload-const/const-overload-positive/main.o",
+          "byteLength": 480,
+          "sha256": "sha256:89575895bf644e10207d19995835a751ad9fceae69c0163a027cd7c88e815660"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-overload-const",
+      "controlId": "mutable-overload-negative",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:48.139Z",
+      "passed": true,
+      "sourceHash": "sha256:a6bc8d61446f246f08a5a54826b5c1f22e8ca6d965d78741f1a552accdd6228f",
+      "actualStatus": "failed",
+      "reason": "compiler-exit",
+      "elapsedMs": 742.5982000000004,
+      "expected": {
+        "status": "failed",
+        "reason": "compiler-exit"
+      },
+      "semantic": {
+        "kind": "const",
+        "member": "choose_a8ee505af129",
+        "sourcePath": "main.cpp",
+        "line": 7
+      },
+      "diagnosticGroups": [
+        {
+          "index": 0,
+          "error": {
+            "severity": "error",
+            "message": "no matching member function for call to 'choose_a8ee505af129'",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 7,
+                "column": 30
+              }
+            }
+          },
+          "notes": [
+            {
+              "severity": "note",
+              "message": "candidate function not viable: 'this' argument has type 'const Record_a8ee505af129', but method is not marked const",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 3,
+                  "column": 7
+                }
+              }
+            },
+            {
+              "severity": "note",
+              "message": "candidate function not viable: requires 0 arguments, but 1 was provided",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 2,
+                  "column": 7
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "binaryEvidence": {},
+      "actualCompilerIdentity": {
+        "toolchainId": null,
+        "compilerResourceHash": null,
+        "linkerResourceHash": null,
+        "sysrootResourceHash": null
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-overload-mutable",
+      "controlId": "both-overloads-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:48.885Z",
+      "passed": true,
+      "sourceHash": "sha256:ff3952d91428c80a3859ac980a5247dc2a7dcfd1e2c6eedb74e66d2df54b2dfb",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 825.2537999999995,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-overload-mutable/both-overloads-positive/main.wasm",
+          "byteLength": 13512,
+          "sha256": "sha256:fe8b341322b0cc5d5bc7bf1f8f79fcd066d09a6be6b4c5520f16ba4109e277df"
+        },
+        "object": {
+          "file": "controls/fix-overload-mutable/both-overloads-positive/main.o",
+          "byteLength": 659,
+          "sha256": "sha256:c4f813f9b7c8b9d4a585ddaf07f1ea900dcec77059e58df7b0bc79fc629c73da"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-definition",
+      "controlId": "allowed-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:49.712Z",
+      "passed": true,
+      "sourceHash": "sha256:3da0c4060b11dd9b59d4cc02d99589327443c0c62cd932d0d7bb9c92f70a4fc2",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 680.2282000000014,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-unavailable-definition/allowed-positive/main.wasm",
+          "byteLength": 13504,
+          "sha256": "sha256:72d64fa378aecb96adad8ac6ad604740a0b87df03347ca666acc2737d6f51942"
+        },
+        "object": {
+          "file": "controls/fix-unavailable-definition/allowed-positive/main.o",
+          "byteLength": 489,
+          "sha256": "sha256:d7f4b2975ff05730c02d943272f967842c19ca49253ef7244604f10952604af0"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-definition",
+      "controlId": "unavailable-negative",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:50.393Z",
+      "passed": true,
+      "sourceHash": "sha256:a0a3e0361ee90f792ff6de1629788f2dc8f422487c477427f4b3686f302759d1",
+      "actualStatus": "failed",
+      "reason": "compiler-exit",
+      "elapsedMs": 618.4835999999996,
+      "expected": {
+        "status": "failed",
+        "reason": "compiler-exit",
+        "errorPattern": "person05-unavailable"
+      },
+      "semantic": {
+        "kind": "unavailable",
+        "member": "surface_definition_a8ee505af129_blocked",
+        "sourcePath": "main.cpp",
+        "line": 6,
+        "errorPattern": "person05-unavailable"
+      },
+      "diagnosticGroups": [
+        {
+          "index": 0,
+          "error": {
+            "severity": "error",
+            "message": "call to unavailable function 'surface_definition_a8ee505af129_blocked': person05-unavailable",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 6,
+                "column": 10
+              }
+            }
+          },
+          "notes": [
+            {
+              "severity": "note",
+              "message": "candidate function has been explicitly made unavailable",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 2,
+                  "column": 58
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "binaryEvidence": {},
+      "actualCompilerIdentity": {
+        "toolchainId": null,
+        "compilerResourceHash": null,
+        "linkerResourceHash": null,
+        "sysrootResourceHash": null
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-definition",
+      "controlId": "deprecated-warning-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:51.014Z",
+      "passed": true,
+      "sourceHash": "sha256:d2e43477c0e6a4633a9034f32350b788c9c45d640b0fed9eb0a818eb2f22ba19",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 640.4211000000014,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0,
+        "warningPattern": "person05-deprecated"
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-unavailable-definition/deprecated-warning-positive/main.wasm",
+          "byteLength": 13504,
+          "sha256": "sha256:838aec892865b9f8b0a04579292f7696ede3f258576a574003d4efa1714bbc20"
+        },
+        "object": {
+          "file": "controls/fix-unavailable-definition/deprecated-warning-positive/main.o",
+          "byteLength": 489,
+          "sha256": "sha256:a9491aab2bda461d123f442da778c336e84765114a7b45677857e6dba5ea972d"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-declaration",
+      "controlId": "allowed-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:51.656Z",
+      "passed": true,
+      "sourceHash": "sha256:4d2c69145bff4bb032b0cb409c4abf1a5463b7347249e605e6db31454cf15eff",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 659.8366999999998,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-unavailable-declaration/allowed-positive/main.wasm",
+          "byteLength": 13510,
+          "sha256": "sha256:dc1dbf550da7deb03ec01085e1cd125d9beb25820a7e1ca2aedb15d79734b717"
+        },
+        "object": {
+          "file": "controls/fix-unavailable-declaration/allowed-positive/main.o",
+          "byteLength": 492,
+          "sha256": "sha256:8df38790af8b34c7cc98f5a69025723a54a786564202f50bc8ee0dc84060de10"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-declaration",
+      "controlId": "unavailable-negative",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:52.318Z",
+      "passed": true,
+      "sourceHash": "sha256:f552dedcf9bba62e1f5f7ad8731ea2745f90adc578381a9e451f40d1e2ac038b",
+      "actualStatus": "failed",
+      "reason": "compiler-exit",
+      "elapsedMs": 578.9213,
+      "expected": {
+        "status": "failed",
+        "reason": "compiler-exit",
+        "errorPattern": "person05-unavailable"
+      },
+      "semantic": {
+        "kind": "unavailable",
+        "member": "surface_declaration_a8ee505af129_blocked",
+        "sourcePath": "main.cpp",
+        "line": 9,
+        "errorPattern": "person05-unavailable"
+      },
+      "diagnosticGroups": [
+        {
+          "index": 0,
+          "error": {
+            "severity": "error",
+            "message": "call to unavailable function 'surface_declaration_a8ee505af129_blocked': person05-unavailable",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 9,
+                "column": 10
+              }
+            }
+          },
+          "notes": [
+            {
+              "severity": "note",
+              "message": "candidate function has been explicitly made unavailable",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 5,
+                  "column": 5
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "binaryEvidence": {},
+      "actualCompilerIdentity": {
+        "toolchainId": null,
+        "compilerResourceHash": null,
+        "linkerResourceHash": null,
+        "sysrootResourceHash": null
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-declaration",
+      "controlId": "deprecated-warning-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:52.899Z",
+      "passed": true,
+      "sourceHash": "sha256:c1421ae1d8b6aafac1b996cec526484c84d6dd8fb5f727b9e4a240c00d1e1180",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 688.7718999999997,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0,
+        "warningPattern": "person05-deprecated"
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-unavailable-declaration/deprecated-warning-positive/main.wasm",
+          "byteLength": 13510,
+          "sha256": "sha256:36d5fde00e9c93e64b907ed13be2da3f5011592834455482ef19c37ac89876c6"
+        },
+        "object": {
+          "file": "controls/fix-unavailable-declaration/deprecated-warning-positive/main.o",
+          "byteLength": 492,
+          "sha256": "sha256:3b242f7397fc0dc8fb94901f2cb79c36bf1bcb834754f3b7d6dfc32d0a8fc4e0"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-header",
+      "controlId": "allowed-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:53.589Z",
+      "passed": true,
+      "sourceHash": "sha256:e89f40fcb4c6e89c408d0ec15a38ba2df26799b73f24d289909090e09be7d432",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 676.8549999999996,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-unavailable-header/allowed-positive/main.wasm",
+          "byteLength": 13480,
+          "sha256": "sha256:f9edc5c0d6a174f3c466288f9bf0c351ed7bcaffbd9114f1887044c15b23c3e7"
+        },
+        "object": {
+          "file": "controls/fix-unavailable-header/allowed-positive/main.o",
+          "byteLength": 477,
+          "sha256": "sha256:f1189c1bf2d371914fe2d6a98b6c2de6874fa78bf379fb3594775f7db09a89a7"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-header",
+      "controlId": "unavailable-negative",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:54.268Z",
+      "passed": true,
+      "sourceHash": "sha256:3ff5cc733151430ab634e397169e0a109da4a0e0f1192fa9cb6d788bab841e8d",
+      "actualStatus": "failed",
+      "reason": "compiler-exit",
+      "elapsedMs": 579.4772999999986,
+      "expected": {
+        "status": "failed",
+        "reason": "compiler-exit",
+        "errorPattern": "person05-unavailable"
+      },
+      "semantic": {
+        "kind": "unavailable",
+        "member": "surface_header_a8ee505af129_blocked",
+        "sourcePath": "main.cpp",
+        "line": 7,
+        "errorPattern": "person05-unavailable"
+      },
+      "diagnosticGroups": [
+        {
+          "index": 0,
+          "error": {
+            "severity": "error",
+            "message": "call to unavailable function 'surface_header_a8ee505af129_blocked': person05-unavailable",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 7,
+                "column": 10
+              }
+            }
+          },
+          "notes": [
+            {
+              "severity": "note",
+              "message": "candidate function has been explicitly made unavailable",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 3,
+                  "column": 5
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "binaryEvidence": {},
+      "actualCompilerIdentity": {
+        "toolchainId": null,
+        "compilerResourceHash": null,
+        "linkerResourceHash": null,
+        "sysrootResourceHash": null
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-header",
+      "controlId": "deprecated-warning-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:54.849Z",
+      "passed": true,
+      "sourceHash": "sha256:57a60703b7d4e1eed5c2022f6567b82f5aea47ed3d12b9709a432f7b3f325388",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 661.6143999999986,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0,
+        "warningPattern": "person05-deprecated"
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-unavailable-header/deprecated-warning-positive/main.wasm",
+          "byteLength": 13480,
+          "sha256": "sha256:5c7b940dc79bfe77e0e14228ec14094d88266635f9bcb00a699df545846834a6"
+        },
+        "object": {
+          "file": "controls/fix-unavailable-header/deprecated-warning-positive/main.o",
+          "byteLength": 477,
+          "sha256": "sha256:6c46ab1fee8efb6e8ecb6dcdf203c4cb811760c9d08d8fd1fdcad3570eace31a"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-overload",
+      "controlId": "available-overload-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:55.512Z",
+      "passed": true,
+      "sourceHash": "sha256:6fb6822d3cba37c3ad4f893da25a792226b03b6c14c251527ada6acaeeacb415",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 654.7654000000002,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-unavailable-overload/available-overload-positive/main.wasm",
+          "byteLength": 13505,
+          "sha256": "sha256:f6b0df352f2a913c82e52ea26c1c2974da44264ba8b418ac716208ae399c67dd"
+        },
+        "object": {
+          "file": "controls/fix-unavailable-overload/available-overload-positive/main.o",
+          "byteLength": 536,
+          "sha256": "sha256:b16d2dcb20cb62ae22ac1ae7ca79f2d1ea184e3262f0dde4fb3571b1ff72228d"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-overload",
+      "controlId": "unavailable-overload-negative",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:56.169Z",
+      "passed": true,
+      "sourceHash": "sha256:f0a47118bdb4ea65e4d7d75363cf3ce2159706d76ab0589e882dc03db1cec1d3",
+      "actualStatus": "failed",
+      "reason": "compiler-exit",
+      "elapsedMs": 601.0316000000003,
+      "expected": {
+        "status": "failed",
+        "reason": "compiler-exit",
+        "errorPattern": "person05-unavailable"
+      },
+      "semantic": {
+        "kind": "unavailable",
+        "member": "mixed_a8ee505af129_select",
+        "sourcePath": "main.cpp",
+        "line": 6,
+        "errorPattern": "person05-unavailable"
+      },
+      "diagnosticGroups": [
+        {
+          "index": 0,
+          "error": {
+            "severity": "error",
+            "message": "call to unavailable function 'mixed_a8ee505af129_select': person05-unavailable",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 6,
+                "column": 10
+              }
+            }
+          },
+          "notes": [
+            {
+              "severity": "note",
+              "message": "candidate function has been explicitly made unavailable",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 2,
+                  "column": 58
+                }
+              }
+            },
+            {
+              "severity": "note",
+              "message": "candidate function",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 1,
+                  "column": 5
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "binaryEvidence": {},
+      "actualCompilerIdentity": {
+        "toolchainId": null,
+        "compilerResourceHash": null,
+        "linkerResourceHash": null,
+        "sysrootResourceHash": null
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-overload",
+      "controlId": "deprecated-warning-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:56.771Z",
+      "passed": true,
+      "sourceHash": "sha256:2c70c77c1a44a5ab289a781a65072b2cd8bcbf9bb5f262a41193a1b13c1ff0bb",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 683.1851999999999,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0,
+        "warningPattern": "person05-deprecated"
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-unavailable-overload/deprecated-warning-positive/main.wasm",
+          "byteLength": 13488,
+          "sha256": "sha256:441a05bf1471e8dba19c75361d658f6e23b0afc575f783828d3edf850ca58df9"
+        },
+        "object": {
+          "file": "controls/fix-unavailable-overload/deprecated-warning-positive/main.o",
+          "byteLength": 519,
+          "sha256": "sha256:5b1b779ecb450c49c60ca439d037899bddcb6ead2aecdd7bdeaff9a3f7f95aaa"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-namespace-context",
+      "controlId": "other-namespace-allowed-positive",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:57.456Z",
+      "passed": true,
+      "sourceHash": "sha256:1b418d7eea48ed3db818c316d4d98c48487931759700bd6fe4dee7cc459e691e",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 668.2509999999984,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-unavailable-namespace-context/other-namespace-allowed-positive/main.wasm",
+          "byteLength": 13415,
+          "sha256": "sha256:4b992ed6003b07c0725411485512049d4363533e3da62d31cbbde1afcd077a38"
+        },
+        "object": {
+          "file": "controls/fix-unavailable-namespace-context/other-namespace-allowed-positive/main.o",
+          "byteLength": 437,
+          "sha256": "sha256:21911a7af423e38214106752358ecb95bb34ac1be920d03f21aa79656e79b3a8"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-unavailable-namespace-context",
+      "controlId": "unavailable-namespace-negative",
+      "controlSet": "original-11-controls",
+      "startedAt": "2026-10-31T02:16:58.127Z",
+      "passed": true,
+      "sourceHash": "sha256:b709f4263793278a69e58e8a286e6774cae014970e873cd3df59699f55fb9c14",
+      "actualStatus": "failed",
+      "reason": "compiler-exit",
+      "elapsedMs": 604.9307000000008,
+      "expected": {
+        "status": "failed",
+        "reason": "compiler-exit",
+        "errorPattern": "person05-unavailable"
+      },
+      "semantic": {
+        "kind": "unavailable",
+        "member": "cross_a8ee505af129_read",
+        "sourcePath": "main.cpp",
+        "line": 9,
+        "errorPattern": "person05-unavailable"
+      },
+      "diagnosticGroups": [
+        {
+          "index": 0,
+          "error": {
+            "severity": "error",
+            "message": "'cross_a8ee505af129_read' is unavailable: person05-unavailable",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 9,
+                "column": 30
+              }
+            }
+          },
+          "notes": [
+            {
+              "severity": "note",
+              "message": "'cross_a8ee505af129_read' has been explicitly marked unavailable here",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 2,
+                  "column": 58
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "binaryEvidence": {},
+      "actualCompilerIdentity": {
+        "toolchainId": null,
+        "compilerResourceHash": null,
+        "linkerResourceHash": null,
+        "sysrootResourceHash": null
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-late-static-template",
+      "controlId": "static-template-positive",
+      "controlSet": "late-controls",
+      "startedAt": "2026-10-31T02:16:58.734Z",
+      "passed": true,
+      "sourceHash": "sha256:1555fc4f5b25b9e6a3fedf6166ee1e8078b29e4e228b8c813211cef93220ae0e",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 642.3751999999986,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-late-static-template/static-template-positive/main.wasm",
+          "byteLength": 13371,
+          "sha256": "sha256:c718fbe603f80a6900ba5e1873428664032857c287bb700e32206432e6f48f1f"
+        },
+        "object": {
+          "file": "controls/fix-late-static-template/static-template-positive/main.o",
+          "byteLength": 500,
+          "sha256": "sha256:1c694d365e0744a7d242a6d1391d63f50574959aca73cb3250140dd2e198f010"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-late-deleted-overload",
+      "controlId": "available-double-positive",
+      "controlSet": "late-controls",
+      "startedAt": "2026-10-31T02:16:59.378Z",
+      "passed": true,
+      "sourceHash": "sha256:b9b66c83a2c078de0cb1fb34f988c27ed06f54296a56813bb5aa28b99e4a5b85",
+      "actualStatus": "compiled",
+      "reason": null,
+      "elapsedMs": 708.6097999999984,
+      "expected": {
+        "status": "compiled",
+        "smokeExitCode": 0
+      },
+      "semantic": null,
+      "diagnosticGroups": [],
+      "errors": [],
+      "binaryEvidence": {
+        "executable": {
+          "file": "controls/fix-late-deleted-overload/available-double-positive/main.wasm",
+          "byteLength": 13323,
+          "sha256": "sha256:203a79a1cb92ac121beb98a32bf69c840f689373e0ebd05670e396097d98a87b"
+        },
+        "object": {
+          "file": "controls/fix-late-deleted-overload/available-double-positive/main.o",
+          "byteLength": 405,
+          "sha256": "sha256:5637d7d0889795b6e2f051ba242a011f798cab9106ededd1279a58426da096b1"
+        }
+      },
+      "actualCompilerIdentity": {
+        "toolchainId": "binji-wasm-clang-648c4a89997a",
+        "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+        "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+      },
+      "workersReleased": true
+    },
+    {
+      "fixtureId": "fix-late-deleted-overload",
+      "controlId": "deleted-int-negative",
+      "controlSet": "late-controls",
+      "startedAt": "2026-10-31T02:17:00.088Z",
+      "passed": true,
+      "sourceHash": "sha256:77eb085e700e519e7e82f1542068e2b77b882fe9b133a796e4c994175accd512",
+      "actualStatus": "failed",
+      "reason": "compiler-exit",
+      "elapsedMs": 596.7633999999998,
+      "expected": {
+        "status": "failed",
+        "reason": "compiler-exit",
+        "errorPattern": "deleted",
+        "errorMember": "lateChoice_a8ee505af129_call"
+      },
+      "semantic": {
+        "kind": "deleted",
+        "member": "lateChoice_a8ee505af129_call",
+        "sourcePath": "main.cpp",
+        "line": 5,
+        "errorPattern": "deleted"
+      },
+      "diagnosticGroups": [
+        {
+          "index": 0,
+          "error": {
+            "severity": "error",
+            "message": "call to deleted function 'lateChoice_a8ee505af129_call'",
+            "range": {
+              "start": {
+                "sourcePath": "main.cpp",
+                "line": 5,
+                "column": 10
+              }
+            }
+          },
+          "notes": [
+            {
+              "severity": "note",
+              "message": "candidate function has been explicitly deleted",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 2,
+                  "column": 5
+                }
+              }
+            },
+            {
+              "severity": "note",
+              "message": "candidate function",
+              "range": {
+                "start": {
+                  "sourcePath": "main.cpp",
+                  "line": 1,
+                  "column": 5
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "binaryEvidence": {},
+      "actualCompilerIdentity": {
+        "toolchainId": null,
+        "compilerResourceHash": null,
+        "linkerResourceHash": null,
+        "sysrootResourceHash": null
+      },
+      "workersReleased": true
+    }
+  ],
+  "infrastructureErrors": [],
+  "notes": [
+    "These complete programs are separate callability controls; incomplete original completion inputs remain unchanged.",
+    "A compiler-exit alone never satisfies a negative: the expected user call and its error/candidate-note reason must match.",
+    "Full compilation uses the original locked compiler. Failed CompilerProbe results do not invent absent resource identity or native exitCode.",
+    "No completion-provider, browser, debugger or physical-iPad acceptance is claimed by this callability runner."
+  ]
+}

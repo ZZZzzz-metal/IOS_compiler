@@ -1,0 +1,31 @@
+{
+  "name": "01-active-double-cancel",
+  "passed": true,
+  "checks": [
+    {
+      "scenario": "01-active-double-cancel",
+      "name": "completion-started callback synchronously initiated both cancels",
+      "passed": true
+    },
+    {
+      "scenario": "01-active-double-cancel",
+      "name": "cancelled response preserves all identities and has no items",
+      "passed": true
+    },
+    {
+      "scenario": "01-active-double-cancel",
+      "name": "real Worker exited and terminate settled before complete",
+      "passed": true
+    },
+    {
+      "scenario": "01-active-double-cancel",
+      "name": "both cancel Promises settle after actual release and complete",
+      "passed": true
+    },
+    {
+      "scenario": "01-active-double-cancel",
+      "name": "double cancel made exactly one native terminate call",
+      "passed": true
+    }
+  ]
+}

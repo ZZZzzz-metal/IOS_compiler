@@ -1,0 +1,13 @@
+{
+  "id": "namespace",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 17.011399999999867,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

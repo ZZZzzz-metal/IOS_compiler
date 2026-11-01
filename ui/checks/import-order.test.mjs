@@ -79,7 +79,7 @@ async function fixture(t) {
     $: id => { assert.ok(nodes.has(id), `Unexpected DOM dependency: ${id}`); return nodes.get(id); },
     draft: restored, currentTab: 'driver', snapshotMode: true, requested: [{ breakpointId: 'old' }],
     importSequence: 0, draftGeneration: 0, recovering: false, restored: true,
-    unqueuedEdits: false, saveFailed: false, autoSave: autosave, parseImport,
+    unqueuedEdits: false, saveFailed: false, autoSave: autosave, parseImport, completionUI: null,
     render() {}, syncScroll() {},
     showText() { nodes.get('source').value = context.draft.userText; },
   });

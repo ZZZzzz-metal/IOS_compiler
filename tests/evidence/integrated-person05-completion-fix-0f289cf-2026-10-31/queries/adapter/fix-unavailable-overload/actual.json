@@ -1,0 +1,40 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-unavailable-overload",
+  "documentVersion": 41,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-unavailable-overload-snapshot",
+  "sourceHash": "sha256:4fec3136c35f8b9d3730a026eac9680ab89e34dbb1d16800bde76b81171c51c3",
+  "sourcePath": "main.cpp",
+  "offset": 406,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:3da91afcba9de5ea8685489b8f5db739e9e04eb7d0f80f7b612e8fbcbe2df669",
+      "label": "mixed_a8ee505af129_deprecated",
+      "kind": "unknown",
+      "detail": "int mixed_a8ee505af129_deprecated()",
+      "insertText": "mixed_a8ee505af129_deprecated",
+      "replaceRange": {
+        "startOffset": 388,
+        "endOffset": 406
+      },
+      "filterText": "mixed_a8ee505af129_deprecated"
+    },
+    {
+      "id": "sha256:c0650abe47051205726122578d04c3a97c817fbef7d761b857de4123f5c7d507",
+      "label": "mixed_a8ee505af129_select",
+      "kind": "unknown",
+      "detail": "int mixed_a8ee505af129_select(double argument_a8ee505af129)",
+      "insertText": "mixed_a8ee505af129_select",
+      "replaceRange": {
+        "startOffset": 388,
+        "endOffset": 406
+      },
+      "filterText": "mixed_a8ee505af129_select"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

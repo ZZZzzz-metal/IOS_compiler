@@ -1,0 +1,10 @@
+{
+  "id": "prepare-ui",
+  "argv": [
+    "C:\\Users\\20964\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "ui/scripts/prepare-probe.mjs"
+  ],
+  "startedAt": "2026-10-29T15:48:02.438397+00:00",
+  "endedAt": "2026-10-29T15:48:02.604401+00:00",
+  "exitCode": 0
+}

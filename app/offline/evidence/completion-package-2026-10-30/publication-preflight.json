@@ -1,0 +1,25 @@
+{
+  "kind": "read-only delegated publication audit",
+  "baseRevision": "ef5d3906e2bb9c877e710a7b2093a0ff5e6fdd2a",
+  "throughRevision": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "newReachableCommits": 16,
+  "newBlobs": 831,
+  "newBlobBytes": 8108144,
+  "newTrackedFiles": 1209,
+  "newTrackedBytes": 8004443,
+  "largestNewFileBytes": 608616,
+  "findings": {
+    "realSecretsOrCredentials": 0,
+    "newLANAddresses": 0,
+    "archivesOrLargeToolchainFiles": 0,
+    "userKeyboardPhotoHashMatches": 0
+  },
+  "notes": [
+    "Four newJPEG files visually confirmed as workbench screenshots.",
+    "Small Wasm/object binaries are owner05 actual callability evidence, not the ignored toolchain.",
+    "A fake private-key marker is an archive rejection test input.",
+    "The LAN text in historical handoff01 line85 already exists in the public base and is not added by the new commits; retained unchanged.",
+    "New pending root package public reports separately scanned; actual endpoint/config/TLS/ZIP data remain ignored.",
+    "Owner05 final tip is not covered here and will be checked separately."
+  ]
+}

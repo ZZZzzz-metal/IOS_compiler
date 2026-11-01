@@ -1,0 +1,73 @@
+{
+  "fixtureId": "fix-late-deleted-overload",
+  "controlId": "deleted-int-negative",
+  "controlSet": "late-controls",
+  "startedAt": "2026-10-31T02:17:00.088Z",
+  "passed": true,
+  "sourceHash": "sha256:77eb085e700e519e7e82f1542068e2b77b882fe9b133a796e4c994175accd512",
+  "actualStatus": "failed",
+  "reason": "compiler-exit",
+  "elapsedMs": 596.7633999999998,
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "deleted",
+    "errorMember": "lateChoice_a8ee505af129_call"
+  },
+  "semantic": {
+    "kind": "deleted",
+    "member": "lateChoice_a8ee505af129_call",
+    "sourcePath": "main.cpp",
+    "line": 5,
+    "errorPattern": "deleted"
+  },
+  "diagnosticGroups": [
+    {
+      "index": 0,
+      "error": {
+        "severity": "error",
+        "message": "call to deleted function 'lateChoice_a8ee505af129_call'",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 5,
+            "column": 10
+          }
+        }
+      },
+      "notes": [
+        {
+          "severity": "note",
+          "message": "candidate function has been explicitly deleted",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 5
+            }
+          }
+        },
+        {
+          "severity": "note",
+          "message": "candidate function",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 1,
+              "column": 5
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "binaryEvidence": {},
+  "actualCompilerIdentity": {
+    "toolchainId": null,
+    "compilerResourceHash": null,
+    "linkerResourceHash": null,
+    "sysrootResourceHash": null
+  },
+  "workersReleased": true
+}

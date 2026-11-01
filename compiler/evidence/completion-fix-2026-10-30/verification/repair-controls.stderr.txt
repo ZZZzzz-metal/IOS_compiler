@@ -1,0 +1,14 @@
+node:internal/worker:252
+        throw new ERR_WORKER_PATH(filename);
+              ^
+
+TypeError [ERR_WORKER_PATH]: The worker script or module filename must be an absolute path or a relative path starting with './' or '../'. Wrap file:// URLs with `new URL`. Received "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-02/compiler/experiments/completion-fix-2026-10-30/verify-repair-controls.mjs"
+    at new Worker (node:internal/worker:252:15)
+    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-02/compiler/experiments/completion-fix-2026-10-30/verify-repair-controls.mjs:17:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  code: 'ERR_WORKER_PATH'
+}
+
+Node.js v24.19.0

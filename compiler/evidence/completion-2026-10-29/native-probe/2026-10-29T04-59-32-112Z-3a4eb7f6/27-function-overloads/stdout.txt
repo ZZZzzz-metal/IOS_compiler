@@ -1,0 +1,5 @@
+COMPLETION: Pattern : alignas(<#expression#>)
+COMPLETION: Pattern : [#size_t#]alignof(<#type#>)
+COMPLETION: alpha : [#int#]alpha(<#int number#>)
+COMPLETION: alpha : [#double#]alpha(<#double number#>)
+COMPLETION: alpha : [#void#]alpha(<#const char *text#>{#, <#int count = 2#>#})

@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-include-omitted",
+  "documentVersion": 19,
+  "snapshot": {
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-include-omitted-snapshot",
+    "sourceHash": "sha256:4a3cc321774b0261e1e8ef45e45a51e8d1ebbb8247427644afef945d1a788e9a",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "// Counterfactual: no declaration from driver.cpp is visible in this project.\nvoid probe() { RequestData request; request. }\n",
+        "contentHash": "sha256:514946a725ab58ac66b2e0ae9adbce5144b012712241e0c636c56269630692f9"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 122,
+  "trigger": "."
+}

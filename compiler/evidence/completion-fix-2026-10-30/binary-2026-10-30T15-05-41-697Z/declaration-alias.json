@@ -1,0 +1,30 @@
+{
+  "source": "struct __attribute__((unavailable)) AlphaBlocked{};struct __attribute__((deprecated)) AlphaOld{};struct AlphaAllowed{};void f(){Al;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:1:131",
+    "/project/main.cpp"
+  ],
+  "exitCode": 0,
+  "stdout": "COMPLETION: AlphaAllowed : AlphaAllowed\nCOMPLETION: AlphaBlocked (Inaccessible) : AlphaBlocked\nCOMPLETION: AlphaOld : AlphaOld\n",
+  "stderr": "",
+  "memoryBytes": 7077888
+}

@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-vector",
+  "documentVersion": 13,
+  "snapshot": {
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-vector-snapshot",
+    "sourceHash": "sha256:fb6ef7c67fa0b4faad56a3e2eeccb7ab8767198c1ffd521130cfbd4db6cbc532",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "#include <vector>\nvoid probe() { std::vector<int> values; values. }\n",
+        "contentHash": "sha256:8ab73cf358152f40ebb5e264f2dc6bc92993aac635c796b2589f4d400bc7bb32"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 65,
+  "trigger": "."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "unfinished",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 18.409099999999853,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

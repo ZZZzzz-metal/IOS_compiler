@@ -1,0 +1,37 @@
+{
+  "fixtureId": "fix-alias-mutable",
+  "controlId": "append-positive",
+  "controlSet": "original-11-controls",
+  "startedAt": "2026-10-31T02:16:43.929Z",
+  "passed": true,
+  "sourceHash": "sha256:76395e024678ae049f2e493e83ba8730df1cd3bfad90816183daa96694bf9eb3",
+  "actualStatus": "compiled",
+  "reason": null,
+  "elapsedMs": 1061.9818,
+  "expected": {
+    "status": "compiled",
+    "smokeExitCode": 0
+  },
+  "semantic": null,
+  "diagnosticGroups": [],
+  "errors": [],
+  "binaryEvidence": {
+    "executable": {
+      "file": "controls/fix-alias-mutable/append-positive/main.wasm",
+      "byteLength": 246949,
+      "sha256": "sha256:cccadc8a8d4c888af14db701a1ea58a2974dfe8506fb7a62cf588c008d675c4f"
+    },
+    "object": {
+      "file": "controls/fix-alias-mutable/append-positive/main.o",
+      "byteLength": 5214,
+      "sha256": "sha256:b493ed624661e4a8f1d666213eeb1208529465b0b451e92c0abcf09901e58e90"
+    }
+  },
+  "actualCompilerIdentity": {
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "workersReleased": true
+}

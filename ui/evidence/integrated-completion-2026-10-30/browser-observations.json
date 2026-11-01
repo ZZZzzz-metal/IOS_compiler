@@ -1,0 +1,708 @@
+[
+  {
+    "name": "real-dot-members",
+    "end": 68,
+    "height": 714,
+    "items": [
+      {
+        "detail": "Parcel::",
+        "label": "Parcel",
+        "selected": "true"
+      },
+      {
+        "detail": "int cost",
+        "label": "cost",
+        "selected": "false"
+      },
+      {
+        "detail": "int count",
+        "label": "count",
+        "selected": "false"
+      },
+      {
+        "detail": "Parcel & operator=(const Parcel &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Parcel & operator=(Parcel &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Parcel()",
+        "label": "~Parcel",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": false,
+    "save": "草稿已保存 · 版本 1",
+    "source": "struct Parcel { int count; int cost; };\nint main(){ Parcel p;\n    p.\n}\n",
+    "start": 68,
+    "status": "6 个提示 · ↑↓选择，Tab 或 Enter 插入",
+    "width": 319
+  },
+  {
+    "name": "member-tab-insert",
+    "end": 73,
+    "height": 714,
+    "items": [
+      {
+        "detail": "Parcel::",
+        "label": "Parcel",
+        "selected": "false"
+      },
+      {
+        "detail": "int cost",
+        "label": "cost",
+        "selected": "false"
+      },
+      {
+        "detail": "int count",
+        "label": "count",
+        "selected": "true"
+      },
+      {
+        "detail": "Parcel & operator=(const Parcel &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Parcel & operator=(Parcel &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Parcel()",
+        "label": "~Parcel",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "struct Parcel { int count; int cost; };\nint main(){ Parcel p;\n    p.count\n}\n",
+    "start": 73,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+Space。",
+    "width": 319
+  },
+  {
+    "name": "native-undo",
+    "end": 68,
+    "height": 714,
+    "items": [
+      {
+        "detail": "Parcel::",
+        "label": "Parcel",
+        "selected": "false"
+      },
+      {
+        "detail": "int cost",
+        "label": "cost",
+        "selected": "false"
+      },
+      {
+        "detail": "int count",
+        "label": "count",
+        "selected": "true"
+      },
+      {
+        "detail": "Parcel & operator=(const Parcel &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Parcel & operator=(Parcel &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Parcel()",
+        "label": "~Parcel",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "struct Parcel { int count; int cost; };\nint main(){ Parcel p;\n    p.\n}\n",
+    "start": 68,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+Space。",
+    "width": 319
+  },
+  {
+    "name": "native-redo",
+    "end": 73,
+    "height": 714,
+    "items": [
+      {
+        "detail": "Parcel::",
+        "label": "Parcel",
+        "selected": "false"
+      },
+      {
+        "detail": "int cost",
+        "label": "cost",
+        "selected": "false"
+      },
+      {
+        "detail": "int count",
+        "label": "count",
+        "selected": "true"
+      },
+      {
+        "detail": "Parcel & operator=(const Parcel &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Parcel & operator=(Parcel &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Parcel()",
+        "label": "~Parcel",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "struct Parcel { int count; int cost; };\nint main(){ Parcel p;\n    p.count\n}\n",
+    "start": 73,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+Space。",
+    "width": 319
+  },
+  {
+    "name": "automatic-function-variable-prefix",
+    "end": 81,
+    "height": 850,
+    "items": [
+      {
+        "detail": "double",
+        "label": "double",
+        "selected": "true"
+      },
+      {
+        "detail": "int doubleScore(int value)",
+        "label": "doubleScore",
+        "selected": "false"
+      },
+      {
+        "detail": "int doubleTotal",
+        "label": "doubleTotal",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": false,
+    "save": "草稿已保存 · 版本 3",
+    "source": "int doubleScore(int value){return value*2;}\nint main(){int doubleTotal=3;\n    dou",
+    "start": 81,
+    "status": "3 个提示 · ↑↓选择，Tab 或 Enter 插入",
+    "width": 1100
+  },
+  {
+    "name": "function-enter-insert",
+    "end": 89,
+    "height": 850,
+    "items": [
+      {
+        "detail": "double",
+        "label": "double",
+        "selected": "false"
+      },
+      {
+        "detail": "int doubleScore(int value)",
+        "label": "doubleScore",
+        "selected": "true"
+      },
+      {
+        "detail": "int doubleTotal",
+        "label": "doubleTotal",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "int doubleScore(int value){return value*2;}\nint main(){int doubleTotal=3;\n    doubleScore",
+    "start": 89,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+Space。",
+    "width": 1100
+  },
+  {
+    "name": "real-arrow-ctrl-j",
+    "end": 94,
+    "height": 850,
+    "items": [
+      {
+        "detail": "Package::",
+        "label": "Package",
+        "selected": "true"
+      },
+      {
+        "detail": "Package & operator=(const Package &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Package & operator=(Package &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "int size",
+        "label": "size",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Package()",
+        "label": "~Package",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": false,
+    "save": "草稿已保存 · 版本 5",
+    "source": "struct Package { int size; };\nint main(){Package value; Package* pointer=&value;\n    pointer->",
+    "start": 94,
+    "status": "5 个提示 · ↑↓选择，Tab 或 Enter 插入",
+    "width": 1100
+  },
+  {
+    "name": "mouse-member-insert",
+    "end": 98,
+    "height": 850,
+    "items": [
+      {
+        "detail": "Package::",
+        "label": "Package",
+        "selected": "true"
+      },
+      {
+        "detail": "Package & operator=(const Package &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Package & operator=(Package &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "int size",
+        "label": "size",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Package()",
+        "label": "~Package",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "struct Package { int size; };\nint main(){Package value; Package* pointer=&value;\n    pointer->size",
+    "start": 98,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。",
+    "width": 1100
+  },
+  {
+    "name": "namespace-scope",
+    "end": 64,
+    "height": 850,
+    "items": [
+      {
+        "detail": "int score",
+        "label": "score",
+        "selected": "true"
+      },
+      {
+        "detail": "void show()",
+        "label": "show",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": false,
+    "save": "修改待保存…",
+    "source": "namespace grades { int score; void show(); }\nint main(){grades::",
+    "start": 64,
+    "status": "2 个提示 · ↑↓选择，Tab 或 Enter 插入",
+    "width": 1100
+  },
+  {
+    "name": "escape-dismiss",
+    "end": 64,
+    "height": 850,
+    "items": [
+      {
+        "detail": "int score",
+        "label": "score",
+        "selected": "true"
+      },
+      {
+        "detail": "void show()",
+        "label": "show",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "namespace grades { int score; void show(); }\nint main(){grades::",
+    "start": 64,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。",
+    "width": 1100
+  },
+  {
+    "name": "middle-identifier-request",
+    "end": 49,
+    "height": 850,
+    "items": [
+      {
+        "detail": "int printNumber(int x)",
+        "label": "printNumber",
+        "selected": "true"
+      }
+    ],
+    "popupHidden": false,
+    "save": "修改待保存…",
+    "source": "int printNumber(int x){return x;}\nint main(){prinZZ",
+    "start": 49,
+    "status": "1 个提示 · ↑↓选择，Tab 或 Enter 插入",
+    "width": 1100
+  },
+  {
+    "name": "middle-identifier-no-suffix-loss",
+    "end": 56,
+    "height": 850,
+    "items": [
+      {
+        "detail": "int printNumber(int x)",
+        "label": "printNumber",
+        "selected": "true"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "int printNumber(int x){return x;}\nint main(){printNumber",
+    "start": 56,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。",
+    "width": 1100
+  },
+  {
+    "name": "narrow-confirmed-members",
+    "end": 54,
+    "height": 844,
+    "items": [
+      {
+        "detail": "Tiny::",
+        "label": "Tiny",
+        "selected": "true"
+      },
+      {
+        "detail": "int amount",
+        "label": "amount",
+        "selected": "false"
+      },
+      {
+        "detail": "Tiny & operator=(const Tiny &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Tiny & operator=(Tiny &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Tiny()",
+        "label": "~Tiny",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": false,
+    "save": "修改待保存…",
+    "source": "struct Tiny { int amount; };\nint main(){Tiny t;\n    t.",
+    "start": 54,
+    "status": "5 个提示 · ↑↓选择，Tab 或 Enter 插入",
+    "width": 390
+  },
+  {
+    "name": "caret-change-invalidates",
+    "end": 53,
+    "height": 844,
+    "items": [
+      {
+        "detail": "Tiny::",
+        "label": "Tiny",
+        "selected": "true"
+      },
+      {
+        "detail": "int amount",
+        "label": "amount",
+        "selected": "false"
+      },
+      {
+        "detail": "Tiny & operator=(const Tiny &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Tiny & operator=(Tiny &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Tiny()",
+        "label": "~Tiny",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "struct Tiny { int amount; };\nint main(){Tiny t;\n    t.",
+    "start": 53,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。",
+    "width": 390
+  },
+  {
+    "name": "comment-no-popup",
+    "end": 22,
+    "height": 844,
+    "items": [
+      {
+        "detail": "Tiny::",
+        "label": "Tiny",
+        "selected": "true"
+      },
+      {
+        "detail": "int amount",
+        "label": "amount",
+        "selected": "false"
+      },
+      {
+        "detail": "Tiny & operator=(const Tiny &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Tiny & operator=(Tiny &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Tiny()",
+        "label": "~Tiny",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "int main(){ // member.",
+    "start": 22,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。",
+    "width": 390
+  },
+  {
+    "name": "decimal-no-popup",
+    "end": 24,
+    "height": 844,
+    "items": [
+      {
+        "detail": "Tiny::",
+        "label": "Tiny",
+        "selected": "true"
+      },
+      {
+        "detail": "int amount",
+        "label": "amount",
+        "selected": "false"
+      },
+      {
+        "detail": "Tiny & operator=(const Tiny &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Tiny & operator=(Tiny &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Tiny()",
+        "label": "~Tiny",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "int main(){ double n=12.",
+    "start": 24,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。",
+    "width": 390
+  },
+  {
+    "name": "warm-provider-before-compile",
+    "end": 29,
+    "height": 850,
+    "items": [
+      {
+        "detail": "int answer",
+        "label": "answer",
+        "selected": "true"
+      }
+    ],
+    "popupHidden": false,
+    "save": "修改待保存…",
+    "source": "int main(){int answer=19;\nans",
+    "start": 29,
+    "status": "1 个提示 · ↑↓选择，Tab 或 Enter 插入",
+    "width": 1100
+  },
+  {
+    "name": "compile-lock-no-completion",
+    "end": 83,
+    "height": 850,
+    "items": [
+      {
+        "detail": "int answer",
+        "label": "answer",
+        "selected": "true"
+      }
+    ],
+    "popupHidden": true,
+    "save": "修改待保存…",
+    "source": "#include <cstdio>\nint main(){int answer=19; std::printf(\"%d\\n\",answer); return 0;}\n",
+    "start": 83,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。",
+    "width": 1100
+  },
+  {
+    "name": "debug-snapshot-readonly",
+    "end": 83,
+    "height": 850,
+    "items": [
+      {
+        "detail": "int answer",
+        "label": "answer",
+        "selected": "true"
+      }
+    ],
+    "popupHidden": true,
+    "save": "草稿已保存 · 版本 9",
+    "source": "#include <cstdio>\nint main(){int answer=19; std::printf(\"%d\\n\",answer); return 0;}\n",
+    "start": 83,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。",
+    "width": 1100
+  },
+  {
+    "name": "included-user-file-members",
+    "end": 54,
+    "height": 850,
+    "items": [
+      {
+        "detail": "Shared::",
+        "label": "Shared",
+        "selected": "true"
+      },
+      {
+        "detail": "int member",
+        "label": "member",
+        "selected": "false"
+      },
+      {
+        "detail": "Shared & operator=(const Shared &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Shared & operator=(Shared &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Shared()",
+        "label": "~Shared",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": false,
+    "save": "草稿已保存 · 版本 10",
+    "source": "struct Shared{int member;};\nint use(){Shared s;\n    s.",
+    "start": 54,
+    "status": "5 个提示 · ↑↓选择，Tab 或 Enter 插入",
+    "width": 1100
+  },
+  {
+    "name": "driver-tab-invalidates",
+    "end": 42,
+    "height": 850,
+    "items": [
+      {
+        "detail": "Shared::",
+        "label": "Shared",
+        "selected": "true"
+      },
+      {
+        "detail": "int member",
+        "label": "member",
+        "selected": "false"
+      },
+      {
+        "detail": "Shared & operator=(const Shared &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Shared & operator=(Shared &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Shared()",
+        "label": "~Shared",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": true,
+    "save": "草稿已保存 · 版本 10",
+    "source": "#include \"user.inc\"\nint main(){return 0;}\n",
+    "start": 42,
+    "status": "输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。",
+    "width": 1100
+  },
+  {
+    "name": "manual-button-restores-caret-focus",
+    "end": 54,
+    "height": 850,
+    "items": [
+      {
+        "detail": "Shared::",
+        "label": "Shared",
+        "selected": "true"
+      },
+      {
+        "detail": "int member",
+        "label": "member",
+        "selected": "false"
+      },
+      {
+        "detail": "Shared & operator=(const Shared &)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "Shared & operator=(Shared &&)",
+        "label": "operator=",
+        "selected": "false"
+      },
+      {
+        "detail": "void ~Shared()",
+        "label": "~Shared",
+        "selected": "false"
+      }
+    ],
+    "popupHidden": false,
+    "save": "草稿已保存 · 版本 10",
+    "source": "struct Shared{int member;};\nint use(){Shared s;\n    s.",
+    "start": 54,
+    "status": "5 个提示 · ↑↓选择，Tab 或 Enter 插入",
+    "width": 1100
+  }
+]

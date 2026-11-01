@@ -1,0 +1,26 @@
+{
+  "name": "05-dispose-idle-and-reject-new",
+  "passed": true,
+  "checks": [
+    {
+      "scenario": "05-dispose-idle-and-reject-new",
+      "name": "idle dispose releases actual last Worker before returning",
+      "passed": true
+    },
+    {
+      "scenario": "05-dispose-idle-and-reject-new",
+      "name": "new valid request after dispose fails with identity and no items",
+      "passed": true
+    },
+    {
+      "scenario": "05-dispose-idle-and-reject-new",
+      "name": "disposed adapter creates no new Worker",
+      "passed": true
+    },
+    {
+      "scenario": "05-dispose-idle-and-reject-new",
+      "name": "repeated idle dispose has no additional terminate side effect",
+      "passed": true
+    }
+  ]
+}

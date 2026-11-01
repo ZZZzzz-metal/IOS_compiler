@@ -1,0 +1,79 @@
+[
+  {
+    "caseId": "const-negative",
+    "event": {
+      "phase": "verified-resource",
+      "name": "memfs"
+    }
+  },
+  {
+    "caseId": "const-negative",
+    "event": {
+      "phase": "verified-resource",
+      "name": "sysroot.tar"
+    }
+  },
+  {
+    "caseId": "const-negative",
+    "event": {
+      "phase": "verified-resource",
+      "name": "clang"
+    }
+  },
+  {
+    "caseId": "const-negative",
+    "event": {
+      "phase": "verified-resource",
+      "name": "lld"
+    }
+  },
+  {
+    "caseId": "const-negative",
+    "event": {
+      "phase": "compiling",
+      "requestId": "person05-callability-const-negative-3488c5de-ae4c-42d2-bc04-a9edbe062430"
+    }
+  },
+  {
+    "caseId": "mutable-positive",
+    "event": {
+      "phase": "verified-resource",
+      "name": "memfs"
+    }
+  },
+  {
+    "caseId": "mutable-positive",
+    "event": {
+      "phase": "verified-resource",
+      "name": "sysroot.tar"
+    }
+  },
+  {
+    "caseId": "mutable-positive",
+    "event": {
+      "phase": "verified-resource",
+      "name": "clang"
+    }
+  },
+  {
+    "caseId": "mutable-positive",
+    "event": {
+      "phase": "verified-resource",
+      "name": "lld"
+    }
+  },
+  {
+    "caseId": "mutable-positive",
+    "event": {
+      "phase": "compiling",
+      "requestId": "person05-callability-mutable-positive-95d42133-cd3c-4ffd-92ae-8125b3cfb2dc"
+    }
+  },
+  {
+    "caseId": "mutable-positive",
+    "event": {
+      "phase": "linking",
+      "requestId": "person05-callability-mutable-positive-95d42133-cd3c-4ffd-92ae-8125b3cfb2dc"
+    }
+  }
+]

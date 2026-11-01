@@ -1,0 +1,22 @@
+{
+  "id": "lifecycle",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/completion-fix-lifecycle-independent.mjs",
+    "--target-root",
+    "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+    "--target-commit",
+    "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "--evidence-dir",
+    "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/lifecycle",
+    "--identity-summary",
+    "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/identity/summary.json"
+  ],
+  "environmentOverrides": {},
+  "startedAt": "2026-10-31T02:17:01.130Z",
+  "endedAt": "2026-10-31T02:17:03.298Z",
+  "elapsedMs": 2168.9182,
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

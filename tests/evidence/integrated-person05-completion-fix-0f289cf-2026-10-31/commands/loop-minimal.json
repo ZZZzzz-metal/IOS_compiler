@@ -1,0 +1,19 @@
+{
+  "id": "loop-minimal",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/reproduce.mjs",
+    "loop-header"
+  ],
+  "environmentOverrides": {
+    "VALIDATION_COMPILER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+    "VALIDATION_DEBUGGER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+    "VALIDATION_EVIDENCE_DIR": "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/regression"
+  },
+  "startedAt": "2026-10-31T02:17:12.189Z",
+  "endedAt": "2026-10-31T02:17:12.968Z",
+  "elapsedMs": 779.2695999999996,
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

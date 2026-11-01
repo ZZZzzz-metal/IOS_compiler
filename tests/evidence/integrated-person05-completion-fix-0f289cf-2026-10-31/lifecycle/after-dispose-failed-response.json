@@ -1,0 +1,18 @@
+{
+  "requestId": "99605757-88ae-460f-b2fc-906a15be7ab1-4-after-dispose-failed",
+  "documentVersion": 4,
+  "snapshotId": "99605757-88ae-460f-b2fc-906a15be7ab1-4-after-dispose-failed-snapshot",
+  "sourceHash": "sha256:c510bf7960fb575a9d19990df05ba4bc7bfbbf8a7cc08d49eac4197490a3c66b",
+  "sourcePath": "main.cpp",
+  "offset": 122,
+  "status": "failed",
+  "items": [],
+  "isIncomplete": false,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "Completion adapter is disposed"
+    }
+  ],
+  "reason": "invalid-request"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "c-pointer",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 21.93249999999989,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.c:2:45",
+    "actual": [
+      "-code-completion-at=/project/main.c:2:45"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

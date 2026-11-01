@@ -1,0 +1,16 @@
+CC-20261029-02, 2026-10-29. Transcribed from the actual tool output; raw request/output is preserved beside this index.
+
+node --test compiler/checks/completion-real.test.mjs
+Initial extended test run: 6 tests, 5 pass, 1 fail, process exit 1.
+Failure: real libc++ const vector/string exclude mutators and preserve method overloads
+AssertionError: assert.ok(!result.items.some(i => i.label === absent))
+
+node compiler/experiments/completion-2026-10-29/verify-provider.mjs
+Process exit 1:
+AssertionError [ERR_ASSERTION]: const-string: forbidden append
+
+The first extended provider run failed before recording the case. The next run was changed to save the real case BEFORE assertions, and reproduced the same exit-1 failure:
+provider/2026-10-29T15-34-51-804Z-b42df765/const-string.json
+checks.absent contains append, but reply.items and native.native.stdout contain real append function-template candidates without Inaccessible markers.
+
+This is NOT a product fix. Later verification explicitly records this native limitation as unsupported full const/template availability; it does not assert that these candidates disappeared. Original failure directories and this record remain.

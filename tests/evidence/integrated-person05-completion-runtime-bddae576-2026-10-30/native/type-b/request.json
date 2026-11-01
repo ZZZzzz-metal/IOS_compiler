@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-type-b",
+  "documentVersion": 2,
+  "snapshot": {
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-type-b-snapshot",
+    "sourceHash": "sha256:25a181d0f14cff40bb0a79fd0848026b55a5c367349eb09d3a0c9c377e1a1c4b",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "struct Pixel { int scarlet; int common; };\nstruct Compass { int north; int common; };\nvoid inspect() { Compass value; value. }\n",
+        "contentHash": "sha256:951a386f380b7cf79bfaa5a0c3658fd382faa5684109df512ed892d9de94c409"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 124,
+  "trigger": "."
+}

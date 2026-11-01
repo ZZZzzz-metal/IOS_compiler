@@ -1,0 +1,12 @@
+{
+  "id": "fix-overload-mutable",
+  "group": "randomized11",
+  "route": "adapter",
+  "elapsedMs": 19.276800000000094,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 6,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

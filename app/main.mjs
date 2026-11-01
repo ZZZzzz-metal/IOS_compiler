@@ -22,13 +22,13 @@ if (requested && !Object.hasOwn(moduleDefinitions, requested)) {
   const profiles = await json('contracts/compatibility-profiles.json');
   console.log(JSON.stringify({
     project: 'iPad 离线 C/C++ 编译调试工具', location: fileURLToPath(root),
-    delivery: '已集成VS风格及Control数字行快捷键、混合浮点/NaN监视和迟到粘贴修复；待独立与真机验收', baseline: 'integration-v0.4.5',
+    delivery: '两项补全修复与5号独立语义DONE已集成；0.4.7新完整包另验', baseline: '0.4.7-candidate',
     protocolVersion: capabilities.protocolVersion, selectedRoute: profiles.selectedCompatibilityId,
     offlineReady: false, deviceValidation: '待验证',
     verifiedCapabilities: capabilities.capabilities.filter(item => item.status === 'verified').length,
     implementedUnverifiedCapabilities: capabilities.capabilities.filter(item => item.status === 'implemented-unverified').length,
     modules: moduleDefinitions,
     commands: { workbench: 'npm start', prepareOffline: 'npm run prepare:offline', offlineEntry: 'npm run start:offline', offlineChecks: 'npm run test:offline', status: 'npm run status', demo: 'npm run demo:integration', tests: 'npm run test:integration', ui: 'npm run test:ui', acceptance: 'npm run test:acceptance', regressions: 'npm run test:regressions', initializer: 'npm run test:initializer' },
-    next: '5号复验快捷键、新监视语义、REV-001恢复及v0.4.5完整缓存包。真实iPad按手册执行G2和实体键盘检查；GitHub合并由用户手动完成。',
+    next: '构建0.4.7新包并完成实际桌面离线复验后再真机；PR #4保持草稿。',
   }, null, 2));
 }

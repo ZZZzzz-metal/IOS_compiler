@@ -1,0 +1,17 @@
+{
+  "id": "mandatory-check",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd run check"
+  ],
+  "environmentOverrides": {},
+  "startedAt": "2026-10-31T02:17:15.338Z",
+  "endedAt": "2026-10-31T02:17:17.219Z",
+  "elapsedMs": 1880.8308000000034,
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

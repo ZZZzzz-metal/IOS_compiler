@@ -1,0 +1,7 @@
+{
+  "expected": {
+    "status": "compiled",
+    "smokeExitCode": 0
+  },
+  "semantic": null
+}

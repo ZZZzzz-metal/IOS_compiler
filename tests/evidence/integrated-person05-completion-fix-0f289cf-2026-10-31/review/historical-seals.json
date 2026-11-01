@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "rounds": 7,
+  "files": 1031,
+  "records": [
+    {
+      "name": "integrated-person05-completion-preparation-38ff307-2026-10-29",
+      "entries": 66,
+      "exitCode": 0,
+      "stdout": "integrated-person05-completion-preparation-38ff307-2026-10-29: verified 66 files, committed bytes identical\n",
+      "stderr": ""
+    },
+    {
+      "name": "integrated-person05-completion-preparation-38ff307-2026-10-29-run02",
+      "entries": 67,
+      "exitCode": 0,
+      "stdout": "integrated-person05-completion-preparation-38ff307-2026-10-29-run02: verified 67 files, committed bytes identical\n",
+      "stderr": ""
+    },
+    {
+      "name": "integrated-person05-completion-runtime-bddae576-2026-10-30",
+      "entries": 452,
+      "exitCode": 0,
+      "stdout": "integrated-person05-completion-runtime-bddae576-2026-10-30: verified 452 files, committed bytes identical\n",
+      "stderr": ""
+    },
+    {
+      "name": "integrated-person05-completion-gitverify-2026-10-30",
+      "entries": 33,
+      "exitCode": 0,
+      "stdout": "integrated-person05-completion-gitverify-2026-10-30: verified 33 files, committed bytes identical\n",
+      "stderr": ""
+    },
+    {
+      "name": "integrated-person05-completion-ui-b14aeba-2026-10-30",
+      "entries": 150,
+      "exitCode": 0,
+      "stdout": "integrated-person05-completion-ui-b14aeba-2026-10-30: verified 150 files, committed bytes identical\n",
+      "stderr": ""
+    },
+    {
+      "name": "integrated-person05-final-v045-40a079b-2026-10-28",
+      "entries": 179,
+      "exitCode": 0,
+      "stdout": "integrated-person05-final-v045-40a079b-2026-10-28: verified 179 files, committed bytes identical\n",
+      "stderr": ""
+    },
+    {
+      "name": "integrated-person05-completion-fix-preparation-2026-10-30",
+      "entries": 84,
+      "exitCode": 0,
+      "stdout": "integrated-person05-completion-fix-preparation-2026-10-30: verified 84 files, committed bytes identical\n",
+      "stderr": ""
+    }
+  ]
+}

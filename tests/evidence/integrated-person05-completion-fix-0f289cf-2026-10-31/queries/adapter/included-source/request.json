@@ -1,0 +1,30 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-included-source",
+  "documentVersion": 18,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-included-source-snapshot",
+    "sourceHash": "sha256:95107f057822dc6809744f1318717719ddc97f3f4a412aed7978cbddcc3010b1",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "driver.cpp",
+    "files": [
+      {
+        "path": "driver.cpp",
+        "role": "driver",
+        "text": "struct RequestData { int fromDriver; int serial; };\n#include \"user.inc\"\nint main() { return 0; }\n",
+        "contentHash": "sha256:efd346a314958d960e54a60134b6e0220e77420ea8a6b6ec05aa395af378a6ef"
+      },
+      {
+        "path": "user.inc",
+        "role": "user",
+        "text": "class Solution {\npublic:\n    int solve() { RequestData request; request. }\n};\n",
+        "contentHash": "sha256:8938c945d72b6ccc9515023f91950c272673cb37c9e985c79afd8ab87d729b40"
+      }
+    ]
+  },
+  "sourcePath": "user.inc",
+  "offset": 72,
+  "trigger": "."
+}

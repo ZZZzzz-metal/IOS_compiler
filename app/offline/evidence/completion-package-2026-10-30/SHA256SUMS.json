@@ -1,0 +1,197 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "file": "archives.json",
+    "byteLength": 1473,
+    "sha256": "5211c1f355354e3443d36393b84d1f6f66975df1295155b95f93373435db8c0e"
+  },
+  {
+    "file": "archives.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "archives.stdout.txt",
+    "byteLength": 1509,
+    "sha256": "d539ed5fd919a6004dfb45bb2bf8f79bf14abfd9334d736d22aad1c1e01e9019"
+  },
+  {
+    "file": "browser-observations.json",
+    "byteLength": 3006,
+    "sha256": "a765e35bada63d5fbc9936882677f5c3c5331383afdb49acf4ef127d102dfc0c"
+  },
+  {
+    "file": "browser-source-fingerprints.json",
+    "byteLength": 4876,
+    "sha256": "0d4c06fc6be36c8bb688828463794f48119f824ebefcbfde86fd0268bf920ca7"
+  },
+  {
+    "file": "build.json",
+    "byteLength": 1170,
+    "sha256": "9208a63950dcff73ac7ee2cf742468becc231c7e82c80cbd34d18564e8f98a45"
+  },
+  {
+    "file": "final-root-commands/check.json",
+    "byteLength": 58,
+    "sha256": "dd9cfb39bde1e2eca7b667ffe1ae9eea95ee3770a2adb7e57c939d6f53f3a087"
+  },
+  {
+    "file": "final-root-commands/check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "final-root-commands/check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "5d1480cbe16180dcb10a909325cf43882e6413aed4078916cfcd63a6613b8575"
+  },
+  {
+    "file": "final-root-commands/test.json",
+    "byteLength": 53,
+    "sha256": "708f9bb44db18dd23eb0ec39fe5064e995a47a5cc579cc7c27bd22af266cea38"
+  },
+  {
+    "file": "final-root-commands/test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "final-root-commands/test.stdout.txt",
+    "byteLength": 1122,
+    "sha256": "c4c019051bf9d55b09e25174a9f2aeaa39e99d27de59805de48d5d4e196346cc"
+  },
+  {
+    "file": "https-before.json",
+    "byteLength": 257,
+    "sha256": "8a6ad6a91cda5b93d42d37e9dd882ee5f1e57616dd3409673381b0d8b0551538"
+  },
+  {
+    "file": "https.json",
+    "byteLength": 1186,
+    "sha256": "8d587f8a085843b7cac332c7e3a843142a58bc496c538c2c74656f01c763414a"
+  },
+  {
+    "file": "prior-archives-after.json",
+    "byteLength": 54,
+    "sha256": "659635fa43bcf81ebafde5595f15cd7a14c5943c91f292e47c91b771b6fa36ce"
+  },
+  {
+    "file": "prior-archives.json",
+    "byteLength": 2411,
+    "sha256": "ffb87c2a667af18593dfbb9b7e779f56260667b3448ce32d6b2b6656486a9c61"
+  },
+  {
+    "file": "public-certificate-check.json",
+    "byteLength": 190,
+    "sha256": "44ef788dbbf3eaab41791f874957c6a07d389fa60a3282af4835b7a2447939f3"
+  },
+  {
+    "file": "publication-preflight.json",
+    "byteLength": 1128,
+    "sha256": "69c33979334e528f2e7d70e2b4ee5ca68c9ef8f5ea93c55d2f0a83feb9f5bd3a"
+  },
+  {
+    "file": "README.md",
+    "byteLength": 2054,
+    "sha256": "bb7f9116ea37f47acf25e53ba8715972e51036e7b1d3ed818fd1fe5748176d38"
+  },
+  {
+    "file": "root-checks/baseline.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "root-checks/baseline.stdout.txt",
+    "byteLength": 277,
+    "sha256": "eef855bc2d5b5c06bc4f9cfbbb4fe193165abde80146a64fb79da55a84880b1d"
+  },
+  {
+    "file": "root-checks/commands.json",
+    "byteLength": 2057,
+    "sha256": "4944bc3fe65f63e6b9fb92584a93603a82e4a0dbd2e987133c79441b6212c4f8"
+  },
+  {
+    "file": "root-checks/contracts.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "root-checks/contracts.stdout.txt",
+    "byteLength": 1044,
+    "sha256": "031c7179d1015d95552330369b5e659c182b63bfaa62646810e29cedfc42c00f"
+  },
+  {
+    "file": "root-checks/mandatory-check.json",
+    "byteLength": 232,
+    "sha256": "1c9d4eb2777b6a8d58e30f12b6b1bae4235dbddd86b8b9031d7641d0ad0f9ce6"
+  },
+  {
+    "file": "root-checks/mandatory-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "root-checks/mandatory-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "5d1480cbe16180dcb10a909325cf43882e6413aed4078916cfcd63a6613b8575"
+  },
+  {
+    "file": "root-checks/mandatory-test.json",
+    "byteLength": 227,
+    "sha256": "8d5e39e5799e96c8be42a5a4ff08ba560db844d064b25af428608fec77d9745e"
+  },
+  {
+    "file": "root-checks/mandatory-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "root-checks/mandatory-test.stdout.txt",
+    "byteLength": 1124,
+    "sha256": "8fc5039f5b0e6625e3ae882be35a20c6431a5cebf5c983d01afe080c887208ee"
+  },
+  {
+    "file": "root-checks/merged-owner-evidence-verification.json",
+    "byteLength": 592,
+    "sha256": "80aa14be12e39c7f5b77270b0b2669047fb6a11dc7db23a63946b19164ad5aff"
+  },
+  {
+    "file": "root-checks/offline.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "root-checks/offline.stdout.txt",
+    "byteLength": 2339,
+    "sha256": "ef4dcd5f5439c635598f7473edd5bde10c826e652643fd66c0e9b98f2b2b1577"
+  },
+  {
+    "file": "root-checks/prepare-ui.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "root-checks/prepare-ui.stdout.txt",
+    "byteLength": 68,
+    "sha256": "ed8e744b13809e03911eed2b263d624760f1a10f16a7bba1a5fc0f08dc2daf71"
+  },
+  {
+    "file": "root-checks/README.md",
+    "byteLength": 741,
+    "sha256": "5c9b982c2572f3e726d6bb74db98527c5b3fb76ed7521a90561ad36e69a18a1f"
+  },
+  {
+    "file": "root-checks/ui-storage.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "root-checks/ui-storage.stdout.txt",
+    "byteLength": 18578,
+    "sha256": "d1b1f18024f1384252d83de1c7b0948de42fdb6ae6e03e5c97ef5adc29d23d73"
+  }
+]

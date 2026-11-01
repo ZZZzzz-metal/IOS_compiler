@@ -1,0 +1,37 @@
+[
+  {
+    "file": "app/integration/candidate.mjs",
+    "byteLength": 4127,
+    "sha256": "sha256:68ea55f2d56d53923786c48eaee6788e34dd1805070fde35a29f9f303232b5a5"
+  },
+  {
+    "file": "app/offline/build.mjs",
+    "byteLength": 9463,
+    "sha256": "sha256:25153ac7fdf95fa01b87364937713b8bca50035f8d064e4293f808fa1ab9ea96"
+  },
+  {
+    "file": "contracts/invariants.mjs",
+    "byteLength": 9208,
+    "sha256": "sha256:5d1e2a4ccb20cc551476fa7942ef85fd335c64ea3fe21b18dc5a9e9bcfd48e5c"
+  },
+  {
+    "file": "compiler/resources/toolchain.lock.json",
+    "byteLength": 6149,
+    "sha256": "sha256:a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d"
+  },
+  {
+    "file": "compiler/src/completion-semantics.mjs",
+    "byteLength": 3953,
+    "sha256": "sha256:1a448b6d17c498fe586b6f510b9ee70de495efbd4dd81299227377fecf1e9754"
+  },
+  {
+    "file": "compiler/resources/completion-semantics-v1.md",
+    "byteLength": 5327,
+    "sha256": "sha256:52c92f9ea09e13ed813605bf5765a71e602b47d94945cf4c7e6cfd59921644fb"
+  },
+  {
+    "file": "compiler/resources/completion-semantics-v1.cpp.patch",
+    "byteLength": 1970,
+    "sha256": "sha256:51c2fd087e01863b9ed6e09aaa8886721a4d1aefa5967ebbb7538677d5df48af"
+  }
+]

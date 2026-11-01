@@ -1,0 +1,19 @@
+{
+  "id": "char-case",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 22.210399999999936,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 5,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:4:34",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:4:34"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

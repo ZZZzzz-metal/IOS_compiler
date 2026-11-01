@@ -1,0 +1,14 @@
+{
+  "id": "toolchain",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "compiler/scripts/prepare-toolchain.mjs",
+    "--verify-only"
+  ],
+  "startedAt": "2026-10-29T16:34:27.561Z",
+  "endedAt": "2026-10-29T16:34:27.743Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "evidenceDirectory": "tests/evidence/integrated-person05-completion-runtime-bddae576-2026-10-30/verification/details/toolchain"
+}

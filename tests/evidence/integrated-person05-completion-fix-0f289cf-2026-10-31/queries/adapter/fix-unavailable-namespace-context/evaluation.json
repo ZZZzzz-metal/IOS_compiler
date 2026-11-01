@@ -1,0 +1,12 @@
+{
+  "id": "fix-unavailable-namespace-context",
+  "group": "randomized11",
+  "route": "adapter",
+  "elapsedMs": 16.103200000000015,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 1,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

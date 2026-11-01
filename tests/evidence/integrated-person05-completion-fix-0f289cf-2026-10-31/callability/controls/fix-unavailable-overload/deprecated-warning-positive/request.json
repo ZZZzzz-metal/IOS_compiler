@@ -1,0 +1,22 @@
+{
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-unavailable-overload-deprecated-warning-positive",
+  "snapshot": {
+    "snapshotId": "c969149c-df9b-4ddb-98b0-ab8295ff5ab7",
+    "sourceHash": "sha256:2c70c77c1a44a5ab289a781a65072b2cd8bcbf9bb5f262a41193a1b13c1ff0bb",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return mixed_a8ee505af129_deprecated();\n}\n",
+        "contentHash": "sha256:6eae84bd4e4bb7cd808a7b79edea5fe84a9a8355476472d98998312a26641890"
+      }
+    ]
+  },
+  "language": "cpp",
+  "standard": "c++17",
+  "mode": "run",
+  "optimization": "O0"
+}

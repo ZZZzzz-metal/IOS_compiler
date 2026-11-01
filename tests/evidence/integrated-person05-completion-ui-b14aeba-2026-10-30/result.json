@@ -1,0 +1,67 @@
+{
+  "requestId": "CC-20261029-05",
+  "target": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "kind": "DONE-INDEPENDENT-UI-PACKAGE",
+  "knownBackendReuse": "bddae576 actual60 responses; unchanged35 resources/API/dependency implementations",
+  "currentOriginal33": {
+    "passed": 32,
+    "boundaryFailed": 1,
+    "pendingUi": 0,
+    "note": "Old29/1/3 summary preserved verbatim; these3 UI outcomes are added only here."
+  },
+  "extraAvailabilityScenario": {
+    "boundaryFailed": 1,
+    "withinOriginal33": false
+  },
+  "newConfirmedProductDefects": [],
+  "mandatory": [
+    {
+      "command": "npm.cmd run check",
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "target": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+      "begin": "2026-10-30T08:26:04.411Z",
+      "end": "2026-10-30T08:26:11.262Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "command": "npm.cmd test",
+      "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+      "target": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+      "begin": "2026-10-30T08:26:11.265Z",
+      "end": "2026-10-30T08:26:12.532Z",
+      "exitCode": 0,
+      "signal": null,
+      "error": null
+    }
+  ],
+  "controlled": {
+    "races": {
+      "scenarios": 26,
+      "assertions": 105,
+      "passed": 26
+    },
+    "edit": {
+      "scenarios": 23,
+      "assertions": 339,
+      "passed": 23
+    },
+    "negative": {
+      "scenarios": 3,
+      "assertions": 12,
+      "source": "controlled-negative/results.json"
+    }
+  },
+  "browser": {
+    "observationCount": 42,
+    "evidenceAssertions": 251,
+    "verification": "browser/verification.json"
+  },
+  "limitations": [
+    "const-string append remains confirmable despite invalid actual call",
+    "unavailable attribute candidate remains confirmable",
+    "real iPad/Safari/physical IME/touch/offline/install/eviction/durability/G2/G3 pending"
+  ],
+  "conclusion": "Independent tested desktop prototype scope passed with explicit known boundaries. Root integration and limited ACCEPT are separate; no complete product acceptance."
+}

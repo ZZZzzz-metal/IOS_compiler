@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "bundleId": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+  "certificateAndIPValidation": true,
+  "rejectUnauthorized": true,
+  "systemTrustModified": false,
+  "firewallModified": false,
+  "resources": [
+    {
+      "path": "/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/index.html",
+      "status": 200,
+      "byteLength": 2498,
+      "sha256": "sha256:5b52ac7c5891f1d0276f91b143d9baca96907d01fe3a406187d1681e06461053"
+    },
+    {
+      "path": "/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/bundle.json",
+      "status": 200,
+      "byteLength": 13893,
+      "sha256": "sha256:67fdcb80c27d17b25fd9c43ba0e0bbf93090e82191446ab862b7bb9440d82268"
+    },
+    {
+      "path": "/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/sw.js",
+      "status": 200,
+      "byteLength": 19747,
+      "sha256": "sha256:c2182a6fd7e369cd01c9de3fcec1489dfca261988b555e0e05b035173521de22"
+    },
+    {
+      "path": "/server-key.pem",
+      "status": 404
+    },
+    {
+      "path": "/../tls/server-key.pem",
+      "status": 404
+    }
+  ],
+  "declaration": "Computer-side strict HTTPS check only. No iPad reachability or trust assertion."
+}

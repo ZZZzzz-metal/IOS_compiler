@@ -1,0 +1,7 @@
+/project/main.cpp:9:23: error: no matching member function for call to 'ingest_a8ee505af129'
+  object_a8ee505af129.ingest_a8ee505af129(1);
+  ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/project/main.cpp:5:47: note: candidate function template not viable: 'this' argument has type 'const Box_a8ee505af129<int>', but method is not marked const
+  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }
+                                              ^
+1 error generated.

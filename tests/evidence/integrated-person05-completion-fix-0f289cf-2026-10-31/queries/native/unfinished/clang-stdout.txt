@@ -1,0 +1,6 @@
+COMPLETION: antenna : [#int#]antenna
+COMPLETION: battery : [#int#]battery
+COMPLETION: Device : Device::
+COMPLETION: operator= : [#Device &#]operator=(<#const Device &#>)
+COMPLETION: operator= : [#Device &#]operator=(<#Device &&#>)
+COMPLETION: ~Device : [#void#]~Device()

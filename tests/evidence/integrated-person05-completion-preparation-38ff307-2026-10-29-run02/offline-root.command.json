@@ -1,0 +1,15 @@
+{
+  "id": "offline-root",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd run test:offline"
+  ],
+  "startedAt": "2026-10-29T15:37:24.495Z",
+  "endedAt": "2026-10-29T15:37:25.354Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

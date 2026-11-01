@@ -1,0 +1,62 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "attempt01-count-error.json",
+    "byteLength": 454,
+    "sha256": "e89b45583b23fa79c818aed950663c1b93713a7107932c220bbf03350feeeebe"
+  },
+  {
+    "file": "commands.json",
+    "byteLength": 803,
+    "sha256": "c795aea3246cc19603b2f41684233a9fc9cba471d793b294a9f713fbedadfe39"
+  },
+  {
+    "file": "mandatory-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "5d1480cbe16180dcb10a909325cf43882e6413aed4078916cfcd63a6613b8575"
+  },
+  {
+    "file": "mandatory-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-test.stdout.txt",
+    "byteLength": 1125,
+    "sha256": "37d796a6c984173f5b6c627455338c53e4123c00cf6f31bf994d3ea06e4d9e61"
+  },
+  {
+    "file": "oracle-infrastructure.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "oracle-infrastructure.stdout.txt",
+    "byteLength": 571,
+    "sha256": "a919ee681690af6df199fccf2558fbf49787a643b8dc0d2708e6f496b8995cbc"
+  },
+  {
+    "file": "preparation-review.json",
+    "byteLength": 753,
+    "sha256": "6c62812cee8e00e3154370e54ac8e989b76138c9aa86b4406b40b8321fba9362"
+  },
+  {
+    "file": "remaining-infrastructure.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "remaining-infrastructure.stdout.txt",
+    "byteLength": 2251,
+    "sha256": "1079a27143085c7dcb169c67ed5807b7656090c1495e7ba910def38c18411ffa"
+  }
+]

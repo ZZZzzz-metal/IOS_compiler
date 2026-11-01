@@ -1,0 +1,5 @@
+
+> ipad-offline-debugger@0.4.6 prepare:ui
+> node ui/scripts/prepare-probe.mjs
+
+UI prototype resources checked: 36. Product route remains unfrozen.

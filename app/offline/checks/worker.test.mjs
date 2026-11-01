@@ -292,6 +292,35 @@ test('ordinary development entry works without a covering worker; foreign coveri
   }
 });
 
+test('a foreign scope covering only the completion worker is rejected before any trusted handshake', async () => {
+  const original = Object.getOwnPropertyDescriptor(globalThis, 'navigator');
+  const {assertTrustedOfflineWorkers} = await import('../browser/trust.mjs');
+  const candidate = {profile: {compatibilityId: 'candidate', resourceManifestHash: 'hash'}};
+  const completionScope = new URL('compiler/src/completion-worker.mjs', scope).href;
+  // This narrow registration cannot cover either of the existing execution Workers.
+  for (const path of ['compiler/src/compiler-worker.mjs', 'debugger/src/debugger-worker.mjs']) {
+    assert.equal(new URL(path, scope).href.startsWith(completionScope), false);
+  }
+  const foreign = {scope: completionScope, active: {scriptURL: origin + '/foreign-completion-sw.js'}};
+  let handshakes = 0;
+  const trusted = {scope, active: {scriptURL: scope + 'sw.js', postMessage(request, ports) {
+    handshakes++;
+    ports[0].postMessage({type: 'OFFLINE_VERIFIED', requestId: request.requestId, ok: true,
+      bundleId: 'release', compatibilityId: 'candidate', resourceManifestHash: 'hash', baseURL: scope});
+    ports[0].close();
+  }}};
+  try {
+    for (const registrations of [[foreign], [trusted, foreign]]) {
+      Object.defineProperty(globalThis, 'navigator', {value: {serviceWorker: {getRegistrations: async () => registrations}}, configurable: true});
+      await assert.rejects(assertTrustedOfflineWorkers(candidate, scope), /其他实验页/);
+    }
+    assert.equal(handshakes, 0, 'reject the foreign completion scope before trusting the complete bundle');
+  } finally {
+    if (original) Object.defineProperty(globalThis, 'navigator', original);
+    else delete globalThis.navigator;
+  }
+});
+
 test('workbench trust checks bundle scope and component identity after the worker handshake', async () => {
   const original = Object.getOwnPropertyDescriptor(globalThis, 'navigator');
   const {assertTrustedOfflineWorkers} = await import('../browser/trust.mjs');

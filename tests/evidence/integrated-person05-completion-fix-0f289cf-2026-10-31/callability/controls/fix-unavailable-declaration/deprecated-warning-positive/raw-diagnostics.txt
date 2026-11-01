@@ -1,0 +1,7 @@
+/project/main.cpp:9:10: warning: 'surface_declaration_a8ee505af129_deprecated' is deprecated: person05-deprecated
+  return surface_declaration_a8ee505af129_deprecated();
+         ^
+/project/main.cpp:3:16: note: 'surface_declaration_a8ee505af129_deprecated' has been explicitly marked deprecated here
+__attribute__((deprecated("person05-deprecated"))) int surface_declaration_a8ee505af129_deprecated();
+               ^
+1 warning generated.

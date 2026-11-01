@@ -1,0 +1,76 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-shadow-inner",
+  "documentVersion": 9,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-shadow-inner-snapshot",
+  "sourceHash": "sha256:52a648d008eef036ecc22f45f0035a6f60621572082064c17df18532500e6a1a",
+  "sourcePath": "main.cpp",
+  "offset": 126,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:e34a38cfb6e29ee5a005b6e1f38de5bead44d4a4bdb2b1911bb35c6fd7cd7704",
+      "label": "Inner",
+      "kind": "unknown",
+      "detail": "Inner::",
+      "insertText": "Inner",
+      "replaceRange": {
+        "startOffset": 126,
+        "endOffset": 126
+      },
+      "filterText": "Inner"
+    },
+    {
+      "id": "sha256:e50efc02d889121bf4a9ddae0e9b679a8d16edf51406b5acf93d8263d97890db",
+      "label": "innerOnly",
+      "kind": "unknown",
+      "detail": "int innerOnly",
+      "insertText": "innerOnly",
+      "replaceRange": {
+        "startOffset": 126,
+        "endOffset": 126
+      },
+      "filterText": "innerOnly"
+    },
+    {
+      "id": "sha256:a4600cdb71f8ea28229ed84a4460f0456e24b8fff9871606271626a3f54d1aef",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Inner & operator=(const Inner &)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 126,
+        "endOffset": 126
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:75534787a900653a5e253ec13cd017c43c796098fcc9faceb639853c10abc1a0",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Inner & operator=(Inner &&)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 126,
+        "endOffset": 126
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:985d0eea230d82e3310444876703723cfd737d06629c0f18d5b1e1bf9708eead",
+      "label": "~Inner",
+      "kind": "unknown",
+      "detail": "void ~Inner()",
+      "insertText": "~Inner",
+      "replaceRange": {
+        "startOffset": 126,
+        "endOffset": 126
+      },
+      "filterText": "~Inner"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "initializer6",
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/initializer-lifetime.mjs"
+  ],
+  "environmentOverrides": {
+    "VALIDATION_COMPILER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+    "VALIDATION_DEBUGGER_ROOT": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+    "VALIDATION_EVIDENCE_DIR": "tests/evidence/integrated-person05-completion-fix-0f289cf-2026-10-31/regression"
+  },
+  "startedAt": "2026-10-31T02:17:12.973Z",
+  "endedAt": "2026-10-31T02:17:15.333Z",
+  "elapsedMs": 2360.1249000000025,
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

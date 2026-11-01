@@ -1,0 +1,12 @@
+{
+  "caseId": "nested-member",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:32.501Z",
+  "elapsedMs": 18.539099999999962,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 5,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

@@ -1,0 +1,4 @@
+/project/main.cpp:1:16: error: unknown type name 'UnknownType'
+void solve() { UnknownType invalid; int alpha = 1; al
+               ^
+1 error generated.

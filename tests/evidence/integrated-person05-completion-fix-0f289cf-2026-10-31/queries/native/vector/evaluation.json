@@ -1,0 +1,19 @@
+{
+  "id": "vector",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 301.5893000000001,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 55,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:2:48",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:2:48"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

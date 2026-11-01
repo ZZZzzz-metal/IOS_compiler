@@ -1,0 +1,13 @@
+{
+  "id": "c-prefix",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 18.461699999999837,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

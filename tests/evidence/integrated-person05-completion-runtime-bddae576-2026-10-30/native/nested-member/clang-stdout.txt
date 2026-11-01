@@ -1,0 +1,5 @@
+COMPLETION: actualLeaf : [#int#]actualLeaf
+COMPLETION: operator= : [#Payload &#]operator=(<#const Payload &#>)
+COMPLETION: operator= : [#Payload &#]operator=(<#Payload &&#>)
+COMPLETION: Payload : Payload::
+COMPLETION: ~Payload : [#void#]~Payload()

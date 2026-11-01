@@ -1,0 +1,12 @@
+{
+  "id": "fix-alias-const",
+  "group": "randomized11",
+  "route": "adapter",
+  "elapsedMs": 148.6219000000001,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 64,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

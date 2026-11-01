@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "preparation-only-fix-unavailable-namespace-context",
+  "documentVersion": 11,
+  "snapshot": {
+    "snapshotId": "preparation-only-fix-unavailable-namespace-context-snapshot",
+    "sourceHash": "sha256:e44d9a788857ea8057e4d5b98bfcf16ba57643106ab36380a6e61c39dbda1717",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "namespace AreaA_253c01a445d5 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_253c01a445d5_read() { return 0; }\n}\nnamespace AreaB_253c01a445d5 {\nint cross_253c01a445d5_read() { return 0; }\n}\n\nvoid probe_253c01a445d5() {\n  AreaB_253c01a445d5::cross_253c01a445d5\n}\n",
+        "contentHash": "sha256:ae7dac3ab2b2a43a9482347fe86a55dab35a915a55b80169af43078935c8d59e"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 276,
+  "trigger": "::"
+}

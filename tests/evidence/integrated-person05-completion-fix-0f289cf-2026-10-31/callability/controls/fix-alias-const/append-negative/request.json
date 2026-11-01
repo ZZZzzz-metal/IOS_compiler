@@ -1,0 +1,22 @@
+{
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-alias-const-append-negative",
+  "snapshot": {
+    "snapshotId": "23b687e3-dfa2-4bdd-b146-67e145c54424",
+    "sourceHash": "sha256:483994251fd7ebd2ce2ac733cdab9efaf10ccffe369d897f67124d2b477ae57a",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nint main() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.append(\"x\");\n  return 0;\n}\n",
+        "contentHash": "sha256:636cac55816c68e6cfa450b5b4cbb91ecea5753d034ceaadfcfe53d91a32d7c6"
+      }
+    ]
+  },
+  "language": "cpp",
+  "standard": "c++17",
+  "mode": "run",
+  "optimization": "O0"
+}

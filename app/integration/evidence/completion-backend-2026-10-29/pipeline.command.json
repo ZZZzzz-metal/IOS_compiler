@@ -1,0 +1,12 @@
+{
+  "id": "pipeline",
+  "argv": [
+    "C:\\Users\\20964\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "--test",
+    "--test-reporter=tap",
+    "app/integration/checks/pipeline.test.mjs"
+  ],
+  "startedAt": "2026-10-29T15:47:58.695956+00:00",
+  "endedAt": "2026-10-29T15:48:02.437397+00:00",
+  "exitCode": 0
+}

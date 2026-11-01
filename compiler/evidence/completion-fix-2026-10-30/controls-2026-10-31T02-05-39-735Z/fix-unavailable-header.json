@@ -1,0 +1,124 @@
+{
+  "request": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "8b882565-83a1-4401-a2d8-f25adbb91d76",
+    "documentVersion": 1,
+    "snapshot": {
+      "snapshotId": "8b882565-83a1-4401-a2d8-f25adbb91d76-snapshot",
+      "sourceHash": "sha256:e685aedaa6dd0f5ad70776fdb508cc37b939ac25fa0f990ec285122047ebb97d",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "api_9c3158ded821871b.inc",
+          "role": "user",
+          "text": "int surface_header_9c3158ded821871b_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_9c3158ded821871b_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_9c3158ded821871b_deprecated();\n",
+          "contentHash": "sha256:d3bf33e729086b5e155fe4a95bdcb3ba5a326901806744381fb64a0727c89fd0"
+        },
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include \"api_9c3158ded821871b.inc\"\nint surface_header_9c3158ded821871b_allowed() { return 0; }\nint surface_header_9c3158ded821871b_blocked() { return 0; }\nint surface_header_9c3158ded821871b_deprecated() { return 0; }\n\nvoid probe_9c3158ded821871b() {\n  surface_header_9c3158ded821871b\n}\n",
+          "contentHash": "sha256:bc7c9f7673f44527a1f2288981b26203efa04b7daf0517317b0a7ea2f967bf11"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 285,
+    "trigger": "identifier"
+  },
+  "actual": {
+    "result": {
+      "requestId": "8b882565-83a1-4401-a2d8-f25adbb91d76",
+      "documentVersion": 1,
+      "snapshotId": "8b882565-83a1-4401-a2d8-f25adbb91d76-snapshot",
+      "sourceHash": "sha256:e685aedaa6dd0f5ad70776fdb508cc37b939ac25fa0f990ec285122047ebb97d",
+      "sourcePath": "main.cpp",
+      "offset": 285,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:0aa94c64769c9d9ed9bae231825c9818bf476b2c58d31d6383870c25ef4276ba",
+          "label": "surface_header_9c3158ded821871b_allowed",
+          "kind": "unknown",
+          "detail": "int surface_header_9c3158ded821871b_allowed()",
+          "insertText": "surface_header_9c3158ded821871b_allowed",
+          "replaceRange": {
+            "startOffset": 254,
+            "endOffset": 285
+          },
+          "filterText": "surface_header_9c3158ded821871b_allowed"
+        },
+        {
+          "id": "sha256:7c35b41dbc6bf5db31b9ecd745ee17053cf647b73e68450e724ebdf5689482c6",
+          "label": "surface_header_9c3158ded821871b_deprecated",
+          "kind": "unknown",
+          "detail": "int surface_header_9c3158ded821871b_deprecated()",
+          "insertText": "surface_header_9c3158ded821871b_deprecated",
+          "replaceRange": {
+            "startOffset": 254,
+            "endOffset": 285
+          },
+          "filterText": "surface_header_9c3158ded821871b_deprecated"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+      "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:7:34",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: surface_header_9c3158ded821871b_allowed : [#int#]surface_header_9c3158ded821871b_allowed()\nCOMPLETION: surface_header_9c3158ded821871b_blocked (Inaccessible) : [#int#]surface_header_9c3158ded821871b_blocked()\nCOMPLETION: surface_header_9c3158ded821871b_deprecated : [#int#]surface_header_9c3158ded821871b_deprecated()\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 7,
+        "byteColumn": 34
+      }
+    },
+    "metrics": {
+      "totalMs": 16.772500000000036,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "verdict": {
+    "verdict": "passed",
+    "originalVerdict": "passed",
+    "itemCount": 2,
+    "errors": []
+  }
+}

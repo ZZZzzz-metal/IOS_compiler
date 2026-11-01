@@ -1,0 +1,1184 @@
+{
+  "nonce": "a8ee505af129",
+  "originalFixtureQueries": 11,
+  "originalControls": 24,
+  "lateFixtureQueries": 2,
+  "lateControls": 3,
+  "notes": "These complete programs are callability controls, not additional completion queries or replacements for original incomplete inputs.",
+  "fixtures": [
+    {
+      "id": "fix-alias-const",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nvoid probe_a8ee505af129() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:0a5d9bfd2bbff7fc5394012e1d5413b0bac7e1352a139cc591bc9af96630faf4"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nvoid probe_a8ee505af129() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 164,
+        "line": 5,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:3c87b6fc0449f7b2a2a1cd73003031b9c0bac4c8a5693e43b25628ad100758a1",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "size",
+          "c_str"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": [
+          "append"
+        ]
+      },
+      "pairId": "fix-alias-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "read-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nint main() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  return static_cast<int>(object_a8ee505af129.size());\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "append-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nint main() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.append(\"x\");\n  return 0;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-alias-mutable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nvoid probe_a8ee505af129() {\n  TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:786b7e822448d41187c30670852c13fa435ab7aec63aa1beeb83a418ceb81076"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nvoid probe_a8ee505af129() {\n  TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 158,
+        "line": 5,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:d0b957f2ecb887828eca5c0f2e4ddc61946eda49e3e91012ce7cf1f98380b4a8",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "size",
+          "c_str",
+          "append"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": []
+      },
+      "pairId": "fix-alias-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "append-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nint main() {\n  TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.append(\"x\");\n  return object_a8ee505af129.size() == 1 ? 0 : 1;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-template-const",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nvoid probe_a8ee505af129() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:23c02868e46698c8ec962d5ae845b376cd28cc1b7cc62ad4f2670bcb545ac8d8"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nvoid probe_a8ee505af129() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 630,
+        "line": 9,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:be7c3331bda1d1404d33a54b11400bcdc94f1b39ee2fc78f30800c155f42a142",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "read_a8ee505af129",
+          "inspect_a8ee505af129"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": [
+          "write_a8ee505af129",
+          "ingest_a8ee505af129"
+        ]
+      },
+      "pairId": "fix-template-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "read-template-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nint main() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  return object_a8ee505af129.read_a8ee505af129() + object_a8ee505af129.inspect_a8ee505af129(0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "write-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nint main() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.write_a8ee505af129(1);\n  return 0;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        },
+        {
+          "id": "ingest-template-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nint main() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.ingest_a8ee505af129(1);\n  return 0;\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-template-mutable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nvoid probe_a8ee505af129() {\n  Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:e29c6f03ccbd6e5b472fee951413c44e2728f5b429b27daa9aaee68bb487cadd"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nvoid probe_a8ee505af129() {\n  Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 624,
+        "line": 9,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:a2a3d2b26f9cdfbe549ffc70b511cb423db99bc4f85620358e1802341e636af5",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "read_a8ee505af129",
+          "write_a8ee505af129",
+          "inspect_a8ee505af129",
+          "ingest_a8ee505af129"
+        ],
+        "excludes": [],
+        "trigger": ".",
+        "inaccessibleOrAbsent": []
+      },
+      "pairId": "fix-template-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "write-template-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nint main() {\n  Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.write_a8ee505af129(1);\n  object_a8ee505af129.ingest_a8ee505af129(1);\n  return object_a8ee505af129.read_a8ee505af129() + object_a8ee505af129.inspect_a8ee505af129(0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-overload-const",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nvoid probe_a8ee505af129() {\n  const Record_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:52bf6f33acfec94b8992207434e28736c6b14f88e1f45bd4688e00e6cfe33974"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nvoid probe_a8ee505af129() {\n  const Record_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 275,
+        "line": 7,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:3c554320905e26f67e788201e44804078b4a8aed2863f1e042f7337718631632",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "choose_a8ee505af129"
+        ],
+        "excludes": [],
+        "trigger": "."
+      },
+      "pairId": "fix-overload-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "choose_a8ee505af129",
+            "pattern": "\\bchoose_a8ee505af129\\s*\\(\\s*\\s*\\)\\s*const\\s*$"
+          }
+        ],
+        "forbidden": [
+          {
+            "name": "choose_a8ee505af129",
+            "pattern": "\\bchoose_a8ee505af129\\s*\\(\\s*int\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "closedNames": [
+          "choose_a8ee505af129"
+        ]
+      },
+      "controls": [
+        {
+          "id": "const-overload-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nint main() {\n  const Record_a8ee505af129 object_a8ee505af129;\n  return object_a8ee505af129.choose_a8ee505af129();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "mutable-overload-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nint main() {\n  const Record_a8ee505af129 object_a8ee505af129;\n  return object_a8ee505af129.choose_a8ee505af129(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit"
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-overload-mutable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nvoid probe_a8ee505af129() {\n  Record_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+          "contentHash": "sha256:d1bfc3bf37a02e17031fca770e904a9f5daff8d284e14082853a0a09f42fbcb7"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nvoid probe_a8ee505af129() {\n  Record_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 269,
+        "line": 7,
+        "columnUtf16": 23,
+        "columnUtf8": 23
+      },
+      "fixtureHash": "sha256:91268d91e555ddf71bed85a96c3125b9d43317d8d69a87b71eb27d79b4d60bb7",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "choose_a8ee505af129"
+        ],
+        "excludes": [],
+        "trigger": "."
+      },
+      "pairId": "fix-overload-cv",
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "choose_a8ee505af129",
+            "pattern": "\\bchoose_a8ee505af129\\s*\\(\\s*\\s*\\)\\s*const\\s*$"
+          },
+          {
+            "name": "choose_a8ee505af129",
+            "pattern": "\\bchoose_a8ee505af129\\s*\\(\\s*int\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "forbidden": [],
+        "closedNames": [
+          "choose_a8ee505af129"
+        ]
+      },
+      "controls": [
+        {
+          "id": "both-overloads-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "struct Record_a8ee505af129 {\n  int choose_a8ee505af129() const { return 0; }\n  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n};\nint main() {\n  Record_a8ee505af129 object_a8ee505af129;\n  return object_a8ee505af129.choose_a8ee505af129() + object_a8ee505af129.choose_a8ee505af129(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-unavailable-definition",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_definition_a8ee505af129\n}\n",
+          "contentHash": "sha256:a3a720342d968de038500760b860dab6696b28b36369420a72dc2201e7eaf94d"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_definition_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 349,
+        "line": 6,
+        "columnUtf16": 34,
+        "columnUtf8": 34
+      },
+      "fixtureHash": "sha256:2eb520219a6d2fafd4125e2d852bb418e89731d61389a5c9ed43a2fb9bdfffc8",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "surface_definition_a8ee505af129_allowed",
+          "surface_definition_a8ee505af129_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "surface_definition_a8ee505af129",
+        "inaccessibleOrAbsent": [
+          "surface_definition_a8ee505af129_blocked"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_a8ee505af129_allowed();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_a8ee505af129_blocked();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_a8ee505af129_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-unavailable-declaration",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_declaration_a8ee505af129\n}\n",
+          "contentHash": "sha256:3d3dc32b74854d6bd41035a3b6ecf2237c751021dbe7305b4c845f462ddc11ba"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_declaration_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 500,
+        "line": 9,
+        "columnUtf16": 35,
+        "columnUtf8": 35
+      },
+      "fixtureHash": "sha256:f471488630666ff28bf0c2e38aee719e9a797cba9cb59a3c0775d4797e29ab9d",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "surface_declaration_a8ee505af129_allowed",
+          "surface_declaration_a8ee505af129_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "surface_declaration_a8ee505af129",
+        "inaccessibleOrAbsent": [
+          "surface_declaration_a8ee505af129_blocked"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_a8ee505af129_allowed();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_a8ee505af129_blocked();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int surface_declaration_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_declaration_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\nint surface_declaration_a8ee505af129_allowed() { return 0; }\nint surface_declaration_a8ee505af129_blocked() { return 0; }\nint surface_declaration_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_declaration_a8ee505af129_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-unavailable-header",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "api_a8ee505af129.inc",
+          "role": "user",
+          "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n",
+          "contentHash": "sha256:34bce099fd4d0915efc087dd2dca6ada9ef91dcd81da78ea496508f9689bb1f5"
+        },
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_header_a8ee505af129\n}\n",
+          "contentHash": "sha256:bc93c9bcd208a189e8bcc5caa3451f0b42719a5b9646e6967377a267c9b5e14f"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "api_a8ee505af129.inc",
+          "role": "user",
+          "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n"
+        },
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  surface_header_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 261,
+        "line": 7,
+        "columnUtf16": 30,
+        "columnUtf8": 30
+      },
+      "fixtureHash": "sha256:41306fab8d8420274a40bf958c32f2b67a30ecf454ca45f80f674701ca343fa6",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "surface_header_a8ee505af129_allowed",
+          "surface_header_a8ee505af129_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "surface_header_a8ee505af129",
+        "inaccessibleOrAbsent": [
+          "surface_header_a8ee505af129_blocked"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "api_a8ee505af129.inc",
+              "role": "user",
+              "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n"
+            },
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_header_a8ee505af129_allowed();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "api_a8ee505af129.inc",
+              "role": "user",
+              "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n"
+            },
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_header_a8ee505af129_blocked();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "api_a8ee505af129.inc",
+              "role": "user",
+              "text": "int surface_header_a8ee505af129_allowed();\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_header_a8ee505af129_blocked();\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_header_a8ee505af129_deprecated();\n"
+            },
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "#include \"api_a8ee505af129.inc\"\nint surface_header_a8ee505af129_allowed() { return 0; }\nint surface_header_a8ee505af129_blocked() { return 0; }\nint surface_header_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_header_a8ee505af129_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-unavailable-overload",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  mixed_a8ee505af129\n}\n",
+          "contentHash": "sha256:fcc60e9a268305c64f38002395d355b7a9c4a07f4c95d9256e7894988c939100"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nvoid probe_a8ee505af129() {\n  mixed_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 406,
+        "line": 6,
+        "columnUtf16": 21,
+        "columnUtf8": 21
+      },
+      "fixtureHash": "sha256:856f684d94718e571b4f98735a5abe151c157953ca943a2e6d1b42c9ae9b79d1",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "mixed_a8ee505af129_select",
+          "mixed_a8ee505af129_deprecated"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "mixed_a8ee505af129"
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "mixed_a8ee505af129_select",
+            "pattern": "\\bmixed_a8ee505af129_select\\s*\\(\\s*double\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "forbidden": [
+          {
+            "name": "mixed_a8ee505af129_select",
+            "pattern": "\\bmixed_a8ee505af129_select\\s*\\(\\s*int\\b[^)]*\\s*\\)\\s*$"
+          }
+        ],
+        "closedNames": [
+          "mixed_a8ee505af129_select"
+        ]
+      },
+      "controls": [
+        {
+          "id": "available-overload-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return mixed_a8ee505af129_select(1.0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-overload-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return mixed_a8ee505af129_select(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        },
+        {
+          "id": "deprecated-warning-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int mixed_a8ee505af129_select(double argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_a8ee505af129_select(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return mixed_a8ee505af129_deprecated();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0,
+            "warningPattern": "person05-deprecated"
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-unavailable-namespace-context",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "namespace AreaA_a8ee505af129 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_a8ee505af129_read() { return 0; }\n}\nnamespace AreaB_a8ee505af129 {\nint cross_a8ee505af129_read() { return 0; }\n}\n\nvoid probe_a8ee505af129() {\n  AreaB_a8ee505af129::cross_a8ee505af129\n}\n",
+          "contentHash": "sha256:90a0f02e0418a30a047433daf8decf889f213d35dec83431fd260c06ded60a64"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "namespace AreaA_a8ee505af129 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_a8ee505af129_read() { return 0; }\n}\nnamespace AreaB_a8ee505af129 {\nint cross_a8ee505af129_read() { return 0; }\n}\n\nvoid probe_a8ee505af129() {\n  AreaB_a8ee505af129::cross_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 276,
+        "line": 9,
+        "columnUtf16": 41,
+        "columnUtf8": 41
+      },
+      "fixtureHash": "sha256:043beeaccf3cdf3e83b185e8ec09278d9b88a2ac7b806cbca72eba822d3b398a",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "cross_a8ee505af129_read"
+        ],
+        "excludes": [],
+        "trigger": "::",
+        "prefix": "cross_a8ee505af129"
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "other-namespace-allowed-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "namespace AreaA_a8ee505af129 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_a8ee505af129_read() { return 0; }\n}\nnamespace AreaB_a8ee505af129 {\nint cross_a8ee505af129_read() { return 0; }\n}\n\nint main() {\n  return AreaB_a8ee505af129::cross_a8ee505af129_read();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "unavailable-namespace-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "namespace AreaA_a8ee505af129 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_a8ee505af129_read() { return 0; }\n}\nnamespace AreaB_a8ee505af129 {\nint cross_a8ee505af129_read() { return 0; }\n}\n\nint main() {\n  return AreaA_a8ee505af129::cross_a8ee505af129_read();\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "person05-unavailable"
+          }
+        }
+      ],
+      "controlSet": "original-11-controls"
+    },
+    {
+      "id": "fix-late-static-template",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class LateType_a8ee505af129> struct LateBox_a8ee505af129 {\n  template<class LateValueType_a8ee505af129> static int lateStaticRead_a8ee505af129(LateValueType_a8ee505af129 lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\n};\n\nvoid lateProbe_a8ee505af129() {\n  const LateBox_a8ee505af129<int> lateObject_a8ee505af129;\n  lateObject_a8ee505af129.\n}\n",
+          "contentHash": "sha256:be14ae45069c1a6bc4a03064a778e4f8f9ed6190c25497070cbb656c3c2ce4ce"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class LateType_a8ee505af129> struct LateBox_a8ee505af129 {\n  template<class LateValueType_a8ee505af129> static int lateStaticRead_a8ee505af129(LateValueType_a8ee505af129 lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\n};\n\nvoid lateProbe_a8ee505af129() {\n  const LateBox_a8ee505af129<int> lateObject_a8ee505af129;\n  lateObject_a8ee505af129./*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 374,
+        "line": 7,
+        "columnUtf16": 27,
+        "columnUtf8": 27
+      },
+      "fixtureHash": "sha256:396007a30da48457a12da3ab288f4b85e8e65ace91e1de362be3e8b31a4965ce",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "lateStaticRead_a8ee505af129"
+        ],
+        "excludes": [],
+        "trigger": "."
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [],
+        "forbidden": [],
+        "closedNames": []
+      },
+      "controls": [
+        {
+          "id": "static-template-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "template<class LateType_a8ee505af129> struct LateBox_a8ee505af129 {\n  template<class LateValueType_a8ee505af129> static int lateStaticRead_a8ee505af129(LateValueType_a8ee505af129 lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\n};\n\nint main() {\n  const LateBox_a8ee505af129<int> lateObject_a8ee505af129;\n  return lateObject_a8ee505af129.lateStaticRead_a8ee505af129(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        }
+      ],
+      "controlSet": "late-controls"
+    },
+    {
+      "id": "fix-late-deleted-overload",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n\nvoid lateProbe_a8ee505af129() {\n  lateChoice_a8ee505af129\n}\n",
+          "contentHash": "sha256:3aa5ffc4bb52dc91d430d58c7626b54aafbd273df4c2ea87be38ce006a728fde"
+        }
+      ],
+      "markedFiles": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n\nvoid lateProbe_a8ee505af129() {\n  lateChoice_a8ee505af129/*<cc>*/\n}\n"
+        }
+      ],
+      "coordinates": {
+        "offsetUtf16": 246,
+        "line": 5,
+        "columnUtf16": 26,
+        "columnUtf8": 26
+      },
+      "fixtureHash": "sha256:f821497571025578d11343fb8b34e423ea20efb4afd80c4b45479b525d64eb24",
+      "expect": {
+        "support": "required",
+        "contains": [
+          "lateChoice_a8ee505af129_call"
+        ],
+        "excludes": [],
+        "trigger": "identifier",
+        "prefix": "lateChoice_a8ee505af129"
+      },
+      "pairId": null,
+      "baselineId": null,
+      "signatures": {
+        "required": [
+          {
+            "name": "lateChoice_a8ee505af129_call",
+            "pattern": "\\blateChoice_a8ee505af129_call\\s*\\(\\s*double\\b[^)]*\\)\\s*$"
+          }
+        ],
+        "forbidden": [
+          {
+            "name": "lateChoice_a8ee505af129_call",
+            "pattern": "\\blateChoice_a8ee505af129_call\\s*\\(\\s*int\\b[^)]*\\)\\s*$"
+          }
+        ],
+        "closedNames": [
+          "lateChoice_a8ee505af129_call"
+        ]
+      },
+      "controls": [
+        {
+          "id": "available-double-positive",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n\nint main() {\n  return lateChoice_a8ee505af129_call(1.0);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "compiled",
+            "smokeExitCode": 0
+          }
+        },
+        {
+          "id": "deleted-int-negative",
+          "translationUnit": "main.cpp",
+          "files": [
+            {
+              "path": "main.cpp",
+              "role": "user",
+              "text": "int lateChoice_a8ee505af129_call(double lateArgument_a8ee505af129) { (void)lateArgument_a8ee505af129; return 0; }\nint lateChoice_a8ee505af129_call(int lateArgument_a8ee505af129) = delete;\n\nint main() {\n  return lateChoice_a8ee505af129_call(1);\n}\n"
+            }
+          ],
+          "expect": {
+            "status": "failed",
+            "reason": "compiler-exit",
+            "errorPattern": "deleted",
+            "errorMember": "lateChoice_a8ee505af129_call"
+          }
+        }
+      ],
+      "controlSet": "late-controls"
+    }
+  ]
+}

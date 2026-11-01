@@ -1,0 +1,7 @@
+/project/main.cpp:9:3: error: 'this' argument to member function 'write_a8ee505af129' has type 'const Box_a8ee505af129<int>', but function is not marked const
+  object_a8ee505af129.write_a8ee505af129(1);
+  ^~~~~~~~~~~~~~~~~~~
+/project/main.cpp:3:8: note: 'write_a8ee505af129' declared here
+  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }
+       ^
+1 error generated.

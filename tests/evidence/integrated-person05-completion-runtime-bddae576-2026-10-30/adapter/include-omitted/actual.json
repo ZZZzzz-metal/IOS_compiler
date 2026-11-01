@@ -1,0 +1,28 @@
+{
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-include-omitted",
+  "documentVersion": 19,
+  "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-include-omitted-snapshot",
+  "sourceHash": "sha256:4a3cc321774b0261e1e8ef45e45a51e8d1ebbb8247427644afef945d1a788e9a",
+  "sourcePath": "main.cpp",
+  "offset": 122,
+  "status": "failed",
+  "items": [],
+  "isIncomplete": false,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "message": "unknown type name 'RequestData'",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 2,
+          "column": 16
+        }
+      }
+    }
+  ],
+  "reason": "clang-completion-exit",
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

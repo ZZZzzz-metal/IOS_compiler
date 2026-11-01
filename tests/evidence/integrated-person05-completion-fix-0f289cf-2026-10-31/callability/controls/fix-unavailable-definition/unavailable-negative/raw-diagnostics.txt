@@ -1,0 +1,7 @@
+/project/main.cpp:6:10: error: call to unavailable function 'surface_definition_a8ee505af129_blocked': person05-unavailable
+  return surface_definition_a8ee505af129_blocked();
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/project/main.cpp:2:58: note: candidate function has been explicitly made unavailable
+__attribute__((unavailable("person05-unavailable"))) int surface_definition_a8ee505af129_blocked() { return 0; }
+                                                         ^
+1 error generated.

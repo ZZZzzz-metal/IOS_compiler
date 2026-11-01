@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-shadow-inner",
+  "documentVersion": 9,
+  "snapshot": {
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-shadow-inner-snapshot",
+    "sourceHash": "sha256:52a648d008eef036ecc22f45f0035a6f60621572082064c17df18532500e6a1a",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "struct Outer { int outerOnly; };\nstruct Inner { int innerOnly; };\nvoid probe() {\n    Outer object;\n    { Inner object; object. }\n}\n",
+        "contentHash": "sha256:d0190406962e3ca8d202a0635af5c228ded4dcad7f0bc6652e50ef8e4bb8a780"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 126,
+  "trigger": "."
+}

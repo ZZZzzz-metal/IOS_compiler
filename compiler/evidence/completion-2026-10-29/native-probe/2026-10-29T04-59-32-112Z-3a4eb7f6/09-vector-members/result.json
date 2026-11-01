@@ -1,0 +1,134 @@
+{
+  "id": "09-vector-members",
+  "invokedAt": "2026-10-29T04:59:32.815Z",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 61,
+    "line": 2,
+    "utf16Column": 44,
+    "utf8ByteColumn": 44,
+    "linePrefix": "int main() { std::vector<int> items; items.",
+    "prefixAtCursor": "",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:2:44",
+    "/project/main.cpp"
+  ],
+  "sourceHash": "sha256:8e6f3634aa80e5b35f0b18add4649b55a1121575adc6f43ec90cef437cf20d99",
+  "resources": [
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "expectedSha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "verified": true
+    },
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "expectedSha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "verified": true
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "expectedSha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "verified": true
+    }
+  ],
+  "flags": [],
+  "exitCode": 0,
+  "hostError": null,
+  "filesystemSetupMs": 5.996700000000033,
+  "completionMs": 131.79590000000007,
+  "totalCaseMs": 137.851,
+  "memoryBytes": {
+    "clangAfterExecution": 15007744,
+    "memfsAfterExecution": 9437184
+  },
+  "stdoutByteLength": 5496,
+  "stderrByteLength": 0,
+  "stdoutSha256": "sha256:2b88d4b4d09df0e259a8762d89810229e3fbde1f63ecf6cbe6c8a991d9363385",
+  "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completionCount": 62,
+  "candidateObservations": [
+    {
+      "name": "size",
+      "lines": [
+        "COMPLETION: size : [#size_type#]size()[# const#]"
+      ]
+    },
+    {
+      "name": "push_back",
+      "lines": [
+        "COMPLETION: push_back : [#void#]push_back(<#const_reference __x#>)",
+        "COMPLETION: push_back : [#void#]push_back(<#value_type &&__x#>)"
+      ]
+    },
+    {
+      "name": "begin",
+      "lines": [
+        "COMPLETION: begin : [#iterator#]begin()",
+        "COMPLETION: begin : [#const_iterator#]begin()[# const#]"
+      ]
+    },
+    {
+      "name": "end",
+      "lines": [
+        "COMPLETION: end : [#iterator#]end()",
+        "COMPLETION: end : [#const_iterator#]end()[# const#]"
+      ]
+    },
+    {
+      "name": "clear",
+      "lines": [
+        "COMPLETION: clear : [#void#]clear()",
+        "COMPLETION: clear (Hidden,InBase,Inaccessible) : [#void#]__vector_base<int, allocator<int> >::clear()"
+      ]
+    }
+  ],
+  "inaccessibleLines": [
+    "COMPLETION: capacity (Hidden,InBase,Inaccessible) : [#size_type#]__vector_base<int, allocator<int> >::capacity()[# const#]",
+    "COMPLETION: clear (Hidden,InBase,Inaccessible) : [#void#]__vector_base<int, allocator<int> >::clear()",
+    "COMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__vector_base<int, allocator<int> > &#]__vector_base<int, allocator<int> >::operator=(<#const __vector_base<int, allocator<int> > &#>)",
+    "COMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__vector_base_common<true> &#]__vector_base_common<true>::operator=(<#const __vector_base_common<true> &#>)",
+    "COMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__vector_base_common<true> &#]__vector_base_common<true>::operator=(<#__vector_base_common<true> &&#>)",
+    "COMPLETION: ~__vector_base (InBase,Inaccessible) : [#void#][#__vector_base<int, allocator<int> >::#]~__vector_base()",
+    "COMPLETION: ~__vector_base_common (InBase,Inaccessible) : [#void#][#__vector_base_common<true>::#]~__vector_base_common()"
+  ],
+  "stdout": "COMPLETION: assign : [#typename enable_if<__is_input_iterator<_InputIterator>::value && !__is_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, void>::type#]assign(<#_InputIterator __first#>, <#_InputIterator __last#>)\nCOMPLETION: assign : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, void>::type#]assign(<#_ForwardIterator __first#>, <#_ForwardIterator __last#>)\nCOMPLETION: assign : [#void#]assign(<#size_type __n#>, <#const_reference __u#>)\nCOMPLETION: assign : [#void#]assign(<#initializer_list<value_type> __il#>)\nCOMPLETION: at : [#reference#]at(<#size_type __n#>)\nCOMPLETION: at : [#const_reference#]at(<#size_type __n#>)[# const#]\nCOMPLETION: back : [#reference#]back()\nCOMPLETION: back : [#const_reference#]back()[# const#]\nCOMPLETION: begin : [#iterator#]begin()\nCOMPLETION: begin : [#const_iterator#]begin()[# const#]\nCOMPLETION: capacity : [#size_type#]capacity()[# const#]\nCOMPLETION: capacity (Hidden,InBase,Inaccessible) : [#size_type#]__vector_base<int, allocator<int> >::capacity()[# const#]\nCOMPLETION: cbegin : [#const_iterator#]cbegin()[# const#]\nCOMPLETION: cend : [#const_iterator#]cend()[# const#]\nCOMPLETION: clear : [#void#]clear()\nCOMPLETION: clear (Hidden,InBase,Inaccessible) : [#void#]__vector_base<int, allocator<int> >::clear()\nCOMPLETION: crbegin : [#const_reverse_iterator#]crbegin()[# const#]\nCOMPLETION: crend : [#const_reverse_iterator#]crend()[# const#]\nCOMPLETION: data : [#value_type *#]data()\nCOMPLETION: data : [#const value_type *#]data()[# const#]\nCOMPLETION: emplace : [#iterator#]emplace(<#const_iterator __position#>, <#_Args &&__args...#>)\nCOMPLETION: emplace_back : [#reference#]emplace_back(<#_Args &&__args...#>)\nCOMPLETION: empty : [#bool#]empty()[# const#]\nCOMPLETION: end : [#iterator#]end()\nCOMPLETION: end : [#const_iterator#]end()[# const#]\nCOMPLETION: erase : [#iterator#]erase(<#const_iterator __position#>)\nCOMPLETION: erase : [#iterator#]erase(<#const_iterator __first#>, <#const_iterator __last#>)\nCOMPLETION: front : [#reference#]front()\nCOMPLETION: front : [#const_reference#]front()[# const#]\nCOMPLETION: get_allocator : [#allocator_type#]get_allocator()[# const#]\nCOMPLETION: insert : [#iterator#]insert(<#const_iterator __position#>, <#const_reference __x#>)\nCOMPLETION: insert : [#iterator#]insert(<#const_iterator __position#>, <#value_type &&__x#>)\nCOMPLETION: insert : [#iterator#]insert(<#const_iterator __position#>, <#size_type __n#>, <#const_reference __x#>)\nCOMPLETION: insert : [#typename enable_if<__is_input_iterator<_InputIterator>::value && !__is_forward_iterator<_InputIterator>::value && is_constructible<value_type, typename iterator_traits<_InputIterator>::reference>::value, iterator>::type#]insert(<#const_iterator __position#>, <#_InputIterator __first#>, <#_InputIterator __last#>)\nCOMPLETION: insert : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && is_constructible<value_type, typename iterator_traits<_ForwardIterator>::reference>::value, iterator>::type#]insert(<#const_iterator __position#>, <#_ForwardIterator __first#>, <#_ForwardIterator __last#>)\nCOMPLETION: insert : [#iterator#]insert(<#const_iterator __position#>, <#initializer_list<value_type> __il#>)\nCOMPLETION: max_size : [#size_type#]max_size()[# const#]\nCOMPLETION: operator= : [#vector<int, allocator<int> > &#]operator=(<#const vector<int, allocator<int> > &__x#>)\nCOMPLETION: operator= : [#vector<int, allocator<int> > &#]operator=(<#vector<int, allocator<int> > &&__x#>)\nCOMPLETION: operator= : [#vector<int, allocator<int> > &#]operator=(<#initializer_list<value_type> __il#>)\nCOMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__vector_base<int, allocator<int> > &#]__vector_base<int, allocator<int> >::operator=(<#const __vector_base<int, allocator<int> > &#>)\nCOMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__vector_base_common<true> &#]__vector_base_common<true>::operator=(<#const __vector_base_common<true> &#>)\nCOMPLETION: operator= (Hidden,InBase,Inaccessible) : [#__vector_base_common<true> &#]__vector_base_common<true>::operator=(<#__vector_base_common<true> &&#>)\nCOMPLETION: operator[] : [#reference#]operator[](<#size_type __n#>)\nCOMPLETION: operator[] : [#const_reference#]operator[](<#size_type __n#>)[# const#]\nCOMPLETION: pop_back : [#void#]pop_back()\nCOMPLETION: push_back : [#void#]push_back(<#const_reference __x#>)\nCOMPLETION: push_back : [#void#]push_back(<#value_type &&__x#>)\nCOMPLETION: rbegin : [#reverse_iterator#]rbegin()\nCOMPLETION: rbegin : [#const_reverse_iterator#]rbegin()[# const#]\nCOMPLETION: rend : [#reverse_iterator#]rend()\nCOMPLETION: rend : [#const_reverse_iterator#]rend()[# const#]\nCOMPLETION: reserve : [#void#]reserve(<#size_type __n#>)\nCOMPLETION: resize : [#void#]resize(<#size_type __sz#>)\nCOMPLETION: resize : [#void#]resize(<#size_type __sz#>, <#const_reference __x#>)\nCOMPLETION: shrink_to_fit : [#void#]shrink_to_fit()\nCOMPLETION: size : [#size_type#]size()[# const#]\nCOMPLETION: swap : [#void#]swap(<#vector<int, allocator<int> > &#>)\nCOMPLETION: vector : vector::\nCOMPLETION: ~__vector_base (InBase,Inaccessible) : [#void#][#__vector_base<int, allocator<int> >::#]~__vector_base()\nCOMPLETION: ~__vector_base_common (InBase,Inaccessible) : [#void#][#__vector_base_common<true>::#]~__vector_base_common()\nCOMPLETION: ~vector : [#void#]~vector()\n",
+  "stderr": ""
+}

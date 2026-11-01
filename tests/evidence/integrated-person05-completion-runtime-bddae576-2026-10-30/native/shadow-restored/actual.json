@@ -1,0 +1,139 @@
+{
+  "result": {
+    "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-shadow-restored",
+    "documentVersion": 10,
+    "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-shadow-restored-snapshot",
+    "sourceHash": "sha256:ce9887ea9aef35374c9edc9dcd87253921478abe72e70b9420e4f8b03c88c01f",
+    "sourcePath": "main.cpp",
+    "offset": 132,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:3dc5a54365202f1fb440d75f0e814b28f35d49cf7f8078a052231267983dd062",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Outer & operator=(const Outer &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 132,
+          "endOffset": 132
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:566dc6d53104fbc834f1b9d972f1975e75c58e97822e47e35fdc538f476ea6a2",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Outer & operator=(Outer &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 132,
+          "endOffset": 132
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:c5b00781e0913c24781f3a6e3f2e1f4f68fa21020be9b43b90ea38e75796c4fb",
+        "label": "Outer",
+        "kind": "unknown",
+        "detail": "Outer::",
+        "insertText": "Outer",
+        "replaceRange": {
+          "startOffset": 132,
+          "endOffset": 132
+        },
+        "filterText": "Outer"
+      },
+      {
+        "id": "sha256:1e5139330a162b546b964c63951080d365bcaa7a7897b6cc8c99cfb792f866f6",
+        "label": "outerOnly",
+        "kind": "unknown",
+        "detail": "int outerOnly",
+        "insertText": "outerOnly",
+        "replaceRange": {
+          "startOffset": 132,
+          "endOffset": 132
+        },
+        "filterText": "outerOnly"
+      },
+      {
+        "id": "sha256:df8a9d21644b9e0a86dcd2fcf0b1b04736a53d4906baa8a56bff5331795ae21d",
+        "label": "~Outer",
+        "kind": "unknown",
+        "detail": "void ~Outer()",
+        "insertText": "~Outer",
+        "replaceRange": {
+          "startOffset": 132,
+          "endOffset": 132
+        },
+        "filterText": "~Outer"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "native": {
+    "argv": [
+      "clang",
+      "-cc1",
+      "-fsyntax-only",
+      "-triple",
+      "wasm32-unknown-wasi",
+      "-main-file-name",
+      "main.cpp",
+      "-disable-free",
+      "-isysroot",
+      "/",
+      "-internal-isystem",
+      "/include/c++/v1",
+      "-internal-isystem",
+      "/lib/clang/8.0.1/include",
+      "-internal-isystem",
+      "/include",
+      "-I",
+      "/project",
+      "-ferror-limit",
+      "20",
+      "-fmessage-length",
+      "0",
+      "-std=c++17",
+      "-x",
+      "c++",
+      "-code-completion-at=/project/main.cpp:6:12",
+      "/project/main.cpp"
+    ],
+    "exitCode": 0,
+    "stdout": "COMPLETION: operator= : [#Outer &#]operator=(<#const Outer &#>)\nCOMPLETION: operator= : [#Outer &#]operator=(<#Outer &&#>)\nCOMPLETION: Outer : Outer::\nCOMPLETION: outerOnly : [#int#]outerOnly\nCOMPLETION: ~Outer : [#void#]~Outer()\n",
+    "stderr": "",
+    "memoryBytes": 7012352,
+    "position": {
+      "line": 6,
+      "byteColumn": 12
+    }
+  },
+  "metrics": {
+    "totalMs": 13.753400000000056,
+    "filesystemLinearMemoryBytes": 9437184,
+    "compilerLinearMemoryBytes": 7012352
+  },
+  "resourceReads": [
+    {
+      "path": "vendor/wasm-clang/memfs",
+      "byteLength": 345442,
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+    },
+    {
+      "path": "vendor/wasm-clang/sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    {
+      "path": "vendor/wasm-clang/clang",
+      "byteLength": 31214472,
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    }
+  ]
+}

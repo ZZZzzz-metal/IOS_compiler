@@ -1,0 +1,2490 @@
+{
+  "revision": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "scope": "controlled transports/pure geometry only; no real native undo, IME, browser layout, iPad or offline acceptance",
+  "inputs": [
+    {
+      "path": "ui/src/completion-edit.mjs",
+      "bytes": 4713,
+      "sha256": "d4a4e861c77ae9c3169339e122c0dcb93815628669922be2fbdd4be26020054b"
+    },
+    {
+      "path": "ui/src/completion-popup.mjs",
+      "bytes": 13394,
+      "sha256": "c473b6148865603116d71eb5b9ffd1ee218eb99dca78c9d5f8aeb319d750ad01"
+    },
+    {
+      "path": "ui/src/completion-controller.mjs",
+      "bytes": 15256,
+      "sha256": "e815ec62c4d5b9899ef871e561ed151d98c2f9f2d2ce935ff738a3752244663b"
+    },
+    {
+      "path": "compiler/src/source.mjs",
+      "bytes": 7201,
+      "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1"
+    },
+    {
+      "path": "tests/completion-ui-edit-independent.mjs",
+      "bytes": 21595,
+      "sha256": "6e45dc7a71243c45816bf1915e01ee146ce21555600fb617da8cf21999cd1414"
+    }
+  ],
+  "scenarios": 23,
+  "passed": 23,
+  "failed": 0,
+  "checks": 339,
+  "records": [
+    {
+      "id": "offsets-exhaustive-mixed-newlines-and-unicode",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "normalized text",
+          "actual": "",
+          "expected": "",
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"\"@0",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "normalized text",
+          "actual": "",
+          "expected": "",
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿\"@0",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿\"@1",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "normalized text",
+          "actual": "中😀\npriNT\n后\n末",
+          "expected": "中😀\npriNT\n后\n末",
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@0",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@1",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@2",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 2,
+          "expected": 2,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@3",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "invalid editor boundary throws",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@4",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 4,
+          "expected": 4,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@5",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "invalid editor boundary throws",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@6",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 4,
+          "expected": 4,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 6,
+          "expected": 6,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@7",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 5,
+          "expected": 5,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 7,
+          "expected": 7,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@8",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 6,
+          "expected": 6,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 8,
+          "expected": 8,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@9",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 7,
+          "expected": 7,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 9,
+          "expected": 9,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@10",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 8,
+          "expected": 8,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 10,
+          "expected": 10,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@11",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 9,
+          "expected": 9,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 11,
+          "expected": 11,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@12",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 10,
+          "expected": 10,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 12,
+          "expected": 12,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@13",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 11,
+          "expected": 11,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 13,
+          "expected": 13,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@14",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 12,
+          "expected": 12,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 14,
+          "expected": 14,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿中😀\\r\\npriNT\\r后\\n末\"@15",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 13,
+          "expected": 13,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 15,
+          "expected": 15,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 4,
+          "expected": 4,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 5,
+          "expected": 5,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 6,
+          "expected": 6,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 7,
+          "expected": 7,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 8,
+          "expected": 8,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 9,
+          "expected": 9,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 10,
+          "expected": 10,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 11,
+          "expected": 11,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 12,
+          "expected": 12,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 13,
+          "expected": 13,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "normalized text",
+          "actual": "a\nb\nc\nd",
+          "expected": "a\nb\nc\nd",
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"a\\rb\\r\\nc\\nd\"@0",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"a\\rb\\r\\nc\\nd\"@1",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"a\\rb\\r\\nc\\nd\"@2",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 2,
+          "expected": 2,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 2,
+          "expected": 2,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"a\\rb\\r\\nc\\nd\"@3",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"a\\rb\\r\\nc\\nd\"@4",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "invalid editor boundary throws",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"a\\rb\\r\\nc\\nd\"@5",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 4,
+          "expected": 4,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 5,
+          "expected": 5,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"a\\rb\\r\\nc\\nd\"@6",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 5,
+          "expected": 5,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 6,
+          "expected": 6,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"a\\rb\\r\\nc\\nd\"@7",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 6,
+          "expected": 6,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 7,
+          "expected": 7,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"a\\rb\\r\\nc\\nd\"@8",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 7,
+          "expected": 7,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 8,
+          "expected": 8,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 2,
+          "expected": 2,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 4,
+          "expected": 4,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 5,
+          "expected": 5,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 6,
+          "expected": 6,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 7,
+          "expected": 7,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "normalized text",
+          "actual": "😀甲𐐀z",
+          "expected": "😀甲𐐀z",
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"😀甲𐐀z\"@0",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"😀甲𐐀z\"@1",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "invalid editor boundary throws",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"😀甲𐐀z\"@2",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 2,
+          "expected": 2,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 2,
+          "expected": 2,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"😀甲𐐀z\"@3",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"😀甲𐐀z\"@4",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "invalid editor boundary throws",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"😀甲𐐀z\"@5",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 5,
+          "expected": 5,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 5,
+          "expected": 5,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"😀甲𐐀z\"@6",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 6,
+          "expected": 6,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 6,
+          "expected": 6,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 2,
+          "expected": 2,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 5,
+          "expected": 5,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 6,
+          "expected": 6,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "normalized text",
+          "actual": "\n\n中",
+          "expected": "\n\n中",
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿\\r\\n\\r\\n中\"@0",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿\\r\\n\\r\\n中\"@1",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿\\r\\n\\r\\n中\"@2",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "invalid editor boundary throws",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿\\r\\n\\r\\n中\"@3",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿\\r\\n\\r\\n中\"@4",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "invalid editor boundary throws",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿\\r\\n\\r\\n中\"@5",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 2,
+          "expected": 2,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 5,
+          "expected": 5,
+          "verdict": "passed"
+        },
+        {
+          "label": "editor boundary \"﻿\\r\\n\\r\\n中\"@6",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "prefix model offset",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "round trip canonical BOM boundary",
+          "actual": 6,
+          "expected": 6,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 2,
+          "expected": 2,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot scalar boundary",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "snapshot round trip",
+          "actual": 3,
+          "expected": 3,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "out of range editor offset rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        }
+      ],
+      "observation": {
+        "texts": [
+          "",
+          "﻿",
+          "﻿中😀\r\npriNT\r后\n末",
+          "a\rb\r\nc\nd",
+          "😀甲𐐀z",
+          "﻿\r\n\r\n中"
+        ],
+        "acceptedBoundaries": 35,
+        "rejectedInteriorBoundaries": 7
+      },
+      "verdict": "passed"
+    },
+    {
+      "id": "middle-of-token-full-replacement-with-bom-crlf-and-nonbmp",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "entire identifier lexical extent",
+          "actual": {
+            "start": 38,
+            "end": 43,
+            "prefix": "pri",
+            "trigger": "identifier"
+          },
+          "expected": {
+            "start": 38,
+            "end": 43,
+            "prefix": "pri",
+            "trigger": "identifier"
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "full native replacement applied",
+          "actual": {
+            "applied": true,
+            "changed": true,
+            "inputObserved": true
+          },
+          "expected": {
+            "applied": true,
+            "changed": true,
+            "inputObserved": true
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "outside source exact, including BOM and CRLF",
+          "actual": "﻿// 中文😀\r\nint main(){ int printValue=1; printValue; }\r\n",
+          "expected": "﻿// 中文😀\r\nint main(){ int printValue=1; printValue; }\r\n",
+          "verdict": "passed"
+        },
+        {
+          "label": "one native transaction",
+          "actual": [
+            {
+              "command": "insertText",
+              "showUI": false,
+              "text": "printValue",
+              "start": 40,
+              "end": 45
+            }
+          ],
+          "expected": [
+            {
+              "command": "insertText",
+              "showUI": false,
+              "text": "printValue",
+              "start": 40,
+              "end": 45
+            }
+          ],
+          "verdict": "passed"
+        },
+        {
+          "label": "no fallback save after normal input",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "caret after inserted name",
+          "actual": [
+            50,
+            50
+          ],
+          "expected": [
+            50,
+            50
+          ],
+          "verdict": "passed"
+        }
+      ],
+      "observation": {
+        "before": "﻿// 中文😀\r\nint main(){ int printValue=1; priNT; }\r\n",
+        "after": "﻿// 中文😀\r\nint main(){ int printValue=1; printValue; }\r\n",
+        "normalizedCaret": 41,
+        "nativeCommand": {
+          "command": "insertText",
+          "showUI": false,
+          "text": "printValue",
+          "start": 40,
+          "end": 45
+        }
+      },
+      "verdict": "passed"
+    },
+    {
+      "id": "native-refuse-leaves-source-selection-scroll",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "safe refusal",
+          "actual": {
+            "applied": false,
+            "reason": "unsupported",
+            "inputObserved": false
+          },
+          "expected": {
+            "applied": false,
+            "reason": "unsupported",
+            "inputObserved": false
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "source unchanged",
+          "actual": "alphaXYZomega",
+          "expected": "alphaXYZomega",
+          "verdict": "passed"
+        },
+        {
+          "label": "selection and scroll restored",
+          "actual": [
+            5,
+            8,
+            "backward",
+            31,
+            9
+          ],
+          "expected": [
+            5,
+            8,
+            "backward",
+            31,
+            9
+          ],
+          "verdict": "passed"
+        },
+        {
+          "label": "only one command, no retry",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "no save",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "native-throw-before-leaves-source-selection-scroll",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "safe refusal",
+          "actual": {
+            "applied": false,
+            "reason": "unsupported",
+            "inputObserved": false
+          },
+          "expected": {
+            "applied": false,
+            "reason": "unsupported",
+            "inputObserved": false
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "source unchanged",
+          "actual": "alphaXYZomega",
+          "expected": "alphaXYZomega",
+          "verdict": "passed"
+        },
+        {
+          "label": "selection and scroll restored",
+          "actual": [
+            5,
+            8,
+            "backward",
+            31,
+            9
+          ],
+          "expected": [
+            5,
+            8,
+            "backward",
+            31,
+            9
+          ],
+          "verdict": "passed"
+        },
+        {
+          "label": "only one command, no retry",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "no save",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "native-normal-single-edit-and-save-fallback",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "actual native text wins over boolean/throw",
+          "actual": {
+            "applied": true,
+            "changed": true,
+            "inputObserved": false
+          },
+          "expected": {
+            "applied": true,
+            "changed": true,
+            "inputObserved": false
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "one edit",
+          "actual": "alphaNameomega",
+          "expected": "alphaNameomega",
+          "verdict": "passed"
+        },
+        {
+          "label": "one command",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "one save fallback",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "native-false-after-single-edit-and-save-fallback",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "actual native text wins over boolean/throw",
+          "actual": {
+            "applied": true,
+            "changed": true,
+            "inputObserved": false
+          },
+          "expected": {
+            "applied": true,
+            "changed": true,
+            "inputObserved": false
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "one edit",
+          "actual": "alphaNameomega",
+          "expected": "alphaNameomega",
+          "verdict": "passed"
+        },
+        {
+          "label": "one command",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "one save fallback",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "native-throw-after-single-edit-and-save-fallback",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "actual native text wins over boolean/throw",
+          "actual": {
+            "applied": true,
+            "changed": true,
+            "inputObserved": false
+          },
+          "expected": {
+            "applied": true,
+            "changed": true,
+            "inputObserved": false
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "one edit",
+          "actual": "alphaNameomega",
+          "expected": "alphaNameomega",
+          "verdict": "passed"
+        },
+        {
+          "label": "one command",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "one save fallback",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "missing-native-command-never-emulates-value-or-range-edit",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "safe refusal",
+          "actual": {
+            "applied": false,
+            "reason": "unsupported",
+            "inputObserved": false
+          },
+          "expected": {
+            "applied": false,
+            "reason": "unsupported",
+            "inputObserved": false
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "original text",
+          "actual": "original",
+          "expected": "original",
+          "verdict": "passed"
+        },
+        {
+          "label": "no command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "invalid-text-surrogate-and-crlf-interiors-never-edit",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "refused invalid edit",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "text unchanged",
+          "actual": "a😀\r\nz",
+          "expected": "a😀\r\nz",
+          "verdict": "passed"
+        },
+        {
+          "label": "no native command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "refused invalid edit",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "text unchanged",
+          "actual": "a😀\r\nz",
+          "expected": "a😀\r\nz",
+          "verdict": "passed"
+        },
+        {
+          "label": "no native command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "refused invalid edit",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "text unchanged",
+          "actual": "a😀\r\nz",
+          "expected": "a😀\r\nz",
+          "verdict": "passed"
+        },
+        {
+          "label": "no native command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "refused invalid edit",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "text unchanged",
+          "actual": "a😀\r\nz",
+          "expected": "a😀\r\nz",
+          "verdict": "passed"
+        },
+        {
+          "label": "no native command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "readonly-disabled-detached-and-focus-race-refuse",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "context blocked",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no native command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "text unchanged",
+          "actual": "original",
+          "expected": "original",
+          "verdict": "passed"
+        },
+        {
+          "label": "context blocked",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no native command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "text unchanged",
+          "actual": "original",
+          "expected": "original",
+          "verdict": "passed"
+        },
+        {
+          "label": "context blocked",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no native command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "text unchanged",
+          "actual": "original",
+          "expected": "original",
+          "verdict": "passed"
+        },
+        {
+          "label": "focus-time context refused",
+          "actual": {
+            "applied": false,
+            "reason": "context-changed",
+            "inputObserved": false
+          },
+          "expected": {
+            "applied": false,
+            "reason": "context-changed",
+            "inputObserved": false
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "no native command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "race-owned source retained",
+          "actual": "original",
+          "expected": "original",
+          "verdict": "passed"
+        },
+        {
+          "label": "focus-time context refused",
+          "actual": {
+            "applied": false,
+            "reason": "context-changed",
+            "inputObserved": false
+          },
+          "expected": {
+            "applied": false,
+            "reason": "context-changed",
+            "inputObserved": false
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "no native command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "race-owned source retained",
+          "actual": "new-import",
+          "expected": "new-import",
+          "verdict": "passed"
+        },
+        {
+          "label": "focus-time context refused",
+          "actual": {
+            "applied": false,
+            "reason": "context-changed",
+            "inputObserved": false
+          },
+          "expected": {
+            "applied": false,
+            "reason": "context-changed",
+            "inputObserved": false
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "no native command",
+          "actual": 0,
+          "expected": 0,
+          "verdict": "passed"
+        },
+        {
+          "label": "race-owned source retained",
+          "actual": "original",
+          "expected": "original",
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "unexpected-native-result-preserves-observed-text-and-saves-once",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "unexpected result marked changed failure",
+          "actual": {
+            "applied": false,
+            "changed": true,
+            "reason": "unexpected-edit",
+            "inputObserved": false
+          },
+          "expected": {
+            "applied": false,
+            "changed": true,
+            "reason": "unexpected-edit",
+            "inputObserved": false
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "actual text retained",
+          "actual": "different",
+          "expected": "different",
+          "verdict": "passed"
+        },
+        {
+          "label": "no second replacement",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        },
+        {
+          "label": "save observed mutation once",
+          "actual": 1,
+          "expected": 1,
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "prefix-only-provider-range-expands-over-complete-suffix",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "provider candidate opened",
+          "actual": "open",
+          "expected": "open",
+          "verdict": "passed"
+        },
+        {
+          "label": "visible replacement covers suffix",
+          "actual": {
+            "startOffset": 12,
+            "endOffset": 17
+          },
+          "expected": {
+            "startOffset": 12,
+            "endOffset": 17
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "choose allowed once",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "no duplicate choose",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "one full-token edit",
+          "actual": [
+            {
+              "start": 12,
+              "end": 17,
+              "text": "printValue",
+              "caret": 22,
+              "token": 1
+            }
+          ],
+          "expected": [
+            {
+              "start": 12,
+              "end": 17,
+              "text": "printValue",
+              "caret": 22,
+              "token": 1
+            }
+          ],
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "already-open-result-cannot-edit-after-focus",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "provider candidate opened",
+          "actual": "open",
+          "expected": "open",
+          "verdict": "passed"
+        },
+        {
+          "label": "old choose rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no edit callback",
+          "actual": [],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "old popup invalidated",
+          "actual": "idle",
+          "expected": "idle",
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "already-open-result-cannot-edit-after-readonly-or-snapshot-disabled",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "provider candidate opened",
+          "actual": "open",
+          "expected": "open",
+          "verdict": "passed"
+        },
+        {
+          "label": "old choose rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no edit callback",
+          "actual": [],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "old popup invalidated",
+          "actual": "idle",
+          "expected": "idle",
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "already-open-result-cannot-edit-after-language",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "provider candidate opened",
+          "actual": "open",
+          "expected": "open",
+          "verdict": "passed"
+        },
+        {
+          "label": "old choose rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no edit callback",
+          "actual": [],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "old popup invalidated",
+          "actual": "idle",
+          "expected": "idle",
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "already-open-result-cannot-edit-after-source-file",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "provider candidate opened",
+          "actual": "open",
+          "expected": "open",
+          "verdict": "passed"
+        },
+        {
+          "label": "old choose rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no edit callback",
+          "actual": [],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "old popup invalidated",
+          "actual": "idle",
+          "expected": "idle",
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "already-open-result-cannot-edit-after-import-same-text-new-document",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "provider candidate opened",
+          "actual": "open",
+          "expected": "open",
+          "verdict": "passed"
+        },
+        {
+          "label": "old choose rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no edit callback",
+          "actual": [],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "old popup invalidated",
+          "actual": "idle",
+          "expected": "idle",
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "already-open-result-cannot-edit-after-import-same-text-new-snapshot",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "provider candidate opened",
+          "actual": "open",
+          "expected": "open",
+          "verdict": "passed"
+        },
+        {
+          "label": "old choose rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no edit callback",
+          "actual": [],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "old popup invalidated",
+          "actual": "idle",
+          "expected": "idle",
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "already-open-result-cannot-edit-after-caret",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "provider candidate opened",
+          "actual": "open",
+          "expected": "open",
+          "verdict": "passed"
+        },
+        {
+          "label": "old choose rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no edit callback",
+          "actual": [],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "old popup invalidated",
+          "actual": "idle",
+          "expected": "idle",
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "already-open-result-cannot-edit-after-range-selection",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "provider candidate opened",
+          "actual": "open",
+          "expected": "open",
+          "verdict": "passed"
+        },
+        {
+          "label": "old choose rejected",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "no edit callback",
+          "actual": [],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "old popup invalidated",
+          "actual": "idle",
+          "expected": "idle",
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "viewport-and-footer-placement-with-zoom-keyboard-and-clipping",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "layout viewport fallback",
+          "actual": {
+            "left": 0,
+            "top": 0,
+            "right": 390,
+            "bottom": 844
+          },
+          "expected": {
+            "left": 0,
+            "top": 0,
+            "right": 390,
+            "bottom": 844
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "visual viewport offsets",
+          "actual": {
+            "left": 15,
+            "top": 100,
+            "right": 375,
+            "bottom": 430
+          },
+          "expected": {
+            "left": 15,
+            "top": 100,
+            "right": 375,
+            "bottom": 430
+          },
+          "verdict": "passed"
+        },
+        {
+          "label": "one row and full footer fit",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "inside visible editor/viewport",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "footer reserved before list",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "one row and full footer fit",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "inside visible editor/viewport",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "footer reserved before list",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "insufficient row/footer room closes",
+          "actual": null,
+          "expected": null,
+          "verdict": "passed"
+        },
+        {
+          "label": "caret hidden behind keyboard closes",
+          "actual": null,
+          "expected": null,
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    },
+    {
+      "id": "pending-short-shell-to-open-reserves-independent-footer",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "pending visible",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "open visible",
+          "actual": false,
+          "expected": false,
+          "verdict": "passed"
+        },
+        {
+          "label": "footer hint present",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        },
+        {
+          "label": "list reserves measured footer",
+          "actual": 37,
+          "expected": 37,
+          "verdict": "passed"
+        },
+        {
+          "label": "list keeps one row",
+          "actual": true,
+          "expected": true,
+          "verdict": "passed"
+        }
+      ],
+      "observation": {
+        "shell": "290px",
+        "list": "253px",
+        "footerHeight": 37,
+        "placement": "below"
+      },
+      "verdict": "passed"
+    },
+    {
+      "id": "popup-old-dom-focus-readonly-and-scroll-gesture-gates",
+      "scope": "controlled-editor-and-geometry",
+      "checks": [
+        {
+          "label": "old DOM does not choose",
+          "actual": [
+            {
+              "index": 0,
+              "token": 11
+            }
+          ],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "readonly does not choose",
+          "actual": [
+            {
+              "index": 0,
+              "token": 11
+            }
+          ],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "lost focus does not choose",
+          "actual": [
+            {
+              "index": 0,
+              "token": 11
+            }
+          ],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "touch scroll is not selection",
+          "actual": [
+            {
+              "index": 0,
+              "token": 11
+            }
+          ],
+          "expected": [],
+          "verdict": "passed"
+        },
+        {
+          "label": "touch tap plus compatibility click selects once",
+          "actual": [
+            {
+              "index": 0,
+              "token": 11
+            }
+          ],
+          "expected": [
+            {
+              "index": 0,
+              "token": 11
+            }
+          ],
+          "verdict": "passed"
+        },
+        {
+          "label": "disposed DOM cannot select",
+          "actual": [
+            {
+              "index": 0,
+              "token": 11
+            }
+          ],
+          "expected": [
+            {
+              "index": 0,
+              "token": 11
+            }
+          ],
+          "verdict": "passed"
+        }
+      ],
+      "verdict": "passed"
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "status": "compiled",
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-unavailable-declaration-deprecated-warning-positive",
+  "sourceHash": "sha256:c1421ae1d8b6aafac1b996cec526484c84d6dd8fb5f727b9e4a240c00d1e1180",
+  "snapshotId": "9a4437d6-ec0e-42f2-97c4-6fb3d04007a9",
+  "artifactId": "wasm-36d5fde00e9c93e64b907ed13be2da3f5011592834455482ef19c37ac89876c6",
+  "target": {
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ]
+  },
+  "language": {
+    "language": "cpp",
+    "standard": "c++17"
+  },
+  "mode": "run",
+  "compilerArguments": [
+    "-cc1",
+    "-emit-obj",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-o",
+    "build/main.o",
+    "/project/main.cpp"
+  ],
+  "linkerArguments": [
+    "--no-threads",
+    "--export-dynamic",
+    "-z",
+    "stack-size=1048576",
+    "--max-memory=268435456",
+    "-Llib/wasm32-wasi",
+    "lib/wasm32-wasi/crt1.o",
+    "build/main.o",
+    "-lc++",
+    "-lc++abi",
+    "-lc",
+    "-lm",
+    "lib/clang/8.0.1/lib/wasi/libclang_rt.builtins-wasm32.a",
+    "-o",
+    "build/main.wasm"
+  ],
+  "sourceMappings": [],
+  "executableRef": {
+    "id": "wasm-36d5fde00e9c93e64b907ed13be2da3f5011592834455482ef19c37ac89876c6",
+    "relativePath": "compiler-builds/wasm-36d5fde00e9c93e64b907ed13be2da3f5011592834455482ef19c37ac89876c6/main.wasm",
+    "sha256": "sha256:36d5fde00e9c93e64b907ed13be2da3f5011592834455482ef19c37ac89876c6",
+    "byteLength": 13510,
+    "mediaType": "application/wasm",
+    "version": "binji-wasm-clang-648c4a89997a"
+  },
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "message": "'surface_declaration_a8ee505af129_deprecated' is deprecated: person05-deprecated",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 9,
+          "column": 10
+        }
+      }
+    },
+    {
+      "severity": "note",
+      "message": "'surface_declaration_a8ee505af129_deprecated' has been explicitly marked deprecated here",
+      "range": {
+        "start": {
+          "sourcePath": "main.cpp",
+          "line": 3,
+          "column": 16
+        }
+      }
+    }
+  ],
+  "rawDiagnostics": "/project/main.cpp:9:10: warning: 'surface_declaration_a8ee505af129_deprecated' is deprecated: person05-deprecated\n  return surface_declaration_a8ee505af129_deprecated();\n         ^\n/project/main.cpp:3:16: note: 'surface_declaration_a8ee505af129_deprecated' has been explicitly marked deprecated here\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_declaration_a8ee505af129_deprecated();\n               ^\n1 warning generated.\n",
+  "wasm": {
+    "format": "wasm-v1",
+    "sections": [
+      {
+        "id": 1,
+        "byteLength": 30,
+        "payloadOffset": 10
+      },
+      {
+        "id": 2,
+        "byteLength": 242,
+        "payloadOffset": 43
+      },
+      {
+        "id": 3,
+        "byteLength": 25,
+        "payloadOffset": 287
+      },
+      {
+        "id": 4,
+        "byteLength": 5,
+        "payloadOffset": 314
+      },
+      {
+        "id": 5,
+        "byteLength": 5,
+        "payloadOffset": 321
+      },
+      {
+        "id": 6,
+        "byteLength": 23,
+        "payloadOffset": 328
+      },
+      {
+        "id": 7,
+        "byteLength": 218,
+        "payloadOffset": 354
+      },
+      {
+        "id": 10,
+        "byteLength": 11844,
+        "payloadOffset": 575
+      },
+      {
+        "id": 11,
+        "byteLength": 516,
+        "payloadOffset": 12422
+      },
+      {
+        "id": 0,
+        "name": "name",
+        "byteLength": 569,
+        "payloadOffset": 12946
+      }
+    ],
+    "dwarfSections": [],
+    "imports": [
+      {
+        "module": "wasi_unstable",
+        "name": "fd_prestat_get",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "fd_prestat_dir_name",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "environ_sizes_get",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "environ_get",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "args_sizes_get",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "args_get",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "proc_exit",
+        "kind": "function"
+      },
+      {
+        "module": "wasi_unstable",
+        "name": "fd_fdstat_get",
+        "kind": "function"
+      }
+    ]
+  },
+  "metrics": {
+    "loadMs": 136.39509999999973,
+    "compileMs": 122.47199999999975,
+    "linkMs": 21.096700000000055,
+    "totalMs": 156.431700000001,
+    "observedLinearMemoryBytes": {
+      "compilerAfterExecution": 7274496,
+      "linkerAfterExecution": 9306112,
+      "filesystem": 9437184
+    },
+    "memoryNote": "Post-phase linear memory sizes; not process RSS, peak memory, or an iPad measurement."
+  },
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "linkerResourceHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+  "smoke": {
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "memoryBytes": 1179648
+  },
+  "objectSha256": "sha256:3b242f7397fc0dc8fb94901f2cb79c36bf1bcb834754f3b7d6dfc32d0a8fc4e0",
+  "objectByteLength": 492,
+  "binaryEvidence": {
+    "executable": {
+      "file": "controls/fix-unavailable-declaration/deprecated-warning-positive/main.wasm",
+      "byteLength": 13510,
+      "sha256": "sha256:36d5fde00e9c93e64b907ed13be2da3f5011592834455482ef19c37ac89876c6"
+    },
+    "object": {
+      "file": "controls/fix-unavailable-declaration/deprecated-warning-positive/main.o",
+      "byteLength": 492,
+      "sha256": "sha256:3b242f7397fc0dc8fb94901f2cb79c36bf1bcb834754f3b7d6dfc32d0a8fc4e0"
+    }
+  }
+}

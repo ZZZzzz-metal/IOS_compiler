@@ -1,0 +1,921 @@
+{
+  "requestId": "CC-20261029-05",
+  "expectedCommit": "bddae57653bede9a38a3510006d761e2a9d19a04",
+  "targetPath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05",
+  "mode": "both",
+  "targetUnchanged": true,
+  "attemptedProviderCalls": 60,
+  "completedProviderResponses": 60,
+  "cleanupErrors": [],
+  "featureAcceptance": "partial-provider-evidence-only; UI/offline-package/iPad remain pending",
+  "counts": {
+    "passed": 29,
+    "failed": 0,
+    "boundary-failed": 1,
+    "infrastructure-failed": 0,
+    "ui-pending": 3,
+    "pending": 0
+  },
+  "cases": [
+    {
+      "caseId": "type-a",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "type-a",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.120Z",
+          "elapsedMs": 194.54180000000008,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "type-a",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.362Z",
+          "elapsedMs": 179.28510000000006,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "type-b",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "type-b",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.317Z",
+          "elapsedMs": 19.527399999999943,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "type-b",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.542Z",
+          "elapsedMs": 20.405299999999897,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "renamed-member",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "renamed-member",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.337Z",
+          "elapsedMs": 16.309099999999944,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "renamed-member",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.564Z",
+          "elapsedMs": 18.161799999999857,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "access-control",
+      "support": "boundary",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "access-control",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.356Z",
+          "elapsedMs": 17.38740000000007,
+          "verdict": "passed",
+          "support": "boundary",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "access-control",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.583Z",
+          "elapsedMs": 18.805500000000393,
+          "verdict": "passed",
+          "support": "boundary",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "pointer",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "pointer",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.374Z",
+          "elapsedMs": 17.387100000000146,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "pointer",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.603Z",
+          "elapsedMs": 19.66989999999987,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "namespace",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "namespace",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.393Z",
+          "elapsedMs": 15.15240000000017,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "namespace",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.623Z",
+          "elapsedMs": 21.345400000000154,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "local-prefix",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "local-prefix",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.409Z",
+          "elapsedMs": 18.366300000000138,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "local-prefix",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.646Z",
+          "elapsedMs": 20.096900000000005,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "function-prefix",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "function-prefix",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.430Z",
+          "elapsedMs": 15.571500000000015,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 3,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "function-prefix",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.666Z",
+          "elapsedMs": 17.210999999999785,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 3,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "shadow-inner",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "shadow-inner",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.447Z",
+          "elapsedMs": 16.987600000000157,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 5,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "shadow-inner",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.685Z",
+          "elapsedMs": 19.307600000000093,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 5,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "shadow-restored",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "shadow-restored",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.465Z",
+          "elapsedMs": 16.782200000000103,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 5,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "shadow-restored",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.705Z",
+          "elapsedMs": 19.874799999999595,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 5,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "declaration-order",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "declaration-order",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.483Z",
+          "elapsedMs": 17.463199999999915,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "declaration-order",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.726Z",
+          "elapsedMs": 19.476800000000367,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "nested-member",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "nested-member",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.501Z",
+          "elapsedMs": 18.539099999999962,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 5,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "nested-member",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.746Z",
+          "elapsedMs": 21.971599999999853,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 5,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "vector",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "vector",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.521Z",
+          "elapsedMs": 251.59849999999983,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 55,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "vector",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:33.769Z",
+          "elapsedMs": 245.59640000000036,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 55,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "string",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "string",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.774Z",
+          "elapsedMs": 157.4964,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 144,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "string",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.016Z",
+          "elapsedMs": 160.61049999999977,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 144,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "chinese-prefix",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "chinese-prefix",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.932Z",
+          "elapsedMs": 18.09960000000001,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "chinese-prefix",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.178Z",
+          "elapsedMs": 20.41249999999991,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "nonbmp-prefix",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "nonbmp-prefix",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.953Z",
+          "elapsedMs": 17.121700000000146,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "nonbmp-prefix",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.199Z",
+          "elapsedMs": 22.690500000000156,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "nonbmp-member",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "nonbmp-member",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.972Z",
+          "elapsedMs": 16.782799999999952,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "nonbmp-member",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.223Z",
+          "elapsedMs": 23.24160000000029,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "included-source",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "included-source",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:32.990Z",
+          "elapsedMs": 17.650300000000016,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "included-source",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.248Z",
+          "elapsedMs": 22.027300000000196,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "include-omitted",
+      "support": "boundary",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "include-omitted",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.008Z",
+          "elapsedMs": 18.8741,
+          "verdict": "passed",
+          "support": "boundary",
+          "itemCount": 0,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "include-omitted",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.271Z",
+          "elapsedMs": 27.876600000000053,
+          "verdict": "passed",
+          "support": "boundary",
+          "itemCount": 0,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "unfinished",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "unfinished",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.029Z",
+          "elapsedMs": 17.22510000000011,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "unfinished",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.300Z",
+          "elapsedMs": 23.8436999999999,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 6,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "const-members",
+      "support": "boundary",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "const-members",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.047Z",
+          "elapsedMs": 14.502199999999903,
+          "verdict": "passed",
+          "support": "boundary",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "const-members",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.325Z",
+          "elapsedMs": 23.71329999999989,
+          "verdict": "passed",
+          "support": "boundary",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "c-struct",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "c-struct",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.063Z",
+          "elapsedMs": 15.724299999999857,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "c-struct",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.350Z",
+          "elapsedMs": 22.43679999999995,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "c-pointer",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "c-pointer",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.080Z",
+          "elapsedMs": 16.48569999999995,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "c-pointer",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.374Z",
+          "elapsedMs": 23.11959999999999,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "c-prefix",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "c-prefix",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.098Z",
+          "elapsedMs": 14.629599999999982,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "c-prefix",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.399Z",
+          "elapsedMs": 24.98050000000012,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 2,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "comment",
+      "support": "required",
+      "verdict": "ui-pending",
+      "observations": []
+    },
+    {
+      "caseId": "string-literal",
+      "support": "required",
+      "verdict": "ui-pending",
+      "observations": []
+    },
+    {
+      "caseId": "decimal",
+      "support": "required",
+      "verdict": "ui-pending",
+      "observations": []
+    },
+    {
+      "caseId": "enum",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "enum",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.114Z",
+          "elapsedMs": 14.652700000000095,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "enum",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.425Z",
+          "elapsedMs": 22.933100000000195,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "char-case",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "char-case",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.129Z",
+          "elapsedMs": 17.02800000000002,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 5,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "char-case",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.449Z",
+          "elapsedMs": 20.742999999999938,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 5,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "char-sizeof",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "char-sizeof",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.148Z",
+          "elapsedMs": 15.682399999999916,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 5,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "char-sizeof",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.471Z",
+          "elapsedMs": 24.427200000000084,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 5,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "pattern-variable",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "pattern-variable",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.166Z",
+          "elapsedMs": 14.903099999999995,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "pattern-variable",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.497Z",
+          "elapsedMs": 21.11959999999999,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "pattern-function",
+      "support": "required",
+      "verdict": "passed",
+      "observations": [
+        {
+          "caseId": "pattern-function",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.182Z",
+          "elapsedMs": 16.378400000000056,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        },
+        {
+          "caseId": "pattern-function",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.520Z",
+          "elapsedMs": 21.93849999999975,
+          "verdict": "passed",
+          "support": "required",
+          "itemCount": 1,
+          "isIncomplete": false,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "caseId": "const-string",
+      "support": "boundary",
+      "verdict": "boundary-failed",
+      "observations": [
+        {
+          "caseId": "const-string",
+          "path": "adapter",
+          "startedAt": "2026-10-29T16:30:33.200Z",
+          "elapsedMs": 146.81369999999993,
+          "verdict": "boundary-failed",
+          "support": "boundary",
+          "itemCount": 82,
+          "isIncomplete": false,
+          "errors": [
+            {
+              "category": "availability",
+              "code": "ineligible-confirmable",
+              "detail": "append"
+            }
+          ]
+        },
+        {
+          "caseId": "const-string",
+          "path": "native",
+          "startedAt": "2026-10-29T16:30:34.544Z",
+          "elapsedMs": 200.86209999999983,
+          "verdict": "boundary-failed",
+          "support": "boundary",
+          "itemCount": 82,
+          "isIncomplete": false,
+          "errors": [
+            {
+              "category": "availability",
+              "code": "ineligible-confirmable",
+              "detail": "append"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

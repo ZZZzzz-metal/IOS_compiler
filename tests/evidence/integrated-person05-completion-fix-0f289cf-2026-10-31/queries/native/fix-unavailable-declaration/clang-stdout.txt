@@ -1,0 +1,3 @@
+COMPLETION: surface_declaration_a8ee505af129_allowed : [#int#]surface_declaration_a8ee505af129_allowed()
+COMPLETION: surface_declaration_a8ee505af129_blocked (Inaccessible) : [#int#]surface_declaration_a8ee505af129_blocked()
+COMPLETION: surface_declaration_a8ee505af129_deprecated : [#int#]surface_declaration_a8ee505af129_deprecated()

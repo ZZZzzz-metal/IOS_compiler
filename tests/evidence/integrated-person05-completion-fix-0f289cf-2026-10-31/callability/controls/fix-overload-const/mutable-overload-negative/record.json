@@ -1,0 +1,70 @@
+{
+  "fixtureId": "fix-overload-const",
+  "controlId": "mutable-overload-negative",
+  "controlSet": "original-11-controls",
+  "startedAt": "2026-10-31T02:16:48.139Z",
+  "passed": true,
+  "sourceHash": "sha256:a6bc8d61446f246f08a5a54826b5c1f22e8ca6d965d78741f1a552accdd6228f",
+  "actualStatus": "failed",
+  "reason": "compiler-exit",
+  "elapsedMs": 742.5982000000004,
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit"
+  },
+  "semantic": {
+    "kind": "const",
+    "member": "choose_a8ee505af129",
+    "sourcePath": "main.cpp",
+    "line": 7
+  },
+  "diagnosticGroups": [
+    {
+      "index": 0,
+      "error": {
+        "severity": "error",
+        "message": "no matching member function for call to 'choose_a8ee505af129'",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 30
+          }
+        }
+      },
+      "notes": [
+        {
+          "severity": "note",
+          "message": "candidate function not viable: 'this' argument has type 'const Record_a8ee505af129', but method is not marked const",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 3,
+              "column": 7
+            }
+          }
+        },
+        {
+          "severity": "note",
+          "message": "candidate function not viable: requires 0 arguments, but 1 was provided",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 2,
+              "column": 7
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "binaryEvidence": {},
+  "actualCompilerIdentity": {
+    "toolchainId": null,
+    "compilerResourceHash": null,
+    "linkerResourceHash": null,
+    "sysrootResourceHash": null
+  },
+  "workersReleased": true
+}

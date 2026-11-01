@@ -1,0 +1,16 @@
+{
+  "id": "main-21",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd run test:acceptance"
+  ],
+  "startedAt": "2026-10-29T16:34:50.015Z",
+  "endedAt": "2026-10-29T16:35:00.073Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "evidenceDirectory": "tests/evidence/integrated-person05-completion-runtime-bddae576-2026-10-30/verification/details/main-21"
+}

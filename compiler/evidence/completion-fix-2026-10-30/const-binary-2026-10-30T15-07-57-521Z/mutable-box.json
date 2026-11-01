@@ -1,0 +1,30 @@
+{
+  "source": "struct N{template<class T>void mutate(T);template<class T>int view(T)const;static int factory();};void f(){N n{};n.;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:1:116",
+    "/project/main.cpp"
+  ],
+  "exitCode": 0,
+  "stdout": "COMPLETION: factory : [#int#]factory()\nCOMPLETION: mutate : [#void#]mutate(<#T#>)\nCOMPLETION: N : N::\nCOMPLETION: operator= : [#N &#]operator=(<#const N &#>)\nCOMPLETION: operator= : [#N &#]operator=(<#N &&#>)\nCOMPLETION: view : [#int#]view(<#T#>)[# const#]\nCOMPLETION: ~N : [#void#]~N()\n",
+  "stderr": "",
+  "memoryBytes": 7012352
+}

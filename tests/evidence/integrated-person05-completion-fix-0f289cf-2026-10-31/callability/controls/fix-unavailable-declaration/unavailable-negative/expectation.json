@@ -1,0 +1,14 @@
+{
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "person05-unavailable"
+  },
+  "semantic": {
+    "kind": "unavailable",
+    "member": "surface_declaration_a8ee505af129_blocked",
+    "sourcePath": "main.cpp",
+    "line": 9,
+    "errorPattern": "person05-unavailable"
+  }
+}

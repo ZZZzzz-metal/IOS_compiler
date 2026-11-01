@@ -1,0 +1,87 @@
+{
+  "id": 18,
+  "name": "fresh-beta-type-change",
+  "at": "2026-10-30T01:35:21.846Z",
+  "expectation": "changing receiver to PersonBeta yields betaValue, excludes both alpha members",
+  "state": "Browser tab: 3, Title: \"算法工作台 · 四号验证原型\", URL: \"http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 107-115\n~\t\t6 button 校验本地资源, ID: prepare\n~\t\t16 button 编译运行, Help: 编译运行（Ctrl+F5 / Ctrl+6）, ID: run\n~\t\t17 button 编译调试, Help: 编译调试（F5 / Ctrl+5）, ID: debug\n+\t\t119 text 已结束\n+\t\t\t120 text main.cpp\n+\t\t\t121 text 源码已修改 · 请重新编译\n+\t\t\t\t122 button 1, Help: 第 1 行：切换断点\n+\t\t\t\t123 button 2, Help: 第 2 行：切换断点\n+\t\t\t\t124 button 3, Help: 第 3 行：切换断点\n+\t\t\t125 text 5 个提示 · ↑↓选择，Tab 或 Enter 插入\n+\t\t\t126 text 草稿已保存 · 版本 4\n~\t\t\t\t87 heading 程序输出 stop, Value: 2\n+\t\t\t\t\t127 text stop\n+\t\t\t\t\t128 text 尚无输出\n+\t129 container completion-popup\n+\t\t130 list Description: 代码提示, ID: completion-list-1\n+\t\t\t131 (selected) Help: PersonBeta::, Value: 符号 PersonBeta PersonBeta::, ID: completion-option-1-59-0\n+\t\t\t132 Help: int betaValue, Value: 符号 betaValue int betaValue, ID: completion-option-1-59-1\n+\t\t\t133 Help: PersonBeta & operator=(const PersonBeta &), Value: 符号 operator= PersonBeta & operator=(const PersonBeta &), ID: completion-option-1-59-2\n+\t\t\t134 Help: PersonBeta & operator=(PersonBeta &&), Value: 符号 operator= PersonBeta & operator=(PersonBeta &&), ID: completion-option-1-59-3\n+\t\t\t135 Help: void ~PersonBeta(), Value: 符号 ~PersonBeta void ~PersonBeta(), ID: completion-option-1-59-4\n+\t\t136 text ↑↓ 选择 · Tab / Enter 插入 · Esc 关闭\nThe focused UI element is 69 text entry area (settable) Description: 源代码, ID: source, Value: struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonBeta value; value.",
+  "dom": {
+    "body": "算法工作台\n开发验证原型\n\n粘贴代码，带着输入运行，在暂停处排错。\n\n校验本地资源\n本版本离线资源已校验 · iPad 真机待验证\niPad 离线冷启动待验证\nClang 8.0.1 / wasm32\n原型说明与验证步骤\nC++17\nC11\n编译运行\n编译调试\n继续\n进入\n跳过\n跳出\n停止\n已结束\nCtrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n键盘快捷键 无 F 键也能调试\n代码\n粘贴代码\n复制题站源码\n导入\n仅题站源码\n完整草稿\n导出\n题站源码\n测试驱动\n查看调试快照\nmain.cpp\n源码已修改 · 请重新编译\n1\n2\n3\nstruct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonBeta value; value.\n\n切换断点\n代码提示\n缩进\n取消缩进\n下一处\n\n5 个提示 · ↑↓选择，Tab 或 Enter 插入\n\n草稿已保存 · 版本 4\n断点与编译诊断\n样例输入\n运行前一次性提供\n程序输出\nstop\n尚无输出\n调用栈\n调试暂停后显示真实调用栈\n局部变量\n调试暂停后读取变量\n基础监视\n查看\n\n支持范围以适配器为准；函数调用、赋值和自增不可用。\n\n选择暂停栈帧后查询\n符号\nPersonBeta\nPersonBeta::\n符号\nbetaValue\nint betaValue\n符号\noperator=\nPersonBeta & operator=(const PersonBeta &)\n符号\noperator=\nPersonBeta & operator=(PersonBeta &&)\n符号\n~PersonBeta\nvoid ~PersonBeta()\n↑↓ 选择 · Tab / Enter 插入 · Esc 关闭",
+    "fields": [
+      {
+        "disabled": false,
+        "id": "language",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "cpp"
+      },
+      {
+        "disabled": false,
+        "id": "shortcut-scheme",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "control-number"
+      },
+      {
+        "disabled": false,
+        "id": "export-mode",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "user-source"
+      },
+      {
+        "disabled": false,
+        "id": "file",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "source",
+        "readOnly": false,
+        "selectionEnd": 130,
+        "selectionStart": 130,
+        "value": "struct PersonAlpha { int alphaValue; int alphaCount; };\nstruct PersonBeta { int betaValue; };\nint main(){ PersonBeta value; value."
+      },
+      {
+        "disabled": false,
+        "id": "find",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "stdin",
+        "readOnly": false,
+        "selectionEnd": 2,
+        "selectionStart": 2,
+        "value": "3\n"
+      },
+      {
+        "disabled": false,
+        "id": "expression",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "clipboard-text",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      }
+    ],
+    "popup": "<div class=\"completion-list\" id=\"completion-list-1\" role=\"listbox\" aria-label=\"代码提示\" aria-busy=\"false\" style=\"max-height: 183.333px;\"><div class=\"completion-option is-selected\" id=\"completion-option-1-59-0\" role=\"option\" title=\"PersonBeta::\" aria-selected=\"true\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">PersonBeta</span><span class=\"completion-detail\">PersonBeta::</span></div><div class=\"completion-option\" id=\"completion-option-1-59-1\" role=\"option\" title=\"int betaValue\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">betaValue</span><span class=\"completion-detail\">int betaValue</span></div><div class=\"completion-option\" id=\"completion-option-1-59-2\" role=\"option\" title=\"PersonBeta &amp; operator=(const PersonBeta &amp;)\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">operator=</span><span class=\"completion-detail\">PersonBeta &amp; operator=(const PersonBeta &amp;)</span></div><div class=\"completion-option\" id=\"completion-option-1-59-3\" role=\"option\" title=\"PersonBeta &amp; operator=(PersonBeta &amp;&amp;)\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">operator=</span><span class=\"completion-detail\">PersonBeta &amp; operator=(PersonBeta &amp;&amp;)</span></div><div class=\"completion-option\" id=\"completion-option-1-59-4\" role=\"option\" title=\"void ~PersonBeta()\" aria-selected=\"false\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">~PersonBeta</span><span class=\"completion-detail\">void ~PersonBeta()</span></div></div>",
+    "title": "算法工作台 · 四号验证原型",
+    "url": "http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html"
+  }
+}

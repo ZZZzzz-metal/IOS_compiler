@@ -1,0 +1,238 @@
+sections [
+  [ 1, 2275 ],      [ 2, 803 ],
+  [ 3, 54424 ],     [ 4, 9 ],
+  [ 5, 3 ],         [ 6, 5170 ],
+  [ 7, 94311 ],     [ 9, 42679 ],
+  [ 10, 25177807 ], [ 11, 5830893 ],
+  [ 0, 2297 ],      [ 0, 21 ],
+  [ 0, 55 ],        [ 0, 206 ],
+  [ 0, 979 ],       [ 0, 781 ],
+  [ 0, 1697 ]
+]
+data segments 36208
+{
+  "sections": [
+    {
+      "id": 1,
+      "byteLength": 2275,
+      "payloadOffset": 11
+    },
+    {
+      "id": 2,
+      "byteLength": 803,
+      "payloadOffset": 2289
+    },
+    {
+      "id": 3,
+      "byteLength": 54424,
+      "payloadOffset": 3096
+    },
+    {
+      "id": 4,
+      "byteLength": 9,
+      "payloadOffset": 57522
+    },
+    {
+      "id": 5,
+      "byteLength": 3,
+      "payloadOffset": 57533
+    },
+    {
+      "id": 6,
+      "byteLength": 5170,
+      "payloadOffset": 57539
+    },
+    {
+      "id": 7,
+      "byteLength": 94311,
+      "payloadOffset": 62713
+    },
+    {
+      "id": 9,
+      "byteLength": 42679,
+      "payloadOffset": 157028
+    },
+    {
+      "id": 10,
+      "byteLength": 25177807,
+      "payloadOffset": 199712
+    },
+    {
+      "id": 11,
+      "byteLength": 5830893,
+      "payloadOffset": 25377524
+    },
+    {
+      "id": 0,
+      "name": ".debug_info",
+      "byteLength": 2297,
+      "payloadOffset": 31208432,
+      "dwarfVersion": 4
+    },
+    {
+      "id": 0,
+      "name": ".debug_macinfo",
+      "byteLength": 21,
+      "payloadOffset": 31210734
+    },
+    {
+      "id": 0,
+      "name": ".debug_loc",
+      "byteLength": 55,
+      "payloadOffset": 31210753
+    },
+    {
+      "id": 0,
+      "name": ".debug_ranges",
+      "byteLength": 206,
+      "payloadOffset": 31210814
+    },
+    {
+      "id": 0,
+      "name": ".debug_abbrev",
+      "byteLength": 979,
+      "payloadOffset": 31211023
+    },
+    {
+      "id": 0,
+      "name": ".debug_line",
+      "byteLength": 781,
+      "payloadOffset": 31212003
+    },
+    {
+      "id": 0,
+      "name": ".debug_str",
+      "byteLength": 1697,
+      "payloadOffset": 31212786
+    }
+  ],
+  "strings": [
+    {
+      "needle": "COMPLETION: ",
+      "address": 5830046,
+      "fileOffset": 30996260
+    },
+    {
+      "needle": "Inaccessible",
+      "address": 5830073,
+      "fileOffset": 30996287
+    },
+    {
+      "needle": "OVERLOAD: ",
+      "address": 5830157,
+      "fileOffset": 30996371
+    }
+  ],
+  "targetFunctions": [
+    {
+      "index": 39589,
+      "start": 18105517,
+      "end": 18108117
+    }
+  ],
+  "out": "file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-02/compiler/evidence/completion-fix-2026-10-30/binary-2026-10-30T15-04-21-979Z/"
+}
+availability 0 COMPLETION: personAllowed : [#int#]personAllowed()
+COMPLETION: personBlocked (Inaccessible) : [#int#]personBlocked()
+COMPLETION: personDeprecated : [#int#]personDeprecated()
+
+const-user 0 COMPLETION: Box : Box::
+COMPLETION: mutate : [#void#]mutate(<#T#>)
+COMPLETION: value : [#int#]value
+COMPLETION: view : [#int#]view(<#T#>)[# const#]
+
+mutable-user 0 COMPLETION: Box : Box::
+COMPLETION: mutate : [#void#]mutate(<#T#>)
+COMPLETION: operator= : [#Box &#]operator=(<#const Box &#>)
+COMPLETION: operator= : [#Box &#]operator=(<#Box &&#>)
+COMPLETION: value : [#int#]value
+COMPLETION: view : [#int#]view(<#T#>)[# const#]
+COMPLETION: ~Box : [#void#]~Box()
+
+const-string 0 COMPLETION: append : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]append(<#const _Tp &__t#>)
+COMPLETION: append : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]append(<#const _Tp &__t#>, <#size_type __pos#>{#, <#size_type __n = npos#>#})
+COMPLETION: append : [#typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type#]append(<#_InputIterator __first#>, <#_InputIterator __last#>)
+COMPLETION: append : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type#]append(<#_ForwardIterator __first#>, <#_ForwardIterator __last#>)
+
+mutable-string 0 COMPLETION: append : [#basic_string<char> &#]append(<#const basic_string<char> &__str#>)
+COMPLETION: append : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]append(<#const _Tp &__t#>)
+COMPLETION: append : [#basic_string<char> &#]append(<#const basic_string<char> &__str#>, <#size_type __pos#>{#, <#size_type __n = npos#>#})
+COMPLETION: append : [#typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type#]append(<#const _Tp &__t#>, <#size_type __pos#>{#, <#size_type __n = npos#>#})
+COMPLETION: append : [#basic_string<char> &#]append(<#const value_type *__s#>, <#size_type __n#>)
+COMPLETION: append : [#basic_string<char> &#]append(<#const value_type *__s#>)
+COMPLETION: append : [#basic_string<char> &#]append(<#size_type __n#>, <#value_type __c#>)
+COMPLETION: append : [#typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type#]append(<#_InputIterator __first#>, <#_InputIterator __last#>)
+COMPLETION: append : [#typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type#]append(<#_ForwardIterator __first#>, <#_ForwardIterator __last#>)
+COMPLETION: append : [#basic_string<char> &#]append(<#initializer_list<value_type> __il#>)
+
+mixed-overloads 0 COMPLETION: Pattern : alignas(<#expression#>)
+COMPLETION: Pattern : [#size_t#]alignof(<#type#>)
+COMPLETION: alpha (Inaccessible) : [#int#]alpha(<#int#>)
+COMPLETION: alpha : [#double#]alpha(<#double#>)
+COMPLETION: alpha : [#float#]alpha(<#float#>)
+
+member-availability 0 COMPLETION: alphaAllowed : [#int#]alphaAllowed()
+COMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked()
+COMPLETION: alphaOld : [#int#]alphaOld()
+
+static-member-availability 0 COMPLETION: alphaAllowed : [#int#]alphaAllowed()
+COMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked()
+COMPLETION: alphaOld : [#int#]alphaOld()
+
+template-member-availability 0 COMPLETION: alphaAllowed : [#int#]alphaAllowed(<#T#>)
+COMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked(<#T#>)
+COMPLETION: alphaOld : [#int#]alphaOld(<#T#>)
+
+template-global-availability 0 COMPLETION: Pattern : alignas(<#expression#>)
+COMPLETION: Pattern : [#size_t#]alignof(<#type#>)
+COMPLETION: alphaAllowed : [#int#]alphaAllowed(<#T#>)
+COMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked(<#T#>)
+COMPLETION: alphaOld : [#int#]alphaOld(<#T#>)
+
+namespace-alias-availability 0 COMPLETION: alphaAllowed : [#int#]alphaAllowed()
+COMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked()
+COMPLETION: alphaOld : [#int#]alphaOld()
+
+using-availability 0 COMPLETION: Pattern : alignas(<#expression#>)
+COMPLETION: Pattern : [#size_t#]alignof(<#type#>)
+COMPLETION: alphaAllowed : [#int#]alphaAllowed()
+COMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked()
+COMPLETION: alphaOld : [#int#]alphaOld()
+
+inherited-availability 0 COMPLETION: alphaAllowed (InBase) : [#int#][#B::#]alphaAllowed()
+COMPLETION: alphaBlocked (InBase,Inaccessible) : [#int#][#B::#]alphaBlocked()
+COMPLETION: alphaOld (InBase) : [#int#][#B::#]alphaOld()
+
+field-availability 0 COMPLETION: alphaAllowed : [#int#]alphaAllowed
+COMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked
+COMPLETION: alphaOld : [#int#]alphaOld
+
+enum-availability 0 COMPLETION: Pattern : alignas(<#expression#>)
+COMPLETION: Pattern : [#size_t#]alignof(<#type#>)
+COMPLETION: alphaAllowed : [#N#]alphaAllowed
+COMPLETION: alphaBlocked (Inaccessible) : [#N#]alphaBlocked
+COMPLETION: alphaOld : [#N#]alphaOld
+
+redecl-earlier 0 COMPLETION: Pattern : alignas(<#expression#>)
+COMPLETION: Pattern : [#size_t#]alignof(<#type#>)
+COMPLETION: alphaAllowed : [#int#]alphaAllowed()
+COMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked()
+COMPLETION: alphaOld : [#int#]alphaOld()
+
+redecl-later 0 COMPLETION: Pattern : alignas(<#expression#>)
+COMPLETION: Pattern : [#size_t#]alignof(<#type#>)
+COMPLETION: alphaAllowed : [#int#]alphaAllowed()
+COMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked()
+COMPLETION: alphaOld : [#int#]alphaOld()
+
+platform-unrelated 0 COMPLETION: Pattern : alignas(<#expression#>)
+COMPLETION: Pattern : [#size_t#]alignof(<#type#>)
+COMPLETION: alphaAllowed : [#int#]alphaAllowed()
+COMPLETION: alphaBlocked (Inaccessible) : [#int#]alphaBlocked()
+COMPLETION: alphaOld : [#int#]alphaOld()
+COMPLETION: alphaPlatform : [#int#]alphaPlatform()
+
+declaration-alias 0 COMPLETION: AlphaAllowed : AlphaAllowed
+COMPLETION: AlphaBlocked (Inaccessible) : AlphaBlocked
+COMPLETION: AlphaOld : AlphaOld
+

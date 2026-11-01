@@ -1,0 +1,8 @@
+{
+  "actualRunSourceSHA": "291323cb93fe4a86e5ac1b73531f33e9803ef48bd74231fce04ae7b8fe7aa6f1",
+  "lateUnexecutedSourceSHA": "f800829229b4c795e321f7c45dfa3877eb7c6920f92a21b78457b73243ab6c17",
+  "parentAndChildInputsIdentical": true,
+  "restoredCurrentToActualRunSource": true,
+  "lateChange": "Independent sourceHash/files checks and attempted/call/reply counters only; no compile parameters, semantic oracle, fixtures or Worker changes.",
+  "handling": "Late unexecuted variant retained separately; executable runner restored to actual archived run bytes. Source/counter checks will be independently audited over raw evidence; no duplicated compilation or inflated unique-case count."
+}

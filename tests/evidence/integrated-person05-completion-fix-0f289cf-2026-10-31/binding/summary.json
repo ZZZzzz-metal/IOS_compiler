@@ -1,0 +1,125 @@
+{
+  "requestId": "CC-20261030-05",
+  "kind": "fixed-commit-integrated-source-binding",
+  "passed": true,
+  "rootPath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger",
+  "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+  "semanticsPath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+  "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+  "compatibilityId": "integration-prototype-c3e9a2fea60c51b3",
+  "resourceCount": 36,
+  "inputFileCount": 49,
+  "fixedGitResources": 32,
+  "lockedLocalResources": 4,
+  "checks": [
+    {
+      "name": "fixed candidate owner/profile identities",
+      "passed": true,
+      "detail": {
+        "rootCommit": "fb278778a7442443c5b8b066d6fd88a756a007ed",
+        "semanticsCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+        "profile": "integration-prototype-c3e9a2fea60c51b3",
+        "resourceCount": 36
+      }
+    },
+    {
+      "name": "runtime/API input sets are identical at the two fixed commits",
+      "passed": true
+    },
+    {
+      "name": "all runtime/API and recipe input Git blobs are byte-identical",
+      "passed": true,
+      "detail": {
+        "inputFiles": 49
+      }
+    },
+    {
+      "name": "root summary mapping fingerprints match fixed Git bytes",
+      "passed": true
+    },
+    {
+      "name": "all 36 declared backend resources bind to actual fixed/locked bytes",
+      "passed": true,
+      "detail": {
+        "fixedGitResources": 32,
+        "lockedLargeResources": 4,
+        "totalResourceBytes": 60647102
+      }
+    },
+    {
+      "name": "independent canonical manifest hash and derived profile ID",
+      "passed": true,
+      "detail": {
+        "manifestHash": "sha256:c3e9a2fea60c51b357384059523151619b4987ddfd2629e80f2bd870c3a8e81e",
+        "compatibilityId": "integration-prototype-c3e9a2fea60c51b3"
+      }
+    },
+    {
+      "name": "semantics module is in candidate manifest and recipe docs are in fixed offline source mapping",
+      "passed": true,
+      "detail": {
+        "candidateCompilerInputs": [
+          "compiler/src/compiler-adapter.mjs",
+          "compiler/src/compiler-probe.mjs",
+          "compiler/src/compiler-worker.mjs",
+          "compiler/src/toolchain-engine.mjs",
+          "compiler/src/completion-adapter.mjs",
+          "compiler/src/completion-worker.mjs",
+          "compiler/src/completion-engine.mjs",
+          "compiler/src/completion-source.mjs",
+          "compiler/src/completion-output.mjs",
+          "compiler/src/completion-semantics.mjs",
+          "compiler/src/wasm-host.mjs",
+          "compiler/src/wasm-inspect.mjs",
+          "compiler/src/source.mjs",
+          "compiler/src/diagnostics.mjs",
+          "compiler/resources/toolchain.lock.json",
+          "compiler/resources/LICENSES.md"
+        ],
+        "additionalOfflineInputs": [
+          "ui/probe.html",
+          "ui/style.css",
+          "ui/src/main.mjs",
+          "ui/src/session-controller.mjs",
+          "ui/src/editor.mjs",
+          "ui/src/completion-controller.mjs",
+          "ui/src/completion-popup.mjs",
+          "ui/src/completion-edit.mjs",
+          "ui/src/completion-editor.mjs",
+          "storage/src/draft-store.mjs",
+          "storage/src/autosave.mjs",
+          "ui/README.md",
+          "ui/SHORTCUTS.md",
+          "ui/COMPLETION.md",
+          "storage/README.md",
+          "compiler/README.md",
+          "compiler/COMPLETION.md",
+          "compiler/resources/completion-semantics-v1.md",
+          "compiler/resources/completion-semantics-v1.cpp.patch",
+          "debugger/README.md",
+          "app/offline/browser/trust.mjs"
+        ],
+        "recipeFiles": [
+          "compiler/resources/completion-semantics-v1.md",
+          "compiler/resources/completion-semantics-v1.cpp.patch"
+        ],
+        "scope": "Static source mapping is verified; no new offline package was built or accepted here."
+      }
+    },
+    {
+      "name": "completion identity remains distinct from original full-compile identity",
+      "passed": true
+    }
+  ],
+  "fatalError": null,
+  "actualProviderQueries": 0,
+  "actualCompilerCalls": 0,
+  "actualBrowserObservations": 0,
+  "scope": [
+    "All Git inputs read from explicit commits; moving worktree HEAD is not a test target.",
+    "Four ignored vendor binaries are read-only hashed against identical committed locks, not represented as Git blobs.",
+    "Identical runtime/API inputs bind existing fixed-owner semantics evidence to this root source combination.",
+    "Recipe documentation is checked in offline source mapping, not counted as part of the 36 backend resources.",
+    "No semantic rerun, new full package, browser/offline/iPad acceptance is claimed."
+  ]
+}

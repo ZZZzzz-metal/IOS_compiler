@@ -1,0 +1,13 @@
+{
+  "requestId": "99605757-88ae-460f-b2fc-906a15be7ab1-1-active-cancelled",
+  "documentVersion": 1,
+  "snapshotId": "99605757-88ae-460f-b2fc-906a15be7ab1-1-active-cancelled-snapshot",
+  "sourceHash": "sha256:fb6ef7c67fa0b4faad56a3e2eeccb7ab8767198c1ffd521130cfbd4db6cbc532",
+  "sourcePath": "main.cpp",
+  "offset": 65,
+  "status": "cancelled",
+  "items": [],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "reason": "user-cancelled"
+}

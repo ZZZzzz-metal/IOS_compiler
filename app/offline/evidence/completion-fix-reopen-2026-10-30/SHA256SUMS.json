@@ -1,0 +1,42 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "mandatory-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "5d1480cbe16180dcb10a909325cf43882e6413aed4078916cfcd63a6613b8575"
+  },
+  {
+    "file": "mandatory-commands.json",
+    "byteLength": 124,
+    "sha256": "03e7c4e243ad353eae275a8ef5755bdce90c4c4475ba2d42d197b1d5e0fbc8e2"
+  },
+  {
+    "file": "mandatory-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-test.stdout.txt",
+    "byteLength": 1124,
+    "sha256": "1ffbe7e8d088ecb6e610d6b472e8d41c4429f81999623691430eebd3aa8edafa"
+  },
+  {
+    "file": "pr-draft-receipt.json",
+    "byteLength": 336,
+    "sha256": "7e85ad9bccab2be90cc9420689bce626577eaa626d2a681a12f0dae97fbb56d8"
+  },
+  {
+    "file": "reopen.json",
+    "byteLength": 830,
+    "sha256": "a66006518ed3ce7b0436a3f3e17dff45916d738814e9b96c7b5eeb9149596f3a"
+  }
+]

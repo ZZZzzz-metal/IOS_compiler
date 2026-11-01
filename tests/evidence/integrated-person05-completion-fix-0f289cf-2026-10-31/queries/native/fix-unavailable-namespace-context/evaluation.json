@@ -1,0 +1,18 @@
+{
+  "id": "fix-unavailable-namespace-context",
+  "group": "randomized11",
+  "route": "native",
+  "elapsedMs": 24.756599999999708,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 1,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:9:41",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:9:41"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

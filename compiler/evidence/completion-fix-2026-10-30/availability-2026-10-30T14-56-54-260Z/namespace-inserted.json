@@ -1,0 +1,33 @@
+{
+  "source": "namespace blocked { __attribute__((unavailable(\"blocked\"))) int personSame(); } namespace allowed { int personSame(); } void f(){allowed::personBlocked;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-ast-dump",
+    "/project/main.cpp"
+  ],
+  "exitCode": 1,
+  "stdout": "TranslationUnitDecl 0x652d00 <<invalid sloc>> <invalid sloc>\n|-TypedefDecl 0x6531b8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'\n| `-BuiltinType 0x652fe0 '__int128'\n|-TypedefDecl 0x653200 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'\n| `-BuiltinType 0x652ff0 'unsigned __int128'\n|-TypedefDecl 0x653438 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'\n| `-RecordType 0x653290 '__NSConstantString_tag'\n|   `-CXXRecord 0x653230 '__NSConstantString_tag'\n|-TypedefDecl 0x653480 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'void *'\n| `-PointerType 0x653160 'void *'\n|   `-BuiltinType 0x652d40 'void'\n|-NamespaceDecl 0x6534b0 </project/main.cpp:1:1, col:79> col:11 blocked\n| `-FunctionDecl 0x6535c0 <col:21, col:76> col:65 personSame 'int ()'\n|   `-UnavailableAttr 0x653630 <col:36, col:57> \"blocked\" IR_None\n|-NamespaceDecl 0x653670 <col:81, col:119> col:91 allowed\n| `-FunctionDecl 0x6536e0 <col:101, col:116> col:105 personSame 'int ()'\n`-FunctionDecl 0x653788 <col:121, col:153> col:126 f 'void ()'\n  `-CompoundStmt 0x6538a4 <col:129, col:153>\n",
+  "stderr": "/project/main.cpp:1:139: error: no member named 'personBlocked' in namespace 'allowed'\nnamespace blocked { __attribute__((unavailable(\"blocked\"))) int personSame(); } namespace allowed { int personSame(); } void f(){allowed::personBlocked;}\n                                                                                                                                 ~~~~~~~~~^\n1 error generated.\n",
+  "memoryBytes": 7012352
+}

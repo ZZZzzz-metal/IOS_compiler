@@ -1,0 +1,42 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "acceptance-review.json",
+    "byteLength": 1153,
+    "sha256": "ec17f35c1920686984f7dc098024dc3e8fe2ba9c00bf04b971af2dbb8f8c87fb"
+  },
+  {
+    "file": "integration-audit.json",
+    "byteLength": 19261,
+    "sha256": "6f428f6059073051b66986927c121ad22825841651fa12859ac3a6a1c8210fca"
+  },
+  {
+    "file": "mandatory-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "5d1480cbe16180dcb10a909325cf43882e6413aed4078916cfcd63a6613b8575"
+  },
+  {
+    "file": "mandatory-commands.json",
+    "byteLength": 298,
+    "sha256": "69fc2c903386c24aab44dbff41a18f12d9a474b7ab2f1f9b99dea0a4639e2a95"
+  },
+  {
+    "file": "mandatory-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-test.stdout.txt",
+    "byteLength": 1123,
+    "sha256": "a981cbecab391d0587d41b126a16fe8151b59bf9ec1ce21e37e4eb053d0218bf"
+  }
+]

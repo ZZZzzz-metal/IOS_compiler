@@ -1,0 +1,15 @@
+{
+  "snapshotId": "b7714ce4-213f-4a55-a885-aa8a93c802a5",
+  "sourceHash": "sha256:d2e43477c0e6a4633a9034f32350b788c9c45d640b0fed9eb0a818eb2f22ba19",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "int surface_definition_a8ee505af129_allowed() { return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int surface_definition_a8ee505af129_blocked() { return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int surface_definition_a8ee505af129_deprecated() { return 0; }\n\nint main() {\n  return surface_definition_a8ee505af129_deprecated();\n}\n",
+      "contentHash": "sha256:08efe95ef1984c76b2a49533ae4b01c3ccbc109fa6f61d9495a56d4a2922d1a6"
+    }
+  ]
+}

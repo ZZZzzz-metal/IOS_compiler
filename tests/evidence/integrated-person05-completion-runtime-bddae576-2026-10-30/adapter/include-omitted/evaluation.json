@@ -1,0 +1,12 @@
+{
+  "caseId": "include-omitted",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:33.008Z",
+  "elapsedMs": 18.8741,
+  "verdict": "passed",
+  "support": "boundary",
+  "itemCount": 0,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

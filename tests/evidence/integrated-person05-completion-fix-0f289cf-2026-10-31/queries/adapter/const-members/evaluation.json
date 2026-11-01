@@ -1,0 +1,13 @@
+{
+  "id": "const-members",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 19.503799999999956,
+  "verdict": "passed",
+  "support": "boundary",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

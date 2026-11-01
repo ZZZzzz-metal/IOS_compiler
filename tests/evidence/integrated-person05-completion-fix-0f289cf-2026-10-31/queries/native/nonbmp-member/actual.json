@@ -1,0 +1,151 @@
+{
+  "result": {
+    "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-nonbmp-member",
+    "documentVersion": 17,
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-nonbmp-member-snapshot",
+    "sourceHash": "sha256:dcf2cca218284d38589864db2addac4821710781774b8d419ca8a3f4cccedb01",
+    "sourcePath": "main.cpp",
+    "offset": 94,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:eac7b61b1b19b1fac9b435125ddb8e3a3c96037686a343d594a685c55596a0c5",
+        "label": "Coordinates",
+        "kind": "unknown",
+        "detail": "Coordinates::",
+        "insertText": "Coordinates",
+        "replaceRange": {
+          "startOffset": 94,
+          "endOffset": 94
+        },
+        "filterText": "Coordinates"
+      },
+      {
+        "id": "sha256:0b24f265a720967616b515b1d74ae289ba02ac2020bfe01b73d31614457a3374",
+        "label": "east",
+        "kind": "unknown",
+        "detail": "int east",
+        "insertText": "east",
+        "replaceRange": {
+          "startOffset": 94,
+          "endOffset": 94
+        },
+        "filterText": "east"
+      },
+      {
+        "id": "sha256:a220bb7a119f04bedbca22fc0a00781ed3bdd35cf111d8a535a4d5cf6be3eeeb",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Coordinates & operator=(const Coordinates &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 94,
+          "endOffset": 94
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:63da20e6ca1032f08dc2007557d97534c37e362f3bbc953a05dfc4c86a7299e0",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Coordinates & operator=(Coordinates &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 94,
+          "endOffset": 94
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:d61454192fe00e18a180509815f0e44e896f94bae8467127ffe13a1a7364719f",
+        "label": "west",
+        "kind": "unknown",
+        "detail": "int west",
+        "insertText": "west",
+        "replaceRange": {
+          "startOffset": 94,
+          "endOffset": 94
+        },
+        "filterText": "west"
+      },
+      {
+        "id": "sha256:77c1e100cd6a0da801ce8adf6158bc74d3b7525dcf97d9ae8136e6c3213c1c28",
+        "label": "~Coordinates",
+        "kind": "unknown",
+        "detail": "void ~Coordinates()",
+        "insertText": "~Coordinates",
+        "replaceRange": {
+          "startOffset": 94,
+          "endOffset": 94
+        },
+        "filterText": "~Coordinates"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+    "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "native": {
+    "argv": [
+      "clang",
+      "-cc1",
+      "-fsyntax-only",
+      "-triple",
+      "wasm32-unknown-wasi",
+      "-main-file-name",
+      "main.cpp",
+      "-disable-free",
+      "-isysroot",
+      "/",
+      "-internal-isystem",
+      "/include/c++/v1",
+      "-internal-isystem",
+      "/lib/clang/8.0.1/include",
+      "-internal-isystem",
+      "/include",
+      "-I",
+      "/project",
+      "-ferror-limit",
+      "20",
+      "-fmessage-length",
+      "0",
+      "-std=c++17",
+      "-x",
+      "c++",
+      "-code-completion-at=/project/main.cpp:1:99",
+      "/project/main.cpp"
+    ],
+    "exitCode": 0,
+    "stdout": "COMPLETION: Coordinates : Coordinates::\nCOMPLETION: east : [#int#]east\nCOMPLETION: operator= : [#Coordinates &#]operator=(<#const Coordinates &#>)\nCOMPLETION: operator= : [#Coordinates &#]operator=(<#Coordinates &&#>)\nCOMPLETION: west : [#int#]west\nCOMPLETION: ~Coordinates : [#void#]~Coordinates()\n",
+    "stderr": "",
+    "memoryBytes": 7012352,
+    "position": {
+      "line": 1,
+      "byteColumn": 99
+    }
+  },
+  "metrics": {
+    "totalMs": 18.26509999999962,
+    "filesystemLinearMemoryBytes": 9437184,
+    "compilerLinearMemoryBytes": 7012352
+  },
+  "resourceReads": [
+    {
+      "path": "vendor/wasm-clang/memfs",
+      "byteLength": 345442,
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+    },
+    {
+      "path": "vendor/wasm-clang/sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    {
+      "path": "vendor/wasm-clang/clang",
+      "byteLength": 31214472,
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    }
+  ]
+}

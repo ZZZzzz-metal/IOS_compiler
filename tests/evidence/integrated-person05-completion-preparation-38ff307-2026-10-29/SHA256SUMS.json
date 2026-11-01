@@ -1,0 +1,332 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "README.md",
+    "byteLength": 524,
+    "sha256": "29108ef4d45aa59ea043c0b61fd5614827c888df7b002ad05328c8a27f7c0ac6"
+  },
+  {
+    "file": "baseline.command.json",
+    "byteLength": 430,
+    "sha256": "0747b9ad3686dba51523232ec4ace6a21f6e7b3359825430372d469601ffffdf"
+  },
+  {
+    "file": "baseline.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "baseline.stdout.txt",
+    "byteLength": 41,
+    "sha256": "59551f575a47e259b1491aa22cbdc9eb597a6cd21e24a68c8627cda347f83b2d"
+  },
+  {
+    "file": "check.command.json",
+    "byteLength": 254,
+    "sha256": "3aa8f7f5fade42c234f54c2e0d9db5d2b9fe7e7ac4fba5ca7f298b36e53e4089"
+  },
+  {
+    "file": "check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "ba4ce463e7223dadae91b177323ca943d924952caaa1f0c2ed644973df9aae5a"
+  },
+  {
+    "file": "contracts.command.json",
+    "byteLength": 253,
+    "sha256": "bfc59dcfcc095b9302da9f8a0b438dff27d297d6cf47c4da0d6106aa12ad543e"
+  },
+  {
+    "file": "contracts.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "contracts.stdout.txt",
+    "byteLength": 1125,
+    "sha256": "3e27e8511fd7b376311c8931d8e2c682f278dd87c6e653b141652b7a032d0de2"
+  },
+  {
+    "file": "fixture-infrastructure.command.json",
+    "byteLength": 302,
+    "sha256": "70e7b7fcfb940930437020d7324df817d5e22ce43e992890ec444f3f4c05e93b"
+  },
+  {
+    "file": "fixture-infrastructure.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "fixture-infrastructure.stdout.txt",
+    "byteLength": 752,
+    "sha256": "b779bbd7f1efd49210b12e78837dace269344329be7c7db6fa180665eec5dc3c"
+  },
+  {
+    "file": "fixture-inventory.json",
+    "byteLength": 31693,
+    "sha256": "4a1e0aa7a7fc5d09aaa26bb55e797ea1b90a2f86e5b0cabbf6d0ae052f9663f5"
+  },
+  {
+    "file": "input-fingerprints.json",
+    "byteLength": 6955,
+    "sha256": "abf1e2f08aa159089b7b79c8592806899ea045e4c13d585448fa2d28b8669808"
+  },
+  {
+    "file": "inputs/contracts/completion.d.ts",
+    "byteLength": 2406,
+    "sha256": "f04734f4b1db5ef042f1f6299cab97664cfc080a5b5bb8f8d50ac3e997dac132"
+  },
+  {
+    "file": "inputs/docs/validation/completion-independent-plan-2026-10-29.md",
+    "byteLength": 9373,
+    "sha256": "e939f75734acc31700e70c3ed906e782865b50b042512b196547df3fb548c490"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/README.md",
+    "byteLength": 2448,
+    "sha256": "080c500f0b0d18f3e44fc0b0f7099a6789ac4bbfa388535f70c47f1ad01805ad"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/access-control.cpp",
+    "byteLength": 180,
+    "sha256": "b91c306088c86f864917b27409ccc0a2fd30308b6a808fc9e4b7b586e37556ff"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/c-pointer.c",
+    "byteLength": 103,
+    "sha256": "aa9a05a5deb2a159840b08963d5d52d4d22391361aed4053a3d479d56f03fea9"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/c-prefix.c",
+    "byteLength": 73,
+    "sha256": "e7558a4307024994afe0ef093911fe645f454e60feccf009e5e17efec036609a"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/c-struct.c",
+    "byteLength": 107,
+    "sha256": "a632bfe1ae5cfbc4ed53d5e35f8b57f2355618c6b25562e19612133346d65d75"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/cases.json",
+    "byteLength": 9645,
+    "sha256": "67ed8eff4bb726cfff51e0c2fc9332c8568eec3256ba93d00995de300e83566b"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/char-case.cpp",
+    "byteLength": 120,
+    "sha256": "8e0ed52809b3ddcdfaa86a2608de8630f8619c7dc04808c6a84200729885f9b5"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/char-sizeof.cpp",
+    "byteLength": 95,
+    "sha256": "5384c0873f2e2d5c095f90cd3c638b9c7f818fd82fa96bce5822677df1b41cce"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/chinese-prefix.cpp",
+    "byteLength": 67,
+    "sha256": "2b642f8dcb01c57b75fc31b96fffbec99b08ad08164fc9edcd26003dc2021a62"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/comment.cpp",
+    "byteLength": 69,
+    "sha256": "74e69b8e0fd6a2f7b63c17257117a05fb39e25b2fd866cb12a252593518e6b61"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/const-members.cpp",
+    "byteLength": 127,
+    "sha256": "affa1479ae49c36c185431094475672c9a11b5895c88c5e7bbe1a6140c1676ab"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/decimal.cpp",
+    "byteLength": 45,
+    "sha256": "e03f86c51e6be914a5f5d62425d555969db141f44969f185f8f4425fd0e874c0"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/declaration-order.cpp",
+    "byteLength": 73,
+    "sha256": "de57a3671380897553585c901d081feae078746f857bfce14ca7738bd2e7831a"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/driver.cpp",
+    "byteLength": 97,
+    "sha256": "efd346a314958d960e54a60134b6e0220e77420ea8a6b6ec05aa395af378a6ef"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/enum.cpp",
+    "byteLength": 81,
+    "sha256": "7e8c3b13c137ef5025432608897d702678bfaa288db85131d34f8eac649f27c9"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/function-prefix.cpp",
+    "byteLength": 166,
+    "sha256": "425c3692b91146890e5dcb0039ecb022f5e635a5015c9c23268fcc55d29a847e"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/include-omitted.cpp",
+    "byteLength": 133,
+    "sha256": "ba687fef12c05dca1b6fb4b4ec1566a981ecb456e8b52c7cd587659e1f19b66a"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/local-prefix.cpp",
+    "byteLength": 106,
+    "sha256": "c13f2c733856a79454da60713c1e66d7aafb85574b9ba6e9ec6072d5317b9364"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/namespace.cpp",
+    "byteLength": 109,
+    "sha256": "d9ae81831d5bebebc1caa5fb1071c1a05fd0f27265cd50d624c80cd0993f0fc0"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/nested-member.cpp",
+    "byteLength": 150,
+    "sha256": "49553d0e8950c77abe9116dc79f33bd5ae7042443598579cece077f409530da7"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/nonbmp-member.cpp",
+    "byteLength": 109,
+    "sha256": "ff6c2b9ff16358d101e1feef89e4d158f755f4ab6c4ffa31c0999cadda3753f6"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/nonbmp-prefix.cpp",
+    "byteLength": 68,
+    "sha256": "c01870999aca1b0116f5988ee2c68f2eda0dc25c7ea3b3830f232736a5003185"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/pattern-function.cpp",
+    "byteLength": 70,
+    "sha256": "33f1912dcf8f0a64417e10a223fdd23eab7688ea0634896e0dee3466bcc98479"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/pattern-variable.cpp",
+    "byteLength": 54,
+    "sha256": "6b605f81e55c2aed13c908e84ebcaac284a3e8641caf5ae645e92de4e77da354"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/pointer.cpp",
+    "byteLength": 96,
+    "sha256": "0758cd2a1b95976fa6c757f8c02a4362398d5c2f923dda2a5bb21a72e08c634f"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/renamed-member.cpp",
+    "byteLength": 131,
+    "sha256": "b462eafd272434150ad213f9934363a2558bc57300378510e4711c100eab009e"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/shadow-inner.cpp",
+    "byteLength": 139,
+    "sha256": "dabf696e10e6457e66972d3d8990a23b2a60458609892703ce0edb9cd5642fca"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/shadow-restored.cpp",
+    "byteLength": 143,
+    "sha256": "6076aeeccd0733402c425b31171ee150cd10d2d259209b0c73baafd48611768a"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/string-literal.cpp",
+    "byteLength": 55,
+    "sha256": "728b78b31e30ba9dd072ded04919dd9cfbd9190e09e21d0e253d480094f5df8e"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/string.cpp",
+    "byteLength": 67,
+    "sha256": "1c3f7a27c869ec307ecd66f1dfe9e53e8bc9d01deb34accbfdaeee72196466ce"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/type-a.cpp",
+    "byteLength": 133,
+    "sha256": "ec2041faaf26f1b6ba26d556f1de83eca1f952b0c2a0475f8c30698d421f64d5"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/type-b.cpp",
+    "byteLength": 135,
+    "sha256": "69da1e462beaf13515b6ca21f9dc42016136e6bf522c249966e92606d01f0dd8"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/unfinished.cpp",
+    "byteLength": 97,
+    "sha256": "e467dd4ee9c0cd6c5444d6ea6a05bc9d04c6148976f8cc025024ecfde0ff92a5"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/user.inc",
+    "byteLength": 86,
+    "sha256": "c40a056e78af5d20ff0fc02e5d7a3a40aab7da69add8edcf7036509b76bd5c20"
+  },
+  {
+    "file": "inputs/fixtures/completion-independent/vector.cpp",
+    "byteLength": 76,
+    "sha256": "e30f53fead44f97d546bc2c47026f7d35e7e4d66b580f29fc0c739f292df5e24"
+  },
+  {
+    "file": "inputs/tests/completion-fixtures-checks.mjs",
+    "byteLength": 4967,
+    "sha256": "f3a7496d2d6c19782405892a4ff8f3f9479bfb7f467f62c6f2be6fc96409f2f4"
+  },
+  {
+    "file": "inputs/tests/lib/completion-fixtures.mjs",
+    "byteLength": 5403,
+    "sha256": "49f67bab73c019d8f47ac6c4a08f5d92f8f87b4bd977975ce720356d96e34f99"
+  },
+  {
+    "file": "inputs/tests/prepare-completion-evidence.mjs",
+    "byteLength": 5126,
+    "sha256": "f42eb6d53afd693f6a03b0f64b2fece3cdbd8d4b322bc0ed5bf3e0b39dd0e0ec"
+  },
+  {
+    "file": "offline-root.command.json",
+    "byteLength": 268,
+    "sha256": "d847105b2f8740a7cf0056985251d0b28b60378376d33e0aee05b2834f0932e1"
+  },
+  {
+    "file": "offline-root.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "offline-root.stdout.txt",
+    "byteLength": 2425,
+    "sha256": "2f78cf54c1aa6bf67cf0bd9dcb341ce3c4dd64c39537add57903eec1c263af17"
+  },
+  {
+    "file": "previous-seal.command.json",
+    "byteLength": 360,
+    "sha256": "5f66ab72d0e4d2a8c7bcdda569ac5cedc708888c609bd0ebaf8fa92ae96e2768"
+  },
+  {
+    "file": "previous-seal.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "previous-seal.stdout.txt",
+    "byteLength": 97,
+    "sha256": "fa7ce93e59ae06cfb0c894834fe24ee50683400293ae1153991e20bf5bfc68fc"
+  },
+  {
+    "file": "product-diff.command.json",
+    "byteLength": 639,
+    "sha256": "a42a15c03a273b66d7635a3d3f72fbb124900f01baf7e191d83c1950005e870c"
+  },
+  {
+    "file": "product-diff.stderr.txt",
+    "byteLength": 81,
+    "sha256": "69b2722e82eb01704ed8766f9ab805dec8ccc2b39a41e06432002f85fad2a4d6"
+  },
+  {
+    "file": "product-diff.stdout.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "summary.json",
+    "byteLength": 3791,
+    "sha256": "a5d31feb367160d5161f84eb48d6dced6f2ff6595b1557752bf3427589949970"
+  }
+]

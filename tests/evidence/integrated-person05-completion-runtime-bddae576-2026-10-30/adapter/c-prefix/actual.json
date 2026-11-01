@@ -1,0 +1,40 @@
+{
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-c-prefix",
+  "documentVersion": 24,
+  "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-c-prefix-snapshot",
+  "sourceHash": "sha256:b9c757a352b942f12b48cc3b1f1a09207b6336a02db5b5b1b71bb0ba60c6115d",
+  "sourcePath": "main.c",
+  "offset": 62,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:227fb04d83f192f287728d600403be079c8afde9ac3a091c1845d8daa368d969",
+      "label": "cedarCount",
+      "kind": "unknown",
+      "detail": "int cedarCount",
+      "insertText": "cedarCount",
+      "replaceRange": {
+        "startOffset": 59,
+        "endOffset": 62
+      },
+      "filterText": "cedarCount"
+    },
+    {
+      "id": "sha256:866d816861161005f77bdb2381716c712c2f8c6392d6f2186f7ca2b7c532e8a9",
+      "label": "cedarTotal",
+      "kind": "unknown",
+      "detail": "int cedarTotal",
+      "insertText": "cedarTotal",
+      "replaceRange": {
+        "startOffset": 59,
+        "endOffset": 62
+      },
+      "filterText": "cedarTotal"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

@@ -1,0 +1,473 @@
+[
+  {
+    "caseId": "type-a",
+    "event": {
+      "phase": "completion-resource",
+      "name": "memfs"
+    }
+  },
+  {
+    "caseId": "type-a",
+    "event": {
+      "phase": "completion-resource",
+      "name": "sysroot.tar"
+    }
+  },
+  {
+    "caseId": "type-a",
+    "event": {
+      "phase": "completion-resource",
+      "name": "clang"
+    }
+  },
+  {
+    "caseId": "type-a",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "type-a",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 59.45680000000016,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "type-b",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "type-b",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.948499999999967,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "renamed-member",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "renamed-member",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.09310000000005,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "access-control",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "access-control",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.11850000000004,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "pointer",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "pointer",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.537199999999984,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "namespace",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "namespace",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 12.237800000000107,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "local-prefix",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "local-prefix",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.950900000000047,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "function-prefix",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "function-prefix",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 12.339199999999892,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "shadow-inner",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "shadow-inner",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.488399999999956,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "shadow-restored",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "shadow-restored",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.755400000000009,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "declaration-order",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "declaration-order",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.418499999999995,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "nested-member",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "nested-member",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.554899999999861,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    }
+  },
+  {
+    "caseId": "vector",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "vector",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 248.14919999999984,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 15007744
+    }
+  },
+  {
+    "caseId": "string",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "string",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 153.76200000000017,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 16515072
+    }
+  },
+  {
+    "caseId": "chinese-prefix",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "chinese-prefix",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.583599999999933,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "nonbmp-prefix",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "nonbmp-prefix",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.052799999999934,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "nonbmp-member",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "nonbmp-member",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.660599999999931,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "included-source",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "included-source",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.621900000000096,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    }
+  },
+  {
+    "caseId": "include-omitted",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "include-omitted",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 15.798200000000179,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "unfinished",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "unfinished",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.967200000000048,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "const-members",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "const-members",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 11.500800000000027,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "c-struct",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "c-struct",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 12.356199999999944,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "c-pointer",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "c-pointer",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.623199999999997,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "c-prefix",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "c-prefix",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 11.679899999999861,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "enum",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "enum",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 11.6558,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "char-case",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "char-case",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 14.040700000000015,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "char-sizeof",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "char-sizeof",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 12.4375,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "pattern-variable",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "pattern-variable",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 11.931299999999965,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "pattern-function",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "pattern-function",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 13.306900000000041,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  {
+    "caseId": "const-string",
+    "event": {
+      "phase": "completion-started"
+    }
+  },
+  {
+    "caseId": "const-string",
+    "event": {
+      "phase": "completion-finished",
+      "totalMs": 143.72390000000019,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 16515072
+    }
+  }
+]

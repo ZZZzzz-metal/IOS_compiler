@@ -47,3 +47,7 @@ stdout/stderr 为同一事件序列中的 UTF-8 文本，适配器进行增量�
 - 5：真实样例、预期、环境和证据；契约单元测试不替代端到端或真机验收。
 
 `capabilities.json` 是唯一支持声明来源；`compatibility-profiles.json` 尚无正式产品组合。桌面联合原型另用 `app/integration/candidate.mjs` 按实际资源生成可信开发候选，不代表已选择产品路线；`offline-bundle.json` 当前为空且 status=unprepared，不能显示完整产品离线可用。
+
+## 可选编辑服务：离线代码补全 v1
+
+2026-10-29经2号后端、4号消费者各自API-ACK冻结[completion.d.ts](completion.d.ts)。此服务使用独立request/document/snapshot/file/offset身份，不产生构建或调试产物，不改变0.1.0-draft.1编译/调试消息。规范化目标文件UTF16偏移由UI与原稿BOM/CRLF明确映射、由2号转换Clang UTF8字节列；候选只允许纯文本替换。取消按requestId幂等，释放匹配Worker并结算complete后才返回，开始完整编译前须等待取消。实现、真实候选、离线与iPad支持均须另验，接口冻结不表示功能已交付。

@@ -1,0 +1,18 @@
+{
+  "id": "fix-template-mutable",
+  "group": "randomized11",
+  "route": "native",
+  "elapsedMs": 23.45129999999972,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 8,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:9:23",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:9:23"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

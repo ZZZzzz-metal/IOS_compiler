@@ -1,0 +1,52 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-function-prefix",
+  "documentVersion": 8,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-function-prefix-snapshot",
+  "sourceHash": "sha256:7821b9d772b51b6bd1756e1c5194fbec255b8ba1557f986c7fcc43231c44636b",
+  "sourcePath": "main.cpp",
+  "offset": 155,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:bc6264ab8b02654ba5e9c110c4608800122646a7152e6d22b591cacee3b3de6b",
+      "label": "sigmaScan",
+      "kind": "unknown",
+      "detail": "int sigmaScan(double input)",
+      "insertText": "sigmaScan",
+      "replaceRange": {
+        "startOffset": 152,
+        "endOffset": 155
+      },
+      "filterText": "sigmaScan"
+    },
+    {
+      "id": "sha256:76c854629919d52545cce1738b199c980872975df8c8e2131ce1ce22b293e742",
+      "label": "sigmaSolve",
+      "kind": "unknown",
+      "detail": "int sigmaSolve(int input)",
+      "insertText": "sigmaSolve",
+      "replaceRange": {
+        "startOffset": 152,
+        "endOffset": 155
+      },
+      "filterText": "sigmaSolve"
+    },
+    {
+      "id": "sha256:8ea43c0b818f4fac202ab721375c37dd08b0e1536ab5d1fdcbcb74ac29f64b61",
+      "label": "signed",
+      "kind": "unknown",
+      "detail": "signed",
+      "insertText": "signed",
+      "replaceRange": {
+        "startOffset": 152,
+        "endOffset": 155
+      },
+      "filterText": "signed"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

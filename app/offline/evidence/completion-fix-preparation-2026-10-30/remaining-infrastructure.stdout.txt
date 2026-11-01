@@ -1,0 +1,31 @@
+✔ eleven distinct repair queries remain preparation-only (1.5854ms)
+✔ one exact marker and independent coordinates bind each archived query (0.7281ms)
+✔ fresh nonce changes names and source hashes without changing test meaning (0.6048ms)
+✔ required and forbidden spellings do not contradict; same-name overloads use signatures (0.2643ms)
+✔ signature constraints distinguish int/double and const/nonconst overloads (0.2845ms)
+✔ complete independent call controls include positives, negatives and deprecated warnings (0.2877ms)
+✔ nonce rejects accidental missing or non-hex names (0.7383ms)
+✔ 33 independent cases retain pending status; no provider results are fabricated (0.5326ms)
+✔ ASCII, Chinese and non-BMP coordinates have independent literal oracles (0.5427ms)
+✔ coordinate oracle rejects raw editor text and surrogate splits (0.7246ms)
+✔ type swap and rename retain counterfactual declarations and different fingerprints (0.1306ms)
+✔ scope and declaration order negatives are represented at the actual caret (0.0941ms)
+✔ include context is preserved; omission cannot silently reuse driver declarations (0.112ms)
+✔ UI suppression, prefix filtering and semantic boundaries are distinct expectations (0.1268ms)
+✔ independent Node SHA snapshot serialization agrees with frozen snapshot protocol (4.6535ms)
+✔ exact insertion names work; matching a name only in detail never satisfies contains (0.5334ms)
+✔ const append and private candidates remain boundary failures, including unknown kind (0.2964ms)
+✔ non-success empty result cannot satisfy required candidates; explicit include omission may fail (0.1956ms)
+✔ truncation does not turn a missing required candidate into a pass (0.1451ms)
+✔ stale identity, resource identity, duplicate IDs and invalid range are rejected (1.0776ms)
+✔ raw native UTF8 position and translation unit are checked without treating exit1 as failure (0.2135ms)
+✔ UI automatic suppression cases cannot silently be executed as invalid provider triggers (0.4098ms)
+✔ required function signatures keep return and parameter types without fixing whitespace (0.2863ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 291.2144

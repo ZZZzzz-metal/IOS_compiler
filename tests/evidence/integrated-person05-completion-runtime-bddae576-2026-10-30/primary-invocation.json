@@ -1,0 +1,17 @@
+{
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "cwd": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+  "args": [
+    "tests/run-completion-independent.mjs",
+    "--target-root",
+    "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\",
+    "--target-commit",
+    "bddae57653bede9a38a3510006d761e2a9d19a04",
+    "--evidence-name",
+    "integrated-person05-completion-runtime-bddae576-2026-10-30",
+    "--mode",
+    "both"
+  ],
+  "observedExitCode": 1,
+  "note": "Observed tool execution exit1 retained. The original primary summary, requests and responses are not overwritten."
+}

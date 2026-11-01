@@ -1,0 +1,15 @@
+{
+  "id": "mandatory-test",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd test"
+  ],
+  "startedAt": "2026-10-30T15:07:41.241Z",
+  "endedAt": "2026-10-30T15:07:42.410Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

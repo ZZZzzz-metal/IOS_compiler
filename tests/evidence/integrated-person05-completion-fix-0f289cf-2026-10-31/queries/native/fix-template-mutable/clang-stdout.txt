@@ -1,0 +1,8 @@
+COMPLETION: Box_a8ee505af129 : Box_a8ee505af129::
+COMPLETION: ingest_a8ee505af129 : [#void#]ingest_a8ee505af129(<#const OtherType_a8ee505af129 &argument_a8ee505af129#>)
+COMPLETION: inspect_a8ee505af129 : [#int#]inspect_a8ee505af129(<#const OtherType_a8ee505af129 &argument_a8ee505af129#>)[# const#]
+COMPLETION: operator= : [#Box_a8ee505af129<int> &#]operator=(<#const Box_a8ee505af129<int> &#>)
+COMPLETION: operator= : [#Box_a8ee505af129<int> &#]operator=(<#Box_a8ee505af129<int> &&#>)
+COMPLETION: read_a8ee505af129 : [#int#]read_a8ee505af129()[# const#]
+COMPLETION: write_a8ee505af129 : [#void#]write_a8ee505af129(<#int argument_a8ee505af129#>)
+COMPLETION: ~Box_a8ee505af129 : [#void#]~Box_a8ee505af129()

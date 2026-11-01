@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-alias-const",
+  "documentVersion": 32,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-alias-const-snapshot",
+    "sourceHash": "sha256:2c9b740f57f92494a7a28325849fbe22391dabd0b6ae2465a8ace8e4b1774961",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nvoid probe_a8ee505af129() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.\n}\n",
+        "contentHash": "sha256:0a5d9bfd2bbff7fc5394012e1d5413b0bac7e1352a139cc591bc9af96630faf4"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 164,
+  "trigger": "."
+}

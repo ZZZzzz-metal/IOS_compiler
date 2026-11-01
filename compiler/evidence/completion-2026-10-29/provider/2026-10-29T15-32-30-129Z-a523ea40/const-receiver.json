@@ -1,0 +1,159 @@
+{
+  "request": {
+    "requestId": "355e2ff3-bc4c-42f6-a550-daed5a1bff6b",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "7e2bad5c-a2f3-4213-ae48-1e1e5a499e9a",
+      "sourceHash": "sha256:98651fc089b24d6a73b020d3fbf2dbeb5fe70f0bb598f0d8f8b3966982f9ea67",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Node{void mutate(); int view()const;}; void f(){const Node n{}; n.;}",
+          "contentHash": "sha256:baa6188bb75c227798e1d972be75886a11f2a2add580d8e295aa2b2450a4c399"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 73
+  },
+  "reply": {
+    "requestId": "355e2ff3-bc4c-42f6-a550-daed5a1bff6b",
+    "documentVersion": 1,
+    "snapshotId": "7e2bad5c-a2f3-4213-ae48-1e1e5a499e9a",
+    "sourceHash": "sha256:98651fc089b24d6a73b020d3fbf2dbeb5fe70f0bb598f0d8f8b3966982f9ea67",
+    "sourcePath": "main.cpp",
+    "offset": 73,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:0b23abbf48d7a2aceed00d3244f4573d094f20c11d333dd07494c6aac783f984",
+        "label": "Node",
+        "kind": "unknown",
+        "detail": "Node::",
+        "insertText": "Node",
+        "replaceRange": {
+          "startOffset": 73,
+          "endOffset": 73
+        },
+        "filterText": "Node"
+      },
+      {
+        "id": "sha256:38b16e156368aa2bdc7af679b16df688d8fa1de7e12037394498bd2687a45d68",
+        "label": "view",
+        "kind": "unknown",
+        "detail": "int view() const",
+        "insertText": "view",
+        "replaceRange": {
+          "startOffset": 73,
+          "endOffset": 73
+        },
+        "filterText": "view"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 13.269399999999905,
+  "native": {
+    "result": {
+      "requestId": "355e2ff3-bc4c-42f6-a550-daed5a1bff6b",
+      "documentVersion": 1,
+      "snapshotId": "7e2bad5c-a2f3-4213-ae48-1e1e5a499e9a",
+      "sourceHash": "sha256:98651fc089b24d6a73b020d3fbf2dbeb5fe70f0bb598f0d8f8b3966982f9ea67",
+      "sourcePath": "main.cpp",
+      "offset": 73,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:0b23abbf48d7a2aceed00d3244f4573d094f20c11d333dd07494c6aac783f984",
+          "label": "Node",
+          "kind": "unknown",
+          "detail": "Node::",
+          "insertText": "Node",
+          "replaceRange": {
+            "startOffset": 73,
+            "endOffset": 73
+          },
+          "filterText": "Node"
+        },
+        {
+          "id": "sha256:38b16e156368aa2bdc7af679b16df688d8fa1de7e12037394498bd2687a45d68",
+          "label": "view",
+          "kind": "unknown",
+          "detail": "int view() const",
+          "insertText": "view",
+          "replaceRange": {
+            "startOffset": 73,
+            "endOffset": 73
+          },
+          "filterText": "view"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:74",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: Node : Node::\nCOMPLETION: view : [#int#]view()[# const#]\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 74
+      }
+    },
+    "metrics": {
+      "totalMs": 12.675700000000006,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [
+      "view"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

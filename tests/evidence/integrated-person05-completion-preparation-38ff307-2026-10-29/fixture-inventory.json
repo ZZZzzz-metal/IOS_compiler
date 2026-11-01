@@ -1,0 +1,1220 @@
+{
+  "requestId": "CC-20261029-05",
+  "kind": "fixture-preparation",
+  "featureStatus": "pending-provider-ui-package",
+  "cases": [
+    {
+      "id": "type-a",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 122,
+        "line": 3,
+        "columnUtf16": 37,
+        "columnUtf8": 37
+      },
+      "fixtureHash": "sha256:e0b2c431bd9e5c0f0b34a097a32b38aad5d140fff72efd7ebab68f7458ca2db5",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "scarlet",
+          "common"
+        ],
+        "excludes": [
+          "north"
+        ]
+      },
+      "pairId": "semantic-type",
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:9e413dbbef26a71d8d0f2fe3cc129db423af7defcda0e0484a0697a69f500820",
+          "byteLength": 125
+        }
+      ]
+    },
+    {
+      "id": "type-b",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 124,
+        "line": 3,
+        "columnUtf16": 39,
+        "columnUtf8": 39
+      },
+      "fixtureHash": "sha256:aa5783837a7a7de6b3216f9dc0d06f18fb3b94464021469be7a025252d3f699e",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "north",
+          "common"
+        ],
+        "excludes": [
+          "scarlet"
+        ]
+      },
+      "pairId": "semantic-type",
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:951a386f380b7cf79bfaa5a0c3658fd382faa5684109df512ed892d9de94c409",
+          "byteLength": 127
+        }
+      ]
+    },
+    {
+      "id": "renamed-member",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 120,
+        "line": 3,
+        "columnUtf16": 37,
+        "columnUtf8": 37
+      },
+      "fixtureHash": "sha256:6a98b62fc86f58101450e8aa9a4ceae409e63819c301d1d1ce2aad3d2084402e",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "coral",
+          "common"
+        ],
+        "excludes": [
+          "scarlet",
+          "north"
+        ]
+      },
+      "pairId": "semantic-rename",
+      "baselineId": "type-a",
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:df46652b3668b6be6bf757ab98717d9f90416f191bd79ae472f136433e203c65",
+          "byteLength": 123
+        }
+      ]
+    },
+    {
+      "id": "access-control",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 169,
+        "line": 10,
+        "columnUtf16": 37,
+        "columnUtf8": 37
+      },
+      "fixtureHash": "sha256:770ccd6b0e861909cde007bb5b2b55de64124d03b8f8f712f8b5a79fcf78cee6",
+      "expect": {
+        "trigger": ".",
+        "support": "boundary",
+        "contains": [
+          "visible",
+          "inspect"
+        ],
+        "inaccessibleOrAbsent": [
+          "guarded",
+          "secret"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "检查不可访问候选不会作为可确认项；原生Clang可能带不可访问标志，须根据冻结契约判断过滤或禁用。",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:0a37c7a5d99d3b7881c3697a030959eadebd477fd29bc6f114d8c6c78e3b7f10",
+          "byteLength": 172
+        }
+      ]
+    },
+    {
+      "id": "pointer",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 85,
+        "line": 2,
+        "columnUtf16": 40,
+        "columnUtf8": 40
+      },
+      "fixtureHash": "sha256:89193e93fb7e5783141be8551f1e51532a9f8884a63abdd421ea781d39b40e9b",
+      "expect": {
+        "trigger": "->",
+        "support": "required",
+        "contains": [
+          "summit",
+          "elevation"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:2888a333e7a73b7b5bb651d23511d35bcd871865caca3783a5fa913999432103",
+          "byteLength": 88
+        }
+      ]
+    },
+    {
+      "id": "namespace",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 98,
+        "line": 2,
+        "columnUtf16": 27,
+        "columnUtf8": 27
+      },
+      "fixtureHash": "sha256:d8210e239a7754f13367ae5d822b29c029a3f2e57f1c8ebd01eba9c813aab1a0",
+      "expect": {
+        "trigger": "::",
+        "prefix": "lo",
+        "support": "required",
+        "contains": [
+          "load"
+        ],
+        "excludes": [],
+        "visibleExcludes": [
+          "ledger"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:b99b2663d1f20191cac6f5684a6fd941f475009dce709ea43600d2536a9413ff",
+          "byteLength": 101
+        }
+      ]
+    },
+    {
+      "id": "local-prefix",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 95,
+        "line": 5,
+        "columnUtf16": 8,
+        "columnUtf8": 8
+      },
+      "fixtureHash": "sha256:0df5d7f93e186e7db92f790913affceedd96aa934e8ddccb2f2c374b9a244f49",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "dah",
+        "support": "required",
+        "contains": [
+          "dahlia",
+          "dahliaCount"
+        ],
+        "excludes": [],
+        "visibleExcludes": [
+          "unrelatedValue"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:07a8ed630c9c9bee1272e754e9db46e12db61d116d534e276a34ed59a055855d",
+          "byteLength": 98
+        }
+      ]
+    },
+    {
+      "id": "function-prefix",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 155,
+        "line": 4,
+        "columnUtf16": 19,
+        "columnUtf8": 19
+      },
+      "fixtureHash": "sha256:51a3c68ffce1cdeca3e19a0adea43a9755a9e9613a1393b2fe80f017c4672ba8",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "sig",
+        "support": "required",
+        "contains": [
+          "sigmaSolve",
+          "sigmaScan"
+        ],
+        "excludes": [],
+        "visibleExcludes": [
+          "unrelatedFunction"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:ebe492b23f94cbb23e4e2c4be161f2842fa1a2df8f3b16623ba43b7956764499",
+          "byteLength": 158
+        }
+      ]
+    },
+    {
+      "id": "shadow-inner",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 126,
+        "line": 5,
+        "columnUtf16": 28,
+        "columnUtf8": 28
+      },
+      "fixtureHash": "sha256:3d760f010541bbde79dddfe5e6a54d866edd003455ce4a23edf25deef840d195",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "innerOnly"
+        ],
+        "excludes": [
+          "outerOnly"
+        ]
+      },
+      "pairId": "scope-shadow",
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:d0190406962e3ca8d202a0635af5c228ded4dcad7f0bc6652e50ef8e4bb8a780",
+          "byteLength": 131
+        }
+      ]
+    },
+    {
+      "id": "shadow-restored",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 132,
+        "line": 6,
+        "columnUtf16": 12,
+        "columnUtf8": 12
+      },
+      "fixtureHash": "sha256:8d6d7684b1801a7ef6af556af76460e5e365aa0a17b9c9faa4b315f71f1eb63b",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "outerOnly"
+        ],
+        "excludes": [
+          "innerOnly"
+        ]
+      },
+      "pairId": "scope-shadow",
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:c2ea713824233c1224891090b49f912555a812efb535ecbd1f04bf95f74385a2",
+          "byteLength": 135
+        }
+      ]
+    },
+    {
+      "id": "declaration-order",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 41,
+        "line": 3,
+        "columnUtf16": 9,
+        "columnUtf8": 9
+      },
+      "fixtureHash": "sha256:f83c91ecbc1b46474fa0747ad9bf946c80423de9c42cbdd087910caf6699f76a",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "befo",
+        "support": "required",
+        "contains": [
+          "beforeGlobal"
+        ],
+        "excludes": [
+          "beforeLater"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:1e008792cf93ac46afc119cfa5eb56f3de37ff4f0c349b3cbfeea7bb140295d6",
+          "byteLength": 65
+        }
+      ]
+    },
+    {
+      "id": "nested-member",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 139,
+        "line": 3,
+        "columnUtf16": 48,
+        "columnUtf8": 48
+      },
+      "fixtureHash": "sha256:84b6868d51b3c65d166236621a6a75cce1a6849e1223155c8d9d32d0454b4e25",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "actualLeaf"
+        ],
+        "excludes": [
+          "envelopeOnly",
+          "payload"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:968988af980a5d688bb3ff64fdeeed5b4338e875c94a59b410493af0dd77fb0a",
+          "byteLength": 142
+        }
+      ]
+    },
+    {
+      "id": "vector",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 65,
+        "line": 2,
+        "columnUtf16": 48,
+        "columnUtf8": 48
+      },
+      "fixtureHash": "sha256:29a01b1bd549596ef42b9813a52a654576903466bc0ed56ce7705bac52bedf7a",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "size",
+          "push_back"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:8ab73cf358152f40ebb5e264f2dc6bc92993aac635c796b2589f4d400bc7bb32",
+          "byteLength": 68
+        }
+      ]
+    },
+    {
+      "id": "string",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 56,
+        "line": 2,
+        "columnUtf16": 39,
+        "columnUtf8": 39
+      },
+      "fixtureHash": "sha256:5649b714c5e6bab91f9c7b10c635bdbe067556a74ef3e9906d4f8dc35802295a",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "size",
+          "append",
+          "c_str"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:7a1c2ea5ae48c4bcbe6f47fbefd118dcd38f849c24bb8a22e38643b3cfcf0845",
+          "byteLength": 59
+        }
+      ]
+    },
+    {
+      "id": "chinese-prefix",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 42,
+        "line": 1,
+        "columnUtf16": 43,
+        "columnUtf8": 57
+      },
+      "fixtureHash": "sha256:4802fa670a223ec1e9c57af65faf2133160a173057ff0b38b8695ee2d75ea2b7",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "数",
+        "support": "required",
+        "contains": [
+          "数量甲",
+          "数量乙"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:69db2777a6500caf14f4a19adf79f8cf0fea102695a42287f66433328837ae6a",
+          "byteLength": 59
+        }
+      ]
+    },
+    {
+      "id": "nonbmp-prefix",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 41,
+        "line": 1,
+        "columnUtf16": 42,
+        "columnUtf8": 58
+      },
+      "fixtureHash": "sha256:975780e7cd893eb77abaff34e5a74a8e0ea3f707e3b06c17983e03b7e79f4e3a",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "知",
+        "support": "required",
+        "contains": [
+          "知识数量"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:81ca443eda9a5452c461a7170588ca862ddbd8f6c222a1f30ddffe1db8429bd4",
+          "byteLength": 60
+        }
+      ]
+    },
+    {
+      "id": "nonbmp-member",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 94,
+        "line": 1,
+        "columnUtf16": 95,
+        "columnUtf8": 99
+      },
+      "fixtureHash": "sha256:1df3336db8f875c80b0e4f6963dfb56e00280626832c371724348990ab5d3393",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "east",
+          "west"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:b1fff3a6ec75fb3ff0fd08dd5ba44d14b059e210d1a07cbcf96d476dc2bb9910",
+          "byteLength": 101
+        }
+      ]
+    },
+    {
+      "id": "included-source",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "driver.cpp",
+      "sourcePath": "user.inc",
+      "coordinates": {
+        "offsetUtf16": 72,
+        "line": 3,
+        "columnUtf16": 48,
+        "columnUtf8": 48
+      },
+      "fixtureHash": "sha256:9bfb6ed573b27767e6371f8d4c241d3fd688be2fab9ee8b07ebd627d5098f7d6",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "fromDriver",
+          "serial"
+        ],
+        "excludes": []
+      },
+      "pairId": "include-context",
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "driver.cpp",
+          "role": "driver",
+          "contentHash": "sha256:efd346a314958d960e54a60134b6e0220e77420ea8a6b6ec05aa395af378a6ef",
+          "byteLength": 97
+        },
+        {
+          "path": "user.inc",
+          "role": "user",
+          "contentHash": "sha256:8938c945d72b6ccc9515023f91950c272673cb37c9e985c79afd8ab87d729b40",
+          "byteLength": 78
+        }
+      ]
+    },
+    {
+      "id": "include-omitted",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 122,
+        "line": 2,
+        "columnUtf16": 45,
+        "columnUtf8": 45
+      },
+      "fixtureHash": "sha256:d72496514e679a5f23a02d2962733e43f3144c4098eef6b6ab47598e0f2a0119",
+      "expect": {
+        "trigger": ".",
+        "support": "boundary",
+        "contains": [],
+        "excludes": [
+          "fromDriver",
+          "serial"
+        ]
+      },
+      "pairId": "include-context",
+      "baselineId": null,
+      "notes": "省略driver声明的反事实；failed/unsupported或无此成员均可，不要求语法错误输入成功。",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:514946a725ab58ac66b2e0ae9adbce5144b012712241e0c636c56269630692f9",
+          "byteLength": 125
+        }
+      ]
+    },
+    {
+      "id": "unfinished",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 88,
+        "line": 4,
+        "columnUtf16": 12,
+        "columnUtf8": 12
+      },
+      "fixtureHash": "sha256:c5da8399e932bc7299ae9974da8fe7d054fc0af608184cb72cdecd363e099ae4",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "antenna",
+          "battery"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:59454622ffa122b9919a629f7c022cc758eb7e4c98b48208f6bacde12d547697",
+          "byteLength": 89
+        }
+      ]
+    },
+    {
+      "id": "const-members",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 116,
+        "line": 5,
+        "columnUtf16": 40,
+        "columnUtf8": 40
+      },
+      "fixtureHash": "sha256:a7f8fb61b1f094f69f6ef1b88ed97e40d3f8dee07b73e3ccad8c481c760e22b6",
+      "expect": {
+        "trigger": ".",
+        "support": "boundary",
+        "contains": [
+          "read"
+        ],
+        "inaccessibleOrAbsent": [
+          "mutate"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "单列const可调用性边界；须先核对Clang原生可用性，不把显示全部声明误称完整访问控制。",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:c2d4cd6b365c9fea99c9d6b0ced57a6656423347010647c4b151d8c6eb755481",
+          "byteLength": 119
+        }
+      ]
+    },
+    {
+      "id": "c-struct",
+      "status": "pending-provider",
+      "language": {
+        "language": "c",
+        "standard": "c11"
+      },
+      "translationUnit": "main.c",
+      "sourcePath": "main.c",
+      "coordinates": {
+        "offsetUtf16": 96,
+        "line": 2,
+        "columnUtf16": 49,
+        "columnUtf8": 49
+      },
+      "fixtureHash": "sha256:78ff6bb1ba8a8afb3e407dcdb775e0a66bb83010140063e8d4c3fd4b60a38364",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "weight",
+          "destination"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.c",
+          "role": "user",
+          "contentHash": "sha256:c210083d17ec76a67510eeb05dc054d4ad2b7a1ef87afb9de9e11589cfe9ae5f",
+          "byteLength": 99
+        }
+      ]
+    },
+    {
+      "id": "c-pointer",
+      "status": "pending-provider",
+      "language": {
+        "language": "c",
+        "standard": "c11"
+      },
+      "translationUnit": "main.c",
+      "sourcePath": "main.c",
+      "coordinates": {
+        "offsetUtf16": 92,
+        "line": 2,
+        "columnUtf16": 45,
+        "columnUtf8": 45
+      },
+      "fixtureHash": "sha256:cac72f7ef673710171da752846c706786ee5c4deb22d70ce06cef860a839bce5",
+      "expect": {
+        "trigger": "->",
+        "support": "required",
+        "contains": [
+          "weight",
+          "destination"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.c",
+          "role": "user",
+          "contentHash": "sha256:4b32013b874fc81ca19ad3dcc46d7035683dc5d26907f4824e32a823bbd63bcd",
+          "byteLength": 95
+        }
+      ]
+    },
+    {
+      "id": "c-prefix",
+      "status": "pending-provider",
+      "language": {
+        "language": "c",
+        "standard": "c11"
+      },
+      "translationUnit": "main.c",
+      "sourcePath": "main.c",
+      "coordinates": {
+        "offsetUtf16": 62,
+        "line": 1,
+        "columnUtf16": 63,
+        "columnUtf8": 63
+      },
+      "fixtureHash": "sha256:e3d9914c3522aac1782f05d8bd95c890e6799171965c94dc93b6a2b898e9b76a",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "ced",
+        "support": "required",
+        "contains": [
+          "cedarCount",
+          "cedarTotal"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.c",
+          "role": "user",
+          "contentHash": "sha256:ed343704574d4841eae25184ce97e3afdb9f6ae543646829a2067bf7d834ab79",
+          "byteLength": 65
+        }
+      ]
+    },
+    {
+      "id": "comment",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 58,
+        "line": 3,
+        "columnUtf16": 15,
+        "columnUtf8": 15
+      },
+      "fixtureHash": "sha256:92d5e199118cd8b64279e3dbc9ef6afbd9eea2c3c80d0d6f55722763930138f3",
+      "expect": {
+        "trigger": "none",
+        "support": "required",
+        "contains": [],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "UI自动触发负例；只检查不弹窗且不发自动请求，不要求手动provider请求为空。",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:6735b89280f379a3b94bb49960e704cedc25f04d62c217e91f300b5a79d2e3fe",
+          "byteLength": 61
+        }
+      ]
+    },
+    {
+      "id": "string-literal",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 42,
+        "line": 1,
+        "columnUtf16": 43,
+        "columnUtf8": 43
+      },
+      "fixtureHash": "sha256:02d2ce9c57bcb0946b68754cb5609105f487af8b8fcc4db3aca2872c7fc65c47",
+      "expect": {
+        "trigger": "none",
+        "support": "required",
+        "contains": [],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "UI自动触发负例，编译器手动结果与此断言分开。",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:4e9b0ce976eb99c288a297bb3cf80ca9fc8e0d04fba5656fbfcb1ac4238b81ac",
+          "byteLength": 47
+        }
+      ]
+    },
+    {
+      "id": "decimal",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 33,
+        "line": 1,
+        "columnUtf16": 34,
+        "columnUtf8": 34
+      },
+      "fixtureHash": "sha256:bb88d57de131feab7b30b5098753e3a1c6674258a40b8cbdd10026113092e1d9",
+      "expect": {
+        "trigger": "none",
+        "support": "required",
+        "contains": [],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "数字1.的小数点不触发成员补全。",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:5fa66ad987edfc47961f10263abfac2316359d40f1279853708d44ca0e296263",
+          "byteLength": 37
+        }
+      ]
+    },
+    {
+      "id": "enum",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 70,
+        "line": 2,
+        "columnUtf16": 30,
+        "columnUtf8": 30
+      },
+      "fixtureHash": "sha256:3c7ecbb6833a27f8e7a39eeb30724e72929c0ee159f3db0b89bca99cc6e4a013",
+      "expect": {
+        "trigger": "::",
+        "prefix": "orc",
+        "support": "required",
+        "contains": [
+          "orchard"
+        ],
+        "excludes": [],
+        "visibleExcludes": [
+          "river"
+        ]
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:de49d63ad1a480c06e6caa4e49b36dc4655e41f197e4f957626e025f245f8cb1",
+          "byteLength": 73
+        }
+      ]
+    },
+    {
+      "id": "char-case",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 107,
+        "line": 4,
+        "columnUtf16": 34,
+        "columnUtf8": 34
+      },
+      "fixtureHash": "sha256:f237fa2e5afd02430bdb000cd15af6fc588b36fe9cbac6dbbdaf7f672873bedd",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "amplitude"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "合法case'a'后成员补全，防止字符字面量/数字分隔符启发式误抑制；草稿审查建议，待真实provider/UI执行。",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:eba18bf0c53b62c47339adec91dc17292e96b2f2aef0b7ac0670b5f6d667e9d4",
+          "byteLength": 112
+        }
+      ]
+    },
+    {
+      "id": "char-sizeof",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 84,
+        "line": 4,
+        "columnUtf16": 20,
+        "columnUtf8": 20
+      },
+      "fixtureHash": "sha256:3b6b1ade4ccc66c16f982e676b78397df18c5eb43b6cd8e4ec990ab9c4ff17d9",
+      "expect": {
+        "trigger": ".",
+        "support": "required",
+        "contains": [
+          "amplitude"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "合法sizeof'a'后成员补全，不以合成词法复现代替真实结果。",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:af35deb787a777982c64ce8d00af23fc7c8906331f62a3b68cfd6ee142d20099",
+          "byteLength": 87
+        }
+      ]
+    },
+    {
+      "id": "pattern-variable",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 43,
+        "line": 3,
+        "columnUtf16": 8,
+        "columnUtf8": 8
+      },
+      "fixtureHash": "sha256:027df3de000b153bbef2bbef010e60528c9469733b19083a29c74ab1dae0bd60",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "Pat",
+        "support": "required",
+        "contains": [
+          "Pattern"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "真实标识符Pattern与CLI内建Pattern伪项区分，不能仅因名字相同丢弃。",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:8b4f8a64f93e17b4b66d406014d7c95b570907d10f208214302bff96df746dc1",
+          "byteLength": 46
+        }
+      ]
+    },
+    {
+      "id": "pattern-function",
+      "status": "pending-provider",
+      "language": {
+        "language": "cpp",
+        "standard": "c++17"
+      },
+      "translationUnit": "main.cpp",
+      "sourcePath": "main.cpp",
+      "coordinates": {
+        "offsetUtf16": 59,
+        "line": 2,
+        "columnUtf16": 19,
+        "columnUtf8": 19
+      },
+      "fixtureHash": "sha256:d9fb7d47078998f8ab9db38650e605cf2636a98e9785e2f2b2f04a820cbbf4e7",
+      "expect": {
+        "trigger": "identifier",
+        "prefix": "Pat",
+        "support": "required",
+        "contains": [
+          "Pattern"
+        ],
+        "excludes": []
+      },
+      "pairId": null,
+      "baselineId": null,
+      "notes": "同名函数独立翻译单元，保留真实签名及纯文本插入。",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "contentHash": "sha256:07ce898780422c1811533ff792b75893fdbb4a53488b0690eaafe2fc3ef8b160",
+          "byteLength": 62
+        }
+      ]
+    }
+  ]
+}

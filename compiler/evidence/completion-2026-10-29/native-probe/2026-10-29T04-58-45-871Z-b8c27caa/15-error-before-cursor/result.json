@@ -1,0 +1,98 @@
+{
+  "id": "15-error-before-cursor",
+  "invokedAt": "2026-10-29T04:58:47.054Z",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 53,
+    "line": 1,
+    "utf16Column": 54,
+    "utf8ByteColumn": 54,
+    "linePrefix": "void solve() { UnknownType invalid; int alpha = 1; al",
+    "prefixAtCursor": "al",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:1:54",
+    "/project/main.cpp"
+  ],
+  "sourceHash": "sha256:7fd0804e3a4fe649dc980cdfd172d7f64906c06b8f05124740278661e3208a11",
+  "resources": [
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "expectedSha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "verified": true
+    },
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "expectedSha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "verified": true
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "expectedSha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "verified": true
+    }
+  ],
+  "flags": [],
+  "exitCode": 1,
+  "hostError": null,
+  "filesystemSetupMs": 6.804100000000062,
+  "completionMs": 9.875,
+  "totalCaseMs": 16.70400000000018,
+  "memoryBytes": {
+    "clangAfterExecution": 7012352,
+    "memfsAfterExecution": 9437184
+  },
+  "stdoutByteLength": 129,
+  "stderrByteLength": 153,
+  "stdoutSha256": "sha256:4e4e2968fd7a2b94bb5e746cf2d07961db4ddf83eed15eb8edbcf7f9a5298c35",
+  "stderrSha256": "sha256:fe375a8612ef4b11ee0633558d726ba09092f79250324fbb86a27f1471283a76",
+  "completionCount": 3,
+  "candidateObservations": [
+    {
+      "name": "alpha",
+      "lines": [
+        "COMPLETION: alpha : [#int#]alpha"
+      ]
+    }
+  ],
+  "inaccessibleLines": [],
+  "stdout": "COMPLETION: Pattern : alignas(<#expression#>)\nCOMPLETION: Pattern : [#size_t#]alignof(<#type#>)\nCOMPLETION: alpha : [#int#]alpha\n",
+  "stderr": "/project/main.cpp:1:16: error: unknown type name 'UnknownType'\nvoid solve() { UnknownType invalid; int alpha = 1; al\n               ^\n1 error generated.\n"
+}

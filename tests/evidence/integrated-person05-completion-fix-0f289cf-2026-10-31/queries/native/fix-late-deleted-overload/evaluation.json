@@ -1,0 +1,18 @@
+{
+  "id": "fix-late-deleted-overload",
+  "group": "late2",
+  "route": "native",
+  "elapsedMs": 20.561800000000403,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 1,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:5:26",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:5:26"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

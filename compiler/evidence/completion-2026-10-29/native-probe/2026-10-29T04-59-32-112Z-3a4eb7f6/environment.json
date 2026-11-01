@@ -1,0 +1,77 @@
+{
+  "task": "CC-20261029-02",
+  "startedAt": "2026-10-29T04:59:32.112Z",
+  "runId": "2026-10-29T04-59-32-112Z-3a4eb7f6",
+  "scope": "Desktop Node executes real pinned Wasm Clang frontend completion; no LLD, program execution, remote API, browser or iPad test.",
+  "platform": "win32",
+  "architecture": "x64",
+  "node": "v24.19.0",
+  "repositoryCommit": "4f48884493689eb97de62a7a0af597046e961939",
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "lockSha256": "sha256:a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d",
+  "target": {
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ]
+  },
+  "verifiedResources": [
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "expectedSha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "verified": true
+    },
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "expectedSha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "verified": true
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "expectedSha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "verified": true
+    }
+  ],
+  "hostSources": [
+    {
+      "relativePath": "compiler/src/wasm-host.mjs",
+      "sha256": "sha256:ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73",
+      "byteLength": 6856
+    },
+    {
+      "relativePath": "compiler/src/source.mjs",
+      "sha256": "sha256:4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1",
+      "byteLength": 7201
+    },
+    {
+      "relativePath": "compiler/src/toolchain-engine.mjs",
+      "sha256": "sha256:03695bb52cbf7f4ab024ef773fca630eecb01c5452faa0f54fc055b574bbe3b5",
+      "byteLength": 7649
+    },
+    {
+      "relativePath": "compiler/experiments/completion-2026-10-29/probe-native.mjs",
+      "sha256": "sha256:56a2c3da844a1229d0f2d113325681fe2dabb8a34381c10111bcaf3a2018270a",
+      "byteLength": 16523
+    }
+  ],
+  "resourceReadAndHashMs": 31.1184,
+  "wasmModuleCompileMs": 44.60249999999999,
+  "resourcesExcluded": [
+    "lld"
+  ],
+  "outputLimitBytes": 2097152,
+  "timingNote": "completionMs includes a fresh Clang Wasm instance and frontend execution; filesystemSetupMs includes a fresh memfs and sysroot load. Shared resource read/hash and WebAssembly.compile are measured separately. Single observations are not an iPad latency claim.",
+  "memoryNote": "Reported linear memory is measured after execution, not peak process RSS."
+}

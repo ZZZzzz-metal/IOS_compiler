@@ -1,0 +1,15 @@
+{
+  "snapshotId": "007b325d-6024-4753-9e9c-c60a8b5bab69",
+  "sourceHash": "sha256:b709f4263793278a69e58e8a286e6774cae014970e873cd3df59699f55fb9c14",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "namespace AreaA_a8ee505af129 {\n__attribute__((unavailable(\"person05-unavailable\"))) int cross_a8ee505af129_read() { return 0; }\n}\nnamespace AreaB_a8ee505af129 {\nint cross_a8ee505af129_read() { return 0; }\n}\n\nint main() {\n  return AreaA_a8ee505af129::cross_a8ee505af129_read();\n}\n",
+      "contentHash": "sha256:fc0fa70b60739cc8ecdf09ca6b0c14e85703b1cf2244a46857e5ecf0c3d38b8d"
+    }
+  ]
+}

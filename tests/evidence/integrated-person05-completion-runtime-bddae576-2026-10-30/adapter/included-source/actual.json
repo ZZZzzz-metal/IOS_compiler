@@ -1,0 +1,88 @@
+{
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-included-source",
+  "documentVersion": 18,
+  "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-included-source-snapshot",
+  "sourceHash": "sha256:95107f057822dc6809744f1318717719ddc97f3f4a412aed7978cbddcc3010b1",
+  "sourcePath": "user.inc",
+  "offset": 72,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:f00b8a175ae24851011177d408a7182f10c81f48d1fa6254358838982cc0e4f2",
+      "label": "fromDriver",
+      "kind": "unknown",
+      "detail": "int fromDriver",
+      "insertText": "fromDriver",
+      "replaceRange": {
+        "startOffset": 72,
+        "endOffset": 72
+      },
+      "filterText": "fromDriver"
+    },
+    {
+      "id": "sha256:c4e0e6be9c1b73a74b54f966f530f58947e80c52865b764e59df64cceeedcde5",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "RequestData & operator=(const RequestData &)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 72,
+        "endOffset": 72
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:69d62d39c7aefe72a20d01bc4f4c208c62ce112f2d8da252d1a04e671b40896b",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "RequestData & operator=(RequestData &&)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 72,
+        "endOffset": 72
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:14b29b666265357170d69ff0498d8b6f4f50e491ce07a078e054a9a140dc5b2b",
+      "label": "RequestData",
+      "kind": "unknown",
+      "detail": "RequestData::",
+      "insertText": "RequestData",
+      "replaceRange": {
+        "startOffset": 72,
+        "endOffset": 72
+      },
+      "filterText": "RequestData"
+    },
+    {
+      "id": "sha256:830952193aa9605e08eebb388e99106d7830ba60981018d790443f526a0228b4",
+      "label": "serial",
+      "kind": "unknown",
+      "detail": "int serial",
+      "insertText": "serial",
+      "replaceRange": {
+        "startOffset": 72,
+        "endOffset": 72
+      },
+      "filterText": "serial"
+    },
+    {
+      "id": "sha256:387a2027a45e59599f20bb6afa9a795cc4ed043d5812becba55c82249c430629",
+      "label": "~RequestData",
+      "kind": "unknown",
+      "detail": "void ~RequestData()",
+      "insertText": "~RequestData",
+      "replaceRange": {
+        "startOffset": 72,
+        "endOffset": 72
+      },
+      "filterText": "~RequestData"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

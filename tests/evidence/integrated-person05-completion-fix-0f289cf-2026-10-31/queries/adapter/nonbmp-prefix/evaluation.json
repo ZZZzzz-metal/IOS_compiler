@@ -1,0 +1,13 @@
+{
+  "id": "nonbmp-prefix",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 16.909200000000055,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

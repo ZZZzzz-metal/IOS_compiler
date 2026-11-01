@@ -1,0 +1,27 @@
+{
+  "tag": "integration-v0.4.6",
+  "tagObject": "b0f14a2363b80fac11578db1c96823a74cc651f8",
+  "releaseCommit": "b4781949d216ba16bee563f401d1b35bb7670142",
+  "independentOwner05Commit": "cbc92b26cdb647f3a61379fa84e58f1e039741fc",
+  "pushExitCode": 0,
+  "atomicPushRefs": [
+    "integration",
+    "module/05-validation",
+    "refs/tags/integration-v0.4.6"
+  ],
+  "prReadyReceipt": "pr-ready-transition.json",
+  "mainMergedByAgent": false,
+  "ownerAcceptNotices": {
+    "owners": [
+      2,
+      4,
+      5
+    ],
+    "transportSuccess": true,
+    "allExplicitlyAcknowledged": true,
+    "source": "compact thread snapshots and explicit incoming ACK-ACCEPT messages"
+  },
+  "fixedRuntimeSource": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "bundle": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+  "note": "This is a subsequent documentation receipt. Fixed release tag and bundle are unchanged; later integration head may include this receipt. const-string/unavailable failures and iPad/G2/G3 remain open."
+}

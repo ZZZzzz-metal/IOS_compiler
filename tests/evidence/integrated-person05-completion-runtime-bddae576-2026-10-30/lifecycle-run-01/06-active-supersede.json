@@ -1,0 +1,26 @@
+{
+  "name": "06-active-supersede",
+  "passed": true,
+  "checks": [
+    {
+      "scenario": "06-active-supersede",
+      "name": "replacement started synchronously from real old request progress",
+      "passed": true
+    },
+    {
+      "scenario": "06-active-supersede",
+      "name": "old request returns cancelled with no stale candidates",
+      "passed": true
+    },
+    {
+      "scenario": "06-active-supersede",
+      "name": "new request succeeds on same public adapter",
+      "passed": true
+    },
+    {
+      "scenario": "06-active-supersede",
+      "name": "old Worker release and old complete precede new Worker creation",
+      "passed": true
+    }
+  ]
+}

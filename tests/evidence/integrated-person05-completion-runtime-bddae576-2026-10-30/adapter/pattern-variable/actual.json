@@ -1,0 +1,28 @@
+{
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-pattern-variable",
+  "documentVersion": 28,
+  "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-pattern-variable-snapshot",
+  "sourceHash": "sha256:af9efd375772214dbd52fcbe43f1f0e3bbcc7fada2cea6ad224e670c1cf28510",
+  "sourcePath": "main.cpp",
+  "offset": 43,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:f056febab6f1e435c3f67f437feb8396335c830dd0fae98cba948137bc17b42d",
+      "label": "Pattern",
+      "kind": "unknown",
+      "detail": "int Pattern",
+      "insertText": "Pattern",
+      "replaceRange": {
+        "startOffset": 40,
+        "endOffset": 43
+      },
+      "filterText": "Pattern"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

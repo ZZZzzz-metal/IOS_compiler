@@ -1,0 +1,1 @@
+COMPLETION: Pattern : [#int#]Pattern(<#int input#>)

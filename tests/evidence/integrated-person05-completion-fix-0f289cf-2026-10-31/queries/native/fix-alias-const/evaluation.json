@@ -1,0 +1,18 @@
+{
+  "id": "fix-alias-const",
+  "group": "randomized11",
+  "route": "native",
+  "elapsedMs": 182.27779999999984,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 64,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:5:23",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:5:23"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

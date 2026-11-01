@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "person05-unavailable"
+  },
+  "semantic": {
+    "kind": "unavailable",
+    "member": "surface_declaration_a8ee505af129_blocked",
+    "sourcePath": "main.cpp",
+    "line": 9,
+    "errorPattern": "person05-unavailable"
+  },
+  "diagnosticGroups": [
+    {
+      "index": 0,
+      "error": {
+        "severity": "error",
+        "message": "call to unavailable function 'surface_declaration_a8ee505af129_blocked': person05-unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 9,
+            "column": 10
+          }
+        }
+      },
+      "notes": [
+        {
+          "severity": "note",
+          "message": "candidate function has been explicitly made unavailable",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 5,
+              "column": 5
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

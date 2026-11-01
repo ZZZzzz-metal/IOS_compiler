@@ -1,0 +1,40 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-unavailable-definition",
+  "documentVersion": 38,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-fix-unavailable-definition-snapshot",
+  "sourceHash": "sha256:ca4f20dd386633ef4e462472eeeb61679c11decc5062e0c1e2493faca66e52bd",
+  "sourcePath": "main.cpp",
+  "offset": 349,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:a904506ee92429063cd23bda81d59e35abd1d03ecfae42ab8b1d34ff43350870",
+      "label": "surface_definition_a8ee505af129_allowed",
+      "kind": "unknown",
+      "detail": "int surface_definition_a8ee505af129_allowed()",
+      "insertText": "surface_definition_a8ee505af129_allowed",
+      "replaceRange": {
+        "startOffset": 318,
+        "endOffset": 349
+      },
+      "filterText": "surface_definition_a8ee505af129_allowed"
+    },
+    {
+      "id": "sha256:6e76fdb9ed1d5700d94a2d8c88007639dcdaea7f0856a32ee45fbfc4d5345bfd",
+      "label": "surface_definition_a8ee505af129_deprecated",
+      "kind": "unknown",
+      "detail": "int surface_definition_a8ee505af129_deprecated()",
+      "insertText": "surface_definition_a8ee505af129_deprecated",
+      "replaceRange": {
+        "startOffset": 318,
+        "endOffset": 349
+      },
+      "filterText": "surface_definition_a8ee505af129_deprecated"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

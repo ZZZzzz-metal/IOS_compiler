@@ -1,0 +1,7 @@
+/project/main.cpp:9:10: error: call to unavailable function 'surface_declaration_a8ee505af129_blocked': person05-unavailable
+  return surface_declaration_a8ee505af129_blocked();
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/project/main.cpp:5:5: note: candidate function has been explicitly made unavailable
+int surface_declaration_a8ee505af129_blocked() { return 0; }
+    ^
+1 error generated.

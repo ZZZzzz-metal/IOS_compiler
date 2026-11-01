@@ -1,0 +1,22 @@
+{
+  "requestId": "person05-fix-call-b9cc1f51-3f28-4ede-9f9e-0e6eedebfe25-fix-alias-mutable-append-positive",
+  "snapshot": {
+    "snapshotId": "b362f54d-7620-4743-81d8-2da62af07106",
+    "sourceHash": "sha256:76395e024678ae049f2e493e83ba8730df1cd3bfad90816183daa96694bf9eb3",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nint main() {\n  TextAlias_a8ee505af129 object_a8ee505af129;\n  object_a8ee505af129.append(\"x\");\n  return object_a8ee505af129.size() == 1 ? 0 : 1;\n}\n",
+        "contentHash": "sha256:06225b152c847cf7cabf8f1834d4658bbfdd45842f2fcb334292931d8f19b865"
+      }
+    ]
+  },
+  "language": "cpp",
+  "standard": "c++17",
+  "mode": "run",
+  "optimization": "O0"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "04-old-id-does-not-kill-new-active",
+  "passed": true,
+  "checks": [
+    {
+      "scenario": "04-old-id-does-not-kill-new-active",
+      "name": "old ID cancellation was initiated while new request had started",
+      "passed": true
+    },
+    {
+      "scenario": "04-old-id-does-not-kill-new-active",
+      "name": "new active completion still succeeds",
+      "passed": true
+    },
+    {
+      "scenario": "04-old-id-does-not-kill-new-active",
+      "name": "old ID did not terminate or replace the new warm Worker",
+      "passed": true
+    }
+  ]
+}

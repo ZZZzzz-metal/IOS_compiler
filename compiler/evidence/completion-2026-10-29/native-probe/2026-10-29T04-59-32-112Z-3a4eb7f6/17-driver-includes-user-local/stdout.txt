@@ -1,0 +1,2 @@
+COMPLETION: localCount : [#int#]localCount
+COMPLETION: locale_t : locale_t

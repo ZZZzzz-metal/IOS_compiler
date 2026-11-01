@@ -1,0 +1,12 @@
+{
+  "caseId": "shadow-restored",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:32.465Z",
+  "elapsedMs": 16.782200000000103,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 5,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

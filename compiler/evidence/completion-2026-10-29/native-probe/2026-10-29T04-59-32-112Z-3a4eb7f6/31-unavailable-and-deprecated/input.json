@@ -1,0 +1,74 @@
+{
+  "id": "31-unavailable-and-deprecated",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "targetPath": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "markedText": "__attribute__((unavailable)) int alphaUnavailable();\n__attribute__((deprecated)) int alphaDeprecated();\nint main() { al@; }\n"
+    }
+  ],
+  "observations": [
+    "alphaUnavailable",
+    "alphaDeprecated"
+  ],
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 119,
+    "line": 3,
+    "utf16Column": 16,
+    "utf8ByteColumn": 16,
+    "linePrefix": "int main() { al",
+    "prefixAtCursor": "al",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "snapshot": {
+    "snapshotId": "native-probe-31-unavailable-and-deprecated",
+    "sourceHash": "sha256:8083bc01691a937211fec8a35d6c709f335a6186c4045972ade35e4f18b078b1",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "__attribute__((unavailable)) int alphaUnavailable();\n__attribute__((deprecated)) int alphaDeprecated();\nint main() { al; }\n",
+        "contentHash": "sha256:e50f8ed020b17627ba0e6d1f47344a1f46366ec43ab8ba51a0e9a61179c8702d"
+      }
+    ]
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:3:16",
+    "/project/main.cpp"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "caseId": "type-a",
+  "path": "native",
+  "startedAt": "2026-10-29T16:30:33.362Z",
+  "elapsedMs": 179.28510000000006,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:3:37",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:3:37"
+    ],
+    "passed": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "enum",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 22.533300000000054,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:2:30",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:2:30"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

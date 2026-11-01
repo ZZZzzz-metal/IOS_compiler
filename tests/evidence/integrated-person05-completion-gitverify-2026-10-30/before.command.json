@@ -1,0 +1,11 @@
+{
+  "executable": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "tests/seal-integrated-round.mjs",
+    "integrated-person05-completion-runtime-bddae576-2026-10-30",
+    "--verify",
+    "--git"
+  ],
+  "exitCode": 1,
+  "error": null
+}

@@ -1,0 +1,8 @@
+{
+  "source": "Preserved exec_command tool result for the first read-only browser record audit, not a product command",
+  "command": "node tests/verify-completion-v047-browser.mjs --paused=035-continue-to18-requested.json --saved=037-standard-scheme-saved-before-close.json --cold=041-cold-standard-scheme-visible.json --out=browser-verification-run01.json",
+  "exitCode": 1,
+  "chunk_id": "a0b326",
+  "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\r\n\r\n595 !== 601\r\n\r\n    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/verify-completion-v047-browser.mjs:98:10\r\n    at check (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/verify-completion-v047-browser.mjs:12:25)\r\n    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/verify-completion-v047-browser.mjs:90:1 {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: 595,\r\n  expected: 601,\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.19.0\r\n",
+  "correction": "The source equality assertions passed. Native undo restores the replaced v047In prefix as a selected range595..601, while ready/insert/redo have collapsed carets. Requiring undo caret collapse was an audit assumption unrelated to the completion text transaction. Original browser021 remains unchanged; corrected audit checks exact restored source plus selected v047In. No product run was repeated."
+}

@@ -1,0 +1,15 @@
+{
+  "snapshotId": "91b82f5f-d251-4cac-b001-37749bae9aa4",
+  "sourceHash": "sha256:8aaa499722a65708372d30a769c98cdde34ac2e2ec2d9d2dad75d604c8eeed11",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "template<class Type_a8ee505af129> struct Box_a8ee505af129 {\n  int read_a8ee505af129() const { return 0; }\n  void write_a8ee505af129(Type_a8ee505af129 argument_a8ee505af129) { (void)argument_a8ee505af129; }\n  template<class OtherType_a8ee505af129> int inspect_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) const { (void)argument_a8ee505af129; return 0; }\n  template<class OtherType_a8ee505af129> void ingest_a8ee505af129(const OtherType_a8ee505af129& argument_a8ee505af129) { (void)argument_a8ee505af129; }\n};\nint main() {\n  const Box_a8ee505af129<int> object_a8ee505af129;\n  object_a8ee505af129.write_a8ee505af129(1);\n  return 0;\n}\n",
+      "contentHash": "sha256:61c85961212793a9f3b9096c86c78fc91bc52ba684545369ccac8044da4cd88a"
+    }
+  ]
+}

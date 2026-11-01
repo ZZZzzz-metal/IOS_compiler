@@ -1,0 +1,2 @@
+COMPLETION: choose_a8ee505af129 : [#int#]choose_a8ee505af129()[# const#]
+COMPLETION: Record_a8ee505af129 : Record_a8ee505af129::

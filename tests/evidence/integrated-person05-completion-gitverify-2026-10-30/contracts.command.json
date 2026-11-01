@@ -1,0 +1,12 @@
+{
+  "id": "contracts",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd test"
+  ],
+  "exitCode": 0,
+  "error": null
+}

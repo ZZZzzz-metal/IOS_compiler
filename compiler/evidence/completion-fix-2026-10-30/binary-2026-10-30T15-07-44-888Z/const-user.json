@@ -1,0 +1,30 @@
+{
+  "source": "struct Box{int value;template<class T>void mutate(T);template<class T>int view(T)const;};void f(){const Box b{};b.;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:1:115",
+    "/project/main.cpp"
+  ],
+  "exitCode": 0,
+  "stdout": "COMPLETION: Box : Box::\nCOMPLETION: value : [#int#]value\nCOMPLETION: view : [#int#]view(<#T#>)[# const#]\n",
+  "stderr": "",
+  "memoryBytes": 7012352
+}

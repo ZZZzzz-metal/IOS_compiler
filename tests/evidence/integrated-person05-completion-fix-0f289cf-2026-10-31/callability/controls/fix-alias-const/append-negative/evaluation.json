@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit"
+  },
+  "semantic": {
+    "kind": "const",
+    "member": "append",
+    "sourcePath": "main.cpp",
+    "line": 5
+  },
+  "diagnosticGroups": [
+    {
+      "index": 0,
+      "error": {
+        "severity": "error",
+        "message": "no matching member function for call to 'append'",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 5,
+            "column": 23
+          }
+        }
+      },
+      "notes": [
+        {
+          "severity": "note",
+          "message": "candidate function template not viable: 'this' argument has type 'const TextAlias_a8ee505af129' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+        },
+        {
+          "severity": "note",
+          "message": "candidate function not viable: 'this' argument has type 'const TextAlias_a8ee505af129' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+        },
+        {
+          "severity": "note",
+          "message": "candidate function not viable: 'this' argument has type 'const TextAlias_a8ee505af129' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+        },
+        {
+          "severity": "note",
+          "message": "candidate function not viable: 'this' argument has type 'const TextAlias_a8ee505af129' (aka 'const basic_string<char, char_traits<char>, allocator<char> >'), but method is not marked const"
+        },
+        {
+          "severity": "note",
+          "message": "candidate function template not viable: requires at least 2 arguments, but 1 was provided"
+        },
+        {
+          "severity": "note",
+          "message": "candidate function template not viable: requires 2 arguments, but 1 was provided"
+        },
+        {
+          "severity": "note",
+          "message": "candidate function template not viable: requires 2 arguments, but 1 was provided"
+        },
+        {
+          "severity": "note",
+          "message": "candidate function not viable: requires 2 arguments, but 1 was provided"
+        },
+        {
+          "severity": "note",
+          "message": "candidate function not viable: requires 2 arguments, but 1 was provided"
+        },
+        {
+          "severity": "note",
+          "message": "candidate function not viable: requires at least 2 arguments, but 1 was provided"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

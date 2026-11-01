@@ -1,0 +1,71 @@
+{
+  "input": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "4adf54d6-ae9b-4fc3-aa65-18524a84cc4f",
+    "mode": "debug",
+    "optimization": "O0",
+    "snapshot": {
+      "snapshotId": "02cd2ca7-ac69-42df-866a-6842e2c77a3b",
+      "sourceHash": "sha256:2cf4c818c25792545fd6f007d32fb207423c6a485d5754804ee3ca3d26d1df4b",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int mixed_9c3158ded821871b_select(double argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_9c3158ded821871b_select(int argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_9c3158ded821871b_deprecated() { return 0; }\n\nint main() {\n  return mixed_9c3158ded821871b_select(1);\n}\n",
+          "contentHash": "sha256:1ec50e3e5e344a70aea29a00879f5efbe2b24d419b46b54384e56d8a09df7d81"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "status": "failed",
+    "reason": "compiler-exit",
+    "errorPattern": "person05-unavailable"
+  },
+  "actual": {
+    "status": "failed",
+    "requestId": "4adf54d6-ae9b-4fc3-aa65-18524a84cc4f",
+    "sourceHash": "sha256:2cf4c818c25792545fd6f007d32fb207423c6a485d5754804ee3ca3d26d1df4b",
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "call to unavailable function 'mixed_9c3158ded821871b_select': person05-unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 6,
+            "column": 10
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "candidate function has been explicitly made unavailable",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 58
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "candidate function",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 1,
+            "column": 5
+          }
+        }
+      }
+    ],
+    "reason": "compiler-exit",
+    "rawDiagnostics": "/project/main.cpp:6:10: error: call to unavailable function 'mixed_9c3158ded821871b_select': person05-unavailable\n  return mixed_9c3158ded821871b_select(1);\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/project/main.cpp:2:58: note: candidate function has been explicitly made unavailable\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_9c3158ded821871b_select(int argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n                                                         ^\n/project/main.cpp:1:5: note: candidate function\nint mixed_9c3158ded821871b_select(double argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n    ^\n1 error generated.\n"
+  }
+}

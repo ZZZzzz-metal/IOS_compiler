@@ -1,0 +1,763 @@
+{
+  "requestId": "CC-20261030-05",
+  "kind": "independent-recipe-and-controlled-adapter-identity",
+  "expectedCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+  "targetPath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+  "passed": true,
+  "resources": {
+    "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+    "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "independentDerivation": {
+    "byteLength": 31214494,
+    "sha256": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "insertedBytes": 22,
+    "sectionCount": 17,
+    "functionBodies": 54322,
+    "changedBodies": [
+      {
+        "functionIndex": 39589,
+        "before": {
+          "functionIndex": 39589,
+          "headerOffset": 18105515,
+          "payloadOffset": 18105517,
+          "byteLength": 2600,
+          "end": 18108117
+        },
+        "after": {
+          "functionIndex": 39589,
+          "headerOffset": 18105515,
+          "payloadOffset": 18105517,
+          "byteLength": 2600,
+          "end": 18108117
+        }
+      },
+      {
+        "functionIndex": 40648,
+        "before": {
+          "functionIndex": 40648,
+          "headerOffset": 18773317,
+          "payloadOffset": 18773319,
+          "byteLength": 1400,
+          "end": 18774719
+        },
+        "after": {
+          "functionIndex": 40648,
+          "headerOffset": 18773317,
+          "payloadOffset": 18773319,
+          "byteLength": 1422,
+          "end": 18774741
+        }
+      }
+    ],
+    "sectionsBefore": [
+      {
+        "id": 1,
+        "headerOffset": 8,
+        "payloadOffset": 11,
+        "byteLength": 2275,
+        "end": 2286
+      },
+      {
+        "id": 2,
+        "headerOffset": 2286,
+        "payloadOffset": 2289,
+        "byteLength": 803,
+        "end": 3092
+      },
+      {
+        "id": 3,
+        "headerOffset": 3092,
+        "payloadOffset": 3096,
+        "byteLength": 54424,
+        "end": 57520
+      },
+      {
+        "id": 4,
+        "headerOffset": 57520,
+        "payloadOffset": 57522,
+        "byteLength": 9,
+        "end": 57531
+      },
+      {
+        "id": 5,
+        "headerOffset": 57531,
+        "payloadOffset": 57533,
+        "byteLength": 3,
+        "end": 57536
+      },
+      {
+        "id": 6,
+        "headerOffset": 57536,
+        "payloadOffset": 57539,
+        "byteLength": 5170,
+        "end": 62709
+      },
+      {
+        "id": 7,
+        "headerOffset": 62709,
+        "payloadOffset": 62713,
+        "byteLength": 94311,
+        "end": 157024
+      },
+      {
+        "id": 9,
+        "headerOffset": 157024,
+        "payloadOffset": 157028,
+        "byteLength": 42679,
+        "end": 199707
+      },
+      {
+        "id": 10,
+        "headerOffset": 199707,
+        "payloadOffset": 199712,
+        "byteLength": 25177807,
+        "end": 25377519
+      },
+      {
+        "id": 11,
+        "headerOffset": 25377519,
+        "payloadOffset": 25377524,
+        "byteLength": 5830893,
+        "end": 31208417
+      },
+      {
+        "id": 0,
+        "headerOffset": 31208417,
+        "payloadOffset": 31208420,
+        "byteLength": 2297,
+        "end": 31210717
+      },
+      {
+        "id": 0,
+        "headerOffset": 31210717,
+        "payloadOffset": 31210719,
+        "byteLength": 21,
+        "end": 31210740
+      },
+      {
+        "id": 0,
+        "headerOffset": 31210740,
+        "payloadOffset": 31210742,
+        "byteLength": 55,
+        "end": 31210797
+      },
+      {
+        "id": 0,
+        "headerOffset": 31210797,
+        "payloadOffset": 31210800,
+        "byteLength": 206,
+        "end": 31211006
+      },
+      {
+        "id": 0,
+        "headerOffset": 31211006,
+        "payloadOffset": 31211009,
+        "byteLength": 979,
+        "end": 31211988
+      },
+      {
+        "id": 0,
+        "headerOffset": 31211988,
+        "payloadOffset": 31211991,
+        "byteLength": 781,
+        "end": 31212772
+      },
+      {
+        "id": 0,
+        "headerOffset": 31212772,
+        "payloadOffset": 31212775,
+        "byteLength": 1697,
+        "end": 31214472
+      }
+    ],
+    "sectionsAfter": [
+      {
+        "id": 1,
+        "headerOffset": 8,
+        "payloadOffset": 11,
+        "byteLength": 2275,
+        "end": 2286
+      },
+      {
+        "id": 2,
+        "headerOffset": 2286,
+        "payloadOffset": 2289,
+        "byteLength": 803,
+        "end": 3092
+      },
+      {
+        "id": 3,
+        "headerOffset": 3092,
+        "payloadOffset": 3096,
+        "byteLength": 54424,
+        "end": 57520
+      },
+      {
+        "id": 4,
+        "headerOffset": 57520,
+        "payloadOffset": 57522,
+        "byteLength": 9,
+        "end": 57531
+      },
+      {
+        "id": 5,
+        "headerOffset": 57531,
+        "payloadOffset": 57533,
+        "byteLength": 3,
+        "end": 57536
+      },
+      {
+        "id": 6,
+        "headerOffset": 57536,
+        "payloadOffset": 57539,
+        "byteLength": 5170,
+        "end": 62709
+      },
+      {
+        "id": 7,
+        "headerOffset": 62709,
+        "payloadOffset": 62713,
+        "byteLength": 94311,
+        "end": 157024
+      },
+      {
+        "id": 9,
+        "headerOffset": 157024,
+        "payloadOffset": 157028,
+        "byteLength": 42679,
+        "end": 199707
+      },
+      {
+        "id": 10,
+        "headerOffset": 199707,
+        "payloadOffset": 199712,
+        "byteLength": 25177829,
+        "end": 25377541
+      },
+      {
+        "id": 11,
+        "headerOffset": 25377541,
+        "payloadOffset": 25377546,
+        "byteLength": 5830893,
+        "end": 31208439
+      },
+      {
+        "id": 0,
+        "headerOffset": 31208439,
+        "payloadOffset": 31208442,
+        "byteLength": 2297,
+        "end": 31210739
+      },
+      {
+        "id": 0,
+        "headerOffset": 31210739,
+        "payloadOffset": 31210741,
+        "byteLength": 21,
+        "end": 31210762
+      },
+      {
+        "id": 0,
+        "headerOffset": 31210762,
+        "payloadOffset": 31210764,
+        "byteLength": 55,
+        "end": 31210819
+      },
+      {
+        "id": 0,
+        "headerOffset": 31210819,
+        "payloadOffset": 31210822,
+        "byteLength": 206,
+        "end": 31211028
+      },
+      {
+        "id": 0,
+        "headerOffset": 31211028,
+        "payloadOffset": 31211031,
+        "byteLength": 979,
+        "end": 31212010
+      },
+      {
+        "id": 0,
+        "headerOffset": 31212010,
+        "payloadOffset": 31212013,
+        "byteLength": 781,
+        "end": 31212794
+      },
+      {
+        "id": 0,
+        "headerOffset": 31212794,
+        "payloadOffset": 31212797,
+        "byteLength": 1697,
+        "end": 31214494
+      }
+    ]
+  },
+  "targetUnchanged": true,
+  "checks": [
+    {
+      "name": "independent locked source and sysroot identities",
+      "passed": true,
+      "detail": {
+        "sourceByteLength": 31214472,
+        "sourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+        "sysrootByteLength": 9297920,
+        "resources": {
+          "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+          "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+          "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        }
+      }
+    },
+    {
+      "name": "independent binary derivation and complete section/function framing",
+      "passed": true,
+      "detail": {
+        "byteLength": 31214494,
+        "sha256": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+        "insertedBytes": 22,
+        "sectionCount": 17,
+        "functionBodies": 54322,
+        "changedBodies": [
+          {
+            "functionIndex": 39589,
+            "before": {
+              "functionIndex": 39589,
+              "headerOffset": 18105515,
+              "payloadOffset": 18105517,
+              "byteLength": 2600,
+              "end": 18108117
+            },
+            "after": {
+              "functionIndex": 39589,
+              "headerOffset": 18105515,
+              "payloadOffset": 18105517,
+              "byteLength": 2600,
+              "end": 18108117
+            }
+          },
+          {
+            "functionIndex": 40648,
+            "before": {
+              "functionIndex": 40648,
+              "headerOffset": 18773317,
+              "payloadOffset": 18773319,
+              "byteLength": 1400,
+              "end": 18774719
+            },
+            "after": {
+              "functionIndex": 40648,
+              "headerOffset": 18773317,
+              "payloadOffset": 18773319,
+              "byteLength": 1422,
+              "end": 18774741
+            }
+          }
+        ],
+        "sectionsBefore": [
+          {
+            "id": 1,
+            "headerOffset": 8,
+            "payloadOffset": 11,
+            "byteLength": 2275,
+            "end": 2286
+          },
+          {
+            "id": 2,
+            "headerOffset": 2286,
+            "payloadOffset": 2289,
+            "byteLength": 803,
+            "end": 3092
+          },
+          {
+            "id": 3,
+            "headerOffset": 3092,
+            "payloadOffset": 3096,
+            "byteLength": 54424,
+            "end": 57520
+          },
+          {
+            "id": 4,
+            "headerOffset": 57520,
+            "payloadOffset": 57522,
+            "byteLength": 9,
+            "end": 57531
+          },
+          {
+            "id": 5,
+            "headerOffset": 57531,
+            "payloadOffset": 57533,
+            "byteLength": 3,
+            "end": 57536
+          },
+          {
+            "id": 6,
+            "headerOffset": 57536,
+            "payloadOffset": 57539,
+            "byteLength": 5170,
+            "end": 62709
+          },
+          {
+            "id": 7,
+            "headerOffset": 62709,
+            "payloadOffset": 62713,
+            "byteLength": 94311,
+            "end": 157024
+          },
+          {
+            "id": 9,
+            "headerOffset": 157024,
+            "payloadOffset": 157028,
+            "byteLength": 42679,
+            "end": 199707
+          },
+          {
+            "id": 10,
+            "headerOffset": 199707,
+            "payloadOffset": 199712,
+            "byteLength": 25177807,
+            "end": 25377519
+          },
+          {
+            "id": 11,
+            "headerOffset": 25377519,
+            "payloadOffset": 25377524,
+            "byteLength": 5830893,
+            "end": 31208417
+          },
+          {
+            "id": 0,
+            "headerOffset": 31208417,
+            "payloadOffset": 31208420,
+            "byteLength": 2297,
+            "end": 31210717
+          },
+          {
+            "id": 0,
+            "headerOffset": 31210717,
+            "payloadOffset": 31210719,
+            "byteLength": 21,
+            "end": 31210740
+          },
+          {
+            "id": 0,
+            "headerOffset": 31210740,
+            "payloadOffset": 31210742,
+            "byteLength": 55,
+            "end": 31210797
+          },
+          {
+            "id": 0,
+            "headerOffset": 31210797,
+            "payloadOffset": 31210800,
+            "byteLength": 206,
+            "end": 31211006
+          },
+          {
+            "id": 0,
+            "headerOffset": 31211006,
+            "payloadOffset": 31211009,
+            "byteLength": 979,
+            "end": 31211988
+          },
+          {
+            "id": 0,
+            "headerOffset": 31211988,
+            "payloadOffset": 31211991,
+            "byteLength": 781,
+            "end": 31212772
+          },
+          {
+            "id": 0,
+            "headerOffset": 31212772,
+            "payloadOffset": 31212775,
+            "byteLength": 1697,
+            "end": 31214472
+          }
+        ],
+        "sectionsAfter": [
+          {
+            "id": 1,
+            "headerOffset": 8,
+            "payloadOffset": 11,
+            "byteLength": 2275,
+            "end": 2286
+          },
+          {
+            "id": 2,
+            "headerOffset": 2286,
+            "payloadOffset": 2289,
+            "byteLength": 803,
+            "end": 3092
+          },
+          {
+            "id": 3,
+            "headerOffset": 3092,
+            "payloadOffset": 3096,
+            "byteLength": 54424,
+            "end": 57520
+          },
+          {
+            "id": 4,
+            "headerOffset": 57520,
+            "payloadOffset": 57522,
+            "byteLength": 9,
+            "end": 57531
+          },
+          {
+            "id": 5,
+            "headerOffset": 57531,
+            "payloadOffset": 57533,
+            "byteLength": 3,
+            "end": 57536
+          },
+          {
+            "id": 6,
+            "headerOffset": 57536,
+            "payloadOffset": 57539,
+            "byteLength": 5170,
+            "end": 62709
+          },
+          {
+            "id": 7,
+            "headerOffset": 62709,
+            "payloadOffset": 62713,
+            "byteLength": 94311,
+            "end": 157024
+          },
+          {
+            "id": 9,
+            "headerOffset": 157024,
+            "payloadOffset": 157028,
+            "byteLength": 42679,
+            "end": 199707
+          },
+          {
+            "id": 10,
+            "headerOffset": 199707,
+            "payloadOffset": 199712,
+            "byteLength": 25177829,
+            "end": 25377541
+          },
+          {
+            "id": 11,
+            "headerOffset": 25377541,
+            "payloadOffset": 25377546,
+            "byteLength": 5830893,
+            "end": 31208439
+          },
+          {
+            "id": 0,
+            "headerOffset": 31208439,
+            "payloadOffset": 31208442,
+            "byteLength": 2297,
+            "end": 31210739
+          },
+          {
+            "id": 0,
+            "headerOffset": 31210739,
+            "payloadOffset": 31210741,
+            "byteLength": 21,
+            "end": 31210762
+          },
+          {
+            "id": 0,
+            "headerOffset": 31210762,
+            "payloadOffset": 31210764,
+            "byteLength": 55,
+            "end": 31210819
+          },
+          {
+            "id": 0,
+            "headerOffset": 31210819,
+            "payloadOffset": 31210822,
+            "byteLength": 206,
+            "end": 31211028
+          },
+          {
+            "id": 0,
+            "headerOffset": 31211028,
+            "payloadOffset": 31211031,
+            "byteLength": 979,
+            "end": 31212010
+          },
+          {
+            "id": 0,
+            "headerOffset": 31212010,
+            "payloadOffset": 31212013,
+            "byteLength": 781,
+            "end": 31212794
+          },
+          {
+            "id": 0,
+            "headerOffset": 31212794,
+            "payloadOffset": 31212797,
+            "byteLength": 1697,
+            "end": 31214494
+          }
+        ]
+      }
+    },
+    {
+      "name": "actual production derivation exactly equals independent bytes",
+      "passed": true,
+      "detail": {
+        "byteLength": 31214494,
+        "sha256": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+        "originalUnchanged": true
+      }
+    },
+    {
+      "name": "production rejects truncated-source",
+      "passed": true,
+      "detail": {
+        "faultInjection": true,
+        "byteLength": 31214471,
+        "inputHash": "sha256:c0de61a2cb36bcfa638100a7281d126a8f254438aa792a60d4b3569d8ef2077a"
+      }
+    },
+    {
+      "name": "production rejects same-length-source-hash-corruption",
+      "passed": true,
+      "detail": {
+        "faultInjection": true,
+        "byteLength": 31214472,
+        "inputHash": "sha256:9ef9cc9712e8de50c4e95c531be1f335e64963d3c805957b88504d5a760a978f"
+      }
+    },
+    {
+      "name": "isolated faulty production recipe rejects wrong-header-guard",
+      "passed": true,
+      "detail": {
+        "faultInjection": true,
+        "sourceHash": "sha256:e8a490b38df7b3b3b0623e8dbdd1710cd9df8de780932f8962b234bac162b17a",
+        "rejection": {
+          "message": "Completion semantics instruction/header guard failed"
+        }
+      }
+    },
+    {
+      "name": "isolated faulty production recipe rejects wrong-instruction-before-guard",
+      "passed": true,
+      "detail": {
+        "faultInjection": true,
+        "sourceHash": "sha256:59853b20528938f1344d96b55f0dbcb58c6b8faff1fc34f63370457a392a2a91",
+        "rejection": {
+          "message": "Completion semantics instruction/header guard failed"
+        }
+      }
+    },
+    {
+      "name": "isolated faulty production recipe rejects wrong-derived-whole-sha",
+      "passed": true,
+      "detail": {
+        "faultInjection": true,
+        "sourceHash": "sha256:45aae95f1f6d2910c4176bbfee1cf39119c3653728343ddbabc061208d2abf7a",
+        "rejection": {
+          "message": "Completion semantics derived integrity failed"
+        }
+      }
+    },
+    {
+      "name": "isolated faulty production recipe rejects wrong-function-body-length",
+      "passed": true,
+      "detail": {
+        "faultInjection": true,
+        "sourceHash": "sha256:41462cc606cf3d970e72093e1c0c1d4884a77ebe09dc7dc8ba197aebebafa398",
+        "rejection": {
+          "message": "Completion semantics derived integrity failed"
+        }
+      }
+    },
+    {
+      "name": "public adapter constructor rejects wrong-source-toolchain-id",
+      "passed": true,
+      "detail": {
+        "faultInjection": true
+      }
+    },
+    {
+      "name": "public adapter constructor rejects wrong-source-compiler-hash",
+      "passed": true,
+      "detail": {
+        "faultInjection": true
+      }
+    },
+    {
+      "name": "public adapter constructor rejects wrong-source-compiler-length",
+      "passed": true,
+      "detail": {
+        "faultInjection": true
+      }
+    },
+    {
+      "name": "public adapter controlled reply: correct-derived-identity",
+      "passed": true,
+      "detail": {
+        "controlledWorker": true,
+        "actualStatus": "succeeded",
+        "reason": null,
+        "terminateCalls": 1
+      }
+    },
+    {
+      "name": "public adapter controlled reply: pretend-original-compiler-hash",
+      "passed": true,
+      "detail": {
+        "controlledWorker": true,
+        "actualStatus": "failed",
+        "reason": "worker-error",
+        "terminateCalls": 1
+      }
+    },
+    {
+      "name": "public adapter controlled reply: pretend-original-toolchain-id",
+      "passed": true,
+      "detail": {
+        "controlledWorker": true,
+        "actualStatus": "failed",
+        "reason": "worker-error",
+        "terminateCalls": 1
+      }
+    },
+    {
+      "name": "public adapter controlled reply: wrong-derived-toolchain-id",
+      "passed": true,
+      "detail": {
+        "controlledWorker": true,
+        "actualStatus": "failed",
+        "reason": "worker-error",
+        "terminateCalls": 1
+      }
+    },
+    {
+      "name": "public adapter controlled reply: wrong-derived-compiler-hash",
+      "passed": true,
+      "detail": {
+        "controlledWorker": true,
+        "actualStatus": "failed",
+        "reason": "worker-error",
+        "terminateCalls": 1
+      }
+    },
+    {
+      "name": "fixed target and original full compiler remain byte-identical",
+      "passed": true,
+      "detail": {
+        "targetUnchanged": true,
+        "originalHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+      }
+    }
+  ],
+  "fatalError": null,
+  "actualProviderQueries": 0,
+  "actualCompilerProbeCalls": 0,
+  "controlledAdapterReplies": 5,
+  "notes": [
+    "Independent expected bytes and framing do not use production derive/inspect.",
+    "Large source/derived binaries are hashed in memory and are not committed.",
+    "Faulty recipe modules and worker replies are deliberate negative controls, not actual product failures.",
+    "No Clang instruction, compilation, browser or physical iPad execution is performed."
+  ]
+}

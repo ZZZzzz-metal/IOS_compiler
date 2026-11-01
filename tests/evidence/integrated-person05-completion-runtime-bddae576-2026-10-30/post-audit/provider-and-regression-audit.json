@@ -1,0 +1,1214 @@
+{
+  "auditPassed": true,
+  "productEligibilityVerdict": "29 passed, const-string boundary failed, 3 UI-only pending",
+  "candidateIdentity": "integration-prototype-80135c59f01b26fc",
+  "routineCount": 276,
+  "offlineChecks": 23,
+  "oracleInfrastructureChecks": 16,
+  "parsedCounts": {
+    "contracts": {
+      "tests": 10,
+      "passed": 10,
+      "failed": 0
+    },
+    "modules": {
+      "tests": 128,
+      "passed": 128,
+      "failed": 0
+    },
+    "pipeline": {
+      "tests": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    "ui-storage": {
+      "tests": 106,
+      "passed": 106,
+      "failed": 0
+    },
+    "offline": {
+      "tests": 23,
+      "passed": 23,
+      "failed": 0
+    },
+    "oracle-infrastructure": {
+      "tests": 16,
+      "passed": 16,
+      "failed": 0
+    }
+  },
+  "shadowValues": [
+    {
+      "name": "shadow",
+      "type": "int",
+      "truncated": false,
+      "availability": "available",
+      "displayValue": "17",
+      "namedCount": 0,
+      "indexedCount": 0
+    },
+    {
+      "name": "shadow",
+      "type": "int",
+      "truncated": false,
+      "availability": "available",
+      "displayValue": "5",
+      "namedCount": 0,
+      "indexedCount": 0
+    }
+  ],
+  "minimalShadow": [
+    {
+      "expected": "19",
+      "actual": {
+        "name": "value",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "19",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "expected": "7",
+      "actual": {
+        "name": "value",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "7",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    }
+  ],
+  "loopSamples": [
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "outOfScope",
+        "reason": "Variable declaration has not executed at this stop",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "0",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "1",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 4,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "2",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    },
+    {
+      "line": 3,
+      "actual": {
+        "name": "i",
+        "type": "int",
+        "truncated": false,
+        "availability": "available",
+        "displayValue": "2",
+        "namedCount": 0,
+        "indexedCount": 0
+      }
+    }
+  ],
+  "appendInConstString": [
+    {
+      "id": "sha256:627e328135e4638236d04e744d12283f846aed20bbe4a50d983ef60442e2063d",
+      "label": "append",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type append(const _Tp &__t)",
+      "insertText": "append",
+      "replaceRange": {
+        "startOffset": 70,
+        "endOffset": 70
+      },
+      "filterText": "append"
+    },
+    {
+      "id": "sha256:4bf8eb92d938d53d20d305b8b4bd6c1e0151a71606cf1a2674df39e25126f449",
+      "label": "append",
+      "kind": "unknown",
+      "detail": "typename enable_if<__can_be_converted_to_string_view<char, char_traits<char>, _Tp>::value, basic_string<char> &>::type append(const _Tp &__t, size_type __pos[, size_type __n = npos])",
+      "insertText": "append",
+      "replaceRange": {
+        "startOffset": 70,
+        "endOffset": 70
+      },
+      "filterText": "append"
+    },
+    {
+      "id": "sha256:344b74d7f5cb906ff61c0c930c180d3a76c6f96af9d8515b72b260f7bdaf757c",
+      "label": "append",
+      "kind": "unknown",
+      "detail": "typename enable_if<__is_exactly_input_iterator<_InputIterator>::value || !__libcpp_string_gets_noexcept_iterator<_InputIterator>::value, basic_string<char> &>::type append(_InputIterator __first, _InputIterator __last)",
+      "insertText": "append",
+      "replaceRange": {
+        "startOffset": 70,
+        "endOffset": 70
+      },
+      "filterText": "append"
+    },
+    {
+      "id": "sha256:795b2363b097dc9d16e3c8ce9b3ea2618ef5edc00250192b9483e0bce0d6b46d",
+      "label": "append",
+      "kind": "unknown",
+      "detail": "typename enable_if<__is_forward_iterator<_ForwardIterator>::value && __libcpp_string_gets_noexcept_iterator<_ForwardIterator>::value, basic_string<char> &>::type append(_ForwardIterator __first, _ForwardIterator __last)",
+      "insertText": "append",
+      "replaceRange": {
+        "startOffset": 70,
+        "endOffset": 70
+      },
+      "filterText": "append"
+    }
+  ],
+  "comparisons": [
+    {
+      "caseId": "type-a",
+      "sourceHash": "sha256:c510bf7960fb575a9d19990df05ba4bc7bfbbf8a7cc08d49eac4197490a3c66b",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 6,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:37",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:37"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "type-b",
+      "sourceHash": "sha256:25a181d0f14cff40bb0a79fd0848026b55a5c367349eb09d3a0c9c377e1a1c4b",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 6,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:39",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:39"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "renamed-member",
+      "sourceHash": "sha256:32a90717b17ce0273000ccc4984b1923365bac2d95b76c98e7e5121fd5ad5f13",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 6,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:37",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:37"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "access-control",
+      "sourceHash": "sha256:2585112526d5f30ce296807b8785662c5e09e2feb96c845212fc58ed4a17fd00",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 6,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:10:37",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:10:37"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "pointer",
+      "sourceHash": "sha256:d0619d9d3a12a1440b96c1ddf419e6ed1238b1863a14b377f32bb26c661ed291",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 6,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:40",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:40"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "namespace",
+      "sourceHash": "sha256:6fceda4bc457baaf6e280c6af298c1c40b726a5e9e8699b78c5ed992cdcb1042",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 1,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:27",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:27"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "local-prefix",
+      "sourceHash": "sha256:7216b0f14783e86bf53c338200aec9ec3fe06d7558d233116ffbe87f1b308fd9",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 2,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:5:8",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:5:8"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "function-prefix",
+      "sourceHash": "sha256:7821b9d772b51b6bd1756e1c5194fbec255b8ba1557f986c7fcc43231c44636b",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 3,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:19",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:19"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "shadow-inner",
+      "sourceHash": "sha256:52a648d008eef036ecc22f45f0035a6f60621572082064c17df18532500e6a1a",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 5,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:5:28",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:5:28"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "shadow-restored",
+      "sourceHash": "sha256:ce9887ea9aef35374c9edc9dcd87253921478abe72e70b9420e4f8b03c88c01f",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 5,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:6:12",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:6:12"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "declaration-order",
+      "sourceHash": "sha256:263e8d69aa056b16184804bcb826d64b1e0132f607d5f712e03f55a78930c3df",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 1,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:9",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:9"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "nested-member",
+      "sourceHash": "sha256:c2e393aeac56f993be704639343606814c268e99879f2ae3210f00dda848968e",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 5,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:48",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:48"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "vector",
+      "sourceHash": "sha256:fb6ef7c67fa0b4faad56a3e2eeccb7ab8767198c1ffd521130cfbd4db6cbc532",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 55,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:48",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:48"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "string",
+      "sourceHash": "sha256:8c9fc93c455b3bd06ef00a98a7918c47bbdfebe231d72a65f5cdb2cd7ea36357",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 144,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:39",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:39"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "chinese-prefix",
+      "sourceHash": "sha256:8436d5f59d801bbca2194ff142c213c70915ecdad4d5ce5671f607bc2a277dfe",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 2,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:1:57",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:1:57"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "nonbmp-prefix",
+      "sourceHash": "sha256:b0eada3bf84ef2ea3338862e2f2c64756687ced12536f55baa5231c1d54a373b",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 1,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:1:58",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:1:58"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "nonbmp-member",
+      "sourceHash": "sha256:dcf2cca218284d38589864db2addac4821710781774b8d419ca8a3f4cccedb01",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 6,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:1:99",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:1:99"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "included-source",
+      "sourceHash": "sha256:95107f057822dc6809744f1318717719ddc97f3f4a412aed7978cbddcc3010b1",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 6,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/user.inc:3:48",
+        "actual": [
+          "-code-completion-at=/project/user.inc:3:48"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "include-omitted",
+      "sourceHash": "sha256:4a3cc321774b0261e1e8ef45e45a51e8d1ebbb8247427644afef945d1a788e9a",
+      "identicalResults": true,
+      "nativeExitCode": 1,
+      "itemCount": 0,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:45",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:45"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "unfinished",
+      "sourceHash": "sha256:8b4c7cbe4c8ea1e61c805a341dcb0f03bc765d189f68367cdf75e2384da36187",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 6,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:12",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:12"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "const-members",
+      "sourceHash": "sha256:d34da25dbaacac720808b1b0487dd8ebec5323342d8a007b56271eee92d7cfc7",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 2,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:5:40",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:5:40"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "c-struct",
+      "sourceHash": "sha256:a582417b92d0235e50363e3bfc125c36204e31323af2a470eeac3e1fd0c7e456",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 2,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.c:2:49",
+        "actual": [
+          "-code-completion-at=/project/main.c:2:49"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "c-pointer",
+      "sourceHash": "sha256:db4e0d42fc81d9f3e3e1c8da7b5e3940b3c4732e60660fe5083cd761be0c367a",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 2,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.c:2:45",
+        "actual": [
+          "-code-completion-at=/project/main.c:2:45"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "c-prefix",
+      "sourceHash": "sha256:b9c757a352b942f12b48cc3b1f1a09207b6336a02db5b5b1b71bb0ba60c6115d",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 2,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.c:1:63",
+        "actual": [
+          "-code-completion-at=/project/main.c:1:63"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "enum",
+      "sourceHash": "sha256:def76d2b12a4489896894c6779d242b70aec4a6ae09e8415804d03892bea430f",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 1,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:30",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:30"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "char-case",
+      "sourceHash": "sha256:5e0a5b7bca80c9033c058a7b2de43a47cd90ecfba8bd92699da4535b88f767ee",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 5,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:34",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:34"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "char-sizeof",
+      "sourceHash": "sha256:fb9464e55a4cd6c8463e28a4b3bd65a3540e83bae9d296ee49d097f084bba37a",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 5,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:20",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:20"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "pattern-variable",
+      "sourceHash": "sha256:af9efd375772214dbd52fcbe43f1f0e3bbcc7fada2cea6ad224e670c1cf28510",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 1,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:8",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:8"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "pattern-function",
+      "sourceHash": "sha256:0f4702fe2dadb030d21e22bb199b0b39aaa8562f9f7c9ea7a20dbecf62f0f030",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 1,
+      "isIncomplete": false,
+      "verdict": "passed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:19",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:19"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    },
+    {
+      "caseId": "const-string",
+      "sourceHash": "sha256:e02280d128ef0a382ad528c05052f24565c086726c8bfe1ed12d502d7b39366c",
+      "identicalResults": true,
+      "nativeExitCode": 0,
+      "itemCount": 82,
+      "isIncomplete": false,
+      "verdict": "boundary-failed",
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:10",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:10"
+        ],
+        "passed": true
+      },
+      "resourceReads": [
+        {
+          "path": "vendor/wasm-clang/memfs",
+          "byteLength": 345442,
+          "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe"
+        },
+        {
+          "path": "vendor/wasm-clang/sysroot.tar",
+          "byteLength": 9297920,
+          "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+        },
+        {
+          "path": "vendor/wasm-clang/clang",
+          "byteLength": 31214472,
+          "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+        }
+      ]
+    }
+  ]
+}

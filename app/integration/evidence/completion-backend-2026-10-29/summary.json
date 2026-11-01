@@ -1,0 +1,107 @@
+{
+  "kind": "root-backend-integration-only",
+  "mergeCommit": "761b652549f57731b372c3f7c77f065da063d70c",
+  "compilerDeliveryCommit": "afada754dc249e03dc33ea3f3d48836d20452a4c",
+  "candidateSourceSHA256": "bdceb574de5be6166a7c0fc2d4c32d9e8987c027e5a14720b3d81182f4b8b94a",
+  "profile": {
+    "compatibilityId": "integration-prototype-80135c59f01b26fc",
+    "protocolVersion": "0.1.0-draft.1",
+    "compiler": {
+      "id": "binji-wasm-clang-648c4a89997a/clang",
+      "version": "8.0.1",
+      "buildHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d"
+    },
+    "linker": {
+      "id": "binji-wasm-clang-648c4a89997a/lld",
+      "version": "8.0.1",
+      "buildHash": "sha256:36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48"
+    },
+    "sysroot": {
+      "id": "binji-wasm-clang-648c4a89997a/sysroot",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "standardLibrary": {
+      "id": "binji-wasm-clang-648c4a89997a/libc++-std::__2",
+      "version": "binji-wasm-clang-648c4a89997a",
+      "buildHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "runtime": {
+      "id": "project-js-wasm-interpreter",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7"
+    },
+    "debugger": {
+      "id": "project-dwarf4-debugger",
+      "version": "0.1.0-prototype.1",
+      "buildHash": "sha256:07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c"
+    },
+    "targetTriple": "wasm32-unknown-wasi",
+    "abi": "wasi_unstable",
+    "addressBits": 32,
+    "endianness": "little",
+    "artifactFormat": "wasm-v1",
+    "debugInfoFormat": "dwarf-4-embedded",
+    "requiredFeatures": [
+      "mvp",
+      "mutable-globals"
+    ],
+    "resourceManifestHash": "sha256:80135c59f01b26fc2113188dbf260ea301a3c02f79de618b0fab996ee91ead46",
+    "status": "candidate",
+    "evidence": [
+      "Development integration of modules 02/03 only; iPad, UI, installation and distribution provenance remain unverified."
+    ]
+  },
+  "resourceCount": 35,
+  "commands": [
+    {
+      "id": "pipeline",
+      "argv": [
+        "C:\\Users\\20964\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+        "--test",
+        "--test-reporter=tap",
+        "app/integration/checks/pipeline.test.mjs"
+      ],
+      "startedAt": "2026-10-29T15:47:58.695956+00:00",
+      "endedAt": "2026-10-29T15:48:02.437397+00:00",
+      "exitCode": 0
+    },
+    {
+      "id": "prepare-ui",
+      "argv": [
+        "C:\\Users\\20964\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+        "ui/scripts/prepare-probe.mjs"
+      ],
+      "startedAt": "2026-10-29T15:48:02.438397+00:00",
+      "endedAt": "2026-10-29T15:48:02.604401+00:00",
+      "exitCode": 0
+    },
+    {
+      "id": "check",
+      "argv": [
+        "cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "startedAt": "2026-10-29T15:48:02.605401+00:00",
+      "endedAt": "2026-10-29T15:48:04.364130+00:00",
+      "exitCode": 0
+    },
+    {
+      "id": "contracts",
+      "argv": [
+        "cmd.exe",
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "startedAt": "2026-10-29T15:48:04.365129+00:00",
+      "endedAt": "2026-10-29T15:48:05.057213+00:00",
+      "exitCode": 0
+    }
+  ],
+  "boundary": "No new UI, browser, complete offline package, independent feature acceptance or iPad claim."
+}

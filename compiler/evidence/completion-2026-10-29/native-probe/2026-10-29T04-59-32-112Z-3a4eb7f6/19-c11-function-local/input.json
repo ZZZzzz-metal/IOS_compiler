@@ -1,0 +1,72 @@
+{
+  "id": "19-c11-function-local",
+  "language": "c",
+  "standard": "c11",
+  "translationUnit": "main.c",
+  "targetPath": "main.c",
+  "files": [
+    {
+      "path": "main.c",
+      "role": "user",
+      "markedText": "int alphaFunction(int n);\nint main(void) { int alphaLocal = 1; al@; }\n"
+    }
+  ],
+  "observations": [
+    "alphaFunction",
+    "alphaLocal"
+  ],
+  "cursor": {
+    "sourcePath": "main.c",
+    "compilerPath": "/project/main.c",
+    "utf16Offset": 65,
+    "line": 2,
+    "utf16Column": 40,
+    "utf8ByteColumn": 40,
+    "linePrefix": "int main(void) { int alphaLocal = 1; al",
+    "prefixAtCursor": "al",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "snapshot": {
+    "snapshotId": "native-probe-19-c11-function-local",
+    "sourceHash": "sha256:e229be6a8f2fdaba8584c39ff3d5f71f5d4c85d1d363cbb45acc600009aaa98f",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.c",
+    "files": [
+      {
+        "path": "main.c",
+        "role": "user",
+        "text": "int alphaFunction(int n);\nint main(void) { int alphaLocal = 1; al; }\n",
+        "contentHash": "sha256:40a884e68ce890887781918dbacfa50c1782ac4fbca4a5ffe093317826dc3e70"
+      }
+    ]
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.c",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c11",
+    "-x",
+    "c",
+    "-code-completion-at=/project/main.c:2:40",
+    "/project/main.c"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "requestId": "671e4aa8-0455-4631-b028-1810c2080993-1-active-cancelled",
+  "documentVersion": 1,
+  "snapshotId": "671e4aa8-0455-4631-b028-1810c2080993-1-active-cancelled-snapshot",
+  "sourceHash": "sha256:fb6ef7c67fa0b4faad56a3e2eeccb7ab8767198c1ffd521130cfbd4db6cbc532",
+  "sourcePath": "main.cpp",
+  "offset": 65,
+  "status": "cancelled",
+  "items": [],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "reason": "user-cancelled"
+}

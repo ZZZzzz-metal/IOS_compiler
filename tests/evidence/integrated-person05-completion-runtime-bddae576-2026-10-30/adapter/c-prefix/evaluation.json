@@ -1,0 +1,12 @@
+{
+  "caseId": "c-prefix",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:33.098Z",
+  "elapsedMs": 14.629599999999982,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

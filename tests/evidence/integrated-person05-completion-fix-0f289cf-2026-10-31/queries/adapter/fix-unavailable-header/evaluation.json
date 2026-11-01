@@ -1,0 +1,12 @@
+{
+  "id": "fix-unavailable-header",
+  "group": "randomized11",
+  "route": "adapter",
+  "elapsedMs": 14.53610000000026,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 2,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

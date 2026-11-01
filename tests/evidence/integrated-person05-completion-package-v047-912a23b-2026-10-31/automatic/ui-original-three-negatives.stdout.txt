@@ -1,0 +1,4 @@
+PASS comment: provider=0, phase=idle, items=0
+PASS string-literal: provider=0, phase=idle, items=0
+PASS decimal: provider=0, phase=idle, items=0
+{"scenarios":3,"assertions":12,"passed":3,"failed":0,"evidence":"C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-05\\tests\\evidence\\integrated-person05-completion-package-v047-912a23b-2026-10-31\\automatic\\negative\\"}

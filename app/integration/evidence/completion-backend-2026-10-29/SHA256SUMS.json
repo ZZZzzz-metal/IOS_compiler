@@ -1,0 +1,82 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  {
+    "file": "candidate-resources.json",
+    "byteLength": 17670,
+    "sha256": "ea5a4b6feb24d829fe8007ceb40707fe5824f3c6bbce752c1b48edf89005f6c2"
+  },
+  {
+    "file": "check.command.json",
+    "byteLength": 236,
+    "sha256": "05cffed13056c1874e777dd942b941c0a3815414bf97ccb9d2628efe5a1b3ab3"
+  },
+  {
+    "file": "check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "ba4ce463e7223dadae91b177323ca943d924952caaa1f0c2ed644973df9aae5a"
+  },
+  {
+    "file": "contracts.command.json",
+    "byteLength": 235,
+    "sha256": "2827aaec4eaab1ee05c31b1ef9241bb0609ddeebb299acf3e8942eda1c9a7f4b"
+  },
+  {
+    "file": "contracts.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "contracts.stdout.txt",
+    "byteLength": 1124,
+    "sha256": "6c6f26f8c7ccf23b032cdb6cc6e25b262bf69522d76f150a2e2f57fc486d0376"
+  },
+  {
+    "file": "pipeline.command.json",
+    "byteLength": 363,
+    "sha256": "e7946586b1af671a69fc7deea8578e4d4db64089dac97a0eea30746705b6ca0a"
+  },
+  {
+    "file": "pipeline.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "pipeline.stdout.txt",
+    "byteLength": 832,
+    "sha256": "0fb07f8da74da3679a9ce860a4112b5b4ee03bac4caad7fa08048b2924536479"
+  },
+  {
+    "file": "prepare-ui.command.json",
+    "byteLength": 310,
+    "sha256": "0309151021db344a1de1133f238287e5cace776fef658b25e1067806dc32924e"
+  },
+  {
+    "file": "prepare-ui.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "prepare-ui.stdout.txt",
+    "byteLength": 68,
+    "sha256": "ed8e744b13809e03911eed2b263d624760f1a10f16a7bba1a5fc0f08dc2daf71"
+  },
+  {
+    "file": "README.md",
+    "byteLength": 444,
+    "sha256": "8ad7354822f2345ee52fa24e198fc408cde052bb64435ae539b0ab3dd4178003"
+  },
+  {
+    "file": "summary.json",
+    "byteLength": 3732,
+    "sha256": "5a501b265f2e979bb2d22ac1c617f0179c3605c7d902c70afafba503888222e7"
+  }
+]

@@ -1,0 +1,116 @@
+{
+  "id": "07-class-scope",
+  "invokedAt": "2026-10-29T04:58:46.263Z",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 108,
+    "line": 2,
+    "utf16Column": 20,
+    "utf8ByteColumn": 20,
+    "linePrefix": "int main() { Node::",
+    "prefixAtCursor": "",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:2:20",
+    "/project/main.cpp"
+  ],
+  "sourceHash": "sha256:1b0ba3081724aa1fe9e532cc8d1176fa160a85aae17fa097fa3aaa3159ff43b1",
+  "resources": [
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "expectedSha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "verified": true
+    },
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "expectedSha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "verified": true
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "expectedSha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "verified": true
+    }
+  ],
+  "flags": [],
+  "exitCode": 0,
+  "hostError": null,
+  "filesystemSetupMs": 6.737600000000043,
+  "completionMs": 9.186900000000037,
+  "totalCaseMs": 15.954400000000021,
+  "memoryBytes": {
+    "clangAfterExecution": 7077888,
+    "memfsAfterExecution": 9437184
+  },
+  "stdoutByteLength": 315,
+  "stderrByteLength": 0,
+  "stdoutSha256": "sha256:b45b93f471af626eb1f3be0c49fd404265be08e563d7be2356576267abc1b314",
+  "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completionCount": 8,
+  "candidateObservations": [
+    {
+      "name": "total",
+      "lines": [
+        "COMPLETION: total : [#int#]total"
+      ]
+    },
+    {
+      "name": "create",
+      "lines": [
+        "COMPLETION: create : [#int#]create(<#int#>)"
+      ]
+    },
+    {
+      "name": "Size",
+      "lines": [
+        "COMPLETION: Size : Size"
+      ]
+    },
+    {
+      "name": "member",
+      "lines": [
+        "COMPLETION: member : [#int#]member"
+      ]
+    }
+  ],
+  "inaccessibleLines": [],
+  "stdout": "COMPLETION: create : [#int#]create(<#int#>)\nCOMPLETION: member : [#int#]member\nCOMPLETION: Node : Node\nCOMPLETION: operator= : [#Node &#]operator=(<#const Node &#>)\nCOMPLETION: operator= : [#Node &#]operator=(<#Node &&#>)\nCOMPLETION: Size : Size\nCOMPLETION: total : [#int#]total\nCOMPLETION: ~Node : [#void#]~Node()\n",
+  "stderr": ""
+}

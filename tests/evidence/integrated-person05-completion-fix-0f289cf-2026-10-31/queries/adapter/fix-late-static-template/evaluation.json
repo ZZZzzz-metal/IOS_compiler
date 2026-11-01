@@ -1,0 +1,12 @@
+{
+  "id": "fix-late-static-template",
+  "group": "late2",
+  "route": "adapter",
+  "elapsedMs": 14.38550000000032,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 2,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

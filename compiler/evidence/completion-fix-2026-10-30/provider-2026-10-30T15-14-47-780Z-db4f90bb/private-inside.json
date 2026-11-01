@@ -1,0 +1,255 @@
+{
+  "request": {
+    "requestId": "937589e2-72a7-4948-838e-e12cb9c967ff",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "8fb221a4-0e0d-4bc7-b2ec-6820801ced60",
+      "sourceHash": "sha256:0919d2219c0d692e2e12692643384b2bf35caea1ac60a60e583aaa1d4db21ca8",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "class Box{int hidden; public:void f(){this->;}};",
+          "contentHash": "sha256:0c989f00e72575eda50382cf6ce89fd39b3af94b1180d30d2b073039af7038c8"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 44
+  },
+  "reply": {
+    "requestId": "937589e2-72a7-4948-838e-e12cb9c967ff",
+    "documentVersion": 1,
+    "snapshotId": "8fb221a4-0e0d-4bc7-b2ec-6820801ced60",
+    "sourceHash": "sha256:0919d2219c0d692e2e12692643384b2bf35caea1ac60a60e583aaa1d4db21ca8",
+    "sourcePath": "main.cpp",
+    "offset": 44,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:66fd3729b76b695315b2826d8f09fef6aea4119e73e06ce1e8346a578ccd415b",
+        "label": "Box",
+        "kind": "unknown",
+        "detail": "Box::",
+        "insertText": "Box",
+        "replaceRange": {
+          "startOffset": 44,
+          "endOffset": 44
+        },
+        "filterText": "Box"
+      },
+      {
+        "id": "sha256:3c9f5f5c1f3893e9d81dac2fa2929eb53fc3364a2b885fd530371885e85752ad",
+        "label": "f",
+        "kind": "unknown",
+        "detail": "void f()",
+        "insertText": "f",
+        "replaceRange": {
+          "startOffset": 44,
+          "endOffset": 44
+        },
+        "filterText": "f"
+      },
+      {
+        "id": "sha256:afe45bfb1495855d7e64c3a8e7ef96d22f6d6cfa078b307a32f8046be4245465",
+        "label": "hidden",
+        "kind": "unknown",
+        "detail": "int hidden",
+        "insertText": "hidden",
+        "replaceRange": {
+          "startOffset": 44,
+          "endOffset": 44
+        },
+        "filterText": "hidden"
+      },
+      {
+        "id": "sha256:0b937fe8458690b53c83aebbd834b639c69c9e0c8a0c43d5e9d428c4d3f25438",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Box & operator=(const Box &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 44,
+          "endOffset": 44
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:2918d1303ba4b332f010bcdaf509456ef63054076d672babfc4296d9609cfa71",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Box & operator=(Box &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 44,
+          "endOffset": 44
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:d81ce0ace5a56f47183fc79f89f51269909dccfb866f8dc880f2f01b6fda4b98",
+        "label": "~Box",
+        "kind": "unknown",
+        "detail": "void ~Box()",
+        "insertText": "~Box",
+        "replaceRange": {
+          "startOffset": 44,
+          "endOffset": 44
+        },
+        "filterText": "~Box"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+    "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 16.158000000000015,
+  "native": {
+    "result": {
+      "requestId": "937589e2-72a7-4948-838e-e12cb9c967ff",
+      "documentVersion": 1,
+      "snapshotId": "8fb221a4-0e0d-4bc7-b2ec-6820801ced60",
+      "sourceHash": "sha256:0919d2219c0d692e2e12692643384b2bf35caea1ac60a60e583aaa1d4db21ca8",
+      "sourcePath": "main.cpp",
+      "offset": 44,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:66fd3729b76b695315b2826d8f09fef6aea4119e73e06ce1e8346a578ccd415b",
+          "label": "Box",
+          "kind": "unknown",
+          "detail": "Box::",
+          "insertText": "Box",
+          "replaceRange": {
+            "startOffset": 44,
+            "endOffset": 44
+          },
+          "filterText": "Box"
+        },
+        {
+          "id": "sha256:3c9f5f5c1f3893e9d81dac2fa2929eb53fc3364a2b885fd530371885e85752ad",
+          "label": "f",
+          "kind": "unknown",
+          "detail": "void f()",
+          "insertText": "f",
+          "replaceRange": {
+            "startOffset": 44,
+            "endOffset": 44
+          },
+          "filterText": "f"
+        },
+        {
+          "id": "sha256:afe45bfb1495855d7e64c3a8e7ef96d22f6d6cfa078b307a32f8046be4245465",
+          "label": "hidden",
+          "kind": "unknown",
+          "detail": "int hidden",
+          "insertText": "hidden",
+          "replaceRange": {
+            "startOffset": 44,
+            "endOffset": 44
+          },
+          "filterText": "hidden"
+        },
+        {
+          "id": "sha256:0b937fe8458690b53c83aebbd834b639c69c9e0c8a0c43d5e9d428c4d3f25438",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Box & operator=(const Box &)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 44,
+            "endOffset": 44
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:2918d1303ba4b332f010bcdaf509456ef63054076d672babfc4296d9609cfa71",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Box & operator=(Box &&)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 44,
+            "endOffset": 44
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:d81ce0ace5a56f47183fc79f89f51269909dccfb866f8dc880f2f01b6fda4b98",
+          "label": "~Box",
+          "kind": "unknown",
+          "detail": "void ~Box()",
+          "insertText": "~Box",
+          "replaceRange": {
+            "startOffset": 44,
+            "endOffset": 44
+          },
+          "filterText": "~Box"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+      "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:45",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: Box : Box::\nCOMPLETION: f : [#void#]f()\nCOMPLETION: hidden : [#int#]hidden\nCOMPLETION: operator= : [#Box &#]operator=(<#const Box &#>)\nCOMPLETION: operator= : [#Box &#]operator=(<#Box &&#>)\nCOMPLETION: ~Box : [#void#]~Box()\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 45
+      }
+    },
+    "metrics": {
+      "totalMs": 15.893800000000056,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [
+      "hidden"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

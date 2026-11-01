@@ -1,0 +1,16 @@
+{
+  "name": "07-short-timeout-real-worker-release",
+  "passed": true,
+  "checks": [
+    {
+      "scenario": "07-short-timeout-real-worker-release",
+      "name": "short timeout returns failed identity and no items",
+      "passed": true
+    },
+    {
+      "scenario": "07-short-timeout-real-worker-release",
+      "name": "real Worker was created then released before timeout result",
+      "passed": true
+    }
+  ]
+}

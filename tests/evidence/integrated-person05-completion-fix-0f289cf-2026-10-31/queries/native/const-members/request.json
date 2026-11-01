@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-const-members",
+  "documentVersion": 21,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-const-members-snapshot",
+    "sourceHash": "sha256:d34da25dbaacac720808b1b0487dd8ebec5323342d8a007b56271eee92d7cfc7",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "struct Reading {\n    int read() const { return 2; }\n    void mutate() { }\n};\nvoid probe(const Reading& item) { item. }\n",
+        "contentHash": "sha256:c2d4cd6b365c9fea99c9d6b0ced57a6656423347010647c4b151d8c6eb755481"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 116,
+  "trigger": "."
+}

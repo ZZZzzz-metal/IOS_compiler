@@ -1,0 +1,11 @@
+{
+  "operation": "lossless archive of reconstructable full Wasm function-index report",
+  "originalFilename": "report.json",
+  "originalSha256": "5f793b84f2edab027d8dfbef29c37f4c9c29a6a9bd4c28f451dafaf2be354455",
+  "originalByteLength": 16789685,
+  "archivedFilename": "report.json.gz",
+  "archivedSha256": "10f6be30b450ac2c5cb67c1686a9be40a683cfdfb00b634fc69480ea1445b7e6",
+  "archivedByteLength": 725703,
+  "exactByteRoundtripVerified": true,
+  "rawCasesAndFunctionDisassemblyChanged": false
+}

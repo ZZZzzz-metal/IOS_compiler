@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "commands": [
+    {
+      "id": "check",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd run check"
+      ],
+      "startedAt": "2026-10-31T07:15:47.983Z",
+      "endedAt": "2026-10-31T07:15:50.592Z",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "id": "test",
+      "executable": "cmd.exe",
+      "args": [
+        "/d",
+        "/s",
+        "/c",
+        "npm.cmd test"
+      ],
+      "startedAt": "2026-10-31T07:15:50.595Z",
+      "endedAt": "2026-10-31T07:15:51.601Z",
+      "exitCode": 0,
+      "error": null
+    }
+  ],
+  "finalSourceFingerprints": [
+    {
+      "path": "tests/audit-completion-fix-binding.mjs",
+      "byteLength": 15402,
+      "sha256": "56f89caf1b090478b86eb696793ea1dae49d37c63b145ec943f0f076e5097ff6"
+    },
+    {
+      "path": "tests/audit-completion-fix-round.mjs",
+      "byteLength": 8015,
+      "sha256": "00583546ee609794237a4cf5c158201304e4346b822f9644c104d181af6fece3"
+    },
+    {
+      "path": "tests/completion-fix-callability-oracle-checks.mjs",
+      "byteLength": 3569,
+      "sha256": "e8e754889d37b08b5154d0df9bb3b65433ce064f3fef7f26ef3b1e306f816792"
+    },
+    {
+      "path": "tests/completion-fix-integrity-independent.mjs",
+      "byteLength": 22127,
+      "sha256": "057e762292ddec558fe2e6d8d4e67c655d3f14e8403d1eb10967c99f44819bb9"
+    },
+    {
+      "path": "tests/completion-fix-lifecycle-independent.mjs",
+      "byteLength": 20896,
+      "sha256": "01be226a93eba6d3b690110d2e318e2acb998e782d138fbe54332d455c807979"
+    },
+    {
+      "path": "tests/lib/completion-fix-callability-oracle.mjs",
+      "byteLength": 6617,
+      "sha256": "1c99ec83c046f7f81550dd3cdbc581d4c2c0302f8ad63c4e39e0eb908ca637c9"
+    },
+    {
+      "path": "tests/lib/completion-fix-late-fixtures.mjs",
+      "byteLength": 3411,
+      "sha256": "3e028eafe5d5b10006955196544639d641273d65e4bbc44a03f0c3495199274f"
+    },
+    {
+      "path": "tests/run-completion-fix-callability.mjs",
+      "byteLength": 14776,
+      "sha256": "291323cb93fe4a86e5ac1b73531f33e9803ef48bd74231fce04ae7b8fe7aa6f1"
+    },
+    {
+      "path": "tests/run-completion-fix-independent.mjs",
+      "byteLength": 13164,
+      "sha256": "04c16b15db5b50456e8039c277010b729fcb1d748208f999a99dbef479b14e5d"
+    },
+    {
+      "path": "tests/run-completion-fix-stage.mjs",
+      "byteLength": 7438,
+      "sha256": "441a85af5810f4a812062653d43e5e3cd324d1e128ba86b16abf7edc2361c17a"
+    },
+    {
+      "path": "docs/validation/completion-fix-person05-0f289cf-2026-10-31.md",
+      "byteLength": 7166,
+      "sha256": "5df55d29dcc3a8461046de377e2f2492857c079d3346994e2ef5ed686555ed3d"
+    },
+    {
+      "path": "docs/handoffs/05.md",
+      "byteLength": 46881,
+      "sha256": "507da73d752cceb903321045d6be0a36d5b26fd2032371ade8281d37e7e8c594"
+    }
+  ]
+}

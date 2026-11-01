@@ -1,0 +1,88 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-pointer",
+  "documentVersion": 5,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-pointer-snapshot",
+  "sourceHash": "sha256:d0619d9d3a12a1440b96c1ddf419e6ed1238b1863a14b377f32bb26c661ed291",
+  "sourcePath": "main.cpp",
+  "offset": 85,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:ef22a19689b04dee051f38920c9c5e549b21b17d16f946d18b90513f5af61f1c",
+      "label": "elevation",
+      "kind": "unknown",
+      "detail": "int elevation",
+      "insertText": "elevation",
+      "replaceRange": {
+        "startOffset": 85,
+        "endOffset": 85
+      },
+      "filterText": "elevation"
+    },
+    {
+      "id": "sha256:528d5d863e63b1fcea683f2a65dcc26112865aede673d8e7961596ec64d2dea1",
+      "label": "Height",
+      "kind": "unknown",
+      "detail": "Height::",
+      "insertText": "Height",
+      "replaceRange": {
+        "startOffset": 85,
+        "endOffset": 85
+      },
+      "filterText": "Height"
+    },
+    {
+      "id": "sha256:b25cf3a01fdafa1d04a9511ea555ed447f446b130fb4d4b1ac80f482319323e8",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Height & operator=(const Height &)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 85,
+        "endOffset": 85
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:2c8a6237fae90ece1ee590c2c48bfb30f88b192b3e06e15a56397f3be1ed2eb3",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Height & operator=(Height &&)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 85,
+        "endOffset": 85
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:d00af93cb90455e67bc36f1ec326b5056797f1fa25b96f13a253df728dcf26a0",
+      "label": "summit",
+      "kind": "unknown",
+      "detail": "int summit",
+      "insertText": "summit",
+      "replaceRange": {
+        "startOffset": 85,
+        "endOffset": 85
+      },
+      "filterText": "summit"
+    },
+    {
+      "id": "sha256:7e04f9422415334bb15aaefee7ac92aa0227d66fd4be0e6fb294a5e8b46d7f09",
+      "label": "~Height",
+      "kind": "unknown",
+      "detail": "void ~Height()",
+      "insertText": "~Height",
+      "replaceRange": {
+        "startOffset": 85,
+        "endOffset": 85
+      },
+      "filterText": "~Height"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

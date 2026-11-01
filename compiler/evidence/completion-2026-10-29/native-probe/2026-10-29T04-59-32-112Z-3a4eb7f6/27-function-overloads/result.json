@@ -1,0 +1,100 @@
+{
+  "id": "27-function-overloads",
+  "invokedAt": "2026-10-29T04:59:33.783Z",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 112,
+    "line": 4,
+    "utf16Column": 16,
+    "utf8ByteColumn": 16,
+    "linePrefix": "int main() { al",
+    "prefixAtCursor": "al",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:4:16",
+    "/project/main.cpp"
+  ],
+  "sourceHash": "sha256:867103dc6c2c77e30039ea99e25539707c8297ed80f61655f83d86748fe3e888",
+  "resources": [
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "expectedSha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "verified": true
+    },
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "expectedSha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "verified": true
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "expectedSha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "verified": true
+    }
+  ],
+  "flags": [],
+  "exitCode": 0,
+  "hostError": null,
+  "filesystemSetupMs": 5.542699999999968,
+  "completionMs": 6.065599999999904,
+  "totalCaseMs": 11.636299999999892,
+  "memoryBytes": {
+    "clangAfterExecution": 7012352,
+    "memfsAfterExecution": 9437184
+  },
+  "stdoutByteLength": 279,
+  "stderrByteLength": 0,
+  "stdoutSha256": "sha256:e7547ffc14ddbdf41bf833936feda7407bc0f4828c552a74c9220fac3a09e5bf",
+  "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completionCount": 5,
+  "candidateObservations": [
+    {
+      "name": "alpha",
+      "lines": [
+        "COMPLETION: alpha : [#int#]alpha(<#int number#>)",
+        "COMPLETION: alpha : [#double#]alpha(<#double number#>)",
+        "COMPLETION: alpha : [#void#]alpha(<#const char *text#>{#, <#int count = 2#>#})"
+      ]
+    }
+  ],
+  "inaccessibleLines": [],
+  "stdout": "COMPLETION: Pattern : alignas(<#expression#>)\nCOMPLETION: Pattern : [#size_t#]alignof(<#type#>)\nCOMPLETION: alpha : [#int#]alpha(<#int number#>)\nCOMPLETION: alpha : [#double#]alpha(<#double number#>)\nCOMPLETION: alpha : [#void#]alpha(<#const char *text#>{#, <#int count = 2#>#})\n",
+  "stderr": ""
+}

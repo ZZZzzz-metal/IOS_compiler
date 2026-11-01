@@ -1,0 +1,63 @@
+{
+  "kind": "root-desktop-browser-observations",
+  "sourceBaseRevision": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "bundleId": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+  "method": "Actual CUA in-app browser on isolated loopback port 4289. Observations transcribed from tool output; not an automated raw DOM capture.",
+  "networkScope": "Only the test static server was stopped; desktop networking remained enabled. No iPad or physical-network-off assertion.",
+  "observations": [
+    {
+      "step": "prepare",
+      "actual": "62 resources checked; workbench enabled"
+    },
+    {
+      "step": "stop-server",
+      "actual": "Own session 70616 stopped by Ctrl+C; independent curl returned connection failure/HTTP000"
+    },
+    {
+      "step": "cold-entry",
+      "actual": "Closed preparation tab; new tab to same fixed index loaded and verified62 with server stopped"
+    },
+    {
+      "step": "trusted-workbench",
+      "actual": "Workbench loaded and local resources verified from complete cache"
+    },
+    {
+      "step": "new-source",
+      "actual": "New OfflineOct30 type created after stopping server; members freshWidth and height appeared among6 candidates"
+    },
+    {
+      "step": "accept",
+      "actual": "ArrowDown thenTab inserted only freshWidth; value ended point.freshWidth, no indentation/newline"
+    },
+    {
+      "step": "undo",
+      "actual": "Single Control+Z restored point. with other code unchanged; Control+Shift+Z redid"
+    },
+    {
+      "step": "compile",
+      "actual": "Completed program printed OFFLINE-CC=31 and exited0"
+    },
+    {
+      "step": "debug",
+      "actual": "Initial pause main.cpp4:1 correctly reported declarations unexecuted; continue reached existing line6 breakpoint with localAnswer31"
+    },
+    {
+      "step": "finish",
+      "actual": "Continue ended session; draft version4 saved"
+    },
+    {
+      "step": "restore",
+      "actual": "Closed workbench then new tab loaded same fixed UI while server remained stopped; OfflineOct30 full draft/version4 restored"
+    },
+    {
+      "step": "console",
+      "actual": "Browser dev.logs warn/error query returned []"
+    }
+  ],
+  "infrastructureNotes": [
+    "Initial sandbox-contained4287 service could not be reached by host browser; stopped own session61116 and used authorized host loopback4289.",
+    "Attempt to save browser artifacts using filesystem import failed with browser.user unavailable before directory creation. CUA reset restored normal observation; screenshot observations succeeded afterward. No saved screenshot or raw DOM file is claimed by this root record.",
+    "First archive orchestration used Windows default decoding for UTF8 JSON; failed before config/archive creation. Explicit UTF8 read fixed orchestration; archive utility and frozen runtime were unchanged."
+  ],
+  "independentAcceptance": "owner05 final delivery pending; own observations do not substitute for independent result"
+}

@@ -1,0 +1,15 @@
+{
+  "snapshotId": "4733075d-f9f2-44fb-8851-f6979fceb269",
+  "sourceHash": "sha256:0dae0fd2b19ca153bf43ba6617a46b7e52685e262fcc8edeecc56641fc69e2a7",
+  "encoding": "utf-8",
+  "newline": "lf",
+  "translationUnit": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "text": "#include <string>\nusing TextAlias_a8ee505af129 = std::string;\nint main() {\n  const TextAlias_a8ee505af129 object_a8ee505af129;\n  return static_cast<int>(object_a8ee505af129.size());\n}\n",
+      "contentHash": "sha256:c209b94e2f581fd5a66de19d2639c19a9eb9698b04e117e30e6bde5ab0797078"
+    }
+  ]
+}

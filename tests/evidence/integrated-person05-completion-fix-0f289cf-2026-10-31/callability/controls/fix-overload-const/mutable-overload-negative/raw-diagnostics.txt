@@ -1,0 +1,10 @@
+/project/main.cpp:7:30: error: no matching member function for call to 'choose_a8ee505af129'
+  return object_a8ee505af129.choose_a8ee505af129(1);
+         ~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/project/main.cpp:3:7: note: candidate function not viable: 'this' argument has type 'const Record_a8ee505af129', but method is not marked const
+  int choose_a8ee505af129(int argument_a8ee505af129) { (void)argument_a8ee505af129; return 0; }
+      ^
+/project/main.cpp:2:7: note: candidate function not viable: requires 0 arguments, but 1 was provided
+  int choose_a8ee505af129() const { return 0; }
+      ^
+1 error generated.

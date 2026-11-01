@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "clang",
+    "--version"
+  ],
+  "elapsedMs": 23.691699999999997,
+  "exitCode": 0,
+  "stdout": "clang version 8.0.1 \nTarget: wasm32-unknown-wasi\nThread model: single\nInstalledDir: /\n",
+  "stderr": "",
+  "memoryBytes": 6684672
+}

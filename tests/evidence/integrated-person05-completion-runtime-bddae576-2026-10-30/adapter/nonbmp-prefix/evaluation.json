@@ -1,0 +1,12 @@
+{
+  "caseId": "nonbmp-prefix",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:32.953Z",
+  "elapsedMs": 17.121700000000146,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

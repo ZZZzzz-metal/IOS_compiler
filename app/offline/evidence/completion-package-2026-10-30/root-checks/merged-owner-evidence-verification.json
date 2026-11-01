@@ -1,0 +1,19 @@
+[
+  {
+    "name": "integrated-person05-completion-runtime-bddae576-2026-10-30",
+    "exitCode": 0,
+    "stdout": "integrated-person05-completion-runtime-bddae576-2026-10-30: verified 452 files, committed bytes identical\n",
+    "stderr": ""
+  },
+  {
+    "name": "integrated-person05-completion-gitverify-2026-10-30",
+    "exitCode": 0,
+    "stdout": "integrated-person05-completion-gitverify-2026-10-30: verified 33 files, committed bytes identical\n",
+    "stderr": ""
+  },
+  {
+    "name": "owner04 immutable UI seal",
+    "verifiedFiles": 20,
+    "modified": false
+  }
+]

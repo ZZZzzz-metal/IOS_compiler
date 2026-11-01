@@ -1,0 +1,3 @@
+COMPLETION: algo : algo::
+COMPLETION: Pattern : alignas(<#expression#>)
+COMPLETION: Pattern : [#size_t#]alignof(<#type#>)

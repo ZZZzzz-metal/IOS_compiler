@@ -1,0 +1,16 @@
+{
+  "id": "ui-storage",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd run test:ui"
+  ],
+  "startedAt": "2026-10-29T16:34:45.868Z",
+  "endedAt": "2026-10-29T16:34:49.236Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "evidenceDirectory": "tests/evidence/integrated-person05-completion-runtime-bddae576-2026-10-30/verification/details/ui-storage"
+}

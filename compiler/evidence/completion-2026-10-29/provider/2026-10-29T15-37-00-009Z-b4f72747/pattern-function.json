@@ -1,0 +1,135 @@
+{
+  "request": {
+    "requestId": "40ee0838-1162-4c1a-b073-553827fa30d5",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "58ba9dbc-e399-494a-b1dd-437a35aaebbd",
+      "sourceHash": "sha256:28203a62787649cc466c592c4efcb9d5c910260200d1c0847bb7a6949ef92ebe",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int Pattern(int);void f(){Pat;}",
+          "contentHash": "sha256:dc17aee6317b39377b54e12bf1ceb198455f21847b666be26e99191298ba7298"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 29
+  },
+  "reply": {
+    "requestId": "40ee0838-1162-4c1a-b073-553827fa30d5",
+    "documentVersion": 1,
+    "snapshotId": "58ba9dbc-e399-494a-b1dd-437a35aaebbd",
+    "sourceHash": "sha256:28203a62787649cc466c592c4efcb9d5c910260200d1c0847bb7a6949ef92ebe",
+    "sourcePath": "main.cpp",
+    "offset": 29,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:93813614c7b43105c488ee8da79bb0e0adad9e5fd74c570235b18434fda19970",
+        "label": "Pattern",
+        "kind": "unknown",
+        "detail": "int Pattern(int)",
+        "insertText": "Pattern",
+        "replaceRange": {
+          "startOffset": 26,
+          "endOffset": 29
+        },
+        "filterText": "Pattern"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 13.61239999999998,
+  "native": {
+    "result": {
+      "requestId": "40ee0838-1162-4c1a-b073-553827fa30d5",
+      "documentVersion": 1,
+      "snapshotId": "58ba9dbc-e399-494a-b1dd-437a35aaebbd",
+      "sourceHash": "sha256:28203a62787649cc466c592c4efcb9d5c910260200d1c0847bb7a6949ef92ebe",
+      "sourcePath": "main.cpp",
+      "offset": 29,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:93813614c7b43105c488ee8da79bb0e0adad9e5fd74c570235b18434fda19970",
+          "label": "Pattern",
+          "kind": "unknown",
+          "detail": "int Pattern(int)",
+          "insertText": "Pattern",
+          "replaceRange": {
+            "startOffset": 26,
+            "endOffset": 29
+          },
+          "filterText": "Pattern"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:30",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: Pattern : [#int#]Pattern(<#int#>)\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 30
+      }
+    },
+    "metrics": {
+      "totalMs": 12.822300000000268,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [
+      "Pattern"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

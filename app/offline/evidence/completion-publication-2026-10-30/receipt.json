@@ -1,0 +1,28 @@
+{
+  "kind": "completion-draft-publication",
+  "repository": "ZZZzzz-metal/IOS_compiler",
+  "pushedRevision": "a6093b5226639b8c945d0b57268f267112540986",
+  "baseMainUnchanged": "ef5d3906e2bb9c877e710a7b2093a0ff5e6fdd2a",
+  "pullRequest": {
+    "number": 4,
+    "url": "https://github.com/ZZZzzz-metal/IOS_compiler/pull/4",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head": "a6093b5226639b8c945d0b57268f267112540986",
+    "base": "ef5d3906e2bb9c877e710a7b2093a0ff5e6fdd2a",
+    "maintainerCanModify": false
+  },
+  "branches": {
+    "integration": "a6093b5226639b8c945d0b57268f267112540986",
+    "module/02-compiler": "afada754dc249e03dc33ea3f3d48836d20452a4c",
+    "module/04-ui": "e2efc07724f359b9a5430dd21485bc6cf32d003b",
+    "module/05-validation": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34"
+  },
+  "mainPushed": false,
+  "forcePush": false,
+  "newReleaseTagCreated": false,
+  "remaining": "Owner05 final fixed UI/package evidence is pending; no final feature ACCEPT or release tag yet. iPad/G2/G3 remain unverified.",
+  "declaration": "Draft PR for human review; no merge performed. Large toolchain/ZIP/local TLS excluded."
+}
+

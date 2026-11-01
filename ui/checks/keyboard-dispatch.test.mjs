@@ -87,6 +87,7 @@ function fixture({scheme='control-number',storage}={}){
         if('recovering'in values)recovering=values.recovering;if('compilation'in values)compilation=values.compilation;
         if('controller'in values)controller=values.controller;if('currentTab'in values)currentTab=values.currentTab;
         if('shortcutScheme'in values)shortcutScheme=values.shortcutScheme;
+        if('completionUI'in values)completionUI=values.completionUI;
       }};
   `+wiring+settingsWiring,context,{filename:'main.mjs:controlled-keyboard'});
   const subject=context.subject;
@@ -285,4 +286,10 @@ test('pending startup blocks another start and allows independent stop before it
 test('source search keeps its exact modifier and focus behavior without invoking debug actions',async()=>{
   for(const modifier of ['ctrlKey','metaKey']){const h=fixture();const event=h.key('f',{[modifier]:true});assert.equal(event.prevented,1);assert.equal(h.document.activeElement,h.element('find'));assert.equal(h.calls.compiles.length,0);}
   for(const options of [{ctrlKey:true,shiftKey:true},{ctrlKey:true,altKey:true},{ctrlKey:true,metaKey:true},{ctrlKey:true,repeat:true}]){const h=fixture();assert.equal(h.key('f',options).prevented,0);assert.equal(h.document.activeElement,h.element('source'));}
+});
+
+test('local editor composition gates global debugging even when key event isComposing is false',async()=>{
+  const h=fixture();h.subject.set({completionUI:{composing:true}});
+  assert.equal(h.key('F5',{isComposing:false}).prevented,0);await flush();
+  assert.equal(h.calls.compiles.length,0);
 });

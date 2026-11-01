@@ -1,0 +1,23 @@
+[
+  {
+    "owner": 2,
+    "requestId": "CC-20261029-02",
+    "transportSuccess": true,
+    "ownerAcknowledged": true,
+    "ownerReply": "ACK-ACCEPT 已回传，2号本轮握手完成。 签收仅限桌面实验原型；const-string、unavailable 两项边界未修，iPad 与 G2/G3 仍待验证。"
+  },
+  {
+    "owner": 4,
+    "requestId": "CC-20261029-04",
+    "transportSuccess": true,
+    "ownerAcknowledged": true,
+    "ownerReply": "4号交付已获1号正式签收，最终确认已回复，协作流程闭环。 PR #4 已就绪，待你手动合并。验收范围为桌面实验原型；两项候选过滤限制及iPad真机验证仍保留。"
+  },
+  {
+    "owner": 5,
+    "requestId": "CC-20261029-05",
+    "transportSuccess": true,
+    "ownerAcknowledged": true,
+    "ownerReply": "已向1号回复 ACK-ACCEPT，完成本轮交接闭环。 限定桌面范围已签收；两项补全边界未修，真机、草稿强可靠性及G2/G3仍待验证。"
+  }
+]

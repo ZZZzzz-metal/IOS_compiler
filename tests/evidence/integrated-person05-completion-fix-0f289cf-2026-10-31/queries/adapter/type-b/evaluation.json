@@ -1,0 +1,13 @@
+{
+  "id": "type-b",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 22.214699999999993,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

@@ -1,0 +1,31 @@
+✔ complete installation serves navigation and engine with no network after disconnect (34.345ms)
+✔ wrong bytes never commits a partial cache or removes the previous version (6.6793ms)
+✔ network interrupted never commits a partial cache or removes the previous version (5.4415ms)
+✔ HTTP failure never commits a partial cache or removes the previous version (4.0397ms)
+✔ new complete version preserves old version and unrelated caches (7.0405ms)
+✔ unknown files and evicted files return 503 without network repair (3.7431ms)
+✔ cached corruption and descriptor corruption fail the full startup check (6.3306ms)
+✔ explicit prepare repairs corruption through a new full transaction and preserves old cache (5.8427ms)
+✔ failed explicit repair retains the previous complete package (3.7187ms)
+✔ missing launcher navigation supplies a local recovery page without fetching network resources (3.3276ms)
+✔ explicit prepare rejects an open workbench and non-launcher callers before any network (3.2496ms)
+✔ missing startup resource index.html opens local repair before launcher execution (5.4956ms)
+✔ corrupt startup resource index.html opens local repair before launcher execution (6.1815ms)
+✔ missing startup resource launcher.mjs opens local repair before launcher execution (4.7766ms)
+✔ corrupt startup resource launcher.mjs opens local repair before launcher execution (5.4747ms)
+✔ missing startup resource app/offline/browser/trust.mjs opens local repair before launcher execution (5.9234ms)
+✔ corrupt startup resource app/offline/browser/trust.mjs opens local repair before launcher execution (8.8518ms)
+✔ missing startup resource bundle.json opens local repair before launcher execution (5.9462ms)
+✔ corrupt startup resource bundle.json opens local repair before launcher execution (5.9061ms)
+✔ a new workbench opened during repair prevents cache commit (4.1708ms)
+✔ ordinary development entry works without a covering worker; foreign covering worker stays rejected (2.0807ms)
+✔ a foreign scope covering only the completion worker is rejected before any trusted handshake (0.2556ms)
+✔ workbench trust checks bundle scope and component identity after the worker handshake (1.3895ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 264.9002

@@ -27,7 +27,7 @@ npm.cmd run test:offline
 - 每个完整资源集合及 SW 模板生成独立 `bundleId`，使用独立目录、SW scope 和缓存前缀。SW 自带资源清单作为该次安装的信任根；`bundle.json` 是同一清单的可读副本。清单与 SW 自身不参与其资源数组的递归自哈希，生成报告单独记录二者哈希。
 - 安装逐项读取、核对长度和 SHA-256，全部通过后才写完成标记。失败的 staging 不可用于运行。旧版本缓存和草稿库不删除，不使用 `skipWaiting()` 抢占已有会话。
 - 已控制的版本内请求只读取本版本清单中的已校验缓存；缺失或损坏返回受控失败，不从网络悄悄补入另一组字节。入口每次检查完整集合；工作台准备时通过 MessageChannel 重新核对 SW 的精确 scope、bundle、后端身份和全部缓存。
-- 原桌面工作台继续使用独立端口和未缓存资源；旧模块实验 SW 仍被拒绝。此次 `ui/src/main.mjs` 只有这一处集成接入及资源状态文案调整，未替换编译器、调试器或草稿实现。
+- 原桌面工作台继续使用独立端口和未缓存资源；旧模块实验 SW 仍被拒绝。0.4.6新增真实语义补全provider和四个UI运行模块，三个隔离Worker均须在可信资源集合内；补全、编译和调试依次等待资源释放。
 - 相同 HTTPS origin 下，各版本沿用现有 IndexedDB 草稿；不同协议、域名或端口是不同存储空间。切换入口前应导出完整草稿，不能依赖跨 origin 自动迁移。
 
 缓存激活是资源事务，不代表真实设备功能自检已通过。产品 `contracts/offline-bundle.json` 仍为 `unprepared`，正式兼容组合仍未选择，G2 未通过前不冻结 PWA 路线。
@@ -48,3 +48,14 @@ npm.cmd run start:offline
 用户只看 [iPad 操作手册](../../docs/architecture/IPAD-USER-MANUAL.md)，无需在 iPad 安装 Node 或输入上述命令。维护者须给出经核对的实际 HTTPS 固定版本地址、版本、资源大小和结果采集方式，再通知用户开始。
 
 Service Worker 的安全上下文要求见 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register)。网站存储与持久化请求的限制见 [WebKit 官方存储策略](https://webkit.org/blog/14403/updates-to-storage-policy/)。添加主屏和请求持久化不保证缓存或草稿永久保留。
+
+## 0.4.6归档工具
+
+生成新固定资源后，可用Python标准库制作和复核归档，无新增npm依赖：
+
+```powershell
+python app/offline/archive-release.py --version 0.4.6 --report app/offline/evidence/本次目录/archives.json
+python app/offline/archive-release.py --version 0.4.6 --report app/offline/evidence/本次目录/archives.json --verify-existing
+```
+
+可选`--setup-config`读取`.local`内配置，字段为`tlsDir`和`entryURL`；只把公开证书、固定入口说明加入忽略的本地ZIP，不把私钥或实际局域网地址写进公开报告。输出档案只含本次固定release，包含完整平板手册；逐项核对资源、控制面和档内SHA，拒绝覆盖旧档。字节校验不替代浏览器、5号独立或iPad验收。

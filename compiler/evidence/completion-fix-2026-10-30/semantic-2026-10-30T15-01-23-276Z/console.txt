@@ -1,0 +1,549 @@
+pragma-free-unavailable 0 lookup results for blocked:
+FunctionDecl 0x653470 </project/main.cpp:1:1, col:48> col:40 blocked 'int ()'
+`-UnavailableAttr 0x6534e0 <col:16, col:32> "no" IR_None
+lookup results for old:
+FunctionDecl 0x653578 </project/main.cpp:1:50, col:86> col:82 old 'int ()'
+`-DeprecatedAttr 0x6535e8 <col:65> "" ""
+ 
+pragma-free-overloads 0 lookup results for alpha:
+FunctionDecl 0x653648 </project/main.cpp:1:51, col:67> col:55 alpha 'int (double)'
+`-ParmVarDecl 0x6535c8 <col:61> col:67 'double'
+FunctionDecl 0x6534c8 </project/main.cpp:1:1, col:49> col:40 alpha 'int (int)'
+|-ParmVarDecl 0x653448 <col:46> col:49 'int'
+`-UnavailableAttr 0x653540 <col:16, col:32> "no" IR_None
+ 
+pragma-qualified 0 lookup results for N:
+NamespaceDecl 0x6533c0 </project/main.cpp:1:1, col:81> col:11 N
+|-FunctionDecl 0x653518 <col:13, col:61> col:52 alpha 'int (int)'
+| |-ParmVarDecl 0x653498 <col:58> col:61 'int'
+| `-UnavailableAttr 0x653590 <col:28, col:44> "no" IR_None
+`-FunctionDecl 0x653668 <col:63, col:79> col:67 alpha 'int (double)'
+  `-ParmVarDecl 0x6535e8 <col:73> col:79 'double'
+ 
+pragma-member 0 lookup results for n:
+VarDecl 0x6538c8 </project/main.cpp:1:89, col:91> col:91 n 'N' callinit
+`-CXXConstructExpr 0x6adf70 <col:91> 'N' 'void () noexcept'
+lookup results for N:
+CXXRecordDecl 0x6533c0 </project/main.cpp:1:1, col:78> col:8 referenced struct N definition
+|-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
+| |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr
+| |-CopyConstructor simple trivial has_const_param implicit_has_const_param
+| |-MoveConstructor exists simple trivial
+| |-CopyAssignment trivial has_const_param needs_implicit implicit_has_const_param
+| |-MoveAssignment exists simple trivial needs_implicit
+| `-Destructor simple irrelevant trivial needs_implicit
+|-CXXRecordDecl 0x653488 <col:1, col:8> col:8 implicit struct N
+|-CXXMethodDecl 0x653608 <col:10, col:58> col:49 alpha 'int (int)'
+| |-ParmVarDecl 0x653568 <col:55> col:58 'int'
+| `-UnavailableAttr 0x653680 <col:25, col:41> "no" IR_None
+|-CXXMethodDecl 0x653758 <col:60, col:76> col:64 alpha 'int (double)'
+| `-ParmVarDecl 0x6536d8 <col:70> col:76 'double'
+|-CXXConstructorDecl 0x653910 <col:8> col:8 implicit used constexpr N 'void () noexcept' inline default trivial
+| `-CompoundStmt 0x653be8 <col:8>
+|-CXXConstructorDecl 0x6539c8 <col:8> col:8 implicit constexpr N 'void (const N &)' inline default trivial noexcept-unevaluated 0x6539c8
+| `-ParmVarDecl 0x653a80 <col:8> col:8 'const N &'
+`-CXXConstructorDecl 0x653ad8 <col:8> col:8 implicit constexpr N 'void (N &&)' inline default trivial noexcept-unevaluated 0x653ad8
+  `-ParmVarDecl 0x653b90 <col:8> col:8 'N &&'
+ 
+pragma-type 0 lookup results for s:
+VarDecl 0x10be920 </project/main.cpp:2:10, col:28> col:28 s 'const std::string':'const std::__2::basic_string<char>' callinit
+`-CXXConstructExpr 0x10bf95c <col:28> 'const std::string':'const std::__2::basic_string<char>' 'void () noexcept(is_nothrow_default_constructible<allocator_type>::value)'
+ 
+pragma-expr 0 /project/main.cpp:3:28: warning: missing argument to debug command 'dump'
+#pragma clang __debug dump (get())
+                           ^
+1 warning generated.
+ 
+decltype-probe 0  Dumping __cc_probe:
+TypeAliasDecl 0x10bfab8 </project/main.cpp:2:40, col:57> col:46 __cc_probe 'decltype((s))':'A &'
+`-DecltypeType 0x10bfa90 'decltype((s))' sugar
+  |-ParenExpr 0x10bfa58 <col:66, col:68> 'A':'const std::__2::basic_string<char>' lvalue
+  | `-DeclRefExpr 0x10bfa40 <col:67> 'A':'const std::__2::basic_string<char>' lvalue Var 0x10be9d8 's' 'A':'const std::__2::basic_string<char>'
+  `-LValueReferenceType 0x10bfa70 'A &'
+    `-TypedefType 0x10be9b0 'A' sugar
+      |-TypeAlias 0x10be8f0 'A'
+      `-QualType 0x10be8a1 'const std::string' const
+        `-ElaboratedType 0x10be8a0 'std::string' sugar
+          `-TypedefType 0xb234d0 'std::__2::string' sugar
+            |-Typedef 0xa1f840 'string'
+            `-TemplateSpecializationType 0xa1f750 'basic_string<char, char_traits<char>, allocator<char> >' sugar basic_string
+              |-TemplateArgument type 'char'
+              |-TemplateArgument type 'char_traits<char>':'std::__2::char_traits<char>'
+              |-TemplateArgument type 'allocator<char>':'std::__2::allocator<char>'
+              `-RecordType 0xa1f730 'std::__2::basic_string<char>'
+                `-ClassTemplateSpecialization 0xa1f670 'basic_string'
+
+
+decltype-pointer-probe 0  Dumping __cc_probe:
+TypeAliasDecl 0x653718 </project/main.cpp:1:32, col:49> col:38 __cc_probe 'decltype((s))':'const N *&'
+`-DecltypeType 0x6536f0 'decltype((s))' sugar
+  |-ParenExpr 0x6536b0 <col:58, col:60> 'const N *' lvalue
+  | `-DeclRefExpr 0x653698 <col:59> 'const N *' lvalue Var 0x653648 's' 'const N *'
+  `-LValueReferenceType 0x6536d0 'const N *&'
+    `-PointerType 0x653620 'const N *'
+      `-QualType 0x653471 'const N' const
+        `-RecordType 0x653470 'N'
+          `-CXXRecord 0x653410 'N'
+
+
+decltype-get-probe 0  Dumping __cc_probe:
+TypeAliasDecl 0x10beb58 </project/main.cpp:2:35, col:52> col:41 __cc_probe 'decltype((get()))':'const std::string &'
+`-DecltypeType 0x10beb30 'decltype((get()))' sugar
+  |-ParenExpr 0x10beb10 <col:61, col:67> 'const std::string':'const std::__2::basic_string<char>' lvalue
+  | `-CallExpr 0x10beaf8 <col:62, col:66> 'const std::string':'const std::__2::basic_string<char>' lvalue
+  |   `-ImplicitCastExpr 0x10beae8 <col:62> 'const std::string &(*)()' <FunctionToPointerDecay>
+  |     `-DeclRefExpr 0x10bea90 <col:62> 'const std::string &()' lvalue Function 0x10be960 'get' 'const std::string &()'
+  `-LValueReferenceType 0x10be8e0 'const std::string &'
+    `-QualType 0x10be8a1 'const std::string' const
+      `-ElaboratedType 0x10be8a0 'std::string' sugar
+        `-TypedefType 0xb234d0 'std::__2::string' sugar
+          |-Typedef 0xa1f840 'string'
+          `-TemplateSpecializationType 0xa1f750 'basic_string<char, char_traits<char>, allocator<char> >' sugar basic_string
+            |-TemplateArgument type 'char'
+            |-TemplateArgument type 'char_traits<char>':'std::__2::char_traits<char>'
+            |-TemplateArgument type 'allocator<char>':'std::__2::allocator<char>'
+            `-RecordType 0xa1f730 'std::__2::basic_string<char>'
+              `-ClassTemplateSpecialization 0xa1f670 'basic_string'
+
+
+ast-removed-string 0 /project/main.cpp:2:30: warning: expression result unused
+void f(){const std::string s;s;}
+                             ^
+1 warning generated.
+ 23> '<dependent type>'
+|     | `-MemberExpr 0xf9d690 <col:18> '<bound member function type>' ->size 0xefdbc0
+|     |   `-CXXThisExpr 0xf9d680 <col:18> 'const basic_string<_CharT, _Traits, _Allocator> *' this
+|     |-DeclRefExpr 0xf9d6c8 <col:26> 'std::__2::basic_string::value_type':'_CharT' lvalue ParmVar 0xf9d200 '__c' 'std::__2::basic_string::value_type':'_CharT'
+|     `-DeclRefExpr 0xf9d6e0 <col:31> 'std::__2::basic_string::size_type':'typename __alloc_traits::size_type' lvalue ParmVar 0xf9d248 '__pos' 'std::__2::basic_string::size_type':'typename __alloc_traits::size_type'
+|-VisibilityAttr 0xf9d4c8 </include/c++/v1/__config:721:44, col:67> Inherited Hidden
+`-ExcludeFromExplicitInstantiationAttr 0xf9d4d8 <line:811:71> Inherited
+
+Dumping std::__2::stof:
+FunctionDecl 0xfb8470 </include/c++/v1/__config:738:30, /include/c++/v1/string:4193:74> col:30 stof 'float (const std::__2::string &, size_t *)'
+|-ParmVarDecl 0xfb8350 <col:36, col:50> col:50 __str 'const std::__2::string &'
+|-ParmVarDecl 0xfb8398 <col:57, col:73> col:65 __idx 'size_t *' cinit
+| `-ImplicitCastExpr 0xfb83f0 <col:73> 'size_t *' <NullToPointer>
+|   `-IntegerLiteral 0xfb83d0 <col:73> 'int' 0
+`-VisibilityAttr 0xfb84e8 </include/c++/v1/__config:738:46, col:70> Default
+
+Dumping std::__2::stof:
+FunctionDecl 0xfba410 </include/c++/v1/__config:738:30, /include/c++/v1/string:4213:75> col:30 stof 'float (const std::__2::wstring &, size_t *)'
+|-ParmVarDecl 0xfba2f0 <col:36, col:51> col:51 __str 'const std::__2::wstring &'
+|-ParmVarDecl 0xfba338 <col:58, col:74> col:66 __idx 'size_t *' cinit
+| `-ImplicitCastExpr 0xfba390 <col:74> 'size_t *' <NullToPointer>
+|   `-IntegerLiteral 0xfba370 <col:74> 'int' 0
+`-VisibilityAttr 0xfba488 </include/c++/v1/__config:738:46, col:70> Default
+
+Dumping f:
+FunctionDecl 0x10be9a8 </project/main.cpp:2:1, col:32> col:6 f 'void ()'
+`-CompoundStmt 0x10bfb08 <col:9, col:32>
+  |-DeclStmt 0x10bfad8 <col:10, col:29>
+  | `-VarDecl 0x10bea80 <col:10, col:28> col:28 used s 'const std::string':'const std::__2::basic_string<char>' callinit
+  |   `-CXXConstructExpr 0x10bfabc <col:28> 'const std::string':'const std::__2::basic_string<char>' 'void () noexcept(is_nothrow_default_constructible<allocator_type>::value)'
+  `-DeclRefExpr 0x10bfaf0 <col:30> 'const std::string':'const std::__2::basic_string<char>' lvalue Var 0x10bea80 's' 'const std::string':'const std::__2::basic_string<char>'
+
+
+ast-removed-get 0      |-CallExpr 0xf9c4f8 <line:3676:10, col:15> '<dependent type>'
+|     | `-UnresolvedMemberExpr 0xf9c4c0 <col:10> '<bound member function type>' lvalue
+|     |-CallExpr 0xf9c540 <col:18, col:23> '<dependent type>'
+|     | `-MemberExpr 0xf9c520 <col:18> '<bound member function type>' ->size 0xefd960
+|     |   `-CXXThisExpr 0xf9c510 <col:18> 'const basic_string<_CharT, _Traits, _Allocator> *' this
+|     |-DeclRefExpr 0xf9c558 <col:26> 'std::__2::basic_string::value_type':'_CharT' lvalue ParmVar 0xf9c090 '__c' 'std::__2::basic_string::value_type':'_CharT'
+|     `-DeclRefExpr 0xf9c570 <col:31> 'std::__2::basic_string::size_type':'typename __alloc_traits::size_type' lvalue ParmVar 0xf9c0d8 '__pos' 'std::__2::basic_string::size_type':'typename __alloc_traits::size_type'
+|-VisibilityAttr 0xf9c358 </include/c++/v1/__config:721:44, col:67> Inherited Hidden
+`-ExcludeFromExplicitInstantiationAttr 0xf9c368 <line:811:71> Inherited
+
+Dumping std::__2::stof:
+FunctionDecl 0xfb7310 </include/c++/v1/__config:738:30, /include/c++/v1/string:4193:74> col:30 stof 'float (const std::__2::string &, size_t *)'
+|-ParmVarDecl 0xfb71f0 <col:36, col:50> col:50 __str 'const std::__2::string &'
+|-ParmVarDecl 0xfb7238 <col:57, col:73> col:65 __idx 'size_t *' cinit
+| `-ImplicitCastExpr 0xfb7290 <col:73> 'size_t *' <NullToPointer>
+|   `-IntegerLiteral 0xfb7270 <col:73> 'int' 0
+`-VisibilityAttr 0xfb7388 </include/c++/v1/__config:738:46, col:70> Default
+
+Dumping std::__2::stof:
+FunctionDecl 0xfb92b0 </include/c++/v1/__config:738:30, /include/c++/v1/string:4213:75> col:30 stof 'float (const std::__2::wstring &, size_t *)'
+|-ParmVarDecl 0xfb9190 <col:36, col:51> col:51 __str 'const std::__2::wstring &'
+|-ParmVarDecl 0xfb91d8 <col:58, col:74> col:66 __idx 'size_t *' cinit
+| `-ImplicitCastExpr 0xfb9230 <col:74> 'size_t *' <NullToPointer>
+|   `-IntegerLiteral 0xfb9210 <col:74> 'int' 0
+`-VisibilityAttr 0xfb9328 </include/c++/v1/__config:738:46, col:70> Default
+
+Dumping f:
+FunctionDecl 0x10be890 </project/main.cpp:2:26, col:41> col:31 f 'void ()'
+`-CompoundStmt 0x10be9b0 <col:34, col:41>
+  `-CallExpr 0x10be998 <col:35, col:39> 'const std::string':'const std::__2::basic_string<char>' lvalue
+    `-ImplicitCastExpr 0x10be988 <col:35> 'const std::string &(*)()' <FunctionToPointerDecay>
+      `-DeclRefExpr 0x10be930 <col:35> 'const std::string &()' lvalue Function 0x10be800 'get' 'const std::string &()'
+
+
+ast-removed-nested 0 /project/main.cpp:1:56: warning: expression result unused
+struct N{int x;};struct O{const N n;};void f(){O o{};o.n;}
+                                                     ~ ^
+1 warning generated.
+ rivial noexcept-unevaluated 0x6537e8
+| | `-ParmVarDecl 0x6538a0 <col:8> col:8 'N &&'
+| |-CXXDestructorDecl 0x6539f0 <col:8> col:8 implicit referenced ~N 'void () noexcept' inline default trivial
+| |-CXXMethodDecl 0x6adef0 <col:8> col:8 implicit constexpr operator= 'N &(const N &)' inline default trivial noexcept-unevaluated 0x6adef0
+| | `-ParmVarDecl 0x6adfa0 <col:8> col:8 'const N &'
+| `-CXXMethodDecl 0x6adfe0 <col:8> col:8 implicit constexpr operator= 'N &(N &&)' inline default trivial noexcept-unevaluated 0x6adfe0
+|   `-ParmVarDecl 0x6ae090 <col:8> col:8 'N &&'
+|-CXXRecordDecl 0x653538 <col:18, col:37> col:25 referenced struct O definition
+| |-DefinitionData pass_in_registers aggregate standard_layout pod literal
+| | |-DefaultConstructor exists trivial needs_implicit
+| | |-CopyConstructor simple trivial has_const_param needs_overload_resolution implicit_has_const_param
+| | |-MoveConstructor exists simple trivial needs_overload_resolution
+| | |-CopyAssignment trivial has_const_param needs_implicit implicit_has_const_param
+| | |-MoveAssignment exists non_trivial needs_overload_resolution
+| | `-Destructor simple irrelevant trivial needs_implicit
+| |-CXXRecordDecl 0x6535f8 <col:18, col:25> col:25 implicit struct O
+| |-FieldDecl 0x653660 <col:27, col:35> col:35 referenced n 'const N'
+| |-CXXConstructorDecl 0x6538f0 <col:25> col:25 implicit constexpr O 'void (const O &)' inline default trivial noexcept-unevaluated 0x6538f0
+| | `-ParmVarDecl 0x6539b0 <col:25> col:25 'const O &'
+| |-CXXConstructorDecl 0x653ac8 <col:25> col:25 implicit constexpr O 'void (O &&)' inline default trivial noexcept-unevaluated 0x653ac8
+| | `-ParmVarDecl 0x653b80 <col:25> col:25 'O &&'
+| `-CXXMethodDecl 0x6ae0d0 <col:25> col:25 implicit constexpr operator= 'O &(O &&)' inline default_delete noexcept-unevaluated 0x6ae0d0
+|   `-ParmVarDecl 0x6ae180 <col:25> col:25 'O &&'
+`-FunctionDecl 0x6ae1f0 <col:39, col:58> col:44 f 'void ()'
+  `-CompoundStmt 0x6ae400 <col:47, col:58>
+    |-DeclStmt 0x6ae3b0 <col:48, col:53>
+    | `-VarDecl 0x6ae2a0 <col:48, col:52> col:50 used o 'O' listinit
+    |   `-InitListExpr 0x6ae300 <col:51, col:52> 'O'
+    |     `-InitListExpr 0x6ae370 <col:52> 'const N'
+    |       `-ImplicitValueInitExpr 0x6ae3a0 <<invalid sloc>> 'int'
+    `-MemberExpr 0x6ae3e0 <col:54, col:56> 'const N' lvalue .n 0x653660
+      `-DeclRefExpr 0x6ae3c8 <col:54> 'O' lvalue Var 0x6ae2a0 'o' 'O'
+
+ast-removed-pointer 0 /project/main.cpp:1:46: warning: expression result unused
+struct N{int x;};void f(){const N* n=nullptr;n;}
+                                             ^
+1 warning generated.
+ TranslationUnitDecl 0x652c18 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x6530c8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x652ef0 '__int128'
+|-TypedefDecl 0x653110 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x652f00 'unsigned __int128'
+|-TypedefDecl 0x653348 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'
+| `-RecordType 0x6531a0 '__NSConstantString_tag'
+|   `-CXXRecord 0x653140 '__NSConstantString_tag'
+|-TypedefDecl 0x653390 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'void *'
+| `-PointerType 0x653070 'void *'
+|   `-BuiltinType 0x652c50 'void'
+|-CXXRecordDecl 0x6533c0 </project/main.cpp:1:1, col:16> col:8 referenced struct N definition
+| |-DefinitionData pass_in_registers aggregate standard_layout trivially_copyable pod trivial literal
+| | |-DefaultConstructor exists trivial needs_implicit
+| | |-CopyConstructor simple trivial has_const_param needs_implicit implicit_has_const_param
+| | |-MoveConstructor exists simple trivial needs_implicit
+| | |-CopyAssignment trivial has_const_param needs_implicit implicit_has_const_param
+| | |-MoveAssignment exists simple trivial needs_implicit
+| | `-Destructor simple irrelevant trivial needs_implicit
+| |-CXXRecordDecl 0x653488 <col:1, col:8> col:8 implicit struct N
+| `-FieldDecl 0x6534f8 <col:10, col:14> col:14 x 'int'
+`-FunctionDecl 0x653578 <col:18, col:48> col:23 f 'void ()'
+  `-CompoundStmt 0x6536d0 <col:26, col:48>
+    |-DeclStmt 0x6536a0 <col:27, col:45>
+    | `-VarDecl 0x653648 <col:27, col:38> col:36 used n 'const N *' cinit
+    |   `-ImplicitCastExpr 0x653690 <col:38> 'const N *' <NullToPointer>
+    |     `-CXXNullPtrLiteralExpr 0x653680 <col:38> 'nullptr_t'
+    `-DeclRefExpr 0x6536b8 <col:46> 'const N *' lvalue Var 0x653648 'n' 'const N *'
+
+ast-removed-binary 0  col:8 referenced struct N definition
+| |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
+| | |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr
+| | |-CopyConstructor simple trivial has_const_param implicit_has_const_param
+| | |-MoveConstructor exists simple trivial
+| | |-CopyAssignment trivial has_const_param needs_implicit implicit_has_const_param
+| | |-MoveAssignment exists simple trivial needs_implicit
+| | `-Destructor simple irrelevant trivial
+| |-CXXRecordDecl 0x653488 <col:1, col:8> col:8 implicit struct N
+| |-CXXConversionDecl 0x653570 <col:10, col:24> col:10 operator int 'int () const'
+| |-CXXConstructorDecl 0x653998 <col:8> col:8 implicit constexpr N 'void ()' inline default trivial noexcept-unevaluated 0x653998
+| |-CXXConstructorDecl 0x653a48 <col:8> col:8 implicit used constexpr N 'void (const N &) noexcept' inline default trivial
+| | |-ParmVarDecl 0x653b00 <col:8> col:8 'const N &'
+| | `-CompoundStmt 0x6b63bc <col:8>
+| |-CXXConstructorDecl 0x653b58 <col:8> col:8 implicit constexpr N 'void (N &&)' inline default trivial noexcept-unevaluated 0x653b58
+| | `-ParmVarDecl 0x6b6360 <col:8> col:8 'N &&'
+| `-CXXDestructorDecl 0x6b63e8 <col:8> col:8 implicit referenced ~N 'void () noexcept' inline default trivial
+|-FunctionDecl 0x6536e0 <col:32, col:51> col:36 used operator+ 'int (int, N)'
+| |-ParmVarDecl 0x653610 <col:46> col:49 'int'
+| `-ParmVarDecl 0x653658 <col:50> col:51 'N'
+`-FunctionDecl 0x6537c8 <col:53, col:84> col:58 f 'void ()'
+  `-CompoundStmt 0x6b6514 <col:61, col:84>
+    |-DeclStmt 0x6538d0 <col:62, col:73>
+    | `-VarDecl 0x653848 <col:62, col:72> col:70 used n 'const N' listinit
+    |   `-InitListExpr 0x6538a8 <col:71, col:72> 'const N'
+    `-DeclStmt 0x6b6500 <col:74, col:83>
+      `-VarDecl 0x653900 <col:74, col:82> col:78 x 'int' cinit
+        `-CXXOperatorCallExpr 0x6b64d8 <col:80, col:82> 'int'
+          |-ImplicitCastExpr 0x6b64c8 <col:81> 'int (*)(int, N)' <FunctionToPointerDecay>
+          | `-DeclRefExpr 0x6b6498 <col:81> 'int (int, N)' lvalue Function 0x6536e0 'operator+' 'int (int, N)'
+          |-IntegerLiteral 0x653938 <col:80> 'int' 1
+          `-CXXConstructExpr 0x6b63c8 <col:82> 'N' 'void (const N &) noexcept'
+            `-DeclRefExpr 0x653958 <col:82> 'const N' lvalue Var 0x653848 'n' 'const N'
+
+ast-removed-call 1 /project/main.cpp:1:33: error: type 'const N' does not provide a call operator
+struct N{};void f(){const N n{};n(1);}
+                                ^
+1 error generated.
+ TranslationUnitDecl 0x652c18 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x6530c8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x652ef0 '__int128'
+|-TypedefDecl 0x653110 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x652f00 'unsigned __int128'
+|-TypedefDecl 0x653348 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'
+| `-RecordType 0x6531a0 '__NSConstantString_tag'
+|   `-CXXRecord 0x653140 '__NSConstantString_tag'
+|-TypedefDecl 0x653390 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'void *'
+| `-PointerType 0x653070 'void *'
+|   `-BuiltinType 0x652c50 'void'
+|-CXXRecordDecl 0x6533c0 </project/main.cpp:1:1, col:10> col:8 referenced struct N definition
+| |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
+| | |-DefaultConstructor exists trivial constexpr needs_implicit defaulted_is_constexpr
+| | |-CopyConstructor simple trivial has_const_param needs_implicit implicit_has_const_param
+| | |-MoveConstructor exists simple trivial needs_implicit
+| | |-CopyAssignment trivial has_const_param needs_implicit implicit_has_const_param
+| | |-MoveAssignment exists simple trivial needs_implicit
+| | `-Destructor simple irrelevant trivial needs_implicit
+| `-CXXRecordDecl 0x653488 <col:1, col:8> col:8 implicit struct N
+`-FunctionDecl 0x653528 <col:12, col:38> col:17 f 'void ()'
+  `-CompoundStmt 0x653994 <col:20, col:38>
+    `-DeclStmt 0x653660 <col:21, col:32>
+      `-VarDecl 0x6535d8 <col:21, col:31> col:29 used n 'const N' listinit
+        `-InitListExpr 0x653638 <col:30, col:31> 'const N'
+
+user-mut-call 1 /project/main.cpp:1:164: error: no matching member function for call to 'mutate'
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.mutate();}
+                                                                                                                                                                 ~~^~~~~~
+/project/main.cpp:1:32: note: candidate function template not viable: requires 1 argument, but 0 were provided
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.mutate();}
+                               ^
+1 error generated.
+ 
+user-view-call 1 /project/main.cpp:1:164: error: no matching member function for call to 'view'
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.view();}
+                                                                                                                                                                 ~~^~~~
+/project/main.cpp:1:63: note: candidate function template not viable: requires 1 argument, but 0 were provided
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.view();}
+                                                              ^
+1 error generated.
+ 
+user-both-call 1 /project/main.cpp:1:164: error: no matching member function for call to 'both'
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.both();}
+                                                                                                                                                                 ~~^~~~
+/project/main.cpp:1:97: note: candidate function template not viable: requires 1 argument, but 0 were provided
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.both();}
+                                                                                                ^
+/project/main.cpp:1:126: note: candidate function template not viable: requires 1 argument, but 0 were provided
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.both();}
+                                                                                                                             ^
+1 error generated.
+ 
+user-mut-ref 1 /project/main.cpp:1:164: error: reference to non-static member function must be called
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.mutate;}
+                                                                                                                                                                 ~~^~~~~~
+/project/main.cpp:1:32: note: possible target for call
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.mutate;}
+                               ^
+1 error generated.
+ 
+user-view-ref 1 /project/main.cpp:1:164: error: reference to non-static member function must be called
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.view;}
+                                                                                                                                                                 ~~^~~~
+/project/main.cpp:1:63: note: possible target for call
+struct N{template<class T>void mutate(T);template<class T>int view(T)const;template<class T>int both(T);template<class T>int both(T)const;};void f(){const N n{};n.view;}
+                                                              ^
+1 error generated.
+ 
+string-append-call 1 /project/main.cpp:2:32: error: no matching member function for call to 'append'
+void f(){const std::string s;s.append();}
+                             ~~^~~~~~
+/include/c++/v1/string:1008:19: note: candidate function template not viable: requires single argument '__t', but no arguments were provided
+                  append(const _Tp& __t) { __self_view __sv = __t; return append(__sv.data(), __sv.size()); }
+                  ^
+/include/c++/v1/string:1018:19: note: candidate function template not viable: requires at least 2 arguments, but 0 were provided
+                  append(const _Tp& __t, size_type __pos, size_type __n=npos);
+                  ^
+/include/c++/v1/string:1038:5: note: candidate function template not viable: requires 2 arguments, but 0 were provided
+    append(_InputIterator __first, _InputIterator __last) {
+    ^
+/include/c++/v1/string:1052:5: note: candidate function template not viable: requires 2 arguments, but 0 were provided
+    append(_ForwardIterator __first, _ForwardIterator __last) {
+    ^
+/include/c++/v1/string:999:19: note: candidate function not viable: requires single argument '__str', but no arguments were provided
+    basic_string& append(const basic_string& __str);
+                  ^
+/include/c++/v1/string:1020:19: note: candidate function not viable: requires single argument '__s', but no arguments were provided
+    basic_string& append(const value_type* __s);
+                  ^
+/include/c++/v1/string:1058:19: note: candidate function not viable: requires single argument '__il', but no arguments were provided
+    basic_string& append(initializer_list<value_type> __il) {return append(__il.begin(), __il.size());}
+                  ^
+/include/c++/v1/string:1019:19: note: candidate function not viable: requires 2 arguments, but 0 were provided
+    basic_string& append(const value_type* __s, size_type __n);
+                  ^
+/include/c++/v1/string:1021:19: note: candidate function not viable: requires 2 arguments, but 0 were provided
+    basic_string& append(size_type __n, value_type __c);
+                  ^
+/include/c++/v1/string:1009:19: note: candidate function not viable: requires at least 2 arguments, but 0 were provided
+    basic_string& append(const basic_string& __str, size_type __pos, size_type __n=npos);
+                  ^
+1 error generated.
+ 
+string-append-ref 1 /project/main.cpp:2:32: error: reference to non-static member function must be called
+void f(){const std::string s;s.append;}
+                             ~~^~~~~~
+/include/c++/v1/string:999:19: note: possible target for call
+    basic_string& append(const basic_string& __str);
+                  ^
+/include/c++/v1/string:1008:19: note: possible target for call
+                  append(const _Tp& __t) { __self_view __sv = __t; return append(__sv.data(), __sv.size()); }
+                  ^
+/include/c++/v1/string:1009:19: note: possible target for call
+    basic_string& append(const basic_string& __str, size_type __pos, size_type __n=npos);
+                  ^
+/include/c++/v1/string:1018:19: note: possible target for call
+                  append(const _Tp& __t, size_type __pos, size_type __n=npos);
+                  ^
+/include/c++/v1/string:1019:19: note: possible target for call
+    basic_string& append(const value_type* __s, size_type __n);
+                  ^
+/include/c++/v1/string:1020:19: note: possible target for call
+    basic_string& append(const value_type* __s);
+                  ^
+/include/c++/v1/string:1021:19: note: possible target for call
+    basic_string& append(size_type __n, value_type __c);
+                  ^
+/include/c++/v1/string:1038:5: note: possible target for call
+    append(_InputIterator __first, _InputIterator __last) {
+    ^
+/include/c++/v1/string:1052:5: note: possible target for call
+    append(_ForwardIterator __first, _ForwardIterator __last) {
+    ^
+/include/c++/v1/string:1058:19: note: possible target for call
+    basic_string& append(initializer_list<value_type> __il) {return append(__il.begin(), __il.size());}
+                  ^
+1 error generated.
+ 
+string-view-call 0  
+string-mutable-call 1 /project/main.cpp:2:26: error: no matching member function for call to 'append'
+void f(){std::string s;s.append();}
+                       ~~^~~~~~
+/include/c++/v1/string:1008:19: note: candidate function template not viable: requires single argument '__t', but no arguments were provided
+                  append(const _Tp& __t) { __self_view __sv = __t; return append(__sv.data(), __sv.size()); }
+                  ^
+/include/c++/v1/string:1018:19: note: candidate function template not viable: requires at least 2 arguments, but 0 were provided
+                  append(const _Tp& __t, size_type __pos, size_type __n=npos);
+                  ^
+/include/c++/v1/string:1038:5: note: candidate function template not viable: requires 2 arguments, but 0 were provided
+    append(_InputIterator __first, _InputIterator __last) {
+    ^
+/include/c++/v1/string:1052:5: note: candidate function template not viable: requires 2 arguments, but 0 were provided
+    append(_ForwardIterator __first, _ForwardIterator __last) {
+    ^
+/include/c++/v1/string:999:19: note: candidate function not viable: requires single argument '__str', but no arguments were provided
+    basic_string& append(const basic_string& __str);
+                  ^
+/include/c++/v1/string:1020:19: note: candidate function not viable: requires single argument '__s', but no arguments were provided
+    basic_string& append(const value_type* __s);
+                  ^
+/include/c++/v1/string:1058:19: note: candidate function not viable: requires single argument '__il', but no arguments were provided
+    basic_string& append(initializer_list<value_type> __il) {return append(__il.begin(), __il.size());}
+                  ^
+/include/c++/v1/string:1019:19: note: candidate function not viable: requires 2 arguments, but 0 were provided
+    basic_string& append(const value_type* __s, size_type __n);
+                  ^
+/include/c++/v1/string:1021:19: note: candidate function not viable: requires 2 arguments, but 0 were provided
+    basic_string& append(size_type __n, value_type __c);
+                  ^
+/include/c++/v1/string:1009:19: note: candidate function not viable: requires at least 2 arguments, but 0 were provided
+    basic_string& append(const basic_string& __str, size_type __pos, size_type __n=npos);
+                  ^
+1 error generated.
+ 
+string-alias-call 1 /project/main.cpp:2:50: error: no matching member function for call to 'append'
+using Alias=const std::string;void f(){Alias s;s.append();}
+                                               ~~^~~~~~
+/include/c++/v1/string:1008:19: note: candidate function template not viable: requires single argument '__t', but no arguments were provided
+                  append(const _Tp& __t) { __self_view __sv = __t; return append(__sv.data(), __sv.size()); }
+                  ^
+/include/c++/v1/string:1018:19: note: candidate function template not viable: requires at least 2 arguments, but 0 were provided
+                  append(const _Tp& __t, size_type __pos, size_type __n=npos);
+                  ^
+/include/c++/v1/string:1038:5: note: candidate function template not viable: requires 2 arguments, but 0 were provided
+    append(_InputIterator __first, _InputIterator __last) {
+    ^
+/include/c++/v1/string:1052:5: note: candidate function template not viable: requires 2 arguments, but 0 were provided
+    append(_ForwardIterator __first, _ForwardIterator __last) {
+    ^
+/include/c++/v1/string:999:19: note: candidate function not viable: requires single argument '__str', but no arguments were provided
+    basic_string& append(const basic_string& __str);
+                  ^
+/include/c++/v1/string:1020:19: note: candidate function not viable: requires single argument '__s', but no arguments were provided
+    basic_string& append(const value_type* __s);
+                  ^
+/include/c++/v1/string:1058:19: note: candidate function not viable: requires single argument '__il', but no arguments were provided
+    basic_string& append(initializer_list<value_type> __il) {return append(__il.begin(), __il.size());}
+                  ^
+/include/c++/v1/string:1019:19: note: candidate function not viable: requires 2 arguments, but 0 were provided
+    basic_string& append(const value_type* __s, size_type __n);
+                  ^
+/include/c++/v1/string:1021:19: note: candidate function not viable: requires 2 arguments, but 0 were provided
+    basic_string& append(size_type __n, value_type __c);
+                  ^
+/include/c++/v1/string:1009:19: note: candidate function not viable: requires at least 2 arguments, but 0 were provided
+    basic_string& append(const basic_string& __str, size_type __pos, size_type __n=npos);
+                  ^
+1 error generated.
+ 
+string-expression-call 1 /project/main.cpp:2:41: error: no matching member function for call to 'append'
+const std::string& get();void f(){get().append();}
+                                  ~~~~~~^~~~~~
+/include/c++/v1/string:1008:19: note: candidate function template not viable: requires single argument '__t', but no arguments were provided
+                  append(const _Tp& __t) { __self_view __sv = __t; return append(__sv.data(), __sv.size()); }
+                  ^
+/include/c++/v1/string:1018:19: note: candidate function template not viable: requires at least 2 arguments, but 0 were provided
+                  append(const _Tp& __t, size_type __pos, size_type __n=npos);
+                  ^
+/include/c++/v1/string:1038:5: note: candidate function template not viable: requires 2 arguments, but 0 were provided
+    append(_InputIterator __first, _InputIterator __last) {
+    ^
+/include/c++/v1/string:1052:5: note: candidate function template not viable: requires 2 arguments, but 0 were provided
+    append(_ForwardIterator __first, _ForwardIterator __last) {
+    ^
+/include/c++/v1/string:999:19: note: candidate function not viable: requires single argument '__str', but no arguments were provided
+    basic_string& append(const basic_string& __str);
+                  ^
+/include/c++/v1/string:1020:19: note: candidate function not viable: requires single argument '__s', but no arguments were provided
+    basic_string& append(const value_type* __s);
+                  ^
+/include/c++/v1/string:1058:19: note: candidate function not viable: requires single argument '__il', but no arguments were provided
+    basic_string& append(initializer_list<value_type> __il) {return append(__il.begin(), __il.size());}
+                  ^
+/include/c++/v1/string:1019:19: note: candidate function not viable: requires 2 arguments, but 0 were provided
+    basic_string& append(const value_type* __s, size_type __n);
+                  ^
+/include/c++/v1/string:1021:19: note: candidate function not viable: requires 2 arguments, but 0 were provided
+    basic_string& append(size_type __n, value_type __c);
+                  ^
+/include/c++/v1/string:1009:19: note: candidate function not viable: requires at least 2 arguments, but 0 were provided
+    basic_string& append(const basic_string& __str, size_type __pos, size_type __n=npos);
+                  ^
+1 error generated.
+ 
+user-cv-volatile 1 /project/main.cpp:1:106: error: no matching member function for call to 'mutate'
+struct N{template<class T>int mutate(T);template<class T>int view(T)volatile;};void f(){volatile N n{};n.mutate();}
+                                                                                                       ~~^~~~~~
+/project/main.cpp:1:31: note: candidate function template not viable: requires 1 argument, but 0 were provided
+struct N{template<class T>int mutate(T);template<class T>int view(T)volatile;};void f(){volatile N n{};n.mutate();}
+                              ^
+1 error generated.
+ 
+deleted-mut-call 1 /project/main.cpp:1:68: error: no matching member function for call to 'mutate'
+struct N{template<class T>void mutate(T)=delete;};void f(){N n{};n.mutate();}
+                                                                 ~~^~~~~~
+/project/main.cpp:1:32: note: candidate function template not viable: requires 1 argument, but 0 were provided
+struct N{template<class T>void mutate(T)=delete;};void f(){N n{};n.mutate();}
+                               ^
+1 error generated.
+ 
+file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-02/compiler/evidence/completion-fix-2026-10-30/semantic-2026-10-30T15-01-23-276Z/

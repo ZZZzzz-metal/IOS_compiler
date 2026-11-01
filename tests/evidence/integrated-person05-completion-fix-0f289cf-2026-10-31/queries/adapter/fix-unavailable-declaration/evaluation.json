@@ -1,0 +1,12 @@
+{
+  "id": "fix-unavailable-declaration",
+  "group": "randomized11",
+  "route": "adapter",
+  "elapsedMs": 16.346599999999853,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 2,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

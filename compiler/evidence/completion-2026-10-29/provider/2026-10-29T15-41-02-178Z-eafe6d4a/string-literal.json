@@ -1,0 +1,60 @@
+{
+  "request": {
+    "requestId": "87dde486-2205-4883-813c-5f6bf11aa820",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "a7a0d8f0-62a6-4a27-af7b-ae7dd23e2af3",
+      "sourceHash": "sha256:2a928283f6fad03f6a6be282d7f181060decf7070a64ce87f690862c6c1d6c09",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "void f(){const char* s=\"al\";}",
+          "contentHash": "sha256:62f71c6852675c7941f459ebd995d401ac7a4633d21e619f99aeb3f5614c30cf"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 26
+  },
+  "reply": {
+    "requestId": "87dde486-2205-4883-813c-5f6bf11aa820",
+    "documentVersion": 1,
+    "snapshotId": "a7a0d8f0-62a6-4a27-af7b-ae7dd23e2af3",
+    "sourceHash": "sha256:2a928283f6fad03f6a6be282d7f181060decf7070a64ce87f690862c6c1d6c09",
+    "sourcePath": "main.cpp",
+    "offset": 26,
+    "status": "succeeded",
+    "items": [],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "reason": "suppressed-literal"
+  },
+  "adapterMs": 0.05290000000013606,
+  "native": {
+    "result": {
+      "requestId": "87dde486-2205-4883-813c-5f6bf11aa820",
+      "documentVersion": 1,
+      "snapshotId": "a7a0d8f0-62a6-4a27-af7b-ae7dd23e2af3",
+      "sourceHash": "sha256:2a928283f6fad03f6a6be282d7f181060decf7070a64ce87f690862c6c1d6c09",
+      "sourcePath": "main.cpp",
+      "offset": 26,
+      "status": "succeeded",
+      "items": [],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "reason": "suppressed-literal"
+    },
+    "native": null
+  },
+  "checks": {
+    "expected": [],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

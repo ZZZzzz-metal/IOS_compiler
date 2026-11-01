@@ -1,0 +1,1653 @@
+{
+  "requestId": "CC-20261030-05",
+  "expectedCommit": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+  "targetPath": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-debugger-02",
+  "nonce": "a8ee505af129",
+  "passed": true,
+  "resources": {
+    "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+    "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "targetUnchanged": true,
+  "logicalCases": 44,
+  "providerResponses": 88,
+  "groups": {
+    "original33-backend": {
+      "passed": 30,
+      "total": 30
+    },
+    "original-extra": {
+      "passed": 1,
+      "total": 1
+    },
+    "randomized11": {
+      "passed": 11,
+      "total": 11
+    },
+    "late2": {
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "logical": [
+    {
+      "id": "type-a",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "type-b",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "renamed-member",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "access-control",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "pointer",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "namespace",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "local-prefix",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "function-prefix",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "shadow-inner",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "shadow-restored",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "declaration-order",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "nested-member",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "vector",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "string",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "chinese-prefix",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "nonbmp-prefix",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "nonbmp-member",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "included-source",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "include-omitted",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "unfinished",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "const-members",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "c-struct",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "c-pointer",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "c-prefix",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "enum",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "char-case",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "char-sizeof",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "pattern-variable",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "pattern-function",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "const-string",
+      "group": "original33-backend",
+      "passed": true
+    },
+    {
+      "id": "attribute-availability-supplement",
+      "group": "original-extra",
+      "passed": true
+    },
+    {
+      "id": "fix-alias-const",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-alias-mutable",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-template-const",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-template-mutable",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-overload-const",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-overload-mutable",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-unavailable-definition",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-unavailable-declaration",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-unavailable-header",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-unavailable-overload",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-unavailable-namespace-context",
+      "group": "randomized11",
+      "passed": true
+    },
+    {
+      "id": "fix-late-static-template",
+      "group": "late2",
+      "passed": true
+    },
+    {
+      "id": "fix-late-deleted-overload",
+      "group": "late2",
+      "passed": true
+    }
+  ],
+  "records": [
+    {
+      "id": "type-a",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 263.2992999999999,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "type-b",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 22.214699999999993,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "renamed-member",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 18.728800000000092,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "access-control",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 17.835900000000038,
+      "verdict": "passed",
+      "support": "boundary",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "pointer",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 20.383399999999938,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "namespace",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 17.011399999999867,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "local-prefix",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 18.539200000000164,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "function-prefix",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 18.732899999999972,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 3,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "shadow-inner",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 16.40190000000007,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 5,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "shadow-restored",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 16.3887000000002,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 5,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "declaration-order",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 17.399200000000064,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "nested-member",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 18.314100000000053,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 5,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "vector",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 261.5899999999999,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 55,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "string",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 173.27499999999986,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 144,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "chinese-prefix",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 19.126199999999926,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "nonbmp-prefix",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 16.909200000000055,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "nonbmp-member",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 17.103000000000065,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "included-source",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 20.340900000000147,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "include-omitted",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 17.942599999999857,
+      "verdict": "passed",
+      "support": "boundary",
+      "itemCount": 0,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "unfinished",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 18.409099999999853,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "const-members",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 19.503799999999956,
+      "verdict": "passed",
+      "support": "boundary",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "c-struct",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 15.231600000000071,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "c-pointer",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 14.504899999999907,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "c-prefix",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 18.461699999999837,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "enum",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 14.720499999999902,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "char-case",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 15.838999999999942,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 5,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "char-sizeof",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 17.3753999999999,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 5,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "pattern-variable",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 15.892499999999927,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "pattern-function",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 15.860400000000027,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "const-string",
+      "group": "original33-backend",
+      "route": "adapter",
+      "elapsedMs": 163.13619999999992,
+      "verdict": "passed",
+      "support": "boundary",
+      "itemCount": 64,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "attribute-availability-supplement",
+      "group": "original-extra",
+      "route": "adapter",
+      "elapsedMs": 16.177200000000084,
+      "verdict": "passed",
+      "support": "boundary",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-alias-const",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 148.6219000000001,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 64,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-alias-mutable",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 141.19540000000006,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 144,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-template-const",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 20.753000000000156,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 3,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-template-mutable",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 17.184200000000146,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 8,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-overload-const",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 17.703599999999824,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-overload-mutable",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 19.276800000000094,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 6,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-unavailable-definition",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 16.483799999999974,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-unavailable-declaration",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 16.346599999999853,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-unavailable-header",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 14.53610000000026,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-unavailable-overload",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 17.923299999999927,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-unavailable-namespace-context",
+      "group": "randomized11",
+      "route": "adapter",
+      "elapsedMs": 16.103200000000015,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 1,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-late-static-template",
+      "group": "late2",
+      "route": "adapter",
+      "elapsedMs": 14.38550000000032,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "fix-late-deleted-overload",
+      "group": "late2",
+      "route": "adapter",
+      "elapsedMs": 21.795199999999568,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 1,
+      "errors": [],
+      "position": null,
+      "equivalent": null
+    },
+    {
+      "id": "type-a",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 282.1361999999999,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:37",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:37"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "type-b",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 26.310599999999795,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:39",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:39"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "renamed-member",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 24.726000000000113,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:37",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:37"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "access-control",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 27.337600000000293,
+      "verdict": "passed",
+      "support": "boundary",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:10:37",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:10:37"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "pointer",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 26.637900000000172,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:40",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:40"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "namespace",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 23.088400000000092,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:27",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:27"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "local-prefix",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 26.623399999999947,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:5:8",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:5:8"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "function-prefix",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 21.920000000000073,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 3,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:19",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:19"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "shadow-inner",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 26.42119999999977,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 5,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:5:28",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:5:28"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "shadow-restored",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 22.067000000000007,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 5,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:6:12",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:6:12"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "declaration-order",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 24.54190000000017,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:9",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:9"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "nested-member",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 27.06479999999965,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 5,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:48",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:48"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "vector",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 301.5893000000001,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 55,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:48",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:48"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "string",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 241.30300000000034,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 144,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:39",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:39"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "chinese-prefix",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 28.823099999999613,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:1:57",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:1:57"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "nonbmp-prefix",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 23.806099999999788,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:1:58",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:1:58"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "nonbmp-member",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 25.801400000000285,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:1:99",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:1:99"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "included-source",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 24.9320000000007,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/user.inc:3:48",
+        "actual": [
+          "-code-completion-at=/project/user.inc:3:48"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "include-omitted",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 25.34650000000056,
+      "verdict": "passed",
+      "support": "boundary",
+      "itemCount": 0,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:45",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:45"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "unfinished",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 25.26299999999992,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 6,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:12",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:12"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "const-members",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 22.510299999999916,
+      "verdict": "passed",
+      "support": "boundary",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:5:40",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:5:40"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "c-struct",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 24.771899999999732,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.c:2:49",
+        "actual": [
+          "-code-completion-at=/project/main.c:2:49"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "c-pointer",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 21.93249999999989,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.c:2:45",
+        "actual": [
+          "-code-completion-at=/project/main.c:2:45"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "c-prefix",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 24.344100000000253,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.c:1:63",
+        "actual": [
+          "-code-completion-at=/project/main.c:1:63"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "enum",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 22.533300000000054,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:30",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:30"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "char-case",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 22.210399999999936,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 5,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:34",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:34"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "char-sizeof",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 26.261000000000422,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 5,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:20",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:20"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "pattern-variable",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 20.247400000000198,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:3:8",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:3:8"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "pattern-function",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 21.78319999999985,
+      "verdict": "passed",
+      "support": "required",
+      "itemCount": 1,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:2:19",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:2:19"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "const-string",
+      "group": "original33-backend",
+      "route": "native",
+      "elapsedMs": 204.0648999999994,
+      "verdict": "passed",
+      "support": "boundary",
+      "itemCount": 64,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:10",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:10"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "attribute-availability-supplement",
+      "group": "original-extra",
+      "route": "native",
+      "elapsedMs": 21.107699999999568,
+      "verdict": "passed",
+      "support": "boundary",
+      "itemCount": 2,
+      "isIncomplete": false,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:4:19",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:4:19"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-alias-const",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 182.27779999999984,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 64,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:5:23",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:5:23"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-alias-mutable",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 217.79449999999997,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 144,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:5:23",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:5:23"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-template-const",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 27.779199999999946,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 3,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:9:23",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:9:23"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-template-mutable",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 23.45129999999972,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 8,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:9:23",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:9:23"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-overload-const",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 23.707900000000336,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:7:23",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:7:23"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-overload-mutable",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 23.98580000000038,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 6,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:7:23",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:7:23"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-unavailable-definition",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 23.60820000000058,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:6:34",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:6:34"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-unavailable-declaration",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 26.627300000000105,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:9:35",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:9:35"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-unavailable-header",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 21.530900000000656,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:7:30",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:7:30"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-unavailable-overload",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 20.625199999999495,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:6:21",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:6:21"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-unavailable-namespace-context",
+      "group": "randomized11",
+      "route": "native",
+      "elapsedMs": 24.756599999999708,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 1,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:9:41",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:9:41"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-late-static-template",
+      "group": "late2",
+      "route": "native",
+      "elapsedMs": 19.462099999999737,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 2,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:7:27",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:7:27"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    },
+    {
+      "id": "fix-late-deleted-overload",
+      "group": "late2",
+      "route": "native",
+      "elapsedMs": 20.561800000000403,
+      "verdict": "passed",
+      "originalVerdict": "passed",
+      "itemCount": 1,
+      "errors": [],
+      "position": {
+        "expected": "-code-completion-at=/project/main.cpp:5:26",
+        "actual": [
+          "-code-completion-at=/project/main.cpp:5:26"
+        ],
+        "passed": true
+      },
+      "equivalent": true
+    }
+  ],
+  "cleanupErrors": [],
+  "workers": [
+    {
+      "initialThreadId": 1,
+      "exitCode": 1,
+      "finalThreadId": -1
+    },
+    {
+      "initialThreadId": 2,
+      "exitCode": 1,
+      "finalThreadId": -1
+    }
+  ],
+  "scope": "Repair semantics on the fixed compiler branch. Three original UI cases reuse previous unchanged UI evidence; no new bundle/browser/iPad acceptance."
+}

@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "expected": {
+    "status": "failed",
+    "reason": "compiler-exit"
+  },
+  "semantic": {
+    "kind": "const",
+    "member": "write_a8ee505af129",
+    "sourcePath": "main.cpp",
+    "line": 9
+  },
+  "diagnosticGroups": [
+    {
+      "index": 0,
+      "error": {
+        "severity": "error",
+        "message": "'this' argument to member function 'write_a8ee505af129' has type 'const Box_a8ee505af129<int>', but function is not marked const",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 9,
+            "column": 3
+          }
+        }
+      },
+      "notes": [
+        {
+          "severity": "note",
+          "message": "'write_a8ee505af129' declared here",
+          "range": {
+            "start": {
+              "sourcePath": "main.cpp",
+              "line": 3,
+              "column": 8
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

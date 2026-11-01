@@ -1,0 +1,3 @@
+COMPLETION: compute : [#int#]compute(<#int#>)
+COMPLETION: count : [#int#]count
+COMPLETION: Thing : Thing

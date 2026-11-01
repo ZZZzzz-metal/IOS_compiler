@@ -1,0 +1,19 @@
+{
+  "id": "pattern-function",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 21.78319999999985,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:2:19",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:2:19"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

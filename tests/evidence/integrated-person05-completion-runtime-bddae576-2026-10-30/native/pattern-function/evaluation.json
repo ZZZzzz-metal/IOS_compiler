@@ -1,0 +1,18 @@
+{
+  "caseId": "pattern-function",
+  "path": "native",
+  "startedAt": "2026-10-29T16:30:34.520Z",
+  "elapsedMs": 21.93849999999975,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:2:19",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:2:19"
+    ],
+    "passed": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-30T01:30:39.034Z",
+  "finishedAt": "2026-10-30T01:30:39.815Z",
+  "name": "AssertionError",
+  "code": "ERR_ASSERTION",
+  "message": "IPAD-USER-MANUAL.md fixed Git binding (actual 2608d3d53dcf8be5e31c29e6ac1908e44843d46267af516e23acc22a2fbb9838, expected c2bf955157dbff146cb0b8d691abebaed11184854c657e6a7b89293375657bdb)",
+  "stack": "AssertionError [ERR_ASSERTION]: IPAD-USER-MANUAL.md fixed Git binding (actual 2608d3d53dcf8be5e31c29e6ac1908e44843d46267af516e23acc22a2fbb9838, expected c2bf955157dbff146cb0b8d691abebaed11184854c657e6a7b89293375657bdb)\n    at equalBytes (file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/audit-completion-package-independent.mjs:26:45)\n    at file:///C:/Users/20964/Documents/ChatGPT/C++%E7%AE%97%E6%B3%95%E7%BC%96%E8%AF%91%E5%99%A8/ipad-debugger-05/tests/audit-completion-package-independent.mjs:66:55"
+}

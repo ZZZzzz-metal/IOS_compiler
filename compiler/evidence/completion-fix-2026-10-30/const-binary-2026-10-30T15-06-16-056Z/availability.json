@@ -1,0 +1,30 @@
+{
+  "source": "int personAllowed();__attribute__((unavailable)) int personBlocked();__attribute__((deprecated)) int personDeprecated();void f(){person;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:1:136",
+    "/project/main.cpp"
+  ],
+  "exitCode": 0,
+  "stdout": "COMPLETION: personAllowed : [#int#]personAllowed()\nCOMPLETION: personBlocked (Inaccessible) : [#int#]personBlocked()\nCOMPLETION: personDeprecated : [#int#]personDeprecated()\n",
+  "stderr": "",
+  "memoryBytes": 7012352
+}

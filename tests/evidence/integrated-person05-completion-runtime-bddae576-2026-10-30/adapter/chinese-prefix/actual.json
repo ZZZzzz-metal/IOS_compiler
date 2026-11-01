@@ -1,0 +1,40 @@
+{
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-chinese-prefix",
+  "documentVersion": 15,
+  "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-chinese-prefix-snapshot",
+  "sourceHash": "sha256:8436d5f59d801bbca2194ff142c213c70915ecdad4d5ce5671f607bc2a277dfe",
+  "sourcePath": "main.cpp",
+  "offset": 42,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:28847f2322a37bbd1dd226d9b3234a2c6525952be564abb46aaea44c71fe4670",
+      "label": "数量乙",
+      "kind": "unknown",
+      "detail": "int 数量乙",
+      "insertText": "数量乙",
+      "replaceRange": {
+        "startOffset": 41,
+        "endOffset": 42
+      },
+      "filterText": "数量乙"
+    },
+    {
+      "id": "sha256:4df735253e20f7b97d630d4876f2cbe6bdc2f6a7834512bf1c05c3ab28e36626",
+      "label": "数量甲",
+      "kind": "unknown",
+      "detail": "int 数量甲",
+      "insertText": "数量甲",
+      "replaceRange": {
+        "startOffset": 41,
+        "endOffset": 42
+      },
+      "filterText": "数量甲"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

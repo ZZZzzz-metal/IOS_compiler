@@ -1,0 +1,88 @@
+{
+  "requestId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-unfinished",
+  "documentVersion": 20,
+  "snapshotId": "person05-e4883ca1-dd4f-4162-977a-526cef315b88-unfinished-snapshot",
+  "sourceHash": "sha256:8b4c7cbe4c8ea1e61c805a341dcb0f03bc765d189f68367cdf75e2384da36187",
+  "sourcePath": "main.cpp",
+  "offset": 88,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:750279f86e773b2ce32ed0d4957c5a64b3280d965c2c1a216b984f70b1d09a63",
+      "label": "antenna",
+      "kind": "unknown",
+      "detail": "int antenna",
+      "insertText": "antenna",
+      "replaceRange": {
+        "startOffset": 88,
+        "endOffset": 88
+      },
+      "filterText": "antenna"
+    },
+    {
+      "id": "sha256:84a00327124c14255166b737670099d4fbba2f632ecb6ff03a0cc676d6ea8f2f",
+      "label": "battery",
+      "kind": "unknown",
+      "detail": "int battery",
+      "insertText": "battery",
+      "replaceRange": {
+        "startOffset": 88,
+        "endOffset": 88
+      },
+      "filterText": "battery"
+    },
+    {
+      "id": "sha256:3214ececcb6818d4e50af4fc436a6ee70f23570648af9a23c32581949688a971",
+      "label": "Device",
+      "kind": "unknown",
+      "detail": "Device::",
+      "insertText": "Device",
+      "replaceRange": {
+        "startOffset": 88,
+        "endOffset": 88
+      },
+      "filterText": "Device"
+    },
+    {
+      "id": "sha256:71ff45f49aafcccd4a3642d95e69b64039f9b3cc0697ead7c54618af13d41615",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Device & operator=(const Device &)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 88,
+        "endOffset": 88
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:9a482e61abe9ccbd3545ecc50d24c95fd70b787da2b802eb4cbeced2bff50971",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Device & operator=(Device &&)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 88,
+        "endOffset": 88
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:3d48f2183311ae4e9f243620d13c24fcd6572854833a5cfa32ccce545dd13a1b",
+      "label": "~Device",
+      "kind": "unknown",
+      "detail": "void ~Device()",
+      "insertText": "~Device",
+      "replaceRange": {
+        "startOffset": 88,
+        "endOffset": 88
+      },
+      "filterText": "~Device"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

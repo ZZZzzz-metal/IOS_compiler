@@ -1,0 +1,119 @@
+{
+  "id": "04-class-access-external",
+  "invokedAt": "2026-10-29T04:59:32.454Z",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 110,
+    "line": 2,
+    "utf16Column": 33,
+    "utf8ByteColumn": 33,
+    "linePrefix": "int main() { Vault vault; vault.",
+    "prefixAtCursor": "",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:2:33",
+    "/project/main.cpp"
+  ],
+  "sourceHash": "sha256:4ad20a9790fbd351d27ed8397a90fac54bc4c6924829a978a93d24220f837ec4",
+  "resources": [
+    {
+      "filename": "memfs",
+      "byteLength": 345442,
+      "sha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "expectedSha256": "sha256:2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "verified": true
+    },
+    {
+      "filename": "clang",
+      "byteLength": 31214472,
+      "sha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "expectedSha256": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "verified": true
+    },
+    {
+      "filename": "sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "expectedSha256": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "verified": true
+    }
+  ],
+  "flags": [],
+  "exitCode": 0,
+  "hostError": null,
+  "filesystemSetupMs": 6.825199999999995,
+  "completionMs": 7.895800000000008,
+  "totalCaseMs": 14.76400000000001,
+  "memoryBytes": {
+    "clangAfterExecution": 7012352,
+    "memfsAfterExecution": 9437184
+  },
+  "stdoutByteLength": 363,
+  "stderrByteLength": 0,
+  "stdoutSha256": "sha256:b75531a49555632a7f29d70e87b2f96cc093308f154f3389f669dec822d79426",
+  "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completionCount": 8,
+  "candidateObservations": [
+    {
+      "name": "secret",
+      "lines": [
+        "COMPLETION: secret (Inaccessible) : [#int#]secret"
+      ]
+    },
+    {
+      "name": "hidden",
+      "lines": [
+        "COMPLETION: hidden (Inaccessible) : [#void#]hidden()"
+      ]
+    },
+    {
+      "name": "visible",
+      "lines": [
+        "COMPLETION: visible : [#int#]visible"
+      ]
+    },
+    {
+      "name": "show",
+      "lines": [
+        "COMPLETION: show : [#void#]show()"
+      ]
+    }
+  ],
+  "inaccessibleLines": [
+    "COMPLETION: hidden (Inaccessible) : [#void#]hidden()",
+    "COMPLETION: secret (Inaccessible) : [#int#]secret"
+  ],
+  "stdout": "COMPLETION: hidden (Inaccessible) : [#void#]hidden()\nCOMPLETION: operator= : [#Vault &#]operator=(<#const Vault &#>)\nCOMPLETION: operator= : [#Vault &#]operator=(<#Vault &&#>)\nCOMPLETION: secret (Inaccessible) : [#int#]secret\nCOMPLETION: show : [#void#]show()\nCOMPLETION: Vault : Vault::\nCOMPLETION: visible : [#int#]visible\nCOMPLETION: ~Vault : [#void#]~Vault()\n",
+  "stderr": ""
+}

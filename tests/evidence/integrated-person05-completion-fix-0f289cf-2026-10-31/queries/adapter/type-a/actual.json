@@ -1,0 +1,88 @@
+{
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-type-a",
+  "documentVersion": 1,
+  "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-type-a-snapshot",
+  "sourceHash": "sha256:c510bf7960fb575a9d19990df05ba4bc7bfbbf8a7cc08d49eac4197490a3c66b",
+  "sourcePath": "main.cpp",
+  "offset": 122,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:003870699edf11dc9e70b0fdd15fed785a24912a72a583d937d89e239ce82e8d",
+      "label": "common",
+      "kind": "unknown",
+      "detail": "int common",
+      "insertText": "common",
+      "replaceRange": {
+        "startOffset": 122,
+        "endOffset": 122
+      },
+      "filterText": "common"
+    },
+    {
+      "id": "sha256:06aff5a2912bde42122d6bdbef7642cf8ee22c15b90bb386bdbe0b96e190ddc2",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Pixel & operator=(const Pixel &)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 122,
+        "endOffset": 122
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:796a697a8a55de1f4e005fad82317d9da65e2ef33ed72d53cfcc1bf18864e181",
+      "label": "operator=",
+      "kind": "unknown",
+      "detail": "Pixel & operator=(Pixel &&)",
+      "insertText": "operator=",
+      "replaceRange": {
+        "startOffset": 122,
+        "endOffset": 122
+      },
+      "filterText": "operator="
+    },
+    {
+      "id": "sha256:d568b0816361fd7fb722d5a99ea66a56597988ed370e45f451a4579d164efee3",
+      "label": "Pixel",
+      "kind": "unknown",
+      "detail": "Pixel::",
+      "insertText": "Pixel",
+      "replaceRange": {
+        "startOffset": 122,
+        "endOffset": 122
+      },
+      "filterText": "Pixel"
+    },
+    {
+      "id": "sha256:62637cfc62bcd6be8139c1c99608e8fec862065c8545e962f5d82ca50071449b",
+      "label": "scarlet",
+      "kind": "unknown",
+      "detail": "int scarlet",
+      "insertText": "scarlet",
+      "replaceRange": {
+        "startOffset": 122,
+        "endOffset": 122
+      },
+      "filterText": "scarlet"
+    },
+    {
+      "id": "sha256:359538d19083f77f94044c886313cf9af4eb375d04c750657ef5011a4e3fc4a7",
+      "label": "~Pixel",
+      "kind": "unknown",
+      "detail": "void ~Pixel()",
+      "insertText": "~Pixel",
+      "replaceRange": {
+        "startOffset": 122,
+        "endOffset": 122
+      },
+      "filterText": "~Pixel"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+  "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

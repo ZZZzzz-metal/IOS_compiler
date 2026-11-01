@@ -1,0 +1,19 @@
+{
+  "id": "included-source",
+  "group": "original33-backend",
+  "route": "native",
+  "elapsedMs": 24.9320000000007,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 6,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/user.inc:3:48",
+    "actual": [
+      "-code-completion-at=/project/user.inc:3:48"
+    ],
+    "passed": true
+  },
+  "equivalent": true
+}

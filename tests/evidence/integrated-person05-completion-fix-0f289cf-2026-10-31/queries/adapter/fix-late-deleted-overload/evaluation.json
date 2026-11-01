@@ -1,0 +1,12 @@
+{
+  "id": "fix-late-deleted-overload",
+  "group": "late2",
+  "route": "adapter",
+  "elapsedMs": 21.795199999999568,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 1,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

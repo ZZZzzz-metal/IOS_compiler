@@ -1,0 +1,118 @@
+{
+  "request": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "471a676e-6977-4d63-b672-3df8d2ff2ee5",
+    "documentVersion": 1,
+    "snapshot": {
+      "snapshotId": "471a676e-6977-4d63-b672-3df8d2ff2ee5-snapshot",
+      "sourceHash": "sha256:f86a97f4880a98d4f8560519b6c02b6705581fdf4597919061c5158b05ad8967",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int mixed_9c3158ded821871b_select(double argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n__attribute__((unavailable(\"person05-unavailable\"))) int mixed_9c3158ded821871b_select(int argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n__attribute__((deprecated(\"person05-deprecated\"))) int mixed_9c3158ded821871b_deprecated() { return 0; }\n\nvoid probe_9c3158ded821871b() {\n  mixed_9c3158ded821871b\n}\n",
+          "contentHash": "sha256:7db9c11321e7b0b296956b2016e4a1c039b51071b71273ade3a51aae87de2544"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 442,
+    "trigger": "identifier"
+  },
+  "actual": {
+    "result": {
+      "requestId": "471a676e-6977-4d63-b672-3df8d2ff2ee5",
+      "documentVersion": 1,
+      "snapshotId": "471a676e-6977-4d63-b672-3df8d2ff2ee5-snapshot",
+      "sourceHash": "sha256:f86a97f4880a98d4f8560519b6c02b6705581fdf4597919061c5158b05ad8967",
+      "sourcePath": "main.cpp",
+      "offset": 442,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:a76d2278291333eb9bdda58ca22ed028274dcc448fe33ae176cd0f5eb5c3d910",
+          "label": "mixed_9c3158ded821871b_deprecated",
+          "kind": "unknown",
+          "detail": "int mixed_9c3158ded821871b_deprecated()",
+          "insertText": "mixed_9c3158ded821871b_deprecated",
+          "replaceRange": {
+            "startOffset": 420,
+            "endOffset": 442
+          },
+          "filterText": "mixed_9c3158ded821871b_deprecated"
+        },
+        {
+          "id": "sha256:72ef2e4ea7e19fbcae47f348712256749d2ce9b4c21ca78c93699d7895e57a52",
+          "label": "mixed_9c3158ded821871b_select",
+          "kind": "unknown",
+          "detail": "int mixed_9c3158ded821871b_select(double argument_9c3158ded821871b)",
+          "insertText": "mixed_9c3158ded821871b_select",
+          "replaceRange": {
+            "startOffset": 420,
+            "endOffset": 442
+          },
+          "filterText": "mixed_9c3158ded821871b_select"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+      "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:6:25",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: mixed_9c3158ded821871b_deprecated : [#int#]mixed_9c3158ded821871b_deprecated()\nCOMPLETION: mixed_9c3158ded821871b_select : [#int#]mixed_9c3158ded821871b_select(<#double argument_9c3158ded821871b#>)\nCOMPLETION: mixed_9c3158ded821871b_select (Inaccessible) : [#int#]mixed_9c3158ded821871b_select(<#int argument_9c3158ded821871b#>)\n",
+      "stderr": "",
+      "memoryBytes": 7077888,
+      "position": {
+        "line": 6,
+        "byteColumn": 25
+      }
+    },
+    "metrics": {
+      "totalMs": 17.352300000000014,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7077888
+    }
+  },
+  "verdict": {
+    "verdict": "passed",
+    "originalVerdict": "passed",
+    "itemCount": 2,
+    "errors": []
+  }
+}

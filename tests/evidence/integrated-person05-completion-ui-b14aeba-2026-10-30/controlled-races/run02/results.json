@@ -1,0 +1,172 @@
+{
+  "target": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "scope": "Independent controlled transport tests against actual fixed product exports. No real browser/layout/native undo/Worker or iPad claim. Main integration gate checks are source assertions, not executed main.",
+  "inputs": [
+    {
+      "file": "ui/src/completion-controller.mjs",
+      "sha256": "e815ec62c4d5b9899ef871e561ed151d98c2f9f2d2ce935ff738a3752244663b",
+      "byteLength": 15256
+    },
+    {
+      "file": "ui/src/completion-editor.mjs",
+      "sha256": "6fec3d57898194071c55210122466927b8d126a6ea5c153a429aee2ce7f7f4b3",
+      "byteLength": 7535
+    },
+    {
+      "file": "ui/src/completion-popup.mjs",
+      "sha256": "c473b6148865603116d71eb5b9ffd1ee218eb99dca78c9d5f8aeb319d750ad01",
+      "byteLength": 13394
+    },
+    {
+      "file": "ui/src/completion-edit.mjs",
+      "sha256": "d4a4e861c77ae9c3169339e122c0dcb93815628669922be2fbdd4be26020054b",
+      "byteLength": 4713
+    },
+    {
+      "file": "ui/src/main.mjs",
+      "sha256": "864aabe28cdf85b100a4758744f6a2770979592746c7375c1f8b838a052a63ca",
+      "byteLength": 35373
+    },
+    {
+      "file": "compiler/src/source.mjs",
+      "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1",
+      "byteLength": 7201
+    }
+  ],
+  "scenarioCount": 26,
+  "assertions": 105,
+  "passed": 26,
+  "failed": 0,
+  "results": [
+    {
+      "name": "superseding request waits previous settlement and rejects its late result",
+      "status": "passed",
+      "assertions": 5
+    },
+    {
+      "name": "late completion discarded after caret change",
+      "status": "passed",
+      "assertions": 3
+    },
+    {
+      "name": "late completion discarded after version change",
+      "status": "passed",
+      "assertions": 3
+    },
+    {
+      "name": "late completion discarded after language change",
+      "status": "passed",
+      "assertions": 3
+    },
+    {
+      "name": "late completion discarded after focus change",
+      "status": "passed",
+      "assertions": 3
+    },
+    {
+      "name": "late completion discarded after composition change",
+      "status": "passed",
+      "assertions": 3
+    },
+    {
+      "name": "late completion discarded after readonly gate change",
+      "status": "passed",
+      "assertions": 3
+    },
+    {
+      "name": "late completion discarded after snapshot other file change",
+      "status": "passed",
+      "assertions": 3
+    },
+    {
+      "name": "late completion discarded after source path change",
+      "status": "passed",
+      "assertions": 3
+    },
+    {
+      "name": "cancellation rejection drain waits request settlement without accepting old result",
+      "status": "passed",
+      "assertions": 2
+    },
+    {
+      "name": "result token consumed before reentrant apply prevents double application",
+      "status": "passed",
+      "assertions": 4
+    },
+    {
+      "name": "completed warm provider release is awaited and reentrant release disposes once",
+      "status": "passed",
+      "assertions": 8
+    },
+    {
+      "name": "active release waits both cancel settlement and dispose then rejects stale response",
+      "status": "passed",
+      "assertions": 5
+    },
+    {
+      "name": "dispose reentry returns one barrier and permanent event shutdown",
+      "status": "passed",
+      "assertions": 4
+    },
+    {
+      "name": "cancel failure closes future provider/compile release gate",
+      "status": "passed",
+      "assertions": 7
+    },
+    {
+      "name": "dispose failure closes future provider/compile release gate",
+      "status": "passed",
+      "assertions": 7
+    },
+    {
+      "name": "Tab candidate confirmation consumes capture and leaves old bubble edit inactive",
+      "status": "passed",
+      "assertions": 5
+    },
+    {
+      "name": "Enter candidate confirmation consumes capture and leaves old bubble edit inactive",
+      "status": "passed",
+      "assertions": 5
+    },
+    {
+      "name": "IME session and keyCode 229 preserve Tab/Enter/manual key defaults",
+      "status": "passed",
+      "assertions": 12
+    },
+    {
+      "name": "old visible candidate is not actionable after readOnly",
+      "status": "passed",
+      "assertions": 2
+    },
+    {
+      "name": "old visible candidate is not actionable after focus",
+      "status": "passed",
+      "assertions": 2
+    },
+    {
+      "name": "old visible candidate is not actionable after inert",
+      "status": "passed",
+      "assertions": 2
+    },
+    {
+      "name": "old visible candidate is not actionable after dialog",
+      "status": "passed",
+      "assertions": 2
+    },
+    {
+      "name": "old visible candidate is not actionable after visibility",
+      "status": "passed",
+      "assertions": 2
+    },
+    {
+      "name": "old visible candidate is not actionable after changed source",
+      "status": "passed",
+      "assertions": 2
+    },
+    {
+      "name": "main module keeps explicit compile-release and keyboard propagation gates",
+      "status": "passed",
+      "assertions": 5
+    }
+  ]
+}

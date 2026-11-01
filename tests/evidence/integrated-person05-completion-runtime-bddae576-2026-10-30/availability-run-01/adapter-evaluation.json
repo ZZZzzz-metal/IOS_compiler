@@ -1,0 +1,13 @@
+{
+  "verdict": "boundary-failed",
+  "support": "boundary",
+  "itemCount": 3,
+  "isIncomplete": false,
+  "errors": [
+    {
+      "category": "availability",
+      "code": "ineligible-confirmable",
+      "detail": "personBlocked"
+    }
+  ]
+}

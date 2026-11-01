@@ -1,0 +1,13 @@
+✔ legal same-name overload is retained; adding illegal overload fails only the strict extension (2.001ms)
+✔ unknown detail cannot evade the closed signature set (0.1628ms)
+✔ blanket removal and non-success cannot satisfy legitimate required overloads (1.2038ms)
+✔ ordinary allowed overloads may be explicitly listed for mutable objects (0.236ms)
+✔ different generated names and preserved contract identity receive the same strict checks (0.5314ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 158.4567

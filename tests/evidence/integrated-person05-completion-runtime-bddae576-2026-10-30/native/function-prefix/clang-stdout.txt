@@ -1,0 +1,3 @@
+COMPLETION: sigmaScan : [#int#]sigmaScan(<#double input#>)
+COMPLETION: sigmaSolve : [#int#]sigmaSolve(<#int input#>)
+COMPLETION: signed

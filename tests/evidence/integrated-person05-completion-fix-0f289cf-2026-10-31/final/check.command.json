@@ -1,0 +1,14 @@
+{
+  "id": "check",
+  "executable": "cmd.exe",
+  "args": [
+    "/d",
+    "/s",
+    "/c",
+    "npm.cmd run check"
+  ],
+  "startedAt": "2026-10-31T07:15:47.983Z",
+  "endedAt": "2026-10-31T07:15:50.592Z",
+  "exitCode": 0,
+  "error": null
+}

@@ -1,0 +1,30 @@
+{
+  "source": "enum N{alphaAllowed,alphaBlocked __attribute__((unavailable)),alphaOld __attribute__((deprecated))};void f(){al;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:1:112",
+    "/project/main.cpp"
+  ],
+  "exitCode": 0,
+  "stdout": "COMPLETION: Pattern : alignas(<#expression#>)\nCOMPLETION: Pattern : [#size_t#]alignof(<#type#>)\nCOMPLETION: alphaAllowed : [#N#]alphaAllowed\nCOMPLETION: alphaBlocked (Inaccessible) : [#N#]alphaBlocked\nCOMPLETION: alphaOld : [#N#]alphaOld\n",
+  "stderr": "",
+  "memoryBytes": 7012352
+}

@@ -1,0 +1,28 @@
+{
+  "requestId": "e80f1734-b714-4fe6-84c4-6e306aa4e4e9",
+  "documentVersion": 1,
+  "snapshotId": "9d78b69a-6a6c-4882-bae8-aabfefd20498",
+  "sourceHash": "sha256:65ba52a054f2c613a5e37a57e2e1a005ad9678fc7905a1d7ac061812c9935288",
+  "sourcePath": "main.cpp",
+  "offset": 22,
+  "status": "succeeded",
+  "items": [
+    {
+      "id": "sha256:c31acb99ba881fe9f6eb1fd7645d55a430a612215e0c62d96d2f5e5c328b269f",
+      "label": "alpha",
+      "kind": "unknown",
+      "detail": "int alpha",
+      "insertText": "alpha",
+      "replaceRange": {
+        "startOffset": 20,
+        "endOffset": 22
+      },
+      "filterText": "alpha"
+    }
+  ],
+  "isIncomplete": false,
+  "diagnostics": [],
+  "toolchainId": "binji-wasm-clang-648c4a89997a",
+  "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+  "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+}

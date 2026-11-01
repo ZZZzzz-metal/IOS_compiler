@@ -1,0 +1,13 @@
+{
+  "id": "char-case",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 15.838999999999942,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 5,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

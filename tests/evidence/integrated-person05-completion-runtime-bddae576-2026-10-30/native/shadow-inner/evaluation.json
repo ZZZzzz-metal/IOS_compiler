@@ -1,0 +1,18 @@
+{
+  "caseId": "shadow-inner",
+  "path": "native",
+  "startedAt": "2026-10-29T16:30:33.685Z",
+  "elapsedMs": 19.307600000000093,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 5,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:5:28",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:5:28"
+    ],
+    "passed": true
+  }
+}

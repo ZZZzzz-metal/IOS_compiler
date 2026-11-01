@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-access-control",
+  "documentVersion": 4,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-access-control-snapshot",
+    "sourceHash": "sha256:2585112526d5f30ce296807b8785662c5e09e2feb96c845212fc58ed4a17fd00",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "class Vault {\npublic:\n    int visible;\n    int inspect() const { return 7; }\nprotected:\n    int guarded;\nprivate:\n    int secret;\n};\nvoid probe() { Vault object; object. }\n",
+        "contentHash": "sha256:0a37c7a5d99d3b7881c3697a030959eadebd477fd29bc6f114d8c6c78e3b7f10"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 169,
+  "trigger": "."
+}

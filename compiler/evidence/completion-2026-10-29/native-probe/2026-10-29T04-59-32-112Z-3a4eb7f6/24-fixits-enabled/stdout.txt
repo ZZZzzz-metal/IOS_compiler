@@ -1,0 +1,5 @@
+COMPLETION: Node : Node:: (requires fix-it: {2:40-2:41} to "->")
+COMPLETION: operator= : [#Node &#]operator=(<#const Node &#>) (requires fix-it: {2:40-2:41} to "->")
+COMPLETION: operator= : [#Node &#]operator=(<#Node &&#>) (requires fix-it: {2:40-2:41} to "->")
+COMPLETION: value : [#int#]value (requires fix-it: {2:40-2:41} to "->")
+COMPLETION: ~Node : [#void#]~Node() (requires fix-it: {2:40-2:41} to "->")

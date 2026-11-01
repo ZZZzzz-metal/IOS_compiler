@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "standard": "c++17",
+  "requestId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-namespace",
+  "documentVersion": 6,
+  "snapshot": {
+    "snapshotId": "p05-fix-5df5b661-5401-48cf-8595-1f2650b1ffd9-namespace-snapshot",
+    "sourceHash": "sha256:6fceda4bc457baaf6e280c6af298c1c40b726a5e9e8699b78c5ed992cdcb1042",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "namespace records { int ledger; int load(int value) { return value; } }\nvoid probe() { records::lo }\n",
+        "contentHash": "sha256:b99b2663d1f20191cac6f5684a6fd941f475009dce709ea43600d2536a9413ff"
+      }
+    ]
+  },
+  "sourcePath": "main.cpp",
+  "offset": 98,
+  "trigger": "::"
+}

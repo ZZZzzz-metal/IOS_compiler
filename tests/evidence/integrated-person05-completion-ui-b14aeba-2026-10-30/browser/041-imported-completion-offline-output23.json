@@ -1,0 +1,87 @@
+{
+  "id": 41,
+  "name": "imported-completion-offline-output23",
+  "at": "2026-10-30T03:56:36.164Z",
+  "expectation": "Ctrl6 executes locally after completion release, exact output person05-final=23 and exit23",
+  "state": "Browser tab: 3, Title: \"算法工作台 · 四号验证原型\", URL: \"http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 238-255\n~\t\t6 button 校验本地资源, ID: prepare\n~\t\t16 button 编译运行, Help: 编译运行（Ctrl+F5 / Ctrl+6）, ID: run\n~\t\t17 button 编译调试, Help: 编译调试（F5 / Ctrl+5）, ID: debug\n~\t\t\t23 button (disabled) 停止, Help: 停止（Shift+F5 / Ctrl+Shift+5）, ID: stop\n+\t\t224 text 已结束\n~\t\t\t181 checkbox 查看调试快照, Value: 0, ID: snapshot-toggle\n+\t\t\t225 text main.cpp\n+\t\t\t226 text 编辑中的草稿\n+\t\t\t\t227 button 1, Help: 第 1 行：切换断点\n+\t\t\t\t228 button 2, Help: 第 2 行：切换断点\n+\t\t\t\t229 button 3, Help: 第 3 行：切换断点\n+\t\t\t\t230 button 4, Help: 第 4 行：切换断点\n+\t\t\t\t231 button 5, Help: 第 5 行：切换断点\n+\t\t\t\t232 button 6, Help: 第 6 行：切换断点\n+\t\t\t\t233 button 7, Help: 第 7 行：切换断点\n+\t\t\t\t234 button 8, Help: 第 8 行：切换断点\n+\t\t\t\t235 button 9, Help: 第 9 行：切换断点\n~\t\t\t189 button 代码提示, Help: 代码提示（Ctrl+J / Ctrl+Space）, ID: complete\n+\t\t\t236 text 输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。\n+\t\t\t237 text 草稿已保存 · 版本 20\n~\t\t\t\t205 heading 程序输出 exit · 返回 23, Value: 2\n+\t\t\t\t\t238 text exit · 返回 23\n+\t\t\t\t\t239 text person05-final=23\n\n+\t\t\t\t240 text 调试暂停后显示真实调用栈\n+\t\t\t\t241 text 调试暂停后读取变量\n+\t\t\t\t242 text 选择暂停栈帧后查询\nThe focused UI element is 187 text entry area (settable) Description: 源代码, ID: source, Value: #include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedValue;\n}\n",
+  "dom": {
+    "body": "算法工作台\n开发验证原型\n\n粘贴代码，带着输入运行，在暂停处排错。\n\n校验本地资源\n本版本离线资源已校验 · iPad 真机待验证\niPad 离线冷启动待验证\nClang 8.0.1 / wasm32\n原型说明与验证步骤\nC++17\nC11\n编译运行\n编译调试\n继续\n进入\n跳过\n跳出\n停止\n已结束\nCtrl+5 开始 / 继续 · Ctrl+0 跳过 · Ctrl+- 进入\n键盘快捷键 无 F 键也能调试\n代码\n粘贴代码\n复制题站源码\n导入\n仅题站源码\n完整草稿\n导出\n题站源码\n测试驱动\n查看调试快照\nmain.cpp\n编辑中的草稿\n1\n2\n3\n4\n5\n6\n7\n8\n9\n#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedValue;\n}\n\n\n切换断点\n代码提示\n缩进\n取消缩进\n下一处\n\n输入名称或成员运算符后显示提示，也可按 Ctrl+J / Ctrl+Space。\n\n草稿已保存 · 版本 20\n断点与编译诊断\n样例输入\n运行前一次性提供\n程序输出\nexit · 返回 23\nperson05-final=23\n\n调用栈\n调试暂停后显示真实调用栈\n局部变量\n调试暂停后读取变量\n基础监视\n查看\n\n支持范围以适配器为准；函数调用、赋值和自增不可用。\n\n选择暂停栈帧后查询",
+    "fields": [
+      {
+        "disabled": false,
+        "id": "language",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "cpp"
+      },
+      {
+        "disabled": false,
+        "id": "shortcut-scheme",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "control-number"
+      },
+      {
+        "disabled": false,
+        "id": "export-mode",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": "user-source"
+      },
+      {
+        "disabled": false,
+        "id": "file",
+        "readOnly": false,
+        "selectionEnd": null,
+        "selectionStart": null,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "source",
+        "readOnly": false,
+        "selectionEnd": 184,
+        "selectionStart": 184,
+        "value": "#include <cstdio>\nstruct PersonSaved { int savedValue; };\nint main(){\n PersonSaved value{23};\n /* 中文😀 */\n std::printf(\"person05-final=%d\\n\",value.savedValue);\n return value.savedValue;\n}\n"
+      },
+      {
+        "disabled": false,
+        "id": "find",
+        "readOnly": false,
+        "selectionEnd": 14,
+        "selectionStart": 14,
+        "value": "focus-person05"
+      },
+      {
+        "disabled": false,
+        "id": "stdin",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "expression",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      },
+      {
+        "disabled": false,
+        "id": "clipboard-text",
+        "readOnly": false,
+        "selectionEnd": 0,
+        "selectionStart": 0,
+        "value": ""
+      }
+    ],
+    "popup": "<div class=\"completion-list\" id=\"completion-list-1\" role=\"listbox\" aria-label=\"代码提示\" aria-busy=\"false\" style=\"max-height: 60px;\"><div class=\"completion-option is-selected\" id=\"completion-option-1-183-0\" role=\"option\" title=\"int savedValue\" aria-selected=\"true\" style=\"min-height: 44px;\"><span class=\"completion-kind\">符号</span><span class=\"completion-label\">savedValue</span><span class=\"completion-detail\">int savedValue</span></div></div>",
+    "title": "算法工作台 · 四号验证原型",
+    "url": "http://127.0.0.1:4255/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/ui/probe.html"
+  }
+}

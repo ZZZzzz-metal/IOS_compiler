@@ -1,0 +1,12 @@
+{
+  "caseId": "chinese-prefix",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:32.932Z",
+  "elapsedMs": 18.09960000000001,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

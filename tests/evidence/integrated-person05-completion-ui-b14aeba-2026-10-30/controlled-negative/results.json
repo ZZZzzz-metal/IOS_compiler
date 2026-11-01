@@ -1,0 +1,102 @@
+{
+  "target": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "kind": "controlled-consumer-auto-trigger-negative",
+  "scope": "Actual fixed createCompletionController.input() with unchanged original three fixtures and controlled provider. No browser DOM, real Worker or physical IME/iPad claim. Complements separate real-browser no-popup observations.",
+  "delayMs": 300,
+  "requestedWaitMs": 450,
+  "scenarioCount": 3,
+  "assertions": 12,
+  "passed": 3,
+  "failed": 0,
+  "inputs": [
+    {
+      "path": "ui/src/completion-controller.mjs",
+      "byteLength": 15256,
+      "sha256": "e815ec62c4d5b9899ef871e561ed151d98c2f9f2d2ce935ff738a3752244663b"
+    },
+    {
+      "path": "ui/src/completion-editor.mjs",
+      "byteLength": 7535,
+      "sha256": "6fec3d57898194071c55210122466927b8d126a6ea5c153a429aee2ce7f7f4b3"
+    },
+    {
+      "path": "fixtures/completion-independent/cases.json",
+      "byteLength": 10388,
+      "sha256": "d29dfc89bbadf6e17d4ff970abf99398654f38880c255205453a86108f5daac3"
+    },
+    {
+      "path": "fixtures/completion-independent/comment.cpp",
+      "byteLength": 69,
+      "sha256": "74e69b8e0fd6a2f7b63c17257117a05fb39e25b2fd866cb12a252593518e6b61"
+    },
+    {
+      "path": "fixtures/completion-independent/string-literal.cpp",
+      "byteLength": 55,
+      "sha256": "728b78b31e30ba9dd072ded04919dd9cfbd9190e09e21d0e253d480094f5df8e"
+    },
+    {
+      "path": "fixtures/completion-independent/decimal.cpp",
+      "byteLength": 45,
+      "sha256": "e03f86c51e6be914a5f5d62425d555969db141f44969f185f8f4425fd0e874c0"
+    }
+  ],
+  "results": [
+    {
+      "id": "comment",
+      "providerCallCount": 0,
+      "actualState": {
+        "phase": "idle",
+        "items": [],
+        "selectedIndex": -1,
+        "token": 1,
+        "message": ""
+      },
+      "elapsedMs": 459.3591,
+      "checks": {
+        "waitExceedsAutomaticDelay": true,
+        "providerCallsZero": true,
+        "phaseIdle": true,
+        "itemsEmpty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "string-literal",
+      "providerCallCount": 0,
+      "actualState": {
+        "phase": "idle",
+        "items": [],
+        "selectedIndex": -1,
+        "token": 1,
+        "message": ""
+      },
+      "elapsedMs": 463.1741000000002,
+      "checks": {
+        "waitExceedsAutomaticDelay": true,
+        "providerCallsZero": true,
+        "phaseIdle": true,
+        "itemsEmpty": true
+      },
+      "passed": true
+    },
+    {
+      "id": "decimal",
+      "providerCallCount": 0,
+      "actualState": {
+        "phase": "idle",
+        "items": [],
+        "selectedIndex": -1,
+        "token": 1,
+        "message": ""
+      },
+      "elapsedMs": 451.2681,
+      "checks": {
+        "waitExceedsAutomaticDelay": true,
+        "providerCallsZero": true,
+        "phaseIdle": true,
+        "itemsEmpty": true
+      },
+      "passed": true
+    }
+  ]
+}

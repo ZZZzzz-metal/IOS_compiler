@@ -1,0 +1,256 @@
+{
+  "request": {
+    "requestId": "f288efee-2501-49b8-8d9c-e0062bdf5211",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "8c12c026-c897-4d59-a1b2-e1d04990e410",
+      "sourceHash": "sha256:e7c429bbd6c3964db792ab3ed9100833209dad3a68d292b7fb9a7c157732da65",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Node{int value; void change(int n);}; void f(){Node n; n.;}",
+          "contentHash": "sha256:e6cb9ad64f30fe39e29d6e1a29a7ed7ecaf983d74f56c4905026073b5675e4fe"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 64
+  },
+  "reply": {
+    "requestId": "f288efee-2501-49b8-8d9c-e0062bdf5211",
+    "documentVersion": 1,
+    "snapshotId": "8c12c026-c897-4d59-a1b2-e1d04990e410",
+    "sourceHash": "sha256:e7c429bbd6c3964db792ab3ed9100833209dad3a68d292b7fb9a7c157732da65",
+    "sourcePath": "main.cpp",
+    "offset": 64,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:e89b67fca6218040b2e04e81f1ee387bc0c975598409efaaa160a81220c4ed37",
+        "label": "change",
+        "kind": "unknown",
+        "detail": "void change(int n)",
+        "insertText": "change",
+        "replaceRange": {
+          "startOffset": 64,
+          "endOffset": 64
+        },
+        "filterText": "change"
+      },
+      {
+        "id": "sha256:0b23abbf48d7a2aceed00d3244f4573d094f20c11d333dd07494c6aac783f984",
+        "label": "Node",
+        "kind": "unknown",
+        "detail": "Node::",
+        "insertText": "Node",
+        "replaceRange": {
+          "startOffset": 64,
+          "endOffset": 64
+        },
+        "filterText": "Node"
+      },
+      {
+        "id": "sha256:7871196b0669a08f7a0e2799af3a704a09fd354b41e567f94e5378b2561ba13a",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Node & operator=(const Node &)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 64,
+          "endOffset": 64
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:27510b69074f8f49aae06d328e460660487ee944852bdf043507064c374ada6f",
+        "label": "operator=",
+        "kind": "unknown",
+        "detail": "Node & operator=(Node &&)",
+        "insertText": "operator=",
+        "replaceRange": {
+          "startOffset": 64,
+          "endOffset": 64
+        },
+        "filterText": "operator="
+      },
+      {
+        "id": "sha256:55988d2a76984e19f28901cdb48184bfad02e069745fbbbc8741e33521eab5d8",
+        "label": "value",
+        "kind": "unknown",
+        "detail": "int value",
+        "insertText": "value",
+        "replaceRange": {
+          "startOffset": 64,
+          "endOffset": 64
+        },
+        "filterText": "value"
+      },
+      {
+        "id": "sha256:186a739c50aefa371e18f36baf23f6f30f082a080ee43242929c108fad142782",
+        "label": "~Node",
+        "kind": "unknown",
+        "detail": "void ~Node()",
+        "insertText": "~Node",
+        "replaceRange": {
+          "startOffset": 64,
+          "endOffset": 64
+        },
+        "filterText": "~Node"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a",
+    "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 15.494400000000041,
+  "native": {
+    "result": {
+      "requestId": "f288efee-2501-49b8-8d9c-e0062bdf5211",
+      "documentVersion": 1,
+      "snapshotId": "8c12c026-c897-4d59-a1b2-e1d04990e410",
+      "sourceHash": "sha256:e7c429bbd6c3964db792ab3ed9100833209dad3a68d292b7fb9a7c157732da65",
+      "sourcePath": "main.cpp",
+      "offset": 64,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:e89b67fca6218040b2e04e81f1ee387bc0c975598409efaaa160a81220c4ed37",
+          "label": "change",
+          "kind": "unknown",
+          "detail": "void change(int n)",
+          "insertText": "change",
+          "replaceRange": {
+            "startOffset": 64,
+            "endOffset": 64
+          },
+          "filterText": "change"
+        },
+        {
+          "id": "sha256:0b23abbf48d7a2aceed00d3244f4573d094f20c11d333dd07494c6aac783f984",
+          "label": "Node",
+          "kind": "unknown",
+          "detail": "Node::",
+          "insertText": "Node",
+          "replaceRange": {
+            "startOffset": 64,
+            "endOffset": 64
+          },
+          "filterText": "Node"
+        },
+        {
+          "id": "sha256:7871196b0669a08f7a0e2799af3a704a09fd354b41e567f94e5378b2561ba13a",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Node & operator=(const Node &)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 64,
+            "endOffset": 64
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:27510b69074f8f49aae06d328e460660487ee944852bdf043507064c374ada6f",
+          "label": "operator=",
+          "kind": "unknown",
+          "detail": "Node & operator=(Node &&)",
+          "insertText": "operator=",
+          "replaceRange": {
+            "startOffset": 64,
+            "endOffset": 64
+          },
+          "filterText": "operator="
+        },
+        {
+          "id": "sha256:55988d2a76984e19f28901cdb48184bfad02e069745fbbbc8741e33521eab5d8",
+          "label": "value",
+          "kind": "unknown",
+          "detail": "int value",
+          "insertText": "value",
+          "replaceRange": {
+            "startOffset": 64,
+            "endOffset": 64
+          },
+          "filterText": "value"
+        },
+        {
+          "id": "sha256:186a739c50aefa371e18f36baf23f6f30f082a080ee43242929c108fad142782",
+          "label": "~Node",
+          "kind": "unknown",
+          "detail": "void ~Node()",
+          "insertText": "~Node",
+          "replaceRange": {
+            "startOffset": 64,
+            "endOffset": 64
+          },
+          "filterText": "~Node"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a",
+      "compilerResourceHash": "sha256:2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:65",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: change : [#void#]change(<#int n#>)\nCOMPLETION: Node : Node::\nCOMPLETION: operator= : [#Node &#]operator=(<#const Node &#>)\nCOMPLETION: operator= : [#Node &#]operator=(<#Node &&#>)\nCOMPLETION: value : [#int#]value\nCOMPLETION: ~Node : [#void#]~Node()\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 65
+      }
+    },
+    "metrics": {
+      "totalMs": 21.645899999999983,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [
+      "value",
+      "change"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

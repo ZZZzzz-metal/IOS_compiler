@@ -1,0 +1,70 @@
+{
+  "input": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "9b7947c4-bc12-4613-b302-9e645e3b3904",
+    "mode": "debug",
+    "optimization": "O0",
+    "snapshot": {
+      "snapshotId": "8e7e8331-7744-44eb-b7e5-4b6df6b52d33",
+      "sourceHash": "sha256:88eabfc30e8ec4a1343fab35a708dfa0eb8bd3f3ab256b7896602d9c5ee38607",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "struct Record_9c3158ded821871b {\n  int choose_9c3158ded821871b() const { return 0; }\n  int choose_9c3158ded821871b(int argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n};\nint main() {\n  const Record_9c3158ded821871b object_9c3158ded821871b;\n  return object_9c3158ded821871b.choose_9c3158ded821871b(1);\n}\n",
+          "contentHash": "sha256:08383cab953f7f8a28084cede50b3e5814ac911cdf060a11dbd64a361de71044"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "status": "failed",
+    "reason": "compiler-exit"
+  },
+  "actual": {
+    "status": "failed",
+    "requestId": "9b7947c4-bc12-4613-b302-9e645e3b3904",
+    "sourceHash": "sha256:88eabfc30e8ec4a1343fab35a708dfa0eb8bd3f3ab256b7896602d9c5ee38607",
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "no matching member function for call to 'choose_9c3158ded821871b'",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 7,
+            "column": 34
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "candidate function not viable: 'this' argument has type 'const Record_9c3158ded821871b', but method is not marked const",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 3,
+            "column": 7
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "candidate function not viable: requires 0 arguments, but 1 was provided",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 2,
+            "column": 7
+          }
+        }
+      }
+    ],
+    "reason": "compiler-exit",
+    "rawDiagnostics": "/project/main.cpp:7:34: error: no matching member function for call to 'choose_9c3158ded821871b'\n  return object_9c3158ded821871b.choose_9c3158ded821871b(1);\n         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~\n/project/main.cpp:3:7: note: candidate function not viable: 'this' argument has type 'const Record_9c3158ded821871b', but method is not marked const\n  int choose_9c3158ded821871b(int argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; return 0; }\n      ^\n/project/main.cpp:2:7: note: candidate function not viable: requires 0 arguments, but 1 was provided\n  int choose_9c3158ded821871b() const { return 0; }\n      ^\n1 error generated.\n"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "input": {
+    "language": "cpp",
+    "standard": "c++17",
+    "requestId": "a385d3fe-a32c-4206-b5ad-774902e9b552",
+    "mode": "debug",
+    "optimization": "O0",
+    "snapshot": {
+      "snapshotId": "38b7086b-7d04-4648-bb77-0acd2e24d044",
+      "sourceHash": "sha256:53fe7bff6e8a5f0ce71b65b4580624a007a1999a8c097b78c461b7ee8ff3d6f8",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "template<class Type_9c3158ded821871b> struct Box_9c3158ded821871b {\n  int read_9c3158ded821871b() const { return 0; }\n  void write_9c3158ded821871b(Type_9c3158ded821871b argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; }\n  template<class OtherType_9c3158ded821871b> int inspect_9c3158ded821871b(const OtherType_9c3158ded821871b& argument_9c3158ded821871b) const { (void)argument_9c3158ded821871b; return 0; }\n  template<class OtherType_9c3158ded821871b> void ingest_9c3158ded821871b(const OtherType_9c3158ded821871b& argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; }\n};\nint main() {\n  const Box_9c3158ded821871b<int> object_9c3158ded821871b;\n  object_9c3158ded821871b.ingest_9c3158ded821871b(1);\n  return 0;\n}\n",
+          "contentHash": "sha256:da71931a35befaa6d262c68919732c14cfe39cb2de1dd39b44521e2b2a773ff0"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "status": "failed",
+    "reason": "compiler-exit"
+  },
+  "actual": {
+    "status": "failed",
+    "requestId": "a385d3fe-a32c-4206-b5ad-774902e9b552",
+    "sourceHash": "sha256:53fe7bff6e8a5f0ce71b65b4580624a007a1999a8c097b78c461b7ee8ff3d6f8",
+    "diagnostics": [
+      {
+        "severity": "error",
+        "message": "no matching member function for call to 'ingest_9c3158ded821871b'",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 9,
+            "column": 27
+          }
+        }
+      },
+      {
+        "severity": "note",
+        "message": "candidate function template not viable: 'this' argument has type 'const Box_9c3158ded821871b<int>', but method is not marked const",
+        "range": {
+          "start": {
+            "sourcePath": "main.cpp",
+            "line": 5,
+            "column": 51
+          }
+        }
+      }
+    ],
+    "reason": "compiler-exit",
+    "rawDiagnostics": "/project/main.cpp:9:27: error: no matching member function for call to 'ingest_9c3158ded821871b'\n  object_9c3158ded821871b.ingest_9c3158ded821871b(1);\n  ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~\n/project/main.cpp:5:51: note: candidate function template not viable: 'this' argument has type 'const Box_9c3158ded821871b<int>', but method is not marked const\n  template<class OtherType_9c3158ded821871b> void ingest_9c3158ded821871b(const OtherType_9c3158ded821871b& argument_9c3158ded821871b) { (void)argument_9c3158ded821871b; }\n                                                  ^\n1 error generated.\n"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-29T16:56:34.961Z",
+  "sourceBaseRevision": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "bundleId": "ipad-web-probe-cbe80b74ccc3d3cebece9e73",
+  "compatibilityId": "integration-prototype-80135c59f01b26fc",
+  "resourceManifestHash": "sha256:80135c59f01b26fc2113188dbf260ea301a3c02f79de618b0fab996ee91ead46",
+  "resourceCount": 62,
+  "totalBytes": 60964100,
+  "entryPath": "/releases/ipad-web-probe-cbe80b74ccc3d3cebece9e73/index.html",
+  "workerSha256": "sha256:c2182a6fd7e369cd01c9de3fcec1489dfca261988b555e0e05b035173521de22",
+  "descriptorSha256": "sha256:67fdcb80c27d17b25fd9c43ba0e0bbf93090e82191446ab862b7bb9440d82268",
+  "declaration": "Local Web experiment package only. No hosted iPad URL, G2 result, frozen profile or distribution license clearance is implied.",
+  "command": "node app/offline/build.mjs",
+  "exitCode": 0,
+  "rawStdoutSha256": "9f4146e0ed05c840e6d139dc557e7f02f5dda29d7ecb2339262e875380982c30",
+  "rawStderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "rawLocation": "ignored local capture; absolute directory omitted from public record"
+}

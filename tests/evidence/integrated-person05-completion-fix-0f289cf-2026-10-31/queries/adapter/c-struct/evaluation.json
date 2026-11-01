@@ -1,0 +1,13 @@
+{
+  "id": "c-struct",
+  "group": "original33-backend",
+  "route": "adapter",
+  "elapsedMs": 15.231600000000071,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 2,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

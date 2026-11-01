@@ -1,0 +1,13 @@
+import {readFile, writeFile} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const here = new URL('./', import.meta.url), repo = new URL('../../../', import.meta.url);
+const save = (name, value) => writeFile(new URL(name, here), typeof value === 'string' ? value : JSON.stringify(value, null, 2) + '\n', {flag: 'wx'});
+await save('.gitattributes', '* -text\n');
+await save('seal-before.mjs', await readFile(new URL('tests/seal-integrated-round.mjs', repo), 'utf8'));
+const args = ['tests/seal-integrated-round.mjs', 'integrated-person05-completion-runtime-bddae576-2026-10-30', '--verify', '--git'];
+const result = spawnSync(process.execPath, args, {cwd: fileURLToPath(repo), encoding: 'utf8'});
+await save('before.stdout.txt', result.stdout ?? ''); await save('before.stderr.txt', result.stderr ?? '');
+await save('before.command.json', {executable: process.execPath, args, exitCode: result.status, error: result.error ? String(result.error) : null});
+if (result.status !== 1 || !result.stderr?.includes('ENAMETOOLONG')) throw new Error('Expected original Windows argv limit failure was not reproduced');
+console.log('Original readonly Git verification ENAMETOOLONG preserved; no evidence was changed.');

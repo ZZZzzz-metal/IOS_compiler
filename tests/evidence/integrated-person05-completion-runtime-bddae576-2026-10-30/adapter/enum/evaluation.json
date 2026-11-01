@@ -1,0 +1,12 @@
+{
+  "caseId": "enum",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:33.114Z",
+  "elapsedMs": 14.652700000000095,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": null
+}

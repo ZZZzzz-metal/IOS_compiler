@@ -1,0 +1,280 @@
+TAP version 13
+# Subtest: foreign request replies and malformed success identities never reach artifact storage
+ok 1 - foreign request replies and malformed success identities never reach artifact storage
+  ---
+  duration_ms: 19.734
+  type: 'test'
+  ...
+# Subtest: a valid empty Wasm with no DWARF cannot become a debug build
+ok 2 - a valid empty Wasm with no DWARF cannot become a debug build
+  ---
+  duration_ms: 1.2839
+  type: 'test'
+  ...
+# Subtest: duplicate terminal replies persist once and cancellation wins over late persistence
+ok 3 - duplicate terminal replies persist once and cancellation wins over late persistence
+  ---
+  duration_ms: 1.7651
+  type: 'test'
+  ...
+# Subtest: terminated worker late messages cannot overwrite the next request
+ok 4 - terminated worker late messages cannot overwrite the next request
+  ---
+  duration_ms: 0.4947
+  type: 'test'
+  ...
+# Subtest: timeout terminates the worker and permits another compilation
+ok 5 - timeout terminates the worker and permits another compilation
+  ---
+  duration_ms: 12.3893
+  type: 'test'
+  ...
+# Subtest: completion rejects foreign identities/resources, unsafe ranges, duplicate IDs and snippets
+ok 6 - completion rejects foreign identities/resources, unsafe ranges, duplicate IDs and snippets
+  ---
+  duration_ms: 11.9807
+  type: 'test'
+  ...
+# Subtest: cancel and supersession await actual worker release; old ID cannot kill new work
+ok 7 - cancel and supersession await actual worker release; old ID cannot kill new work
+  ---
+  duration_ms: 2.5364
+  type: 'test'
+  ...
+# Subtest: warm worker handles new requests, ignores old duplicates, owns a cloned draft
+ok 8 - warm worker handles new requests, ignores old duplicates, owns a cloned draft
+  ---
+  duration_ms: 1.1896
+  type: 'test'
+  ...
+# Subtest: latest complete supersedes active work and timeout releases a hanging worker
+ok 9 - latest complete supersedes active work and timeout releases a hanging worker
+  ---
+  duration_ms: 30.3106
+  type: 'test'
+  ...
+# Subtest: a suppressed comment request releases the preceding idle warm worker
+ok 10 - a suppressed comment request releases the preceding idle warm worker
+  ---
+  duration_ms: 0.8168
+  type: 'test'
+  ...
+# Subtest: a failed worker termination cannot authorize starting a replacement or full compilation
+ok 11 - a failed worker termination cannot authorize starting a replacement or full compilation
+  ---
+  duration_ms: 1.3081
+  type: 'test'
+  ...
+# Subtest: real completion loader reads only three locked resources and rejects corruption
+ok 12 - real completion loader reads only three locked resources and rejects corruption
+  ---
+  duration_ms: 60.476
+  type: 'test'
+  ...
+# Subtest: real Clang scope, access, const correctness and overloads determine candidates
+ok 13 - real Clang scope, access, const correctness and overloads determine candidates
+  ---
+  duration_ms: 192.4388
+  type: 'test'
+  ...
+# Subtest: real dot, arrow, namespace, unfinished source and error-prefix completions work
+ok 14 - real dot, arrow, namespace, unfinished source and error-prefix completions work
+  ---
+  duration_ms: 88.1036
+  type: 'test'
+  ...
+# Subtest: real libc++ const ordinary methods and vector overloads follow native eligibility
+ok 15 - real libc++ const ordinary methods and vector overloads follow native eligibility
+  ---
+  duration_ms: 700.7331
+  type: 'test'
+  ...
+# Subtest: known Clang8 availability gap is preserved as evidence: const string member templates
+ok 16 - known Clang8 availability gap is preserved as evidence: const string member templates
+  ---
+  duration_ms: 160.0635
+  type: 'test'
+  ...
+# Subtest: real character literals after case/sizeof and declarations named Pattern are retained
+ok 17 - real character literals after case/sizeof and declarations named Pattern are retained
+  ---
+  duration_ms: 64.0333
+  type: 'test'
+  ...
+# Subtest: real normalized unicode/user.inc cursor parses driver TU, C11 and mid-token ranges
+ok 18 - real normalized unicode/user.inc cursor parses driver TU, C11 and mid-token ranges
+  ---
+  duration_ms: 157.5228
+  type: 'test'
+  ...
+# Subtest: actual Worker remains responsive to cancellation, releases memory owner then restarts
+ok 19 - actual Worker remains responsive to cancellation, releases memory owner then restarts
+  ---
+  duration_ms: 559.7114
+  type: 'test'
+  ...
+# Subtest: normalized UTF16 insertion points map to real UTF8 byte columns and whole token ranges
+ok 20 - normalized UTF16 insertion points map to real UTF8 byte columns and whole token ranges
+  ---
+  duration_ms: 8.3258
+  type: 'test'
+  ...
+# Subtest: comments, escaped strings/chars and raw strings suppress; closed literals and digit separators do not
+ok 21 - comments, escaped strings/chars and raw strings suppress; closed literals and digit separators do not
+  ---
+  duration_ms: 0.4556
+  type: 'test'
+  ...
+# Subtest: native tags determine visibility, overload signatures survive, pattern chunks never insert
+ok 22 - native tags determine visibility, overload signatures survive, pattern chunks never insert
+  ---
+  duration_ms: 1.0226
+  type: 'test'
+  ...
+# Subtest: browser completion worker attaches synchronously and serializes requests during delayed initialization
+ok 23 - browser completion worker attaches synchronously and serializes requests during delayed initialization
+  ---
+  duration_ms: 2.333
+  type: 'test'
+  ...
+# Subtest: pinned Wasm compiler versions and resource bytes are real
+ok 24 - pinned Wasm compiler versions and resource bytes are real
+  ---
+  duration_ms: 228.4799
+  type: 'test'
+  ...
+# Subtest: C11 stdin/stdout, recursion, array, pointer and signed 64-bit integer
+ok 25 - C11 stdin/stdout, recursion, array, pointer and signed 64-bit integer
+  ---
+  duration_ms: 444.5234
+  type: 'test'
+  ...
+# Subtest: C++17 real STL, UTF-8 output and 32-bit target integer sizes
+ok 26 - C++17 real STL, UTF-8 output and 32-bit target integer sizes
+  ---
+  duration_ms: 1460.2244
+  type: 'test'
+  ...
+# Subtest: debug handoff artifact is executable and retains real DWARF sections
+ok 27 - debug handoff artifact is executable and retains real DWARF sections
+  ---
+  duration_ms: 491.3913
+  type: 'test'
+  ...
+# Subtest: real diagnostic byte columns map Chinese/emoji source back to UTF-16
+ok 28 - real diagnostic byte columns map Chinese/emoji source back to UTF-16
+  ---
+  duration_ms: 199.575
+  type: 'test'
+  ...
+# Subtest: link errors and nonstandard bits/stdc++.h do not produce startable artifacts
+ok 29 - link errors and nonstandard bits/stdc++.h do not produce startable artifacts
+  ---
+  duration_ms: 383.1242
+  type: 'test'
+  ...
+# Subtest: warnings survive a successful compilation
+ok 30 - warnings survive a successful compilation
+  ---
+  duration_ms: 188.2532
+  type: 'test'
+  ...
+# Subtest: editable driver and user header are both compiled and hashed
+ok 31 - editable driver and user header are both compiled and hashed
+  ---
+  duration_ms: 200.7462
+  type: 'test'
+  ...
+# Subtest: cancel actual compilation without blocking the caller, then compile again
+ok 32 - cancel actual compilation without blocking the caller, then compile again
+  ---
+  duration_ms: 581.6002
+  type: 'test'
+  ...
+# Subtest: failure, source edit and recompilation retain distinct snapshot/artifact identity
+ok 33 - failure, source edit and recompilation retain distinct snapshot/artifact identity
+  ---
+  duration_ms: 533.6586
+  type: 'test'
+  ...
+# Subtest: activated cache is rechecked, corruption is blocked on fetch, repair is explicit
+ok 34 - activated cache is rechecked, corruption is blocked on fetch, repair is explicit
+  ---
+  duration_ms: 29.1454
+  type: 'test'
+  ...
+# Subtest: failed staging keeps the old complete cache and removes partial new cache
+ok 35 - failed staging keeps the old complete cache and removes partial new cache
+  ---
+  duration_ms: 2.2716
+  type: 'test'
+  ...
+# Subtest: browser source hashing matches shared fixed vector: bom-crlf-chinese
+ok 36 - browser source hashing matches shared fixed vector: bom-crlf-chinese
+  ---
+  duration_ms: 2.1581
+  type: 'test'
+  ...
+# Subtest: browser source hashing matches shared fixed vector: utf16-order-and-json-escapes
+ok 37 - browser source hashing matches shared fixed vector: utf16-order-and-json-escapes
+  ---
+  duration_ms: 0.6092
+  type: 'test'
+  ...
+# Subtest: SHA-256 covers padding boundaries, multiple blocks and byte subviews
+ok 38 - SHA-256 covers padding boundaries, multiple blocks and byte subviews
+  ---
+  duration_ms: 8.0585
+  type: 'test'
+  ...
+# Subtest: normalization preserves Unicode and whitespace but rejects unsafe sources
+ok 39 - normalization preserves Unicode and whitespace but rejects unsafe sources
+  ---
+  duration_ms: 0.6224
+  type: 'test'
+  ...
+# Subtest: source operations work without newer String methods or WebCrypto
+ok 40 - source operations work without newer String methods or WebCrypto
+  ---
+  duration_ms: 0.3883
+  type: 'test'
+  ...
+# Subtest: validation rejects tampering and noncanonical snapshots without repairing them
+ok 41 - validation rejects tampering and noncanonical snapshots without repairing them
+  ---
+  duration_ms: 1.0015
+  type: 'test'
+  ...
+# Subtest: Clang UTF-8 columns convert to UTF-16, including tabs and emoji
+ok 42 - Clang UTF-8 columns convert to UTF-16, including tabs and emoji
+  ---
+  duration_ms: 0.2359
+  type: 'test'
+  ...
+# Subtest: Clang diagnostics preserve severity/options and only map actual project sources
+ok 43 - Clang diagnostics preserve severity/options and only map actual project sources
+  ---
+  duration_ms: 1.7353
+  type: 'test'
+  ...
+# Subtest: virtual-root prefix wins over an ambiguous same-named subdirectory
+ok 44 - virtual-root prefix wins over an ambiguous same-named subdirectory
+  ---
+  duration_ms: 0.3784
+  type: 'test'
+  ...
+# Subtest: browser Worker receives its first request before any asynchronous lock loading
+ok 45 - browser Worker receives its first request before any asynchronous lock loading
+  ---
+  duration_ms: 1.4784
+  type: 'test'
+  ...
+1..45
+# tests 45
+# suites 0
+# pass 45
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5034.4966

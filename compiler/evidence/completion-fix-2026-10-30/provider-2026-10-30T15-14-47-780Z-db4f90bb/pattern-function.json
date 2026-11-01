@@ -1,0 +1,135 @@
+{
+  "request": {
+    "requestId": "12a647d5-d96d-4f0b-8270-5d7e9cf2ae37",
+    "documentVersion": 1,
+    "language": "cpp",
+    "standard": "c++17",
+    "snapshot": {
+      "snapshotId": "d98aaea2-2cb8-4de2-8c07-e77b7d5c600a",
+      "sourceHash": "sha256:28203a62787649cc466c592c4efcb9d5c910260200d1c0847bb7a6949ef92ebe",
+      "encoding": "utf-8",
+      "newline": "lf",
+      "translationUnit": "main.cpp",
+      "files": [
+        {
+          "path": "main.cpp",
+          "role": "user",
+          "text": "int Pattern(int);void f(){Pat;}",
+          "contentHash": "sha256:dc17aee6317b39377b54e12bf1ceb198455f21847b666be26e99191298ba7298"
+        }
+      ]
+    },
+    "sourcePath": "main.cpp",
+    "offset": 29
+  },
+  "reply": {
+    "requestId": "12a647d5-d96d-4f0b-8270-5d7e9cf2ae37",
+    "documentVersion": 1,
+    "snapshotId": "d98aaea2-2cb8-4de2-8c07-e77b7d5c600a",
+    "sourceHash": "sha256:28203a62787649cc466c592c4efcb9d5c910260200d1c0847bb7a6949ef92ebe",
+    "sourcePath": "main.cpp",
+    "offset": 29,
+    "status": "succeeded",
+    "items": [
+      {
+        "id": "sha256:93813614c7b43105c488ee8da79bb0e0adad9e5fd74c570235b18434fda19970",
+        "label": "Pattern",
+        "kind": "unknown",
+        "detail": "int Pattern(int)",
+        "insertText": "Pattern",
+        "replaceRange": {
+          "startOffset": 26,
+          "endOffset": 29
+        },
+        "filterText": "Pattern"
+      }
+    ],
+    "isIncomplete": false,
+    "diagnostics": [],
+    "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+    "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+    "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+  },
+  "adapterMs": 14.895700000000033,
+  "native": {
+    "result": {
+      "requestId": "12a647d5-d96d-4f0b-8270-5d7e9cf2ae37",
+      "documentVersion": 1,
+      "snapshotId": "d98aaea2-2cb8-4de2-8c07-e77b7d5c600a",
+      "sourceHash": "sha256:28203a62787649cc466c592c4efcb9d5c910260200d1c0847bb7a6949ef92ebe",
+      "sourcePath": "main.cpp",
+      "offset": 29,
+      "status": "succeeded",
+      "items": [
+        {
+          "id": "sha256:93813614c7b43105c488ee8da79bb0e0adad9e5fd74c570235b18434fda19970",
+          "label": "Pattern",
+          "kind": "unknown",
+          "detail": "int Pattern(int)",
+          "insertText": "Pattern",
+          "replaceRange": {
+            "startOffset": 26,
+            "endOffset": 29
+          },
+          "filterText": "Pattern"
+        }
+      ],
+      "isIncomplete": false,
+      "diagnostics": [],
+      "toolchainId": "binji-wasm-clang-648c4a89997a+completion-semantics.1",
+      "compilerResourceHash": "sha256:b15c58339d3428cb6b75448bfcf1624ee48521654bde2684d239d170836fb901",
+      "sysrootResourceHash": "sha256:2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867"
+    },
+    "native": {
+      "argv": [
+        "clang",
+        "-cc1",
+        "-fsyntax-only",
+        "-triple",
+        "wasm32-unknown-wasi",
+        "-main-file-name",
+        "main.cpp",
+        "-disable-free",
+        "-isysroot",
+        "/",
+        "-internal-isystem",
+        "/include/c++/v1",
+        "-internal-isystem",
+        "/lib/clang/8.0.1/include",
+        "-internal-isystem",
+        "/include",
+        "-I",
+        "/project",
+        "-ferror-limit",
+        "20",
+        "-fmessage-length",
+        "0",
+        "-std=c++17",
+        "-x",
+        "c++",
+        "-code-completion-at=/project/main.cpp:1:30",
+        "/project/main.cpp"
+      ],
+      "exitCode": 0,
+      "stdout": "COMPLETION: Pattern : [#int#]Pattern(<#int#>)\n",
+      "stderr": "",
+      "memoryBytes": 7012352,
+      "position": {
+        "line": 1,
+        "byteColumn": 30
+      }
+    },
+    "metrics": {
+      "totalMs": 13.745800000000145,
+      "filesystemLinearMemoryBytes": 9437184,
+      "compilerLinearMemoryBytes": 7012352
+    }
+  },
+  "checks": {
+    "expected": [
+      "Pattern"
+    ],
+    "absent": [],
+    "sourceUnchanged": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "source": "__attribute__((unavailable(\"blocked\"))) int personBlocked(); __attribute__((deprecated)) int personDeprecated(); int personAllowed(); void f(){personBlocked;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-ast-dump",
+    "/project/main.cpp"
+  ],
+  "exitCode": 1,
+  "stdout": "TranslationUnitDecl 0x652d00 <<invalid sloc>> <invalid sloc>\n|-TypedefDecl 0x6531b8 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'\n| `-BuiltinType 0x652fe0 '__int128'\n|-TypedefDecl 0x653200 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'\n| `-BuiltinType 0x652ff0 'unsigned __int128'\n|-TypedefDecl 0x653438 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'\n| `-RecordType 0x653290 '__NSConstantString_tag'\n|   `-CXXRecord 0x653230 '__NSConstantString_tag'\n|-TypedefDecl 0x653480 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'void *'\n| `-PointerType 0x653160 'void *'\n|   `-BuiltinType 0x652d40 'void'\n|-FunctionDecl 0x653570 </project/main.cpp:1:1, col:59> col:45 used personBlocked 'int ()'\n| `-UnavailableAttr 0x6535e0 <col:16, col:37> \"blocked\" IR_None\n|-FunctionDecl 0x653678 <col:62, col:111> col:94 personDeprecated 'int ()'\n| `-DeprecatedAttr 0x6536e8 <col:77> \"\" \"\"\n|-FunctionDecl 0x653750 <col:114, col:132> col:118 personAllowed 'int ()'\n`-FunctionDecl 0x6537f8 <col:135, col:158> col:140 f 'void ()'\n  `-CompoundStmt 0x653880 <col:143, col:158>\n    `-DeclRefExpr 0x653868 <col:144> 'int ()' lvalue Function 0x653570 'personBlocked' 'int ()'\n",
+  "stderr": "/project/main.cpp:1:144: error: 'personBlocked' is unavailable: blocked\n__attribute__((unavailable(\"blocked\"))) int personBlocked(); __attribute__((deprecated)) int personDeprecated(); int personAllowed(); void f(){personBlocked;}\n                                                                                                                                               ^\n/project/main.cpp:1:45: note: 'personBlocked' has been explicitly marked unavailable here\n__attribute__((unavailable(\"blocked\"))) int personBlocked(); __attribute__((deprecated)) int personDeprecated(); int personAllowed(); void f(){personBlocked;}\n                                            ^\n/project/main.cpp:1:144: warning: expression result unused\n__attribute__((unavailable(\"blocked\"))) int personBlocked(); __attribute__((deprecated)) int personDeprecated(); int personAllowed(); void f(){personBlocked;}\n                                                                                                                                               ^~~~~~~~~~~~~\n1 warning and 1 error generated.\n",
+  "memoryBytes": 7012352
+}

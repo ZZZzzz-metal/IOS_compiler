@@ -1,0 +1,15 @@
+✔ 32 independent cases retain pending status; no provider results are fabricated (0.527ms)
+✔ ASCII, Chinese and non-BMP coordinates have independent literal oracles (0.4538ms)
+✔ coordinate oracle rejects raw editor text and surrogate splits (0.7165ms)
+✔ type swap and rename retain counterfactual declarations and different fingerprints (0.1119ms)
+✔ scope and declaration order negatives are represented at the actual caret (0.0895ms)
+✔ include context is preserved; omission cannot silently reuse driver declarations (0.1162ms)
+✔ UI suppression, prefix filtering and semantic boundaries are distinct expectations (0.1083ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 128.5178

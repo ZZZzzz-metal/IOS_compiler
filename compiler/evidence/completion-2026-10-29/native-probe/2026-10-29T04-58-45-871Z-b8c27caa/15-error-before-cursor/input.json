@@ -1,0 +1,73 @@
+{
+  "id": "15-error-before-cursor",
+  "language": "cpp",
+  "standard": "c++17",
+  "translationUnit": "main.cpp",
+  "targetPath": "main.cpp",
+  "files": [
+    {
+      "path": "main.cpp",
+      "role": "user",
+      "markedText": "void solve() { UnknownType invalid; int alpha = 1; al@"
+    }
+  ],
+  "observations": [
+    "alpha"
+  ],
+  "cursor": {
+    "sourcePath": "main.cpp",
+    "compilerPath": "/project/main.cpp",
+    "utf16Offset": 53,
+    "line": 1,
+    "utf16Column": 54,
+    "utf8ByteColumn": 54,
+    "linePrefix": "void solve() { UnknownType invalid; int alpha = 1; al",
+    "prefixAtCursor": "al",
+    "offsetConvention": "0-based UTF-16 offset; 1-based line, UTF-16 column and UTF-8 byte column"
+  },
+  "snapshot": {
+    "snapshotId": "native-probe-15-error-before-cursor",
+    "sourceHash": "sha256:7fd0804e3a4fe649dc980cdfd172d7f64906c06b8f05124740278661e3208a11",
+    "encoding": "utf-8",
+    "newline": "lf",
+    "translationUnit": "main.cpp",
+    "files": [
+      {
+        "path": "main.cpp",
+        "role": "user",
+        "text": "void solve() { UnknownType invalid; int alpha = 1; al",
+        "contentHash": "sha256:d2a4af68529238d08f89612ce280716612f3ad8aa1a801001c8689211d8df863"
+      }
+    ]
+  },
+  "argv": [
+    "clang",
+    "-cc1",
+    "-fsyntax-only",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-main-file-name",
+    "main.cpp",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-O0",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-code-completion-at=/project/main.cpp:1:54",
+    "/project/main.cpp"
+  ]
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "mandatory-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "5d1480cbe16180dcb10a909325cf43882e6413aed4078916cfcd63a6613b8575"
+  },
+  {
+    "file": "mandatory-commands.json",
+    "byteLength": 298,
+    "sha256": "69fc2c903386c24aab44dbff41a18f12d9a474b7ab2f1f9b99dea0a4639e2a95"
+  },
+  {
+    "file": "mandatory-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-test.stdout.txt",
+    "byteLength": 1125,
+    "sha256": "77618e5942252565bbf65e1b39da30756c9470dc59fa1d2587ac32a58b5eaf7a"
+  },
+  {
+    "file": "owner-acknowledgments.json",
+    "byteLength": 965,
+    "sha256": "c01f6d0ef151c2f13b60670dc2795f047102abcf27d1ddad406846a5002fd3ca"
+  },
+  {
+    "file": "pr-ready-transition.json",
+    "byteLength": 388,
+    "sha256": "d052f829d271c344eb27f2306f47231e8a1eb7c08c0a4db3c8a8c8156610e777"
+  },
+  {
+    "file": "publication.json",
+    "byteLength": 1005,
+    "sha256": "2ea774c57dc3f2b09fd155d13df30cf49b0b031e77c81f0b01a2dcf3c0288776"
+  },
+  {
+    "file": "push.stderr.txt",
+    "byteLength": 232,
+    "sha256": "bef4296e5e43f0992e535a1f37653a8e64909cb5547176a4757cbc60571082a6"
+  },
+  {
+    "file": "push.stdout.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

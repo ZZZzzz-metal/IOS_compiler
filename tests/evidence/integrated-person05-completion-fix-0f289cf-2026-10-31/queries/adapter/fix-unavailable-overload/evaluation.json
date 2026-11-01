@@ -1,0 +1,12 @@
+{
+  "id": "fix-unavailable-overload",
+  "group": "randomized11",
+  "route": "adapter",
+  "elapsedMs": 17.923299999999927,
+  "verdict": "passed",
+  "originalVerdict": "passed",
+  "itemCount": 2,
+  "errors": [],
+  "position": null,
+  "equivalent": null
+}

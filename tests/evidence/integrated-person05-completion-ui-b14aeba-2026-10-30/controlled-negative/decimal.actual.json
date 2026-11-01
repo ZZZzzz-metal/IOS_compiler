@@ -1,0 +1,39 @@
+{
+  "id": "decimal",
+  "target": "b14aebab3b0ba7f2d5f52b59aa5d2695fe2b2b34",
+  "fixturePath": "fixtures/completion-independent/decimal.cpp",
+  "sourcePath": "main.cpp",
+  "marker": "/*<cc>*/",
+  "offsetUtf16": 33,
+  "line": 1,
+  "columnUtf16": 34,
+  "sourceHash": "sha256:b8fd73177ad6dbb51ad01f45b08b1d387ac224009655e149dd9907c48f5c91b6",
+  "delayMs": 300,
+  "requestedWaitMs": 450,
+  "elapsedMs": 451.2681,
+  "providerCallCount": 0,
+  "calls": [],
+  "actualState": {
+    "phase": "idle",
+    "items": [],
+    "selectedIndex": -1,
+    "token": 1,
+    "message": ""
+  },
+  "states": [
+    {
+      "phase": "idle",
+      "items": [],
+      "selectedIndex": -1,
+      "token": 1,
+      "message": ""
+    }
+  ],
+  "checks": {
+    "waitExceedsAutomaticDelay": true,
+    "providerCallsZero": true,
+    "phaseIdle": true,
+    "itemsEmpty": true
+  },
+  "passed": true
+}

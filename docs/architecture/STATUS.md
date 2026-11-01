@@ -1,5 +1,21 @@
 # 集成状态表
 
+## 当前：两项已知补全问题必须修复后再真机验证
+
+2026-10-31修复进展：2号固定0f289cf（实现6da3280）及5号独立DONE 2978d950已合入，两条原失败在原源码/原oracle的已测语义范围关闭。44逻辑例/88双路真实响应、27完整调用、7生命周期场景及主21/最小2/初始化6通过；831新封存文件及清单由根再次核对Git原字节一致。36资源profile c3e9a2fea60c51b3保持，根既有真实编译调试流水线3/3通过。4号文档b33b52e8已合入，0.4.7手册/能力和打包映射已更新；新完整包与实际桌面停服冷开另验，PR #4继续草稿，真机暂缓。详见[修复集成记录](COMPLETION-FIX-INTEGRATION-v0.4.7-2026-10-31.md)。下方重开及旧发布记录按时点保留。
+
+用户要求先修好已知问题。const-string非法模板成员候选、unavailable符号可选择两项重新进入必须关闭的缺陷；2号ACK修复、5号ACK独立复验、4号ACK保持UI冻结。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)已实际恢复draft/open/unmerged，暂缓合并与真机推进。新轮无成功DONE/ACCEPT，旧v0.4.6和LIMITED-DESKTOP ACCEPT按历史保留。详见[修复计划](COMPLETION-FIX-PLAN-2026-10-30.md)。以下为此前发布时记录。
+
+## 2026-10-30当前增量：离线代码补全
+
+发布回执：固定标签integration-v0.4.6（b4781949）和5号cbc92b26已推送，[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)已结束草稿、open且未合并；2/4/5均实际回复ACK-ACCEPT，握手闭环。根mandatory check/test通过。下一步由用户手动审核合并PR，并在真机开始时按手册P01–P11一次一步反馈；两项补全边界及iPad/G2/G3待验保持。发布后的文档回执不改变固定标签或包。
+
+最终追加：5号固定cbc92b26已合入6ba18d2，150个新封存文件及清单由1号再次核对SHA/大小/Git原字节一致。完整0.4.6包、实际桌面UI及停服冷开新代码流程在报告列明范围接受；原33逻辑例现为32通过、const-string一项边界失败，另有unavailable属性边界失败。两项未修，iPad/Safari、物理输入、完全断网、草稿强可靠性及G2/G3仍待，能力保持implemented-unverified。42条真实桌面观察、受控竞态26场景105断言、编辑23场景339断言及3个原UI负例分开记录，不相加冒充真机验收。固定包source仍为b14aebab、bundle cbe80b74，运行及包输入未改变；随包能力/手册中“待独立验收”是构建时快照，最新独立结果由[最终报告追加](COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md)和[5号报告](../validation/completion-ui-person05-b14aeba-2026-10-30.md)补充。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)仍由用户手动合并。下文为此前阶段状态，按记录时点保留。
+
+2号固定后端 afada754、4号固定界面 e2efc07 已分别合入761b652、537a27b。真实离线Clang候选接入成员/变量/函数弹窗，包含300ms自动、按钮、Ctrl+J/Ctrl+Space、键盘/触控选择与原生撤销；编译前等待补全Worker取消和释放。根35资源后端组合为integration-prototype-80135c59f01b26fc，既有真实流水线3/3；新合并界面/保存200、离线23、契约10全部通过，mandatory check/test通过。不同轮次和重复契约不累加。
+
+5号准备0b062df已合入；本轮真实语义/生命周期固定4e29b392已合入dc518c76：原33例29通过、const-string一项边界失败、3项UI待验，另有unavailable一项逻辑边界失败；276回归与生命周期7场景通过。完整新包与实际UI仍待其另验。Clang8的部分const字符串模板、unavailable/deprecated属性候选过滤存在已知边界，不宣称全量可调用性或完整VS语言服务。1号已生成0.4.6不可变62资源集合和完整平板手册，两份ZIP逐成员核验、14旧档不变，根桌面停服新源码补全/编译调试与电脑侧严格HTTPS通过；精确身份见[0.4.6报告](COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md)，5号最终UI/新包签收仍待；旧v0.4.5/r3、标签、失败证据和草稿保留。能力为implemented-unverified，真实iPad、G2/G3及分发许可仍待。用户已合并PR #2，main ef5d390的历史保留于62725ae，本轮已建立[草稿PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)，待5号最终固定交接合入后再结束草稿，main由用户手动合并。详见[补全计划](AUTOCOMPLETE-PLAN-2026-10-29.md)与[握手记录](autocomplete-handshake-2026-10-29.json)。
+
 2026-10-28最终追加：5号e4ce507已合入。固定40a079b/r3最终组合和完整包在已测桌面范围独立通过；常规258、另列离线22、监视25加1范围、剪贴板8场景25断言及69条真实浏览器观察通过。REV-001仅入口缺失/当前完成缓存trust损坏两类实际桌面恢复独立关闭；真实iPad、草稿强可靠性和G2/G3仍待。旧标签/包/失败保留，当前结论见 [最终桌面验收追加](FINAL-DESKTOP-ACCEPTANCE-v0.4.5-2026-10-28.md)。下方各轮发布时记录按当时时点保留。
 
 更新：2026-10-28。本轮目标 `integration-v0.4.5` 已合入4号快捷键309d29d（3248ad5）、3号309cb45浮点转换/NaN修复（7f49bb6）及4号33c1639剪贴板迟到隔离（c14478a）。REV-006/007/008已修复集成并由5号在各固定修复分支已测范围独立关闭；最终组合/完整包另验。新后端为 `integration-prototype-60eb6729284e2729`，最终v0.4.5-r3集合为 `ipad-web-probe-eb5236b6ed8f9aab4a9d9ced`、51项60,874,273字节；root合并后251/251和r3全量字节审计通过。桌面停服浏览器与严格HTTPS已记录通过；新PR待推送完成后登记，准确结果由 [本轮报告](SHORTCUTS-INTEGRATION-2026-10-28.md) 实际追加。先前121/14仅代表3248ad5阶段；d62和r2旧候选、原失败与各轮历史保留。平板按 [操作手册](IPAD-USER-MANUAL.md) 和 [键盘速查](../../ui/SHORTCUTS.md) 操作。

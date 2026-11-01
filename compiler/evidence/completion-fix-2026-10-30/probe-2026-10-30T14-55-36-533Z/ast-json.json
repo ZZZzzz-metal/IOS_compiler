@@ -1,0 +1,33 @@
+{
+  "source": "struct N{template<class T>void mutate(T);template<class T>int view(T)const;};void f(){const N n{};n.mu;}",
+  "argv": [
+    "clang",
+    "-cc1",
+    "-triple",
+    "wasm32-unknown-wasi",
+    "-disable-free",
+    "-isysroot",
+    "/",
+    "-internal-isystem",
+    "/include/c++/v1",
+    "-internal-isystem",
+    "/lib/clang/8.0.1/include",
+    "-internal-isystem",
+    "/include",
+    "-I",
+    "/project",
+    "-ferror-limit",
+    "20",
+    "-fmessage-length",
+    "0",
+    "-std=c++17",
+    "-x",
+    "c++",
+    "-ast-dump=json",
+    "/project/main.cpp"
+  ],
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "error: unknown argument: '-ast-dump=json'\n",
+  "memoryBytes": 6684672
+}

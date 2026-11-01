@@ -1,0 +1,18 @@
+{
+  "caseId": "const-string",
+  "path": "adapter",
+  "startedAt": "2026-10-29T16:30:33.200Z",
+  "elapsedMs": 146.81369999999993,
+  "verdict": "boundary-failed",
+  "support": "boundary",
+  "itemCount": 82,
+  "isIncomplete": false,
+  "errors": [
+    {
+      "category": "availability",
+      "code": "ineligible-confirmable",
+      "detail": "append"
+    }
+  ],
+  "position": null
+}

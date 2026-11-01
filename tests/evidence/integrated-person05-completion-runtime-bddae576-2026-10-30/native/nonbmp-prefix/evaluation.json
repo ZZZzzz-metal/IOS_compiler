@@ -1,0 +1,18 @@
+{
+  "caseId": "nonbmp-prefix",
+  "path": "native",
+  "startedAt": "2026-10-29T16:30:34.199Z",
+  "elapsedMs": 22.690500000000156,
+  "verdict": "passed",
+  "support": "required",
+  "itemCount": 1,
+  "isIncomplete": false,
+  "errors": [],
+  "position": {
+    "expected": "-code-completion-at=/project/main.cpp:1:58",
+    "actual": [
+      "-code-completion-at=/project/main.cpp:1:58"
+    ],
+    "passed": true
+  }
+}
