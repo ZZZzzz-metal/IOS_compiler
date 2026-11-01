@@ -73,3 +73,11 @@ const-string及extra的源码、offset、sourceHash与原oracle不变，本轮�
 下一步完成新固定标签及PR #4的实际发布回执，再由用户手动合并；平板开始时重新核对实际Wi-Fi地址/证书有效期，按手册一次一步反馈。GitHub只归档源码和证据，本地ZIP/私钥不上传。
 
 2026-11-01提交前追加：根最终mandatory check/test均exit0，契约10通过；33续验证据只读核证通过，冻结运行输入与两ZIP SHA不变。根完整暂存空白检查只标出续验三份server JSON和root-evidence.stdout.txt的原生CRLF；这四份原始证据保持原字节，精确排除后其余全部暂存内容检查exit0。完整输出、退出码及过滤范围保存在本轮发布证据目录，不把完整检查改称通过。
+
+## 2026-11-01实际发布及握手回执
+
+固定标签integration-v0.4.7指向ca86a65772818ef2a65b86471322b58577775c62，annotated tag对象8646719f32127b9df05a6e25d924ef62977a89e7，已与integration/5号8cfa15d分支原子推送成功。远端2号0f289cf、4号b33b52e8亦已确认。旧v0.4.6对象b0f14a23及目标b4781949保持，main仍ef5d390由用户手动合并。PR #4已实际结束草稿，open/ready/unmerged，maintainer_can_modify=false；没有替用户合并。
+
+新33续验文件、15最终集成文件和两个清单共50个Git blobs由根及另一只读审阅者核对固定ca86a657原字节一致；强制check/test原文、两ZIP不变及精确输入范围有据。2、4、5号均明确回复ACK-ACCEPT-DESKTOP，真实回信已收到而非仅消息发送成功，本轮REQ→ACK→DONE→ACCEPT→ACK闭环。发布证据另存app/offline/evidence/completion-fix-publication-2026-11-01；后续文档回执提交不移动固定标签或重建包。
+
+下一步由用户手动审核合并[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)，再按[0.4.7准备单](IPAD-UPDATE-v0.4.7.md)和[平板手册](IPAD-USER-MANUAL.md)开始真机P01，一次一步反馈。开始连接前由1号重新确认Wi-Fi地址/证书有效期；旧本地短期证书不是长期服务承诺。两项已测缺陷已修复签收，当前没有新确认的产品缺陷阻塞该步骤；真机、完整产品与G2/G3仍待实际结果。

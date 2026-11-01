@@ -1,0 +1,44 @@
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop-confirmed.json:1: trailing whitespace.
++{
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop-confirmed.json:2: trailing whitespace.
++  "checkedAt": "2026-10-31T12:37:33.0937246+00:00",
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop-confirmed.json:3: trailing whitespace.
++  "originalPidExists": false,
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop-confirmed.json:4: trailing whitespace.
++  "port": 4275,
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop-confirmed.json:5: trailing whitespace.
++  "listenerCount": 0
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop-confirmed.json:6: trailing whitespace.
++}
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop.json:1: trailing whitespace.
++{
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop.json:2: trailing whitespace.
++  "onlyOwnedTestProcessStopped": true,
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop.json:3: trailing whitespace.
++  "stoppedAt": "2026-10-31T12:37:20.7317350+00:00",
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop.json:4: trailing whitespace.
++  "port": 4275,
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop.json:5: trailing whitespace.
++  "pid": 49276,
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop.json:6: trailing whitespace.
++  "listenerCount": 1
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop.json:7: trailing whitespace.
++}
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-start.json:1: trailing whitespace.
++{
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-start.json:2: trailing whitespace.
++  "startedAt": "2026-10-31T12:36:10.3244870+00:00",
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-start.json:3: trailing whitespace.
++  "script": "app/offline/serve.mjs",
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-start.json:4: trailing whitespace.
++  "pid": 49276,
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-start.json:5: trailing whitespace.
++  "host": "127.0.0.1",
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-start.json:6: trailing whitespace.
++  "sourceBaseRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-start.json:7: trailing whitespace.
++  "port": 4275
+app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-start.json:8: trailing whitespace.
++}
+app/offline/evidence/completion-fix-final-2026-10-31/root-evidence.stdout.txt:1: trailing whitespace.
++{"passed": true, "sealedFiles": 33, "gitVerified": false, "browserObservations": 22, "iPadValidated": false}

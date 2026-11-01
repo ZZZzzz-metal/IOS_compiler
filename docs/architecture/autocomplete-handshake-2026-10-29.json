@@ -239,6 +239,10 @@
     {
       "date": "2026-10-31",
       "event": "Fixed owner05 PACKAGE-DONE8cfa15d merged da068fed;142 allowed-scope changes,132 new sealed files plus manifest verified against Git by root and independent reviewer. Actual43 observations contain exploratory states explicitly excluded. Root separate22-observation workflow and33-file seal passed, not combined. ACCEPT in measured desktop scope; device hold lifted, iPad/G2/G3 remain pending. Publication/ACK receipts follow actual success."
+    },
+    {
+      "date": "2026-11-01",
+      "event": "Published integration-v0.4.7 targetca86a657/tagobject8646719f and fixed owner05 branch8cfa15d atomically with integration. Actual native remote refs preserve main ef5d390 and old v0.4.6 object/target. PR4 ready/open/unmerged, maintainer modification false. Final root33+15 files and two manifests verified as50 Git blobs by root and independent reviewer. Explicit ACK-ACCEPT-DESKTOP replies from02/04/05 received; handshake closed in measured desktop scope. iPad/G2/G3 pending; publication documentation receipt does not move tag or modify runtime bundle."
     }
   ],
   "api": {
@@ -256,8 +260,11 @@
     "deviceValidationOnHold": false,
     "pr": {
       "number": 4,
-      "draft": true,
-      "merged": false
+      "draft": false,
+      "merged": false,
+      "state": "open",
+      "base": "ef5d3906e2bb9c877e710a7b2093a0ff5e6fdd2a",
+      "userMergesMain": true
     },
     "requests": [
       {
@@ -270,7 +277,7 @@
         "integrationProfile": "integration-prototype-c3e9a2fea60c51b3",
         "resourceCount": 36,
         "independentAcceptance": "Original-oracle semantic scope passed at2978d950; fixed new package desktop workflow passed at8cfa15d.",
-        "ackAccept": "pending actual reply after publication"
+        "ackAccept": "ACK-ACCEPT-DESKTOP explicitly received 2026-11-01; see publication evidence handshake-receipts.json"
       },
       {
         "id": "CC-20261030-05",
@@ -288,7 +295,7 @@
         "progress": "Semantics and new immutable package accepted in measured desktop scope; iPad/G2/G3 pending.",
         "logicalQueries": 44,
         "realDualRouteResponses": 88,
-        "ackAccept": "pending actual reply after publication",
+        "ackAccept": "ACK-ACCEPT-DESKTOP explicitly received 2026-11-01; see publication evidence handshake-receipts.json",
         "packageDelivery": "8cfa15dbf4b3dbeabf3323815bb6dc6f086dc2de",
         "packageSealedGitFilesVerified": 132
       },
@@ -302,7 +309,7 @@
         "changedFiles": [
           "ui/COMPLETION.md"
         ],
-        "ackAccept": "pending actual reply after publication"
+        "ackAccept": "ACK-ACCEPT-DESKTOP explicitly received 2026-11-01; see publication evidence handshake-receipts.json"
       }
     ],
     "acceptanceConditions": [
@@ -312,7 +319,7 @@
     ],
     "successfulDone": true,
     "accepted": true,
-    "stage": "desktop-accepted-publication-pending",
+    "stage": "published-desktop-accepted-handshake-closed",
     "owner02Done": true,
     "owner05SemanticsDone": true,
     "package": {
@@ -321,13 +328,17 @@
       "resourceCount": 65,
       "totalBytes": 60976781,
       "rootByteAndHTTPSChecks": "passed",
-      "owner05": "PACKAGE-DONE 8cfa15dbf4b3dbeabf3323815bb6dc6f086dc2de; accepted in measured desktop scope",
+      "owner05": "PACKAGE-DONE 8cfa15d accepted; explicit final ACK received",
       "deviceValidation": "pending; no iPad result",
       "mergeCommit": "da068fedbc23bea6a69c98d8935d11ed55b5ae82",
       "sealedGitFilesVerified": 132,
       "browserObservations": 43,
       "rootContinuationObservations": 22,
-      "rootContinuationSealFiles": 33
-    }
+      "rootContinuationSealFiles": 33,
+      "rootSealedGitBytesVerified": true
+    },
+    "publicationDate": "2026-11-01",
+    "tag": "integration-v0.4.7",
+    "tagTarget": "ca86a65772818ef2a65b86471322b58577775c62"
   }
 }

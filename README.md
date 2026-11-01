@@ -1,6 +1,6 @@
 # IOS_compiler · iPad 离线 C/C++ 编译调试工作台
 
-**当前：两项已知补全缺陷已修复并独立验证，0.4.7完整新包在已测桌面范围通过。** 2号固定0f289cf修复const成员模板与unavailable候选，5号2978d950按原源码和原预期独立关闭两项：44逻辑例的88双路真实响应、27完整编译调用对照通过。5号新包交付8cfa15d已合入，65资源包停服冷开后的实际补全、一次原生撤销/重做、新源码编译调试及草稿/快捷键方案恢复通过；4号b33b52e8同步使用说明。真实iPad仍待验证，[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)由你手动合并，发布状态见[0.4.7集成记录](docs/architecture/COMPLETION-FIX-INTEGRATION-v0.4.7-2026-10-31.md)，平板步骤见[0.4.7准备单](docs/architecture/IPAD-UPDATE-v0.4.7.md)。下方0.4.6为重开修复前的历史记录。
+**当前：两项已知补全缺陷已修复并独立验证，0.4.7完整新包在已测桌面范围通过。** 2号固定0f289cf修复const成员模板与unavailable候选，5号2978d950按原源码和原预期独立关闭两项：44逻辑例的88双路真实响应、27完整编译调用对照通过。5号新包交付8cfa15d已合入，65资源包停服冷开后的实际补全、一次原生撤销/重做、新源码编译调试及草稿/快捷键方案恢复通过；4号b33b52e8同步使用说明。2026-11-01已推送固定标签integration-v0.4.7，2/4/5均明确ACK完成握手。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)已结束草稿，等待你手动合并；真实iPad仍待验证。发布状态见[0.4.7集成记录](docs/architecture/COMPLETION-FIX-INTEGRATION-v0.4.7-2026-10-31.md)，平板步骤见[0.4.7准备单](docs/architecture/IPAD-UPDATE-v0.4.7.md)。下方0.4.6为重开修复前的历史记录。
 
 2026-10-30当前版本0.4.6：真实离线成员、变量和函数提示已集成，5号最终UI/完整包交付cbc92b2已合入6ba18d2并在已测桌面范围签收。原33场景32通过、const-string一项边界失败；另有unavailable属性边界失败，两项均未修复。62资源新包及停服后全新源码补全、编译调试、撤销与草稿重开已有独立证据；真实iPad仍待验证。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)由你手动合并；精确身份、结果与限制见[本轮报告](docs/architecture/COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md)。旧包、标签和原始失败保留。
 

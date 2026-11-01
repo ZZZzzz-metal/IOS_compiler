@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-11-01T01:48:28.620419+00:00",
+  "fullExitCode": 2,
+  "rawCRLFEvidenceFiles": [
+    "app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop-confirmed.json",
+    "app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-after-stop.json",
+    "app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/server-start.json",
+    "app/offline/evidence/completion-fix-final-2026-10-31/root-evidence.stdout.txt"
+  ],
+  "filteredExitCode": 0,
+  "originalEvidenceBytesPreserved": true,
+  "reason": "Raw CRLF evidence preserved under -text; all remaining staged source and documentation passes"
+}
