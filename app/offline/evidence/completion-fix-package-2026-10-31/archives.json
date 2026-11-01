@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "verified-static-web-archives",
+  "version": "0.4.7",
+  "bundleId": "ipad-web-probe-4b6a8377cadd31e675701549",
+  "compatibilityId": "integration-prototype-c3e9a2fea60c51b3",
+  "resourceManifestHash": "sha256:c3e9a2fea60c51b357384059523151619b4987ddfd2629e80f2bd870c3a8e81e",
+  "resourceCount": 65,
+  "resourceBytes": 60976781,
+  "sourceBaseRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "workerSha256": "sha256:6900d0dd90e0ef6cdff3d891316251cc3e2c70924d3d26c870e8bc51e3271ac5",
+  "descriptorSha256": "sha256:e9791ceb17df941d32f31e4dfc7216c75b5aba877f4492a404a8bb4e38c2870d",
+  "verification": {
+    "allRuntimeResourceHashes": 65,
+    "controlPlaneHashes": 2,
+    "onlyCurrentReleaseIncluded": true,
+    "privateKeysExcluded": true,
+    "manualMatchesRuntimePayload": true,
+    "testControlsExcluded": true
+  },
+  "declaration": "Archive byte verification only; not browser, independent feature, iPad or distribution-license acceptance.",
+  "completePackage": {
+    "filename": "ipad-offline-debugger-v0.4.7.zip",
+    "byteLength": 19337572,
+    "sha256": "6cc808248baaca8e1107de49d71458fd2140f8c83cd3bbb8810598351abc330d",
+    "fileCount": 74,
+    "allArchivedFilesVerified": true
+  },
+  "firstSetupPackage": {
+    "filename": "ipad-first-setup-v0.4.7.zip",
+    "byteLength": 18056,
+    "sha256": "0958fef87a5871c8c9a4edfc23f10a9b929888f2898da370dfbfdd981351d18f",
+    "fileCount": 6,
+    "allArchivedFilesVerified": true
+  }
+}

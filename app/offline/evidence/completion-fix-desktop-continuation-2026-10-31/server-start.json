@@ -1,0 +1,8 @@
+{
+  "startedAt": "2026-10-31T12:36:10.3244870+00:00",
+  "script": "app/offline/serve.mjs",
+  "pid": 49276,
+  "host": "127.0.0.1",
+  "sourceBaseRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "port": 4275
+}

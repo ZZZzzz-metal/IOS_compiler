@@ -1,0 +1,27 @@
+{
+  "verifiedAt": "2026-11-01T01:48:50.916714+00:00",
+  "acceptedCommit": "ca86a65772818ef2a65b86471322b58577775c62",
+  "rootContinuation": {
+    "command": [
+      "C:/Users/20964/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "-X",
+      "utf8",
+      "app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/verify-evidence.py",
+      "--git"
+    ],
+    "exitCode": 0,
+    "sealFiles": 33,
+    "gitBytesIdentical": true
+  },
+  "rootFinal": {
+    "sealFiles": 15,
+    "gitBytesIdentical": true
+  },
+  "oldTag": {
+    "tag": "integration-v0.4.6",
+    "object": "b0f14a2363b80fac11578db1c96823a74cc651f8",
+    "target": "b4781949d216ba16bee563f401d1b35bb7670142",
+    "unchanged": true
+  },
+  "iPadValidated": false
+}

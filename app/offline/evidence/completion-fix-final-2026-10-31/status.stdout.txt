@@ -1,0 +1,63 @@
+{
+  "project": "iPad 离线 C/C++ 编译调试工具",
+  "location": "C:\\Users\\20964\\Documents\\ChatGPT\\C++算法编译器\\ipad-offline-debugger\\",
+  "delivery": "两项补全修复已独立关闭；0.4.7新完整包已测桌面范围验收通过",
+  "baseline": "0.4.7-desktop-accepted",
+  "protocolVersion": "0.1.0-draft.1",
+  "selectedRoute": null,
+  "offlineReady": false,
+  "deviceValidation": "待验证",
+  "verifiedCapabilities": 0,
+  "implementedUnverifiedCapabilities": 23,
+  "modules": {
+    "compiler": {
+      "owner": 2,
+      "directory": "compiler/",
+      "contract": "CompilerAdapter",
+      "status": "desktop-prototype-integrated",
+      "command": "npm run demo:integration"
+    },
+    "debugger": {
+      "owner": 3,
+      "directory": "debugger/",
+      "contract": "DebuggerAdapter",
+      "status": "desktop-prototype-integrated",
+      "command": "npm run demo:integration"
+    },
+    "ui": {
+      "owner": 4,
+      "directory": "ui/",
+      "contract": "真实会话消费者",
+      "status": "desktop-prototype-integrated",
+      "command": "npm start"
+    },
+    "storage": {
+      "owner": 4,
+      "directory": "storage/",
+      "contract": "StorageAdapter",
+      "status": "desktop-prototype-integrated",
+      "command": "npm run test:ui"
+    },
+    "validation": {
+      "owner": 5,
+      "directory": "tests/ + fixtures/ + docs/validation/",
+      "contract": "独立真实验收",
+      "status": "desktop-acceptance-integrated",
+      "command": "npm run test:acceptance"
+    }
+  },
+  "commands": {
+    "workbench": "npm start",
+    "prepareOffline": "npm run prepare:offline",
+    "offlineEntry": "npm run start:offline",
+    "offlineChecks": "npm run test:offline",
+    "status": "npm run status",
+    "demo": "npm run demo:integration",
+    "tests": "npm run test:integration",
+    "ui": "npm run test:ui",
+    "acceptance": "npm run test:acceptance",
+    "regressions": "npm run test:regressions",
+    "initializer": "npm run test:initializer"
+  },
+  "next": "按本轮发布回执审核PR #4并由用户手动合并；按平板手册逐步进行真实iPad验证。"
+}

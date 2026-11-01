@@ -1,0 +1,21 @@
+{
+  "kind": "parallel-readonly-review",
+  "source": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "passed": true,
+  "archiveMembers": [
+    74,
+    6
+  ],
+  "runtimeResources": 65,
+  "staticRelativeImports": 51,
+  "isolatedWorkers": 3,
+  "fixedGitInputs": 58,
+  "lockedLargeInputs": 4,
+  "generatedInputs": 3,
+  "priorArchivesUnchanged": 16,
+  "manualGitExactBytes": true,
+  "independentBackendManifestRecalculated": true,
+  "singleRemovableRootCertificateOnly": true,
+  "reviewerAssumptionCorrection": "Initial whole-object build comparison failed only because public build omits absolute releaseDirectory; identity fields and actual release directory independently verified. Not a product failure.",
+  "declaration": "Byte/source review; no browser or iPad claim."
+}

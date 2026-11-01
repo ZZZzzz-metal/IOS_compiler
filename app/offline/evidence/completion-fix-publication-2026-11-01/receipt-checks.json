@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-01T01:52:31.514229+00:00",
+  "purpose": "Mandatory checks before publication documentation receipt commit; product/package inputs unchanged",
+  "commands": [
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "test"
+      ],
+      "exitCode": 0
+    }
+  ]
+}

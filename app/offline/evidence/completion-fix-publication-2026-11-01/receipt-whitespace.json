@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-11-01T01:52:57.144781+00:00",
+  "command": [
+    "git",
+    "-c",
+    "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "exitCode": 0,
+  "repositoryConfigModified": false,
+  "rawCRLFBytesPreserved": true
+}

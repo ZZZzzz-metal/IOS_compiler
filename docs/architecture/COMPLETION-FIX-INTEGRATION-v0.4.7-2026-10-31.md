@@ -1,6 +1,6 @@
 # 代码提示两项已知问题修复集成
 
-2026-10-31，目标0.4.7。用户要求先修好已知问题再真机。本记录按阶段追加实际结果；当前修复及5号独立语义DONE已合入，两条缺陷在原判定的已测语义范围关闭，新完整包及iPad验收仍待。
+2026-10-31，版本0.4.7。用户要求先修好已知问题再真机。当前2号修复、5号语义DONE与新包PACKAGE-DONE均已合入，两条缺陷在原判定的已测语义范围关闭，新完整包在已测桌面范围通过并ACCEPT。iPad/G2/G3仍待；下文按阶段保留原状态，以最终追加及发布回执为准。
 
 ## 已合入固定交付
 
@@ -40,3 +40,44 @@ const-string及extra的源码、offset、sourceHash与原oracle不变，本轮�
 4号DOC-DONE b33b52e8616fef0171f49ab2f22f7c5cbb8306d9只改ui/COMPLETION.md，根已合入，UI运行字节不变。版本/手册与能力说明更新到0.4.7，能力状态继续implemented-unverified；手册补去过时的监视待验状态，明确iPad仍须实测。完整包纳入新语义模块、配方和逻辑补丁，在线与离线.patch均作为文本阅读。
 
 下一步生成全新的0.4.7不可变包，单独做停服冷开、全新代码补全/撤销/编译调试/草稿恢复。最终新包未验前PR #4保持草稿，真机继续暂缓。旧v0.4.6标签、包、缓存、失败及LIMITED-DESKTOP ACCEPT仅作历史保留；main仍由用户手动合并。
+
+## 新0.4.7包已生成，实际浏览器另验
+
+固定包源码912a23bf14cd6e48a0adb7ec119f4ce86bc58f93；bundle为ipad-web-probe-4b6a8377cadd31e675701549，65资源60,976,781字节，后端36资源身份不变。SW SHA为6900d0dd90e0ef6cdff3d891316251cc3e2c70924d3d26c870e8bc51e3271ac5，descriptor SHA为e9791ceb17df941d32f31e4dfc7216c75b5aba877f4492a404a8bb4e38c2870d。
+
+| 归档 | 字节 / 成员 | SHA-256 |
+|---|---|---|
+| ipad-offline-debugger-v0.4.7.zip | 19,337,572 / 74 | 6cc808248baaca8e1107de49d71458fd2140f8c83cd3bbb8810598351abc330d |
+| ipad-first-setup-v0.4.7.zip | 18,056 / 6 | 0958fef87a5871c8c9a4edfc23f10a9b929888f2898da370dfbfdd981351d18f |
+
+归档工具实际生成后又以verify-existing只读核验。65资源全部长度/hash及控制面通过；58份固定Git原字节、4份锁定大型资源、3份生成内容，手册在两ZIP/运行包/固定Git原字节完全一致。模块引用为50条静态导入加1条浏览器动态导入，共51条相对引用全部封闭，三个Worker、独立canonical后端manifest重算及单根证书配置亦通过。根28份封存审阅中原先将正则总数51标为static，现按AST分类另追加澄清；动态边为ui/src/main.mjs到compiler/src/completion-adapter.mjs，没有缺资源，旧封存原文不改。16份旧ZIP逐项保持不变；原Zip、标签和缓存未覆盖。研究证据链接仍属Git材料，不随运行包附带。
+
+根mandatory check/test及离线23通过；在实际Wi-Fi接口以显式CA和正常主机名检查逐项取得65份HTTPS资源并核hash，入口/SW/descriptor/补丁媒体类型及私钥路径404通过，未改系统证书信任或防火墙。最初沙盒EACCES、获准直接检查发现旧进程已停ECONNREFUSED，均不冒称产品失败或成功；新建本项目静态服务后实际通过。证书当前有效，但真机开始时重新核对地址和有效期。
+
+已向5号发送固定包PACKAGE-FINAL并得到明确ACK；其使用独立localhost服务验停服冷开、新源码两项修复可见行为、确认/原生撤销、编译调试值及草稿/方案恢复。当前未收到PACKAGE-DONE，不提前写成通过。根字节与HTTPS证据在app/offline/evidence/completion-fix-package-2026-10-31；平板操作见[0.4.7准备单](IPAD-UPDATE-v0.4.7.md)和[完整手册](IPAD-USER-MANUAL.md)。
+
+## 最终追加：新包独立桌面验收已集成
+
+5号固定PACKAGE-DONE为8cfa15dbf4b3dbeabf3323815bb6dc6f086dc2de，父目标正是912a23bf；142变更全部在5号所有权内，无scratch或运行组件修改。根合并提交da068fedbc23bea6a69c98d8935d11ed55b5ae82，重新执行只读seal verify --git，132份新证据及清单与Git原字节一致；另一个独立审阅者逐项复核133个Git blobs亦通过。完整报告见[5号新包报告](../validation/completion-package-person05-v047-2026-10-31.md)。
+
+5号独立4265来源准备65资源后停服、零监听、关页冷开，再输入新源码。const string保留size/c_str且排除append，mutable仍有10个append；const模板保留Inspect与合法static Relay而排除Mutate，mutable仍有三个；普通、deprecated和合法double重载保留，unavailable及deleted int被排除。019ready→020确认→021一次原生undo→022redo有完整源码与选区原文。026实际输出person05-v047=41并返回41；工具恢复后重新启动真实调试，035在main.cpp:18:1暂停stable=29、outcome=41，036继续同输出/返回41。041/043停服冷开逐字恢复749 B完整源码、cpp、草稿版本11和standard方案，043资源ready。临时页关闭、最终监听0、三份warn/error均[]。
+
+该链43份顺序观察包括探索与加载，不等于43项通过：017/018只撤销loading时新增的换行，023是部分输入，028未证明暂停，040仍读取；均未当成成功。首次证据审计器过严要求undo后光标折叠，实际原生undo正确恢复旧源码并选中595..601的旧前缀；首版exit1和脚本保留，第二版仅纠正选区假设，原源码/候选oracle/浏览器记录不变。Python输出编码与初始“整阶段调用0”的元数据错误亦保留并另存纠正，只有原3负例可报告provider0。完整diff检查发现三份原始输出CRLF，精确排除三者后其余文件通过，未清洗封存原文。
+
+本轮5号实际mandatory check/契约10、UI/storage200、离线23、原3负例12断言通过；原修复44/88、27完整调用、7生命周期25检查、主21/最小2/初始化6及既有UI竞态/编辑证据按运行字节绑定复用，没有再次执行或相加。旧831+84+150+452共1517文件及各清单Git复核通过。运行闭包仍为50 static+1 browser dynamic，另四条Node-only动态引用不计浏览器依赖。
+
+根另一条独立4275实际桌面续验也完成：确认服务停止且零监听后冷开，成员value确认/原生undo/redo，新源码输出root-v047=42、exit0；main.cpp:10真实box.value=23、picked=23、total=42且监视23，继续结果一致。全部279字符、保存版本4和standard方案冷恢复，切回control-number后真实Control+6再次输出42/exit0。22份观察、截图及console/清理原文单独封存为app/offline/evidence/completion-fix-desktop-continuation-2026-10-31，不并入5号43份。33文件清单与独立只读审阅通过；复核命令使用Python -X utf8，默认GBK解码中文Git路径的首次harness exit1另存说明，未改已封存文件。
+
+据此按已测桌面范围ACCEPT修复与新包，解除“先修已知问题再真机”的暂缓。真实iPad/Safari、物理断网/输入、主屏/升级、存储驱逐/强杀/配额/后台/性能、草稿强可靠性与G2/G3保持待验；正式profile、offline-bundle及implemented-unverified状态保持。912a23bf包内的“待最终验收”文字是构建时快照，由本报告关联最终结论，未重写不可变包。旧标签、原失败和16份旧ZIP不变。
+
+下一步完成新固定标签及PR #4的实际发布回执，再由用户手动合并；平板开始时重新核对实际Wi-Fi地址/证书有效期，按手册一次一步反馈。GitHub只归档源码和证据，本地ZIP/私钥不上传。
+
+2026-11-01提交前追加：根最终mandatory check/test均exit0，契约10通过；33续验证据只读核证通过，冻结运行输入与两ZIP SHA不变。根完整暂存空白检查只标出续验三份server JSON和root-evidence.stdout.txt的原生CRLF；这四份原始证据保持原字节，精确排除后其余全部暂存内容检查exit0。完整输出、退出码及过滤范围保存在本轮发布证据目录，不把完整检查改称通过。
+
+## 2026-11-01实际发布及握手回执
+
+固定标签integration-v0.4.7指向ca86a65772818ef2a65b86471322b58577775c62，annotated tag对象8646719f32127b9df05a6e25d924ef62977a89e7，已与integration/5号8cfa15d分支原子推送成功。远端2号0f289cf、4号b33b52e8亦已确认。旧v0.4.6对象b0f14a23及目标b4781949保持，main仍ef5d390由用户手动合并。PR #4已实际结束草稿，open/ready/unmerged，maintainer_can_modify=false；没有替用户合并。
+
+新33续验文件、15最终集成文件和两个清单共50个Git blobs由根及另一只读审阅者核对固定ca86a657原字节一致；强制check/test原文、两ZIP不变及精确输入范围有据。2、4、5号均明确回复ACK-ACCEPT-DESKTOP，真实回信已收到而非仅消息发送成功，本轮REQ→ACK→DONE→ACCEPT→ACK闭环。发布证据另存app/offline/evidence/completion-fix-publication-2026-11-01；后续文档回执提交不移动固定标签或重建包。
+
+下一步由用户手动审核合并[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)，再按[0.4.7准备单](IPAD-UPDATE-v0.4.7.md)和[平板手册](IPAD-USER-MANUAL.md)开始真机P01，一次一步反馈。开始连接前由1号重新确认Wi-Fi地址/证书有效期；旧本地短期证书不是长期服务承诺。两项已测缺陷已修复签收，当前没有新确认的产品缺陷阻塞该步骤；真机、完整产品与G2/G3仍待实际结果。

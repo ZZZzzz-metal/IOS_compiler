@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-01",
+  "reviewer": "review_v047_publication_docs",
+  "mode": "separate read-only agent",
+  "commit": "ca86a65772818ef2a65b86471322b58577775c62",
+  "verifiedGitBlobs": 50,
+  "rootContinuationSealFiles": 33,
+  "rootFinalSealFiles": 15,
+  "sealManifests": 2,
+  "fileSetLengthShaAndGitBytesIdentical": true,
+  "publicationBlockingDocumentationIssues": []
+}

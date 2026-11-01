@@ -1,0 +1,15 @@
+{
+  "kind": "module-reference-count-clarification",
+  "sourceBaseRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "bundleId": "ipad-web-probe-4b6a8377cadd31e675701549",
+  "staticImportEdges": 50,
+  "browserDynamicImportEdges": 1,
+  "totalRelativeModuleReferences": 51,
+  "dynamicEdge": {
+    "from": "ui/src/main.mjs",
+    "to": "compiler/src/completion-adapter.mjs",
+    "line": 44
+  },
+  "allDependenciesPackaged": true,
+  "correction": "The earlier sealed parallel readonly review labeled the regex total51 as staticRelativeImports. AST distinguishes50 static plus1 dynamic; no duplicate edges, missing dependency or product failure. The original28-file seal is unchanged."
+}

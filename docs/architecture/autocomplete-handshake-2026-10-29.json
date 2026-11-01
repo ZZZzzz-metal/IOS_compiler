@@ -231,6 +231,18 @@
     {
       "date": "2026-10-31",
       "event": "Owner05 fixed semantics DONE2978d950 merged e00566b;831 sealed files/Git bytes verified by root. Original44 logical/88 real dual responses and27 full-call controls passed without original-oracle changes. Owner04 documentation-only b33b52e8 merged cfe85ff. New0.4.7 full package and actual stopped-server workflow remain pending; PR4 stays draft."
+    },
+    {
+      "date": "2026-10-31",
+      "event": "New fixed0.4.7 bundle4b6a8377/65resources60976781B and74/6-member ZIPs created and fully byte verified;16 old archives unchanged. Root strict CA/hostname HTTPS verified all65 resources. Owner05 explicitly ACKed final fixed912a23bf package for isolated stopped-server browser workflow. PR4 remains draft; iPad/G2/G3 pending."
+    },
+    {
+      "date": "2026-10-31",
+      "event": "Fixed owner05 PACKAGE-DONE8cfa15d merged da068fed;142 allowed-scope changes,132 new sealed files plus manifest verified against Git by root and independent reviewer. Actual43 observations contain exploratory states explicitly excluded. Root separate22-observation workflow and33-file seal passed, not combined. ACCEPT in measured desktop scope; device hold lifted, iPad/G2/G3 remain pending. Publication/ACK receipts follow actual success."
+    },
+    {
+      "date": "2026-11-01",
+      "event": "Published integration-v0.4.7 targetca86a657/tagobject8646719f and fixed owner05 branch8cfa15d atomically with integration. Actual native remote refs preserve main ef5d390 and old v0.4.6 object/target. PR4 ready/open/unmerged, maintainer modification false. Final root33+15 files and two manifests verified as50 Git blobs by root and independent reviewer. Explicit ACK-ACCEPT-DESKTOP replies from02/04/05 received; handshake closed in measured desktop scope. iPad/G2/G3 pending; publication documentation receipt does not move tag or modify runtime bundle."
     }
   ],
   "api": {
@@ -244,29 +256,33 @@
   "repairCycle": {
     "date": "2026-10-30",
     "reason": "Human requires known issues fixed before device validation",
-    "state": "DONE-SEMANTICS",
-    "deviceValidationOnHold": true,
+    "state": "ACCEPT-DESKTOP",
+    "deviceValidationOnHold": false,
     "pr": {
       "number": 4,
-      "draft": true,
-      "merged": false
+      "draft": false,
+      "merged": false,
+      "state": "open",
+      "base": "ef5d3906e2bb9c877e710a7b2093a0ff5e6fdd2a",
+      "userMergesMain": true
     },
     "requests": [
       {
         "id": "CC-20261030-02",
         "owner": 2,
-        "state": "DONE",
+        "state": "ACCEPT-DESKTOP",
         "scope": "semantic repair of const member-template and unavailable candidates",
         "delivery": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
         "implementationCommit": "6da3280b3fa9aa859188a26a6b12f578151401a4",
         "integrationProfile": "integration-prototype-c3e9a2fea60c51b3",
         "resourceCount": 36,
-        "independentAcceptance": "Passed original-oracle measured semantic scope at owner05 2978d950; new full-package acceptance pending."
+        "independentAcceptance": "Original-oracle semantic scope passed at2978d950; fixed new package desktop workflow passed at8cfa15d.",
+        "ackAccept": "ACK-ACCEPT-DESKTOP explicitly received 2026-11-01; see publication evidence handshake-receipts.json"
       },
       {
         "id": "CC-20261030-05",
         "owner": 5,
-        "state": "DONE",
+        "state": "ACCEPT-DESKTOP",
         "scope": "independent original-oracle positive/negative verification after fixed delivery",
         "delivery": "2978d9501c58fe7b6d7d7439b5f728a0b59ccbf6",
         "mergeCommit": "e00566b27fb6ee2256f318811376d2e95e67cb3f",
@@ -274,22 +290,26 @@
         "queries": 11,
         "fullCallControls": 27,
         "sealedGitFilesVerified": 831,
-        "featureAcceptance": false,
+        "featureAcceptance": true,
         "verificationTarget": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
-        "progress": "Original const-string and extra unavailable defects independently closed in measured semantic scope; new package/browser/iPad pending.",
+        "progress": "Semantics and new immutable package accepted in measured desktop scope; iPad/G2/G3 pending.",
         "logicalQueries": 44,
-        "realDualRouteResponses": 88
+        "realDualRouteResponses": 88,
+        "ackAccept": "ACK-ACCEPT-DESKTOP explicitly received 2026-11-01; see publication evidence handshake-receipts.json",
+        "packageDelivery": "8cfa15dbf4b3dbeabf3323815bb6dc6f086dc2de",
+        "packageSealedGitFilesVerified": 132
       },
       {
         "id": "CC-20261030-04",
         "owner": 4,
-        "state": "DOC-DONE",
+        "state": "ACCEPT-DESKTOP",
         "scope": "UI runtime frozen; repaired semantics usage guide only",
         "delivery": "b33b52e8616fef0171f49ab2f22f7c5cbb8306d9",
         "mergeCommit": "cfe85ff",
         "changedFiles": [
           "ui/COMPLETION.md"
-        ]
+        ],
+        "ackAccept": "ACK-ACCEPT-DESKTOP explicitly received 2026-11-01; see publication evidence handshake-receipts.json"
       }
     ],
     "acceptanceConditions": [
@@ -297,10 +317,28 @@
       "Original unavailable failure actually passes while valid deprecated and ordinary candidates remain",
       "Independent fixed-target verification, affected regressions and new immutable full-package desktop workflow pass before device validation"
     ],
-    "successfulDone": false,
-    "accepted": false,
-    "stage": "new-full-package-preparation",
+    "successfulDone": true,
+    "accepted": true,
+    "stage": "published-desktop-accepted-handshake-closed",
     "owner02Done": true,
-    "owner05SemanticsDone": true
+    "owner05SemanticsDone": true,
+    "package": {
+      "sourceBaseRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+      "bundleId": "ipad-web-probe-4b6a8377cadd31e675701549",
+      "resourceCount": 65,
+      "totalBytes": 60976781,
+      "rootByteAndHTTPSChecks": "passed",
+      "owner05": "PACKAGE-DONE 8cfa15d accepted; explicit final ACK received",
+      "deviceValidation": "pending; no iPad result",
+      "mergeCommit": "da068fedbc23bea6a69c98d8935d11ed55b5ae82",
+      "sealedGitFilesVerified": 132,
+      "browserObservations": 43,
+      "rootContinuationObservations": 22,
+      "rootContinuationSealFiles": 33,
+      "rootSealedGitBytesVerified": true
+    },
+    "publicationDate": "2026-11-01",
+    "tag": "integration-v0.4.7",
+    "tagTarget": "ca86a65772818ef2a65b86471322b58577775c62"
   }
 }

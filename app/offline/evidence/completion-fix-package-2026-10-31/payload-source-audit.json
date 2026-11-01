@@ -1,0 +1,405 @@
+{
+  "sourceBaseRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "bundleId": "ipad-web-probe-4b6a8377cadd31e675701549",
+  "resources": [
+    {
+      "path": "IPAD-USER-MANUAL.md",
+      "byteLength": 30285,
+      "sha256": "a429e4e4caec15cd3033ca529bc3ee363aca7e73fb06f3a7d2e7822400b9f722",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "app/offline/browser/trust.mjs",
+      "byteLength": 2527,
+      "sha256": "ef12e9992179384075b1c17ac9cd5bc7f0ac33e6f46a0b39db08d22d6fc64a20",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/COMPLETION.md",
+      "byteLength": 7817,
+      "sha256": "975bb48b3bc8e1b2d479373cceff22c6ed6a2cc9de4cac6075b6469fdcefd48b",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/README.md",
+      "byteLength": 6592,
+      "sha256": "a4b349c5b863ce2e7c0fb24999614379694dcf738e0beef4887104f12f26b469",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/LICENSES.md",
+      "byteLength": 3998,
+      "sha256": "e6ea8147efad7549cd2a9c7830cfb808f4fdf860c043959b39abbb08dcacb3d2",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/completion-semantics-v1.cpp.patch",
+      "byteLength": 1970,
+      "sha256": "51c2fd087e01863b9ed6e09aaa8886721a4d1aefa5967ebbb7538677d5df48af",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/completion-semantics-v1.md",
+      "byteLength": 5327,
+      "sha256": "52c92f9ea09e13ed813605bf5765a71e602b47d94945cf4c7e6cfd59921644fb",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/toolchain.lock.json",
+      "byteLength": 6149,
+      "sha256": "a8145ad87886f52a7ecf3a88d572239183b90fc43ed4ea1e0514d2b25df01e8d",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/LICENSE",
+      "byteLength": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/LICENSE.llvm",
+      "byteLength": 15140,
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/README.md",
+      "byteLength": 1446,
+      "sha256": "2ded8e20209ca550698c829ab65dfff3e4e26e90fc21240bae5f0c4f1cbd7a57",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/clang",
+      "byteLength": 31214472,
+      "sha256": "2a466f0e990329d3230b869d04fc20803eae96a7feb3a3f6c93e25a77b8aed1d",
+      "source": "locked-vendor-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/d8.js",
+      "byteLength": 1722,
+      "sha256": "a7ae2decd5330e2deadb6c258cfa11b4f0c5645807feb7f0114d319335e4a4b5",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/lld",
+      "byteLength": 19490094,
+      "sha256": "36419ed202011765222098d7701218378b67f634d50f0a4625059ae2c9860f48",
+      "source": "locked-vendor-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/memfs",
+      "byteLength": 345442,
+      "sha256": "2c72ee42bd9430029dda8c6bafc9f37143f6fe88d5f1ea950a70259ab748bcfe",
+      "source": "locked-vendor-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/shared.js",
+      "byteLength": 23973,
+      "sha256": "4de0be862bda1a7571c1f0632abe3c62c47a56e734cc6b703155805a4b160b1c",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/shared_web.js",
+      "byteLength": 8110,
+      "sha256": "90f2eb3c832b9d3af7f0ef7aa63c71554182efb73eba734810607e20d4cb5681",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/sysroot.tar",
+      "byteLength": 9297920,
+      "sha256": "2435a7b549af30c2be7ec249c405bc2e911ab0c6003012f0909ec3c131bff867",
+      "source": "locked-vendor-exact-bytes"
+    },
+    {
+      "path": "compiler/resources/vendor/wasm-clang/worker.js",
+      "byteLength": 2758,
+      "sha256": "c0d4c3f3ef0e2047c0f109922f0a4ee9e0f2b12947a569a835da83b6bdcf995e",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/compiler-adapter.mjs",
+      "byteLength": 5418,
+      "sha256": "0cf84c9c6a845ad9d893dfce47c84bbbf1561d6ac7784280374c833b39d41ab9",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/compiler-probe.mjs",
+      "byteLength": 3912,
+      "sha256": "40327315c54e4307d8faf322ad64ed0da248e8849f9ed72ad7d691e52cafd648",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/compiler-worker.mjs",
+      "byteLength": 2400,
+      "sha256": "b3011c7601b957f28e358216d8a4ecfe1a339b0201b4acd32245b9e7115c1416",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/completion-adapter.mjs",
+      "byteLength": 9564,
+      "sha256": "161ef46075a0258bb413117e98762e96c553bb3c5e3b2a240e53ab7cbb8c439b",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/completion-engine.mjs",
+      "byteLength": 4643,
+      "sha256": "926afb12f565b53584b86c22ffdbc2fc137faad1fe6ce5e1b86d043210ee5370",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/completion-output.mjs",
+      "byteLength": 1956,
+      "sha256": "6321fd93e9fbfeccfebe29654f236c335aac4cc7d7d09c934d35f5e74d325a99",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/completion-semantics.mjs",
+      "byteLength": 3953,
+      "sha256": "1a448b6d17c498fe586b6f510b9ee70de495efbd4dd81299227377fecf1e9754",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/completion-source.mjs",
+      "byteLength": 5337,
+      "sha256": "1e8e61a9c35bc42176bc92a6efbc7a04884bbf1b0d0fca9b538feb5c14a9e3ce",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/completion-worker.mjs",
+      "byteLength": 2313,
+      "sha256": "a3621e52c1811e0de3bc891e708be57225bcb48056c0676e832d203527ff80a0",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/diagnostics.mjs",
+      "byteLength": 3218,
+      "sha256": "14399bd23b8eb131a20196d0ed926db1243ace34bda42a221bae687378bfbad3",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/source.mjs",
+      "byteLength": 7201,
+      "sha256": "4f83bd06bb519ae2bad29bbbc1fd8be6aa147e2a70294d3042bcdedf9fa0e5d1",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/toolchain-engine.mjs",
+      "byteLength": 7649,
+      "sha256": "03695bb52cbf7f4ab024ef773fca630eecb01c5452faa0f54fc055b574bbe3b5",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/wasm-host.mjs",
+      "byteLength": 6856,
+      "sha256": "ff458fe980fcf4529a2f28812d1442029eabe5f899bac3c76a257d00c9fe2a73",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "compiler/src/wasm-inspect.mjs",
+      "byteLength": 1825,
+      "sha256": "dfd5ae8ea29df1b266775250e3f07e3181ef3a48bd49ae97cbcf6b929df63a21",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "debugger/LICENSE",
+      "byteLength": 600,
+      "sha256": "810a7126a235c23fe56bd32f0d78617232260ee5d03fd1cb32462ac679cd8cf5",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "debugger/README.md",
+      "byteLength": 8650,
+      "sha256": "2d29264f5575b95c16e774df103afb16bb724e5745a4e923579611e9116370bb",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "debugger/src/debugger-adapter.mjs",
+      "byteLength": 21034,
+      "sha256": "07f12b21547d630e04bd1fd7c7e50d7e7d39e37e2bcfd719345d5f6aaaacd64c",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "debugger/src/debugger-worker.mjs",
+      "byteLength": 600,
+      "sha256": "4b867a736ada849efddffc1c074739eed039d5dd4f222ab8d99c24f2fe9e559d",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "debugger/src/dwarf.mjs",
+      "byteLength": 25566,
+      "sha256": "a90c5783958fb814fa7dc8bd074166fe490d50ba2ecf6c9e82b79c5c3e58eb95",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "debugger/src/integrity.mjs",
+      "byteLength": 7031,
+      "sha256": "6c705f346157d4ed07d1e7797474ad90cf653e7431b27bcf32ee4b282f3eeb07",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "debugger/src/variables.mjs",
+      "byteLength": 44150,
+      "sha256": "9f5d827a927414d34fe5af62bf2583e1531321e9d9d7c8e39d7e99458b96c88e",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "debugger/src/wasm-runtime.mjs",
+      "byteLength": 49143,
+      "sha256": "8c403f67058c04bad9d10e1e8cdb8ec30c1f495eb51e7d4e31dfa90b32906da7",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "debugger/src/worker-adapter.mjs",
+      "byteLength": 8478,
+      "sha256": "1560145ebf8cbced7e758ccc82e8473c1157649f39be70b34d9a7d09af7857c6",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "debugger/src/worker-bridge.mjs",
+      "byteLength": 1673,
+      "sha256": "b1271d7c34651296ef9011c69493f6c0e0f62d97db71d8f3fe27c9561e54eda1",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "icon.svg",
+      "byteLength": 280,
+      "sha256": "1c4c1270229e813c8f0470c24c532b202dd8ff19de6314d2ed06886a2e59f6d2",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "index.html",
+      "byteLength": 2498,
+      "sha256": "5b52ac7c5891f1d0276f91b143d9baca96907d01fe3a406187d1681e06461053",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "launcher.mjs",
+      "byteLength": 5841,
+      "sha256": "dcc012c895f7bda8135882271e11071fcbbe161a4f875644e821a4c82bb5e05e",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "byteLength": 371,
+      "sha256": "b843d2b92ec8264c2f1cdb757a3d199397539b69818f5d7bbd9dc26ec20fc521",
+      "source": "generated"
+    },
+    {
+      "path": "manual.html",
+      "byteLength": 30802,
+      "sha256": "fab5ed7a1c7ea356e0f4322628c648b714e767a96c6abbd9357a608ea2e98a65",
+      "source": "generated"
+    },
+    {
+      "path": "storage/README.md",
+      "byteLength": 3584,
+      "sha256": "dfed86caed02e57e81f53f54cc481e3ad0396831d30398530482847bb53491f2",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "storage/src/autosave.mjs",
+      "byteLength": 2767,
+      "sha256": "9c5be5085169e4c5286b9dad470cfd3c228cd266325030f46bb7c2e1084f9aff",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "storage/src/draft-store.mjs",
+      "byteLength": 8047,
+      "sha256": "0624b4fb259d09863437e6bc7d281c2492a52d309cb55f1153c241fa87e52755",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "style.css",
+      "byteLength": 1986,
+      "sha256": "9513a4144c0543299d9aee2bf7581092f42e50732b409ccb2edee6cd2b457ea5",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/.local/candidate.json",
+      "byteLength": 51670,
+      "sha256": "a2f3fdb97ea4996aa76f31249f911f2ea8e7957783d442c9973c4b6a6513857b",
+      "source": "generated"
+    },
+    {
+      "path": "ui/COMPLETION.md",
+      "byteLength": 3310,
+      "sha256": "8a6c07f0a43acb550e078dd786d100a28c6736bd31ad765f1b4e1a1f3799e99b",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/README.md",
+      "byteLength": 8329,
+      "sha256": "4da4982b5cc9e1b0f35e98ee7095b93add1c5170be2a4186de2e58c970045c26",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/SHORTCUTS.md",
+      "byteLength": 7073,
+      "sha256": "3363e431d7b1bafe5a77df95ac2fe67bcbc3e3d5fcbba1bac44c5a4ccdef0735",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/probe.html",
+      "byteLength": 13762,
+      "sha256": "f935fb654bfad9a667136f8d95b8140ed98be50f65ce219575b8eb48706488c8",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/src/completion-controller.mjs",
+      "byteLength": 15256,
+      "sha256": "e815ec62c4d5b9899ef871e561ed151d98c2f9f2d2ce935ff738a3752244663b",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/src/completion-edit.mjs",
+      "byteLength": 4713,
+      "sha256": "d4a4e861c77ae9c3169339e122c0dcb93815628669922be2fbdd4be26020054b",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/src/completion-editor.mjs",
+      "byteLength": 7535,
+      "sha256": "6fec3d57898194071c55210122466927b8d126a6ea5c153a429aee2ce7f7f4b3",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/src/completion-popup.mjs",
+      "byteLength": 13394,
+      "sha256": "c473b6148865603116d71eb5b9ffd1ee218eb99dca78c9d5f8aeb319d750ad01",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/src/editor.mjs",
+      "byteLength": 5372,
+      "sha256": "b7270dd8d2e0083e3538191a2913d6538d1bf6ffa2a2f8e1a3c75b286134d418",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/src/main.mjs",
+      "byteLength": 35373,
+      "sha256": "864aabe28cdf85b100a4758744f6a2770979592746c7375c1f8b838a052a63ca",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/src/session-controller.mjs",
+      "byteLength": 17167,
+      "sha256": "ea9d7ba46069aba2ea1772a23ae93011b29fea1cab0aae1326a4c7c8c8f18a84",
+      "source": "fixed-git-exact-bytes"
+    },
+    {
+      "path": "ui/style.css",
+      "byteLength": 27381,
+      "sha256": "5b6b309d0aa2b813ff47753190a736d7ffde58115fcf75931309b3c10a7c21e4",
+      "source": "fixed-git-exact-bytes"
+    }
+  ],
+  "fixedGitExactBytes": 58,
+  "lockedVendorResources": 4,
+  "generatedResources": 3,
+  "controlPlaneHashesVerified": 2,
+  "manualGitExactBytes": true,
+  "allThreeWorkersAndSemanticsRecipeIncluded": true,
+  "priorArchivesUnchanged": 16,
+  "researchEvidenceLinks": "Repository research references are not included in the runtime archive.",
+  "declaration": "Byte/source audit only; actual desktop browser workflow and iPad validation are separate."
+}

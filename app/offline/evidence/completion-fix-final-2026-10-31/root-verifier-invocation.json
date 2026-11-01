@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-31",
+  "rootContinuationSealFiles": 33,
+  "initialInvocation": "python verify-evidence.py",
+  "initialExitCode": 1,
+  "initialFailure": "UnicodeDecodeError: Windows default gbk could not decode UTF-8 git rev-parse --show-toplevel output containing the Chinese repository path",
+  "failureScope": "Read-only evidence verification harness, before browser assertions; no product execution or evidence mutation",
+  "correctInvocation": "python -X utf8 app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/verify-evidence.py --git",
+  "remedy": "Use Python UTF-8 mode; sealed verifier and original evidence remain unchanged",
+  "rawInitialOutput": "Retained in the root chat tool result for the initial invocation"
+}

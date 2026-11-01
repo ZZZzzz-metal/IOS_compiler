@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-31T07:20:55.352Z",
+  "sourceBaseRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "bundleId": "ipad-web-probe-4b6a8377cadd31e675701549",
+  "compatibilityId": "integration-prototype-c3e9a2fea60c51b3",
+  "resourceManifestHash": "sha256:c3e9a2fea60c51b357384059523151619b4987ddfd2629e80f2bd870c3a8e81e",
+  "resourceCount": 65,
+  "totalBytes": 60976781,
+  "entryPath": "/releases/ipad-web-probe-4b6a8377cadd31e675701549/index.html",
+  "workerSha256": "sha256:6900d0dd90e0ef6cdff3d891316251cc3e2c70924d3d26c870e8bc51e3271ac5",
+  "descriptorSha256": "sha256:e9791ceb17df941d32f31e4dfc7216c75b5aba877f4492a404a8bb4e38c2870d",
+  "declaration": "Local Web experiment package only. No hosted iPad URL, G2 result, frozen profile or distribution license clearance is implied."
+}

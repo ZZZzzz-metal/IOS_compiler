@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-10-31T07:17:19.193Z",
+  "kind": "same-computer-strict-https-check",
+  "configuredAddressPresent": true,
+  "certificateRootSHA256": "sha256:87991d2b7d332034beddb95ed35ddabc906c0e0b2bd1dd174ec4a25b826e349f",
+  "certificateExpiresAt": "Nov  2 01:29:59 2026 GMT",
+  "certificateChainAndHostnameVerified": true,
+  "ipadConnectivity": "pending-user-test",
+  "siteRoot200": true
+}

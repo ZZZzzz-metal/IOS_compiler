@@ -1,0 +1,142 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "archives-verify.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "archives-verify.stdout.txt",
+    "byteLength": 1509,
+    "sha256": "c421ccef267eb8ef447bad066995ebef2dadce73805002f7c0701dbec0cedaae"
+  },
+  {
+    "file": "archives.json",
+    "byteLength": 1473,
+    "sha256": "a202403d4b428ffd00a657e48b928d742c5faeef63ae3bb079161264b9dfdeed"
+  },
+  {
+    "file": "build.json",
+    "byteLength": 824,
+    "sha256": "9437154478bd73fcb9eca04f55ab291cb6d5fcdde2c14dfe126d0f8e095c6ed7"
+  },
+  {
+    "file": "check-inputs.json",
+    "byteLength": 1065,
+    "sha256": "72445e5e8a64620aae328f91c571c63ac6fd9778a7876c8f21cd549cbd922a64"
+  },
+  {
+    "file": "checks.json",
+    "byteLength": 1396,
+    "sha256": "0e138abe92321a7e207cae07f55d51f89ce729638cc59b9a0b725790ab58fb79"
+  },
+  {
+    "file": "final-mandatory-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "final-mandatory-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "256671f5c365c4e211aa054f407bd9a6991e0c431156e8cb049cf3bb9083d1cc"
+  },
+  {
+    "file": "final-mandatory-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "final-mandatory-test.stdout.txt",
+    "byteLength": 1125,
+    "sha256": "643b3281ea0327e3074745ba539ffb2cee9d1f72a7116f107d7f7bd12f0a8651"
+  },
+  {
+    "file": "final-mandatory.json",
+    "byteLength": 812,
+    "sha256": "277360a8eb7029af759ab4d5f6df16353063179d92e6ecdc6e18221f6a54d1ea"
+  },
+  {
+    "file": "https-before.json",
+    "byteLength": 397,
+    "sha256": "b4932d9d28cccdb47ab5eca76368e2ef76c1e8fe354b1e801df7b4fd132a275c"
+  },
+  {
+    "file": "https.json",
+    "byteLength": 642,
+    "sha256": "48ee5aeea353b02fd165b8f3a10ebfcdfb004a843aa2e36c6de89135aa1510d9"
+  },
+  {
+    "file": "mandatory-check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "256671f5c365c4e211aa054f407bd9a6991e0c431156e8cb049cf3bb9083d1cc"
+  },
+  {
+    "file": "mandatory-test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "mandatory-test.stdout.txt",
+    "byteLength": 1123,
+    "sha256": "4199382e31f80b496d43cf9dfdb202ca22d515587dcfc04f16713d2de04d5d02"
+  },
+  {
+    "file": "offline.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "offline.stdout.txt",
+    "byteLength": 2427,
+    "sha256": "fa9bd84cc741b239b7bae1cc080be912a41536bc92091c8ee286042d59fed6c3"
+  },
+  {
+    "file": "parallel-readonly-review.json",
+    "byteLength": 769,
+    "sha256": "c12a1606b16f1a2da2c546147f990e57cd7628108cd1c912d24d6d6ee7968a91"
+  },
+  {
+    "file": "payload-source-audit.json",
+    "byteLength": 14225,
+    "sha256": "dc809672c2568c92b870bfd7f933e0e383fcfa66f12e6f76004c071c924d0788"
+  },
+  {
+    "file": "prior-archives-after.json",
+    "byteLength": 2814,
+    "sha256": "e96dc9bb1eb0d6dc89a0892221223743ac7b20981f4b2f6307c4b465baf2d7a3"
+  },
+  {
+    "file": "prior-archives.json",
+    "byteLength": 2607,
+    "sha256": "cfff0167faca74dff8e837d67c6dad339b6826c46830d8fe271eea27c8439c0e"
+  },
+  {
+    "file": "README.md",
+    "byteLength": 1752,
+    "sha256": "614d1fc13d844821402fa7ade14874e1201e5b646e7904ff87633d72c8d5fae5"
+  },
+  {
+    "file": "repro/audit-v047-package.py",
+    "byteLength": 4586,
+    "sha256": "c3376fea773ee126d88c6c11347840d003e14aece6cab804bdfab3597e2e82ab"
+  },
+  {
+    "file": "repro/capture-v047-checks.py",
+    "byteLength": 2110,
+    "sha256": "c473b8f8efcb095789c6e34364649c748a12e4c03ad4069da605d7f7d2f63452"
+  },
+  {
+    "file": "repro/check-v047-https.mjs",
+    "byteLength": 3687,
+    "sha256": "25264cb3c91f3b48ab6163863e54d85da12bda0dd7771dc6ff6537951ce3dc1b"
+  }
+]

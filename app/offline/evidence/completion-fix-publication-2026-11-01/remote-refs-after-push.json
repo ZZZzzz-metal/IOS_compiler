@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-11-01T01:50:57.277842+00:00",
+  "command": "git ls-remote origin [explicit integration/main/02/04/05/v0.4.6/v0.4.7 refs]",
+  "exitCode": 0,
+  "refs": {
+    "refs/heads/integration": "ca86a65772818ef2a65b86471322b58577775c62",
+    "refs/heads/main": "ef5d3906e2bb9c877e710a7b2093a0ff5e6fdd2a",
+    "refs/heads/module/02-compiler": "0f289cf0de5aafc80cafc7c06fd669f95b85d873",
+    "refs/heads/module/04-ui": "b33b52e8616fef0171f49ab2f22f7c5cbb8306d9",
+    "refs/heads/module/05-validation": "8cfa15dbf4b3dbeabf3323815bb6dc6f086dc2de",
+    "refs/tags/integration-v0.4.6": "b0f14a2363b80fac11578db1c96823a74cc651f8",
+    "refs/tags/integration-v0.4.6^{}": "b4781949d216ba16bee563f401d1b35bb7670142",
+    "refs/tags/integration-v0.4.7": "8646719f32127b9df05a6e25d924ef62977a89e7",
+    "refs/tags/integration-v0.4.7^{}": "ca86a65772818ef2a65b86471322b58577775c62"
+  },
+  "source": "Actual native git ls-remote tool result; no inferred branch identities",
+  "mainUnchanged": true,
+  "oldTagUnchanged": true
+}

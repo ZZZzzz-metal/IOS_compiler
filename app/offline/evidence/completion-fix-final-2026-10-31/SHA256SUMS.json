@@ -1,0 +1,77 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "check.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "check.stdout.txt",
+    "byteLength": 349,
+    "sha256": "256671f5c365c4e211aa054f407bd9a6991e0c431156e8cb049cf3bb9083d1cc"
+  },
+  {
+    "file": "dependency-count-clarification.json",
+    "byteLength": 687,
+    "sha256": "76b0113ed191ad7dbd1ef6d0958caa52fa419a943d0c363addfcc88e40eceef7"
+  },
+  {
+    "file": "final-checks.json",
+    "byteLength": 1572,
+    "sha256": "cebdce5048d9d01737aa3e2a9dcfb6a7aef8f73d197ff8f5cbd056bbc8a0842f"
+  },
+  {
+    "file": "independent-package-merge.json",
+    "byteLength": 558,
+    "sha256": "fcf350a709a8c9c8bffcfa94217b53791f24fa32c59cabdff63d1328fb2d1fb9"
+  },
+  {
+    "file": "publication-preflight.json",
+    "byteLength": 920,
+    "sha256": "e02467cb5ee93b034939ba39c82b35b531725b02f85fd07c48effeb105c72dae"
+  },
+  {
+    "file": "README.md",
+    "byteLength": 1778,
+    "sha256": "b042bdab3a58900f8301a68ade3e5a6dc4cb7c4a541484a97b6cf2838cd365d7"
+  },
+  {
+    "file": "root-evidence.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "root-evidence.stdout.txt",
+    "byteLength": 110,
+    "sha256": "3a2549a1b611757b569de130d96a9abe0412cabf460902c2cacb2a26c070d825"
+  },
+  {
+    "file": "root-verifier-invocation.json",
+    "byteLength": 748,
+    "sha256": "3735aac1642d3676db0b97cc6e4bfb794c400e350f221fb4ca06060da2ae2f3e"
+  },
+  {
+    "file": "status.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "status.stdout.txt",
+    "byteLength": 2119,
+    "sha256": "14ccb73cba1e010b1411392cc8b3bffbf032fdb4eb571cdb87d146add4e2a417"
+  },
+  {
+    "file": "test.stderr.txt",
+    "byteLength": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "test.stdout.txt",
+    "byteLength": 1126,
+    "sha256": "436024923519296ace17b0fe68092a5557c8aec6bc0b8490c140f0ea97ba0b45"
+  }
+]
