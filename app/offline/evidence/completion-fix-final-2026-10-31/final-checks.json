@@ -1,0 +1,60 @@
+{
+  "verifiedAt": "2026-11-01T01:47:28.809806+00:00",
+  "sourceBaseRevision": "912a23bf14cd6e48a0adb7ec119f4ce86bc58f93",
+  "headBeforeFinalDocs": "da068fedbc23bea6a69c98d8935d11ed55b5ae82",
+  "commands": [
+    {
+      "name": "check",
+      "command": [
+        "npm.cmd",
+        "run",
+        "check"
+      ],
+      "startedAt": "2026-11-01T01:47:22.324100+00:00",
+      "exitCode": 0
+    },
+    {
+      "name": "test",
+      "command": [
+        "npm.cmd",
+        "test"
+      ],
+      "startedAt": "2026-11-01T01:47:27.128350+00:00",
+      "exitCode": 0
+    },
+    {
+      "name": "status",
+      "command": [
+        "node",
+        "app/main.mjs"
+      ],
+      "startedAt": "2026-11-01T01:47:28.148840+00:00",
+      "exitCode": 0
+    },
+    {
+      "name": "root-evidence",
+      "command": [
+        "C:/Users/20964/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+        "-X",
+        "utf8",
+        "app/offline/evidence/completion-fix-desktop-continuation-2026-10-31/verify-evidence.py"
+      ],
+      "startedAt": "2026-11-01T01:47:28.243769+00:00",
+      "exitCode": 0
+    }
+  ],
+  "packageInputChangesSinceFrozenSource": [],
+  "unchangedArchives": [
+    {
+      "file": "ipad-offline-debugger-v0.4.7.zip",
+      "byteLength": 19337572,
+      "sha256": "6cc808248baaca8e1107de49d71458fd2140f8c83cd3bbb8810598351abc330d"
+    },
+    {
+      "file": "ipad-first-setup-v0.4.7.zip",
+      "byteLength": 18056,
+      "sha256": "0958fef87a5871c8c9a4edfc23f10a9b929888f2898da370dfbfdd981351d18f"
+    }
+  ],
+  "iPadValidated": false
+}

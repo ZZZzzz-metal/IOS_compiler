@@ -1,0 +1,167 @@
+[
+  {
+    "file": ".gitattributes",
+    "byteLength": 8,
+    "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  {
+    "file": "breakpoint-values.png",
+    "byteLength": 88655,
+    "sha256": "f66c78cd13a2c6021caadf77a778aa7ea203c3f4b3ea31007d87b2132ce4c405"
+  },
+  {
+    "file": "browser/001-initial-unprepared.json",
+    "byteLength": 3014,
+    "sha256": "50cd39cfc5cc1a60a68b99d7b878c6ecc58e1a79b6de6ddebe9ce6ad6c88252c"
+  },
+  {
+    "file": "browser/002-prepare-start.json",
+    "byteLength": 3096,
+    "sha256": "d95449e4169f4cf680a1b178fe42c954d23d409c05a2a9ff26b0e8bea754603a"
+  },
+  {
+    "file": "browser/003-prepared-result.json",
+    "byteLength": 3051,
+    "sha256": "614d36271076ef53a50f6ca755fd882b8364b8e63fe588febb147397baa4de82"
+  },
+  {
+    "file": "browser/004-stopped-server-cold-entry.json",
+    "byteLength": 3051,
+    "sha256": "ca6e28875c649fbcb6e5ce15c284373a021f743bf68f093e6e3ad0e520953e7b"
+  },
+  {
+    "file": "browser/005-cold-workbench.json",
+    "byteLength": 8342,
+    "sha256": "fc3a916aaf977f81f81e680730a24d7ff00f567e1121d70a481e6dd1e08f1093"
+  },
+  {
+    "file": "browser/006-offline-resources-ready.json",
+    "byteLength": 8457,
+    "sha256": "7c1ad0b951148fcd93b6b455009e6617d793de8bf8880f29e357d2e37f56b491"
+  },
+  {
+    "file": "browser/007-new-source-candidate-ready.json",
+    "byteLength": 7039,
+    "sha256": "ae8032c04951d5549f130208b4fb2905833414f8879ecb7032c3f7e4ca1178e8"
+  },
+  {
+    "file": "browser/008-completion-inserted.json",
+    "byteLength": 6803,
+    "sha256": "ba049a99861cee16b877dbb9a5d067a1ae19140a5e1b59f6acba76ba895ebfcf"
+  },
+  {
+    "file": "browser/009-native-undo.json",
+    "byteLength": 6791,
+    "sha256": "c400fa2506f91a8a16662549d160907b36363b5212989f25668bf9e5be96a696"
+  },
+  {
+    "file": "browser/010-native-redo.json",
+    "byteLength": 6803,
+    "sha256": "61c964a4898ad54e7be22deddd8814ff9df2c88bda023c8967643509a9d28fd3"
+  },
+  {
+    "file": "browser/011-complete-new-program.json",
+    "byteLength": 7257,
+    "sha256": "7c4555b7b3eb834524a4da0705a10faa2ecf7aaee99d956bd2560acef8cd0c26"
+  },
+  {
+    "file": "browser/012-offline-run-result.json",
+    "byteLength": 7274,
+    "sha256": "70a8a0cea33aec20502c2cb36e1d96b9c6bddcffeb5449c504ac865ea366b0b1"
+  },
+  {
+    "file": "browser/013-breakpoint10-set.json",
+    "byteLength": 7274,
+    "sha256": "42c333a69900db1ad50cf602c7ff7099948412108f6786babc8c51b9f0958253"
+  },
+  {
+    "file": "browser/014-debug-initial-pause.json",
+    "byteLength": 7995,
+    "sha256": "6542148cce90123134a1f551e4f1c4adf14479837f6e969ffa93ac61a90feb42"
+  },
+  {
+    "file": "browser/015-breakpoint10-values.json",
+    "byteLength": 7837,
+    "sha256": "ea38543fe6902c41e118cb73973705bb67b088b626d88ff983dac0b6c0f9061e"
+  },
+  {
+    "file": "browser/016-debug-continue.json",
+    "byteLength": 7308,
+    "sha256": "d465a1c88c5ef36238af9b50cefffc7c7337a433d72867bc7c7f729d81e82d6c"
+  },
+  {
+    "file": "browser/017-draft-and-standard-scheme-save-start.json",
+    "byteLength": 7532,
+    "sha256": "0161f7d61458536af50a7611b066d354a3d0db9dcf2cec8bb751238440c23c13"
+  },
+  {
+    "file": "browser/018-draft-and-standard-scheme-saved.json",
+    "byteLength": 7550,
+    "sha256": "ce3b0a74438baa8ab2c9ff7f1182752cbedb9de181c87e01b008e84c23e18435"
+  },
+  {
+    "file": "browser/019-second-cold-entry.json",
+    "byteLength": 3051,
+    "sha256": "a91e82572eea3fc36016710a0979ae0ff345fd133edccaef02acda250e015ec2"
+  },
+  {
+    "file": "browser/020-cold-draft-and-scheme-restored.json",
+    "byteLength": 7341,
+    "sha256": "89cf7836e4f46c7d7540a08d2b0dd2ad51f0698eb9116d8abdb5874e8c64ab7f"
+  },
+  {
+    "file": "browser/021-cold-resources-ready-control-scheme.json",
+    "byteLength": 7482,
+    "sha256": "e9ebf5a16eafa242d9639c158920d07bf9ef9da7b076085be986a96df2ddb422"
+  },
+  {
+    "file": "browser/022-cold-restored-control6-run-result.json",
+    "byteLength": 7510,
+    "sha256": "0670c309a53c863c5009caf18019722dffa261f2e6feb12ce66cedc648033bc5"
+  },
+  {
+    "file": "browser-cleanup.json",
+    "byteLength": 166,
+    "sha256": "1a190b5a7e3ebaac0b19c9d1c8eeb44294af0e41bff537887781445aaee5335a"
+  },
+  {
+    "file": "browser-console.json",
+    "byteLength": 3,
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  {
+    "file": "independent-review.json",
+    "byteLength": 1357,
+    "sha256": "28c709b47fe29d82875030aead69e737d67d132706d481d9e124ee49f1b8a401"
+  },
+  {
+    "file": "README.md",
+    "byteLength": 2678,
+    "sha256": "5e0adb5909e496eb0ff84893af12d0e9ac1421073cc8d06a1a18261ed6f8c67f"
+  },
+  {
+    "file": "restoration-comparison.json",
+    "byteLength": 734,
+    "sha256": "c4b191460f170ae60578e34ea2d7439f19c2f10ee9c5cb26cd722324d54afb45"
+  },
+  {
+    "file": "server-after-stop-confirmed.json",
+    "byteLength": 129,
+    "sha256": "e035e3eda3355f43f3093ab93b1505845a54f78e159472a6b131bb941c2e75c2"
+  },
+  {
+    "file": "server-after-stop.json",
+    "byteLength": 155,
+    "sha256": "3ba1ac0df6f6eccdf83ab41f920e67731da01cfd1c485c663f8c48ef68073bf2"
+  },
+  {
+    "file": "server-start.json",
+    "byteLength": 223,
+    "sha256": "a12b7469797f8b45c6bdd05ca91406644731e172c2386addc6bd4bf2a86a8ba5"
+  },
+  {
+    "file": "verify-evidence.py",
+    "byteLength": 3149,
+    "sha256": "2f976a30c5a82f07c32606aa16783a2804497eab871ee9eda88695fbf283c44a"
+  }
+]

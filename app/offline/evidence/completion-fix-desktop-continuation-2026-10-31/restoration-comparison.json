@@ -1,0 +1,7 @@
+{
+  "exactSourceRestored": true,
+  "shortcutScheme": "standard",
+  "sourceCharacterLength": 279,
+  "expectedSource": "#include <cstdio>\nstruct BoardValue {\n int value;\n int twice() const { return value * 2; }\n};\nint main() {\n BoardValue box{23};\n int picked = box.value;\n int total = picked + 19;\n std::printf(\"root-v047=%d\\n\", total);\n return 0;\n}\n// root-v047-cold-reopen: save this exact draft\n",
+  "actualSource": "#include <cstdio>\nstruct BoardValue {\n int value;\n int twice() const { return value * 2; }\n};\nint main() {\n BoardValue box{23};\n int picked = box.value;\n int total = picked + 19;\n std::printf(\"root-v047=%d\\n\", total);\n return 0;\n}\n// root-v047-cold-reopen: save this exact draft\n"
+}

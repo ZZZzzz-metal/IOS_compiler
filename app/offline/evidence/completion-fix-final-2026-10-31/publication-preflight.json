@@ -1,0 +1,23 @@
+{
+  "kind": "publication-preflight",
+  "checkedAt": "2026-10-31 12:31:28 UTC",
+  "repository": "ZZZzzz-metal/IOS_compiler",
+  "pullRequest": {
+    "number": 4,
+    "url": "https://github.com/ZZZzzz-metal/IOS_compiler/pull/4",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head": "eda3f871da0148f2930911771a9869c4b42e8ca8",
+    "base": "ef5d3906e2bb9c877e710a7b2093a0ff5e6fdd2a"
+  },
+  "remoteRefs": {
+    "integration": "eda3f871da0148f2930911771a9869c4b42e8ca8",
+    "main": "ef5d3906e2bb9c877e710a7b2093a0ff5e6fdd2a",
+    "owner04": "b33b52e8616fef0171f49ab2f22f7c5cbb8306d9",
+    "owner05": "2978d9501c58fe7b6d7d7439b5f728a0b59ccbf6",
+    "oldTagObject": "b0f14a2363b80fac11578db1c96823a74cc651f8",
+    "oldTagTarget": "b4781949d216ba16bee563f401d1b35bb7670142"
+  },
+  "declaration": "Current draft publication only; owner05 final desktop package acceptance pending. Main remains user-managed."
+}

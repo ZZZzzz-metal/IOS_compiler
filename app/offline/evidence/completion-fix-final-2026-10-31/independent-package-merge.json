@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-31",
+  "owner05Commit": "8cfa15dbf4b3dbeabf3323815bb6dc6f086dc2de",
+  "mergeCommit": "da068fedbc23bea6a69c98d8935d11ed55b5ae82",
+  "changedFiles": 142,
+  "invalidScopeFiles": [],
+  "command": "node tests/seal-integrated-round.mjs integrated-person05-completion-package-v047-912a23b-2026-10-31 --verify --git",
+  "exitCode": 0,
+  "sealedFiles": 132,
+  "manifestSha256": "ba7321836ad03d191a43b716aad0e4c1d6714d4972675cb630013fbb25fafbeb",
+  "gitBytesIdentical": true,
+  "independentReviewerConfirmedBlobs": 133,
+  "iPadValidated": false
+}

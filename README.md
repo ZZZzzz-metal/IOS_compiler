@@ -1,6 +1,6 @@
 # IOS_compiler · iPad 离线 C/C++ 编译调试工作台
 
-**当前：两项已知补全缺陷已在限定语义范围独立修复验证，0.4.7新包已生成，待独立桌面验收。** 2号固定0f289cf修复const成员模板与unavailable候选，5号2978d950按原源码和原预期独立关闭两项：44逻辑例的88双路真实响应、27完整编译调用对照通过。4号b33b52e8已同步使用说明；新完整包65资源已核对字节及电脑侧HTTPS，桌面停服冷开及iPad仍待验收，[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)继续草稿，由你手动合并。进度和准确范围见[0.4.7集成记录](docs/architecture/COMPLETION-FIX-INTEGRATION-v0.4.7-2026-10-31.md)，平板步骤见[0.4.7准备单](docs/architecture/IPAD-UPDATE-v0.4.7.md)。下方0.4.6为重开修复前的历史记录。
+**当前：两项已知补全缺陷已修复并独立验证，0.4.7完整新包在已测桌面范围通过。** 2号固定0f289cf修复const成员模板与unavailable候选，5号2978d950按原源码和原预期独立关闭两项：44逻辑例的88双路真实响应、27完整编译调用对照通过。5号新包交付8cfa15d已合入，65资源包停服冷开后的实际补全、一次原生撤销/重做、新源码编译调试及草稿/快捷键方案恢复通过；4号b33b52e8同步使用说明。真实iPad仍待验证，[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)由你手动合并，发布状态见[0.4.7集成记录](docs/architecture/COMPLETION-FIX-INTEGRATION-v0.4.7-2026-10-31.md)，平板步骤见[0.4.7准备单](docs/architecture/IPAD-UPDATE-v0.4.7.md)。下方0.4.6为重开修复前的历史记录。
 
 2026-10-30当前版本0.4.6：真实离线成员、变量和函数提示已集成，5号最终UI/完整包交付cbc92b2已合入6ba18d2并在已测桌面范围签收。原33场景32通过、const-string一项边界失败；另有unavailable属性边界失败，两项均未修复。62资源新包及停服后全新源码补全、编译调试、撤销与草稿重开已有独立证据；真实iPad仍待验证。[PR #4](https://github.com/ZZZzzz-metal/IOS_compiler/pull/4)由你手动合并；精确身份、结果与限制见[本轮报告](docs/architecture/COMPLETION-INTEGRATION-v0.4.6-2026-10-30.md)。旧包、标签和原始失败保留。
 
@@ -53,7 +53,7 @@ npm.cmd run start:offline
 
 平板首次准备需要可访问且受信任的 **HTTPS** 地址，普通局域网 HTTP 不满足缓存安装条件。维护者需按 [离线入口说明](app/offline/README.md) 与 [本地 HTTPS 配置](app/offline/LOCAL-HTTPS.md) 准备服务，再提供实际地址。生成目录和精确资源身份记录在 `app/offline/.local/`，不随 Git 上传。
 
-本轮固定身份与更新核对见[0.4.6更新步骤](docs/architecture/IPAD-UPDATE-v0.4.6.md)。
+本轮固定身份与更新核对见[0.4.7更新步骤](docs/architecture/IPAD-UPDATE-v0.4.7.md)。
 
 **平板上的逐步操作见 [iPad 操作手册](docs/architecture/IPAD-USER-MANUAL.md)**：首次准备、添加主屏、断网关闭重开、关闭辅助电脑、编译全新源码、断点与单步、草稿备份和问题反馈都有步骤。平板无需安装 Node.js。固定版本更新说明从 [集成状态](docs/architecture/STATUS.md) 进入；历史说明里的局域网地址和证书有效期仅属于当时的本地实验。
 
